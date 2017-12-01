@@ -1,0 +1,3 @@
+@import "ui/theme.css";
+@import "ui/no-white-flash.css";
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");

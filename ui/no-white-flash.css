@@ -1,0 +1,6 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Prevent white flash */
+tabbrowser tabpanels {
+	background-color: #2e3436 !important;
+}
