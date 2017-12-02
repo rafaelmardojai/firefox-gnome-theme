@@ -1,5 +1,6 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/* Toolbar colors */
 :root {
 	--toolbar-bgcolor: #000 !important;
 	--toolbar-bgimage: linear-gradient(rgb(67, 74, 74), rgb(57, 63, 63)) !important;
@@ -270,6 +271,14 @@
 .urlbar-icon-wrapper:hover:active {
 	background-color: transparent !important;
 	fill-opacity: 1 !important;
+}
+
+/* Bookmark bar */
+#navigator-toolbox #PersonalToolbar {
+	background-color: #2f3434 !important;
+	background-image: none !important;
+	border-bottom: 1px solid #1e2222 !important;
+	height: 38px;
 }
 
 /* Tab bar */

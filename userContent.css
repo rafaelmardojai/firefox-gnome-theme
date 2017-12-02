@@ -1,6 +1,8 @@
 @namespace html "http://www.w3.org/1999/xhtml";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Try to make popups added by add-ons and their settings pages look dark too,
+ * doesn't always work tho because of their weird styles */
 @-moz-document url-prefix("moz-extension://") {
 	:root {
 		--popup-background: #292929;
