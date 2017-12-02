@@ -17,23 +17,29 @@ Extensions can no longer style UI elements, but we can still use good old
 1. Go to your Firefox profile's directory.
 2. Clone this repo to the `chrome` directory:
 
-		git clone 'https://github.com/kurogetsusai/firefox-gnome-theme.git' chrome
+	```sh
+	git clone 'https://github.com/kurogetsusai/firefox-gnome-theme.git' chrome
+	```
 
 You must run Firefox with the dark theme, either by setting it globally as your
 default theme in GNOME Tweak Tools, or by running Firefox with the GTK_THEME
 variable like this:
 
-		GTK_THEME=Adwaita:dark firefox
+```sh
+GTK_THEME=Adwaita:dark firefox
+```
 
 You might want to adjust your default link colors so they are more visible on
 dark background, either drop the code below into your
 `(firefox profile)/user.js` file or change them manually in `about:config`.
 
-		user_pref("browser.active_color", "#cc1a1a");
-		user_pref("browser.anchor_color", "#0a8dff");
-		user_pref("browser.visited_color", "#0871cc");
-		user_pref("browser.display.background_color", "#2e3436");
-		user_pref("browser.display.foreground_color", "#ccc");
+```js
+user_pref("browser.active_color", "#cc1a1a");
+user_pref("browser.anchor_color", "#0a8dff");
+user_pref("browser.visited_color", "#0871cc");
+user_pref("browser.display.background_color", "#2e3436");
+user_pref("browser.display.foreground_color", "#ccc");
+```
 
 You can't get rid of the title bar for now (except for Fedora I think, where you
 can enable CSD in about:config), but you will be able to do it when they add
@@ -63,8 +69,8 @@ variant of this theme, you might find these things useful.
 To use the Inspector to debug the UI, open the developer tools (F12) on any
 page, go to options, check both of those:
 
-	- Enable browser chrome and add-on debugging toolboxes
-	- Enable remote debugging
+- Enable browser chrome and add-on debugging toolboxes
+- Enable remote debugging
 
 Now you can close those tools and press Ctrl+Alt+Shift+I to Inspect the browser
 UI.
@@ -73,7 +79,9 @@ Also you can inspect any GTK3 application, for example type this into a terminal
 and it will run Epiphany with the GTK Inspector, so you can check the CSS styles
 of its elements too.
 
-		GTK_DEBUG=interactive epiphany
+```sh
+GTK_DEBUG=interactive epiphany
+```
 
 Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
