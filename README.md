@@ -1,4 +1,4 @@
-# Firefox Gnome Dark
+# Firefox Gnome Theme (dark variant only... for now)
 
 ![Screenshot of the theme](screenshot.png)
 
@@ -17,7 +17,7 @@ Extensions can no longer style UI elements, but we can still use good old
 1. Go to your Firefox profile's directory.
 2. Clone this repo to the `chrome` directory:
 
-		git clone 'https://github.com/kurogetsusai/firefox-gnome-dark.git' chrome
+		git clone 'https://github.com/kurogetsusai/firefox-gnome-theme.git' chrome
 
 You must run Firefox with the dark theme, either by setting it globally as your
 default theme in GNOME Tweak Tools, or by running Firefox with the GTK_THEME
