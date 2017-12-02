@@ -14,8 +14,21 @@
 }
 
 /* Tabs below the URL bar */
-#navigator-toolbox {
-	-moz-box-direction: reverse;
+#navigator-toolbox #nav-bar {
+	-moz-box-ordinal-group: 0;
+}
+#navigator-toolbox #toolbar-menubar {
+	-moz-box-ordinal-group: 1;
+}
+#navigator-toolbox #PersonalToolbar {
+	-moz-box-ordinal-group: 2;
+}
+/* add-ons can add their own toolbars */
+#navigator-toolbox toolbar {
+	-moz-box-ordinal-group: 10;
+}
+#navigator-toolbox #TabsToolbar {
+	-moz-box-ordinal-group: 100;
 }
 
 /* Don't teleport the URL bar when moving tabs */

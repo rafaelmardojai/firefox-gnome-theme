@@ -43,13 +43,6 @@ hide it.
 
 ## Broken stuff
 
-If you use the bookmark bar, it's now above the URL bar. Also the menu bar is
-below the tab bar (things are flipped upside down to move the tabs below the URL
-bar). That's pretty shit, but I haven't figured out how to move the tab bar
-without flipping everything else yet and I don't use the bookmark bar anyway so
-I'm fine with that. I actually like having the menu bar below the tab bar, feels
-cozy.
-
 Icons might appear black where they should be white on some systems. I have no
 idea why, but you can adjust them in the `ui/theme.css` file, look for
 `filter: invert`.
