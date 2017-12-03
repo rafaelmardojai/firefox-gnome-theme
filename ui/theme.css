@@ -249,11 +249,14 @@ tabbrowser tabpanels {
 
 /* URL bar */
 #urlbar {
-	background-color: var(--gnome-urlbar-bgcolor);
-	border: var(--gnome-urlbar-border);
+	background-color: var(--gnome-urlbar-bgcolor) !important;
+	border: var(--gnome-urlbar-border) !important;
 	border-radius: 3px;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	height: var(--gnome-urlbar-height);
+}
+#urlbar .urlbar-textbox-container {
+	background-color: var(--gnome-urlbar-bgcolor);
 }
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
