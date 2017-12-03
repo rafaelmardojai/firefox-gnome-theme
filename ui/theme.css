@@ -1,17 +1,78 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* Toolbar colors */
+/* Colors */
 :root {
-	--toolbar-bgcolor: #000 !important;
-	--toolbar-bgimage: linear-gradient(rgb(67, 74, 74), rgb(57, 63, 63)) !important;
+	/* Variables that start with --gnome- are added by me and are assigned
+	 * to elements somewhere in this code. The rest of the variables are
+	 * built-in in Firefox, so you need to add an !important if you wanna
+	 * override them. */
+
+	/* Extra toolbars like the bookmark bar */
+	--toolbar-bgcolor: #2f3434 !important;
+	--toolbar-bgimage: none !important;
+
+	/* Header bar */
+	--gnome-headerbar-bgimage: linear-gradient(rgb(67, 74, 74), rgb(57, 63, 63));
+	--gnome-headerbar-border-bottom: 1px solid rgb(28, 31, 31);
+	--gnome-headerbar-box-shadow: 0 -1px rgb(45, 50, 50) inset, 0 1px rgba(238, 238, 236, .1) inset;
+	--gnome-headerbar-button-bgimage: linear-gradient(rgb(69, 76, 76), rgb(57, 63, 63) 40%, rgb(45, 50, 50));
+	--gnome-headerbar-button-border: 1px solid rgba(28, 31, 31);
+	--gnome-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, .1) inset, 0 1px rgba(238, 238, 236, .1);
+	--gnome-headerbar-button-hover-bgimage: linear-gradient(rgb(91, 100, 100), rgb(67, 73, 73) 40%, rgb(55, 60, 60));
+	--gnome-headerbar-button-active-bgimage: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
+	--gnome-headerbar-button-active-box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1);
+	--gnome-headerbar-button-disabled-bgcolor: #323636;
+	--gnome-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, .1);
+
+	/* URL bar */
+	--gnome-urlbar-bgcolor: #2c2c2c;
+	--gnome-urlbar-border: 1px solid #1e2222;
+	--gnome-urlbar-box-shadow: none;
+	--gnome-urlbar-height: 32px;
+
+	/* Tab bar */
+	--gnome-tabbar-bgcolor: #2f3434;
+	--gnome-tabbar-border-bottom: 1px solid #1e2222;
+	--gnome-tabbar-tab-color: rgb(147, 150, 149);
+	--gnome-tabbar-tab-hover-border-bottom: 3px solid #1c1f1f;
+	--gnome-tabbar-tab-hover-border-sides: 1px solid #2a2f2f;
+	--gnome-tabbar-tab-hover-color: rgb(192, 194, 192);
+	--gnome-tabbar-tab-active-bgcolor: #343939;
+	--gnome-tabbar-tab-active-border-bottom: 3px solid #215d9c;
+	--gnome-tabbar-tab-active-border-color-sides: #282b2b;
+	--gnome-tabbar-tab-active-color: rgb(238, 238, 236);
+	--gnome-tabbar-tab-active-hover-bgcolor: #363c3c;
+	--gnome-tabbar-tab-icon-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%);
+
+	/* Bookmark bar */
+	--gnome-bookmarkbar-border-bottom: 1px solid #1e2222;
+	--gnome-bookmarkbar-height: 38px;
+
+	/* Burger menu */
+	/*--arrowpanel-padding: 10px;*/
+	/*--arrowpanel-background: -moz-field;*/
+	--arrowpanel-color: #d3d4d2 !important; /* applies to text and icons */
+	/*--arrowpanel-border-color: ThreeDShadow;*/
+
+	/* Dirty hack for replaced symbolic icons, they load from
+	 * /usr/share/icons/<theme>/ and on some systems they need to be
+	 * inverted, on others they don't, adjusts the filters below to your
+	 * needs (you may also adjust icon brightness here). */
+	--gnome-icons-hack-filter: invert(85%); /* without invert: none */
+	--gnome-icons-hack-close-button-border: 1px solid #e3e0e0; /* without invert: 1px solid #1c1f1f */
+	--gnome-icons-hack-close-button-filter: invert(100%); /* without invert: none */
+	--gnome-icons-hack-close-button-active-bgimage: linear-gradient(rgb(220, 216, 216), rgb(214, 210, 210) 40%, rgb(210, 205, 205));
+	/* ^ without invert: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50)) */
+	--gnome-icons-hack-close-button-active-box-shadow: 0 1px rgba(255, 255, 255, .07) inset, 0 2px 1px -2px rgba(255, 255, 255, .6) inset, 0 1px rgba(17, 17, 19, .1);
+	/* ^ without invert: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1) */
 }
 
 /* Toolbar */
 #nav-bar {
-	background-image: var(--toolbar-bgimage);
+	background-image: var(--gnome-headerbar-bgimage) !important;
 	border: none !important;
-	border-bottom: 1px solid rgb(28, 31, 31) !important;
-	box-shadow: 0 -1px rgb(45, 50, 50) inset, 0 1px rgba(238, 238, 236, .1) inset;
+	border-bottom: var(--gnome-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-headerbar-box-shadow);
 }
 
 /* Tabs below the URL bar */
@@ -52,11 +113,6 @@
 	border-bottom-width: 0 !important;
 }
 
-/* Burger menu text and icons color */
-.panel-arrowcontent {
-	--arrowpanel-color: #d3d4d2;
-}
-
 /* Zoom reset in the buger menu */
 #appMenu-zoomReset-button {
 	background-color: var(--arrowpanel-background) !important;
@@ -83,7 +139,7 @@
 	visibility: visible;
 }
 
-/* Remove hover effects on toolbar buttons */
+/* Remove hover effects on the header bar buttons */
 #nav-bar {
 	--backbutton-background: transparent !important;
 	--backbutton-active-background: transparent !important;
@@ -100,13 +156,13 @@
 	border-color: transparent !important;
 }
 
-/* Toolbar buttons */
+/* Header bar buttons */
 #nav-bar toolbarbutton.chromeclass-toolbar-additional,
 #nav-bar toolbarbutton.toolbarbutton-combined,
 #nav-bar #reload-button,
 #nav-bar #stop-button,
 #PanelUI-menu-button {
-	border: 1px solid rgba(28, 31, 31) !important;
+	border: var(--gnome-headerbar-button-border) !important;
 	border-radius: 3px !important;
 	height: 34px;
 	margin: 4px 3px !important;
@@ -118,15 +174,15 @@
 #nav-bar #reload-button:not([disabled]),
 #nav-bar #stop-button:not([disabled]),
 #PanelUI-menu-button:not([disabled]) {
-	background-image: linear-gradient(rgb(69, 76, 76), rgb(57, 63, 63) 40%, rgb(45, 50, 50));
-	box-shadow: 0 1px rgba(255, 255, 255, .1) inset, 0 1px rgba(238, 238, 236, .1);
+	background-image: var(--gnome-headerbar-button-bgimage);
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
 }
 #nav-bar toolbarbutton.chromeclass-toolbar-additional:not([disabled]):hover,
 #nav-bar toolbarbutton.toolbarbutton-combined:not([disabled]):hover,
 #nav-bar #reload-button:not([disabled]):hover,
 #nav-bar #stop-button:not([disabled]):hover,
 #PanelUI-menu-button:not([disabled]):hover {
-	background-image: linear-gradient(rgb(91, 100, 100), rgb(67, 73, 73) 40%, rgb(55, 60, 60));
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
 }
 #nav-bar toolbarbutton.chromeclass-toolbar-additional:not([disabled]):active,
 #nav-bar toolbarbutton.toolbarbutton-combined:not([disabled]):active,
@@ -138,16 +194,16 @@
 #nav-bar #reload-button[open=true]:not([disabled]),
 #nav-bar #stop-button[open=true]:not([disabled]),
 #PanelUI-menu-button[open=true]:not([disabled]) {
-	background-image: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
-	box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1);
+	background-image: var(--gnome-headerbar-button-active-bgimage);
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
 }
 #nav-bar toolbarbutton.chromeclass-toolbar-additional[disabled],
 #nav-bar toolbarbutton.toolbarbutton-combined[disabled],
 #nav-bar #reload-button[disabled],
 #nav-bar #stop-button[disabled]
 #PanelUI-menu-button[disabled] {
-	background-color: #323636;
-	box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, .1);
+	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
+	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 }
 #nav-bar toolbarbutton.chromeclass-toolbar-additional#back-button {
 	margin-left: 6px !important;
@@ -190,78 +246,74 @@
 	margin-left: 0 !important;
 }
 
-/* Replace icons (they load from /usr/share/icons/<theme>/)
- * On some systems they need to be inverted, on others they don't, so just
- * adjusts the filters below to your needs (probably just removing them might
- * work if you see black icons, you may also adjust icon brightness here).
-*/
+/* Replace icons */
 #back-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/go-previous-symbolic?size=menu") !important;
 }
 
 #forward-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/go-next-symbolic?size=menu") !important;
 }
 
 /* Glitch - animations (may be possible to fix in about:config)
 #reload-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/view-refresh-symbolic?size=menu") !important;
 }
 #stop-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/process-stop-symbolic?size=menu") !important;
 }*/
 
 /* Default looks nicer
 #new-tab-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/tab-new-symbolic?size=menu") !important;
 }*/
 
 #zoom-out-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=menu") !important;
 }
 
 /* No icon, just text
 #zoom-reset-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/zoom-original-symbolic?size=menu") !important;
 } */
 
 #zoom-in-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=menu") !important;
 }
 
 /* Default is ok
 #nav-bar-overflow-button .toolbarbutton-icon {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/view-more-symbolic?size=menu") !important;
 } */
 
 /* Glitch - it swaps to the default one anyway
 #downloads-button {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/folder-download-symbolic?size=menu") !important;
 } */
 
 /* Default is ok
 #PanelUI-menu-button {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/open-menu-symbolic?size=menu") !important;
 } */
 
 /* URL bar */
 #urlbar {
-	background-color: #2c2c2c;
-	border: 1px solid #1e2222;
+	background-color: var(--gnome-urlbar-bgcolor);
+	border: var(--gnome-urlbar-border);
 	border-radius: 3px;
-	box-shadow: none !important;
-	height: 32px;
+	box-shadow: var(--gnome-urlbar-box-shadow) !important;
+	height: var(--gnome-urlbar-height);
 }
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
@@ -275,21 +327,19 @@
 
 /* Bookmark bar */
 #navigator-toolbox #PersonalToolbar {
-	background-color: #2f3434 !important;
-	background-image: none !important;
-	border-bottom: 1px solid #1e2222 !important;
-	height: 38px;
+	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
+	height: var(--gnome-bookmarkbar-height);
 }
 
 /* Tab bar */
 #tabbrowser-tabs {
-	background-color: #2f3434;
-	border-bottom: 1px solid #1e2222;
+	background-color: var(--gnome-tabbar-bgcolor);
+	border-bottom: var(--gnome-tabbar-border-bottom);
 	height: 38px;
 }
 #TabsToolbar toolbarbutton:not(.scrollbutton-up):not(.scrollbutton-down):not(.tab-close-button) {
-	background-color: #2f3434;
-	border-bottom: 1px solid #1e2222;
+	background-color: var(--gnome-tabbar-bgcolor);
+	border-bottom: var(--gnome-tabbar-border-bottom);
 	margin: 0 !important;
 }
 tab > stack {
@@ -331,21 +381,21 @@ tab > stack {
 
 /* Tab labels */
 tab {
-	color: rgb(147, 150, 149) !important;
+	color: var(--gnome-tabbar-tab-color) !important;
 /*	font-family: Ubuntu;*/
 	font-size: 13px;
 	font-weight: bold;
 }
 tab:hover {
-	color: rgb(192, 194, 192) !important;
+	color: var(--gnome-tabbar-tab-hover-color) !important;
 }
 tab[selected] {
-	color: rgb(238, 238, 236) !important;
+	color: var(--gnome-tabbar-tab-active-color) !important;
 }
 
 /* Make tab icons look kinda like symbolic icons */
 tab .tab-icon-image {
-	filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%);
+	filter: var(--gnome-tabbar-tab-icon-filter);
 }
 
 /* Remove tab icons */
@@ -355,24 +405,19 @@ tab .tab-icon-image {
 
 /* Close tab button */
 .tab-close-button {
-	filter: invert(85%);
+	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
 	height: 22px;
 	width: 22px;
 }
 .tab-close-button:hover {
-	/* border: 1px solid #1c1f1f; /* (without filter: invert) */
-	border: 1px solid #e3e0e0; /* (with filter: invert) */
+	border: var(--gnome-icons-hack-close-button-border);
 	border-radius: 3px;
-	filter: invert(100%); /* if you're removing this, change border too (above) */
+	filter: var(--gnome-icons-hack-close-button-filter);
 }
 .tab-close-button:active {
-	/* without filter: invert */
-	/* background-image: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
-	box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1); */
-	/* with filter: invert */
-	background-image: linear-gradient(rgb(220, 216, 216), rgb(214, 210, 210) 40%, rgb(210, 205, 205));
-	box-shadow: 0 1px rgba(255, 255, 255, .07) inset, 0 2px 1px -2px rgba(255, 255, 255, .6) inset, 0 1px rgba(17, 17, 19, .1);
+	background-image: var(--gnome-icons-hack-close-button-active-bgimage);
+	box-shadow: var(--gnome-icons-hack-close-button-active-box-shadow);
 }
 .tab-close-button:active:not(:hover) {
 	background-image: none !important;
@@ -403,17 +448,17 @@ tab .tab-icon-image {
 
 /* Active tab */
 .tab-background[selected=true] {
-	background-color: #343939 !important;
+	background-color: var(--gnome-tabbar-tab-active-bgcolor) !important;
 	background-image: none !important;
-	border-right-color: #282b2b !important;
-	border-left-color: #282b2b !important;
+	border-right-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
+	border-left-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
 	border-image: none !important;
-	border-bottom: 3px solid #215d9c !important;
+	border-bottom: var(--gnome-tabbar-tab-active-border-bottom) !important;
 }
 
 /* Tab hover */
 .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
-	background-color: #363c3c !important;
+	background-color: var(--gnome-tabbar-tab-active-hover-bgcolor) !important;
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
@@ -422,7 +467,7 @@ tab .tab-icon-image {
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	border-image: none !important;
-	border-right: 1px solid #2a2f2f !important;
-	border-left: 1px solid #2a2f2f !important;
-	border-bottom: 3px solid #1c1f1f !important;
+	border-right: var(--gnome-tabbar-tab-hover-border-sides) !important;
+	border-left: var(--gnome-tabbar-tab-hover-border-sides) !important;
+	border-bottom: var(--gnome-tabbar-tab-hover-border-bottom) !important;
 }
