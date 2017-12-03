@@ -1,3 +1,7 @@
-@import "ui/theme.css";
-@import "ui/no-white-flash.css";
-@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* Here you can switch between the dark and the light theme. Don't use both, coz
+ * it ain't gonna work. */
+
+/* Dark theme */
+@import "ui/theme-dark.css"; /**/
+/* Light theme - doesn't work yet */
+/*@import "ui/theme-light.css"; /**/
