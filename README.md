@@ -1,12 +1,12 @@
-# Firefox Gnome Theme (dark variant only... for now)
+# Firefox Gnome Theme
 
 ![Screenshot of the theme](screenshot.png)
 
 ## Description
 
 This is a bunch of CSS code to make Firefox 57+ look closer to GNOME's default
-dark theme. It styles the UI and interal Firefox' pages like about: and
-view-source:. I only wrote styles for the dark variant, not the light one.
+theme. It styles the UI and, if you pick the dark variant, interal Firefox'
+pages like about: and view-source:. Both light and dark variants are supported.
 
 ## Installation
 
@@ -21,13 +21,34 @@ Extensions can no longer style UI elements, but we can still use good old
 	git clone 'https://github.com/kurogetsusai/firefox-gnome-theme.git' chrome
 	```
 
-You must run Firefox with the dark theme, either by setting it globally as your
-default theme in GNOME Tweak Tools, or by running Firefox with the GTK_THEME
-variable like this:
+3. The GTK theme variant must match the variant you picked for this Firefox
+theme, which means you must either enable (for the dark variant) or disable (for
+the light one) global dark theme in GNOME Tweak Tools, or alternativelly, you
+can run Firefox with a specific variant without changing the global theme by
+supplying the GTK_THEME variable like this:
 
-```sh
-GTK_THEME=Adwaita:dark firefox
+	```sh
+	# for the dark theme
+	GTK_THEME=Adwaita:dark firefox
+
+	# for the light one
+	GTK_THEME=Adwaita:light firefox
+	```
+
+If you choose the light variant, you must also enable it in your
+`userChrome.css` file and disable the dark one. Just uncomment the
+`@import "ui/theme-light.css";` file and comment the
+`@import "ui/theme-dark.css";` one, so it looks like this:
+
+```css
+/* Dark theme */
+/*@import "ui/theme-dark.css"; /**/
+/* Light theme */
+@import "ui/theme-light.css"; /**/
 ```
+
+The `userContent.css` file makes all the Firefox' internal pages dark, so if you
+don't want them dark, just remove that file.
 
 You might want to adjust your default link colors so they are more visible on
 dark background, either drop the code below into your
@@ -63,8 +84,8 @@ issues here on GitHub and share your ideas if you know how to fix them.
 
 ## Development
 
-If you wanna mess around the styles and change something, or create a light
-variant of this theme, you might find these things useful.
+If you wanna mess around the styles and change something, you might find these
+things useful.
 
 To use the Inspector to debug the UI, open the developer tools (F12) on any
 page, go to options, check both of those:
