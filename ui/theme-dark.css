@@ -29,9 +29,9 @@
 	--gnome-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, .1);
 
 	/* URL bar */
-	--gnome-urlbar-bgcolor: #2c2c2c;
+	--gnome-urlbar-bgimage: linear-gradient(rgb(28, 31, 31), rgb(35, 37, 37) 3px, rgb(41, 41, 41) 90%);
 	--gnome-urlbar-border: 1px solid #1e2222;
-	--gnome-urlbar-box-shadow: none;
+	--gnome-urlbar-box-shadow: 0 0 0 1px rgba(33, 93, 156, 0) inset, 0 1px rgba(238, 238, 236, .1);
 	--gnome-urlbar-height: 32px;
 
 	/* Tab bar */
