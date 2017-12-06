@@ -1,0 +1,6 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Make tab icons look kinda like symbolic icons */
+tab .tab-icon-image {
+	filter: var(--gnome-tabbar-tab-icon-filter);
+}

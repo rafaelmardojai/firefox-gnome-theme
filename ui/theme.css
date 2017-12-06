@@ -336,11 +336,6 @@ tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
 }
 
-/* Make tab icons look kinda like symbolic icons */
-tab .tab-icon-image {
-	filter: var(--gnome-tabbar-tab-icon-filter);
-}
-
 /* Remove tab icons */
 /* tab:not([pinned=true]) .tab-icon-image {
 	display: none;
