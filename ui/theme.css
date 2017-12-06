@@ -326,7 +326,7 @@ tab > stack {
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
 /*	font-family: Ubuntu;*/
-	font-size: 13px;
+	font-size: .9em;
 	font-weight: bold;
 }
 tab:hover {
