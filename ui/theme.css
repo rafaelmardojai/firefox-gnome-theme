@@ -7,6 +7,12 @@ tabbrowser tabpanels {
 	background-color: var(--gnome-browser-before-load-bgcolor) !important;
 }
 
+/* Container for all toolbars */
+#navigator-toolbox {
+	background-color: var(--gnome-tabbar-bgcolor) !important;
+	border-bottom: var(--gnome-tabbar-border-bottom);
+}
+
 /* Toolbar */
 #nav-bar {
 	background-image: var(--gnome-headerbar-bgimage) !important;
@@ -276,17 +282,7 @@ tabbrowser tabpanels {
 
 /* Tab bar */
 #tabbrowser-tabs {
-	background-color: var(--gnome-tabbar-bgcolor);
-	border-bottom: var(--gnome-tabbar-border-bottom);
 	height: 38px;
-}
-#TabsToolbar toolbarbutton:not(.scrollbutton-up):not(.scrollbutton-down):not(.tab-close-button) {
-	background-color: var(--gnome-tabbar-bgcolor);
-	border-bottom: var(--gnome-tabbar-border-bottom);
-	margin: 0 !important;
-}
-tab > stack {
-	height: 37px;
 }
 
 /* Remove hover effects on tab bar buttons */
