@@ -8,3 +8,9 @@
 
 /* Symbolic tab icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/
+
+/* Client-side decorations (Fedora only)
+ * WARNING: This setting is experimental and doesn't work exactly as it should.
+ * Don't forget to enable widget.allow-client-side-decoration in about:config
+ * if you're using it. */
+/*@import "ui/fedora-csd.css"; /**/

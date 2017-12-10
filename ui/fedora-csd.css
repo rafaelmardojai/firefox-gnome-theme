@@ -1,0 +1,48 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Move window buttons next to the header bar */
+#titlebar-buttonbox {
+	background-image: var(--gnome-headerbar-bgimage) !important;
+	border: none !important;
+	border-bottom: var(--gnome-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-headerbar-box-shadow);
+	margin-right: -4px;
+}
+#navigator-toolbox {
+	margin-top: -5px;
+}
+#nav-bar {
+	margin-right: 40px;
+}
+/*#main-window[tabsintitlebar][sizemode="normal"] #navigator-toolbox {}*/
+/*#main-window[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {}*/
+
+/* Windows buttons */
+#titlebar toolbarbutton {
+	border: var(--gnome-headerbar-button-border) !important;
+	border-color: transparent !important;
+	border-radius: 3px !important;
+	height: 34px;
+	margin: 6px 6px !important;
+	padding: 0 2px !important;
+	width: 34px;
+	-moz-appearance: none !important;
+}
+#titlebar toolbarbutton image {
+	filter: invert(85%);
+	margin-left: 6px;
+}
+#titlebar toolbarbutton:not([disabled]):hover {
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+#titlebar toolbarbutton:not([disabled]):active {
+	background-image: var(--gnome-headerbar-button-active-bgimage);
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+#titlebar toolbarbutton[disabled] {
+	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
+	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
+	border: var(--gnome-headerbar-button-border) !important;
+}
