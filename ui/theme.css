@@ -405,3 +405,12 @@ tab[selected] {
 	border-left: var(--gnome-tabbar-tab-hover-border-sides) !important;
 	border-bottom: var(--gnome-tabbar-tab-hover-border-bottom) !important;
 }
+
+/* Full width tabs */
+.tabbrowser-tab:not([pinned]) {
+	max-width: 100% !important;
+}
+
+.tabbrowser-tab:not([pinned]):not([fadein]) {
+	max-width: 0.1px !important;
+}
