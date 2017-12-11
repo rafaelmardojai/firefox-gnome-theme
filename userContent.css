@@ -229,6 +229,12 @@ url("about:mozilla"), url("about:webrtc") {
 	}
 }
 
+@-moz-document url("about:config") {
+	#warningTitle {
+		color: unset !important;
+	}
+}
+
 @-moz-document url("about:debugging") {
 	.addon-target-container, .service-worker-multi-process {
 		background-color: var(--in-content-box-background) !important;
