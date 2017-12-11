@@ -17,7 +17,8 @@
 /*******************************************************************************
  * Dark about: pages */
 
-*|*:root {
+/* keep this selector the same as the next one */
+*|*:root:not(#ublock0-epicker) {
 	--in-content-page-color: #ccc !important;
 	--in-content-page-background: #2e3436 !important;
 	--in-content-text-color: #ccc !important;
@@ -51,6 +52,14 @@
 	--in-content-primary-button-background-active: #003eaa;
 	--in-content-table-border-dark-color: #1e2123 !important;
 	--in-content-table-header-background: #0a84ff;
+}
+
+/* A workaround for the screenshot tool, issue #7 */
+@-moz-document regexp("^moz-extension://.+/blank.html$") {
+	/* keep this selector the same as the previous one */
+	*|*:root:not(#ublock0-epicker) {
+		--in-content-page-background: unset !important;
+	}
 }
 
 /* Checkboxes and radios */
