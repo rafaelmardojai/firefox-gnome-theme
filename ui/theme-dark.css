@@ -12,27 +12,32 @@
 	--gnome-browser-before-load-bgcolor: #2e3436;
 
 	/* Extra toolbars like the bookmark bar */
-	--toolbar-bgcolor: #2f3434 !important;
+	--toolbar-bgcolor: linear-gradient(to top, #25292b, #2a2e30 2px, #2c3133 3px) !important;
 	--toolbar-bgimage: none !important;
 
 	/* Header bar */
-	--gnome-headerbar-bgimage: linear-gradient(rgb(67, 74, 74), rgb(57, 63, 63));
+	--gnome-headerbar-bgimage: linear-gradient(to top, #25292b, #2a2e30 2px, #2c3133 3px);       
 	--gnome-headerbar-border-bottom: 1px solid rgb(28, 31, 31);
-	--gnome-headerbar-box-shadow: 0 -1px rgb(45, 50, 50) inset, 0 1px rgba(238, 238, 236, .1) inset;
-	--gnome-headerbar-button-bgimage: linear-gradient(rgb(69, 76, 76), rgb(57, 63, 63) 40%, rgb(45, 50, 50));
-	--gnome-headerbar-button-border: 1px solid rgba(28, 31, 31);
-	--gnome-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, .1) inset, 0 1px rgba(238, 238, 236, .1);
-	--gnome-headerbar-button-hover-bgimage: linear-gradient(rgb(91, 100, 100), rgb(67, 73, 73) 40%, rgb(55, 60, 60));
+	--gnome-headerbar-box-shadow:inset 0 1px rgba(238, 238, 236, 0.07);
+
+	--gnome-headerbar-button-bgimage: linear-gradient(to bottom, #2e3436, #2a2e30 60%, #25292b);
+	--gnome-headerbar-button-border: 1px solid #1b1f20;
+	--gnome-headerbar-button-bottom-border-color: #0b0c0c;
+	--gnome-headerbar-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+
+	--gnome-headerbar-button-hover-bgimage: linear-gradient(to bottom, #353c3e, #2e3436 60%, #2a2e30);
+
 	--gnome-headerbar-button-active-bgimage: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
 	--gnome-headerbar-button-active-box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1);
-	--gnome-headerbar-button-disabled-bgcolor: #323636;
-	--gnome-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, .1);
+
+	--gnome-headerbar-button-disabled-bgcolor: transparent;
+	--gnome-headerbar-button-disabled-box-shadow: inset 0 0 0 1px rgba(33, 93, 156, 0);
 
 	/* URL bar */
-	--gnome-urlbar-bgimage: linear-gradient(rgb(28, 31, 31), rgb(35, 37, 37) 3px, rgb(41, 41, 41) 90%);
-	--gnome-urlbar-border: 1px solid #1e2222;
-	--gnome-urlbar-box-shadow: 0 0 0 1px rgba(33, 93, 156, 0) inset, 0 1px rgba(238, 238, 236, .1);
-	--gnome-urlbar-height: 32px;
+	--gnome-urlbar-bgimage: #232729;
+	--gnome-urlbar-border: 1px solid #1b1f20;
+	--gnome-urlbar-box-shadow: inset 0 0 0 1px rgba(33, 93, 156, 0);
+	--gnome-urlbar-height: 34px;
 
 	/* Tab bar */
 	--gnome-tabbar-bgcolor: #2f3434;

@@ -13,4 +13,17 @@
  * WARNING: This setting is experimental and doesn't work exactly as it should.
  * Don't forget to enable widget.allow-client-side-decoration in about:config
  * if you're using it. */
-/*@import "ui/fedora-csd.css"; /**/
+/* @import "ui/fedora-csd.css"; */
+
+/* Client-side decorations window buttons options (Fedora only)*/
+#nav-bar {
+	/* Close window button only 
+	margin-right: 44px;
+	*/
+	/* Two window buttons
+	margin-right: 84px;
+	*/
+	/* Three window buttons 
+	margin-right: 124px; 
+	*/	
+}

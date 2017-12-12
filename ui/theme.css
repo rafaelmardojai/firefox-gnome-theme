@@ -109,6 +109,7 @@ tabbrowser tabpanels {
 #nav-bar #stop-button,
 #PanelUI-menu-button {
 	border: var(--gnome-headerbar-button-border) !important;
+        border-bottom-color: var(--gnome-headerbar-button-bottom-border-color) !important;
 	border-radius: 3px !important;
 	height: 34px;
 	margin: 4px 3px !important;
@@ -406,7 +407,7 @@ tab[selected] {
 	border-bottom: var(--gnome-tabbar-tab-hover-border-bottom) !important;
 }
 
-/* Full width tabs */
+/* Full width tabs
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
 	max-width: 100% !important;
@@ -415,4 +416,4 @@ tab[selected] {
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]):not([fadein]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
 	max-width: 0.1px !important;
-}
+}*/
