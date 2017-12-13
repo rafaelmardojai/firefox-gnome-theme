@@ -5,6 +5,7 @@
 	padding-right: 3px !important;
 	position: relative;
 }
+/* Add window controlls separator */
 #nav-bar::after {	
         content: "";
 	position: absolute;
@@ -65,6 +66,17 @@
 	border: var(--gnome-headerbar-button-border) !important;
 }
 
+/* Remove ugly line before tabs */
 .titlebar-placeholder[type="pre-tabs"] {
-    border-inline-end: 0px solid !important;
+	border-inline-end: 0px solid !important;
+}
+
+/* Remove blank space after tabs when window is maximized */
+#main-window:not([sizemode="normal"]) .titlebar-placeholder[type="post-tabs"] {
+	display: none !important;
+}
+
+/* Remove windows controlls blank space after tabs */
+.titlebar-placeholder[type="caption-buttons"] {
+	display: none !important;
 }
