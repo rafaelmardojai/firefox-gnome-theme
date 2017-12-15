@@ -1,0 +1,59 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+@-moz-document url("chrome://global/content/viewSource.xul"),
+url("chrome://global/content/viewPartialSource.xul"),
+url-prefix("view-source:") {
+	html, body {
+		background: #2e3436 !important;
+		color: #babdb6 !important;
+		font-family: "Ubuntu Mono", monospace;
+		font-size: 14px;
+		-moz-tab-size: 8 !important;
+	}
+
+	::-moz-selection {
+		background-color: #888a85 !important;
+		color: #eeeeec !important;
+	}
+
+	pre[id]::before, span[id]::before {
+		background: #2e3436 !important;
+		color: #888a85 !important;
+	}
+
+	span {
+		font-style: normal !important;
+		font-weight: normal !important;
+		text-decoration: none !important;
+	}
+
+	a {
+		color: #0a8dff !important;
+	}
+
+	.comment {
+		color: #888a85 !important;
+	}
+
+	.start-tag, .end-tag {
+		color: #729fcf !important;
+	}
+
+	.attribute-name {
+		color: #ce5c00 !important;
+	}
+
+	.attribute-value {
+		color: #669900 !important;
+	}
+
+	.entity, .doctype, .pi {
+		color: #dd4a68 !important;
+	}
+
+	.error {
+		background: #cc0000 !important;
+		color: #eeeeec !important;
+	}
+}

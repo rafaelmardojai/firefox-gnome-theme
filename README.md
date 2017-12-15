@@ -21,7 +21,11 @@ Extensions can no longer style UI elements, but we can still use good old
 	git clone 'https://github.com/kurogetsusai/firefox-gnome-theme.git' chrome
 	```
 
-3. The GTK theme variant must match the variant you picked for this Firefox
+3. Enable the theme in your `userChrome.css` file. Open it with your favorite
+text editor and follow instructions to enable one of the theme variants. You can
+also enable extra features here.
+
+The GTK theme variant must match the variant you picked for this Firefox
 theme, which means you must either enable (for the dark variant) or disable (for
 the light one) global dark theme in GNOME Tweak Tools, or alternativelly, you
 can run Firefox with a specific variant without changing the global theme by
@@ -35,20 +39,15 @@ supplying the GTK_THEME variable like this:
 	GTK_THEME=Adwaita:light firefox
 	```
 
-If you choose the light variant, you must also enable it in your
-`userChrome.css` file and disable the dark one. Just uncomment the
-`@import "ui/theme-light.css";` file and comment the
-`@import "ui/theme-dark.css";` one, so it looks like this:
+4. Optionally you can enable styling of Firefox' internal pages in your
+`userContent.css` file.
 
-```css
-/* Dark theme */
-/*@import "ui/theme-dark.css"; /**/
-/* Light theme */
-@import "ui/theme-light.css"; /**/
-```
-
-The `userContent.css` file makes all the Firefox' internal pages dark, so if you
-don't want them dark, just remove that file.
+You can also create `customChrome.css` and `customContent.css` files, which will
+be loaded after `userChrome.css` and `userContent.css` files. Everything you put
+in those files will survive updates, so you can use them to apply your own
+custom styles or copy the relevant `@import` lines to preserve your
+configuration. Remember all `@import`s must be at the top of the file (other
+rules are allowed below `@import` declarations).
 
 You might want to adjust your default link colors so they are more visible on
 dark background, either drop the code below into your
