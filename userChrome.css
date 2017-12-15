@@ -30,13 +30,16 @@
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/
 
+/* Enable client-side decorations Firefox Nightly */
+/*@import "ui/csd.css"; /**/
+
 /* Enable client-side decorations (Fedora only)
  * WARNING: This setting is experimental and doesn't work exactly as it should.
  * Don't forget to enable widget.allow-client-side-decoration in about:config
  * if you're using it. */
 /*@import "ui/fedora-csd.css"; /**/
 
-/* Client-side decorations window buttons options (Fedora only)*/
+/* Client-side decorations window buttons options (Fedora & Nightly)*/
 #nav-bar {
 	/* Close window button only
 	margin-right: 43px;
