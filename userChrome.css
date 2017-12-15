@@ -26,33 +26,32 @@
 /*@import "ui/gnome-3.26-dark.css"; /**/
 
 /*******************************************************************************
- * Optional features
+/* Client-side decorations (optional)
+ * This feature is currently only available on Firefox Nightly (59) and Firefox
+ * 57 on Fedora, which includes a CSD patch. You can enable Firefox' CSD support
+ * in the app menu → Customize... → uncheck "Title Bar" at the bottom of the
+ * window. Fedora's version also requires enabling a key in about:config —
+ * widget.allow-client-side-decoration.
+ */
+
+/* Enable CSD for Firefox 59 */
+/*@import "ui/csd.css"; /**/
+/* Enable CSD for Firefox 57 (Fedora only) */
+/*@import "ui/fedora-csd.css"; /**/
+
+/* Window controls: just 1 button */
+/*@import "ui/csd-1-button.css" /**/
+/* Window controls: 2 buttons */
+/*@import "ui/csd-2-buttons.css" /**/
+/* Window controls: 3 buttons */
+/*@import "ui/csd-3-buttons.css" /**/
+
+/*******************************************************************************
+ * Other features (optional)
  */
 
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/
-
-/* Enable client-side decorations Firefox Nightly */
-/*@import "ui/csd.css"; /**/
-
-/* Enable client-side decorations (Fedora only)
- * WARNING: This setting is experimental and doesn't work exactly as it should.
- * Don't forget to enable widget.allow-client-side-decoration in about:config
- * if you're using it. */
-/*@import "ui/fedora-csd.css"; /**/
-
-/* Client-side decorations window buttons options (Fedora & Nightly)*/
-#nav-bar {
-	/* Close window button only
-	margin-right: 43px;
-	*/
-	/* Two window buttons
-	margin-right: 83px;
-	*/
-	/* Three window buttons
-	margin-right: 123px;
-	*/
-}
 
 /* Import a custom stylesheet
  * Everything you add in your customChrome.css file (it doesn't exist by
