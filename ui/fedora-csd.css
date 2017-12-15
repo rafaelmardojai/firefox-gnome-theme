@@ -77,3 +77,8 @@
 	display: none !important;
 }
 
+/* Remove blank space before and after tabs */
+.titlebar-placeholder[type="pre-tabs"],
+.titlebar-placeholder[type="post-tabs"] {
+	display: none !important;
+}
