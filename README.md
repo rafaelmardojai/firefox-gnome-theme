@@ -21,7 +21,11 @@ Extensions can no longer style UI elements, but we can still use good old
 	git clone 'https://github.com/kurogetsusai/firefox-gnome-theme.git' chrome
 	```
 
-3. The GTK theme variant must match the variant you picked for this Firefox
+3. Enable the theme in your `userChrome.css` file. Open it with your favorite
+text editor and follow instructions to enable one of the theme variants. You can
+also enable extra features here.
+
+The GTK theme variant must match the variant you picked for this Firefox
 theme, which means you must either enable (for the dark variant) or disable (for
 the light one) global dark theme in GNOME Tweak Tools, or alternativelly, you
 can run Firefox with a specific variant without changing the global theme by
@@ -34,18 +38,6 @@ supplying the GTK_THEME variable like this:
 	# for the light one
 	GTK_THEME=Adwaita:light firefox
 	```
-
-If you choose the light variant, you must also enable it in your
-`userChrome.css` file and disable the dark one. Just uncomment the
-`@import "ui/theme-light.css";` file and comment the
-`@import "ui/theme-dark.css";` one, so it looks like this:
-
-```css
-/* Dark theme */
-/*@import "ui/theme-dark.css"; /**/
-/* Light theme */
-@import "ui/theme-light.css"; /**/
-```
 
 The `userContent.css` file makes all the Firefox' internal pages dark, so if you
 don't want them dark, just remove that file.

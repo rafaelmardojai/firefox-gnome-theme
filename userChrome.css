@@ -1,15 +1,36 @@
-/* Here you can switch between the dark and the light theme. Don't use both, coz
- * it ain't gonna work. */
+/*
+ * In this file you can enable styles which apply to Firefox' user interface.
+ * To enable a specific feature, uncomment its @import line by removing "/*" at
+ * the beginning of the line. To disable it, put the "/*" back.
+ */
 
-/* Dark theme */
-@import "ui/theme-dark.css"; /**/
-/* Light theme */
-/*@import "ui/theme-light.css"; /**/
+/*******************************************************************************
+ * GNOME Theme
+ * Pick whichever variant you like, it doesn't have to match your GNOME version,
+ * but it will probably look better if it does. Remember that your GTK theme
+ * variant must match the variant you pick here, eg. if you pick a light
+ * variant, you must also run Firefox using the light variant by either
+ * disabling global dark theme in GNOME Tweak Tool or running Firefox explicity
+ * with the light theme:
+ *   $ GTK_THEME=Adwaita:light firefox
+ * The opposite applies to the dark variant, you must either enable global dark
+ * theme or run Firefox like this:
+ *   $ GTK_THEME=Adwaita:dark firefox
+ */
 
-/* Symbolic tab icons */
+/* GNOME 3.18 light theme */
+/*@import "ui/gnome-3.18-light.css"; /**/
+/* GNOME 3.18 dark theme */
+/*@import "ui/gnome-3.18-dark.css"; /**/
+
+/*******************************************************************************
+ * Optional features
+ */
+
+/* Make all tab icons look kinda like symbolic icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/
 
-/* Client-side decorations (Fedora only)
+/* Enable client-side decorations (Fedora only)
  * WARNING: This setting is experimental and doesn't work exactly as it should.
  * Don't forget to enable widget.allow-client-side-decoration in about:config
  * if you're using it. */
