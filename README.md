@@ -39,8 +39,8 @@ supplying the GTK_THEME variable like this:
 	GTK_THEME=Adwaita:light firefox
 	```
 
-The `userContent.css` file makes all the Firefox' internal pages dark, so if you
-don't want them dark, just remove that file.
+4. Optionally you can enable styling of Firefox' internal pages in your
+`userContent.css` file.
 
 You might want to adjust your default link colors so they are more visible on
 dark background, either drop the code below into your
