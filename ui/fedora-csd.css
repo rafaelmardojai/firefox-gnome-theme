@@ -1,24 +1,21 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #nav-bar {
-	background-image: var(--gnome-headerbar-bgimage) !important;
-	border: none !important;
-	border-bottom: var(--gnome-headerbar-border-bottom) !important;
-	box-shadow: var(--gnome-headerbar-box-shadow) !important;
 	margin-top: -4px !important;
 	padding-right: 7px !important;
 	position: relative;
 }
 
-/* Add window controlls separator */
-#nav-bar::after {	
-        content: "";
+/* Add window controls separator */
+#nav-bar::after {
+	content: "";
 	position: absolute;
 	right: 3px;
 	top: 6px;
 	height: 32px;
 	border-right: 1px solid rgba(0, 0, 0, .1);
 }
+
 /* Move window buttons next to the header bar */
 #titlebar-buttonbox {
 	background-image: var(--gnome-headerbar-bgimage) !important;
@@ -26,20 +23,16 @@
 	border-bottom: var(--gnome-headerbar-border-bottom) !important;
 	box-shadow: var(--gnome-headerbar-box-shadow);
 	margin-right: -4px;
-        margin-top: -4px !important;
+	margin-top: -4px !important;
 	padding-right: 3px;
 }
 #navigator-toolbox {
 	margin-top: -5px;
 }
-/*#nav-bar {
-	margin-right: 40px;
-}*/
-/*#main-window[tabsintitlebar][sizemode="normal"] #navigator-toolbox {}*/
-/*#main-window[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {}*/
 
-/* Windows buttons */
+/* Window buttons */
 #titlebar toolbarbutton {
+	-moz-appearance: none !important;
 	border: var(--gnome-headerbar-button-border) !important;
 	border-color: transparent !important;
 	border-radius: 3px !important;
@@ -48,10 +41,8 @@
 	padding: 0 2px !important;
 	position: relative;
 	width: 34px;
-	-moz-appearance: none !important;    
-	transition: all 0.3s ease-out;	
+	transition: all .3s ease-out;
 }
-
 #titlebar toolbarbutton image {
 	filter: invert(85%);
 	margin-left: 6px;
@@ -81,7 +72,8 @@
 	display: none !important;
 }
 
-/* Remove windows controlls blank space after tabs */
+/* Remove window controls blank space after tabs */
 .titlebar-placeholder[type="caption-buttons"] {
 	display: none !important;
 }
+

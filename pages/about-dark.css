@@ -20,7 +20,7 @@
 	--in-content-box-background-hover: #232729 !important;
 	--in-content-box-background-active: #171a1b !important;
 	--in-content-box-border-color: #1e2123 !important;
-	--in-content-item-hover: rgba(0,149,221,0.25);
+	--in-content-item-hover: rgba(0, 149, 221, .25);
 	--in-content-item-selected: #0a84ff;
 	--in-content-border-highlight: #0a84ff;
 	--in-content-border-focus: #0a84ff;
@@ -30,10 +30,10 @@
 	--in-content-category-text-active: #eee !important;
 	--in-content-category-text-selected: #0a84ff;
 	--in-content-category-text-selected-active: #0060df;
-	--in-content-category-background-hover: rgba(12,12,13,0.1);
-	--in-content-category-background-active: rgba(12,12,13,0.15);
-	--in-content-category-background-selected-hover: rgba(12,12,13,0.15);
-	--in-content-category-background-selected-active: rgba(12,12,13,0.2);
+	--in-content-category-background-hover: rgba(12, 12, 13, .1);
+	--in-content-category-background-active: rgba(12, 12, 13, .15);
+	--in-content-category-background-selected-hover: rgba(12, 12, 13, .15);
+	--in-content-category-background-selected-active: rgba(12, 12, 13, .2);
 	--in-content-tab-color: #ccc !important;
 	--in-content-link-color: #0a8dff;
 	--in-content-link-color-hover: #0060df;

@@ -18,7 +18,7 @@ tabbrowser tabpanels {
 	background-image: var(--gnome-headerbar-bgimage) !important;
 	border: none !important;
 	border-bottom: var(--gnome-headerbar-border-bottom) !important;
-	box-shadow: var(--gnome-headerbar-box-shadow);
+	box-shadow: var(--gnome-headerbar-box-shadow) !important;
 }
 
 /* Tabs below the URL bar */
@@ -415,5 +415,5 @@ tab[selected] {
 
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]):not([fadein]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
-	max-width: 0.1px !important;
+	max-width: .1px !important;
 }
