@@ -10,6 +10,20 @@
 	position: relative;
 }
 
+#nav-bar toolbarbutton.chromeclass-toolbar-additional,
+#nav-bar toolbarbutton.toolbarbutton-combined,
+#nav-bar #reload-button,
+#nav-bar #stop-button,
+#PanelUI-menu-button {
+	border: var(--gnome-headerbar-button-border) !important;
+        border-bottom-color: var(--gnome-headerbar-button-bottom-border-color) !important;
+	border-radius: 3px !important;
+	height: 34px;
+	margin: 6px 3px !important;
+	padding: 0 2px !important;
+	width: 34px;
+}
+
 /* Add window controlls separator */
 #nav-bar::after {	
         content: "";
