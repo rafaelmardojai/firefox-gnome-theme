@@ -42,6 +42,13 @@ supplying the GTK_THEME variable like this:
 4. Optionally you can enable styling of Firefox' internal pages in your
 `userContent.css` file.
 
+You can also create `customChrome.css` and `customContent.css` files, which will
+be loaded after `userChrome.css` and `userContent.css` files. Everything you put
+in those files will survive updates, so you can use them to apply your own
+custom styles or copy the relevant `@import` lines to preserve your
+configuration. Remember all `@import`s must be at the top of the file (other
+rules are allowed below `@import` declarations).
+
 You might want to adjust your default link colors so they are more visible on
 dark background, either drop the code below into your
 `(firefox profile)/user.js` file or change them manually in `about:config`.

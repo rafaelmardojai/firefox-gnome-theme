@@ -23,3 +23,10 @@
 /* Firefox' source viewer
  * Applies to all view-source: pages. */
 /*@import "pages/view-source-dark.css"; /**/
+
+/* Import a custom stylesheet
+ * Everything you add in your customContent.css file (it doesn't exist by
+ * default) will be included here and preserved between updates, so you can move
+ * your configuration to that file if you don't like setting it up after every
+ * update. You can also apply your own custom styles in that file. */
+@import "customContent.css"; /**/
