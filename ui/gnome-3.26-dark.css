@@ -9,7 +9,7 @@
 	 * override them. */
 
 	/* Browser area before a page starts loading */
-	--gnome-browser-before-load-bgcolor: #2e3436;
+	--gnome-browser-before-load-bgcolor: #33393b;
 
 	/* Extra toolbars like the bookmark bar */
 	--toolbar-bgcolor: linear-gradient(to top, #25292b, #2a2e30 2px, #2c3133 3px) !important;
@@ -17,7 +17,7 @@
 
 	/* Header bar */
 	--gnome-headerbar-bgimage: linear-gradient(to top, #25292b, #2a2e30 2px, #2c3133 3px);       
-	--gnome-headerbar-border-bottom: 1px solid rgb(28, 31, 31);
+	--gnome-headerbar-border-bottom: 1px solid #0b0c0c;
 	--gnome-headerbar-box-shadow:inset 0 1px rgba(238, 238, 236, 0.07);
 
 	--gnome-headerbar-button-bgimage: linear-gradient(to bottom, #2e3436, #2a2e30 60%, #25292b);
@@ -27,11 +27,11 @@
 
 	--gnome-headerbar-button-hover-bgimage: linear-gradient(to bottom, #353c3e, #2e3436 60%, #2a2e30);
 
-	--gnome-headerbar-button-active-bgimage: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
-	--gnome-headerbar-button-active-box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1);
+	--gnome-headerbar-button-active-bgimage: linear-gradient(#25292b, #25292b);
+	--gnome-headerbar-button-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 
-	--gnome-headerbar-button-disabled-bgcolor: transparent;
-	--gnome-headerbar-button-disabled-box-shadow: inset 0 0 0 1px rgba(33, 93, 156, 0);
+	--gnome-headerbar-button-disabled-bgcolor: linear-gradient(#2d3234, #2d3234);
+	--gnome-headerbar-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 
 	/* URL bar */
 	--gnome-urlbar-bgimage: #232729;
@@ -40,21 +40,25 @@
 	--gnome-urlbar-height: 34px;
 
 	/* Tab bar */
-	--gnome-tabbar-bgcolor: #2f3434;
-	--gnome-tabbar-border-bottom: 1px solid #1e2222;
-	--gnome-tabbar-tab-color: rgb(147, 150, 149);
-	--gnome-tabbar-tab-hover-border-bottom: 3px solid #1c1f1f;
-	--gnome-tabbar-tab-hover-border-sides: 1px solid #2a2f2f;
-	--gnome-tabbar-tab-hover-color: rgb(192, 194, 192);
-	--gnome-tabbar-tab-active-bgcolor: #343939;
+	--gnome-tabbar-bgcolor: #272c2d;
+	--gnome-tabbar-border-bottom: 1px solid #1b1f20;
+	--gnome-tabbar-tab-color: #919494;
+
+	--gnome-tabbar-tab-hover-bgcolor: rgba(51, 57, 59, 0.6);
+	--gnome-tabbar-tab-hover-border-bottom: 3px solid #1b1f20;
+	--gnome-tabbar-tab-hover-border-sides: 1px solid rgba(27, 31, 32, 0.3);
+	--gnome-tabbar-tab-hover-color: #c0c1c0;
+
+	--gnome-tabbar-tab-active-bgcolor: rgba(51, 57, 59, 0.5);
 	--gnome-tabbar-tab-active-border-bottom: 3px solid #215d9c;
-	--gnome-tabbar-tab-active-border-color-sides: #282b2b;
-	--gnome-tabbar-tab-active-color: rgb(238, 238, 236);
-	--gnome-tabbar-tab-active-hover-bgcolor: #363c3c;
+	--gnome-tabbar-tab-active-border-color-sides: #202425;
+	--gnome-tabbar-tab-active-color: #eeeeec;
+	--gnome-tabbar-tab-active-hover-bgcolor: rgba(51, 57, 59, 0.7);
+
 	--gnome-tabbar-tab-icon-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%);
 
 	/* Bookmark bar */
-	--gnome-bookmarkbar-border-bottom: 1px solid #1e2222;
+	--gnome-bookmarkbar-border-bottom: 1px solid #1b1f20;
 	--gnome-bookmarkbar-height: 38px;
 
 	/* Burger menu */
