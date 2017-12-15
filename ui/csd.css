@@ -48,9 +48,8 @@
 	margin: 6px 3px !important;
 	padding: 0 2px !important;
 	position: relative;
-	width: 34px;
-	-moz-appearance: none !important;
 	transition: all .3s ease-out;
+	width: 34px;
 }
 #titlebar toolbarbutton image {
 	filter: invert(85%);
