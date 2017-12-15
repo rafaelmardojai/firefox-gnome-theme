@@ -21,6 +21,7 @@
 	--gnome-headerbar-box-shadow: 0 -1px rgb(45, 50, 50) inset, 0 1px rgba(238, 238, 236, .1) inset;
 	--gnome-headerbar-button-bgimage: linear-gradient(rgb(69, 76, 76), rgb(57, 63, 63) 40%, rgb(45, 50, 50));
 	--gnome-headerbar-button-border: 1px solid rgba(28, 31, 31);
+	--gnome-headerbar-button-border-bottom: var(--gnome-headerbar-button-border);
 	--gnome-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, .1) inset, 0 1px rgba(238, 238, 236, .1);
 	--gnome-headerbar-button-hover-bgimage: linear-gradient(rgb(91, 100, 100), rgb(67, 73, 73) 40%, rgb(55, 60, 60));
 	--gnome-headerbar-button-active-bgimage: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
