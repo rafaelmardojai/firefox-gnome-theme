@@ -332,6 +332,10 @@ tab:hover {
 tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
 }
+.tab-label-container {
+	display: -moz-stack;
+	text-align: center;
+}
 
 /* Remove tab icons */
 /* tab:not([pinned=true]) .tab-icon-image {
