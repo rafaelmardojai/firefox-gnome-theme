@@ -282,7 +282,7 @@ tabbrowser tabpanels {
 }
 
 /* Tab bar */
-#tabbrowser-tabs {
+#tabbrowser-tabs, tab > stack {
 	height: 38px;
 }
 
