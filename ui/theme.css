@@ -421,3 +421,9 @@ tab[selected] {
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
 	max-width: .1px !important;
 }
+
+/* Sidebar */
+#search-box {
+	box-shadow: var(--gnome-urlbar-box-shadow) !important;
+	height: var(--gnome-urlbar-height);
+}
