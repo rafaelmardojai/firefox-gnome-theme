@@ -332,9 +332,59 @@ tab:hover {
 tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
 }
+
+/* Center all inside tab */
+.tab-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100% !important;
+}
+
+/* Prevent tab icons size breaking */
+.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback  {
+	min-width: 16px;
+}
+.tab-close-button {
+	min-width: 22px;
+}
+
+/* Adjust tab label width */
 .tab-label-container {
-	display: -moz-stack;
-	text-align: center;
+	min-width: 0 !important;
+}
+
+/* Put tab close button and icon sound to the right  */
+.tab-icon-sound[soundplaying="true"] {
+	margin-left: auto !important;
+}
+.tabbrowser-tab:not([soundplaying]) .tab-close-button {
+	margin-left: auto !important;
+}
+
+/* Force tab favicon to the center */
+.tab-throbber, .tab-throbber-fallback {
+	margin-left: auto;
+}
+.tabbrowser-tab:not([bussy]) .tab-icon-image {
+	margin-left: auto;
+}
+
+/* If tab favicon is not present, force tab label to the center */
+.tabbrowser-tab .tab-label-container {
+	margin-left: auto !important;
+}
+
+.tabbrowser-tab[image] .tab-label-container, .tabbrowser-tab[bussy] .tab-label-container  {
+	margin-left: 0px !important;
+}
+
+/* If tab close button is not present, don't force favicon to the center */
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber,
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber-fallback,
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([bussy]) .tab-icon-image,
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([image]) .tab-label-container {
+	margin-left: 0 !important;
 }
 
 /* Remove tab icons */
