@@ -175,6 +175,9 @@ tabbrowser tabpanels {
 #PanelUI-menu-button {
 	margin-right: 6px !important;
 }
+#reload-button[disabled]:not(:-moz-window-inactive) > .toolbarbutton-icon {
+	opacity: .4 !important;
+}
 
 /* Combined buttons */
 #nav-bar toolbarbutton.chromeclass-toolbar-additional#back-button,
