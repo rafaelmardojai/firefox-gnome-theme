@@ -18,6 +18,7 @@
 
 /* Firefox' internal pages
  * Applies to all about: pages (settings, addons, new tab, etc). */
+/*@import "pages/about-light.css"; /**/
 /*@import "pages/about-dark.css"; /**/
 
 /* Firefox' source viewer
