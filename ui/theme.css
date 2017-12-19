@@ -322,9 +322,9 @@ tabbrowser tabpanels {
 /* Tab labels */
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
-/*	font-family: Ubuntu;*/
-	font-size: .9em;
+	font-family: Cantarell, inherit;
 	font-weight: bold;
+	font-size: 1em;
 }
 tab:hover {
 	color: var(--gnome-tabbar-tab-hover-color) !important;
