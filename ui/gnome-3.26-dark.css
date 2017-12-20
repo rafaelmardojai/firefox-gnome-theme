@@ -33,6 +33,7 @@
 	--gnome-urlbar-bgimage: #232729;
 	--gnome-urlbar-border: 1px solid #1b1f20;
 	--gnome-urlbar-box-shadow: inset 0 0 0 1px rgba(33, 93, 156, 0);
+	--gnome-urlbar-color: #fff;
 	--gnome-urlbar-height: 34px;
 
 	/* Tab bar */

@@ -263,6 +263,7 @@ tabbrowser tabpanels {
 	border: var(--gnome-urlbar-border) !important;
 	border-radius: 3px;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
+	color: var(--gnome-urlbar-color) !important;
 	height: var(--gnome-urlbar-height);
 }
 #urlbar .urlbar-textbox-container {
