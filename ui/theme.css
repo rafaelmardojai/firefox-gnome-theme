@@ -147,7 +147,7 @@ tabbrowser tabpanels {
 #nav-bar toolbarbutton.chromeclass-toolbar-additional[disabled],
 #nav-bar toolbarbutton.toolbarbutton-combined[disabled],
 #nav-bar #reload-button[disabled],
-#nav-bar #stop-button[disabled]
+#nav-bar #stop-button[disabled],
 #PanelUI-menu-button[disabled] {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
@@ -379,7 +379,7 @@ tab[selected] {
 }
 
 .tabbrowser-tab[image] .tab-label-container, .tabbrowser-tab[bussy] .tab-label-container  {
-	margin-left: 0px !important;
+	margin-left: 0 !important;
 }
 
 /* If tab close button is not present, don't force favicon to the center */

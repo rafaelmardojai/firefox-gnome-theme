@@ -12,7 +12,7 @@
 	--gnome-browser-before-load-bgcolor: #2e3436;
 
 	/* Extra toolbars like the bookmark bar */
-	--toolbar-bgcolor: #2f3434 !important;
+	--toolbar-bgcolor: var(--gnome-tabbar-bgcolor) !important;
 	--toolbar-bgimage: none !important;
 
 	/* Header bar */
