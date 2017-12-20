@@ -26,6 +26,11 @@
 	margin-top: -4px !important;
 	padding-right: 3px;
 }
+#titlebar-buttonbox:-moz-window-inactive {
+	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
+	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-inactive-headerbar-box-shadow);
+}
 #navigator-toolbox {
 	margin-top: -5px;
 }
@@ -47,16 +52,19 @@
 	filter: invert(85%);
 	margin-left: 6px;
 }
-#titlebar toolbarbutton:not([disabled]):hover {
+#titlebar:-moz-window-inactive toolbarbutton image {
+	opacity: .7 !important;
+}
+#titlebar:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
 	background-image: var(--gnome-headerbar-button-hover-bgimage);
 	border: var(--gnome-headerbar-button-border) !important;
 }
-#titlebar toolbarbutton:not([disabled]):active {
+#titlebar:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
 	background-image: var(--gnome-headerbar-button-active-bgimage);
 	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
 	border: var(--gnome-headerbar-button-border) !important;
 }
-#titlebar toolbarbutton[disabled] {
+#titlebar:not(:-moz-window-inactive) toolbarbutton[disabled] {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 	border: var(--gnome-headerbar-button-border) !important;

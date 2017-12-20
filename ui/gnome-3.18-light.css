@@ -28,6 +28,15 @@
 	--gnome-headerbar-button-active-box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 0px -2px rgba(0, 0, 0, .6) inset, 0 1px #fff;
 	--gnome-headerbar-button-disabled-bgcolor: rgb(244, 244, 244);
 	--gnome-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
+	--gnome-inactive-headerbar-bgimage: linear-gradient(rgba(237, 237, 237), rgba(237, 237, 237));
+	--gnome-inactive-headerbar-border-bottom: 1px solid rgb(168, 168, 168);
+	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
+	--gnome-inactive-headerbar-button-bgimage: linear-gradient(rgb(237, 237, 237), rgb(237, 237, 237));
+	--gnome-inactive-headerbar-button-border: 1px solid rgb(168, 168, 168);
+	--gnome-inactive-headerbar-button-border-bottom: var(--gnome-inactive-headerbar-button-border);
+	--gnome-inactive-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
+	--gnome-inactive-headerbar-button-disabled-bgcolor: var(--gnome-headerbar-button-disabled-bgcolor);
+	--gnome-inactive-headerbar-button-disabled-box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 
 	/* URL bar */
 	--gnome-urlbar-bgimage: linear-gradient(rgb(222, 222, 222), rgb(248, 248, 248) 3px, rgb(255, 255, 255) 90%);
@@ -35,6 +44,10 @@
 	--gnome-urlbar-box-shadow: 0 0 0 1px rgba(74, 144, 217, 0) inset, 0 1px #fff;
 	--gnome-urlbar-color: #000;
 	--gnome-urlbar-height: 32px;
+	--gnome-inactive-urlbar-bgimage: linear-gradient(#fff, #fff);
+	--gnome-inactive-urlbar-border: 1px solid rgb(168, 168, 168);
+	--gnome-inactive-urlbar-box-shadow: 0 1px rgba(255, 255, 255, 0);
+	--gnome-inactive-urlbar-color: rgb(50, 50, 50);
 
 	/* Tab bar */
 	--gnome-tabbar-bgcolor: #d6d6d6;
@@ -48,11 +61,19 @@
 	--gnome-tabbar-tab-active-border-color-sides: #c0c0c0;
 	--gnome-tabbar-tab-active-color: rgb(46, 52, 54);
 	--gnome-tabbar-tab-active-hover-bgcolor: #e6e6e6;
+	--gnome-inactive-tabbar-bgcolor: #d4d4d4;
+	--gnome-inactive-tabbar-border-bottom: 1px solid #a8a8a8;
+	--gnome-inactive-tabbar-tab-color: rgb(170, 171, 172);
+	--gnome-inactive-tabbar-tab-active-bgcolor: #ededed;
+	--gnome-inactive-tabbar-tab-active-border-bottom: var(--gnome-tabbar-tab-active-border-bottom);
+	--gnome-inactive-tabbar-tab-active-border-color-sides: #a8a8a8;
+	--gnome-inactive-tabbar-tab-active-color: rgb(141, 144, 145);
 	--gnome-tabbar-tab-icon-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%) invert(100%);
 
 	/* Bookmark bar */
 	--gnome-bookmarkbar-border-bottom: 1px solid #a1a1a1;
 	--gnome-bookmarkbar-height: 38px;
+	--gnome-inactive-bookmarkbar-border-bottom: var(--gnome-bookmarkbar-border-bottom);
 
 	/* Burger menu */
 	/*--arrowpanel-padding: 10px;*/

@@ -12,6 +12,10 @@ tabbrowser tabpanels {
 	background-color: var(--gnome-tabbar-bgcolor) !important;
 	border-bottom: var(--gnome-tabbar-border-bottom);
 }
+#navigator-toolbox:-moz-window-inactive {
+	background-color: var(--gnome-inactive-tabbar-bgcolor) !important;
+	border-bottom: var(--gnome-inactive-tabbar-border-bottom);
+}
 
 /* Toolbar */
 #nav-bar {
@@ -19,6 +23,11 @@ tabbrowser tabpanels {
 	border: none !important;
 	border-bottom: var(--gnome-headerbar-border-bottom) !important;
 	box-shadow: var(--gnome-headerbar-box-shadow) !important;
+}
+#nav-bar:-moz-window-inactive {
+	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
+	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-inactive-headerbar-box-shadow) !important;
 }
 
 /* Tabs below the URL bar */
@@ -152,6 +161,44 @@ tabbrowser tabpanels {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 }
+#nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional,
+#nav-bar:-moz-window-inactive toolbarbutton.toolbarbutton-combined,
+#nav-bar:-moz-window-inactive #reload-button,
+#nav-bar:-moz-window-inactive #stop-button,
+#PanelUI-menu-button:-moz-window-inactive {
+	border: var(--gnome-inactive-headerbar-button-border) !important;
+	border-bottom: var(--gnome-inactive-headerbar-button-border-bottom) !important;
+}
+#nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional:not([disabled]),
+#nav-bar:-moz-window-inactive toolbarbutton.toolbarbutton-combined:not([disabled]),
+#nav-bar:-moz-window-inactive #reload-button:not([disabled]),
+#nav-bar:-moz-window-inactive #stop-button:not([disabled]),
+#PanelUI-menu-button:-moz-window-inactive:not([disabled]) {
+	background-image: var(--gnome-inactive-headerbar-button-bgimage);
+	box-shadow: var(--gnome-inactive-headerbar-button-box-shadow);
+}
+#nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional[disabled],
+#nav-bar:-moz-window-inactive toolbarbutton.toolbarbutton-combined[disabled],
+#nav-bar:-moz-window-inactive #reload-button[disabled],
+#nav-bar:-moz-window-inactive #stop-button[disabled],
+#PanelUI-menu-button[disabled]:-moz-window-inactive {
+	background-color: var(--gnome-inactive-headerbar-button-disabled-bgcolor);
+	box-shadow: var(--gnome-inactive-headerbar-button-disabled-box-shadow);
+}
+#nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional image,
+#nav-bar:-moz-window-inactive toolbarbutton.toolbarbutton-combined image,
+#nav-bar:-moz-window-inactive #reload-button image,
+#nav-bar:-moz-window-inactive #stop-button image,
+#PanelUI-menu-button:-moz-window-inactive image {
+	opacity: .7 !important;
+}
+#nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional[disabled] image,
+#nav-bar:-moz-window-inactive toolbarbutton.toolbarbutton-combined[disabled] image,
+#nav-bar:-moz-window-inactive #reload-button[disabled] image,
+#nav-bar:-moz-window-inactive #stop-button[disabled] image,
+#PanelUI-menu-button[disabled]:-moz-window-inactive image {
+	opacity: .3 !important;
+}
 #nav-bar toolbarbutton.chromeclass-toolbar-additional#back-button {
 	margin-left: 6px !important;
 	padding: 0 !important;
@@ -269,6 +316,15 @@ tabbrowser tabpanels {
 #urlbar .urlbar-textbox-container {
 	background-image: var(--gnome-urlbar-bgimage);
 }
+#urlbar:-moz-window-inactive {
+	background-image: var(--gnome-inactive-urlbar-bgimage) !important;
+	border: var(--gnome-inactive-urlbar-border) !important;
+	box-shadow: var(--gnome-inactive-urlbar-box-shadow) !important;
+	color: var(--gnome-inactive-urlbar-color) !important;
+}
+#urlbar:-moz-window-inactive .urlbar-textbox-container {
+	background-image: var(--gnome-inactive-urlbar-bgimage);
+}
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
 .urlbar-icon[open],
@@ -283,6 +339,9 @@ tabbrowser tabpanels {
 #navigator-toolbox #PersonalToolbar {
 	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
 	height: var(--gnome-bookmarkbar-height);
+}
+#navigator-toolbox:-moz-window-inactive #PersonalToolbar {
+	border-bottom: var(--gnome-inactive-bookmarkbar-border-bottom) !important;
 }
 
 /* Tab bar */
@@ -335,6 +394,12 @@ tab:hover {
 }
 tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
+}
+tab:-moz-window-inactive {
+	color: var(--gnome-inactive-tabbar-tab-color) !important;
+}
+tab[selected]:-moz-window-inactive {
+	color: var(--gnome-inactive-tabbar-tab-active-color) !important;
 }
 
 /* Center all inside tab */
@@ -403,7 +468,7 @@ tab[selected] {
 	height: 22px;
 	width: 22px;
 }
-.tab-close-button:hover {
+:root:not(:-moz-window-inactive) .tab-close-button:hover {
 	border: var(--gnome-icons-hack-close-button-border);
 	border-radius: 3px;
 	filter: var(--gnome-icons-hack-close-button-filter);
@@ -421,7 +486,7 @@ tab[selected] {
 	width: 16px !important;
 	opacity: .2;
 }
-.tab-close-button:hover > .toolbarbutton-icon {
+:root:not(:-moz-window-inactive) .tab-close-button:hover > .toolbarbutton-icon {
 	opacity: 1;
 }
 
@@ -448,9 +513,15 @@ tab[selected] {
 	border-image: none !important;
 	border-bottom: var(--gnome-tabbar-tab-active-border-bottom) !important;
 }
+.tab-background[selected=true]:-moz-window-inactive {
+	background-color: var(--gnome-inactive-tabbar-tab-active-bgcolor) !important;
+	border-right-color: var(--gnome-inactive-tabbar-tab-active-border-color-sides) !important;
+	border-left-color: var(--gnome-inactive-tabbar-tab-active-border-color-sides) !important;
+	border-bottom: var(--gnome-inactive-tabbar-tab-active-border-bottom) !important;
+}
 
 /* Tab hover */
-.tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
+:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-hover-bgcolor) !important;
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
@@ -458,7 +529,7 @@ tab[selected] {
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
 	background-color: transparent !important;
 }
-.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	border-image: none !important;
 	border-right: var(--gnome-tabbar-tab-hover-border-sides) !important;
 	border-left: var(--gnome-tabbar-tab-hover-border-sides) !important;
