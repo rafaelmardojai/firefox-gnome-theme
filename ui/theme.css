@@ -199,6 +199,10 @@ tabbrowser tabpanels {
 #PanelUI-menu-button[disabled]:-moz-window-inactive image {
 	opacity: .3 !important;
 }
+#downloads-indicator-icon:-moz-window-inactive,
+#downloads-indicator-progress-outer:-moz-window-inactive {
+	opacity: .7 !important;
+}
 #nav-bar toolbarbutton.chromeclass-toolbar-additional#back-button {
 	margin-left: 6px !important;
 	padding: 0 !important;
