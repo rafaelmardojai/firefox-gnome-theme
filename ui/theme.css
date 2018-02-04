@@ -159,6 +159,7 @@ tabbrowser tabpanels {
 #nav-bar #stop-button[disabled],
 #PanelUI-menu-button[disabled] {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
+	border: var(--gnome-headerbar-button-disabled-border) !important;
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 }
 #nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional,
@@ -183,6 +184,7 @@ tabbrowser tabpanels {
 #nav-bar:-moz-window-inactive #stop-button[disabled],
 #PanelUI-menu-button[disabled]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-headerbar-button-disabled-bgcolor);
+	border: var(--gnome-inactive-headerbar-button-disabled-border);
 	box-shadow: var(--gnome-inactive-headerbar-button-disabled-box-shadow);
 }
 #nav-bar:-moz-window-inactive toolbarbutton.chromeclass-toolbar-additional image,
@@ -316,6 +318,14 @@ tabbrowser tabpanels {
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
 	height: var(--gnome-urlbar-height);
+}
+#urlbar[focused] {
+	border-width: 2px !important;
+	border-style: solid !important;
+	border-color: var(--gnome-focused-urlbar-border-color) !important;
+	outline: var(--gnome-focused-urlbar-outline);
+	outline-offset: -2px;
+	-moz-outline-radius: 3px;
 }
 #urlbar .urlbar-textbox-container {
 	background-image: var(--gnome-urlbar-bgimage);
@@ -534,6 +544,7 @@ tab[selected]:-moz-window-inactive {
 	background-color: transparent !important;
 }
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+	background-color: var(--gnome-tabbar-tab-hover-bgcolor) !important;
 	border-image: none !important;
 	border-right: var(--gnome-tabbar-tab-hover-border-sides) !important;
 	border-left: var(--gnome-tabbar-tab-hover-border-sides) !important;

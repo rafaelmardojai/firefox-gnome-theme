@@ -27,6 +27,7 @@
 	--gnome-headerbar-button-active-bgimage: linear-gradient(rgb(214, 214, 214), rgb(220, 220, 220) 40%, rgb(224, 224, 224));
 	--gnome-headerbar-button-active-box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 0px -2px rgba(0, 0, 0, .6) inset, 0 1px #fff;
 	--gnome-headerbar-button-disabled-bgcolor: rgb(244, 244, 244);
+	--gnome-headerbar-button-disabled-border: var(--gnome-headerbar-button-border);
 	--gnome-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
 	--gnome-inactive-headerbar-bgimage: linear-gradient(rgba(237, 237, 237), rgba(237, 237, 237));
 	--gnome-inactive-headerbar-border-bottom: 1px solid rgb(168, 168, 168);
@@ -36,6 +37,7 @@
 	--gnome-inactive-headerbar-button-border-bottom: var(--gnome-inactive-headerbar-button-border);
 	--gnome-inactive-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
 	--gnome-inactive-headerbar-button-disabled-bgcolor: var(--gnome-headerbar-button-disabled-bgcolor);
+	--gnome-inactive-headerbar-button-disabled-border: var(--gnome-inactive-headerbar-button-border);
 	--gnome-inactive-headerbar-button-disabled-box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 
 	/* URL bar */
@@ -48,11 +50,14 @@
 	--gnome-inactive-urlbar-border: 1px solid rgb(168, 168, 168);
 	--gnome-inactive-urlbar-box-shadow: 0 1px rgba(255, 255, 255, 0);
 	--gnome-inactive-urlbar-color: rgb(50, 50, 50);
+	--gnome-focused-urlbar-border-color: #0f2a46;
+	--gnome-focused-urlbar-outline: 1px solid #21578f;
 
 	/* Tab bar */
 	--gnome-tabbar-bgcolor: #d6d6d6;
 	--gnome-tabbar-border-bottom: 1px solid #a1a1a1;
 	--gnome-tabbar-tab-color: rgb(141, 144, 145);
+	--gnome-tabbar-tab-hover-bgcolor: var(--gnome-tabbar-bgcolor);
 	--gnome-tabbar-tab-hover-border-bottom: 3px solid #a1a1a1;
 	--gnome-tabbar-tab-hover-border-sides: 1px solid #c9c9c9;
 	--gnome-tabbar-tab-hover-color: rgb(93, 98, 99);
