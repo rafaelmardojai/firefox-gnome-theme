@@ -29,14 +29,14 @@
 
 /*******************************************************************************
 /* Client-side decorations (optional)
- * This feature is currently only available on Firefox Nightly (59) and Firefox
- * 57 on Fedora, which includes a CSD patch. You can enable Firefox' CSD support
- * in the app menu → Customize... → uncheck "Title Bar" at the bottom of the
- * window. Fedora's version also requires enabling a key in about:config —
- * widget.allow-client-side-decoration.
+ * This feature is currently only available in Firefox 59 (beta) for all distros
+ * and Firefox 57 / 58 on Fedora, which includes a CSD patch. You can enable
+ * Firefox' CSD support in the app menu → Customize... → uncheck "Title Bar" at
+ * the bottom of the window. Fedora's version for Firefox 57 also requires
+ * enabling a key in about:config — widget.allow-client-side-decoration.
  */
 
-/* Enable CSD for Firefox 59 */
+/* Enable CSD for Firefox 58 (Fedora only) and 59 (all distros) */
 /*@import "ui/csd.css"; /**/
 /* Enable CSD for Firefox 57 (Fedora only) */
 /*@import "ui/fedora-csd.css"; /**/
