@@ -1,0 +1,12 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#tabbrowser-tabs tab:only-of-type,
+#TabsToolbar .private-browsing-indicator {
+	display: none !important;
+}
+
+#tabbrowser-tabs,
+#tabbrowser-tabs arrowscrollbox {
+	height: initial !important;
+	min-height: initial !important;
+}
