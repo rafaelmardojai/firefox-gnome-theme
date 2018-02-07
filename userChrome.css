@@ -54,9 +54,13 @@
 
 /* Hide the tab bar when only one tab is open
  * Warning: This also hides the private browsing indicator in private windows.
- * You should move the new tab button somewhere else for this to work, because
- * by default it is on the tab bar too. */
+ * If you are using it, you might wanna enable the next feature too. Also you
+ * should move the new tab button somewhere else for this to work, because by
+ * default it is on the tab bar too. */
 /*@import "ui/hide-single-tab.css"; /**/
+
+/* Replace the private browsing indicator with a colored URL bar */
+/*@import "ui/private-urlbar.css"; /**/
 
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/

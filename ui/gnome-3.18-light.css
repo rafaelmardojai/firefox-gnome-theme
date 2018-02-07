@@ -52,6 +52,8 @@
 	--gnome-inactive-urlbar-color: rgb(50, 50, 50);
 	--gnome-focused-urlbar-border-color: #0f2a46;
 	--gnome-focused-urlbar-outline: 1px solid #21578f;
+	/* for private-urlbar.css only */
+	--gnome-private-urlbar-bgimage: linear-gradient(#e6c2ff, #e6c2ff);
 
 	/* Tab bar */
 	--gnome-tabbar-bgcolor: #d6d6d6;
