@@ -62,6 +62,9 @@
 /* Replace the private browsing indicator with a colored URL bar */
 /*@import "ui/private-urlbar.css"; /**/
 
+/* Limit the URL bar's autocompletion popup's width to the URL bar's width */
+/*@import "ui/matching-autocomplete-width.css"; /**/
+
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/
 

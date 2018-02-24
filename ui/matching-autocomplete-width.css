@@ -1,0 +1,63 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#PopupAutoCompleteRichResult {
+	margin-left: 0 !important;
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) - 26px);
+	/* bookmark icon, site icon, separator */
+	--fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
+	max-width: var(--box-width);
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+	padding-left: 0 !important;
+	padding-right: 5px !important;
+	border-inline-end-width: 0 !important;
+	max-width: calc(var(--box-width) - 5px);
+	display: flex;
+	align-items: center;
+}
+#PopupAutoCompleteRichResult .ac-type-icon,
+#PopupAutoCompleteRichResult .ac-site-icon,
+#PopupAutoCompleteRichResult .ac-separator {
+	flex: 0 0 auto;
+}
+#PopupAutoCompleteRichResult .ac-title,
+#PopupAutoCompleteRichResult .ac-tags,
+#PopupAutoCompleteRichResult .ac-url,
+#PopupAutoCompleteRichResult .ac-action {
+	flex: 1 0 0;
+	min-width: 0;
+	max-width: -moz-fit-content;
+}
+/* Relative widths with tags */
+#PopupAutoCompleteRichResult .ac-title {
+	flex-grow: 2;
+}
+#PopupAutoCompleteRichResult .ac-tags {
+	flex-grow: 4;
+}
+#PopupAutoCompleteRichResult .ac-url,
+#PopupAutoCompleteRichResult .ac-action {
+	flex-grow: 3;
+}
+/* */
+/* Relative widths without tags */
+#PopupAutoCompleteRichResult .ac-tags[empty] {
+	flex-grow: 0;
+}
+#PopupAutoCompleteRichResult .ac-tags[empty] ~ .ac-url,
+#PopupAutoCompleteRichResult .ac-tags[empty] ~ .ac-action {
+	flex-grow: 1;
+}
+/* */
+#PopupAutoCompleteRichResult .ac-text-overflow-container {
+	max-width: 100%;
+}
+#PopupAutoCompleteRichResult .ac-title-text,
+#PopupAutoCompleteRichResult .ac-tags-text,
+#PopupAutoCompleteRichResult .ac-url-text,
+#PopupAutoCompleteRichResult .ac-action-text {
+	max-width: 100% !important;
+	text-overflow: ellipsis;
+}
