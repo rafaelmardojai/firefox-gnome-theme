@@ -46,7 +46,7 @@
 	--in-content-table-header-background: #0a84ff;
 
 	/* Extensions' popups */
-	--popup-background: #ededed;
+	--popup-background: -moz-field;
 }
 
 /* A workaround for the screenshot tool, issue #7 */

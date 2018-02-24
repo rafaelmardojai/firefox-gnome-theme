@@ -68,10 +68,36 @@ tabbrowser tabpanels {
 	border-bottom-width: 0 !important;
 }
 
-/* Zoom reset in the buger menu */
+/* Popup menus */
+.panel-arrowcontent {
+	background-color: -moz-field !important;
+	border-radius: 5px;
+	padding: 8px 12px !important;
+}
+panelview vbox.panel-subview-body > toolbarbutton image {
+	display: none;
+}
+panelview vbox.panel-subview-body > toolbarbutton label {
+	padding-inline-start: 0 !important;
+}
+#appMenu-zoom-controls > spacer, #appMenu-edit-controls > spacer {
+	width: 12px !important;
+}
 #appMenu-zoomReset-button {
 	background-color: var(--arrowpanel-background) !important;
 	border-color: var(--panel-separator-color) !important;
+}
+panel[type=arrow] {
+	margin-top: 6px !important;
+}
+panel[type=arrow][viewId=appMenu-libraryView],
+panel[type=arrow][viewId=PanelUI-characterEncodingView],
+panel[type=arrow][viewId=PanelUI-developer],
+#widget-overflow {
+	margin-top: 0 !important;
+}
+#BMB_bookmarksPopup {
+	margin-top: -3px !important;
 }
 
 /* Color of the last item in the bookmark menu and downloads menu */
@@ -373,6 +399,13 @@ toolbarspring {
 #tabbrowser-tabs, tab > stack {
 	height: 38px;
 }
+/* Extra margin for the first and last tabs */
+.tabbrowser-tab[first-tab]:not([pinned=true]) {
+	margin-left: 8px !important;
+}
+.tabbrowser-tab[last-tab]:not([pinned=true]) {
+	margin-right: 8px !important;
+}
 
 /* Remove hover effects on tab bar buttons */
 #TabsToolbar {
@@ -432,6 +465,7 @@ tab[selected]:-moz-window-inactive {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: -1px;
 	min-width: 100% !important;
 }
 
@@ -515,9 +549,14 @@ tab[selected]:-moz-window-inactive {
 	opacity: 1;
 }
 
+/* Tab close button etc. positioning */
+.tab-throbber, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-sound, .tab-close-button {
+	margin-top: 0 !important;
+}
+
 /* Remove blue line above tabs */
 .tab-line {
-	--tab-line-color: transparent !important;
+	display: none;
 }
 
 /* Move container lines to the top */

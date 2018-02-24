@@ -29,11 +29,19 @@ xul|treecol:not([hideheader="true"]):not(:first-child), xul|treecolpicker {
 	border-image: linear-gradient(transparent 0%, transparent 20%, var(--in-content-border-color) 20%, var(--in-content-border-color) 80%, transparent 80%, transparent 100%) 1 1 !important;
 }
 
-/* Try to make popups added by add-ons and their settings pages look dark too,
- * doesn't always work tho because of their weird styles */
+/* Try to apply styles to add-ons' settings pages */
 @-moz-document url-prefix("moz-extension://") {
 	body {
 		background-color: var(--in-content-page-background) !important;
+		color: var(--in-content-page-color) !important;
+	}
+}
+
+/* Try to make popups added by add-ons and their settings pages look dark too,
+ * doesn't always work tho because of their weird styles */
+@-moz-document regexp("^moz-extension://.+/popup.html$") {
+	body {
+		background-color: var(--popup-background) !important;
 		color: var(--in-content-page-color) !important;
 	}
 }
