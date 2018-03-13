@@ -356,10 +356,6 @@ panel[type=arrow][viewId=PanelUI-developer],
 #urlbar[focused] .urlbar-textbox-container {
 	margin: -1px !important;
 }
-#urlbar-container {
-	/* smaller URL bar? */
-	max-width: calc(129ch + 24px + 2 * var(--toolbarbutton-inner-padding)) !important;
-}
 toolbarspring {
 	/* center the URL bar */
 	max-width: 10000px !important;
