@@ -88,16 +88,16 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	border-color: var(--panel-separator-color) !important;
 }
 panel[type=arrow] {
-	margin-top: 6px !important;
+	margin-top: -2px !important;
 }
 panel[type=arrow][viewId=appMenu-libraryView],
 panel[type=arrow][viewId=PanelUI-characterEncodingView],
 panel[type=arrow][viewId=PanelUI-developer],
 #widget-overflow {
-	margin-top: 0 !important;
+	margin-top: -2px !important;
 }
 #BMB_bookmarksPopup {
-	margin-top: -3px !important;
+	margin-top: -5px !important;
 }
 
 /* Color of the last item in the bookmark menu and downloads menu */
