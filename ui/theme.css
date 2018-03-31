@@ -88,16 +88,19 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	border-color: var(--panel-separator-color) !important;
 }
 panel[type=arrow] {
-	margin-top: -2px !important;
+	margin-top: 6px !important;
 }
 panel[type=arrow][viewId=appMenu-libraryView],
 panel[type=arrow][viewId=PanelUI-characterEncodingView],
 panel[type=arrow][viewId=PanelUI-developer],
 #widget-overflow {
-	margin-top: -2px !important;
+	margin-top: 6px !important;
 }
 #BMB_bookmarksPopup {
-	margin-top: -5px !important;
+	margin-top: 3px !important;
+}
+#identity-popup {
+	margin-top: 12px !important;
 }
 
 /* Color of the last item in the bookmark menu and downloads menu */
@@ -147,7 +150,7 @@ panel[type=arrow][viewId=PanelUI-developer],
 	border-bottom: var(--gnome-headerbar-button-border-bottom) !important;
 	border-radius: 3px !important;
 	height: 34px;
-	margin: 4px 3px !important;
+	margin: 6px 3px !important;
 	padding: 0 2px !important;
 	width: 34px;
 }
@@ -407,6 +410,7 @@ toolbarspring {
 #TabsToolbar {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
+	margin-bottom: -1px !important;
 }
 
 /* New hover effect */
@@ -568,10 +572,13 @@ tab[selected]:-moz-window-inactive {
 .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-bgcolor) !important;
 	background-image: none !important;
-	border-right-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
-	border-left-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
-	border-image: none !important;
 	border-bottom: var(--gnome-tabbar-tab-active-border-bottom) !important;
+	border-right-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
+	border-right-style: solid !important;
+	border-left-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
+	border-left-style: solid !important;
+	border-image: none !important;
+	border-top-style: none !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-bgcolor) !important;
