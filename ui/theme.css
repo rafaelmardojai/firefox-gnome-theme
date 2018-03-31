@@ -235,8 +235,8 @@ panel[type=arrow][viewId=PanelUI-developer],
 	margin-left: 6px !important;
 	padding: 0 !important;
 }
-#back-button > .toolbarbutton-icon {
-	width: 30px !important;
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+	width: unset !important;
 }
 #nav-bar toolbarbutton.toolbarbutton-combined#zoom-out-button {
 	margin-left: 1px !important;
