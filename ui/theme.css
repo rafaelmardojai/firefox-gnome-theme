@@ -154,6 +154,23 @@ panel[type=arrow][viewId=PanelUI-developer],
 	padding: 0 2px !important;
 	width: 34px;
 }
+.tabbrowser-arrowscrollbox > .scrollbutton-up[disabled="true"],
+.tabbrowser-arrowscrollbox > .scrollbutton-down[disabled="true"],
+:root:not([customizing]) .toolbarbutton-1[disabled="true"],
+#nav-bar-overflow-button[disabled="true"],
+#PanelUI-menu-button[disabled="true"] {
+	opacity: unset !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-up[disabled="true"] image,
+.tabbrowser-arrowscrollbox > .scrollbutton-down[disabled="true"] image,
+:root:not([customizing]) .toolbarbutton-1[disabled="true"] image,
+#nav-bar-overflow-button[disabled="true"] image,
+#PanelUI-menu-button[disabled="true"] image {
+	opacity: .4 !important;
+}
+#nav-bar[customizing] > .overflow-button > .toolbarbutton-icon {
+	fill-opacity: unset !important;
+}
 #nav-bar toolbarbutton.chromeclass-toolbar-additional:not([disabled]),
 #nav-bar toolbarbutton.toolbarbutton-combined:not([disabled]),
 #nav-bar #reload-button:not([disabled]),
