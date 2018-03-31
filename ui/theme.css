@@ -487,11 +487,8 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Prevent tab icons size breaking */
-.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback  {
+.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback, .tab-close-button  {
 	min-width: 16px;
-}
-.tab-close-button {
-	min-width: 22px;
 }
 
 /* Adjust tab label width */
@@ -539,10 +536,12 @@ tab[selected]:-moz-window-inactive {
 
 /* Close tab button */
 .tab-close-button {
+	border: 1px solid transparent; /*  */
+	box-sizing: content-box; /* Avoid deformation on flexbox */
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
-	height: 22px;
-	width: 22px;
+	height: 16px;
+	width: 16px;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
 	border: var(--gnome-icons-hack-close-button-border);
