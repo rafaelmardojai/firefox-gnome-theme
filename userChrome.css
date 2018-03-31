@@ -36,6 +36,8 @@
 /* Enable CSD for Firefox 60 beta (experimental), has known bugs:
  * - doesn't work when "hide-single-tab.css" is enabled */
 /*@import "ui/experimental-ff-60-csd.css"; /**/
+/* Enable CSD for Firefox 61 nightly (experimental), maybe has bugs: */
+/*@import "ui/experimental-ff-61-csd.css"; /**/
 
 /* Window controls: just 1 button */
 /*@import "ui/csd-1-button.css"; /**/
