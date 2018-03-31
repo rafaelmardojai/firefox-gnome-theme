@@ -31,8 +31,11 @@
 /* Client-side decorations (optional)
  */
 
-/* Enable CSD for Firefox 58 (Fedora only) and 59 (all distros) */
+/* Enable CSD for Firefox 58/59 (Fedora only) and 59 beta (all distros) */
 /*@import "ui/csd.css"; /**/
+/* Enable CSD for Firefox 60 beta (experimental), has known bugs:
+ * - doesn't work when "hide-single-tab.css" is enabled */
+/*@import "ui/experimental-ff-60-csd.css"; /**/
 
 /* Window controls: just 1 button */
 /*@import "ui/csd-1-button.css"; /**/

@@ -1,0 +1,18 @@
+@import "csd.css";
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* TODO doesn't work when `hide-single-tab.css` is enabled */
+
+#nav-bar {
+	margin-top: -4px !important;
+}
+
+#titlebar-buttonbox {
+	height: unset !important;
+	margin-top: 0 !important;
+}
+
+#titlebar toolbarbutton {
+	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
+	margin: 4px 3px !important;
+}
