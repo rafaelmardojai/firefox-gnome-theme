@@ -1,16 +1,4 @@
 /*
- *******************************************************************************
- * WARNING: If you are using this file with Firefox 57, there is a bug that
- * breaks it. You must disable those two options in about:config if you want to
- * use it:
- * - browser.tabs.remote.autostart
- * - browser.tabs.remote.autostart.2
- * If you are using Firefox 58 or higher, you don't need to disable anything.
- * More information:
- * https://bugzilla.mozilla.org/show_bug.cgi?id=1416184
- * https://github.com/kurogetsusai/firefox-gnome-theme/issues/14
- *******************************************************************************
- *
  * In this file you can enable styles which apply to web pages' content.
  * To enable a specific feature, uncomment its @import line by removing "/*" at
  * the beginning of the line. To disable it, put the "/*" back.

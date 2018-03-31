@@ -1,4 +1,3 @@
-@import "fedora-csd.css";
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #nav-bar toolbarbutton.chromeclass-toolbar-additional,
@@ -7,4 +6,95 @@
 #nav-bar #stop-button,
 #PanelUI-menu-button {
 	margin: 6px 3px !important;
+}
+
+#nav-bar {
+	margin-top: -4px !important;
+	padding-right: 7px !important;
+	position: relative;
+}
+
+/* Add window controls separator */
+#nav-bar::after {
+	content: "";
+	position: absolute;
+	right: 3px;
+	top: 6px;
+	height: 32px;
+	border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* Move window buttons next to the header bar */
+#titlebar-buttonbox {
+	background-image: var(--gnome-headerbar-bgimage) !important;
+	border: none !important;
+	border-bottom: var(--gnome-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-headerbar-box-shadow);
+	margin-right: -4px;
+	margin-top: -4px !important;
+	padding-right: 3px;
+}
+#titlebar-buttonbox:-moz-window-inactive {
+	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
+	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-inactive-headerbar-box-shadow);
+}
+#navigator-toolbox {
+	margin-top: -5px;
+}
+
+/* Window buttons */
+#titlebar toolbarbutton {
+	-moz-appearance: none !important;
+	border: var(--gnome-headerbar-button-border) !important;
+	border-color: transparent !important;
+	border-radius: 3px !important;
+	height: 34px;
+	margin: 6px 3px !important;
+	padding: 0 2px !important;
+	position: relative;
+	transition: all .3s ease-out;
+	width: 34px;
+}
+#titlebar toolbarbutton image {
+	filter: invert(85%);
+	margin-left: 6px;
+}
+#titlebar:-moz-window-inactive toolbarbutton image {
+	opacity: .7 !important;
+}
+#titlebar:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+#titlebar:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
+	background-image: var(--gnome-headerbar-button-active-bgimage);
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+#titlebar:not(:-moz-window-inactive) toolbarbutton[disabled] {
+	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
+	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+
+/* Remove ugly line before tabs */
+.titlebar-placeholder[type="pre-tabs"] {
+	border-inline-end: 0px solid !important;
+}
+
+/* Remove blank space after tabs when window is maximized */
+#main-window:not([sizemode="normal"]) .titlebar-placeholder[type="post-tabs"] {
+	display: none !important;
+}
+
+/* Remove window controls blank space after tabs */
+.titlebar-placeholder[type="caption-buttons"] {
+	display: none !important;
+}
+
+/* Remove blank space before and after tabs */
+.titlebar-placeholder[type="pre-tabs"],
+.titlebar-placeholder[type="post-tabs"] {
+	display: none !important;
 }
