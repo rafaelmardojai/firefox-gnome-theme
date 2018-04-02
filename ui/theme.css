@@ -258,15 +258,6 @@ panel[type=arrow][viewId=PanelUI-developer],
 :root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
 	width: unset !important;
 }
-#nav-bar toolbarbutton.toolbarbutton-combined#zoom-out-button {
-	margin-left: 1px !important;
-}
-#nav-bar toolbarbutton.toolbarbutton-combined#zoom-in-button {
-	margin-right: 1px !important;
-}
-#zoom-controls separator {
-	display: none !important;
-}
 #PanelUI-button {
 	border: 0 !important;
 	margin: 0 !important;
@@ -281,7 +272,9 @@ panel[type=arrow][viewId=PanelUI-developer],
 /* Combined buttons */
 #nav-bar toolbarbutton.chromeclass-toolbar-additional#back-button,
 #nav-bar toolbarbutton.toolbarbutton-combined#zoom-out-button,
-#nav-bar toolbarbutton.toolbarbutton-combined#zoom-reset-button {
+#nav-bar toolbarbutton.toolbarbutton-combined#zoom-reset-button,
+#nav-bar toolbarbutton.toolbarbutton-combined#cut-button,
+#nav-bar toolbarbutton.toolbarbutton-combined#copy-button {
 	border-bottom-right-radius: 0 !important;
 	border-right-width: 0 !important;
 	border-top-right-radius: 0 !important;
@@ -289,10 +282,19 @@ panel[type=arrow][viewId=PanelUI-developer],
 }
 #nav-bar toolbarbutton.chromeclass-toolbar-additional#forward-button,
 #nav-bar toolbarbutton.toolbarbutton-combined#zoom-reset-button,
-#nav-bar toolbarbutton.toolbarbutton-combined#zoom-in-button {
+#nav-bar toolbarbutton.toolbarbutton-combined#zoom-in-button,
+#nav-bar toolbarbutton.toolbarbutton-combined#copy-button,
+#nav-bar toolbarbutton.toolbarbutton-combined#paste-button {
 	border-bottom-left-radius: 0 !important;
 	border-top-left-radius: 0 !important;
 	margin-left: 0 !important;
+}
+#nav-bar toolbaritem.toolbaritem-combined-buttons {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+#nav-bar toolbaritem.toolbaritem-combined-buttons separator {
+	display: none !important;
 }
 
 /* Bookmark toolbar items moved to the headerbar */
