@@ -8,7 +8,7 @@ This is a bunch of CSS code to make Firefox 57+ look closer to GNOME's default
 theme. It styles the UI and internal Firefox' pages like about: and
 view-source:. Both light and dark variants are supported.
 
-The `master` branch is currently tracking **Firefox 58**. If you need support
+The `master` branch is currently tracking **Firefox 59**. If you need support
 for older versions, they are archived under version-specific git tags. Eg. if
 you're using Firefox 57, switch to the `57` tag after cloning the repo:
 
