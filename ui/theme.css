@@ -295,6 +295,27 @@ panel[type=arrow][viewId=PanelUI-developer],
 	margin-left: 0 !important;
 }
 
+/* Bookmark toolbar items moved to the headerbar */
+#nav-bar toolbarbutton.bookmark-item {
+	border: 1px solid transparent !important;
+	border-radius: 3px !important;
+	height: 34px !important;
+	margin: 6px 3px !important;
+	padding: 0 4px !important;
+}
+#nav-bar toolbarbutton.bookmark-item:not([disabled]):hover {
+	border: var(--gnome-headerbar-button-border) !important;
+	border-bottom: var(--gnome-headerbar-button-border-bottom) !important;
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
+}
+#nav-bar toolbarbutton.bookmark-item:not([disabled]):active {
+	border: var(--gnome-headerbar-button-border) !important;
+	border-bottom: var(--gnome-headerbar-button-border-bottom) !important;
+	background-image: var(--gnome-headerbar-button-active-bgimage);
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
+}
+
 /* Replace icons */
 #back-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
