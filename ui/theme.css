@@ -541,6 +541,7 @@ tab[selected]:-moz-window-inactive {
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
 	height: 16px;
+	padding: 2px;
 	width: 16px;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
