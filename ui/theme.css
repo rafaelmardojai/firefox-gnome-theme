@@ -567,13 +567,18 @@ tab[selected]:-moz-window-inactive {
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
 	height: 16px;
+	opacity: .3;
 	padding: 2px;
 	width: 16px;
+}
+:root:-moz-window-inactive .tab-close-button {
+	opacity: .18;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
 	border: var(--gnome-icons-hack-close-button-border);
 	border-radius: 3px;
 	filter: var(--gnome-icons-hack-close-button-filter);
+	opacity: 1;
 }
 .tab-close-button:active {
 	background-image: var(--gnome-icons-hack-close-button-active-bgimage);
@@ -582,14 +587,6 @@ tab[selected]:-moz-window-inactive {
 .tab-close-button:active:not(:hover) {
 	background-image: none !important;
 	box-shadow: none !important;
-}
-.tab-close-button > .toolbarbutton-icon {
-	height: 16px !important;
-	width: 16px !important;
-	opacity: .2;
-}
-:root:not(:-moz-window-inactive) .tab-close-button:hover > .toolbarbutton-icon {
-	opacity: 1;
 }
 
 /* Tab close button etc. positioning */
