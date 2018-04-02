@@ -412,7 +412,12 @@ toolbarspring {
 }
 
 /* Tab bar */
-#tabbrowser-tabs, tab > stack {
+#tabbrowser-tabs,
+#tabbrowser-tabs arrowscrollbox {
+	height: initial !important;
+	min-height: initial !important;
+}
+tab > stack {
 	height: 38px;
 }
 /* Extra margin for the first and last tabs */

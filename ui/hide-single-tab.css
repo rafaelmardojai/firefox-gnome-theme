@@ -4,9 +4,3 @@
 #TabsToolbar .private-browsing-indicator {
 	display: none !important;
 }
-
-#tabbrowser-tabs,
-#tabbrowser-tabs arrowscrollbox {
-	height: initial !important;
-	min-height: initial !important;
-}
