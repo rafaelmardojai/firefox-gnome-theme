@@ -5,8 +5,8 @@
 ## Description
 
 This is a bunch of CSS code to make Firefox 57+ look closer to GNOME's default
-theme. It styles the UI and internal Firefox' pages like about: and
-view-source:. Both light and dark variants are supported.
+theme. It styles the UI and internal Firefox' pages like `about:` and
+`view-source:`. Both light and dark variants are supported.
 
 The `master` branch is currently tracking **Firefox 59**. If you need support
 for older versions, they are archived under version-specific git tags. Eg. if
@@ -70,7 +70,7 @@ the top of the file, before other statements.
 theme, which means you must either enable (for the dark variant) or disable (for
 the light one) global dark theme in GNOME Tweak Tools, or alternatively, you
 can run Firefox with a specific variant without changing the global theme by
-supplying the GTK_THEME variable like this:
+supplying the `GTK_THEME` variable like this:
 
 	```sh
 	# for the dark theme
@@ -95,7 +95,7 @@ user_pref("browser.display.foreground_color", "#ccc");
 ```
 
 You can't get rid of the title bar for now (except for Fedora, where you can
-enable CSD), but you will be able to do it in Firefox 59, when Firefox adds
+enable CSD), but you will be able to do it in Firefox 60, when Firefox adds
 client-side decoration support. For now you can use a GNOME extension like
 [No Title Bar](https://extensions.gnome.org/extension/1267/no-title-bar/)
 to hide it.
