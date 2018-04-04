@@ -1,5 +1,17 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/* An ugly hack to add rounded corners to the headerbar
+ * TODO remove it when this gets fixed:
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1408360
+ * width=960 - horizontally half the screen (1920x1080)
+ * height=1053 - vertically maximized (1920x1080) */
+window:not([width="960"]):not([height="1053"]) #nav-bar {
+	border-top-left-radius: 8px;
+}
+window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
+	border-top-right-radius: 8px;
+}
+
 #nav-bar toolbarbutton.chromeclass-toolbar-additional,
 #nav-bar toolbarbutton.toolbarbutton-combined,
 #nav-bar #reload-button,
