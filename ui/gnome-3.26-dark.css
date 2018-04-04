@@ -95,6 +95,8 @@
 	--gnome-icons-hack-filter: invert(85%); /* without invert: none */
 	--gnome-icons-hack-close-button-border: 1px solid #e3e0e0; /* without invert: 1px solid #1c1f1f */
 	--gnome-icons-hack-close-button-filter: invert(100%); /* without invert: none */
+	--gnome-icons-hack-close-button-hover-bgimage: none; /* without invert: none */
+	--gnome-icons-hack-close-button-hover-box-shadow: none; /* without invert: none */
 	--gnome-icons-hack-close-button-active-bgimage: linear-gradient(rgb(220, 216, 216), rgb(214, 210, 210) 40%, rgb(210, 205, 205));
 	/* ^ without invert: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50)) */
 	--gnome-icons-hack-close-button-active-box-shadow: 0 1px rgba(255, 255, 255, .07) inset, 0 2px 1px -2px rgba(255, 255, 255, .6) inset, 0 1px rgba(17, 17, 19, .1);

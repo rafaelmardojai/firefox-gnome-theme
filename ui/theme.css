@@ -577,12 +577,14 @@ tab[selected]:-moz-window-inactive {
 	opacity: .18;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
+	background-image: var(--gnome-icons-hack-close-button-hover-bgimage);
 	border: var(--gnome-icons-hack-close-button-border);
 	border-radius: 3px;
+	box-shadow: var(--gnome-icons-hack-close-button-hover-box-shadow);
 	filter: var(--gnome-icons-hack-close-button-filter);
 	opacity: 1;
 }
-.tab-close-button:active {
+:root:not(:-moz-window-inactive) .tab-close-button:active {
 	background-image: var(--gnome-icons-hack-close-button-active-bgimage);
 	box-shadow: var(--gnome-icons-hack-close-button-active-box-shadow);
 }
