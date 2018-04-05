@@ -94,6 +94,7 @@
 	 * needs (you may also adjust icon brightness here). */
 	--gnome-icons-hack-filter: invert(85%); /* without invert: none */
 	--gnome-icons-hack-close-button-border: 1px solid #e3e0e0; /* without invert: 1px solid #1c1f1f */
+	--gnome-icons-hack-close-button-border-bottom: var(--gnome-icons-hack-close-button-border);
 	--gnome-icons-hack-close-button-filter: invert(100%); /* without invert: none */
 	--gnome-icons-hack-close-button-hover-bgimage: none; /* without invert: none */
 	--gnome-icons-hack-close-button-hover-box-shadow: none; /* without invert: none */
