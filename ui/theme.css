@@ -525,10 +525,10 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Put tab close button and icon sound to the right  */
-.tab-icon-sound[soundplaying="true"] {
+.tab-icon-sound[soundplaying="true"], .tab-icon-sound[muted="true"] {
 	margin-left: auto !important;
 }
-.tabbrowser-tab:not([soundplaying]) .tab-close-button {
+.tabbrowser-tab:not([soundplaying]):not([muted]) .tab-close-button {
 	margin-left: auto !important;
 }
 
@@ -542,11 +542,10 @@ tab[selected]:-moz-window-inactive {
 
 /* If tab favicon is not present, force tab label to the center */
 .tabbrowser-tab .tab-label-container {
-	margin-left: auto !important;
+	margin-left: 0px !important;
 }
-
-.tabbrowser-tab[image] .tab-label-container, .tabbrowser-tab[bussy] .tab-label-container  {
-	margin-left: 0 !important;
+.tabbrowser-tab:not([image]):not([busy]):not([progress]) .tab-label-container {
+	margin-left: auto !important;
 }
 
 /* If tab close button is not present, don't force favicon to the center */
