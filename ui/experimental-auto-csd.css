@@ -19,14 +19,6 @@
 	overflow: hidden;
 }
 
-:root[tabsintitlebar] #nav-bar toolbarbutton.chromeclass-toolbar-additional,
-:root[tabsintitlebar] #nav-bar toolbarbutton.toolbarbutton-combined,
-:root[tabsintitlebar] #nav-bar #reload-button,
-:root[tabsintitlebar] #nav-bar #stop-button,
-:root[tabsintitlebar] #PanelUI-menu-button {
-	margin: 6px 3px !important;
-}
-
 :root[tabsintitlebar] #nav-bar {
 	margin-top: -47px !important;
 	padding-right: 7px !important;
@@ -141,4 +133,25 @@
 /* Fix the issue when dragging tabs */
 :root[tabsintitlebar] #TabsToolbar[movingtab] + #nav-bar {
 	margin-top: -47px !important;
+}
+
+/* Window controls: at least 1 button */
+@media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
+    :root[tabsintitlebar] #nav-bar {
+	    margin-right: 43px;
+    }
+}
+/* Window controls: at least 2 buttons */
+@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
+       (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
+       (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+    :root[tabsintitlebar] #nav-bar {
+	    margin-right: 83px;
+    }
+}
+/* Window controls: 3 buttons */
+@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+    :root[tabsintitlebar] #nav-bar {
+	    margin-right: 123px;
+    }
 }
