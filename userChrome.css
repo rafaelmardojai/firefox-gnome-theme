@@ -31,7 +31,16 @@
 /* Client-side decorations (optional)
  */
 
-/* Enable CSD */
+/* Auto-detect CSD support (experimental)
+ * Do not enable anything else in the CSD section of this file if you want to
+ * use this. It should automatically detect and enable CSD for you. Note that
+ * this option is experimental, if it doesn't work for you, please report a bug
+ * on our GitHub. You can still use the options below to enable CSD manually. */
+/*@import "ui/experimental-auto-csd.css"; /**/
+
+/* Enable CSD manually
+ * If you enable this, you also need to pick how many window buttons you have
+ * below. */
 /*@import "ui/csd.css"; /**/
 
 /* Window controls: just 1 button */
