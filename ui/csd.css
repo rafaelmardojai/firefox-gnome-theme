@@ -21,7 +21,7 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 }
 
 #nav-bar {
-	margin-top: -4px !important;
+	margin-top: 5px !important;
 	padding-right: 7px !important;
 	position: relative;
 }
@@ -36,14 +36,19 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 	border-right: 1px solid rgba(0, 0, 0, .1);
 }
 
+#titlebar {
+	margin-bottom: -47px !important;
+}
+
 /* Move window buttons next to the header bar */
 #titlebar-buttonbox {
 	background-image: var(--gnome-headerbar-bgimage) !important;
 	border: none !important;
 	border-bottom: var(--gnome-headerbar-border-bottom) !important;
 	box-shadow: var(--gnome-headerbar-box-shadow);
+	height: unset !important;
 	margin-right: -4px;
-	margin-top: -4px !important;
+	margin-top: 0 !important;
 	padding-right: 3px;
 }
 #titlebar-buttonbox:-moz-window-inactive {
@@ -62,7 +67,7 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 	border-color: transparent !important;
 	border-radius: 3px !important;
 	height: 34px;
-	margin: 6px 3px !important;
+	margin: 4px 3px !important;
 	padding: 0 2px !important;
 	position: relative;
 	transition: all .3s ease-out;
@@ -88,6 +93,25 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 	border: var(--gnome-headerbar-button-border) !important;
+}
+
+/* TODO icons don't have proper color */
+#titlebar-close .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
+}
+#titlebar-max .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/window-maximize-symbolic?size=menu") !important;
+}
+#titlebar-min .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=menu") !important;
+}
+
+/* Fix the issue when dragging tabs */
+#TabsToolbar[movingtab] + #nav-bar {
+	margin-top: 5px !important;
 }
 
 /* Remove ugly line before tabs */

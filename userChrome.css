@@ -31,10 +31,8 @@
 /* Client-side decorations (optional)
  */
 
-/* Enable CSD for Firefox 59 (Fedora only) and 59 beta (all distros) */
+/* Enable CSD */
 /*@import "ui/csd.css"; /**/
-/* Enable CSD for Firefox 60+ beta (experimental) */
-/*@import "ui/experimental-ff-60-csd.css"; /**/
 
 /* Window controls: just 1 button */
 /*@import "ui/csd-1-button.css"; /**/
