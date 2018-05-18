@@ -257,6 +257,8 @@ panel[type=arrow][viewId=PanelUI-developer],
 }
 :root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
 	width: unset !important;
+	height: unset !important;
+	padding: unset !important;
 }
 #PanelUI-button {
 	border: 0 !important;
@@ -515,7 +517,7 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Prevent tab icons size breaking */
-.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback, .tab-close-button  {
+.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback, .tab-close-button {
 	min-width: 16px;
 }
 
@@ -524,7 +526,7 @@ tab[selected]:-moz-window-inactive {
 	min-width: 0 !important;
 }
 
-/* Put tab close button and icon sound to the right  */
+/* Put tab close button and icon sound to the right */
 .tab-icon-sound[soundplaying="true"], .tab-icon-sound[muted="true"],
 .tab-icon-sound[activemedia-blocked="true"] {
 	margin-left: auto !important;
