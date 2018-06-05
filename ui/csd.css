@@ -141,3 +141,13 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 #TabsToolbar[movingtab] + #nav-bar {
 	margin-top: -47px !important;
 }
+
+/* Fullscreen */
+:root[inFullscreen] #nav-bar {
+	padding-top: 52px !important;
+	padding-right: 0 !important;
+	margin-right: 0 !important;
+}
+:root[inFullScreen] #nav-bar::after {
+	display: none;
+}

@@ -154,3 +154,13 @@
 		margin-right: 123px;
 	}
 }
+
+/* Fullscreen */
+:root[tabsintitlebar][inFullscreen] #nav-bar {
+	padding-top: 52px !important;
+	padding-right: 0 !important;
+	margin-right: 0 !important;
+}
+:root[tabsintitlebar][inFullScreen] #nav-bar::after {
+	display: none;
+}
