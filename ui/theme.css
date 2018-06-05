@@ -382,7 +382,8 @@ panel[type=arrow][viewId=PanelUI-developer],
 } */
 
 /* URL bar */
-#urlbar {
+#urlbar,
+#searchbar > .searchbar-textbox {
 	background-image: var(--gnome-urlbar-bgimage) !important;
 	border: var(--gnome-urlbar-border) !important;
 	border-radius: 3px;
@@ -390,7 +391,8 @@ panel[type=arrow][viewId=PanelUI-developer],
 	color: var(--gnome-urlbar-color) !important;
 	height: var(--gnome-urlbar-height);
 }
-#urlbar[focused] {
+#urlbar[focused],
+#searchbar > .searchbar-textbox[focused] {
 	border-width: 2px !important;
 	border-style: solid !important;
 	border-color: var(--gnome-focused-urlbar-border-color) !important;
@@ -401,6 +403,12 @@ panel[type=arrow][viewId=PanelUI-developer],
 #urlbar[focused] .urlbar-textbox-container {
 	margin: -1px !important;
 }
+#searchbar > .searchbar-textbox[focused] .searchbar-search-button {
+	margin-left: -1px !important;
+}
+#searchbar > .searchbar-textbox[focused] .search-go-button {
+	margin-right: -1px !important;
+}
 toolbarspring {
 	/* center the URL bar */
 	max-width: 10000px !important;
@@ -408,7 +416,8 @@ toolbarspring {
 #urlbar .urlbar-textbox-container {
 	background-image: var(--gnome-urlbar-bgimage);
 }
-#urlbar:-moz-window-inactive {
+#urlbar:-moz-window-inactive,
+#searchbar:-moz-window-inactive > .searchbar-textbox {
 	background-image: var(--gnome-inactive-urlbar-bgimage) !important;
 	border: var(--gnome-inactive-urlbar-border) !important;
 	box-shadow: var(--gnome-inactive-urlbar-box-shadow) !important;
@@ -417,12 +426,18 @@ toolbarspring {
 #urlbar:-moz-window-inactive .urlbar-textbox-container {
 	background-image: var(--gnome-inactive-urlbar-bgimage);
 }
+.searchbar-search-icon {
+	fill-opacity: .6 !important;
+}
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
 .urlbar-icon[open],
 .urlbar-icon-wrapper[open],
 .urlbar-icon:hover:active,
-.urlbar-icon-wrapper:hover:active {
+.urlbar-icon-wrapper:hover:active,
+.searchbar-search-button:hover .searchbar-search-icon,
+.searchbar-search-button[open] .searchbar-search-icon,
+.searchbar-search-button:hover:active .searchbar-search-icon {
 	background-color: transparent !important;
 	fill-opacity: 1 !important;
 }
