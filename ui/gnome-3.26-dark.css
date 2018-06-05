@@ -32,7 +32,7 @@
 	--gnome-inactive-headerbar-bgimage: linear-gradient(#33393b, #33393b);
 	--gnome-inactive-headerbar-border-bottom: 1px solid #202425;
 	--gnome-inactive-headerbar-box-shadow: 0 1px rgba(238, 238, 236, .1) inset;
-	--gnome-inactive-headerbar-button-bgimage: linear-gradient(#33393b, #33393b));
+	--gnome-inactive-headerbar-button-bgimage: linear-gradient(#33393b, #33393b);
 	--gnome-inactive-headerbar-button-border: 1px solid #202425;
 	--gnome-inactive-headerbar-button-border-bottom: var(--gnome-inactive-headerbar-button-border);
 	--gnome-inactive-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, 0);
