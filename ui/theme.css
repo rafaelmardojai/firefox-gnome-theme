@@ -1,7 +1,7 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Browser area before a page starts loading */
-tabbrowser tabpanels {
+#tabbrowser-tabpanels, #tabbrowser-tabpanels[pendingpaint], browser {
 	/* this is something white-ish by default which causes a white flash
 	 * everytime you open a new tab */
 	background-color: var(--gnome-browser-before-load-bgcolor) !important;
