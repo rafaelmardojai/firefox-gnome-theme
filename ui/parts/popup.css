@@ -1,0 +1,64 @@
+/* Pop up menus and context menus */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Adjust pop up position */
+panel[type=arrow] {
+	margin-top: 6px !important;
+}
+/* Bookmarks (header bar's bookmarks button) */
+#BMB_bookmarksPopup {
+	margin-top: 3px !important;
+}
+/* Identity (URL bar's locker icon) */
+#identity-popup {
+	margin-top: 12px !important;
+}
+
+/* Style the overflow menu:
+ * - header bar's overflow button
+ * - burger menu → Customize... */
+.panel-arrowcontent {
+	background-color: -moz-field !important;
+	border-radius: 5px;
+	padding: 8px 12px !important;
+}
+
+/* Color of the last item in the bookmarks menu and downloads menu */
+.subviewbutton.panel-subview-footer,
+.downloadsPanelFooter {
+	background-color: transparent !important;
+	border-top-color: var(--panel-separator-color) !important;
+}
+.subviewbutton.panel-subview-footer:hover,
+.downloadsPanelFooter:hover {
+	background-color: var(--arrowpanel-dimmed) !important;
+	border-top-color: var(--panel-separator-color) !important;
+}
+
+/* Burger menu's zoom controls colors */
+#appMenu-zoomReset-button {
+	background-color: var(--arrowpanel-background) !important;
+	border-color: var(--panel-separator-color) !important;
+}
+
+/* Remove icons from the burger menu */
+panelview vbox.panel-subview-body > toolbarbutton image {
+	display: none;
+}
+panelview vbox.panel-subview-body > toolbarbutton label {
+	padding-inline-start: 0 !important;
+}
+#appMenu-zoom-controls > spacer,
+#appMenu-edit-controls > spacer {
+	width: 12px !important;
+}
+
+/* Remove icons from the context menu */
+#contentAreaContextMenu menuitem image,
+#contentAreaContextMenu menu image {
+	visibility: hidden;
+}
+#contentAreaContextMenu menugroup menuitem image {
+	visibility: visible;
+}

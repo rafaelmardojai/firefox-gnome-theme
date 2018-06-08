@@ -1,62 +1,8 @@
 @import "parts/toolbox.css";
 @import "parts/headerbar.css";
+@import "parts/popup.css";
 @import "parts/remove-white-flash.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-
-/* Popup menus */
-.panel-arrowcontent {
-	background-color: -moz-field !important;
-	border-radius: 5px;
-	padding: 8px 12px !important;
-}
-panelview vbox.panel-subview-body > toolbarbutton image {
-	display: none;
-}
-panelview vbox.panel-subview-body > toolbarbutton label {
-	padding-inline-start: 0 !important;
-}
-#appMenu-zoom-controls > spacer, #appMenu-edit-controls > spacer {
-	width: 12px !important;
-}
-#appMenu-zoomReset-button {
-	background-color: var(--arrowpanel-background) !important;
-	border-color: var(--panel-separator-color) !important;
-}
-panel[type=arrow] {
-	margin-top: 6px !important;
-}
-panel[type=arrow][viewId=appMenu-libraryView],
-panel[type=arrow][viewId=PanelUI-characterEncodingView],
-panel[type=arrow][viewId=PanelUI-developer],
-#widget-overflow {
-	margin-top: 6px !important;
-}
-#BMB_bookmarksPopup {
-	margin-top: 3px !important;
-}
-#identity-popup {
-	margin-top: 12px !important;
-}
-
-/* Color of the last item in the bookmark menu and downloads menu */
-.subviewbutton.panel-subview-footer,
-.downloadsPanelFooter {
-	background-color: transparent !important;
-	border-top-color: var(--panel-separator-color) !important;
-}
-.subviewbutton.panel-subview-footer:hover,
-.downloadsPanelFooter:hover {
-	background-color: var(--arrowpanel-dimmed) !important;
-	border-top-color: var(--panel-separator-color) !important;
-}
-
-/* Remove icons from context menu */
-#contentAreaContextMenu menuitem image, #contentAreaContextMenu menu image {
-	visibility: hidden;
-}
-#contentAreaContextMenu menugroup menuitem image {
-	visibility: visible;
-}
 
 /* Remove hover effects on the header bar buttons */
 #nav-bar {
