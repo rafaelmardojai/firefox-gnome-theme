@@ -25,7 +25,8 @@
 }
 
 /* Expand window controls' container to the window's width */
-:root[tabsintitlebar] #titlebar-content, #titlebar-buttonbox-container {
+:root[tabsintitlebar] #titlebar-content,
+:root[tabsintitlebar] #titlebar-buttonbox-container {
 	display: block;
 }
 :root[tabsintitlebar] #titlebar-buttonbox {
