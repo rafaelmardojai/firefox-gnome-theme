@@ -1,0 +1,16 @@
+/* Header bar */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Header bar colors */
+#nav-bar {
+	background-image: var(--gnome-headerbar-bgimage) !important;
+	border: none !important;
+	border-bottom: var(--gnome-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-headerbar-box-shadow) !important;
+}
+#nav-bar:-moz-window-inactive {
+	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
+	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-inactive-headerbar-box-shadow) !important;
+}

@@ -1,72 +1,7 @@
-@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-/* Browser area before a page starts loading */
-#tabbrowser-tabpanels, #tabbrowser-tabpanels[pendingpaint], browser {
-	/* this is something white-ish by default which causes a white flash
-	 * everytime you open a new tab */
-	background-color: var(--gnome-browser-before-load-bgcolor) !important;
-}
-
-/* Container for all toolbars */
-#navigator-toolbox {
-	background-color: var(--gnome-tabbar-bgcolor) !important;
-	border-bottom: var(--gnome-tabbar-border-bottom);
-}
-#navigator-toolbox:-moz-window-inactive {
-	background-color: var(--gnome-inactive-tabbar-bgcolor) !important;
-	border-bottom: var(--gnome-inactive-tabbar-border-bottom);
-}
-
-/* Toolbar */
-#nav-bar {
-	background-image: var(--gnome-headerbar-bgimage) !important;
-	border: none !important;
-	border-bottom: var(--gnome-headerbar-border-bottom) !important;
-	box-shadow: var(--gnome-headerbar-box-shadow) !important;
-}
-#nav-bar:-moz-window-inactive {
-	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
-	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
-	box-shadow: var(--gnome-inactive-headerbar-box-shadow) !important;
-}
-
-/* Tabs below the URL bar */
-#navigator-toolbox #nav-bar {
-	-moz-box-ordinal-group: 0;
-}
-#navigator-toolbox #toolbar-menubar {
-	-moz-box-ordinal-group: 1;
-}
-#navigator-toolbox #PersonalToolbar {
-	-moz-box-ordinal-group: 2;
-}
-/* add-ons can add their own toolbars */
-#navigator-toolbox toolbar {
-	-moz-box-ordinal-group: 10;
-}
-#navigator-toolbox #TabsToolbar {
-	-moz-box-ordinal-group: 100;
-}
-
-/* Don't teleport the URL bar when moving tabs */
-#TabsToolbar[movingtab] {
-	padding-bottom: 0 !important;
-}
-#TabsToolbar[movingtab] > .tabbrowser-tabs {
-	padding-bottom: 0 !important;
-	margin-bottom: 0 !important;
-}
-#TabsToolbar[movingtab] + #nav-bar {
-	margin-top: 0 !important;
-}
-
-/* Remove border above the URL bar */
-#TabsToolbar:not([collapsed="true"]) + #nav-bar {
-	border-top-width: 0 !important;
-}
-#navigator-toolbox::after {
-	border-bottom-width: 0 !important;
-}
+@import "parts/toolbox.css";
+@import "parts/headerbar.css";
+@import "parts/remove-white-flash.css";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Popup menus */
 .panel-arrowcontent {
