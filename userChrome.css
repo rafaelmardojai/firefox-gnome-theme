@@ -49,6 +49,10 @@
 /*@import "ui/csd-2-buttons.css"; /**/
 /* Window controls: 3 buttons */
 /*@import "ui/csd-3-buttons.css"; /**/
+/* Window controls: elementary OS (close on the left, maximize on the right)
+ * Warning: this doesn't work with the manual CSD switch, you must use the
+ * experimental automatic CSD instead */
+/*@import "ui/csd-elementary.css"; /**/
 
 /*******************************************************************************
  * Other features (optional)
