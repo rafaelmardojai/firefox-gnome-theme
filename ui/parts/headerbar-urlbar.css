@@ -1,0 +1,60 @@
+/* Header bar's URL bar */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Center the URL bar */
+toolbarspring {
+	max-width: 10000px !important;
+}
+
+/* URL bar and Search bar */
+#urlbar,
+#searchbar > .searchbar-textbox {
+	background-image: var(--gnome-urlbar-bgimage) !important;
+	border: var(--gnome-urlbar-border) !important;
+	border-radius: 3px;
+	box-shadow: var(--gnome-urlbar-box-shadow) !important;
+	color: var(--gnome-urlbar-color) !important;
+	height: var(--gnome-urlbar-height);
+}
+/* Focused */
+#urlbar[focused],
+#searchbar > .searchbar-textbox[focused] {
+	border-width: 2px !important;
+	border-style: solid !important;
+	border-color: var(--gnome-focused-urlbar-border-color) !important;
+	outline: var(--gnome-focused-urlbar-outline);
+	outline-offset: -2px;
+	-moz-outline-radius: 3px;
+}
+#urlbar[focused] .urlbar-textbox-container {
+	margin: -1px !important;
+}
+#searchbar > .searchbar-textbox[focused] .searchbar-search-button {
+	margin-left: -1px !important;
+}
+#searchbar > .searchbar-textbox[focused] .search-go-button {
+	margin-right: -1px !important;
+}
+/* Inactive window */
+:root:-moz-window-inactive #urlbar,
+:root:-moz-window-inactive #searchbar > .searchbar-textbox {
+	background-image: var(--gnome-inactive-urlbar-bgimage) !important;
+	border: var(--gnome-inactive-urlbar-border) !important;
+	box-shadow: var(--gnome-inactive-urlbar-box-shadow) !important;
+	color: var(--gnome-inactive-urlbar-color) !important;
+}
+
+/* URL bar and Search bar's icons */
+.urlbar-icon:hover,
+.urlbar-icon-wrapper:hover,
+.urlbar-icon[open],
+.urlbar-icon-wrapper[open],
+.urlbar-icon:hover:active,
+.urlbar-icon-wrapper:hover:active,
+.searchbar-search-button:hover .searchbar-search-icon,
+.searchbar-search-button[open] .searchbar-search-icon,
+.searchbar-search-button:hover:active .searchbar-search-icon {
+	background-color: transparent !important;
+	fill-opacity: 1 !important;
+}

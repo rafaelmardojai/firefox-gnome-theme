@@ -65,67 +65,6 @@
 	list-style-image: url("moz-icon://stock/open-menu-symbolic?size=menu") !important;
 } */
 
-/* URL bar */
-#urlbar,
-#searchbar > .searchbar-textbox {
-	background-image: var(--gnome-urlbar-bgimage) !important;
-	border: var(--gnome-urlbar-border) !important;
-	border-radius: 3px;
-	box-shadow: var(--gnome-urlbar-box-shadow) !important;
-	color: var(--gnome-urlbar-color) !important;
-	height: var(--gnome-urlbar-height);
-}
-#urlbar[focused],
-#searchbar > .searchbar-textbox[focused] {
-	border-width: 2px !important;
-	border-style: solid !important;
-	border-color: var(--gnome-focused-urlbar-border-color) !important;
-	outline: var(--gnome-focused-urlbar-outline);
-	outline-offset: -2px;
-	-moz-outline-radius: 3px;
-}
-#urlbar[focused] .urlbar-textbox-container {
-	margin: -1px !important;
-}
-#searchbar > .searchbar-textbox[focused] .searchbar-search-button {
-	margin-left: -1px !important;
-}
-#searchbar > .searchbar-textbox[focused] .search-go-button {
-	margin-right: -1px !important;
-}
-toolbarspring {
-	/* center the URL bar */
-	max-width: 10000px !important;
-}
-#urlbar .urlbar-textbox-container {
-	background-image: var(--gnome-urlbar-bgimage);
-}
-#urlbar:-moz-window-inactive,
-#searchbar:-moz-window-inactive > .searchbar-textbox {
-	background-image: var(--gnome-inactive-urlbar-bgimage) !important;
-	border: var(--gnome-inactive-urlbar-border) !important;
-	box-shadow: var(--gnome-inactive-urlbar-box-shadow) !important;
-	color: var(--gnome-inactive-urlbar-color) !important;
-}
-#urlbar:-moz-window-inactive .urlbar-textbox-container {
-	background-image: var(--gnome-inactive-urlbar-bgimage);
-}
-.searchbar-search-icon {
-	fill-opacity: .6 !important;
-}
-.urlbar-icon:hover,
-.urlbar-icon-wrapper:hover,
-.urlbar-icon[open],
-.urlbar-icon-wrapper[open],
-.urlbar-icon:hover:active,
-.urlbar-icon-wrapper:hover:active,
-.searchbar-search-button:hover .searchbar-search-icon,
-.searchbar-search-button[open] .searchbar-search-icon,
-.searchbar-search-button:hover:active .searchbar-search-icon {
-	background-color: transparent !important;
-	fill-opacity: 1 !important;
-}
-
 /* Bookmark bar */
 #navigator-toolbox #PersonalToolbar {
 	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
