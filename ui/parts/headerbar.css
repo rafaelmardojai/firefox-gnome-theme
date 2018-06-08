@@ -1,5 +1,6 @@
 /* Header bar */
 
+@import "headerbar-buttons.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Header bar colors */

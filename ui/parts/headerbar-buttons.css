@@ -1,0 +1,169 @@
+/* Header bar's buttons */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Header bar */
+#nav-bar {
+	padding: 0 3px !important;
+}
+
+/* Overrides: Make the back button the same as other buttons */
+:root:not([uidensity=compact]) #back-button {
+	border-radius: var(--toolbarbutton-border-radius) !important;
+}
+:root:not([uidensity=compact]) #back-button > .toolbarbutton-icon {
+	background-color: unset !important;
+	border: unset !important;
+	width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+	height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+	padding: var(--toolbarbutton-inner-padding) !important;
+	border-radius: var(--toolbarbutton-border-radius);
+}
+:root:not([uidensity=compact]) #back-button:not([disabled]):not([open]):hover > .toolbarbutton-icon {
+	background-color: var(--toolbarbutton-hover-background) !important;
+	box-shadow: unset;
+	border-color: unset;
+}
+:root:not([uidensity=compact]) #back-button[open] > .toolbarbutton-icon,
+:root:not([uidensity=compact]) #back-button:not([disabled]):hover:active > .toolbarbutton-icon {
+	background-color: var(--toolbarbutton-active-background) !important;
+	border-color: unset;
+}
+
+/* Remove the header bar buttons' hover styles */
+#nav-bar {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
+
+/* Header bar buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button) {
+	border: var(--gnome-headerbar-button-border);
+	border-bottom: var(--gnome-headerbar-button-border-bottom);
+	border-radius: 3px;
+	margin: 6px 3px !important;
+	padding: 0 2px !important;
+	width: 34px;
+	height: 34px;
+}
+/* Inactive window */
+:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button) {
+	border: var(--gnome-inactive-headerbar-button-border);
+	border-bottom: var(--gnome-inactive-headerbar-button-border-bottom);
+}
+:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button) image,
+/* Glitch: Downloads button's icon */
+:root:-moz-window-inactive #downloads-indicator-anchor {
+	opacity: .7 !important;
+}
+
+/* Enabled header bar buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+/* Glitch: Reload button */
+:root[customizing] #nav-bar > hbox toolbaritem toolbarbutton {
+	background-image: var(--gnome-headerbar-button-bgimage);
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
+}
+/* Glitch: Cut / Copy / Paste buttons' icons
+ * :not(#hack) is there just to elevate rule priority */
+:root[customizing] #nav-bar > hbox toolbaritem toolbarbutton image:not(#hack) {
+	opacity: 1 !important;
+}
+/* Hovered */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):hover {
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
+}
+/* Active */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open] {
+	background-image: var(--gnome-headerbar-button-active-bgimage);
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
+}
+/* Inactive window */
+:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]) {
+	background-image: var(--gnome-inactive-headerbar-button-bgimage);
+	box-shadow: var(--gnome-inactive-headerbar-button-box-shadow);
+}
+/* Glitch: Reload and Cut / Copy / Paste buttons */
+:root:-moz-window-inactive[customizing] #nav-bar #stop-reload-button toolbarbutton,
+:root:-moz-window-inactive[customizing] #nav-bar #edit-controls toolbarbutton {
+	background-image: var(--gnome-inactive-headerbar-button-bgimage);
+	box-shadow: var(--gnome-inactive-headerbar-button-box-shadow);
+}
+/* Glitch: Reload and Cut / Copy / Paste buttons' icons */
+:root:-moz-window-inactive[customizing] #nav-bar #stop-reload-button image.toolbarbutton-icon,
+:root:-moz-window-inactive[customizing] #nav-bar #edit-controls image.toolbarbutton-icon {
+	opacity: .7 !important;
+}
+
+/* Disabled header bar buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
+	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
+	border: var(--gnome-headerbar-button-disabled-border) !important;
+	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
+	opacity: 1 !important;
+}
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
+	opacity: .4 !important;
+}
+/* Glitch: Overflow and Burger buttons
+ * :not(#hack) is there just to elevate rule priority */
+:root[customizing] #nav-bar > toolbarbutton[disabled]:not(#hack),
+:root[customizing] #nav-bar > toolbaritem > toolbarbutton[disabled]:not(#hack) {
+	opacity: .5 !important;
+}
+/* Glitch: Overflow button's icon */
+:root[customizing] #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+}
+/* Inactive window */
+:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
+	background-color: var(--gnome-inactive-headerbar-button-disabled-bgcolor);
+	border: var(--gnome-inactive-headerbar-button-disabled-border);
+	box-shadow: var(--gnome-inactive-headerbar-button-disabled-box-shadow);
+}
+:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
+	opacity: .3 !important;
+}
+
+/* Combined buttons
+ * :not(#hack) is there just to elevate rule priority */
+#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:last-child):not(#hack),
+#nav-bar #back-button:not(#hack) {
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	border-right-width: 0 !important;
+	margin-right: 0 !important;
+}
+#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-child):not(#hack),
+#nav-bar #forward-button:not(#hack) {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	margin-left: 0 !important;
+}
+/* Glitch: Combined buttons' margin */
+#nav-bar .toolbaritem-combined-buttons {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+/* Remove combined buttons' separators */
+#nav-bar .toolbaritem-combined-buttons separator {
+	display: none !important;
+}
+
+/* Bookmark buttons */
+#nav-bar toolbarbutton.bookmark-item {
+	width: auto !important;
+}
+#nav-bar toolbarbutton.bookmark-item .toolbarbutton-icon {
+	margin-left: 6px;
+}
+#nav-bar toolbarbutton.bookmark-item .toolbarbutton-text {
+	padding-right: 6px;
+}
+
+/* Remove Burger button's left separator */
+#PanelUI-button {
+	border: 0 !important;
+	margin: 0 !important;
+}
