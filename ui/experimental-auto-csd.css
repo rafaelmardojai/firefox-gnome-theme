@@ -97,15 +97,15 @@
 
 :root[tabsintitlebar] #titlebar-close .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
 }
 :root[tabsintitlebar] #titlebar-max .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/window-maximize-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/window-maximize-symbolic?size=dialog") !important;
 }
 :root[tabsintitlebar] #titlebar-min .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=dialog") !important;
 }
 
 /* Remove ugly line before tabs */

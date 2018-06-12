@@ -7,62 +7,62 @@
 /* Replace icons */
 #back-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/go-previous-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/go-previous-symbolic?size=dialog") !important;
 }
 
 #forward-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/go-next-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/go-next-symbolic?size=dialog") !important;
 }
 
 /* Glitch - animations (may be possible to fix in about:config)
 #reload-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/view-refresh-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/view-refresh-symbolic?size=dialog") !important;
 }
 #stop-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/process-stop-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/process-stop-symbolic?size=dialog") !important;
 }*/
 
 /* Default looks nicer
 #new-tab-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/tab-new-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/tab-new-symbolic?size=dialog") !important;
 }*/
 
 #zoom-out-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=dialog") !important;
 }
 
 /* No icon, just text
 #zoom-reset-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/zoom-original-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/zoom-original-symbolic?size=dialog") !important;
 } */
 
 #zoom-in-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=dialog") !important;
 }
 
 /* Default is ok
 #nav-bar-overflow-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/view-more-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/view-more-symbolic?size=dialog") !important;
 } */
 
 /* Glitch - it swaps to the default one anyway
 #downloads-button {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/folder-download-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/folder-download-symbolic?size=dialog") !important;
 } */
 
 /* Default is ok
 #PanelUI-menu-button {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/open-menu-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/open-menu-symbolic?size=dialog") !important;
 } */
 
 /* Bookmark bar */
@@ -207,7 +207,7 @@ tab[selected]:-moz-window-inactive {
 	border: 1px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/window-close-symbolic?size=menu") !important;
+	list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
 	height: 16px;
 	opacity: .3;
 	padding: 2px;
