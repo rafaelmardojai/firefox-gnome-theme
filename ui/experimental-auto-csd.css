@@ -76,6 +76,7 @@
 :root[tabsintitlebar] #titlebar toolbarbutton image {
 	filter: invert(85%);
 	margin-left: 6px;
+	width: 16px;
 }
 :root[tabsintitlebar] #titlebar:-moz-window-inactive toolbarbutton image {
 	opacity: .7 !important;
