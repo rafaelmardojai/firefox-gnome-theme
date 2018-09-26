@@ -28,30 +28,8 @@
 /*@import "ui/gnome-3.26-dark.css"; /**/
 
 /*******************************************************************************
-/* Client-side decorations (optional)
- */
-
-/* Auto-detect CSD support (experimental)
- * Do not enable anything else in the CSD section of this file if you want to
- * use this. It should automatically detect and enable CSD for you. Note that
- * this option is experimental, if it doesn't work for you, please report a bug
- * on our GitHub. You can still use the options below to enable CSD manually. */
-/*@import "ui/experimental-auto-csd.css"; /**/
-
-/* Enable CSD manually
- * If you enable this, you also need to pick how many window buttons you have
- * below. */
-/*@import "ui/csd.css"; /**/
-
-/* Window controls: just 1 button */
-/*@import "ui/csd-1-button.css"; /**/
-/* Window controls: 2 buttons */
-/*@import "ui/csd-2-buttons.css"; /**/
-/* Window controls: 3 buttons */
-/*@import "ui/csd-3-buttons.css"; /**/
-/* Window controls: elementary OS (close on the left, maximize on the right)
- * Warning: this doesn't work with the manual CSD switch, you must use the
- * experimental automatic CSD instead */
+/* Client-side elementary OS fixes 
+ * (window controls: close on the left, maximize on the right) */
 /*@import "ui/csd-elementary.css"; /**/
 
 /*******************************************************************************
@@ -64,9 +42,6 @@
  * should move the new tab button somewhere else for this to work, because by
  * default it is on the tab bar too. */
 /*@import "ui/hide-single-tab.css"; /**/
-
-/* Replace the private browsing indicator with a colored URL bar */
-/*@import "ui/private-urlbar.css"; /**/
 
 /* Limit the URL bar's autocompletion popup's width to the URL bar's width */
 /*@import "ui/matching-autocomplete-width.css"; /**/
