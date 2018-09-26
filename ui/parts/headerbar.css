@@ -2,6 +2,7 @@
 
 @import "headerbar-buttons.css";
 @import "headerbar-urlbar.css";
+@import "headerbar-private-urlbar.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Header bar colors */

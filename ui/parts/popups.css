@@ -1,10 +1,10 @@
-/* Pop up menus and context menus */
+/* Popup menus and context menus */
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Adjust pop up position */
+/* Adjust popup position */
 panel[type=arrow] {
-	margin-top: 6px !important;
+	margin-top: 9px !important;
 }
 /* Bookmarks (header bar's bookmarks button) */
 #BMB_bookmarksPopup {
@@ -15,25 +15,48 @@ panel[type=arrow] {
 	margin-top: 12px !important;
 }
 
-/* Style the overflow menu:
- * - header bar's overflow button
- * - burger menu → Customize... */
+/* Style popups */
+.panel-arrowcontent, .panel-header, .PanelUI-subView, .panel-subview-body {
+	background: var(--gnome-popup-bgcolor) !important;
+}
 .panel-arrowcontent {
-	background-color: -moz-field !important;
+	border: var(--gnome-popup-border) !important;
+	border-color: var(--gnome-popup-border-color) !important;
 	border-radius: 5px;
+	box-shadow: var(--gnome-popup-shadow) !important;
 	padding: 8px 12px !important;
 }
+.panel-arrow {    
+	fill: var(--gnome-popup-bgcolor) !important;
+	stroke: var(--gnome-popup-border-color) !important;
+}
 
-/* Color of the last item in the bookmarks menu and downloads menu */
+
+/* Style popups menu buttons */
+.subviewbutton, .chromeclass-toolbar-additional {
+	border-radius: 3px !important;
+}
+.subviewbutton:hover, .chromeclass-toolbar-additional:hover {
+	background-color: #f4f4f4 !important;
+}
+
+/* Style popups menu footer buttons */
 .subviewbutton.panel-subview-footer,
 .downloadsPanelFooter {
-	background-color: transparent !important;
-	border-top-color: var(--panel-separator-color) !important;
+	background-image: var(--gnome-headerbar-button-bgimage);
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
+	border: var(--gnome-headerbar-button-border);
+	border-bottom: var(--gnome-headerbar-button-border-bottom);
+	border-radius: 3px;
+	margin: 6px 3px !important;
+	padding: 2px 16px !important;
+	width: 34px;
+	height: 34px;
 }
+
 .subviewbutton.panel-subview-footer:hover,
 .downloadsPanelFooter:hover {
-	background-color: var(--arrowpanel-dimmed) !important;
-	border-top-color: var(--panel-separator-color) !important;
+	background-image: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
 
 /* Burger menu's zoom controls colors */
