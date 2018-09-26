@@ -14,6 +14,12 @@
 	/* Extra toolbars like the bookmark bar */
 	--toolbar-bgcolor: var(--gnome-tabbar-bgcolor) !important;
 	--toolbar-bgimage: none !important;
+	
+	/* Popups */
+	--gnome-popup-bgcolor: #e8e8e7;
+	--gnome-popup-border: 1px solid;
+	--gnome-popup-border-color: #b6b6b3;
+	--gnome-popup-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 
 	/* Header bar */
 	--gnome-headerbar-bgimage: linear-gradient(to top, #dbdbd9, #f4f4f4 3px, #f4f4f4);
