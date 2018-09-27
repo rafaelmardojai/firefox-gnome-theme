@@ -70,7 +70,7 @@
 	opacity: 1 !important;
 }
 /* Hovered */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):hover {
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):hover {
 	background-image: var(--gnome-headerbar-button-hover-bgimage);
 }
 /* Active */
