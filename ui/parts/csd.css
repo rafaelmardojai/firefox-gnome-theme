@@ -26,8 +26,9 @@
 :root[tabsintitlebar] #titlebar {
 	height: 52px !important;
 	margin-bottom: 0px !important;
-	margin-right: -4px;
-	overflow: hidden;
+}
+:root[tabsintitlebar] #titlebar-content {
+	margin-bottom: 0px !important;
 }
 
 /* Move window buttons next to the header bar */
@@ -38,6 +39,7 @@
 	box-shadow: var(--gnome-headerbar-box-shadow);
 	height: unset !important;
 	margin-top: 0 !important;
+	margin-right: -4px;
 	padding-bottom: 0 !important;
 	padding-right: 3px;
 	padding-top: 0 !important;
@@ -145,6 +147,14 @@
 	:root[tabsintitlebar] #nav-bar {
 		margin-right: 123px;
 	}
+}
+
+/* CSD rounded corners */
+:root[tabsintitlebar] #nav-bar {
+	border-top-left-radius: 8px;
+}
+:root[tabsintitlebar] #titlebar-buttonbox {
+	border-top-right-radius: 8px;
 }
 
 /* Fullscreen */
