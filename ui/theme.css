@@ -8,7 +8,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Menu bar */
-#toolbar-menubar {
+#toolbar-menubar:not([inactive=true]) {
 	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
 }
 

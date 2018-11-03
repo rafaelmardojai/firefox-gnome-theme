@@ -39,11 +39,12 @@
 	box-shadow: var(--gnome-headerbar-box-shadow);
 	height: unset !important;
 	margin-top: 0 !important;
-	margin-right: -4px;
 	padding-bottom: 0 !important;
 	padding-right: 3px;
 	padding-top: 0 !important;
+	-moz-appearance: none !important;
 }
+
 :root[tabsintitlebar] #titlebar-buttonbox:-moz-window-inactive {
 	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
 	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
