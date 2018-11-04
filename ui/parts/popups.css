@@ -39,6 +39,11 @@ panel[type=arrow] {
 	background-color: var(--gnome-popup-button-hover-bgcolor) !important;
 }
 
+/* Style popups separator */
+.cui-widget-panel toolbarseparator {
+	border-top: 1px solid var(--gnome-popup-separator-color) !important;
+}
+
 /* Style popups menu footer buttons */
 .subviewbutton.panel-subview-footer,
 .downloadsPanelFooter {

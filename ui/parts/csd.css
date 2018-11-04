@@ -151,10 +151,10 @@
 }
 
 /* CSD rounded corners */
-:root[tabsintitlebar] #nav-bar {
+:root[tabsintitlebar]:not([sizemode="maximized"]) #nav-bar {
 	border-top-left-radius: 8px;
 }
-:root[tabsintitlebar] #titlebar-buttonbox {
+:root[tabsintitlebar]:not([sizemode="maximized"]) #titlebar-buttonbox {
 	border-top-right-radius: 8px;
 }
 
