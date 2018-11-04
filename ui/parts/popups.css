@@ -40,8 +40,11 @@ panel[type=arrow] {
 }
 
 /* Style popups separator */
-.cui-widget-panel toolbarseparator {
-	border-top: 1px solid var(--gnome-popup-separator-color) !important;
+toolbarseparator, menuseparator {
+	border-color: var(--gnome-popup-separator-color) !important;
+}
+.panel-header {
+	border-bottom: 1px solid var(--gnome-popup-separator-color) !important;
 }
 
 /* Style popups menu footer buttons */
