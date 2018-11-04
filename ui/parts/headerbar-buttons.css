@@ -18,6 +18,7 @@
 	height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
 	padding: var(--toolbarbutton-inner-padding) !important;
 	border-radius: var(--toolbarbutton-border-radius);
+	box-shadow: none !important;
 }
 :root:not([uidensity=compact]) #back-button:not([disabled]):not([open]):hover > .toolbarbutton-icon {
 	background-color: var(--toolbarbutton-hover-background) !important;
