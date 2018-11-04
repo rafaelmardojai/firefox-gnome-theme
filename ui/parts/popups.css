@@ -15,6 +15,14 @@ panel[type=arrow] {
 	margin-top: 12px !important;
 }
 
+/* Style menus */
+menupopup {
+	-moz-appearance: none !important;
+	background: var(--gnome-menu-bgcolor);
+	margin: -2px 0 0 -2px;
+	padding: 2px 0;
+}
+
 /* Style popups */
 .panel-arrowcontent, .panel-header, .PanelUI-subView, .panel-subview-body, #widget-overflow-mainView {
 	background: var(--gnome-popup-bgcolor) !important;

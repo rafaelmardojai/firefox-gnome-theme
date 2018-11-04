@@ -16,6 +16,7 @@
 	--toolbar-bgimage: none !important;
 	
 	/* Popups */
+	--gnome-menu-bgcolor: #ffffff;
 	--gnome-popup-bgcolor: #e8e8e7;
 	--gnome-popup-border: 1px solid;
 	--gnome-popup-border-color: #b6b6b3;
