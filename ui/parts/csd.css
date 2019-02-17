@@ -19,10 +19,8 @@
 	-moz-appearance: none !important;
 }
 
-:root[tabsintitlebar] #TabsToolbar-customization-target {
-	height: 37px !important;
+:root[tabsintitlebar] #TabsToolbar-customization-target {	
   margin-top: -8px !important;
-	-moz-appearance: none !important;
 }
 
 /* Add window controls separator */
