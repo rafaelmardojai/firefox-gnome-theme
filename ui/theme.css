@@ -10,15 +10,16 @@
 /* Menu bar */
 #toolbar-menubar:not([inactive=true]) {
 	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
+	margin-bottom: 0 !important;
 }
 
 /* Bookmark bar */
-#navigator-toolbox #PersonalToolbar {
-	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
+#PersonalToolbar {
+	border-top: var(--gnome-bookmarkbar-border-bottom) !important;
 	height: var(--gnome-bookmarkbar-height);
 }
-#navigator-toolbox:-moz-window-inactive #PersonalToolbar {
-	border-bottom: var(--gnome-inactive-bookmarkbar-border-bottom) !important;
+#PersonalToolbar:-moz-window-inactive {
+	border-top: var(--gnome-inactive-bookmarkbar-border-bottom) !important;
 }
 
 /* Sidebar */
