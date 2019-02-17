@@ -136,7 +136,7 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 /* Customization overflow menu position */
 #customization-panel-container {
     padding: 0 75px 25px !important;
-    margin-top: -39px;
+    margin-top: 10px;
     z-index: 10;
 }
 #customization-panelWrapper > .panel-arrowbox {    
