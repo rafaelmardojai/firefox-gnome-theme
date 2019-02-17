@@ -19,7 +19,7 @@
 	-moz-appearance: none !important;
 }
 
-:root[tabsintitlebar] #TabsToolbar-customization-target {
+:root[tabsintitlebar]:not([sizemode="maximized"]) #TabsToolbar-customization-target {
 	margin-top: -8px !important;
 }
 
