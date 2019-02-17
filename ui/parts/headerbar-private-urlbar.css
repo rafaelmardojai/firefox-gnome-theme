@@ -1,3 +1,5 @@
+/* Private window header bar's URL bar */
+
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 :root[privatebrowsingmode="temporary"] .urlbar-textbox-container {

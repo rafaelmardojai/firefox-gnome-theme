@@ -1,7 +1,9 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #PopupAutoCompleteRichResult {
+	border-radius: 6px;
 	margin-left: 0 !important;
+	margin-top: -1px;
 }
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) - 26px);

@@ -15,6 +15,15 @@
 	--toolbar-bgcolor: var(--gnome-tabbar-bgcolor) !important;
 	--toolbar-bgimage: none !important;
 
+	/* Popups */
+	--gnome-menu-bgcolor: #262b2d;
+	--gnome-popup-bgcolor: #33393b;
+	--gnome-popup-border: 1px solid;
+	--gnome-popup-border-color: #1b1f20;
+	--gnome-popup-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+ 	--gnome-popup-button-hover-bgcolor: #3f4649;
+	--gnome-popup-separator-color: rgba(0, 0, 0, 0.1);
+
 	/* Header bar */
 	--gnome-headerbar-bgimage: linear-gradient(to top, #262a2c, #2c3133 3px, #2c3133);
 	--gnome-headerbar-border-bottom: 1px solid #0b0c0c;
@@ -29,6 +38,19 @@
 	--gnome-headerbar-button-disabled-bgcolor: #2d3234;
 	--gnome-headerbar-button-disabled-border: var(--gnome-headerbar-button-border);
 	--gnome-headerbar-button-disabled-box-shadow: none;
+
+	--gnome-headerbar-button-suggested-action-bgimage: linear-gradient(to bottom, #1f5894, #1d538b 60%, #1b4e83);
+	--gnome-headerbar-button-suggested-action-border-color: #0f2b48;
+	--gnome-headerbar-button-suggested-action-border-bottom-color: #06121e;
+	--gnome-headerbar-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+	--gnome-headerbar-button-suggested-action-hover-bgimage: linear-gradient(to bottom, #2260a0, #1f5894 60%, #1d538b);
+
+	--gnome-headerbar-button-destructive-action-bgimage: linear-gradient(to bottom, #cc0f0f, #c20f0f 60%, #b90e0e);
+	--gnome-headerbar-button-destructive-action-border-color: #760909;
+	--gnome-headerbar-button-destructive-action-border-bottom-color: #470505;
+	--gnome-headerbar-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
+ 	--gnome-headerbar-button-destructive-action-hover-bgimage: linear-gradient(to bottom, #da1010, #cc0f0f 60%, #c20f0f);
+
 	--gnome-inactive-headerbar-bgimage: linear-gradient(#33393b, #33393b);
 	--gnome-inactive-headerbar-border-bottom: 1px solid #202425;
 	--gnome-inactive-headerbar-box-shadow: 0 1px rgba(238, 238, 236, .1) inset;
@@ -103,3 +125,4 @@
 	--gnome-icons-hack-close-button-active-box-shadow: 0 1px rgba(255, 255, 255, .07) inset, 0 2px 1px -2px rgba(255, 255, 255, .6) inset, 0 1px rgba(17, 17, 19, .1);
 	/* ^ without invert: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1) */
 }
+

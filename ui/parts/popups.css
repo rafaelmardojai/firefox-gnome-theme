@@ -1,10 +1,10 @@
-/* Pop up menus and context menus */
+/* Popup menus and context menus */
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Adjust pop up position */
+/* Adjust popup position */
 panel[type=arrow] {
-	margin-top: 6px !important;
+	margin-top: 9px !important;
 }
 /* Bookmarks (header bar's bookmarks button) */
 #BMB_bookmarksPopup {
@@ -15,25 +15,63 @@ panel[type=arrow] {
 	margin-top: 12px !important;
 }
 
-/* Style the overflow menu:
- * - header bar's overflow button
- * - burger menu → Customize... */
-.panel-arrowcontent {
-	background-color: -moz-field !important;
-	border-radius: 5px;
-	padding: 8px 12px !important;
+/* Style menus */
+menupopup {
+	-moz-appearance: none !important;
+	background: var(--gnome-menu-bgcolor);
+	margin: -2px 0 0 -2px;
+	padding: 2px 0;
 }
 
-/* Color of the last item in the bookmarks menu and downloads menu */
+/* Style popups */
+.panel-arrowcontent, .panel-header, .PanelUI-subView, .panel-subview-body, #widget-overflow-mainView {
+	background: var(--gnome-popup-bgcolor) !important;
+}
+.panel-arrowcontent {
+	border: var(--gnome-popup-border) !important;
+	border-color: var(--gnome-popup-border-color) !important;
+	border-radius: 5px;
+	box-shadow: var(--gnome-popup-shadow) !important;
+	padding: 8px 12px !important;
+}
+.panel-arrow {    
+	fill: var(--gnome-popup-bgcolor) !important;
+	stroke: var(--gnome-popup-border-color) !important;
+}
+
+/* Style popups menu buttons */
+.subviewbutton, .toolbarbutton-1 {
+	border-radius: 3px !important;
+}
+.subviewbutton:hover, .toolbarbutton-1:hover {
+	background-color: var(--gnome-popup-button-hover-bgcolor) !important;
+}
+
+/* Style popups separator */
+toolbarseparator, menuseparator {
+	border-color: var(--gnome-popup-separator-color) !important;
+}
+.panel-header {
+	border-bottom: 1px solid var(--gnome-popup-separator-color) !important;
+}
+
+/* Style popups menu footer buttons */
 .subviewbutton.panel-subview-footer,
 .downloadsPanelFooter {
-	background-color: transparent !important;
-	border-top-color: var(--panel-separator-color) !important;
+	background-image: var(--gnome-headerbar-button-bgimage);
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
+	border: var(--gnome-headerbar-button-border);
+	border-bottom: var(--gnome-headerbar-button-border-bottom);
+	border-radius: 3px;
+	margin: 6px 3px !important;
+	padding: 2px 16px !important;
+	width: 34px;
+	height: 34px;
 }
+
 .subviewbutton.panel-subview-footer:hover,
 .downloadsPanelFooter:hover {
-	background-color: var(--arrowpanel-dimmed) !important;
-	border-top-color: var(--panel-separator-color) !important;
+	background-image: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
 
 /* Burger menu's zoom controls colors */
@@ -61,4 +99,59 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 }
 #contentAreaContextMenu menugroup menuitem image {
 	visibility: visible;
+}
+
+/* Edit bookmark panel */
+.editBookmarkPanelBottomButton {
+	color: white !important;
+	margin: 6px 0 !important;
+	padding: 2px 16px !important;
+	width: 34px;
+	height: 34px;
+}
+#editBookmarkPanelRemoveButton {
+	background-image: var(--gnome-headerbar-button-destructive-action-bgimage);
+	border-radius: 3px 0 0 3px;
+	border-color: var(--gnome-headerbar-button-destructive-action-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-destructive-action-border-bottom-color) !important;
+	box-shadow: var(--gnome-headerbar-button-destructive-action-box-shadow);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.560784);
+}
+#editBookmarkPanelRemoveButton:hover {
+	background-image: var(--gnome-headerbar-button-destructive-action-hover-bgimage);	
+}
+#editBookmarkPanelDoneButton {
+	background-image: var(--gnome-headerbar-button-suggested-action-bgimage);
+	border-left: 0 !important;
+	border-radius: 0 3px 3px 0;
+	border-color: var(--gnome-headerbar-button-suggested-action-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-suggested-action-border-bottom-color) !important;	
+	box-shadow: var(--gnome-headerbar-button-suggested-action-box-shadow);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.543529);
+}
+#editBookmarkPanelDoneButton:hover {
+	background-image: var(--gnome-headerbar-button-suggested-action-hover-bgimage);	
+}
+
+/* Customization overflow menu position */
+#customization-panel-container {
+	padding: 0 75px 25px !important;
+	margin-top: 10px;
+	z-index: 10;
+}
+#customization-panelWrapper > .panel-arrowbox {    
+	margin-bottom: -5px !important;
+}
+
+/* Confirmation Hint */
+#confirmation-hint .panel-arrowcontent {
+	background: var(--gnome-headerbar-button-suggested-action-bgimage) !important;
+	border-color: var(--gnome-headerbar-button-suggested-action-border-color) !important;
+}
+#confirmation-hint .panel-arrow {
+	fill: var(--gnome-headerbar-button-suggested-action-border-color) !important;
+	stroke: var(--gnome-headerbar-button-suggested-action-border-color) !important;
+}
+#confirmation-hint-message {
+	color: white !important;
 }

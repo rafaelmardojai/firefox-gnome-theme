@@ -14,11 +14,20 @@
 	/* Extra toolbars like the bookmark bar */
 	--toolbar-bgcolor: var(--gnome-tabbar-bgcolor) !important;
 	--toolbar-bgimage: none !important;
+	
+	/* Popups */
+	--gnome-menu-bgcolor: #ffffff;
+	--gnome-popup-bgcolor: #e8e8e7;
+	--gnome-popup-border: 1px solid;
+	--gnome-popup-border-color: #b6b6b3;
+	--gnome-popup-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	--gnome-popup-button-hover-bgcolor: #f4f4f4;
+	--gnome-popup-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
 	--gnome-headerbar-bgimage: linear-gradient(to top, #dbdbd9, #f4f4f4 3px, #f4f4f4);
 	--gnome-headerbar-border-bottom: 1px solid #91918c;
-	--gnome-headerbar-box-shadow: 0 -1px rgb(217, 217, 217) inset, 0 1px #fff inset;
+	--gnome-headerbar-box-shadow: 0 -1px rgb(217, 217, 217) inset, 0 1px #fff inset;	
 	--gnome-headerbar-button-bgimage: linear-gradient(#e7e7e6, #dfdfde 60%, #d0d0ce);
 	--gnome-headerbar-button-border: 1px solid #b7b7b4;
 	--gnome-headerbar-button-border-bottom: 1px solid #94948f;
@@ -29,6 +38,19 @@
 	--gnome-headerbar-button-disabled-bgcolor: #f1f1f1;
 	--gnome-headerbar-button-disabled-border: 1px solid #b7b7b4;
 	--gnome-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
+
+	--gnome-headerbar-button-suggested-action-bgimage: linear-gradient(to bottom, #4a90d9, #3986d5 60%, #2a76c6);
+	--gnome-headerbar-button-suggested-action-border-color: #215d9c;
+	--gnome-headerbar-button-suggested-action-border-bottom-color: #184472;
+	--gnome-headerbar-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+	--gnome-headerbar-button-suggested-action-hover-bgimage: linear-gradient(to bottom, #63a0de, #4a90d9 60%, #3986d5);
+
+	--gnome-headerbar-button-destructive-action-bgimage: linear-gradient(to bottom, #ef2929, #ee1616 60%, #d51010);
+	--gnome-headerbar-button-destructive-action-border-color: #a60c0c;
+	--gnome-headerbar-button-destructive-action-border-bottom-color: #760909;
+	--gnome-headerbar-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+	--gnome-headerbar-button-destructive-action-hover-bgimage: linear-gradient(to bottom, #f14545, #ef2929 60%, #ee1616);
+
 	--gnome-inactive-headerbar-bgimage: linear-gradient(#e8e8e7, #e8e8e7);
 	--gnome-inactive-headerbar-border-bottom: 1px solid #c0c0bd;
 	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
@@ -103,3 +125,4 @@
 	--gnome-icons-hack-close-button-active-box-shadow: 0 1px rgba(255, 255, 255, .07) inset, 0 2px 1px -2px rgba(255, 255, 255, .6) inset, 0 1px rgba(17, 17, 19, .1);
 	/* ^ without invert: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1) */
 }
+
