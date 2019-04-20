@@ -1,5 +1,6 @@
 /* GNOME CSD styles for headerbar on Firefox [tabsintitlebar] */
 
+@import "csd-fullscreen.css";
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Navbar position */
@@ -20,7 +21,7 @@
 }
 
 /* Add window controls separator */
-:root[tabsintitlebar]:not([inFullscreen]) #nav-bar::after {
+:root[tabsintitlebar] #nav-bar::after {
 	content: "";
 	position: absolute;
 	right: 3px;
@@ -66,7 +67,6 @@
 	filter: invert(85%);
 	width: 16px;
 }
-
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button .toolbarbutton-icon {
 	opacity: .7 !important;
 }
@@ -145,10 +145,4 @@
 }
 :root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) .titlebar-buttonbox {
 	border-top-right-radius: 8px !important;
-}
-
-/* Fullscreen */
-:root[tabsintitlebar][inFullscreen] #nav-bar {
-	padding-right: 3px !important;
-	margin-right: 0 !important;
 }

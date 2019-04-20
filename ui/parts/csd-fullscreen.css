@@ -1,0 +1,71 @@
+/* GNOME CSD styles for headerbar on Firefox [tabsintitlebar]+[inFullscreen] */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root[tabsintitlebar][inFullscreen] #nav-bar {
+	margin-right: 123px !important;
+}
+
+/* Move window buttons next to the header bar */
+:root[tabsintitlebar][inFullscreen] #window-controls {
+	-moz-appearance: none !important;
+	background-image: var(--gnome-headerbar-bgimage) !important;
+	border-bottom: var(--gnome-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-headerbar-box-shadow);
+	height: unset !important;
+	padding-right: 3px;	
+	position: absolute !important;	
+	right: 0;
+	top: 5px;	
+}
+:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive {
+	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
+	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
+	box-shadow: var(--gnome-inactive-headerbar-box-shadow) !important;
+}
+
+/* Window buttons */
+:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
+	-moz-appearance: none !important;
+	border: var(--gnome-headerbar-button-border) !important;
+	border-color: transparent !important;
+	border-radius: 3px !important;
+	height: 34px;
+	margin: 6px 3px !important;
+	padding: 0 2px !important;
+	width: 34px;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {
+	filter: invert(85%);
+	width: 16px;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton .toolbarbutton-icon {
+	opacity: .7 !important;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
+	background-image: var(--gnome-headerbar-button-active-bgimage);
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton[disabled] {
+	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
+	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
+	border: var(--gnome-headerbar-button-border) !important;
+}
+
+:root[tabsintitlebar][inFullscreen] #window-controls #close-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/view-restore-symbolic?size=dialog") !important;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls #minimize-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=dialog") !important;
+}
