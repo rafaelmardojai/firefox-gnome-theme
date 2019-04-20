@@ -20,7 +20,7 @@
 }
 
 /* Add window controls separator */
-:root[tabsintitlebar] #nav-bar::after {
+:root[tabsintitlebar]:not([inFullscreen]) #nav-bar::after {
 	content: "";
 	position: absolute;
 	right: 3px;
@@ -131,19 +131,24 @@
 }
 
 /* CSD rounded corners */
-:root[tabsintitlebar]:not([sizemode="maximized"]) #nav-bar {
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
+	background: transparent !important;
+}
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #titlebar {
+	background: var(--gnome-tabbar-bgcolor) !important;
+}
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #titlebar:-moz-window-inactive {
+	background: var(--gnome-inactive-tabbar-bgcolor) !important;
+}
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #nav-bar {
 	border-top-left-radius: 8px;
 }
-:root[tabsintitlebar]:not([sizemode="maximized"]) #TabsToolbar .titlebar-buttonbox {
-	border-top-right-radius: 8px;
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) .titlebar-buttonbox {
+	border-top-right-radius: 8px !important;
 }
 
 /* Fullscreen */
 :root[tabsintitlebar][inFullscreen] #nav-bar {
-	padding-top: 52px !important;
-	padding-right: 0 !important;
+	padding-right: 3px !important;
 	margin-right: 0 !important;
-}
-:root[tabsintitlebar][inFullScreen] #nav-bar::after {
-	display: none;
 }

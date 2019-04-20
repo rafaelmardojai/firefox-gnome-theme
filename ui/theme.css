@@ -7,6 +7,10 @@
 @import "parts/custom-icons.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+:root {
+    --space-above-tabbar: 0 !important;
+}
+
 /* Menu bar */
 #toolbar-menubar:not([inactive=true]) {
 	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
