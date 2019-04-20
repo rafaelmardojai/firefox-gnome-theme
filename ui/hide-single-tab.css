@@ -1,6 +1,6 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#tabbrowser-tabs tab:only-of-type,
+:root:not([inFullscreen]) #tabbrowser-tabs tab:only-of-type, /* Temporal fix */
 #TabsToolbar .private-browsing-indicator {
 	display: none !important;
 }
