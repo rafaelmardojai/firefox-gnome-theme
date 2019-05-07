@@ -24,6 +24,7 @@ tab > stack {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
 	margin-bottom: -1px !important;
+	padding: 0 3px !important;
 }
 
 /* New hover effect */
@@ -80,6 +81,7 @@ tab[selected]:-moz-window-inactive {
 	align-items: center;
 	margin-top: -1px;
 	min-width: 100% !important;
+	padding: 0 10px !important;
 }
 
 /* Prevent tab icons size breaking */
@@ -226,4 +228,9 @@ tab[selected]:-moz-window-inactive {
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]):not([fadein]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
 	max-width: .1px !important;
+}
+
+/* Remove blank spaces on tabs start and end */
+#TabsToolbar .titlebar-spacer {
+	display: none !important;
 }
