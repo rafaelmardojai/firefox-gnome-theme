@@ -14,7 +14,10 @@
 	/* Extra toolbars like the bookmark bar */
 	--toolbar-bgcolor: var(--gnome-tabbar-bgcolor) !important;
 	--toolbar-bgimage: none !important;
-
+	
+	/* Window */
+	--gnome-window-border-color: #1b1f20;
+	
 	/* Popups */
 	--gnome-menu-bgcolor: #262b2d;
 	--gnome-popup-bgcolor: #33393b;

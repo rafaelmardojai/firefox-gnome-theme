@@ -16,7 +16,7 @@
 	padding-right: 3px;	
 	position: absolute !important;	
 	right: 0;
-	top: 5px;	
+	top: 0;	
 }
 :root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive {
 	background-image: var(--gnome-inactive-headerbar-bgimage) !important;

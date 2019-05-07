@@ -6,12 +6,8 @@
 
 /* Navbar position */
 :root[tabsintitlebar] #nav-bar {
-	margin-top: 5px !important;
 	padding-right: 7px !important;
 	position: relative;
-}
-:root[tabsintitlebar] #navigator-toolbox {
-	margin-top: -5px;
 }
 :root[tabsintitlebar] #toolbar-menubar:not([inactive=true]) {
 	height: 30px !important;
@@ -35,7 +31,7 @@
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
 	position: absolute !important;	
 	right: 0;
-	top: 5px;
+	top: 0;
 	-moz-appearance: none !important;
 }
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox {  
@@ -127,17 +123,13 @@
 
 /* CSD rounded corners */
 :root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
-	background: transparent !important;
-}
-:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #titlebar {
-	background: var(--gnome-tabbar-bgcolor) !important;
-}
-:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #titlebar:-moz-window-inactive {
-	background: var(--gnome-inactive-tabbar-bgcolor) !important;
+	border: 1px solid var(--gnome-window-border-color) !important;
+	border-radius: 8px 8px 0 0 !important;
+	margin: -1px -1px 0 0 !important;
 }
 :root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #nav-bar {
 	border-top-left-radius: 8px;
 }
 :root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) .titlebar-buttonbox {
-	border-top-right-radius: 8px !important;
+	border-top-right-radius: 8px;
 }

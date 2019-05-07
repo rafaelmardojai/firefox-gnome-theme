@@ -11,21 +11,6 @@
     --space-above-tabbar: 0 !important;
 }
 
-/* Menu bar */
-#toolbar-menubar:not([inactive=true]) {
-	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
-	margin-bottom: 0 !important;
-}
-
-/* Bookmark bar */
-#PersonalToolbar {
-	border-top: var(--gnome-bookmarkbar-border-bottom) !important;
-	height: var(--gnome-bookmarkbar-height);
-}
-#PersonalToolbar:-moz-window-inactive {
-	border-top: var(--gnome-inactive-bookmarkbar-border-bottom) !important;
-}
-
 /* Sidebar */
 #search-box {
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;

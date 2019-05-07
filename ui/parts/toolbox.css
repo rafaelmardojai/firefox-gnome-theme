@@ -17,6 +17,22 @@
 	border-bottom: var(--gnome-inactive-tabbar-border-bottom);
 }
 
+/* Menu bar */
+#toolbar-menubar:not([inactive=true]) {
+	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
+	margin-bottom: 0 !important;
+}
+
+/* Bookmark bar */
+#PersonalToolbar {
+	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
+	height: var(--gnome-bookmarkbar-height);
+}
+#PersonalToolbar:-moz-window-inactive {
+	background-color: var(--gnome-inactive-tabbar-bgcolor) !important;
+	border-top: var(--gnome-inactive-bookmarkbar-border-bottom) !important;
+}
+
 /* Overrides: Remove border below the menu bar / above the header bar */
 #TabsToolbar:not([collapsed="true"]) + #nav-bar {
 	border-top-width: 0 !important;
@@ -29,10 +45,10 @@
 #navigator-toolbox #nav-bar {
 	-moz-box-ordinal-group: 0;
 }
-#navigator-toolbox #toolbar-menubar {
+#navigator-toolbox #PersonalToolbar {
 	-moz-box-ordinal-group: 1;
 }
-#navigator-toolbox #PersonalToolbar {
+#navigator-toolbox #titlebar {
 	-moz-box-ordinal-group: 2;
 }
 #navigator-toolbox toolbar {
