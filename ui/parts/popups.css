@@ -155,3 +155,8 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 #confirmation-hint-message {
 	color: white !important;
 }
+
+/* User sync account menu */
+#fxa-menu-avatar {
+	display: none;
+}
