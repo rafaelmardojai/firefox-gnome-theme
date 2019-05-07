@@ -125,7 +125,7 @@
 :root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
 	border: 1px solid var(--gnome-window-border-color) !important;
 	border-radius: 8px 8px 0 0 !important;
-	margin: -1px -1px 0 0 !important;
+	margin: -1px -1px 0 -1px !important;
 }
 :root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #nav-bar {
 	border-top-left-radius: 8px;
