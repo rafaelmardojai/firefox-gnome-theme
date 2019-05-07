@@ -46,6 +46,9 @@
 /* Limit the URL bar's autocompletion popup's width to the URL bar's width */
 /*@import "ui/matching-autocomplete-width.css"; /**/
 
+/* Use GNOME stack icons */
+/*@import "ui/gnome-icons.css"; /**/
+
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "ui/symbolic-tab-icons.css"; /**/
 
