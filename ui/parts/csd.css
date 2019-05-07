@@ -1,6 +1,7 @@
 /* GNOME CSD styles for headerbar on Firefox [tabsintitlebar] */
 
 @import "csd-fullscreen.css";
+@import "csd-left-controls.css";
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Navbar position */
@@ -96,12 +97,6 @@
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=dialog") !important;
-}
-
-/* Blank spaces on tabs start and end */
-:root[tabsintitlebar] .titlebar-spacer {
-	border-inline-end: 0px !important;
-	width: 6px !important;
 }
 
 /* Fix the issue when dragging tabs */

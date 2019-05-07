@@ -1,0 +1,73 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@media (-moz-gtk-csd-reversed-placement) {
+	/* Navbar */
+	:root[tabsintitlebar] #nav-bar {	
+		padding-left: 7px !important;
+		padding-right: 3px !important;
+		position: relative;
+	}
+
+	/* Window controls separator */
+	:root[tabsintitlebar] #nav-bar::after {
+		left: 3px;
+		right: auto !important;
+	}
+
+	/* Window buttons position */
+	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
+		left: 0;
+		right: auto !important;
+	}
+
+	:root[tabsintitlebar] #titlebar .titlebar-buttonbox {	
+		padding-left: 3px;	
+		padding-right: 0 !important;;	
+	}
+
+	/* Window controls: at least 1 button */
+	@media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
+		:root[tabsintitlebar] #nav-bar {
+			margin-left: 43px;
+			margin-right: 0 !important;
+		}
+	}
+	/* Window controls: at least 2 buttons */
+	@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
+				 (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
+				 (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+		:root[tabsintitlebar] #nav-bar {
+			margin-left: 83px;
+			margin-right: 0 !important;
+		}
+	}
+	/* Window controls: 3 buttons */
+	@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+		:root[tabsintitlebar] #nav-bar {
+			margin-left: 123px;
+			margin-right: 0 !important;
+		}
+	}
+
+	/* CSD rounded corners */
+	:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #nav-bar {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 8px !important;
+	}
+	:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) .titlebar-buttonbox {
+		border-top-left-radius: 8px !important;
+		border-top-right-radius: 0 !important;
+	}
+
+	/* Fullscreen */
+	:root[tabsintitlebar][inFullscreen] #nav-bar {
+		margin-left: 123px !important;
+		margin-right: 0 !important;
+	}
+	:root[tabsintitlebar][inFullscreen] #window-controls {
+		padding-left: 3px;	
+		padding-right: 0 !important;
+		left: 0;
+		right: auto !important;;
+	}  
+}
