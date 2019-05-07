@@ -168,3 +168,15 @@
 	border: 0 !important;
 	margin: 0 !important;
 }
+
+/* User sync menu, bigger avatar */
+#fxa-toolbar-menu-button .toolbarbutton-badge-stack {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#fxa-avatar-image {	
+	height: 26px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 26px !important;
+}
