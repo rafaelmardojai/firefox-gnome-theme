@@ -18,19 +18,8 @@
  *   $ GTK_THEME=Adwaita:dark firefox
  */
 
-/* GNOME 3.18 light theme */
-/*@import "ui/gnome-3.18-light.css"; /**/
-/* GNOME 3.18 dark theme */
-/*@import "ui/gnome-3.18-dark.css"; /**/
-/* GNOME 3.26 light theme */
-/*@import "ui/gnome-3.26-light.css"; /**/
-/* GNOME 3.26 dark theme */
-/*@import "ui/gnome-3.26-dark.css"; /**/
-
-/*******************************************************************************
-/* CSD elementary OS fixes 
- * (window controls: close on the left, maximize on the right) */
-/*@import "ui/csd-elementary.css"; /**/
+/* GNOME 3.30 theme */
+@import "chrome/gnome-3.30.css"; /**/
 
 /*******************************************************************************
  * Other features (optional)
