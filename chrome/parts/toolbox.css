@@ -8,11 +8,11 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Toolbox colors */
-#PersonalToolbar, #toolbar-menubar, #TabsToolbar {
+#PersonalToolbar, #toolbar-menubar {
 	background-color: var(--gnome-toolbar-bgcolor) !important;
 	border-bottom: var(--gnome-toolbar-border-bottom) !important;
 }
-#PersonalToolbar:-moz-window-inactive, #toolbar-menubar:-moz-window-inactive, #TabsToolbar:-moz-window-inactive {
+#PersonalToolbar:-moz-window-inactive, #toolbar-menubar:-moz-window-inactive {
 	background-color: var(--gnome-inactive-toolbar-bgcolor) !important;
   border-bottom: var(--gnome-inactive-toolbar-border-bottom) !important;
 }

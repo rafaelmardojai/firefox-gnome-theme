@@ -2,6 +2,13 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+#TabsToolbar {
+	background-color: var(--gnome-toolbar-bgcolor) !important;
+}
+#TabsToolbar:-moz-window-inactive {
+	background-color: var(--gnome-inactive-toolbar-bgcolor) !important;
+}
+
 /* Tabs bar height */
 #tabbrowser-tabs,
 #tabbrowser-tabs arrowscrollbox {
