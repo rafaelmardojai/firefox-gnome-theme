@@ -144,3 +144,6 @@ GTK_DEBUG=interactive epiphany
 
 Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
+
+## Credits
+Developed by **Rafael Mardojai** and contributors. Based on **Sai Kurogetsu** work.
