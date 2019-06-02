@@ -1,11 +1,14 @@
 # Firefox GNOME Theme
+A GNOME theme for Firefox 60+.
+
+*This theme follows lastest GNOME default gtk theme adwaita*
 
 ![Screenshot of the theme](screenshot.png)
 ![Screenshot of the theme](screenshot2.png)
 
 ## Description
 
-This is a bunch of CSS code to make Firefox 57+ look closer to GNOME's default
+This is a bunch of CSS code to make Firefox look closer to GNOME's default
 theme. It styles the UI and internal Firefox' pages like `about:` and
 `view-source:`. Both light and dark variants are supported.
 
