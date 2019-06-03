@@ -18,6 +18,5 @@
 }
 
 #main-window {
-	-moz-appearance: -moz-window-titlebar !important;
-	background: none !important;
+  -moz-appearance: -moz-window-titlebar !important;
 }
