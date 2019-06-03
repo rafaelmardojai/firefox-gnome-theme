@@ -6,21 +6,16 @@
 panel[type=arrow] {
 	margin-top: 9px !important;
 }
-/* Bookmarks (header bar's bookmarks button) */
-#BMB_bookmarksPopup {
-	margin-top: 3px !important;
-}
-/* Identity (URL bar's locker icon) */
-#identity-popup {
-	margin-top: 12px !important;
-}
 
 /* Style menus */
 menupopup {
 	-moz-appearance: none !important;
 	background: var(--gnome-menu-bgcolor);
+	border: 1px solid var(--gnome-menu-border-color);
+	border-radius: 5px;
+	box-shadow: none !important;
 	margin: -2px 0 0 -2px;
-	padding: 2px 0;
+	padding: 4px 0;
 }
 
 /* Style popups */
@@ -28,9 +23,9 @@ menupopup {
 	background: var(--gnome-popup-bgcolor) !important;
 }
 .panel-arrowcontent {
-	border: var(--gnome-popup-border) !important;
+	border: 1px solid !important;
 	border-color: var(--gnome-popup-border-color) !important;
-	border-radius: 5px;
+	border-radius: 9px;
 	box-shadow: var(--gnome-popup-shadow) !important;
 	padding: 8px 12px !important;
 }
@@ -60,8 +55,8 @@ toolbarseparator, menuseparator {
 .downloadsPanelFooter {
 	background-image: var(--gnome-headerbar-button-bgimage);
 	box-shadow: var(--gnome-headerbar-button-box-shadow);
-	border: var(--gnome-headerbar-button-border);
-	border-bottom: var(--gnome-headerbar-button-border-bottom);
+	border: 1px solid var(--gnome-headerbar-button-border-color);
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color);
 	border-radius: 3px;
 	margin: 6px 3px !important;
 	padding: 2px 16px !important;

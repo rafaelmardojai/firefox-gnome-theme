@@ -47,16 +47,6 @@
 	-moz-appearance: none !important;
 }
 
-/* Window buttons separator */
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 6px;
-	height: 34px;
-	border-right: 1px solid rgba(0, 0, 0, .1);
-} 
-
 /* Window buttons */
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
@@ -131,12 +121,6 @@
 		left: 0;
 		right: auto;
 	}
-
-	/* Window buttons separator */
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container::after {		
-		left: auto;
-		right: 0;
-	} 
 
 	/* Window controls: at least 1 button */
 	@media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {

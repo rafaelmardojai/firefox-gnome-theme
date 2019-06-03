@@ -9,11 +9,11 @@
 #nav-bar {
 	background-image: var(--gnome-headerbar-bgimage) !important;
 	border: none !important;
-	border-bottom: var(--gnome-headerbar-border-bottom) !important;
+	border-bottom: 1px solid var(--gnome-headerbar-border-color) !important;
 	box-shadow: var(--gnome-headerbar-box-shadow) !important;
 }
 #nav-bar:-moz-window-inactive {
 	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
-	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
+	border-bottom-color: var(--gnome-inactive-headerbar-border-color) !important;
 	box-shadow: var(--gnome-inactive-headerbar-box-shadow) !important;
 }

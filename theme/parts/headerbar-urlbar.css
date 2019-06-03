@@ -12,7 +12,7 @@ toolbarspring {
 #searchbar > .searchbar-textbox {
 	background-image: var(--gnome-urlbar-bgimage) !important;
 	border: var(--gnome-urlbar-border) !important;
-	border-radius: 3px;
+	border-radius: 5px;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
 	height: var(--gnome-urlbar-height);

@@ -8,13 +8,18 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Toolbox colors */
-#PersonalToolbar, #toolbar-menubar {
-	background-color: var(--gnome-toolbar-bgcolor) !important;
-	border-bottom: var(--gnome-toolbar-border-bottom) !important;
+#navigator-toolbox {
+	border: 0 !important;
+	background: transparent !important;
 }
-#PersonalToolbar:-moz-window-inactive, #toolbar-menubar:-moz-window-inactive {
+
+#PersonalToolbar, #toolbar-menubar, #TabsToolbar {
+	background-color: var(--gnome-toolbar-bgcolor) !important;
+	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+}
+#PersonalToolbar:-moz-window-inactive, #toolbar-menubar:-moz-window-inactive, #TabsToolbar:-moz-window-inactive {
 	background-color: var(--gnome-inactive-toolbar-bgcolor) !important;
-  border-bottom: var(--gnome-inactive-toolbar-border-bottom) !important;
+  border-bottom: 1px solid var(--gnome-inactive-toolbar-border-color) !important;
 }
 
 #navigator-toolbox:-moz-window-inactive label, #navigator-toolbox:-moz-window-inactive image {
@@ -27,22 +32,6 @@
 #PersonalToolbar {
 	height: 38px;
 }
-
-/* Menu bar
-#toolbar-menubar:not([inactive=true]) {
-	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
-	margin-bottom: 0 !important;
-}
-
-/* Bookmark bar 
-#PersonalToolbar {
-	border-bottom: var(--gnome-bookmarkbar-border-bottom) !important;
-	height: var(--gnome-bookmarkbar-height);
-}
-#PersonalToolbar:-moz-window-inactive {
-	background-color: var(--gnome-inactive-tabbar-bgcolor) !important;
-	border-top: var(--gnome-inactive-bookmarkbar-border-bottom) !important;
-} */
 
 /* Overrides: Remove border below the menu bar / above the header bar */
 #TabsToolbar:not([collapsed="true"]) + #nav-bar {

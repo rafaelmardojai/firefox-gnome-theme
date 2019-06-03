@@ -2,9 +2,9 @@
 A GNOME theme for Firefox 60+.
 
 *This theme follows lastest GNOME default gtk theme adwaita*
+**This theme is under development and is not ready to use**
 
 ![Screenshot of the theme](screenshot.png)
-![Screenshot of the theme](screenshot2.png)
 
 ## Description
 

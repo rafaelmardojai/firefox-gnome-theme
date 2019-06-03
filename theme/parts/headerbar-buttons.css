@@ -39,9 +39,9 @@
 
 /* Header bar buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
-	border: var(--gnome-headerbar-button-border);
-	border-bottom: var(--gnome-headerbar-button-border-bottom);
-	border-radius: 3px;
+	border: 1px solid var(--gnome-headerbar-button-border-color);
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color);
+	border-radius: 5px !important;
 	margin: 6px 3px !important;
 	padding: 0 2px !important;
 	width: 34px;
@@ -79,6 +79,9 @@
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open] {
 	background-image: var(--gnome-headerbar-button-active-bgimage);
 	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
+	border-color: var(--gnome-headerbar-button-active-border-color);
+	border-bottom-color: var(--gnome-headerbar-button-active-border-color);
+	border-top-color: var(--gnome-headerbar-button-active-border-accent-color);
 }
 /* Inactive window */
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]) {
@@ -100,7 +103,7 @@
 /* Disabled header bar buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
-	border: var(--gnome-headerbar-button-disabled-border) !important;
+	border: 1px solid var(--gnome-headerbar-button-disabled-border-color) !important;
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 	opacity: 1 !important;
 }

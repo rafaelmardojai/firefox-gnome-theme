@@ -5,18 +5,19 @@
 @import "parts/tabsbar.css";
 @import "parts/remove-white-flash.css";
 @import "parts/custom-icons.css";
+@import "colors/light.css";
+@import "colors/dark.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+*{
+	font-family: Cantarell !important;   
+}
 
 :root {
     --space-above-tabbar: 0 !important;
 }
+
 #main-window {
 	-moz-appearance: -moz-window-titlebar !important;
 	background: none !important;
-}
-
-/* Sidebar */
-#search-box {
-	box-shadow: var(--gnome-urlbar-box-shadow) !important;
-	height: var(--gnome-urlbar-height);
 }

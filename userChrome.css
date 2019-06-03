@@ -1,28 +1,11 @@
+
+/* Import theme */
+@import "theme/gnome-theme.css";
+
 /*
- * In this file you can enable styles which apply to Firefox' user interface.
+ * Here you can enable other theme features not included by default.
  * To enable a specific feature, uncomment its @import line by removing "/*" at
  * the beginning of the line. To disable it, put the "/*" back.
- */
-
-/*******************************************************************************
- * GNOME Theme
- * Pick whichever variant you like, it doesn't have to match your GNOME version,
- * but it will probably look better if it does. Remember that your GTK theme
- * variant must match the variant you pick here, eg. if you pick a light
- * variant, you must also run Firefox using the light variant by either
- * disabling global dark theme in GNOME Tweak Tool or running Firefox explicity
- * with the light theme:
- *   $ GTK_THEME=Adwaita:light firefox
- * The opposite applies to the dark variant, you must either enable global dark
- * theme or run Firefox like this:
- *   $ GTK_THEME=Adwaita:dark firefox
- */
-
-/* GNOME 3.30 theme */
-@import "chrome/gnome-3.30.css"; /**/
-
-/*******************************************************************************
- * Other features (optional)
  */
 
 /* Hide the tab bar when only one tab is open
@@ -30,16 +13,16 @@
  * If you are using it, you might wanna enable the next feature too. Also you
  * should move the new tab button somewhere else for this to work, because by
  * default it is on the tab bar too. */
-/*@import "chrome/hide-single-tab.css"; /**/
+/*@import "theme/hide-single-tab.css"; /**/
 
 /* Limit the URL bar's autocompletion popup's width to the URL bar's width */
-/*@import "chrome/matching-autocomplete-width.css"; /**/
+/*@import "theme/matching-autocomplete-width.css"; /**/
 
 /* Use GNOME stack icons */
-/*@import "chrome/gnome-icons.css"; /**/
+/*@import "theme/gnome-icons.css"; /**/
 
 /* Make all tab icons look kinda like symbolic icons */
-/*@import "chrome/symbolic-tab-icons.css"; /**/
+/*@import "theme/symbolic-tab-icons.css"; /**/
 
 /* Import a custom stylesheet
  * Everything you add in your customChrome.css file (it doesn't exist by

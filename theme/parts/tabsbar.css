@@ -2,13 +2,6 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-#TabsToolbar {
-	background-color: var(--gnome-toolbar-bgcolor) !important;
-}
-#TabsToolbar:-moz-window-inactive {
-	background-color: var(--gnome-inactive-toolbar-bgcolor) !important;
-}
-
 /* Tabs bar height */
 #tabbrowser-tabs,
 #tabbrowser-tabs arrowscrollbox {
@@ -26,11 +19,14 @@ tab > stack {
 	margin-right: 8px !important;
 }
 
+#TabsToolbar .toolbar-items {
+	margin-bottom: -1px !important;
+}
+
 /* Remove hover effects on tab bar buttons */
 #TabsToolbar {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
-	margin-bottom: -1px !important;
 	padding: 0 3px !important;
 }
 
@@ -195,9 +191,9 @@ tab[selected]:-moz-window-inactive {
 	background-color: var(--gnome-tabbar-tab-active-bgcolor) !important;
 	background-image: none !important;
 	border-bottom: var(--gnome-tabbar-tab-active-border-bottom) !important;
-	border-right-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
+	border-right: var(--gnome-tabbar-tab-active-border-sides) !important;
 	border-right-style: solid !important;
-	border-left-color: var(--gnome-tabbar-tab-active-border-color-sides) !important;
+	border-left: var(--gnome-tabbar-tab-active-border-sides) !important;
 	border-left-style: solid !important;
 	border-image: none !important;
 	border-top-style: none !important;
