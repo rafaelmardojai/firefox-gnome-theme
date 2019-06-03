@@ -10,12 +10,49 @@ panel[type=arrow] {
 /* Style menus */
 menupopup {
 	-moz-appearance: none !important;
+	background: none !important;
+	border: 0 !important;	
+	box-shadow: none !important;
+}
+menupopup .popup-internal-box {
 	background: var(--gnome-menu-bgcolor);
 	border: 1px solid var(--gnome-menu-border-color);
 	border-radius: 5px;
-	box-shadow: none !important;
-	margin: -2px 0 0 -2px;
 	padding: 4px 0;
+}
+
+/* Style main context menu buttons */
+#context-navigation {
+	padding: 4px 8px 8px;
+}
+#context-navigation menuitem {
+	-moz-appearance: none !important;
+	background-image: var(--gnome-headerbar-button-bgimage);
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
+	border-width: 1px 1px 1px 0;
+	border-style: solid;
+	border-color: var(--gnome-headerbar-button-border-color);
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color);
+	padding: 0 2px !important;
+	height: 34px;
+}
+#context-navigation menuitem:hover:not([disabled]) {	
+	background-image: var(--gnome-headerbar-button-hover-bgimage);
+	color: var(--arrowpanel-color) !important;
+}
+#context-navigation menuitem:active:not([disabled]) {	
+	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow) !important;
+	border-color: var(--gnome-headerbar-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-active-border-color) !important;
+	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
+}
+#context-navigation menuitem:first-child {	
+	border-radius: 5px 0 0 5px;
+	border-left-width: 1px;
+}
+#context-navigation menuitem:last-child {	
+	border-radius: 0 5px 5px 0;
 }
 
 /* Style popups */
