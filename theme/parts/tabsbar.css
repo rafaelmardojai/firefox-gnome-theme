@@ -20,7 +20,7 @@ tab > stack {
 }
 
 #TabsToolbar .toolbar-items {
-	margin-bottom: 0px !important;
+	margin-bottom: -1px !important;
 }
 
 /* Remove hover effects on tab bar buttons */
@@ -190,19 +190,13 @@ tab[selected]:-moz-window-inactive {
 .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-bgcolor) !important;
 	background-image: none !important;
-	border-bottom: var(--gnome-tabbar-tab-active-border-bottom) !important;
-	border-right: var(--gnome-tabbar-tab-active-border-sides) !important;
-	border-right-style: solid !important;
-	border-left: var(--gnome-tabbar-tab-active-border-sides) !important;
-	border-left-style: solid !important;
+	border: 0 !important;
 	border-image: none !important;
-	border-top-style: none !important;
+	border-bottom: 3px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;	
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-bgcolor) !important;
-	border-right-color: var(--gnome-inactive-tabbar-tab-active-border-color-sides) !important;
-	border-left-color: var(--gnome-inactive-tabbar-tab-active-border-color-sides) !important;
-	border-bottom: var(--gnome-inactive-tabbar-tab-active-border-bottom) !important;
+	border-bottom-color: var(--gnome-inactive-tabbar-tab-active-border-bottom-color) !important;
 }
 
 /* Tab hover */
@@ -217,9 +211,7 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-bgcolor) !important;
 	border-image: none !important;
-	border-right: var(--gnome-tabbar-tab-hover-border-sides) !important;
-	border-left: var(--gnome-tabbar-tab-hover-border-sides) !important;
-	border-bottom: var(--gnome-tabbar-tab-hover-border-bottom) !important;
+	border-bottom: 3px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
 }
 
 /* Full width tabs */
