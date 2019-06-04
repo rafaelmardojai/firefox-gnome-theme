@@ -27,7 +27,7 @@
 }
 
 #navigator-toolbox:-moz-window-inactive label, #navigator-toolbox:-moz-window-inactive image {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 #toolbar-menubar:not([inactive=true]) {
