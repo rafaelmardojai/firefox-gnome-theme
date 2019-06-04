@@ -3,8 +3,6 @@ A GNOME theme for Firefox 60+.
 
 *This theme follows lastest GNOME default gtk theme adwaita*
 
-**This theme is under development and is not ready to use**
-
 ![Screenshot of the theme](screenshot.png)
 
 ## Description
@@ -16,7 +14,20 @@ The `master` branch track current Firefox and GNOME stable.
 
 ## Installation
 
-**TODO**
+### Manual installation
+1. Go to `about:support` in Firefox.
+2. Application Basics > Profile Directory > Open Directory.
+3. Create a folder named `chrome`.
+4. Copy `userChrome.css` file and `theme` folder in `chrome`.
+5. Go to `about:config` in Firefox.
+6. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set it to `true`.
+7. Restart Firefox.
+8. Open Firefox customization panel and:
+	1. Use *Title bar* option to toggle CSD if is not set by default.
+	2. Move the new tab button to headerbar
+	3. Select light or dark variants on theme switcher.
+9. Be happy with your new gnomish Firefox.
+
 
 ## Development
 
