@@ -61,7 +61,7 @@
 }
 :root[tabsintitlebar] #titlebar .titlebar-button .toolbarbutton-icon,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {
-	filter: invert(30%) !important;
+	filter: var(--gnome-window-icons-hack-filter) !important;
 	width: 16px;
 }
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button .toolbarbutton-icon,
