@@ -20,7 +20,7 @@ tab > stack {
 }
 
 #TabsToolbar .toolbar-items {
-	margin-bottom: -1px !important;
+	margin-bottom: 0px !important;
 }
 
 /* Remove hover effects on tab bar buttons */
@@ -147,7 +147,7 @@ tab[selected]:-moz-window-inactive {
 	width: 16px;
 }
 :root:-moz-window-inactive .tab-close-button {
-	opacity: .18;
+	opacity: .18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
 	background-image: var(--gnome-icons-hack-close-button-hover-bgimage);
