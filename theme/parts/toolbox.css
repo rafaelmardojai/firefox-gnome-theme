@@ -12,6 +12,10 @@
 	border: 0 !important;
 	background: transparent !important;
 }
+.toolbarbutton-icon {
+	color: var(--gnome-toolbar-color) !important;
+	fill: var(--gnome-toolbar-color) !important;
+}
 
 #PersonalToolbar, #toolbar-menubar, #TabsToolbar {
 	background-color: var(--gnome-toolbar-bgcolor) !important;

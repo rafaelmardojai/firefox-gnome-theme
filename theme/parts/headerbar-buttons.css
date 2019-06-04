@@ -46,11 +46,11 @@
 	padding: 0 2px !important;
 	width: 34px;
 	height: 34px;
+	color: var(--gnome-toolbar-color) !important;
 }
 /* Inactive window */
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
-	border: var(--gnome-inactive-headerbar-button-border);
-	border-bottom: var(--gnome-inactive-headerbar-button-border-bottom);
+	border: 1px solid var(--gnome-inactive-headerbar-button-border-color);
 }
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) image,
 /* Glitch: Downloads button's icon */
@@ -106,6 +106,9 @@
 	border: 1px solid var(--gnome-headerbar-button-disabled-border-color) !important;
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 	opacity: 1 !important;
+}
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:hover {
+	background-color: var(--gnome-headerbar-button-disabled-bgcolor) !important;
 }
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	opacity: .4 !important;

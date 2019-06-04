@@ -19,6 +19,7 @@ menupopup .popup-internal-box {
 	border: 1px solid var(--gnome-menu-border-color);
 	border-radius: 5px;
 	padding: 4px 0;
+	color: var(--gnome-toolbar-color) !important;
 }
 
 /* Style main context menu buttons */
@@ -36,9 +37,13 @@ menupopup .popup-internal-box {
 	padding: 0 2px !important;
 	height: 34px;
 }
+#context-navigation menuitem {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
 #context-navigation menuitem:hover:not([disabled]) {	
 	background-image: var(--gnome-headerbar-button-hover-bgimage);
-	color: var(--arrowpanel-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 }
 #context-navigation menuitem:active:not([disabled]) {	
 	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
@@ -65,6 +70,7 @@ menupopup .popup-internal-box {
 	border-radius: 9px;
 	box-shadow: var(--gnome-popup-shadow) !important;
 	padding: 8px 12px !important;
+	color: var(--gnome-toolbar-color) !important;
 }
 .panel-arrow {    
 	fill: var(--gnome-popup-bgcolor) !important;
@@ -73,7 +79,8 @@ menupopup .popup-internal-box {
 
 /* Style popups menu buttons */
 .subviewbutton, .toolbarbutton-1 {
-	border-radius: 3px !important;
+	border-radius: 3px !important;	
+	
 }
 .subviewbutton:hover, .toolbarbutton-1:hover {
 	background-color: var(--gnome-popup-button-hover-bgcolor) !important;
@@ -84,7 +91,7 @@ toolbarseparator, menuseparator {
 	border-color: var(--gnome-popup-separator-color) !important;
 }
 .panel-header {
-	border-bottom: 1px solid var(--gnome-popup-separator-color) !important;
+	border-bottom: 1px solid var(--gnome-popup-separator-color) !important;	
 }
 
 /* Style popups menu footer buttons */
