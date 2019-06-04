@@ -12,6 +12,7 @@
 
 	/* Toolbars */
 	--gnome-toolbar-bgcolor: #e0ddda;	
+  --gnome-toolbar-color: rgb(46, 52, 54);
 	--gnome-toolbar-border-color: #b6b6b3;
 	--gnome-inactive-toolbar-bgcolor: #dadad8;	
 	--gnome-inactive-toolbar-border-color: #c0c0bd;
@@ -46,8 +47,7 @@
   --gnome-headerbar-button-disabled-border-color: #cdc7c2;
   --gnome-headerbar-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 	--gnome-inactive-headerbar-button-bgimage: linear-gradient(#f6f5f4, #f6f5f4);
-	--gnome-inactive-headerbar-button-border: 1px solid #c0c0bd;
-	--gnome-inactive-headerbar-button-border-bottom: var(--gnome-inactive-headerbar-button-border);
+	--gnome-inactive-headerbar-button-border-color: #c0c0bd;
 	--gnome-inactive-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
 	--gnome-inactive-headerbar-button-disabled-bgcolor: var(--gnome-headerbar-button-disabled-bgcolor);
 	--gnome-inactive-headerbar-button-disabled-border: var(--gnome-inactive-headerbar-button-border);
@@ -67,34 +67,29 @@
 
   /* URL bar */
   --gnome-urlbar-bgimage: linear-gradient(#fff, #fff);
-  --gnome-urlbar-border: 1px solid #b6b6b3;
+  --gnome-urlbar-border-color: #b6b6b3;
   --gnome-urlbar-box-shadow: none;
   --gnome-urlbar-color: #020202;
-  --gnome-urlbar-height: 34px;
   --gnome-inactive-urlbar-bgimage: linear-gradient(#fcfcfc, #fcfcfc);
-  --gnome-inactive-urlbar-border: 1px solid #c0c0bd;
+  --gnome-inactive-urlbar-border-color: #c0c0bd;
   --gnome-inactive-urlbar-box-shadow: none;
   --gnome-inactive-urlbar-color: #323232;
   --gnome-focused-urlbar-border-color: #4a90d9;
-  --gnome-focused-urlbar-outline: none;
   /* for private-urlbar.css only */
   --gnome-private-urlbar-bgimage: linear-gradient(#e6c2ff, #e6c2ff);
 
 	/* Tabs */
 	--gnome-tabbar-tab-color: rgb(141, 144, 145);
   --gnome-tabbar-tab-hover-bgcolor: #e4e2de;
-  --gnome-tabbar-tab-hover-border-bottom: 3px solid #b6b6b3;
-  --gnome-tabbar-tab-hover-border-sides: 0;
+  --gnome-tabbar-tab-hover-border-bottom-color: #b6b6b3;
   --gnome-tabbar-tab-hover-color: rgb(93, 98, 99);
   --gnome-tabbar-tab-active-bgcolor: #eae8e6;
-  --gnome-tabbar-tab-active-border-bottom: 3px solid #4a90d9;
-  --gnome-tabbar-tab-active-border-sides: 0;
+  --gnome-tabbar-tab-active-border-bottom-color: #4a90d9;
   --gnome-tabbar-tab-active-color: rgb(46, 52, 54);
   --gnome-tabbar-tab-active-hover-bgcolor: #e6e6e6;
   --gnome-inactive-tabbar-tab-color: #8b8e8f;
   --gnome-inactive-tabbar-tab-active-bgcolor: #f6f5f4;
-  --gnome-inactive-tabbar-tab-active-border-bottom: var(--gnome-tabbar-tab-active-border-bottom);
-  --gnome-inactive-tabbar-tab-active-border-color-sides: #c0c0bd;
+  --gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color);
   --gnome-inactive-tabbar-tab-active-color: var(--gnome-inactive-tabbar-tab-color);
   --gnome-tabbar-tab-icon-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%) invert(100%);
 
@@ -109,6 +104,7 @@
 	 * inverted, on others they don't, adjusts the filters below to your
 	 * needs (you may also adjust icon brightness here). */
 	--gnome-icons-hack-filter: none; /* without invert: none */
+  --gnome-window-icons-hack-filter: invert(30%); /* without invert: none */
 	--gnome-icons-hack-close-button-border: 1px solid #b7b7b4;
 	--gnome-icons-hack-close-button-border-bottom: 1px solid #94948f;
 	--gnome-icons-hack-close-button-filter: none; /* without invert: none */

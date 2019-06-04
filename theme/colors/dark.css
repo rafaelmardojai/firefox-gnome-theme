@@ -6,97 +6,93 @@
 	 * built-in in Firefox, so you need to add an !important if you wanna
 	 * override them. */
 
-/*TODO: UPDATE TO 3.32 AND LAST CHANGES*/
-
 :root:-moz-lwtheme-brighttext {
 	/* Browser area before a page starts loading */
-	--gnome-browser-before-load-bgcolor: #2e3436;
+	--gnome-browser-before-load-bgcolor: #353535;
 
 	/* Toolbars */
-	--gnome-toolbar-bgcolor: #272c2d;	
-	--gnome-inactive-toolbar-bgcolor: #2c3233;	
-	--gnome-toolbar-border-bottom: 1px solid #1b1f20;
-	--gnome-inactive-toolbar-border-bottom: 1px solid #202425;
+	--gnome-toolbar-bgcolor: #282828;	
+  --gnome-toolbar-color: #ffffff;
+	--gnome-toolbar-border-color: #1b1b1b;
+	--gnome-inactive-toolbar-bgcolor: #2e2e2e;	
+	--gnome-inactive-toolbar-border-color: #202020;
 	
 	/* Popups */
-	--gnome-menu-bgcolor: #262b2d;
-	--gnome-popup-bgcolor: #33393b;
-	--gnome-popup-border: 1px solid;
-	--gnome-popup-border-color: #1b1f20;
-	--gnome-popup-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
- 	--gnome-popup-button-hover-bgcolor: #3f4649;
-	--gnome-popup-separator-color: rgba(0, 0, 0, 0.1);
+  --gnome-menu-bgcolor: #2f2f2f;
+	--gnome-menu-border-color: #1b1b1b;
+  --gnome-popup-bgcolor: #353535;
+  --gnome-popup-border-color: #1b1b1b;
+  --gnome-popup-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --gnome-popup-button-hover-bgcolor: #424242;
+  --gnome-popup-separator-color: rgba(0, 0, 0, 0.1);
 
-	/* Header bar */
-	--gnome-headerbar-bgimage: linear-gradient(to top, #262a2c, #2c3133 3px, #2c3133);
-	--gnome-headerbar-border-bottom: 1px solid #0b0c0c;
-	--gnome-headerbar-box-shadow: 0 1px #393e40 inset;
-	--gnome-headerbar-button-bgimage: linear-gradient(#2e3436, #2b2f31 60%, #262a2b);
-	--gnome-headerbar-button-border: 1px solid #1b1f20;
-	--gnome-headerbar-button-border-bottom: 1px solid #0c0d0d;
-	--gnome-headerbar-button-box-shadow: 0 1px #383e3f inset;
-	--gnome-headerbar-button-hover-bgimage: linear-gradient(#343b3d, #2f3537 50%, #2a2e30);
-	--gnome-headerbar-button-active-bgimage: linear-gradient(rgb(35, 39, 39), rgb(41, 45, 45) 40%, rgb(45, 50, 50));
-	--gnome-headerbar-button-active-box-shadow: 0 1px rgba(0, 0, 0, .07) inset, 0 2px 1px -2px rgba(0, 0, 0, .6) inset, 0 1px rgba(238, 238, 236, .1);
-	--gnome-headerbar-button-disabled-bgcolor: #2d3234;
-	--gnome-headerbar-button-disabled-border: var(--gnome-headerbar-button-border);
-	--gnome-headerbar-button-disabled-box-shadow: none;
-
-	--gnome-headerbar-button-suggested-action-bgimage: linear-gradient(to bottom, #1f5894, #1d538b 60%, #1b4e83);
-	--gnome-headerbar-button-suggested-action-border-color: #0f2b48;
-	--gnome-headerbar-button-suggested-action-border-bottom-color: #06121e;
-	--gnome-headerbar-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-	--gnome-headerbar-button-suggested-action-hover-bgimage: linear-gradient(to bottom, #2260a0, #1f5894 60%, #1d538b);
-
-	--gnome-headerbar-button-destructive-action-bgimage: linear-gradient(to bottom, #cc0f0f, #c20f0f 60%, #b90e0e);
-	--gnome-headerbar-button-destructive-action-border-color: #760909;
-	--gnome-headerbar-button-destructive-action-border-bottom-color: #470505;
-	--gnome-headerbar-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
- 	--gnome-headerbar-button-destructive-action-hover-bgimage: linear-gradient(to bottom, #da1010, #cc0f0f 60%, #c20f0f);
-
-	--gnome-inactive-headerbar-bgimage: linear-gradient(#33393b, #33393b);
-	--gnome-inactive-headerbar-border-bottom: 1px solid #202425;
-	--gnome-inactive-headerbar-box-shadow: 0 1px rgba(238, 238, 236, .1) inset;
-	--gnome-inactive-headerbar-button-bgimage: linear-gradient(#33393b, #33393b);
-	--gnome-inactive-headerbar-button-border: 1px solid #202425;
-	--gnome-inactive-headerbar-button-border-bottom: var(--gnome-inactive-headerbar-button-border);
-	--gnome-inactive-headerbar-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, 0);
+  /* Header bar */
+  --gnome-headerbar-bgimage: linear-gradient(to top, #262626, #2b2b2b);
+  --gnome-headerbar-border-color: #070707;
+  --gnome-headerbar-box-shadow: inset 0 1px rgba(238, 238, 236, 0.07);
+	--gnome-inactive-headerbar-bgimage: linear-gradient(#353535, #353535);
+  --gnome-inactive-headerbar-border-color: #202020;
+  --gnome-inactive-headerbar-box-shadow: inset 0 1px rgba(238, 238, 236, 0.07);
+	
+	--gnome-headerbar-button-bgimage: linear-gradient(to top, #323232 2px, #353535);
+  --gnome-headerbar-button-border-color: #1b1b1b;
+  --gnome-headerbar-button-border-accent-color: #070707;	
+  --gnome-headerbar-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);	
+  --gnome-headerbar-button-hover-bgimage: linear-gradient(to top, #323232, #373737 1px);	
+  --gnome-headerbar-button-active-bgimage: linear-gradient(#1e1e1e, #1e1e1e);
+	--gnome-headerbar-button-active-border-color: #1b1b1b;
+	--gnome-headerbar-button-active-border-accent-color: #000000;
+  --gnome-headerbar-button-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
+  --gnome-headerbar-button-disabled-bgcolor: #323232;
+  --gnome-headerbar-button-disabled-border-color: #202020;
+  --gnome-headerbar-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+	--gnome-inactive-headerbar-button-bgimage: linear-gradient(#353535, #353535);
+	--gnome-inactive-headerbar-button-border-color: #202020;
+	--gnome-inactive-headerbar-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 	--gnome-inactive-headerbar-button-disabled-bgcolor: var(--gnome-headerbar-button-disabled-bgcolor);
 	--gnome-inactive-headerbar-button-disabled-border: var(--gnome-inactive-headerbar-button-border);
-	--gnome-inactive-headerbar-button-disabled-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(238, 238, 236, 0);
+	--gnome-inactive-headerbar-button-disabled-box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 
-	/* URL bar */
-	--gnome-urlbar-bgimage: linear-gradient(#232729, #232729);
-	--gnome-urlbar-border: 1px solid #1e2222;
-	--gnome-urlbar-box-shadow: none;
-	--gnome-urlbar-color: #fdfdfd;
-	--gnome-urlbar-height: 34px;
-	--gnome-inactive-urlbar-bgimage: linear-gradient(#252a2c, #252a2c);
-	--gnome-inactive-urlbar-border: 1px solid #202425;
-	--gnome-inactive-urlbar-box-shadow: none;
-	--gnome-inactive-urlbar-color: #d3d4d5;
-	--gnome-focused-urlbar-border-color: #0f2a46;
-	--gnome-focused-urlbar-outline: 1px solid #21578f;
-	/* for private-urlbar.css only */
-	--gnome-private-urlbar-bgimage: linear-gradient(#25003e, #25003e);
+	/* TODO: UPDATE TO 3.32 */	
+  --gnome-headerbar-button-suggested-action-bgimage: linear-gradient(to bottom, #4a90d9, #3986d5 60%, #2a76c6);
+  --gnome-headerbar-button-suggested-action-border-color: #215d9c;
+  --gnome-headerbar-button-suggested-action-border-bottom-color: #184472;
+  --gnome-headerbar-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+  --gnome-headerbar-button-suggested-action-hover-bgimage: linear-gradient(to bottom, #63a0de, #4a90d9 60%, #3986d5);
+  --gnome-headerbar-button-destructive-action-bgimage: linear-gradient(to bottom, #ef2929, #ee1616 60%, #d51010);
+  --gnome-headerbar-button-destructive-action-border-color: #a60c0c;
+  --gnome-headerbar-button-destructive-action-border-bottom-color: #760909;
+  --gnome-headerbar-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+  --gnome-headerbar-button-destructive-action-hover-bgimage: linear-gradient(to bottom, #f14545, #ef2929 60%, #ee1616);
 
-	/* Tab bar */
-	--gnome-tabbar-tab-color: #919494;
-	--gnome-tabbar-tab-hover-bgcolor: #292e2f;
-	--gnome-tabbar-tab-hover-border-bottom: var(--gnome-tabbar-border-bottom);
-	--gnome-tabbar-tab-hover-border-sides: 1px solid #25292a;
-	--gnome-tabbar-tab-hover-color: #c0c1c0;
-	--gnome-tabbar-tab-active-bgcolor: #2c3233;
-	--gnome-tabbar-tab-active-border-bottom: 3px solid #215d9c;
-	--gnome-tabbar-tab-active-border-color-sides: #232829;
-	--gnome-tabbar-tab-active-color: #eeeeec;
-	--gnome-tabbar-tab-active-hover-bgcolor: #2f3536;
-	--gnome-inactive-tabbar-tab-color: var(--gnome-tabbar-tab-color);
-	--gnome-inactive-tabbar-tab-active-bgcolor: #33393b;
-	--gnome-inactive-tabbar-tab-active-border-bottom: var(--gnome-tabbar-tab-active-border-bottom);
-	--gnome-inactive-tabbar-tab-active-border-color-sides: #202425;
-	--gnome-inactive-tabbar-tab-active-color: var(--gnome-inactive-tabbar-tab-color);
-	--gnome-tabbar-tab-icon-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%);
+  /* URL bar */
+  --gnome-urlbar-bgimage: linear-gradient(#2d2d2d, #2d2d2d);
+  --gnome-urlbar-border-color: #1b1b1b;
+  --gnome-urlbar-box-shadow: inset 0 0 0 1px rgba(21, 83, 158, 0);
+  --gnome-urlbar-color: #ffffff;
+  --gnome-inactive-urlbar-bgimage: linear-gradient(#303030, #303030);
+  --gnome-inactive-urlbar-border-color: #202020;
+  --gnome-inactive-urlbar-box-shadow: none;
+  --gnome-inactive-urlbar-color: #d6d6d6;
+  --gnome-focused-urlbar-border-color: #15539e;
+  /* for private-urlbar.css only */
+  --gnome-private-urlbar-bgimage: linear-gradient(#25003e, #25003e);
+
+	/* Tabs */
+  --gnome-tabbar-tab-color: rgb(141, 144, 145);
+  --gnome-tabbar-tab-hover-bgcolor: #2b2b2b;
+  --gnome-tabbar-tab-hover-border-bottom-color: #1b1b1b;
+  --gnome-tabbar-tab-hover-color: rgb(200, 200, 200);
+  --gnome-tabbar-tab-active-bgcolor: #2e2e2e;
+  --gnome-tabbar-tab-active-border-bottom-color: #15539e;
+  --gnome-tabbar-tab-active-color: #ffffff;
+  --gnome-tabbar-tab-active-hover-bgcolor: #313131;
+  --gnome-inactive-tabbar-tab-color: rgb(141, 144, 145);
+  --gnome-inactive-tabbar-tab-active-bgcolor: #353535;
+  --gnome-inactive-tabbar-tab-active-border-bottom-color: #15539e;
+  --gnome-inactive-tabbar-tab-active-color: rgb(141, 144, 145);
+  --gnome-tabbar-tab-icon-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%);
+
 
 	/* Burger menu */
 	/*--arrowpanel-padding: 10px;*/
@@ -108,7 +104,8 @@
 	 * /usr/share/icons/<theme>/ and on some systems they need to be
 	 * inverted, on others they don't, adjusts the filters below to your
 	 * needs (you may also adjust icon brightness here). */
-	--gnome-icons-hack-filter: invert(85%); /* without invert: none */
+	--gnome-icons-hack-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(200%); /* without invert: none */
+  --gnome-window-icons-hack-filter: invert(90%); /* without invert: none */
 	--gnome-icons-hack-close-button-border: 1px solid #e3e0e0;
 	--gnome-icons-hack-close-button-border-bottom: 1px solid #F3F2F2;
 	--gnome-icons-hack-close-button-filter: invert(100%); /* without invert: none */
