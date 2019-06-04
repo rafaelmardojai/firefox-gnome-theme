@@ -1,65 +1,86 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#PopupAutoCompleteRichResult {
-	border-radius: 6px;
-	margin-left: 0 !important;
-	margin-top: -1px;
-}
-#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) - 26px);
-	/* bookmark icon, site icon, separator */
+#urlbar-results {
+	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 8px);
 	--fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
-	max-width: var(--box-width);
+	border-radius: 9px;
+	margin-left: 0 !important;
+	margin-top: 6px !important;	
+	max-width: var(--box-width) !important;
 }
-#PopupAutoCompleteRichResult .autocomplete-richlistitem {
-	padding-left: 0 !important;
-	padding-right: 5px !important;
-	border-inline-end-width: 0 !important;
-	max-width: calc(var(--box-width) - 5px);
-	display: flex;
-	align-items: center;
+
+#urlbar-results {
+  background: var(--gnome-popup-bgcolor) !important;
+	border: 1px solid !important;
+	border-color: var(--gnome-popup-border-color) !important;
+	border-radius: 9px;
+	box-shadow: var(--gnome-popup-shadow) !important; /*BUG: Not showing any shadow at all*/
+	color: var(--gnome-toolbar-color) !important;
+	max-width: var(--box-width) !important;
 }
-#PopupAutoCompleteRichResult .ac-type-icon,
-#PopupAutoCompleteRichResult .ac-site-icon,
-#PopupAutoCompleteRichResult .ac-separator {
-	flex: 0 0 auto;
+
+#urlbar-results .urlbarView-body-inner {	
+	padding: 8px;
+	max-width: calc(var(--box-width) - 4px) !important;
 }
-#PopupAutoCompleteRichResult .ac-title,
-#PopupAutoCompleteRichResult .ac-tags,
-#PopupAutoCompleteRichResult .ac-url,
-#PopupAutoCompleteRichResult .ac-action {
-	flex: 1 0 0;
-	min-width: 0;
-	max-width: -moz-fit-content;
+
+#urlbar-results #urlbarView-results {	
+  --item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
 }
-/* Relative widths with tags */
-#PopupAutoCompleteRichResult .ac-title {
-	flex-grow: 2;
+
+#urlbar-results .search-panel-one-offs-header, #urlbar-results .search-panel-one-offs {
+	background: transparent !important;
+	border: 0 !important;
 }
-#PopupAutoCompleteRichResult .ac-tags {
-	flex-grow: 4;
+#urlbar-results .search-panel-one-offs-header {
+	border-top: 1px solid var(--gnome-popup-separator-color) !important;
 }
-#PopupAutoCompleteRichResult .ac-url,
-#PopupAutoCompleteRichResult .ac-action {
-	flex-grow: 3;
+#urlbar-results .search-panel-one-offs {
+	padding: 8px;
+	--item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
 }
-/* */
-/* Relative widths without tags */
-#PopupAutoCompleteRichResult .ac-tags[empty] {
-	flex-grow: 0;
+
+#urlbar-results .searchbar-engine-one-off-item:not(.dummy) {
+	-moz-appearance: none !important;
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+	background: var(--gnome-headerbar-button-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-box-shadow);
+	border-width: 1px 1px 1px 0;
+	border-style: solid;
+	border-color: var(--gnome-headerbar-button-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
+	padding: 0 2px !important;
+	height: 34px !important;
+	color: var(--gnome-toolbar-color) !important;
+	box-sizing: border-box;
 }
-#PopupAutoCompleteRichResult .ac-tags[empty] ~ .ac-url,
-#PopupAutoCompleteRichResult .ac-tags[empty] ~ .ac-action {
-	flex-grow: 1;
+#urlbar-results .searchbar-engine-one-off-item:hover {	
+	background: var(--gnome-headerbar-button-hover-bgimage) !important;
+	color: unset !important;
 }
-/* */
-#PopupAutoCompleteRichResult .ac-text-overflow-container {
-	max-width: 100%;
+#urlbar-results .searchbar-engine-one-off-item:first-child {	
+	border-radius: 5px 0 0 5px;
+	border-left-width: 1px !important;
 }
-#PopupAutoCompleteRichResult .ac-title-text,
-#PopupAutoCompleteRichResult .ac-tags-text,
-#PopupAutoCompleteRichResult .ac-url-text,
-#PopupAutoCompleteRichResult .ac-action-text {
-	max-width: 100% !important;
-	text-overflow: ellipsis;
+#urlbar-results .searchbar-engine-one-off-item.last-engine {	
+	border-radius: 0 5px 5px 0;
+}
+#urlbar-results .searchbar-engine-one-off-item.dummy {
+	margin-right: -1.2px !important;
+	opacity: 0 !important;
+}
+#urlbar-results .searchbar-engine-one-off-item:not(.last-row) {
+	box-sizing: border-box !important;
+}
+#urlbar-anon-search-settings-compact {
+	border-left-width: 1px !important;
+	border-bottom: 1px solid var(--gnome-headerbar-button-border-accent-color) !important;
+	border-radius: 5px;	
+}
+
+#urlbar-results .searchbar-engine-one-off-item:not(.search-setting-button-compact) .button-icon {
+	filter: var(--gnome-convert-icon-to-symbolic-hack-filter);
 }
