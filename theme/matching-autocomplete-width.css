@@ -1,5 +1,6 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/* Set popover size and position */
 #urlbar-results {
 	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 8px);
 	--fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
@@ -9,19 +10,20 @@
 	max-width: var(--box-width) !important;
 }
 
+/* Style as regular popover */
 #urlbar-results {
   background: var(--gnome-popup-bgcolor) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popup-border-color) !important;
 	border-radius: 9px;
-	box-shadow: var(--gnome-popup-shadow) !important; /*BUG: Not showing any shadow at all*/
+	box-shadow: var(--gnome-popup-shadow) !important; /* BUG: Not showing any shadow at all */
 	color: var(--gnome-toolbar-color) !important;
-	max-width: var(--box-width) !important;
+	padding: 8px;
 }
 
-#urlbar-results .urlbarView-body-inner {	
-	padding: 8px;
-	max-width: calc(var(--box-width) - 4px) !important;
+/* Results box */
+#urlbar-results .urlbarView-body-inner {
+	max-width: calc(var(--box-width) - 18px) !important;
 }
 
 #urlbar-results #urlbarView-results {	
@@ -29,6 +31,7 @@
 	--item-padding-end: 0 !important;
 }
 
+/* Search panel  */
 #urlbar-results .search-panel-one-offs-header, #urlbar-results .search-panel-one-offs {
 	background: transparent !important;
 	border: 0 !important;
@@ -37,11 +40,11 @@
 	border-top: 1px solid var(--gnome-popup-separator-color) !important;
 }
 #urlbar-results .search-panel-one-offs {
-	padding: 8px;
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
 }
 
+/* Search engines buttons */
 #urlbar-results .searchbar-engine-one-off-item:not(.dummy) {
 	-moz-appearance: none !important;
 	--toolbarbutton-active-background: transparent !important;
@@ -55,7 +58,7 @@
 	padding: 0 2px !important;
 	height: 34px !important;
 	color: var(--gnome-toolbar-color) !important;
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 }
 #urlbar-results .searchbar-engine-one-off-item:hover {	
 	background: var(--gnome-headerbar-button-hover-bgimage) !important;
@@ -69,8 +72,7 @@
 	border-radius: 0 5px 5px 0;
 }
 #urlbar-results .searchbar-engine-one-off-item.dummy {
-	margin-right: -1.2px !important;
-	opacity: 0 !important;
+	display: none !important;
 }
 #urlbar-results .searchbar-engine-one-off-item:not(.last-row) {
 	box-sizing: border-box !important;
@@ -79,8 +81,10 @@
 	border-left-width: 1px !important;
 	border-bottom: 1px solid var(--gnome-headerbar-button-border-accent-color) !important;
 	border-radius: 5px;	
+	margin-left: 6px !important;
 }
 
+/* Convert search engines icons to symbolic */
 #urlbar-results .searchbar-engine-one-off-item:not(.search-setting-button-compact) .button-icon {
 	filter: var(--gnome-convert-icon-to-symbolic-hack-filter);
 }
