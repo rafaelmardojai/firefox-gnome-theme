@@ -6,7 +6,7 @@
 	--fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
 	border-radius: 9px;
 	margin-left: 0 !important;
-	margin-top: 6px !important;	
+	margin-top: 0 !important;	
 	max-width: var(--box-width) !important;
 }
 
@@ -26,9 +26,11 @@
 	max-width: calc(var(--box-width) - 18px) !important;
 }
 
-#urlbar-results #urlbarView-results {	
+#urlbarView-results {	
   --item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
+	max-height: 80vh !important;
+	overflow-x: auto;
 }
 
 /* Search panel  */
