@@ -105,6 +105,9 @@ tab[selected]:-moz-window-inactive {
 .tabbrowser-tab:not([soundplaying]):not([muted]):not([activemedia-blocked]) .tab-close-button {
 	margin-left: auto !important;
 }
+.tab-icon-sound {
+	margin-right: 6px;
+}
 
 /* Force tab favicon to the center */
 .tab-throbber, .tab-throbber-fallback {
