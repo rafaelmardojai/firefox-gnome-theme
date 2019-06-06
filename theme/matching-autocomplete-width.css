@@ -29,7 +29,7 @@
 #urlbarView-results {	
   --item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
-	max-height: 80vh !important;
+	max-height: 30vh !important;
 	overflow-x: auto;
 }
 
