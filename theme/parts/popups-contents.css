@@ -1,0 +1,127 @@
+/* Popups contents syles */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Main menu's zoom controls colors */
+#appMenu-zoomReset-button {
+	background: var(--gnome-urlbar-bgimage) !important;
+	border: 1px solid var(--gnome-urlbar-border-color) !important;
+	border-radius: 5px !important;
+	box-shadow: var(--gnome-urlbar-box-shadow) !important;
+	color: var(--gnome-urlbar-color) !important;
+}
+
+/* Main menu remove items icons */
+panelview vbox.panel-subview-body > toolbarbutton image {
+	display: none;
+}
+panelview vbox.panel-subview-body > toolbarbutton label {
+	padding-inline-start: 0 !important;
+}
+#appMenu-zoom-controls > spacer,
+#appMenu-edit-controls > spacer {
+	width: 12px !important;
+}
+
+/* User sync account remove avatar */
+#fxa-menu-avatar {
+	display: none;
+}
+
+/* Add search engine button remove icon */
+#pageAction-panel-addSearchEngine .toolbarbutton-badge-stack {
+	display: none !important;
+}
+
+/* Bookmark add/edit */
+.editBookmarkPanelBottomButton {
+	border: 1px solid !important;
+	color: white !important;
+	margin: 6px 0 !important;
+	padding: 2px 16px !important;
+	width: 34px;
+	height: 34px;
+}
+#editBookmarkPanelRemoveButton {
+	background-image: var(--gnome-headerbar-button-destructive-action-bgimage);
+	border-radius: 3px 0 0 3px;
+	border-color: var(--gnome-headerbar-button-destructive-action-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-destructive-action-border-bottom-color) !important;
+	box-shadow: var(--gnome-headerbar-button-destructive-action-box-shadow);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.560784);
+}
+#editBookmarkPanelRemoveButton:hover {
+	background-image: var(--gnome-headerbar-button-destructive-action-hover-bgimage);	
+}
+#editBookmarkPanelDoneButton {
+	background-image: var(--gnome-headerbar-button-suggested-action-bgimage);
+	border-left: 0 !important;
+	border-radius: 0 3px 3px 0;
+	border-color: var(--gnome-headerbar-button-suggested-action-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-suggested-action-border-bottom-color) !important;	
+	box-shadow: var(--gnome-headerbar-button-suggested-action-box-shadow);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.543529);
+}
+#editBookmarkPanelDoneButton:hover {
+	background-image: var(--gnome-headerbar-button-suggested-action-hover-bgimage);	
+}
+
+/* Downloads popover */
+#downloadsPanel-mainView {
+	background: transparent !important;
+}
+
+#downloadsPanel-mainView .download-state {
+	padding: 8px !important;
+	border: 0 !important;
+	border-radius: 5px !important;
+	display: flex;
+	align-items: center;
+}
+#downloadsPanel-mainView .download-state:hover {
+	background-color: var(--gnome-popup-button-hover-bgcolor) !important;	
+}
+#downloadsPanel-mainView .download-state:last-child {
+    margin-bottom: 8px !important;
+}
+
+#downloadsPanel-mainView .downloadMainArea {
+	flex: 1;
+	display: flex;
+}
+#downloadsPanel-mainView .downloadMainArea:hover {
+	background: transparent !important;
+}
+
+#downloadsPanel-mainView .downloadTypeIcon {
+	margin: 0 !important;
+	margin-right: 6px !important;
+}
+
+#downloadsPanel-mainView .downloadContainer {
+	margin-inline-end: 0 !important;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#downloadsPanel-mainView .download-state .downloadButton {
+	-moz-appearance: none !important;
+	background-image: var(--gnome-headerbar-button-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
+	border: 1px solid var(--gnome-headerbar-button-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
+	border-radius: 100%;
+	min-width: 34px !important;
+	width: 34px !important;
+	height: 34px !important;
+	margin: auto;
+}
+
+#downloadsPanel-mainView .download-state .downloadButton .button-box {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#downloadsPanel-mainView .download-state toolbarseparator {
+	display: none;
+}

@@ -1,5 +1,6 @@
 /* Popup menus and context menus */
 
+@import "popups-contents.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Adjust popup position */
@@ -60,6 +61,15 @@ menupopup .popup-internal-box {
 	border-radius: 0 5px 5px 0;
 }
 
+/* Remove icons from the main context menu */
+#contentAreaContextMenu menuitem image,
+#contentAreaContextMenu menu image {
+	visibility: hidden;
+}
+#contentAreaContextMenu menugroup menuitem image {
+	visibility: visible;
+}
+
 /* Style popups */
 .panel-arrowcontent, .panel-header, .PanelUI-subView, .panel-subview-body, #widget-overflow-mainView {
 	background: var(--gnome-popup-bgcolor) !important;
@@ -80,7 +90,10 @@ menupopup .popup-internal-box {
 /* Style popups menu buttons */
 .subviewbutton, .toolbarbutton-1 {
 	border-radius: 3px !important;	
-	
+}
+
+.subviewbutton::after {
+	opacity: 0.7 !important;
 }
 .subviewbutton:hover, .toolbarbutton-1:hover {
 	background-color: var(--gnome-popup-button-hover-bgcolor) !important;
@@ -96,80 +109,30 @@ toolbarseparator, menuseparator {
 
 /* Style popups menu footer buttons */
 .subviewbutton.panel-subview-footer,
-.downloadsPanelFooter {
-	background-image: var(--gnome-headerbar-button-bgimage);
-	box-shadow: var(--gnome-headerbar-button-box-shadow);
-	border: 1px solid var(--gnome-headerbar-button-border-color);
-	border-bottom-color: var(--gnome-headerbar-button-border-accent-color);
-	border-radius: 3px;
-	margin: 6px 3px !important;
+#downloadsHistory,
+#overflowMenu-customize-button {
+	-moz-appearance: none !important;
+	background: var(--gnome-headerbar-button-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
+	border: 1px solid var(--gnome-headerbar-button-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
+	border-radius: 5px !important;
 	padding: 2px 16px !important;
-	width: 34px;
-	height: 34px;
+	height: 34px !important;
+	min-height: 34px !important;
 }
 
 .subviewbutton.panel-subview-footer:hover,
-.downloadsPanelFooter:hover {
-	background-image: var(--gnome-headerbar-button-hover-bgimage) !important;
+#downloadsHistory:hover,
+#overflowMenu-customize-button:hover {
+	outline: 0 !important;
+	background: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
 
-/* Burger menu's zoom controls colors */
-#appMenu-zoomReset-button {
-	background-color: var(--arrowpanel-background) !important;
-	border-color: var(--panel-separator-color) !important;
-}
-
-/* Remove icons from the burger menu */
-panelview vbox.panel-subview-body > toolbarbutton image {
-	display: none;
-}
-panelview vbox.panel-subview-body > toolbarbutton label {
-	padding-inline-start: 0 !important;
-}
-#appMenu-zoom-controls > spacer,
-#appMenu-edit-controls > spacer {
-	width: 12px !important;
-}
-
-/* Remove icons from the context menu */
-#contentAreaContextMenu menuitem image,
-#contentAreaContextMenu menu image {
-	visibility: hidden;
-}
-#contentAreaContextMenu menugroup menuitem image {
-	visibility: visible;
-}
-
-/* Edit bookmark panel */
-.editBookmarkPanelBottomButton {
-	color: white !important;
-	margin: 6px 0 !important;
-	padding: 2px 16px !important;
-	width: 34px;
-	height: 34px;
-}
-#editBookmarkPanelRemoveButton {
-	background-image: var(--gnome-headerbar-button-destructive-action-bgimage);
-	border-radius: 3px 0 0 3px;
-	border-color: var(--gnome-headerbar-button-destructive-action-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-destructive-action-border-bottom-color) !important;
-	box-shadow: var(--gnome-headerbar-button-destructive-action-box-shadow);
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.560784);
-}
-#editBookmarkPanelRemoveButton:hover {
-	background-image: var(--gnome-headerbar-button-destructive-action-hover-bgimage);	
-}
-#editBookmarkPanelDoneButton {
-	background-image: var(--gnome-headerbar-button-suggested-action-bgimage);
-	border-left: 0 !important;
-	border-radius: 0 3px 3px 0;
-	border-color: var(--gnome-headerbar-button-suggested-action-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-suggested-action-border-bottom-color) !important;	
-	box-shadow: var(--gnome-headerbar-button-suggested-action-box-shadow);
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.543529);
-}
-#editBookmarkPanelDoneButton:hover {
-	background-image: var(--gnome-headerbar-button-suggested-action-hover-bgimage);	
+.panel-footer {
+	background-color: transparent !important;
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* Customization overflow menu position */
@@ -193,9 +156,4 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 }
 #confirmation-hint-message {
 	color: white !important;
-}
-
-/* User sync account menu */
-#fxa-menu-avatar {
-	display: none;
 }
