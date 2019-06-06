@@ -128,6 +128,15 @@ toolbarseparator, menuseparator {
 	outline: 0 !important;
 	background: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
+.subviewbutton.panel-subview-footer:active,
+#downloadsHistory:active,
+#overflowMenu-customize-button:active {
+	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow) !important;
+	border-color: var(--gnome-headerbar-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-active-border-color) !important;
+	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
+}
 
 .panel-footer {
 	background-color: transparent !important;
