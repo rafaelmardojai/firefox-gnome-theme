@@ -3,9 +3,9 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 .findbar-container {
-  padding: 8px !important;
+	padding: 8px !important;
 	display: flex;
-	justify-content: center;
+  justify-content: center;
 	position: relative;
 }
 
@@ -29,7 +29,7 @@
 	border-color: var(--gnome-focused-urlbar-border-color) !important;
 	outline: none;
 	outline-offset: -2px;
-	-moz-outline-radius: 3px;
+  -moz-outline-radius: 3px;
 }
 
 .findbar-container toolbarbutton.findbar-find-previous,
