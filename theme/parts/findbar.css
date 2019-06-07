@@ -2,18 +2,15 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-findbar {
-  background: var(--gnome-toolbar-bgcolor) !important;
-	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
-}
-
-findbar:-moz-window-inactive {
-	background: var(--gnome-inactive-toolbar-bgcolor) !important;
-  border-top: 1px solid var(--gnome-inactive-toolbar-border-color) !important;
-}
-
 .findbar-container {
   padding: 8px !important;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.findbar-find-status, .found-matches {
+	display: none; /* Hide findbar labels */
 }
 
 .findbar-textbox {
@@ -24,6 +21,7 @@ findbar:-moz-window-inactive {
 	color: var(--gnome-urlbar-color) !important;
 	height: 34px !important;
   box-sizing: border-box;
+	margin: 0px !important;
 }
 .findbar-textbox:focus {
   border-width: 2px !important;
@@ -41,7 +39,7 @@ findbar:-moz-window-inactive {
 
 .findbar-container toolbarbutton.findbar-find-previous .toolbarbutton-icon,
 .findbar-container toolbarbutton.findbar-find-next .toolbarbutton-icon {
-  margin: 3px !important;
+  margin: 3.5px !important;
 }
 
 .findbar-container toolbarbutton.findbar-find-previous {
