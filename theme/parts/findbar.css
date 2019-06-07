@@ -2,19 +2,35 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+findbar {
+    position: relative;	
+}
+
 .findbar-container {
 	padding: 8px !important;
 	display: flex;
 	justify-content: center;
 	position: relative;
+	flex-direction: row;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] {
+	position: absolute;
+	right: calc(50vw - 36px);
+	transform: translate(50%, 0);
 }
 
 .findbar-find-status, .found-matches {
-	display: none; /* Hide findbar labels */
+	order: -1;
+	padding: 6px 0;
+}
+.findbar-find-status {
+	padding-left: 8px;
+	flex: 1;
 }
 
 .findbar-textbox {
-  background-image: var(--gnome-urlbar-bgimage) !important;
+	background-image: var(--gnome-urlbar-bgimage) !important;
 	border: 1px solid var(--gnome-urlbar-border-color) !important;
 	border-radius: 5px 0 0 5px !important;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
@@ -73,5 +89,9 @@
 }
 .findbar-container toolbarbutton:focus {
 	outline: 0 !important;
+}
+
+.findbar-closebutton {
+	position: fixed !important;
 }
 
