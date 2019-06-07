@@ -5,7 +5,7 @@
 .findbar-container {
 	padding: 8px !important;
 	display: flex;
-  justify-content: center;
+	justify-content: center;
 	position: relative;
 }
 
@@ -20,38 +20,38 @@
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
 	height: 34px !important;
-  box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0px !important;
 }
 .findbar-textbox:focus {
-  border-width: 2px !important;
+	border-width: 2px !important;
 	border-style: solid !important;
 	border-color: var(--gnome-focused-urlbar-border-color) !important;
 	outline: none;
 	outline-offset: -2px;
-  -moz-outline-radius: 3px;
+	-moz-outline-radius: 3px;
 }
 
 .findbar-container toolbarbutton.findbar-find-previous,
 .findbar-container toolbarbutton.findbar-find-next {
-  width: 34px !important;
+	width: 34px !important;
 }
 
 .findbar-container toolbarbutton.findbar-find-previous .toolbarbutton-icon,
 .findbar-container toolbarbutton.findbar-find-next .toolbarbutton-icon {
-  margin: 3.5px !important;
+	margin: 3.5px !important;
 }
 
 .findbar-container toolbarbutton.findbar-find-previous {
-  border-width: 1px 0 1px 0 !important;
-  border-radius: 0px !important;
+	border-width: 1px 0 1px 0 !important;
+	border-radius: 0px !important;
 }
 .findbar-container toolbarbutton.findbar-find-next {
-  border-radius: 0 5px 5px 0 !important;
+	border-radius: 0 5px 5px 0 !important;
 }
 
 .findbar-container toolbarbutton {
-  -moz-appearance: none !important;
+	-moz-appearance: none !important;
 	background: var(--gnome-headerbar-button-bgimage) !important;
 	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
 	border: 1px solid var(--gnome-headerbar-button-border-color) !important;
@@ -74,3 +74,4 @@
 .findbar-container toolbarbutton:focus {
 	outline: 0 !important;
 }
+
