@@ -75,10 +75,14 @@ menupopup .popup-internal-box {
 }
 
 /* Style popups */
-.panel-arrowcontent, .panel-header, .PanelUI-subView, .panel-subview-body, #widget-overflow-mainView {
-	background: var(--gnome-popup-bgcolor) !important;
+.panel-arrowcontent .panel-arrowcontent, 
+.panel-header, .PanelUI-subView,
+.panel-subview-body, #widget-overflow-mainView,
+panelview {
+	background: transparent !important;
 }
 .panel-arrowcontent {
+	background: var(--gnome-popup-bgcolor) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popup-border-color) !important;
 	border-radius: 9px;
@@ -86,13 +90,10 @@ menupopup .popup-internal-box {
 	padding: 8px 12px !important;
 	color: var(--gnome-toolbar-color) !important;
 }
+
 .panel-arrow {    
 	fill: var(--gnome-popup-bgcolor) !important;
 	stroke: var(--gnome-popup-border-color) !important;
-}
-
-panelview {
-	background: transparent !important;
 }
 
 .panel-footer {
@@ -104,6 +105,7 @@ panelview {
 /* Style popups menu buttons */
 .subviewbutton, .toolbarbutton-1 {
 	border-radius: 3px !important;	
+	color: var(--gnome-toolbar-color) !important;
 }
 
 .subviewbutton::after {
