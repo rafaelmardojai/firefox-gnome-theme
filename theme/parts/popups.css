@@ -13,7 +13,10 @@ menupopup {
 	-moz-appearance: none !important;
 	background: none !important;
 	border: 0 !important;	
-	box-shadow: none !important;
+	padding: 2px;
+}
+menupopup menupopup {
+	margin: -7px 0 0 -4px;
 }
 menupopup .popup-internal-box {
 	background: var(--gnome-menu-bgcolor);
@@ -21,6 +24,7 @@ menupopup .popup-internal-box {
 	border-radius: 5px;
 	padding: 4px 0;
 	color: var(--gnome-toolbar-color) !important;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Style main context menu buttons */
@@ -87,6 +91,16 @@ menupopup .popup-internal-box {
 	stroke: var(--gnome-popup-border-color) !important;
 }
 
+panelview {
+	background: transparent !important;
+}
+
+.panel-footer {
+	background-color: transparent !important;
+	display: flex;
+	justify-content: flex-end;
+}
+
 /* Style popups menu buttons */
 .subviewbutton, .toolbarbutton-1 {
 	border-radius: 3px !important;	
@@ -109,6 +123,7 @@ toolbarseparator, menuseparator {
 
 /* Style popups menu footer buttons */
 .subviewbutton.panel-subview-footer,
+.panel-footer button,
 #downloadsHistory,
 #overflowMenu-customize-button {
 	-moz-appearance: none !important;
@@ -122,13 +137,31 @@ toolbarseparator, menuseparator {
 	min-height: 34px !important;
 }
 
+.subviewbutton.panel-subview-footer:not(:only-of-type),
+.panel-footer button:not(:only-of-type) {
+	border-right-width: 0 !important;
+	border-radius: 0 !important;
+}
+.subviewbutton.panel-subview-footer:not(:only-of-type):first-of-type,
+.panel-footer button:not(:only-of-type):first-of-type {
+	border-radius: 5px 0 0 5px !important;
+}
+.subviewbutton.panel-subview-footer:not(:only-of-type):last-of-type,
+.panel-footer button:not(:only-of-type):last-of-type {
+	border-right-width: 1px !important;
+	border-radius: 0 5px 5px 0 !important;
+}
+
 .subviewbutton.panel-subview-footer:hover,
+.panel-footer button:hover,
 #downloadsHistory:hover,
 #overflowMenu-customize-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
+
 .subviewbutton.panel-subview-footer:active,
+.panel-footer button:active,
 #downloadsHistory:active,
 #overflowMenu-customize-button:active {
 	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
@@ -138,10 +171,36 @@ toolbarseparator, menuseparator {
 	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
 }
 
-.panel-footer {
-	background-color: transparent !important;
-	display: flex;
-	justify-content: flex-end;
+/* Style popups menu footer buttons with suggested action */
+button.popup-notification-primary-button,
+#editBookmarkPanelDoneButton {
+	color: white !important;
+	background: var(--gnome-headerbar-button-suggested-action-bgimage) !important;
+	border-color: var(--gnome-headerbar-button-suggested-action-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-suggested-action-border-bottom-color) !important;	
+	box-shadow: var(--gnome-headerbar-button-suggested-action-box-shadow) !important;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.543529);
+}
+button.popup-notification-primary-button.popup-notification-button:hover,
+#editBookmarkPanelDoneButton:hover {
+	background: var(--gnome-headerbar-button-suggested-action-hover-bgimage) !important;
+}
+button.popup-notification-primary-button:active {
+	
+}
+
+/* Style popups menu footer buttons with destructive action */
+#editBookmarkPanelRemoveButton {
+	color: white !important;
+	background: var(--gnome-headerbar-button-destructive-action-bgimage) !important;
+	border-radius: 3px 0 0 3px !important;
+	border-color: var(--gnome-headerbar-button-destructive-action-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-destructive-action-border-bottom-color) !important;
+	box-shadow: var(--gnome-headerbar-button-destructive-action-box-shadow) !important;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.560784);
+}
+#editBookmarkPanelRemoveButton:hover {
+	background: var(--gnome-headerbar-button-destructive-action-hover-bgimage) !important;	
 }
 
 /* Customization overflow menu position */
