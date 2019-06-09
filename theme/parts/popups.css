@@ -27,6 +27,17 @@ menupopup .popup-internal-box {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
 
+menuitem[type=checkbox] {
+	-moz-appearance: menuitem !important;
+}
+
+menuitem[type=checkbox] .menu-iconic-left {
+	-moz-appearance: checkbox;
+}
+menuitem .menu-iconic-left {
+	margin-right: 6px !important;
+}
+
 /* Style main context menu buttons */
 #context-navigation {
 	padding: 4px 8px 8px;
