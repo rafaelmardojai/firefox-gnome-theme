@@ -15,9 +15,11 @@ menupopup {
 	border: 0 !important;	
 	padding: 2px;
 }
+
 menupopup menupopup {
 	margin: -7px 0 0 -4px;
 }
+
 menupopup .popup-internal-box {
 	background: var(--gnome-menu-bgcolor);
 	border: 1px solid var(--gnome-menu-border-color);
@@ -27,13 +29,6 @@ menupopup .popup-internal-box {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
 
-menuitem[type=checkbox] {
-	-moz-appearance: menuitem !important;
-}
-
-menuitem[type=checkbox] .menu-iconic-left {
-	-moz-appearance: checkbox;
-}
 menuitem .menu-iconic-left {
 	margin-right: 6px !important;
 }
