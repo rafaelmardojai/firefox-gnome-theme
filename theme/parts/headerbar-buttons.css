@@ -186,3 +186,13 @@
 	padding: 0 !important;
 	width: 26px !important;
 }
+
+/* Fix library animation */
+#library-animatable-box  {
+    --library-button-height: 46px !important;
+    --library-icon-x: 1716px !important;
+	/*--library-icon-x: 1715.9833984375px !important;*/
+}
+#library-button[animate] > .toolbarbutton-icon {
+	fill: transparent !important;
+}
