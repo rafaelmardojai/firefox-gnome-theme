@@ -33,8 +33,11 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	display: none !important;
 }
 
-/* Bookmark add/edit */
-
+/* All tabs popover */
+.all-tabs-item[selected] {
+	border-left: 3px solid var(--gnome-tabbar-tab-active-border-bottom-color);
+	box-shadow: none !important;
+}
 
 /*  */
 #identity-popup {
