@@ -1,6 +1,6 @@
-<center> 
-# Firefox GNOME Theme
-</center>
+<h1 align="center">
+ Firefox GNOME theme
+</h1>
 
 A GNOME theme for Firefox 60+.
 
