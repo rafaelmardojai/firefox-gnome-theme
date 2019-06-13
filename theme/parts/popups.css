@@ -109,9 +109,12 @@ panelview {
 }
 
 /* Style popups menu buttons */
-.subviewbutton:not([disabled]), .toolbarbutton-1:not([disabled]) {
+.subviewbutton, .toolbarbutton-1 {
 	border-radius: 3px !important;	
 	color: var(--gnome-toolbar-color) !important;
+}
+.subviewbutton[disabled], .toolbarbutton-1[disabled] {
+	opacity: 0.5 !important;
 }
 
 .subviewbutton::after {
