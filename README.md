@@ -1,10 +1,11 @@
 <h1 align="center">
+	<img src="icon.svg" alt="Firefox GNOME theme" width="100" height="100"/><br>
  Firefox GNOME theme
 </h1>
 
-A GNOME theme for Firefox 60+.
+<p align="center">A GNOME theme for Firefox 60+</p>
 
-*This theme follows lastest GNOME default gtk theme adwaita*
+<p align="center"><em>(This theme follows lastest GNOME default gtk theme adwaita)</em></p>
 
 ![Screenshot of the theme](screenshot.png)
 
