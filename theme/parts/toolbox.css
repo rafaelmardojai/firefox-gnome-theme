@@ -35,7 +35,8 @@
 	margin-bottom: 0 !important;
 }
 #PersonalToolbar {
-	height: 38px;
+	padding-top: 2px !important;
+	height: 32px;
 }
 
 /* Overrides: Remove border below the menu bar / above the header bar */
