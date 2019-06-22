@@ -76,6 +76,10 @@ hbox[anonid="findbar-textbox-wrapper"] {
 	height: 34px !important;
 }
 
+.findbar-container toolbarbutton.findbar-button {
+	padding: 0 15px !important;
+}
+
 .findbar-container toolbarbutton:hover, .findbar-closebutton .toolbarbutton-icon:hover {
 	background: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
