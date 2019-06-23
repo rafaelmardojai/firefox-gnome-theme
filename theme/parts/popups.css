@@ -132,11 +132,12 @@ toolbarseparator, menuseparator {
 	border-bottom: 1px solid var(--gnome-popup-separator-color) !important;	
 }
 
-/* Style popups menu footer buttons */
+/* Style popovers buttons */
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsHistory,
-#overflowMenu-customize-button {
+#overflowMenu-customize-button,
+#appMenu-popup .panel-banner-item {
 	-moz-appearance: none !important;
 	background: var(--gnome-headerbar-button-bgimage) !important;
 	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
@@ -166,7 +167,8 @@ toolbarseparator, menuseparator {
 .subviewbutton.panel-subview-footer:hover,
 .panel-footer button:hover,
 #downloadsHistory:hover,
-#overflowMenu-customize-button:hover {
+#overflowMenu-customize-button:hover,
+#appMenu-popup .panel-banner-item:hover {
 	outline: 0 !important;
 	background: var(--gnome-headerbar-button-hover-bgimage) !important;
 }
@@ -174,7 +176,8 @@ toolbarseparator, menuseparator {
 .subviewbutton.panel-subview-footer:active,
 .panel-footer button:active,
 #downloadsHistory:active,
-#overflowMenu-customize-button:active {
+#overflowMenu-customize-button:active,
+#appMenu-popup .panel-banner-item:active {
 	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
 	box-shadow: var(--gnome-headerbar-button-active-box-shadow) !important;
 	border-color: var(--gnome-headerbar-button-active-border-color) !important;
@@ -182,7 +185,7 @@ toolbarseparator, menuseparator {
 	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
 }
 
-/* Style popups menu footer buttons with suggested action */
+/* Style popovers buttons with suggested action */
 button.popup-notification-primary-button,
 #editBookmarkPanelDoneButton {
 	color: white !important;
