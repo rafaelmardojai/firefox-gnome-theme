@@ -2,12 +2,59 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Main menu's zoom controls colors */
+/* Main menu combined buttons */
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton {
+	-moz-appearance: none !important;
+	background: var(--gnome-headerbar-button-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
+	border-width: 1px 1px 1px 0 !important;	
+	border-style: solid !important;
+	border-color: var(--gnome-headerbar-button-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
+	border-radius: 0 !important;
+	height: 34px !important;
+	min-width: 34px !important;
+	margin: 0 !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:first-of-type,
+#appMenu-popup #appMenu-fullscreen-button {
+	border-top-left-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+	border-left-width: 1px !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:last-of-type,
+#appMenu-popup #appMenu-zoomEnlarge-button {
+	border-top-right-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] {
+	background: var(--gnome-headerbar-button-disabled-bgcolor) !important;
+	border-color: var(--gnome-headerbar-button-disabled-border-color) !important;
+	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow) !important;
+	opacity: 1 !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled]:hover {
+	background: var(--gnome-headerbar-button-disabled-bgcolor) !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image {
+	opacity: .4 !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:hover {
+	background: var(--gnome-headerbar-button-hover-bgimage) !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:active {
+	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
+	box-shadow: var(--gnome-headerbar-button-active-box-shadow) !important;
+	border-color: var(--gnome-headerbar-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-headerbar-button-active-border-color) !important;
+	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarseparator {
+	border: 0 !important;
+}
+
+/*  zoom controls colors */
 #appMenu-zoomReset-button {
-	background: var(--gnome-urlbar-bgimage) !important;
-	border: 1px solid var(--gnome-urlbar-border-color) !important;
-	border-radius: 5px !important;
-	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
 }
 
@@ -21,6 +68,12 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 #appMenu-zoom-controls > spacer,
 #appMenu-edit-controls > spacer {
 	width: 12px !important;
+}
+
+/* Main menu */
+#appMenu-popup .panel-banner-item:after {
+	-moz-box-ordinal-group: 0;
+	margin: 0 8px 0 0 !important;
 }
 
 /* User sync account remove avatar */
