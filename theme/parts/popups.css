@@ -45,8 +45,11 @@ menuitem .menu-iconic-left {
 	border-style: solid;
 	border-color: var(--gnome-headerbar-button-border-color);
 	border-bottom-color: var(--gnome-headerbar-button-border-accent-color);
-	padding: 0 2px !important;
 	height: 34px;
+	text-align: center !important;
+}
+#context-navigation > menuitem > .menu-iconic-left {
+	margin: auto !important;
 }
 #context-navigation menuitem {
 	--toolbarbutton-active-background: transparent !important;
