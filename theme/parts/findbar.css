@@ -18,6 +18,7 @@ hbox[anonid="findbar-textbox-wrapper"] {
 	position: absolute;
 	right: calc(50vw - 36px);
 	transform: translate(50%, 0);
+	display: flex !important;
 }
 
 .findbar-find-status, .found-matches {
@@ -77,7 +78,7 @@ hbox[anonid="findbar-textbox-wrapper"] {
 }
 
 .findbar-container toolbarbutton.findbar-button {
-	padding: 0 15px !important;
+	padding: 0 16px !important;
 }
 
 .findbar-container toolbarbutton:hover, .findbar-closebutton .toolbarbutton-icon:hover {
