@@ -27,13 +27,6 @@
 	list-style-image: url("moz-icon://stock/process-stop-symbolic?size=dialog") !important;
 }*/
 
-/* New tab button */
-/* Default looks nicer
-#new-tab-button .toolbarbutton-icon {
-	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/tab-new-symbolic?size=dialog") !important;
-}*/
-
 /* Zoom out button */
 #zoom-out-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
@@ -53,13 +46,6 @@
 	list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=dialog") !important;
 }
 
-/* Navbar overflow button */
-/* Default is ok
-#nav-bar-overflow-button .toolbarbutton-icon {
-	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/view-more-symbolic?size=dialog") !important;
-} */
-
 /* Downloads button */
 /* Glitch - it swaps to the default one anyway
 #downloads-button {
@@ -74,3 +60,12 @@
 	list-style-image: url("moz-icon://stock/open-menu-symbolic?size=dialog") !important;
 } */
 
+/* Popovers subview menu arrow */
+.PanelUI-subView .subviewbutton-nav::after {
+    content: "" !important;
+	filter: var(--gnome-icons-hack-filter);
+	background: url("moz-icon://stock/pan-start-symbolic?size=dialog");
+	background-size: contain;
+	height: 16px;
+	width: 16px;
+}

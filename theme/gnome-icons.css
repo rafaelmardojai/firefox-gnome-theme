@@ -87,3 +87,29 @@
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/view-more-symbolic?size=dialog") !important;
 }
+
+/* Main menu buttons icons */
+#appMenu-zoomReduce-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=dialog") !important;
+}
+#appMenu-zoomEnlarge-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=dialog") !important;
+}
+#appMenu-fullscreen-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/view-fullscreen-symbolic?size=dialog") !important;
+}
+#appMenu-cut-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/edit-cut-symbolic?size=dialog") !important;
+}
+#appMenu-copy-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/edit-copy-symbolic?size=dialog") !important;
+}
+#appMenu-paste-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/edit-paste-symbolic?size=dialog") !important;
+}
