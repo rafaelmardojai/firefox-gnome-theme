@@ -8,87 +8,87 @@
 
 :root:-moz-lwtheme-brighttext {
 	/* Browser area before a page starts loading */
-	--gnome-browser-before-load-bgcolor: #353535;
+	--gnome-browser-before-load-background: #353535;
 
 	/* Toolbars */
-	--gnome-toolbar-bgcolor: #282828;	
+	--gnome-toolbar-background: #282828;	
 	--gnome-toolbar-color: #ffffff;
 	--gnome-toolbar-border-color: #1b1b1b;
-	--gnome-inactive-toolbar-bgcolor: #353535;	
+	--gnome-inactive-toolbar-background: #353535;	
 	--gnome-inactive-toolbar-border-color: #202020;
 	
 	/* Popups */
-	--gnome-menu-bgcolor: #2f2f2f;
+	--gnome-menu-background: #2f2f2f;
 	--gnome-menu-border-color: #1b1b1b;
-	--gnome-popup-bgcolor: #353535;
-	--gnome-popup-border-color: #1b1b1b;
-	--gnome-popup-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-	--gnome-popup-button-hover-bgcolor: #424242;
-	--gnome-popup-separator-color: rgba(0, 0, 0, 0.1);
+	--gnome-popover-background: #353535;
+	--gnome-popover-border-color: #1b1b1b;
+	--gnome-popover-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	--gnome-popover-button-hover-background: #424242;
+	--gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
-	--gnome-headerbar-bgimage: linear-gradient(to top, #262626, #2b2b2b);
+	--gnome-headerbar-background: linear-gradient(to top, #262626, #2b2b2b);
 	--gnome-headerbar-border-color: #070707;
 	--gnome-headerbar-box-shadow: inset 0 1px rgba(238, 238, 236, 0.07);
-	--gnome-inactive-headerbar-bgimage: linear-gradient(#353535, #353535);
+	--gnome-inactive-headerbar-background: linear-gradient(#353535, #353535);
 	--gnome-inactive-headerbar-border-color: #202020;
 	--gnome-inactive-headerbar-box-shadow: inset 0 1px rgba(238, 238, 236, 0.07);
-	
-	--gnome-headerbar-button-bgimage: linear-gradient(to top, #323232 2px, #353535);
-	--gnome-headerbar-button-border-color: #1b1b1b;
-	--gnome-headerbar-button-border-accent-color: #070707;	
-	--gnome-headerbar-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);	
-	--gnome-headerbar-button-hover-bgimage: linear-gradient(to top, #323232, #373737 1px);	
-	--gnome-headerbar-button-active-bgimage: linear-gradient(#1e1e1e, #1e1e1e);
-	--gnome-headerbar-button-active-border-color: #1b1b1b;
-	--gnome-headerbar-button-active-border-accent-color: #000000;
-	--gnome-headerbar-button-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
-	--gnome-headerbar-button-disabled-bgcolor: #323232;
-	--gnome-headerbar-button-disabled-border-color: #202020;
-	--gnome-headerbar-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-	--gnome-inactive-headerbar-button-bgimage: linear-gradient(#353535, #353535);
-	--gnome-inactive-headerbar-button-border-color: #202020;
-	--gnome-inactive-headerbar-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-	--gnome-inactive-headerbar-button-disabled-bgcolor: var(--gnome-headerbar-button-disabled-bgcolor);
-	--gnome-inactive-headerbar-button-disabled-border: var(--gnome-inactive-headerbar-button-border);
-	--gnome-inactive-headerbar-button-disabled-box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 
+	/* Buttons */	
+	--gnome-button-background: linear-gradient(to top, #323232 2px, #353535);
+	--gnome-button-border-color: #1b1b1b;
+	--gnome-button-border-accent-color: #070707;	
+	--gnome-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);	
+	--gnome-button-hover-background: linear-gradient(to top, #323232, #373737 1px);	
+	--gnome-button-active-background: linear-gradient(#1e1e1e, #1e1e1e);
+	--gnome-button-active-border-color: #1b1b1b;
+	--gnome-button-active-border-accent-color: #000000;
+	--gnome-button-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
+	--gnome-button-disabled-background: #323232;
+	--gnome-button-disabled-border-color: #202020;
+	--gnome-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+	--gnome-inactive-button-background: linear-gradient(#353535, #353535);
+	--gnome-inactive-button-border-color: #202020;
+	--gnome-inactive-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+	--gnome-inactive-button-disabled-background: var(--gnome-button-disabled-background);
+	--gnome-inactive-button-disabled-border: var(--gnome-inactive-button-border);
+	--gnome-inactive-button-disabled-box-shadow: var(--gnome-button-disabled-box-shadow);
 	/* TODO: UPDATE TO 3.32 */	
-	--gnome-headerbar-button-suggested-action-bgimage: linear-gradient(to bottom, #4a90d9, #3986d5 60%, #2a76c6);
-	--gnome-headerbar-button-suggested-action-border-color: #215d9c;
-	--gnome-headerbar-button-suggested-action-border-bottom-color: #184472;
-	--gnome-headerbar-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-	--gnome-headerbar-button-suggested-action-hover-bgimage: linear-gradient(to bottom, #63a0de, #4a90d9 60%, #3986d5);
-	--gnome-headerbar-button-destructive-action-bgimage: linear-gradient(to bottom, #ef2929, #ee1616 60%, #d51010);
-	--gnome-headerbar-button-destructive-action-border-color: #a60c0c;
-	--gnome-headerbar-button-destructive-action-border-bottom-color: #760909;
-	--gnome-headerbar-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-	--gnome-headerbar-button-destructive-action-hover-bgimage: linear-gradient(to bottom, #f14545, #ef2929 60%, #ee1616);
+	--gnome-button-suggested-action-background: linear-gradient(to bottom, #4a90d9, #3986d5 60%, #2a76c6);
+	--gnome-button-suggested-action-border-color: #215d9c;
+	--gnome-button-suggested-action-border-bottom-color: #184472;
+	--gnome-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+	--gnome-button-suggested-action-hover-background: linear-gradient(to bottom, #63a0de, #4a90d9 60%, #3986d5);
+	--gnome-button-destructive-action-background: linear-gradient(to bottom, #ef2929, #ee1616 60%, #d51010);
+	--gnome-button-destructive-action-border-color: #a60c0c;
+	--gnome-button-destructive-action-border-bottom-color: #760909;
+	--gnome-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+	--gnome-button-destructive-action-hover-background: linear-gradient(to bottom, #f14545, #ef2929 60%, #ee1616);
 
 	/* URL bar */
-	--gnome-urlbar-bgimage: linear-gradient(#2d2d2d, #2d2d2d);
+	--gnome-urlbar-background: linear-gradient(#2d2d2d, #2d2d2d);
 	--gnome-urlbar-border-color: #1b1b1b;
 	--gnome-urlbar-box-shadow: inset 0 0 0 1px rgba(21, 83, 158, 0);
 	--gnome-urlbar-color: #ffffff;
-	--gnome-inactive-urlbar-bgimage: linear-gradient(#303030, #303030);
+	--gnome-inactive-urlbar-background: linear-gradient(#303030, #303030);
 	--gnome-inactive-urlbar-border-color: #202020;
 	--gnome-inactive-urlbar-box-shadow: none;
 	--gnome-inactive-urlbar-color: #d6d6d6;
 	--gnome-focused-urlbar-border-color: #15539e;
 	/* for private-urlbar.css only */
-	--gnome-private-urlbar-bgimage: linear-gradient(#25003e, #25003e);
+	--gnome-private-urlbar-background: linear-gradient(#25003e, #25003e);
 
 	/* Tabs */
 	--gnome-tabbar-tab-color: rgb(141, 144, 145);
-	--gnome-tabbar-tab-hover-bgcolor: #2b2b2b;
+	--gnome-tabbar-tab-hover-background: #2b2b2b;
 	--gnome-tabbar-tab-hover-border-bottom-color: #1b1b1b;
 	--gnome-tabbar-tab-hover-color: rgb(200, 200, 200);
-	--gnome-tabbar-tab-active-bgcolor: #2e2e2e;
+	--gnome-tabbar-tab-active-background: #2e2e2e;
 	--gnome-tabbar-tab-active-border-bottom-color: #15539e;
 	--gnome-tabbar-tab-active-color: #ffffff;
-	--gnome-tabbar-tab-active-hover-bgcolor: #313131;
+	--gnome-tabbar-tab-active-hover-background: #313131;
 	--gnome-inactive-tabbar-tab-color: rgb(141, 144, 145);
-	--gnome-inactive-tabbar-tab-active-bgcolor: #353535;
+	--gnome-inactive-tabbar-tab-active-background: #353535;
 	--gnome-inactive-tabbar-tab-active-border-bottom-color: #15539e;
 	--gnome-inactive-tabbar-tab-active-color: rgb(141, 144, 145);  
 	--gnome-tabbar-tab-close-icon: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjE2IgogICB2ZXJzaW9uPSIxLjEiCiAgIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXciCiAgIGlkPSJzdmc3Mzg0IgogICBoZWlnaHQ9IjE2IgogICBzb2RpcG9kaTpkb2NuYW1lPSJ3aW5kb3ctY2xvc2Utc3ltYm9saWMuc3ZnIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjQgNWRhNjg5YzMxMywgMjAxOS0wMS0xNCI+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSI4OTgiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNDgwIgogICAgIGlkPSJuYW1lZHZpZXcxNyIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iMTQuNzUiCiAgICAgaW5rc2NhcGU6Y3g9IjgiCiAgICAgaW5rc2NhcGU6Y3k9IjgiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjI3IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjAiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ic3ZnNzM4NCIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE5MCI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+R25vbWUgU3ltYm9saWMgSWNvbnM8L2RjOnRpdGxlPgogICAgICAgIDxjYzpsaWNlbnNlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1zYS80LjAvIiAvPgogICAgICA8L2NjOldvcms+CiAgICAgIDxjYzpMaWNlbnNlCiAgICAgICAgIHJkZjphYm91dD0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnktc2EvNC4wLyI+CiAgICAgICAgPGNjOnBlcm1pdHMKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zI1JlcHJvZHVjdGlvbiIgLz4KICAgICAgICA8Y2M6cGVybWl0cwogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjRGlzdHJpYnV0aW9uIiAvPgogICAgICAgIDxjYzpyZXF1aXJlcwogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjTm90aWNlIiAvPgogICAgICAgIDxjYzpyZXF1aXJlcwogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjQXR0cmlidXRpb24iIC8+CiAgICAgICAgPGNjOnBlcm1pdHMKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zI0Rlcml2YXRpdmVXb3JrcyIgLz4KICAgICAgICA8Y2M6cmVxdWlyZXMKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zI1NoYXJlQWxpa2UiIC8+CiAgICAgIDwvY2M6TGljZW5zZT4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTg0NzMiPkdub21lIFN5bWJvbGljIEljb25zPC90aXRsZT4KICA8ZGVmcwogICAgIGlkPSJkZWZzNzM4NiIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyMSIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNyIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNiIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNSIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyOSIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyMiIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyOCIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyMyIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNCIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTk1MikiCiAgICAgaWQ9ImxheWVyMTAiCiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZiI+CiAgICA8cGF0aAogICAgICAgZD0ibSAxNi4wMDU4NTMsOTU2IGggMSBjIDAuMDEwMzcsLTEuMmUtNCAwLjAyMDc5LC00LjZlLTQgMC4wMzEyNSwwIDAuMjU0OTUxLDAuMDExMiAwLjUwOTg3LDAuMTI4NTggMC42ODc1LDAuMzEyNSBsIDIuMjgxMjUsMi4yODEyNSAyLjMxMjUsLTIuMjgxMjUgYyAwLjI2NTYyNSwtMC4yMzA1IDAuNDQ2NjcyLC0wLjMwNTUgMC42ODc1LC0wLjMxMjUgaCAxIHYgMSBjIDAsMC4yODY0NyAtMC4wMzQzNCwwLjU1MDY1IC0wLjI1LDAuNzUgbCAtMi4yODEyNSwyLjI4MTI1IDIuMjUsMi4yNSBjIDAuMTg4MTg4LDAuMTg4MTcgMC4yODEyNDIsMC40NTM0NSAwLjI4MTI1LDAuNzE4NzUgdiAxIGggLTEgYyAtMC4yNjUzMDEsLTEwZS02IC0wLjUzMDU4NiwtMC4wOTMxIC0wLjcxODc1LC0wLjI4MTI1IGwgLTIuMjgxMjUsLTIuMjgxMjUgLTIuMjgxMjUsMi4yODEyNSBDIDE3LjUzNjQzOSw5NjMuOTA2OTQgMTcuMjcxMTQzLDk2NCAxNy4wMDU4NTMsOTY0IGggLTEgdiAtMSBjIC0zZS02LC0wLjI2NTI5IDAuMDkzMDYsLTAuNTMwNTggMC4yODEyNSwtMC43MTg3NSBsIDIuMjgxMjUsLTIuMjUgLTIuMjgxMjUsLTIuMjgxMjUgYyAtMC4yMTA3NDIsLTAuMTk0NjMgLTAuMzAzMTYsLTAuNDY5MjUgLTAuMjgxMjUsLTAuNzUgeiIKICAgICAgIGlkPSJwYXRoMTA4MzktOSIKICAgICAgIHN0eWxlPSJjb2xvcjojYmViZWJlO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOm1lZGl1bTtsaW5lLWhlaWdodDpub3JtYWw7Zm9udC1mYW1pbHk6J0FuZGFsZSBNb25vJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidBbmRhbGUgTW9ubyc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6bm9ybWFsO3dvcmQtc3BhY2luZzpub3JtYWw7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjEuNzgxMjQ5ODg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6bmV3IiAvPgogIDwvZz4KPC9zdmc+Cg==");

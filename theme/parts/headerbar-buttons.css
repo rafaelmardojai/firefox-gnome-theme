@@ -39,8 +39,8 @@
 
 /* Header bar buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
-	border: 1px solid var(--gnome-headerbar-button-border-color);
-	border-bottom-color: var(--gnome-headerbar-button-border-accent-color);
+	border: 1px solid var(--gnome-button-border-color);
+	border-bottom-color: var(--gnome-button-border-accent-color);
 	border-radius: 5px !important;
 	margin: 6px 3px !important;
 	padding: 0 2px !important;
@@ -50,7 +50,7 @@
 }
 /* Inactive window */
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
-	border: 1px solid var(--gnome-inactive-headerbar-button-border-color);
+	border: 1px solid var(--gnome-inactive-button-border-color);
 }
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) image,
 /* Glitch: Downloads button's icon */
@@ -62,8 +62,8 @@
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]),
 /* Glitch: Reload button */
 :root[customizing] #nav-bar > hbox toolbaritem toolbarbutton {
-	background-image: var(--gnome-headerbar-button-bgimage);
-	box-shadow: var(--gnome-headerbar-button-box-shadow);
+	background-image: var(--gnome-button-background);
+	box-shadow: var(--gnome-button-box-shadow);
 }
 /* Glitch: Cut / Copy / Paste buttons' icons
  * :not(#hack) is there just to elevate rule priority */
@@ -72,27 +72,27 @@
 }
 /* Hovered */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):hover {
-	background-image: var(--gnome-headerbar-button-hover-bgimage);
+	background-image: var(--gnome-button-hover-background);
 }
 /* Active */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open] {
-	background-image: var(--gnome-headerbar-button-active-bgimage);
-	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
-	border-color: var(--gnome-headerbar-button-active-border-color);
-	border-bottom-color: var(--gnome-headerbar-button-active-border-color);
-	border-top-color: var(--gnome-headerbar-button-active-border-accent-color);
+	background-image: var(--gnome-button-active-background);
+	box-shadow: var(--gnome-button-active-box-shadow);
+	border-color: var(--gnome-button-active-border-color);
+	border-bottom-color: var(--gnome-button-active-border-color);
+	border-top-color: var(--gnome-button-active-border-accent-color);
 }
 /* Inactive window */
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]) {
-	background-image: var(--gnome-inactive-headerbar-button-bgimage);
-	box-shadow: var(--gnome-inactive-headerbar-button-box-shadow);
+	background-image: var(--gnome-inactive-button-background);
+	box-shadow: var(--gnome-inactive-button-box-shadow);
 }
 /* Glitch: Reload and Cut / Copy / Paste buttons */
 :root:-moz-window-inactive[customizing] #nav-bar #stop-reload-button toolbarbutton,
 :root:-moz-window-inactive[customizing] #nav-bar #edit-controls toolbarbutton {
-	background-image: var(--gnome-inactive-headerbar-button-bgimage);
-	box-shadow: var(--gnome-inactive-headerbar-button-box-shadow);
+	background-image: var(--gnome-inactive-button-background);
+	box-shadow: var(--gnome-inactive-button-box-shadow);
 }
 /* Glitch: Reload and Cut / Copy / Paste buttons' icons */
 :root:-moz-window-inactive[customizing] #nav-bar #stop-reload-button image.toolbarbutton-icon,
@@ -102,13 +102,13 @@
 
 /* Disabled header bar buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
-	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
-	border: 1px solid var(--gnome-headerbar-button-disabled-border-color) !important;
-	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
+	background-color: var(--gnome-button-disabled-background);
+	border: 1px solid var(--gnome-button-disabled-border-color) !important;
+	box-shadow: var(--gnome-button-disabled-box-shadow);
 	opacity: 1 !important;
 }
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:hover {
-	background-color: var(--gnome-headerbar-button-disabled-bgcolor) !important;
+	background-color: var(--gnome-button-disabled-background) !important;
 }
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	opacity: .4 !important;
@@ -125,9 +125,9 @@
 }
 /* Inactive window */
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
-	background-color: var(--gnome-inactive-headerbar-button-disabled-bgcolor);
-	border: var(--gnome-inactive-headerbar-button-disabled-border);
-	box-shadow: var(--gnome-inactive-headerbar-button-disabled-box-shadow);
+	background-color: var(--gnome-inactive-button-disabled-background);
+	border: var(--gnome-inactive-button-disabled-border);
+	box-shadow: var(--gnome-inactive-button-disabled-box-shadow);
 }
 :root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	opacity: .3 !important;

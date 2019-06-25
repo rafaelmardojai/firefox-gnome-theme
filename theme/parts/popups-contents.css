@@ -5,12 +5,12 @@
 /* Main menu combined buttons */
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton {
 	-moz-appearance: none !important;
-	background: var(--gnome-headerbar-button-bgimage) !important;
-	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
+	background: var(--gnome-button-background) !important;
+	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-width: 1px 1px 1px 0 !important;	
 	border-style: solid !important;
-	border-color: var(--gnome-headerbar-button-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
+	border-color: var(--gnome-button-border-color) !important;
+	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 0 !important;
 	height: 34px !important;
 	min-width: 34px !important;
@@ -28,26 +28,26 @@
 	border-bottom-right-radius: 5px !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] {
-	background: var(--gnome-headerbar-button-disabled-bgcolor) !important;
-	border-color: var(--gnome-headerbar-button-disabled-border-color) !important;
-	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow) !important;
+	background: var(--gnome-button-disabled-background) !important;
+	border-color: var(--gnome-button-disabled-border-color) !important;
+	box-shadow: var(--gnome-button-disabled-box-shadow) !important;
 	opacity: 1 !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled]:hover {
-	background: var(--gnome-headerbar-button-disabled-bgcolor) !important;
+	background: var(--gnome-button-disabled-background) !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image {
 	opacity: .4 !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:hover {
-	background: var(--gnome-headerbar-button-hover-bgimage) !important;
+	background: var(--gnome-button-hover-background) !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:active {
-	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
-	box-shadow: var(--gnome-headerbar-button-active-box-shadow) !important;
-	border-color: var(--gnome-headerbar-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-active-border-color) !important;
-	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
+	background-image: var(--gnome-button-active-background) !important;
+	box-shadow: var(--gnome-button-active-box-shadow) !important;
+	border-color: var(--gnome-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-button-active-border-color) !important;
+	border-top-color: var(--gnome-button-active-border-accent-color) !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons toolbarseparator {
 	border: 0 !important;
@@ -92,11 +92,6 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	box-shadow: none !important;
 }
 
-/*  */
-#identity-popup {
-	
-}
-
 /* Downloads popover */
 #downloadsPanel-mainView .download-state {
 	padding: 8px !important;
@@ -106,7 +101,7 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	align-items: center;
 }
 #downloadsPanel-mainView .download-state:hover {
-	background-color: var(--gnome-popup-button-hover-bgcolor) !important;	
+	background-color: var(--gnome-popover-button-hover-background) !important;	
 }
 #downloadsPanel-mainView .download-state:last-child {
     margin-bottom: 8px !important;
@@ -134,10 +129,10 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 
 #downloadsPanel-mainView .download-state .downloadButton {
 	-moz-appearance: none !important;
-	background-image: var(--gnome-headerbar-button-bgimage) !important;
-	box-shadow: var(--gnome-headerbar-button-box-shadow) !important;
-	border: 1px solid var(--gnome-headerbar-button-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
+	background-image: var(--gnome-button-background) !important;
+	box-shadow: var(--gnome-button-box-shadow) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 100%;
 	min-width: 34px !important;
 	width: 34px !important;
@@ -145,14 +140,14 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	margin: auto;
 }
 #downloadsPanel-mainView .download-state .downloadButton:hover {
-	background: var(--gnome-headerbar-button-hover-bgimage) !important;
+	background: var(--gnome-button-hover-background) !important;
 }
 #downloadsPanel-mainView .download-state .downloadButton:active {
-	background-image: var(--gnome-headerbar-button-active-bgimage) !important;
-	box-shadow: var(--gnome-headerbar-button-active-box-shadow) !important;
-	border-color: var(--gnome-headerbar-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-active-border-color) !important;
-	border-top-color: var(--gnome-headerbar-button-active-border-accent-color) !important;
+	background-image: var(--gnome-button-active-background) !important;
+	box-shadow: var(--gnome-button-active-box-shadow) !important;
+	border-color: var(--gnome-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-button-active-border-color) !important;
+	border-top-color: var(--gnome-button-active-border-accent-color) !important;
 }
 
 #downloadsPanel-mainView .download-state .downloadButton .button-box {

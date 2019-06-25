@@ -7,5 +7,5 @@
 #tabbrowser-tabpanels,
 #tabbrowser-tabpanels[pendingpaint],
 browser {
-	background-color: var(--gnome-browser-before-load-bgcolor) !important;
+	background-color: var(--gnome-browser-before-load-background) !important;
 }

@@ -3,7 +3,7 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 :root[privatebrowsingmode="temporary"] #urlbar {
-	background-image: var(--gnome-private-urlbar-bgimage) !important;
+	background-image: var(--gnome-private-urlbar-background) !important;
 }
 
 #TabsToolbar .private-browsing-indicator {

@@ -51,7 +51,7 @@
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-appearance: none !important;
-	border: 1px solid var(--gnome-headerbar-button-border-color) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
 	border-color: transparent !important;
 	border-radius: 5px !important;
 	height: 34px;
@@ -70,22 +70,22 @@
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):hover,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
-	background-image: var(--gnome-headerbar-button-hover-bgimage);
-	border-color: var(--gnome-headerbar-button-border-color) !important;
-	border-bottom-color: var(--gnome-headerbar-button-border-accent-color) !important;
-	box-shadow: var(--gnome-headerbar-button-box-shadow);
+	background-image: var(--gnome-button-hover-background);
+	border-color: var(--gnome-button-border-color) !important;
+	border-bottom-color: var(--gnome-button-border-accent-color) !important;
+	box-shadow: var(--gnome-button-box-shadow);
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):active,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
-	background-image: var(--gnome-headerbar-button-active-bgimage);
-	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
-	border: var(--gnome-headerbar-button-border) !important;
+	background-image: var(--gnome-button-active-background);
+	box-shadow: var(--gnome-button-active-box-shadow);
+	border: var(--gnome-button-border) !important;
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button[disabled],
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton[disabled] {
-	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
-	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
-	border: var(--gnome-headerbar-button-border) !important;
+	background-color: var(--gnome-button-disabled-background);
+	box-shadow: var(--gnome-button-disabled-box-shadow);
+	border: var(--gnome-button-border) !important;
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {

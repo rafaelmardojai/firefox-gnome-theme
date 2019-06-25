@@ -18,12 +18,12 @@
 }
 
 #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
-	background: var(--gnome-toolbar-bgcolor) !important;
+	background: var(--gnome-toolbar-background) !important;
 	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 #PersonalToolbar:-moz-window-inactive, #toolbar-menubar:-moz-window-inactive, 
 #TabsToolbar:-moz-window-inactive, findbar:-moz-window-inactive {
-	background-color: var(--gnome-inactive-toolbar-bgcolor) !important;
+	background-color: var(--gnome-inactive-toolbar-background) !important;
 	border-bottom: 1px solid var(--gnome-inactive-toolbar-border-color) !important;
 }
 
