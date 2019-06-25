@@ -12,6 +12,18 @@
 	list-style-image: url("moz-icon://stock/tab-new-symbolic?size=dialog") !important;
 }
 
+/* Reload button */
+#reload-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/view-refresh-symbolic?size=dialog") !important;
+}
+
+/* Stop button */
+#stop-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/process-stop-symbolic?size=dialog") !important;
+}
+
 /* Home button */
 #home-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
