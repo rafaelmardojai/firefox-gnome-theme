@@ -27,25 +27,6 @@
 	list-style-image: url("moz-icon://stock/process-stop-symbolic?size=dialog") !important;
 }*/
 
-/* Zoom out button */
-#zoom-out-button .toolbarbutton-icon {
-	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=dialog") !important;
-}
-
-/* Zoom reset button */
-/* No icon, just text
-#zoom-reset-button .toolbarbutton-icon {
-	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/zoom-original-symbolic?size=dialog") !important;
-} */
-
-/* Zoom in button */
-#zoom-in-button .toolbarbutton-icon {
-	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=dialog") !important;
-}
-
 /* Downloads button */
 /* Glitch - it swaps to the default one anyway
 #downloads-button {
