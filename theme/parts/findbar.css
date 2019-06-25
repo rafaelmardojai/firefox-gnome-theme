@@ -39,6 +39,7 @@ hbox[anonid="findbar-textbox-wrapper"] {
 	height: 34px !important;
 	box-sizing: border-box;
 	margin: 0px !important;
+	padding-top: 7px !important;
 }
 .findbar-textbox:focus {
 	border-width: 2px !important;
