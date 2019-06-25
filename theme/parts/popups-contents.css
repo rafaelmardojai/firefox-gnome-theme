@@ -2,6 +2,56 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Style main context menu buttons */
+#context-navigation {
+	padding: 4px 8px 8px;
+}
+#context-navigation menuitem {
+	-moz-appearance: none !important;
+	background-image: var(--gnome-button-background);
+	box-shadow: var(--gnome-button-box-shadow);
+	border-width: 1px 1px 1px 0;
+	border-style: solid;
+	border-color: var(--gnome-button-border-color);
+	border-bottom-color: var(--gnome-button-border-accent-color);
+	height: 34px;
+	text-align: center !important;
+}
+#context-navigation > menuitem > .menu-iconic-left {
+	margin: auto !important;
+}
+#context-navigation menuitem {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
+#context-navigation menuitem:hover:not([disabled]) {	
+	background-image: var(--gnome-button-hover-background);
+	color: var(--gnome-toolbar-color) !important;
+}
+#context-navigation menuitem:active:not([disabled]) {	
+	background-image: var(--gnome-button-active-background) !important;
+	box-shadow: var(--gnome-button-active-box-shadow) !important;
+	border-color: var(--gnome-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-button-active-border-color) !important;
+	border-top-color: var(--gnome-button-active-border-accent-color) !important;
+}
+#context-navigation menuitem:first-child {	
+	border-radius: 5px 0 0 5px;
+	border-left-width: 1px;
+}
+#context-navigation menuitem:last-child {	
+	border-radius: 0 5px 5px 0;
+}
+
+/* Remove icons from the main context menu */
+#contentAreaContextMenu menuitem image,
+#contentAreaContextMenu menu image {
+	visibility: hidden;
+}
+#contentAreaContextMenu menugroup menuitem image {
+	visibility: visible;
+}
+
 /* Main menu combined buttons */
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton {
 	-moz-appearance: none !important;
@@ -52,10 +102,8 @@
 #appMenu-popup .toolbaritem-combined-buttons toolbarseparator {
 	border: 0 !important;
 }
-
-/*  zoom controls colors */
 #appMenu-zoomReset-button {
-	color: var(--gnome-urlbar-color) !important;
+	padding: 2px 16px !important;
 }
 
 /* Main menu remove items icons */
