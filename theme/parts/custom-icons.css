@@ -68,4 +68,5 @@
 	background-size: contain;
 	height: 16px;
 	width: 16px;
+	margin-top: -2px !important;
 }
