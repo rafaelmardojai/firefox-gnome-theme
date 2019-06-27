@@ -17,7 +17,3 @@
 :root {
 	--space-above-tabbar: 0 !important;
 }
-
-#main-window {
-	-moz-appearance: -moz-window-titlebar !important;
-}
