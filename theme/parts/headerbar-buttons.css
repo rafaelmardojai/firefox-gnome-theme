@@ -1,11 +1,5 @@
 /* Header bar's buttons */
-
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-
-/* Header bar */
-#nav-bar {
-	padding: 0 3px !important;
-}
 
 /* Overrides: Make the back button the same as other buttons */
 :root:not([uidensity=compact]) #back-button {
@@ -174,6 +168,11 @@
 	border: 0 !important;
 	margin: 0 !important;
 }
+
+/* Space main menu button from other headerbar buttons
+#nav-bar #PanelUI-menu-button:not(#hack) {
+	margin-left: 10px !important;
+}*/
 
 /* User sync menu, bigger avatar */
 #fxa-toolbar-menu-button .toolbarbutton-badge-stack {
