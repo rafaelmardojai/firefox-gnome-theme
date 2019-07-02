@@ -16,6 +16,7 @@ toolbarspring {
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
 	height: 34px;
+	margin: 0 3px !important;
 }
 /* Focused */
 #urlbar[focused],

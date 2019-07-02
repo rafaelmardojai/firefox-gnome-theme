@@ -1,13 +1,11 @@
 /* Header bar */
-
-@import "headerbar-buttons.css";
 @import "headerbar-urlbar.css";
 @import "headerbar-private-urlbar.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Headerbar */
 #nav-bar {
-	padding: 0 3px !important;
+	padding: 6px 3px !important;
 }
 
 /* Headerbar CSD colors */
