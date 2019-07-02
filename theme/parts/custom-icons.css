@@ -51,3 +51,8 @@
 	width: 16px;
 	margin-top: -2px !important;
 }
+
+/* Popovers subview back button */
+.subviewbutton-back {
+	list-style-image: url("moz-icon://stock/pan-start-symbolic?size=dialog") !important;
+}
