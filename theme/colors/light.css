@@ -50,9 +50,6 @@
 	--gnome-inactive-button-background: linear-gradient(#f6f5f4, #f6f5f4);
 	--gnome-inactive-button-border-color: #c0c0bd;
 	--gnome-inactive-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
-	--gnome-inactive-button-disabled-background: var(--gnome-button-disabled-background);
-	--gnome-inactive-button-disabled-border: var(--gnome-inactive-button-border);
-	--gnome-inactive-button-disabled-box-shadow: var(--gnome-button-disabled-box-shadow);
 	/* TODO: UPDATE TO 3.32 */	
 	--gnome-button-suggested-action-background: linear-gradient(to bottom, #4a90d9, #3986d5 60%, #2a76c6);
 	--gnome-button-suggested-action-border-color: #215d9c;
