@@ -2,20 +2,9 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Style main context menu buttons */
+/* Style main context menu & buttons */
 #context-navigation {
 	padding: 4px 8px 8px;
-}
-#context-navigation menuitem {
-	-moz-appearance: none !important;
-	background-image: var(--gnome-button-background);
-	box-shadow: var(--gnome-button-box-shadow);
-	border-width: 1px 1px 1px 0;
-	border-style: solid;
-	border-color: var(--gnome-button-border-color);
-	border-bottom-color: var(--gnome-button-border-accent-color);
-	height: 34px;
-	text-align: center !important;
 }
 #context-navigation > menuitem > .menu-iconic-left {
 	margin: auto !important;
@@ -23,24 +12,6 @@
 #context-navigation menuitem {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
-}
-#context-navigation menuitem:hover:not([disabled]) {	
-	background-image: var(--gnome-button-hover-background);
-	color: var(--gnome-toolbar-color) !important;
-}
-#context-navigation menuitem:active:not([disabled]) {	
-	background-image: var(--gnome-button-active-background) !important;
-	box-shadow: var(--gnome-button-active-box-shadow) !important;
-	border-color: var(--gnome-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-button-active-border-color) !important;
-	border-top-color: var(--gnome-button-active-border-accent-color) !important;
-}
-#context-navigation menuitem:first-child {	
-	border-radius: 5px 0 0 5px;
-	border-left-width: 1px;
-}
-#context-navigation menuitem:last-child {	
-	border-radius: 0 5px 5px 0;
 }
 
 /* Remove icons from the main context menu */
@@ -50,60 +21,6 @@
 }
 #contentAreaContextMenu menugroup menuitem image {
 	visibility: visible;
-}
-
-/* Main menu combined buttons */
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton {
-	-moz-appearance: none !important;
-	background: var(--gnome-button-background) !important;
-	box-shadow: var(--gnome-button-box-shadow) !important;
-	border-width: 1px 1px 1px 0 !important;	
-	border-style: solid !important;
-	border-color: var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-	border-radius: 0 !important;
-	height: 34px !important;
-	min-width: 34px !important;
-	margin: 0 !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:first-of-type,
-#appMenu-popup #appMenu-fullscreen-button {
-	border-top-left-radius: 5px !important;
-	border-bottom-left-radius: 5px !important;
-	border-left-width: 1px !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:last-of-type,
-#appMenu-popup #appMenu-zoomEnlarge-button {
-	border-top-right-radius: 5px !important;
-	border-bottom-right-radius: 5px !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] {
-	background: var(--gnome-button-disabled-background) !important;
-	border-color: var(--gnome-button-disabled-border-color) !important;
-	box-shadow: var(--gnome-button-disabled-box-shadow) !important;
-	opacity: 1 !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled]:hover {
-	background: var(--gnome-button-disabled-background) !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image {
-	opacity: .4 !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:hover {
-	background: var(--gnome-button-hover-background) !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:active {
-	background-image: var(--gnome-button-active-background) !important;
-	box-shadow: var(--gnome-button-active-box-shadow) !important;
-	border-color: var(--gnome-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-button-active-border-color) !important;
-	border-top-color: var(--gnome-button-active-border-accent-color) !important;
-}
-#appMenu-popup .toolbaritem-combined-buttons toolbarseparator {
-	border: 0 !important;
-}
-#appMenu-zoomReset-button {
-	padding: 2px 16px !important;
 }
 
 /* Main menu remove items icons */
@@ -175,33 +92,33 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	flex-direction: column;
 }
 
-#downloadsPanel-mainView .download-state .downloadButton {
-	-moz-appearance: none !important;
-	background-image: var(--gnome-button-background) !important;
-	box-shadow: var(--gnome-button-box-shadow) !important;
-	border: 1px solid var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-	border-radius: 100%;
-	min-width: 34px !important;
-	width: 34px !important;
-	height: 34px !important;
-	margin: auto;
-}
-#downloadsPanel-mainView .download-state .downloadButton:hover {
-	background: var(--gnome-button-hover-background) !important;
-}
-#downloadsPanel-mainView .download-state .downloadButton:active {
-	background-image: var(--gnome-button-active-background) !important;
-	box-shadow: var(--gnome-button-active-box-shadow) !important;
-	border-color: var(--gnome-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-button-active-border-color) !important;
-	border-top-color: var(--gnome-button-active-border-accent-color) !important;
-}
-
 #downloadsPanel-mainView .download-state .downloadButton .button-box {
 	padding: 0 !important;
 	margin: 0 !important;
 }
 #downloadsPanel-mainView .download-state toolbarseparator {
 	display: none;
+}
+
+/* Customization overflow menu position */
+#customization-panel-container {
+	padding: 0 75px 25px !important;
+	margin-top: 10px;
+	z-index: 10;
+}
+#customization-panelWrapper > .panel-arrowbox {    
+	margin-bottom: -5px !important;
+}
+
+/* Confirmation Hint */
+#confirmation-hint .panel-arrowcontent {
+	background: var(--gnome-button-suggested-action-background) !important;
+	border-color: var(--gnome-button-suggested-action-border-color) !important;
+}
+#confirmation-hint .panel-arrow {
+	fill: var(--gnome-button-suggested-action-border-color) !important;
+	stroke: var(--gnome-button-suggested-action-border-color) !important;
+}
+#confirmation-hint-message {
+	color: white !important;
 }
