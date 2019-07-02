@@ -1,0 +1,204 @@
+/* Buttons */
+@import "buttons-fixes.css";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Hide buttons separator */
+#nav-bar .toolbaritem-combined-buttons separator {
+	display: none !important;
+}
+#appMenu-popup .toolbaritem-combined-buttons toolbarseparator {
+	border: 0 !important;
+}
+
+/* Buttons  */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+.subviewbutton.panel-subview-footer,
+.panel-footer button,
+#downloadsHistory,
+#downloadsPanel-mainView .download-state .downloadButton,
+#overflowMenu-customize-button,
+#appMenu-popup .panel-banner-item,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton,
+.subviewbutton-back,
+#context-navigation menuitem,
+.identity-popup-preferences-button:not(#hack) {
+	-moz-appearance: none !important;
+	background: var(--gnome-button-background) !important;
+	box-shadow: var(--gnome-button-box-shadow) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-bottom-color: var(--gnome-button-border-accent-color) !important;
+	border-radius: 5px !important;
+	height: 34px !important;
+	padding: 0 2px !important;
+	min-height: 34px !important;
+	min-width: 34px !important;
+	color: var(--gnome-toolbar-color) !important;
+}
+
+/* Buttons with margins */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
+	margin: 0 3px !important;
+}
+
+/* Text buttons */
+.subviewbutton.panel-subview-footer,
+.panel-footer button,
+#downloadsHistory,
+#overflowMenu-customize-button,
+#appMenu-popup .panel-banner-item,
+#appMenu-zoomReset-button:not(#hack),
+#tracking-protection-preferences-button:not(#hack) {
+	padding: 2px 16px !important;
+}
+
+/* Hover buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):hover,
+.subviewbutton.panel-subview-footer:hover,
+.panel-footer button:hover,
+#downloadsHistory:hover,
+#downloadsPanel-mainView .download-state .downloadButton:hover,
+#overflowMenu-customize-button:hover,
+#appMenu-popup .panel-banner-item:hover,
+.subviewbutton-back:hover,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:hover,
+#context-navigation menuitem:hover:not([disabled]),
+.identity-popup-preferences-button:not(#hack):hover {
+	outline: 0 !important;
+	background: var(--gnome-button-hover-background) !important;
+}
+
+/* Active buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):not(#hack):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open],
+.subviewbutton.panel-subview-footer:active,
+.panel-footer button:active,
+#downloadsHistory:active,
+#downloadsPanel-mainView .download-state .downloadButton:active,
+#overflowMenu-customize-button:active,
+#appMenu-popup .panel-banner-item:active,
+.subviewbutton-back:active,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not([disabled]):active,
+#context-navigation menuitem:active:not([disabled]),
+.identity-popup-preferences-button:not(#hack):active {
+	background: var(--gnome-button-active-background) !important;
+	box-shadow: var(--gnome-button-active-box-shadow) !important;
+	border-color: var(--gnome-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-button-active-border-color) !important;
+	border-top-color: var(--gnome-button-active-border-accent-color) !important;
+}
+
+/* Disabled buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled],
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled],
+#context-navigation menuitem[disabled] {
+	background: var(--gnome-button-disabled-background) !important;
+	border-color: var(--gnome-button-disabled-border-color) !important;
+	box-shadow: var(--gnome-button-disabled-box-shadow) !important;
+	opacity: 1 !important;
+}
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image {
+	opacity: .4 !important;
+}
+
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:hover,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled]:hover {
+	background: var(--gnome-button-disabled-background) !important;
+}
+
+/* Inactive window buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive {	
+	background: var(--gnome-inactive-button-background) !important;
+	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
+	border-color: var(--gnome-inactive-button-border-color) !important;
+}
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:-moz-window-inactive image {
+	opacity: .3 !important;
+}
+
+/* Flat buttons */
+.subviewbutton-back:not(#hack) {	
+	background: transparent !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+	border-radius: 5px !important;
+}
+.subviewbutton-back:not(#hack):hover {
+	box-shadow: var(--gnome-button-box-shadow) !important;
+	border-color: var(--gnome-button-border-color) !important;
+	border-bottom-color: var(--gnome-button-border-accent-color) !important;
+}
+
+/* Circle buttons */
+#downloadsPanel-mainView .download-state .downloadButton {
+	border-radius: 100% !important;
+}
+
+/* Combined buttons */
+#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#hack),
+#nav-bar #back-button:not(#hack),
+.subviewbutton.panel-subview-footer:not(:only-of-type):not(:last-of-type),
+.panel-footer button:not(:only-of-type):not(:last-of-type),
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
+#context-navigation menuitem:not(:last-of-type) {
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	border-right-width: 0 !important;
+	margin-right: 0 !important;
+}
+
+#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#hack),
+#nav-bar #forward-button:not(#hack),
+.subviewbutton.panel-subview-footer:not(:only-of-type):not(:first-of-type),
+.panel-footer button:not(:only-of-type):not(:first-of-type),
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#appMenu-fullscreen-button),
+#context-navigation menuitem:not(:first-of-type) {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	margin-left: 0 !important;
+}
+
+#nav-bar .toolbaritem-combined-buttons {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+/* Buttons with suggested action */
+button.popup-notification-primary-button,
+#editBookmarkPanelDoneButton {
+	color: white !important;
+	background: var(--gnome-button-suggested-action-background) !important;
+	border-color: var(--gnome-button-suggested-action-border-color) !important;
+	border-bottom-color: var(--gnome-button-suggested-action-border-bottom-color) !important;	
+	box-shadow: var(--gnome-button-suggested-action-box-shadow) !important;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.543529);
+}
+button.popup-notification-primary-button.popup-notification-button:hover,
+#editBookmarkPanelDoneButton:hover {
+	background: var(--gnome-button-suggested-action-hover-background) !important;
+}
+
+/* Buttons with destructive action */
+#editBookmarkPanelRemoveButton {
+	color: white !important;
+	background: var(--gnome-button-destructive-action-background) !important;
+	border-color: var(--gnome-button-destructive-action-border-color) !important;
+	border-bottom-color: var(--gnome-button-destructive-action-border-bottom-color) !important;
+	box-shadow: var(--gnome-button-destructive-action-box-shadow) !important;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.560784);
+}
+#editBookmarkPanelRemoveButton:hover {
+	background: var(--gnome-button-destructive-action-hover-background) !important;	
+}
+
+/* User sync menu, bigger avatar */
+#fxa-toolbar-menu-button .toolbarbutton-badge-stack {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#fxa-avatar-image {	
+	height: 26px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 26px !important;
+}
