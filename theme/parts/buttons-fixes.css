@@ -98,3 +98,13 @@
 #tracking-protection-preferences-button > .toolbarbutton-text {
     padding-inline-end: 0 !important;
 }
+
+/* Fix findbar buttons issues */
+.findbar-container .findbar-find-previous image,
+.findbar-container .findbar-find-next image {
+	margin: 6px !important;
+	opacity: 1 !important;
+}
+.findbar-container toolbarbutton:focus {
+	outline: 0 !important;
+}

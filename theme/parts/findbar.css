@@ -33,6 +33,7 @@ hbox[anonid="findbar-textbox-wrapper"] {
 .findbar-textbox {
 	background-image: var(--gnome-urlbar-background) !important;
 	border: 1px solid var(--gnome-urlbar-border-color) !important;
+	border-right: 0 !important;
 	border-radius: 5px 0 0 5px !important;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
@@ -49,54 +50,6 @@ hbox[anonid="findbar-textbox-wrapper"] {
 	-moz-outline-radius: 3px;
 }
 
-.findbar-container toolbarbutton.findbar-find-previous,
-.findbar-container toolbarbutton.findbar-find-next {
-	width: 34px !important;
-}
-
-.findbar-container toolbarbutton.findbar-find-previous .toolbarbutton-icon,
-.findbar-container toolbarbutton.findbar-find-next .toolbarbutton-icon {
-	margin: 3.5px !important;
-}
-
-.findbar-container toolbarbutton.findbar-find-previous {
-	border-width: 1px 0 1px 0 !important;
-	border-radius: 0px !important;
-}
-.findbar-container toolbarbutton.findbar-find-next {
-	border-radius: 0 5px 5px 0 !important;
-}
-
-.findbar-container toolbarbutton {
-	-moz-appearance: none !important;
-	background: var(--gnome-button-background) !important;
-	box-shadow: var(--gnome-button-box-shadow) !important;
-	border: 1px solid var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-	border-radius: 5px !important;
-	height: 34px !important;
-}
-
-.findbar-container toolbarbutton.findbar-button {
-	padding: 0 16px !important;
-}
-
-.findbar-container toolbarbutton:hover, .findbar-closebutton .toolbarbutton-icon:hover {
-	background: var(--gnome-button-hover-background) !important;
-}
-
-.findbar-container toolbarbutton[checked], .findbar-container toolbarbutton:active {
-	background: var(--gnome-button-active-background) !important;
-	box-shadow: var(--gnome-button-active-box-shadow) !important;
-	border-color: var(--gnome-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-button-active-border-color) !important;
-	border-top-color: var(--gnome-button-active-border-accent-color) !important;
-}
-.findbar-container toolbarbutton:focus {
-	outline: 0 !important;
-}
-
 .findbar-closebutton {
 	position: fixed !important;
 }
-

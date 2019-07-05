@@ -21,7 +21,8 @@
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton,
 .subviewbutton-back,
 #context-navigation menuitem,
-.identity-popup-preferences-button:not(#hack) {
+.identity-popup-preferences-button:not(#hack),
+.findbar-container toolbarbutton {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -47,8 +48,12 @@
 #overflowMenu-customize-button,
 #appMenu-popup .panel-banner-item,
 #appMenu-zoomReset-button:not(#hack),
-#tracking-protection-preferences-button:not(#hack) {
+#tracking-protection-preferences-button:not(#hack),
+.findbar-container toolbarbutton.findbar-button {
 	padding: 2px 16px !important;
+}
+#appMenu-fxa-label:not(#hack):not(.subviewbutton-nav) {
+	padding: 2px 26px !important;
 }
 
 /* Hover buttons */
@@ -62,7 +67,9 @@
 .subviewbutton-back:hover,
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:hover,
 #context-navigation menuitem:hover:not([disabled]),
-.identity-popup-preferences-button:not(#hack):hover {
+.identity-popup-preferences-button:not(#hack):hover,
+.findbar-container toolbarbutton:hover,
+.findbar-closebutton .toolbarbutton-icon:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -76,10 +83,12 @@
 #downloadsPanel-mainView .download-state .downloadButton:active,
 #overflowMenu-customize-button:active,
 #appMenu-popup .panel-banner-item:active,
-.subviewbutton-back:active,
+.subviewbutton-back:not(#hack):active,
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not([disabled]):active,
 #context-navigation menuitem:active:not([disabled]),
-.identity-popup-preferences-button:not(#hack):active {
+.identity-popup-preferences-button:not(#hack):active,
+.findbar-container toolbarbutton[checked],
+.findbar-container toolbarbutton:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -97,7 +106,8 @@
 	opacity: 1 !important;
 }
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image {
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image,
+#context-navigation menuitem[disabled] image {
 	opacity: .4 !important;
 }
 
@@ -107,12 +117,15 @@
 }
 
 /* Inactive window buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive {	
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive,
+.findbar-container toolbarbutton:-moz-window-inactive {	
 	background: var(--gnome-inactive-button-background) !important;
 	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
 	border-color: var(--gnome-inactive-button-border-color) !important;
 }
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:-moz-window-inactive image {
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:-moz-window-inactive image,
+.findbar-container toolbarbutton:-moz-window-inactive image,
+.findbar-container toolbarbutton:-moz-window-inactive label {
 	opacity: .3 !important;
 }
 
@@ -123,7 +136,7 @@
 	border-color: transparent !important;
 	border-radius: 5px !important;
 }
-.subviewbutton-back:not(#hack):hover {
+.subviewbutton-back:not(#hack):not(:active):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
@@ -140,7 +153,8 @@
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:last-of-type),
 .panel-footer button:not(:only-of-type):not(:last-of-type),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
-#context-navigation menuitem:not(:last-of-type) {
+#context-navigation menuitem:not(:last-of-type),
+.findbar-container toolbarbutton.findbar-find-previous {
 	border-top-right-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
 	border-right-width: 0 !important;
@@ -152,7 +166,9 @@
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:first-of-type),
 .panel-footer button:not(:only-of-type):not(:first-of-type),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#appMenu-fullscreen-button),
-#context-navigation menuitem:not(:first-of-type) {
+#context-navigation menuitem:not(:first-of-type),
+.findbar-container toolbarbutton.findbar-find-previous,
+.findbar-container toolbarbutton.findbar-find-next {
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 	margin-left: 0 !important;
