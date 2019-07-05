@@ -51,6 +51,10 @@
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button {
 	padding: 2px 16px !important;
+	text-align: center !important;
+}
+.subviewbutton.panel-subview-footer label {
+	text-align: center !important;
 }
 #appMenu-fxa-label:not(#hack):not(.subviewbutton-nav) {
 	padding: 2px 26px !important;
