@@ -30,8 +30,11 @@
 	border-bottom: 1px solid var(--gnome-inactive-toolbar-border-color) !important;
 }
 
-#navigator-toolbox:-moz-window-inactive label, #navigator-toolbox:-moz-window-inactive image, #downloads-indicator-anchor:-moz-window-inactive {
-	opacity: 0.7;
+#navigator-toolbox:-moz-window-inactive label, #navigator-toolbox:-moz-window-inactive image, 
+#downloads-indicator-anchor:-moz-window-inactive,
+findbar:-moz-window-inactive image:not(#hack),
+findbar:-moz-window-inactive label {
+	opacity: 0.7 !important;
 }
 
 #toolbar-menubar:not([inactive=true]) {
