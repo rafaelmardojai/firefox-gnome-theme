@@ -18,3 +18,28 @@
 :root {
 	--space-above-tabbar: 0 !important;
 }
+
+/* Sidebar */
+/* BUG .sidebar-panel can't get dark theme :'( */
+#sidebar-box, .sidebar-panel {
+	background: var(--gnome-sidebar-background) !important;
+}
+#sidebar-box:-moz-window-inactive, .sidebar-panel:-moz-window-inactive {
+	background: var(--gnome-inactive-sidebar-background) !important;
+}
+#sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image {
+	opacity: 0.7 !important;
+}
+#sidebar-splitter {
+	background: var(--gnome-toolbar-border-color) !important;
+	border: 0 !important;
+	width: 1px !important;
+}
+#sidebar-splitter:-moz-window-inactive {
+	background: var(--gnome-inactive-toolbar-border-color) !important;
+}
+
+#sidebar-header {
+	padding: 8px !important;
+}
+
