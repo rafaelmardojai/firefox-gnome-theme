@@ -5,13 +5,15 @@
 /* Back button */
 #back-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/go-previous-symbolic?size=dialog") !important;
+	list-style-image: url("moz-icon://stock/go-previous-symbolic?size=dialog") !important;;
+	max-width: 16px !important;
 }
 
 /* Forward button */
 #forward-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/go-next-symbolic?size=dialog") !important;
+	max-width: 16px !important;
 }
 
 /* Reload button */
