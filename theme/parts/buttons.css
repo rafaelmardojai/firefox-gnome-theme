@@ -184,18 +184,30 @@
 }
 
 /* Buttons with suggested action */
+#appMenu-popup .panel-banner-item[notificationid="update-restart"],
 button.popup-notification-primary-button,
 #editBookmarkPanelDoneButton {
 	color: white !important;
 	background: var(--gnome-button-suggested-action-background) !important;
 	border-color: var(--gnome-button-suggested-action-border-color) !important;
-	border-bottom-color: var(--gnome-button-suggested-action-border-bottom-color) !important;	
+	border-bottom-color: var(--gnome-button-suggested-action-border-accent-color) !important;	
 	box-shadow: var(--gnome-button-suggested-action-box-shadow) !important;
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.543529);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.559216) !important;
 }
+
+#appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
 button.popup-notification-primary-button.popup-notification-button:hover,
 #editBookmarkPanelDoneButton:hover {
 	background: var(--gnome-button-suggested-action-hover-background) !important;
+}
+
+#appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
+button.popup-notification-primary-button.popup-notification-button:active,
+#editBookmarkPanelDoneButton:active {
+	background: var(--gnome-button-suggested-action-active-background) !important;
+	border-color: var(--gnome-button-suggested-action-active-border-color) !important;
+	box-shadow: var(--gnome-button-suggested-action-active-box-shadow) !important;
+	text-shadow: none !important;
 }
 
 /* Buttons with destructive action */
@@ -203,14 +215,21 @@ button.popup-notification-primary-button.popup-notification-button:hover,
 	color: white !important;
 	background: var(--gnome-button-destructive-action-background) !important;
 	border-color: var(--gnome-button-destructive-action-border-color) !important;
-	border-bottom-color: var(--gnome-button-destructive-action-border-bottom-color) !important;
+	border-bottom-color: var(--gnome-button-destructive-action-border-accent-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-box-shadow) !important;
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.560784);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.558275) !important;
 }
+
 #editBookmarkPanelRemoveButton:hover {
 	background: var(--gnome-button-destructive-action-hover-background) !important;	
 }
 
+#editBookmarkPanelRemoveButton:active {
+	background: var(--gnome-button-destructive-action-active-background) !important;
+	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
+	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
+}
+	
 /* User sync menu, bigger avatar */
 #fxa-toolbar-menu-button .toolbarbutton-badge-stack {
 	padding: 0 !important;
