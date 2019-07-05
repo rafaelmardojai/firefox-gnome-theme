@@ -3,7 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 findbar {
-    position: relative;	
+    position: relative;
 }
 
 .findbar-container {
@@ -12,6 +12,7 @@ findbar {
 	justify-content: center;
 	position: relative;
 	flex-direction: row;
+	width: calc(100% - 42px);
 }
 
 hbox[anonid="findbar-textbox-wrapper"] {
@@ -51,5 +52,5 @@ hbox[anonid="findbar-textbox-wrapper"] {
 }
 
 .findbar-closebutton {
-	position: fixed !important;
+	margin: 8px 8px 8px 0 !important;
 }
