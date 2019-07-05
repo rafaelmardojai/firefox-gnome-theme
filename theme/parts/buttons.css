@@ -22,7 +22,9 @@
 .subviewbutton-back,
 #context-navigation menuitem,
 .identity-popup-preferences-button:not(#hack),
-.findbar-container toolbarbutton {
+.findbar-container toolbarbutton,
+#sidebar-switcher-target,
+.close-icon:not(.tab-close-button) {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -49,7 +51,8 @@
 #appMenu-popup .panel-banner-item,
 #appMenu-zoomReset-button:not(#hack),
 #tracking-protection-preferences-button:not(#hack),
-.findbar-container toolbarbutton.findbar-button {
+.findbar-container toolbarbutton.findbar-button,
+#sidebar-switcher-target {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -73,7 +76,9 @@
 #context-navigation menuitem:hover:not([disabled]),
 .identity-popup-preferences-button:not(#hack):hover,
 .findbar-container toolbarbutton:hover,
-.findbar-closebutton .toolbarbutton-icon:hover {
+.findbar-closebutton .toolbarbutton-icon:hover,
+#sidebar-switcher-target:hover,
+.close-icon:not(.tab-close-button):hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -92,7 +97,9 @@
 #context-navigation menuitem:active:not([disabled]),
 .identity-popup-preferences-button:not(#hack):active,
 .findbar-container toolbarbutton[checked],
-.findbar-container toolbarbutton:active {
+.findbar-container toolbarbutton:active,
+#sidebar-switcher-target:active, #sidebar-switcher-target.active,
+.close-icon:not(.tab-close-button):active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -122,25 +129,23 @@
 
 /* Inactive window buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive,
-.findbar-container toolbarbutton:-moz-window-inactive {	
+.findbar-container toolbarbutton:-moz-window-inactive,
+#sidebar-switcher-target:-moz-window-inactive {	
 	background: var(--gnome-inactive-button-background) !important;
 	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
 	border-color: var(--gnome-inactive-button-border-color) !important;
 }
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:-moz-window-inactive image,
-.findbar-container toolbarbutton:-moz-window-inactive image,
-.findbar-container toolbarbutton:-moz-window-inactive label {
-	opacity: .3 !important;
-}
 
 /* Flat buttons */
-.subviewbutton-back:not(#hack) {	
+.subviewbutton-back:not(#hack),
+.close-icon:not(.tab-close-button) {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
 	border-radius: 5px !important;
 }
-.subviewbutton-back:not(#hack):not(:active):hover {
+.subviewbutton-back:not(#hack):not(:active):hover,
+.close-icon:not(.tab-close-button):not(:active):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
