@@ -19,6 +19,7 @@
 }
 
 #nav-bar, #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
+	border: 0 !important;
 	background: var(--gnome-toolbar-background) !important;
 	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 }
