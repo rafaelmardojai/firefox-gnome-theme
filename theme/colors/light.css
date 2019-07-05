@@ -50,17 +50,22 @@
 	--gnome-inactive-button-background: linear-gradient(#f6f5f4, #f6f5f4);
 	--gnome-inactive-button-border-color: #c0c0bd;
 	--gnome-inactive-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
-	/* TODO: UPDATE TO 3.32 */	
-	--gnome-button-suggested-action-background: linear-gradient(to bottom, #4a90d9, #3986d5 60%, #2a76c6);
-	--gnome-button-suggested-action-border-color: #215d9c;
-	--gnome-button-suggested-action-border-bottom-color: #184472;
-	--gnome-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-	--gnome-button-suggested-action-hover-background: linear-gradient(to bottom, #63a0de, #4a90d9 60%, #3986d5);
-	--gnome-button-destructive-action-background: linear-gradient(to bottom, #ef2929, #ee1616 60%, #d51010);
-	--gnome-button-destructive-action-border-color: #a60c0c;
-	--gnome-button-destructive-action-border-bottom-color: #760909;
-	--gnome-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-	--gnome-button-destructive-action-hover-background: linear-gradient(to bottom, #f14545, #ef2929 60%, #ee1616);
+	--gnome-button-suggested-action-background: linear-gradient(to top, #2379e2 2px, #3584e4);
+	--gnome-button-suggested-action-border-color: #1b6acb;
+	--gnome-button-suggested-action-border-accent-color: #15539e;
+	--gnome-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+	--gnome-button-suggested-action-hover-background: linear-gradient(to top, #3584e4, #3987e5 1px);
+	--gnome-button-suggested-action-active-background: #1961b9;
+	--gnome-button-suggested-action-active-border-color: #1b6acb;
+	--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
+	--gnome-button-destructive-action-background: linear-gradient(to top, #ce1921 2px, #e01b24);
+	--gnome-button-destructive-action-border-color: #b2161d;
+	--gnome-button-destructive-action-border-accent-color: #851015;
+	--gnome-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+	--gnome-button-destructive-action-hover-background: linear-gradient(to top, #e01b24, #e41c26 1px);
+	--gnome-button-destructive-action-active-background: #a0131a;
+	--gnome-button-destructive-action-active-border-color: #b2161d;
+	--gnome-button-destructive-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 
 	/* URL bar */
 	--gnome-urlbar-background: linear-gradient(#fff, #fff);
@@ -72,7 +77,6 @@
 	--gnome-inactive-urlbar-box-shadow: none;
 	--gnome-inactive-urlbar-color: #323232;
 	--gnome-focused-urlbar-border-color: #4a90d9;
-	/* for private-urlbar.css only */
 	--gnome-private-urlbar-background: linear-gradient(#e6c2ff, #e6c2ff);
 
 	/* Tabs */
