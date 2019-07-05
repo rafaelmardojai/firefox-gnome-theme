@@ -91,6 +91,11 @@
 	fill: transparent !important;
 }
 
+/* */
+#appMenu-popup .panel-banner-item[notificationid="update-restart"]::after {
+	display: none !important;
+}
+
 /* Identity site popover buttons */
 .identity-popup-preferences-button:not(#hack) {
 	list-style-image: url("chrome://browser/skin/settings.svg") !important;
