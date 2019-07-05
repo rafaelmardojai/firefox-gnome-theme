@@ -17,6 +17,10 @@
 	--gnome-inactive-toolbar-background: #353535;	
 	--gnome-inactive-toolbar-border-color: #202020;
 	
+	/* Sidebar */
+	--gnome-sidebar-background: #313131;
+	--gnome-inactive-sidebar-background: #323232;
+	
 	/* Popups */
 	--gnome-menu-background: #2f2f2f;
 	--gnome-menu-border-color: #1b1b1b;
