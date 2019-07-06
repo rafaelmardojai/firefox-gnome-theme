@@ -161,3 +161,10 @@
 :root[tabsintitlebar] #navigator-toolbox[movingtab] #TabsToolbar {
 	padding-bottom: 0 !important;
 }
+
+/* Allow window drag with headerbar buttons  */
+:root[tabsintitlebar] #nav-bar .toolbarbutton-1,
+:root[tabsintitlebar] #titlebar .titlebar-button,
+:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
+	-moz-window-dragging: drag;
+}
