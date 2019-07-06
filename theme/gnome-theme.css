@@ -11,8 +11,8 @@
 @import "colors/dark.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-*{
-	font-family: Cantarell !important;   
+* {
+	font-family: Cantarell !important;
 }
 
 :root {
@@ -20,14 +20,15 @@
 }
 
 /* Sidebar */
-/* BUG .sidebar-panel can't get dark theme :'( */
 #sidebar-box, .sidebar-panel {
 	background: var(--gnome-sidebar-background) !important;
 }
 #sidebar-box:-moz-window-inactive, .sidebar-panel:-moz-window-inactive {
 	background: var(--gnome-inactive-sidebar-background) !important;
 }
-#sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image {
+#sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
+.sidebar-panel:-moz-window-inactive label, .sidebar-panel:-moz-window-inactive image,
+.sidebar-placesTreechildren:-moz-window-inactive {
 	opacity: 0.7 !important;
 }
 #sidebar-splitter {
@@ -41,5 +42,27 @@
 
 #sidebar-header {
 	padding: 8px !important;
+}
+
+#search-box {
+	-moz-appearance: none !important;
+	background: var(--gnome-urlbar-background) !important;
+	border: 1px solid var(--gnome-urlbar-border-color) !important;
+	border-radius: 5px;
+	box-shadow: var(--gnome-urlbar-box-shadow) !important;
+	color: var(--gnome-urlbar-color) !important;
+	height: 34px;
+	margin: 0 3px !important;
+	padding: 0px 8px !important;
+}
+
+#search-box[focused] {
+	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+	outline-offset: -2px;
+	-moz-outline-radius: 5px;
+}
+
+#search-box .textbox-search-sign {
+	
 }
 
