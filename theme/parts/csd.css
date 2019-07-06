@@ -162,9 +162,14 @@
 	padding-bottom: 0 !important;
 }
 
-/* Allow window drag with headerbar buttons  */
-:root[tabsintitlebar] #nav-bar .toolbarbutton-1,
+/* Allow window drag with headerbar buttons */
+:root[tabsintitlebar] #nav-bar *,
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-window-dragging: drag;
+}
+
+:root[tabsintitlebar] #nav-bar .urlbar-input-box, 
+:root[tabsintitlebar] #nav-bar .urlbar-input-box * {
+	-moz-window-dragging: no-drag !important;
 }
