@@ -24,15 +24,18 @@
 .identity-popup-preferences-button:not(#hack),
 .findbar-container toolbarbutton,
 #sidebar-switcher-target,
-.close-icon:not(.tab-close-button) {
+#viewButton,
+.close-icon:not(.tab-close-button),
+#TabsToolbar .toolbarbutton-1 {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 5px !important;
-	height: 34px !important;
 	padding: 0 2px !important;
+	height: 34px !important;
+	max-height: 34px !important;
 	min-height: 34px !important;
 	min-width: 34px !important;
 	color: var(--gnome-toolbar-color) !important;
@@ -41,6 +44,9 @@
 /* Buttons with margins */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
 	margin: 0 3px !important;
+}
+#TabsToolbar .toolbarbutton-1 {
+	margin: 1px 3px 2px !important;
 }
 
 /* Text buttons */
@@ -52,7 +58,8 @@
 #appMenu-zoomReset-button:not(#hack),
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
-#sidebar-switcher-target {
+#sidebar-switcher-target,
+#viewButton {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -78,7 +85,9 @@
 .findbar-container toolbarbutton:hover,
 .findbar-closebutton .toolbarbutton-icon:hover,
 #sidebar-switcher-target:hover,
-.close-icon:not(.tab-close-button):hover {
+#viewButton:hover,
+.close-icon:not(.tab-close-button):hover,
+#TabsToolbar .toolbarbutton-1:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -99,7 +108,9 @@
 .findbar-container toolbarbutton[checked],
 .findbar-container toolbarbutton:active,
 #sidebar-switcher-target:active, #sidebar-switcher-target.active,
-.close-icon:not(.tab-close-button):active {
+#viewButton[open],
+.close-icon:not(.tab-close-button):active,
+#TabsToolbar .toolbarbutton-1:active, #TabsToolbar .toolbarbutton-1[open] {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -130,7 +141,8 @@
 /* Inactive window buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive,
 .findbar-container toolbarbutton:-moz-window-inactive,
-#sidebar-switcher-target:-moz-window-inactive {	
+#sidebar-switcher-target:-moz-window-inactive,
+#viewButton:-moz-window-inactive {	
 	background: var(--gnome-inactive-button-background) !important;
 	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
 	border-color: var(--gnome-inactive-button-border-color) !important;
@@ -138,14 +150,16 @@
 
 /* Flat buttons */
 .subviewbutton-back:not(#hack),
-.close-icon:not(.tab-close-button) {
+.close-icon:not(.tab-close-button),
+#TabsToolbar .toolbarbutton-1 {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
 	border-radius: 5px !important;
 }
 .subviewbutton-back:not(#hack):not(:active):hover,
-.close-icon:not(.tab-close-button):not(:active):hover {
+.close-icon:not(.tab-close-button):not(:active):hover,
+#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
