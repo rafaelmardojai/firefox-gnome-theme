@@ -124,3 +124,8 @@
 .findbar-container toolbarbutton:focus {
 	outline: 0 !important;
 }
+
+/* Sidebar header button reset font size */
+#sidebar-header {
+    font-size: 1em !important;
+}
