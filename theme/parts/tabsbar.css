@@ -9,7 +9,7 @@
 	min-height: initial !important;
 }
 tab > stack {
-	height: 38px;
+	height: 38px !important;
 }
 /* Extra margin for the first and last tabs */
 .tabbrowser-tab[first-tab]:not([pinned=true]) {
@@ -153,7 +153,7 @@ tab[selected]:-moz-window-inactive {
 	padding: 2px;
 	width: 16px;
 }
-:root:-moz-window-inactive .tab-close-button {
+:root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
@@ -237,4 +237,25 @@ tab[selected]:-moz-window-inactive {
 /* Remove blank spaces on tabs start and end */
 #TabsToolbar .titlebar-spacer {
 	display: none !important;
+}
+
+/* Style tab container color indicator */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background { /* [class*="identity-color-"] */
+    border-top: none !important;
+	position: relative !important;
+}
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:before {
+	position: absolute;
+	background: var( --identity-tab-color);
+	border-radius: 100%;
+	content: "";
+	display: block;
+	height: 6px;
+    width: 6px;
+	top: 3px;
+	right: 50%;
+	transform: translate(50%, 0);
+}
+.tabbrowser-tab[usercontextid]:-moz-window-inactive > .tab-stack > .tab-background:before {
+	opacity: 0.7;
 }
