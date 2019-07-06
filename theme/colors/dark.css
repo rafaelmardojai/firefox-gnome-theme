@@ -6,7 +6,7 @@
  * built-in in Firefox, so you need to add an !important if you wanna
  * override them. */
 
-:root:-moz-lwtheme-brighttext {
+:root:-moz-lwtheme-brighttext, .sidebar-panel[lwt-sidebar-brighttext] {
 	/* Browser area before a page starts loading */
 	--gnome-browser-before-load-background: #353535;
 
