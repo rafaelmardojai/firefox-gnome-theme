@@ -1,5 +1,6 @@
 @import "parts/toolbox.css";
 @import "parts/buttons.css";
+@import "parts/entries.css";
 @import "parts/headerbar.css";
 @import "parts/csd.css";
 @import "parts/popups.css";
@@ -39,40 +40,6 @@
 #sidebar-header {
 	padding: 6px !important;
 }
-
-/* Entries */
-#search-box, .findbar-textbox {
-	-moz-appearance: none !important;
-	background: var(--gnome-urlbar-background) !important;
-	border: 1px solid var(--gnome-urlbar-border-color) !important;
-	border-radius: 5px !important;
-	box-shadow: var(--gnome-urlbar-box-shadow) !important;
-	color: var(--gnome-urlbar-color) !important;
-	height: 34px;
-	margin: 0 3px !important;
-	padding: 6px 8px !important;
-}
-
-/* Entries focused */
-#search-box[focused], .findbar-textbox[focused] {
-	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
-	outline-offset: -2px;
-	-moz-outline-radius: 5px;
-}
-
-/* Entries combined */
-.findbar-textbox {
-	border-top-right-radius: 0 !important;
-	border-bottom-right-radius: 0 !important;
-	border-right-width: 0 !important;
-	margin: 0 !important;
-}
-.findbar-textbox[focused] {
-	-moz-outline-radius: 5px 0 0 5px !important;
-}
-
-#search-box .textbox-search-sign {
-	
 #sidebar-search-container {
 	padding: 6px !important;
 }

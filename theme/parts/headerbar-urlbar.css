@@ -8,26 +8,11 @@ toolbarspring {
 }
 
 /* URL bar and Search bar */
-#urlbar,
-#searchbar > .searchbar-textbox {
-	background-image: var(--gnome-urlbar-background) !important;
-	border: 1px solid var(--gnome-urlbar-border-color) !important;
-	border-radius: 5px;
-	box-shadow: var(--gnome-urlbar-box-shadow) !important;
-	color: var(--gnome-urlbar-color) !important;
-	height: 34px;
+#urlbar {
 	margin: 0 3px !important;
+	padding: 0 !important;
 }
-/* Focused */
-#urlbar[focused],
-#searchbar > .searchbar-textbox[focused] {
-	border-width: 2px !important;
-	border-style: solid !important;
-	border-color: var(--gnome-focused-urlbar-border-color) !important;
-	outline: none;
-	outline-offset: -2px;
-	-moz-outline-radius: 3px;
-}
+
 #urlbar[focused] .urlbar-textbox-container {
 	margin: -1px !important;
 }
@@ -36,14 +21,6 @@ toolbarspring {
 }
 #searchbar > .searchbar-textbox[focused] .search-go-button {
 	margin-right: -1px !important;
-}
-/* Inactive window */
-:root:-moz-window-inactive #urlbar,
-:root:-moz-window-inactive #searchbar > .searchbar-textbox {
-	background-image: var(--gnome-inactive-urlbar-background) !important;
-	border: 1px solid var(--gnome-inactive-urlbar-border-color) !important;
-	box-shadow: var(--gnome-inactive-urlbar-box-shadow) !important;
-	color: var(--gnome-inactive-urlbar-color) !important;
 }
 
 /* URL bar and Search bar's icons */
