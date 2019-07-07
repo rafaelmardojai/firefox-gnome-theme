@@ -188,7 +188,7 @@ tab[selected]:-moz-window-inactive {
 
 /* Move container lines to the top */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background {
-	border-top: 2px solid var(--identity-tab-color) !important;
+	border-top: 3px solid var(--identity-tab-color) !important;
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
@@ -237,25 +237,4 @@ tab[selected]:-moz-window-inactive {
 /* Remove blank spaces on tabs start and end */
 #TabsToolbar .titlebar-spacer {
 	display: none !important;
-}
-
-/* Style tab container color indicator */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background { /* [class*="identity-color-"] */
-    border-top: none !important;
-	position: relative !important;
-}
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:before {
-	position: absolute;
-	background: var( --identity-tab-color);
-	border-radius: 100%;
-	content: "";
-	display: block;
-	height: 6px;
-    width: 6px;
-	top: 3px;
-	right: 50%;
-	transform: translate(50%, 0);
-}
-.tabbrowser-tab[usercontextid]:-moz-window-inactive > .tab-stack > .tab-background:before {
-	opacity: 0.7;
 }
