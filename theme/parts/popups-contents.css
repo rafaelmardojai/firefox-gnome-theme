@@ -57,6 +57,10 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 	box-shadow: none !important;
 }
 
+.all-tabs-item > .all-tabs-secondary-button label {
+	margin: 0 !important;
+}
+
 /* Downloads popover */
 #downloadsPanel-mainView .download-state {
 	padding: 8px !important;
