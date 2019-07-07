@@ -74,6 +74,7 @@
 #PanelUI-button {
 	border: 0 !important;
 	margin: 0 !important;
+	padding-inline-start: 0 !important;
 }
 
 /* Space main menu button from other headerbar buttons
