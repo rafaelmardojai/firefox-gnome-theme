@@ -61,6 +61,10 @@ panelview {
 	justify-content: flex-end;
 }
 
+.panel-footer toolbarseparator {
+	display: none !important;
+}
+
 /* Style popovers menu buttons */
 .subviewbutton, .toolbarbutton-1 {
 	border-radius: 3px !important;	
