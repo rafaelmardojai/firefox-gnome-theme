@@ -170,6 +170,8 @@
 }
 
 :root[tabsintitlebar] #nav-bar .urlbar-input-box, 
-:root[tabsintitlebar] #nav-bar .urlbar-input-box * {
+:root[tabsintitlebar] #nav-bar .urlbar-input-box *,
+#back-button,
+#forward-button{
 	-moz-window-dragging: no-drag !important;
 }
