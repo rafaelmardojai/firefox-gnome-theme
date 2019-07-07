@@ -8,10 +8,6 @@ toolbarspring {
 }
 
 /* URL bar and Search bar */
-#urlbar {
-	margin: 0 3px !important;
-	padding: 0 !important;
-}
 
 #urlbar[focused] .urlbar-textbox-container {
 	margin: -1px !important;

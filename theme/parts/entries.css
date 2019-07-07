@@ -4,6 +4,7 @@
 
 /* Entries */
 #urlbar,
+#searchbar,
 #search-box,
 .findbar-textbox {
 	-moz-appearance: none !important;
@@ -30,6 +31,7 @@
 
 /* Inactive window entries */
 #urlbar:-moz-window-inactive,
+#searchbar:-moz-window-inactive,
 #search-box:-moz-window-inactive,
 .findbar-textbox:-moz-window-inactive {
 	background: var(--gnome-inactive-urlbar-background) !important;
@@ -50,5 +52,11 @@
 
 #search-box .textbox-search-sign {
 	
+}
+
+/* Fixed */
+#urlbar, #searchbar {
+	margin: 0 3px !important;
+	padding: 0 !important;
 }
 
