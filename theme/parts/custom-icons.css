@@ -56,3 +56,6 @@
 .subviewbutton-back {
 	list-style-image: url("moz-icon://stock/pan-start-symbolic?size=dialog") !important;
 }
+.subviewbutton-back .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+}
