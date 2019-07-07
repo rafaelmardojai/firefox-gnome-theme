@@ -40,22 +40,35 @@
 	padding: 8px !important;
 }
 
-#search-box {
+/* Entries */
+#search-box, .findbar-textbox {
 	-moz-appearance: none !important;
 	background: var(--gnome-urlbar-background) !important;
 	border: 1px solid var(--gnome-urlbar-border-color) !important;
-	border-radius: 5px;
+	border-radius: 5px !important;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
 	height: 34px;
 	margin: 0 3px !important;
-	padding: 0px 8px !important;
+	padding: 6px 8px !important;
 }
 
-#search-box[focused] {
+/* Entries focused */
+#search-box[focused], .findbar-textbox[focused] {
 	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
+}
+
+/* Entries combined */
+.findbar-textbox {
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	border-right-width: 0 !important;
+	margin: 0 !important;
+}
+.findbar-textbox[focused] {
+	-moz-outline-radius: 5px 0 0 5px !important;
 }
 
 #search-box .textbox-search-sign {
