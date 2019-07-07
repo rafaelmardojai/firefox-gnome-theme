@@ -37,7 +37,7 @@
 }
 
 #sidebar-header {
-	padding: 8px !important;
+	padding: 6px !important;
 }
 
 /* Entries */
@@ -73,5 +73,7 @@
 
 #search-box .textbox-search-sign {
 	
+#sidebar-search-container {
+	padding: 6px !important;
 }
 
