@@ -34,3 +34,14 @@ hbox[anonid="findbar-textbox-wrapper"] {
 .findbar-closebutton {
 	margin: 6px 6px 6px 0 !important;
 }
+
+@media (max-width: 1100px) {
+	hbox[anonid="findbar-textbox-wrapper"] {
+		position: relative;
+		right: 0;
+		transform: none;
+	}
+	.findbar-find-status, .found-matches {
+		order: 0;
+	}
+}
