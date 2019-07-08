@@ -66,6 +66,7 @@ panelview {
 	border-radius: 3px !important;	
 	color: var(--gnome-toolbar-color) !important;
 }
+
 .subviewbutton[disabled], .toolbarbutton-1[disabled] {
 	opacity: 0.5 !important;
 }
@@ -74,10 +75,10 @@ panelview {
 	opacity: 0.7 !important;
 }
 .subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover {
-	background-color: var(--gnome-popover-button-hover-background) !important;
+	background: var(--gnome-popover-button-hover-background) !important;
 }
 
-/* Style popups separator */
+/* Style popover separators */
 toolbarseparator, menuseparator {
 	border-color: var(--gnome-popover-separator-color) !important;
 }
@@ -88,7 +89,7 @@ toolbarseparator[orient="vertical"] {
 	margin: 0 3px !important;
 }
 
-/* Style popover header */
+/* Remove popover header separator */
 .panel-header {
-	border-bottom: 1px solid var(--gnome-popover-separator-color) !important;	
+	border-bottom: 0 !important;	
 }
