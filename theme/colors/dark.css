@@ -81,7 +81,7 @@
 	--gnome-inactive-urlbar-box-shadow: none;
 	--gnome-inactive-urlbar-color: #d6d6d6;
 	--gnome-focused-urlbar-border-color: #15539e;
-	--gnome-private-urlbar-background: linear-gradient(#25003e, #25003e);
+	--gnome-private-urlbar-background: #25003e;
 
 	/* Tabs */
 	--gnome-tabbar-tab-color: rgb(141, 144, 145);
