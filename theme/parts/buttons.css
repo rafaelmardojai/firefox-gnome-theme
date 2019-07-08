@@ -18,7 +18,7 @@
 #downloadsPanel-mainView .download-state .downloadButton,
 #overflowMenu-customize-button,
 #appMenu-popup .panel-banner-item,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(#appMenu-fxa-label),
 .subviewbutton-back,
 #context-navigation menuitem,
 .identity-popup-preferences-button:not(#hack),
@@ -55,7 +55,7 @@
 #downloadsHistory,
 #overflowMenu-customize-button,
 #appMenu-popup .panel-banner-item,
-#appMenu-zoomReset-button:not(#hack),
+#appMenu-zoomReset-button:not(#appMenu-fxa-label):not(#hack),
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
 #sidebar-switcher-target,
@@ -65,9 +65,6 @@
 }
 .subviewbutton.panel-subview-footer label {
 	text-align: center !important;
-}
-#appMenu-fxa-label:not(#hack):not(.subviewbutton-nav) {
-	padding: 2px 26px !important;
 }
 
 /* Hover buttons */
@@ -79,7 +76,7 @@
 #overflowMenu-customize-button:hover,
 #appMenu-popup .panel-banner-item:hover,
 .subviewbutton-back:hover,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:hover,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(#appMenu-fxa-label):hover,
 #context-navigation menuitem:hover:not([disabled]),
 .identity-popup-preferences-button:not(#hack):hover,
 .findbar-container toolbarbutton:hover,
@@ -102,7 +99,7 @@
 #overflowMenu-customize-button:active,
 #appMenu-popup .panel-banner-item:active,
 .subviewbutton-back:not(#hack):active,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not([disabled]):active,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not([disabled]):not(#appMenu-fxa-label):active,
 #context-navigation menuitem:active:not([disabled]),
 .identity-popup-preferences-button:not(#hack):active,
 .findbar-container toolbarbutton[checked],
