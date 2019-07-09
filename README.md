@@ -3,6 +3,11 @@
  Firefox GNOME theme
 </h1>
 
+<center>
+![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)
+[![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
+</center>
+
 <p align="center">A GNOME theme for Firefox 60+</p>
 
 <p align="center"><em>(This theme follows lastest GNOME default gtk theme adwaita)</em></p>
