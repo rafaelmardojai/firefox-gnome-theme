@@ -3,12 +3,8 @@
  Firefox GNOME theme
 </h1>
 
-<center>
-
-![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)
+[![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
-
-</center>
 
 <p align="center">A GNOME theme for Firefox 60+</p>
 
