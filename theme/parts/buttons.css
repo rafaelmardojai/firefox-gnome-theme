@@ -59,8 +59,7 @@
 #appMenu-popup .panel-banner-item,
 #appMenu-zoomReset-button:not(#appMenu-fxa-label):not(#hack),
 #tracking-protection-preferences-button:not(#hack),
-.findbar-container toolbarbutton.findbar-button,
-#viewButton {
+.findbar-container toolbarbutton.findbar-button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -70,8 +69,9 @@
 
 /* Drop down buttons */
 .menulist-label-box,
-#sidebar-switcher-target {
-	padding: 2px 32px 2px 16px !important;
+#sidebar-switcher-target,
+#viewButton {
+	padding: 2px 16px !important;
 	position: relative;
 }
 .menulist-label-box:after { /* Arrow position */
@@ -79,8 +79,9 @@
 	right: 8px !important;
 	top: 8px !important;
 }
-#sidebar-switcher-arrow { /* Arrow position, type b */
-	margin-right: -24px
+#sidebar-switcher-arrow,
+#viewButton .button-menu-dropmarker { /* Arrow position, type b */
+	transform: translate(6px, 0)
 }
 .menulist-label-box:after { /* Create arrow if icon tag no exist */
 	content: "";

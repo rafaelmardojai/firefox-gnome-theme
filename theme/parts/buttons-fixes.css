@@ -136,6 +136,12 @@
 	opacity: 1 !important;
 }
 
+/* Sidebar history view */
+#viewButton {
+    margin: 0 !important;
+    margin-inline-start: 6px !important;
+}
+
 /* Bookmarks editor buttons */
 menulist {
 	-moz-appearance: none !important;
