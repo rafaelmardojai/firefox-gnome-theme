@@ -130,3 +130,16 @@
 #sidebar-header {
     font-size: 1em !important;
 }
+
+/* Sidebar header button arrow opacity */
+#sidebar-switcher-arrow {
+	opacity: 1 !important;
+}
+
+/* Bookmarks editor buttons */
+menulist {
+	-moz-appearance: none !important;
+}
+.expander-down image, .expander-up image {
+	margin: 6px !important;
+}
