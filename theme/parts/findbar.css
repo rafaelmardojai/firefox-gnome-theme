@@ -16,30 +16,30 @@ findbar {
 }
 
 hbox[anonid="findbar-textbox-wrapper"] {
-	position: absolute;
-	right: calc(50vw - 36px);
-	transform: translate(50%, 0);
 	display: flex !important;
+	flex: 1;
 }
 
-.findbar-find-status, .found-matches {
+.findbar-textbox {
+	margin-left: 60px !important;
+}
+
+.findbar-find-status:not(:-moz-only-whitespace), .found-matches[hidden] ~ .findbar-find-status, .found-matches {
+	flex: 1;
 	order: -1;
 	padding: 7px 0;
 }
-.findbar-find-status {
-	padding-left: 6px;
-	flex: 1;
+.found-matches:not([hidden]) ~ .findbar-find-status {
+	display: none;
 }
 
 .findbar-closebutton {
 	margin: 6px 6px 6px 0 !important;
 }
 
-@media (max-width: 1100px) {
-	hbox[anonid="findbar-textbox-wrapper"] {
-		position: relative;
-		right: 0;
-		transform: none;
+@media (max-width: 980px) {
+	.findbar-textbox {
+		margin-left: 0 !important;
 	}
 	.findbar-find-status, .found-matches {
 		order: 0;
