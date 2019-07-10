@@ -13,7 +13,8 @@
 	border-radius: 5px !important;
 	box-shadow: var(--gnome-urlbar-box-shadow) !important;
 	color: var(--gnome-urlbar-color) !important;
-	height: 34px !important;	
+	height: 34px !important;
+	max-height: 34px !important;
 	margin: 0 !important;
 	padding: 6px 8px !important;
 	box-sizing: border-box;
