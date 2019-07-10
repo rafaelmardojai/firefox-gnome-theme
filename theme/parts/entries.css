@@ -21,6 +21,7 @@
 
 /* Entries focused */
 #urlbar[focused],
+#searchbar:focus-within,
 #search-box[focused], 
 .findbar-textbox[focused],
 .findbar-textbox:focus {
@@ -50,13 +51,17 @@
 	-moz-outline-radius: 5px 0 0 5px !important;
 }
 
-#search-box .textbox-search-sign {
-	
-}
-
-/* Fixed */
+/* Entries fixes */
 #urlbar, #searchbar {
 	margin: 0 3px !important;
 	padding: 0 !important;
 }
-
+.searchbar-textbox {
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	min-height: auto !important;
+}
+#searchbar > .searchbar-textbox[focused] .searchbar-search-button:not(#hack) {
+  margin: 0 !important;
+}
