@@ -50,7 +50,20 @@ menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
 	-moz-appearance: none !important;
     list-style-image: url("../icons/pan-up-symbolic.svg") !important;
     width: 16px !important;
-    height: 16px !important;;
+    height: 16px !important;
+}
+
+/* Search entries */
+#urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
+.searchbar-search-icon,
+textbox:not([searchbutton]) > .textbox-search-sign {
+    list-style-image: url(../icons/edit-find-symbolic.svg) !important;
+	opacity: 0.7 !important;
+}
+textbox:not([searchbutton]) > .textbox-search-sign {
+	width: 16px !important;
+	margin: 2px 0;
+	
 }
 
 /* Private browsing button */
@@ -65,6 +78,10 @@ menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
 .subviewbutton-back .toolbarbutton-icon:-moz-lwtheme-brighttext,
 
 .menu-right:-moz-lwtheme-brighttext,
+
+#urlbar[pageproxystate="invalid"]:-moz-lwtheme-brighttext > #identity-box > #identity-icon,
+.searchbar-search-icon:-moz-lwtheme-brighttext,
+.sidebar-panel[lwt-sidebar-brighttext] .textbox-search-sign,
 
 .menulist-label-box:-moz-lwtheme-brighttext:after,
 .expander-down image:-moz-lwtheme-brighttext,
