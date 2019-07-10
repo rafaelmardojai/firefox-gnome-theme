@@ -71,9 +71,6 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	opacity: 0.5 !important;
 }
 
-.subviewbutton::after {
-	opacity: 0.7 !important;
-}
 .subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover {
 	background: var(--gnome-popover-button-hover-background) !important;
 }
