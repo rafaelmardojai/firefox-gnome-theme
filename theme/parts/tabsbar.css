@@ -10,6 +10,7 @@
 }
 tab > stack {
 	height: 38px !important;
+	min-height: 38px !important;
 }
 /* Extra margin for the first and last tabs */
 .tabbrowser-tab[first-tab]:not([pinned=true]) {
