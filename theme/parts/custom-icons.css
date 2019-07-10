@@ -17,6 +17,18 @@
 	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
 }
 
+/* Sub menu arrow */
+.menu-right {
+	-moz-appearance: none !important;
+	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
+	width: 16px !important;
+    height: 16px !important;
+}
+menu:not(:-moz-lwtheme-brighttext):hover > .menu-right,
+menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
+	filter: invert(100%) brightness(200%);
+}
+
 /* Arrow down buttons */
 .expander-down > .button-box,
 #sidebar-switcher-arrow {
@@ -48,6 +60,8 @@
 
 .PanelUI-subView .subviewbutton-nav:-moz-lwtheme-brighttext::after,
 .subviewbutton-back .toolbarbutton-icon:-moz-lwtheme-brighttext,
+
+.menu-right:-moz-lwtheme-brighttext,
 
 .menulist-label-box:-moz-lwtheme-brighttext:after,
 .expander-down image:-moz-lwtheme-brighttext,

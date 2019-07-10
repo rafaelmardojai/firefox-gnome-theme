@@ -19,7 +19,8 @@
 #contentAreaContextMenu menu image {
 	visibility: hidden;
 }
-#contentAreaContextMenu menugroup menuitem image {
+#contentAreaContextMenu menugroup menuitem image,
+#contentAreaContextMenu .menu-right image {
 	visibility: visible;
 }
 
