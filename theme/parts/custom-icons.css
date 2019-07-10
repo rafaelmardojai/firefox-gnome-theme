@@ -24,7 +24,10 @@
 	width: 16px !important;
     height: 16px !important;
 }
-menu:not(:-moz-lwtheme-brighttext):hover > .menu-right,
+menu[disabled] > .menu-right {
+	opacity: 0.3;
+}
+menu:not(:-moz-lwtheme-brighttext):not([disabled]):hover > .menu-right,
 menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
 	filter: invert(100%) brightness(200%);
 }
