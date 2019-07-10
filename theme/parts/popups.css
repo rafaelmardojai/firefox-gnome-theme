@@ -36,7 +36,7 @@ panel[type=arrow] {
 panelview {
 	background: transparent !important;
 }
-.panel-arrowcontent {
+panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	background: var(--gnome-popover-background) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popover-border-color) !important;
