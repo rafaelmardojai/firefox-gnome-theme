@@ -34,15 +34,45 @@ menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
 
 /* Arrow down buttons */
 .expander-down > .button-box,
-#sidebar-switcher-arrow {
+#sidebar-switcher-arrow,
+#viewButton .button-menu-dropmarker {
 	-moz-appearance: none !important;
     list-style-image: url("../icons/pan-down-symbolic.svg") !important;
     width: 16px !important;
     height: 16px !important;
-	
 }
 .menulist-label-box:after {
 	content: url("../icons/pan-down-symbolic.svg") !important;
+}
+
+/* Tree views */
+treechildren::-moz-tree-twisty {
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
+	width: 16px !important;
+    height: 16px !important;
+}
+treechildren::-moz-tree-twisty(open) {
+	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
+}
+treechildren::-moz-tree-twisty(selected, focus) {
+	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+}
+treechildren::-moz-tree-twisty(selected, focus, open) {
+	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+}
+
+treechildren:-moz-lwtheme-brighttext::-moz-tree-twisty {
+	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+}
+treechildren:-moz-lwtheme-brighttext::-moz-tree-twisty(open) {
+	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+}
+
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty {
+	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+}
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
+	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
 }
 
 /* Arrow up buttons */
@@ -56,14 +86,13 @@ menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
 /* Search entries */
 #urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
 .searchbar-search-icon,
-textbox:not([searchbutton]) > .textbox-search-sign {
+#search-box .textbox-search-sign {
     list-style-image: url(../icons/edit-find-symbolic.svg) !important;
 	opacity: 0.7 !important;
 }
-textbox:not([searchbutton]) > .textbox-search-sign {
+#search-box .textbox-search-sign {
 	width: 16px !important;
 	margin: 2px 0;
-	
 }
 
 /* Private browsing button */
