@@ -49,6 +49,6 @@ fi
 
 # Symlink user.js to firefox-gnome-theme one.
 echo "Set configuration user.js file"
-ln -s firefox-gnome-theme/configuration/user.js ../user.js
+ln -s chrome/firefox-gnome-theme/configuration/user.js ../user.js
 
 echo "Done."
