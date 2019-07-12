@@ -47,4 +47,8 @@ if [ "$GNOMISHEXTRAS" = true ] ; then
 	sed -i '2s/^/@import "theme\/matching-autocomplete-width.css";\n/' firefox-gnome-theme/customChrome.css
 fi
 
+# Symlink user.js to firefox-gnome-theme one.
+echo "Set configuration user.js file"
+ln -s firefox-gnome-theme/configuration/user.js ../user.js
+
 echo "Done."
