@@ -4,6 +4,7 @@ FIREFOXFOLDER=~/.mozilla/firefox/
 PROFILENAME=""
 GNOMISHEXTRAS=false
 
+# Get options.
 while getopts 'f:p:g' flag; do
 	case "${flag}" in    
 		f) FIREFOXFOLDER="${OPTARG}" ;;
@@ -12,26 +13,38 @@ while getopts 'f:p:g' flag; do
 	esac
 done
 
-# Set and enter Firefox folder
-cd $FIREFOXFOLDER
-
+# Define profile folder path.
 if test -z "$PROFILENAME" 
 	then
-		if [[ $(grep '\[Profile[^0]\]' profiles.ini) ]]
-			then PROFPATH=$(grep -E '^\[Profile|^Path|^Default' profiles.ini | grep -1 '^Default=1' | grep '^Path' | cut -c6-)
-			else PROFPATH=$(grep 'Path=' profiles.ini | sed 's/^Path=//')
-		fi
+		PROFILEFOLDER="$FIREFOXFOLDER/*.default"
 	else
-	      PROFPATH=$PROFILENAME
+		PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
 fi
 
-THEMEINSTALL="$FIREFOXFOLDER/$PROFPATH/chrome"
+# Enter Firefox profile folder.
+cd $PROFILEFOLDER
+echo "Installing theme in $PWD"
 
-git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git $THEMEINSTALL
+# Create a chrome directory if it doesn't exist.
+mkdir -p chrome
+cd chrome
 
+# Clone theme repo inside
+echo "Cloning repo in $PWD"
+git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+
+# Create single-line user CSS files if non-existent or empty
+[[ -s userChrome.css ]] || echo >> userChrome.css
+
+# Import this theme at the beginning of the CSS files
+sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
+
+# If GNOMISH extras enabled, import it in customChrome.css
 if [ "$GNOMISHEXTRAS" = true ] ; then
-	cd $THEMEINSTALL
-    [[ -s customChrome.css ]] || echo >> customChrome.css
-	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' customChrome.css
-	sed -i '2s/^/@import "theme\/matching-autocomplete-width.css";\n/' customChrome.css
+	echo "Enabling GNOMISH extra features"
+    [[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
+	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' firefox-gnome-theme/customChrome.css
+	sed -i '2s/^/@import "theme\/matching-autocomplete-width.css";\n/' firefox-gnome-theme/customChrome.css
 fi
+
+echo "Done."
