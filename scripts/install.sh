@@ -1,5 +1,6 @@
 #!/bin/bash
 
+THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox/
 PROFILENAME=""
 GNOMISHEXTRAS=false
@@ -29,17 +30,17 @@ echo "Installing theme in $PWD"
 mkdir -p chrome
 cd chrome
 
-# Clone theme repo inside
-echo "Cloning repo in $PWD"
-git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+# Copy theme repo inside
+echo "Coping repo in $PWD"
+cp -R $THEMEDIRECTORY $PWD
 
-# Create single-line user CSS files if non-existent or empty
+# Create single-line user CSS files if non-existent or empty.
 [[ -s userChrome.css ]] || echo >> userChrome.css
 
-# Import this theme at the beginning of the CSS files
+# Import this theme at the beginning of the CSS files.
 sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 
-# If GNOMISH extras enabled, import it in customChrome.css
+# If GNOMISH extras enabled, import it in customChrome.css.
 if [ "$GNOMISHEXTRAS" = true ] ; then
 	echo "Enabling GNOMISH extra features"
     [[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
