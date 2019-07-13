@@ -22,22 +22,67 @@ The `master` branch track current Firefox and GNOME stable.
 ## Installation
 
 ### Installation script
-*Coming soon!*
+```sh
+git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-gnome-theme
+./scripts/install.sh -g
+```
+
+#### Script options
+- -f `<firefox_folder>` *optional*
+	- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
+	- Default: `~/.mozilla/firefox/`
+
+- -p `<profile_folder>` *optional*
+	- Set custom profile folder name, for example `e0j6yb0p.default-nightly`
+	- Default: `*.default` (standard default profile)
+
+- -g *optional*
+	- Auto enable GNOMISH extra features `hide-single-tab.css` & `matching-autocomplete-width.css`
+
 
 ### Manual installation
 1. Go to `about:support` in Firefox.
+
 2. Application Basics > Profile Directory > Open Directory.
-3. Create a folder named `chrome`.
-4. Copy `theme` folder and `userChrome.css` file to your `chrome` Firefox folder.
-5. If you are using Firefox 69+:
-	1. Go to `about:config` in Firefox.
-	2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set it to `true`.
-7. Restart Firefox.
-8. Open Firefox customization panel and:
-	1. Use *Title bar* option to toggle CSD if is not set by default.
-	2. Move the new tab button to headerbar.
-	3. Select light or dark variants on theme switcher.
-9. Be happy with your new gnomish Firefox.
+
+3. Open directory in a terminal.
+
+4. Create a `chrome` directory if it doesn't exist.
+
+	```sh
+	mkdir -p chrome
+	cd chrome
+	```
+
+5. Clone this repo to a subdirectory:
+
+	```sh
+	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+	```
+
+6. Create single-line user CSS files if non-existent or empty (at least one line is needed for `sed`):
+
+	```sh
+	[[ -s userChrome.css ]] || echo >> userChrome.css
+	```
+
+7. Import this theme at the beginning of the CSS files (all `@import`s must come before any existing `@namespace` declarations):
+
+	```sh
+	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
+	```
+
+8. Symlink preferences file:
+
+	```sh
+	ln -s chrome/firefox-gnome-theme/configuration/user.js ../user.js
+	```
+
+9. Restart Firefox.
+
+10. Open Firefox customization panel and move the new tab button to headerbar.
+
+11. Be happy with your new gnomish Firefox.
 
 ## Enabling optional features
 Open `userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome` directly in your `chrome` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
@@ -47,7 +92,7 @@ Open `userChrome.css` with a text editor and follow instructions to enable extra
 ### CSD have sharp corners
 See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 
-### Icons color broken
+### Icons color broken with gnome-icons.css
 Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them in the `theme/colors/light.css` or `theme/colors/dark.css` files, look for `--gnome-icons-hack-filter` var and play with css filters.
 
 ## Development
@@ -78,5 +123,5 @@ any specific license on your code.
 ## Credits
 Developed by **Rafael Mardojai** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Sai Kurogetsu](https://github.com/kurogetsusai/firefox-gnome-theme)** original work.
 
-# Donate
+## Donate
 If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM). Also consider donating upstream, [Firefox](https://donate.mozilla.org/) & [GNOME](https://www.gnome.org/support-gnome/).
