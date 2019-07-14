@@ -111,7 +111,8 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	.menulist-label-box:after,
 	.expander-down image,
 	.expander-up image,
-	#sidebar-switcher-arrow  {
+	#sidebar-switcher-arrow,
+	#viewButton .button-menu-dropmarker {
 		filter: invert(100%) brightness(200%);
 	}
 	
