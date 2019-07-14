@@ -27,7 +27,11 @@ This theme is supposed to work with current supported Firefox releases:
 - Firefox 69.0 Beta
 - Firefox 70.0 Nightly
 
-*(Old Firefox ESR versions can present some issues).*
+***Firefox 60 ESR issues:***
+
+*(Dark theme variant is broken in Firefox < 67).*
+
+*https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme#Browser_compatibility*
 
 ## Installation
 
