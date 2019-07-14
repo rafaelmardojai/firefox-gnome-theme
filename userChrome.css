@@ -8,10 +8,8 @@
  * the beginning of the line. To disable it, put the "/*" back.
  */
 
-/* Hide the tab bar when only one tab is open
- * Warning: This also hides the private browsing indicator in private windows.
- * If you are using it, you might wanna enable the next feature too. Also you
- * should move the new tab button somewhere else for this to work, because by
+/* Hide the tab bar when only one tab is open 
+ * You should move the new tab button somewhere else for this to work, because by
  * default it is on the tab bar too. */
 /*@import "theme/hide-single-tab.css"; /**/
 
