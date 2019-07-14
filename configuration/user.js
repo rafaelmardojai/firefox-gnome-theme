@@ -7,3 +7,4 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
 // Enable CSD
 user_pref("browser.tabs.drawInTitlebar", true);
+
