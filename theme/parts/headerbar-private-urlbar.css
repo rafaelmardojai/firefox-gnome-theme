@@ -15,8 +15,10 @@
 	opacity: 0.3;
 	transform: translate(15px, 0);	
 }
-:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:-moz-lwtheme-brighttext:before {
-	filter: invert(100%);
+@media (prefers-color-scheme: dark) {
+	:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
+		filter: invert(100%);
+	}
 }
 :root[privatebrowsingmode="temporary"] #nav-bar {
 	overflow: hidden;

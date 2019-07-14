@@ -27,9 +27,11 @@
 menu[disabled] > .menu-right {
 	opacity: 0.3;
 }
-menu:not(:-moz-lwtheme-brighttext):not([disabled]):hover > .menu-right,
-menu:not(:-moz-lwtheme-brighttext)[open] > .menu-right {
-	filter: invert(100%) brightness(200%);
+@media (prefers-color-scheme: light) {
+	menu:not([disabled]):hover > .menu-right,
+	menu[open] > .menu-right {
+		filter: invert(100%) brightness(200%);
+	}
 }
 
 /* Arrow down buttons */
@@ -61,13 +63,6 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
 }
 
-treechildren:-moz-lwtheme-brighttext::-moz-tree-twisty {
-	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
-}
-treechildren:-moz-lwtheme-brighttext::-moz-tree-twisty(open) {
-	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
-}
-
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty {
 	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
 }
@@ -96,27 +91,42 @@ treechildren:-moz-lwtheme-brighttext::-moz-tree-twisty(open) {
 }
 
 /* Private browsing button */
-#nav-bar #privatebrowsing-button .toolbarbutton-icon {
-	list-style-image: url("../icons/user-not-tracked.svg") !important;;
+#privatebrowsing-button .toolbarbutton-icon {
+	list-style-image: url("../icons/user-not-tracked.svg") !important;
 }
 
 /* Invert icons color in dark variant */
-#nav-bar #privatebrowsing-button .toolbarbutton-icon:-moz-lwtheme-brighttext,
+@media (prefers-color-scheme: dark) {
+	#nav-bar #privatebrowsing-button .toolbarbutton-icon,
 
-.PanelUI-subView .subviewbutton-nav:-moz-lwtheme-brighttext::after,
-.subviewbutton-back .toolbarbutton-icon:-moz-lwtheme-brighttext,
+	.PanelUI-subView .subviewbutton-nav::after,
+	.subviewbutton-back .toolbarbutton-icon,
 
-.menu-right:-moz-lwtheme-brighttext,
+	.menu-right,
 
-#urlbar[pageproxystate="invalid"]:-moz-lwtheme-brighttext > #identity-box > #identity-icon,
-.searchbar-search-icon:-moz-lwtheme-brighttext,
-.sidebar-panel[lwt-sidebar-brighttext] .textbox-search-sign,
+	#urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
+	.searchbar-search-icon,
+	#search-box .textbox-search-sign,
 
-.menulist-label-box:-moz-lwtheme-brighttext:after,
-.expander-down image:-moz-lwtheme-brighttext,
-.expander-up image:-moz-lwtheme-brighttext,
-#sidebar-switcher-arrow:-moz-lwtheme-brighttext  {
-	filter: invert(100%) brightness(200%);
+	.menulist-label-box:after,
+	.expander-down image,
+	.expander-up image,
+	#sidebar-switcher-arrow  {
+		filter: invert(100%) brightness(200%);
+	}
+	
+	/* Tree views */
+	treechildren::-moz-tree-twisty {
+		list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+	}
+	treechildren::-moz-tree-twisty(open) {
+		list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+	}
+	
+	/* Fix for extensions icons */	
+	.webextension-browser-action {
+    	list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
+	}
 }
 
 /* Back button */
