@@ -6,7 +6,7 @@
 [![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
 
-<p align="center">A GNOME theme for Firefox 60+</p>
+<p align="center">A GNOME theme for Firefox</p>
 
 <p align="center"><em>(This theme follows lastest GNOME default gtk theme adwaita)</em></p>
 
@@ -18,6 +18,16 @@ This is a bunch of CSS code to make Firefox look closer to GNOME's default
 theme.
 
 The `master` branch track current Firefox and GNOME stable.
+
+This theme is supposed to work with current supported Firefox releases:
+
+- Firefox 68.0
+- Firefox 68 ESR
+- Firefox 60 ESR
+- Firefox 69.0 Beta
+- Firefox 70.0 Nightly
+
+*(Old Firefox ESR versions can present some issues).*
 
 ## Installation
 
