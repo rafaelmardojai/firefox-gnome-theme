@@ -119,106 +119,106 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 }
 
 /* Private browsing button */
-#privatebrowsing-button .toolbarbutton-icon {
+#privatebrowsing-button {
 	list-style-image: url("../icons/user-not-tracked.svg") !important;
 }
 /* Sidebar button */
 #sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, #sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon {
     list-style-image: url("../icons/toggle-sidebar-symbolic.svg") !important;
 }
-#sidebar-button  .toolbarbutton-icon {
+#sidebar-button .toolbarbutton-icon {
     list-style-image: url("../icons/toggle-right-sidebar-symbolic.svg");
 }
 /* Back button */	
-#nav-bar #back-button .toolbarbutton-icon,
-#context-back .menu-iconic-icon { 
+#nav-bar #back-button,
+#context-back { 
 	list-style-image: url("../icons/go-previous-symbolic.svg") !important;
 }
 /* Forward button */	
-#nav-bar #forward-button .toolbarbutton-icon,
-#context-forward .menu-iconic-icon { 
+#nav-bar #forward-button,
+#context-forward { 
 	list-style-image: url("../icons/go-next-symbolic.svg") !important;
 }
 /* Menu button */
-#PanelUI-menu-button .toolbarbutton-icon {
+#PanelUI-menu-button {
 	list-style-image: url("../icons/open-menu-symbolic.svg") !important;
 }
 /* New tab button */
-#new-tab-button .toolbarbutton-icon {
+#new-tab-button {
 	list-style-image: url("../icons/tab-new-symbolic.svg") !important;
 }
 /* Home button */
-#home-button .toolbarbutton-icon {
+#home-button {
 	list-style-image: url("../icons/user-home-symbolic.svg") !important;
 }
 /* Preferences button */
-#preferences-button .toolbarbutton-icon {
+#preferences-button {
 	list-style-image: url("../icons/preferences-system-symbolic.svg") !important;
 }
 /* Fullscreen button */
-#fullscreen-button .toolbarbutton-icon,
-#appMenu-fullscreen-button .toolbarbutton-icon {
+#fullscreen-button,
+#appMenu-fullscreen-button {
 	list-style-image: url("../icons/view-fullscreen-symbolic.svg") !important;
 }
 /* Zoom out button */
-#zoom-out-button .toolbarbutton-icon,
-#appMenu-zoomReduce-button .toolbarbutton-icon {
+#zoom-out-button,
+#appMenu-zoomReduce-button {
 	list-style-image: url("../icons/zoom-out-symbolic.svg") !important;
 }
 /* Zoom in button */
-#zoom-in-button .toolbarbutton-icon,
-#appMenu-zoomEnlarge-button .toolbarbutton-icon {
+#zoom-in-button,
+#appMenu-zoomEnlarge-button {
 	list-style-image: url("../icons/zoom-in-symbolic.svg") !important;
 }
 /* Developer button */
-#developer-button .toolbarbutton-icon {
+#developer-button {
 	list-style-image: url("../icons/applications-engineering-symbolic.svg") !important;
 }
 /* Email link button */
-#email-link-button .toolbarbutton-icon {
+#email-link-button {
 	list-style-image: url("../icons/mail-unread-symbolic.svg") !important;
 }
 /* Print button */
-#print-button .toolbarbutton-icon {
+#print-button {
 	list-style-image: url("../icons/printer-symbolic.svg") !important;
 }
 /* Addons button */
-#add-ons-button .toolbarbutton-icon {
+#add-ons-button {
 	list-style-image: url("../icons/application-x-addon-symbolic.svg") !important;
 }
 /* Find button */
-#find-button .toolbarbutton-icon {
+#find-button {
 	list-style-image: url("../icons/edit-find-symbolic.svg") !important;
 }
 /* New window button */
-#new-window-button .toolbarbutton-icon {
+#new-window-button {
 	list-style-image: url("../icons/window-new-symbolic.svg.svg") !important;
 }
 /* History button */
-#history-panelmenu .toolbarbutton-icon {
+#history-panelmenu {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
 }
 /* All tabs button */
-#alltabs-button .toolbarbutton-icon {
+#alltabs-button {
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
 /* Cut button */
-#cut-button .toolbarbutton-icon,
-#appMenu-cut-button .toolbarbutton-icon {
+#cut-button,
+#appMenu-cut-button {
 	list-style-image: url("../icons/edit-cut-symbolic.svg") !important;
 }
 /* Copy button */
-#copy-button .toolbarbutton-icon,
-#appMenu-copy-button .toolbarbutton-icon {
+#copy-button,
+#appMenu-copy-button {
 	list-style-image: url("../icons/edit-copy-symbolic.svg") !important;
 }
 /* Paste button */
-#paste-button .toolbarbutton-icon,
-#appMenu-paste-button .toolbarbutton-icon {
+#paste-button,
+#appMenu-paste-button {
 	list-style-image: url("../icons/edit-paste-symbolic.svg") !important;
 }
 /* Overflow button */
-#nav-bar-overflow-button .toolbarbutton-icon {
+#nav-bar-overflow-button {
 	list-style-image: url("../icons/view-more-horizontal-symbolic.svg") !important;
 }
 /* Glitch - animations (may be possible to fix in about:config)
