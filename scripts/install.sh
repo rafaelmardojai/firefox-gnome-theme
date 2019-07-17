@@ -23,7 +23,11 @@ if test -z "$PROFILENAME"
 fi
 
 # Enter Firefox profile folder.
-cd $PROFILEFOLDER
+if ! cd $PROFILEFOLDER ; then
+    echo "Error entering profile folder."
+	exit 1
+fi
+
 echo "Installing theme in $PWD"
 
 # Create a chrome directory if it doesn't exist.
