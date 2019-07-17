@@ -99,15 +99,41 @@ git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-g
 11. Be happy with your new gnomish Firefox.
 
 ## Enabling optional features
-Open `userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome` directly in your `chrome` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
+Open `chrome/firefox-gnome-theme/userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome.css` directly in your `chrome/firefox-gnome-theme` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
+
+Alternatively you can run installation script with `-g` flag to auto install GNOMISH features.
+
+```sh
+./scripts/install.sh -g
+```
+
+*Those features are not included by default, because can introduce bugs or Firefox functionalities lost.*
+
+- **hide-single-tab.css** *GNOMISH*
+
+	Hide the tab bar when only one tab is open.
+
+	You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
+
+- **matching-autocomplete-width.css** *GNOMISH*
+
+	Limit the URL bar's autocompletion popup's width to the URL bar's width.
+
+- **system-icons.css**
+
+	Use system theme icons instead of Adwaita icons included by theme.
+
+- **symbolic-tab-icons.css**
+
+	Make all tab icons look kinda like symbolic icons.
 
 ## Known bugs
 
 ### CSD have sharp corners
 See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 
-### Icons color broken with gnome-icons.css
-Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them in the `theme/colors/light.css` or `theme/colors/dark.css` files, look for `--gnome-icons-hack-filter` var and play with css filters.
+### Icons color broken with system-icons.css
+Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them directly in the `system-icons.css` file, look for `--gnome-icons-hack-filter` & `--gnome-window-icons-hack-filter` vars and play with css filters.
 
 ## Development
 
