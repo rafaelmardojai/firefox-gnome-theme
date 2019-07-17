@@ -192,7 +192,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 }
 /* New window button */
 #new-window-button {
-	list-style-image: url("../icons/window-new-symbolic.svg.svg") !important;
+	list-style-image: url("../icons/window-new-symbolic.svg") !important;
 }
 /* History button */
 #history-panelmenu {
