@@ -5,6 +5,7 @@
 /* Built-in firefox icons color */
 .toolbarbutton-icon {
 	fill: var(--gnome-toolbar-color);
+	fill-opacity: 1;
 }
 
 /* Popovers subview menu arrow */
