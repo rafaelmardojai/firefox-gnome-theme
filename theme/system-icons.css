@@ -125,9 +125,11 @@
 	list-style-image: url("moz-icon://stock/preferences-system-time-symbolic?size=dialog") !important;
 }
 /* All tabs button */
+#alltabs-button {
+	list-style-image: url("moz-icon://stock/pan-down-symbolic?size=dialog") !important;
+}
 #alltabs-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/pan-down-symbolic?size=dialog") !important;
 }
 /* Cut button */
 #cut-button .toolbarbutton-icon {
