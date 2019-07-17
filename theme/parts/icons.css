@@ -8,6 +8,14 @@
 	fill-opacity: 1;
 }
 
+/* Tabs scroll icons */
+#TabsToolbar .scrollbutton-up {
+	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+}
+#TabsToolbar .scrollbutton-down {
+	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+}
+
 /* Popovers subview menu arrow */
 .PanelUI-subView .subviewbutton-nav::after {
     content: "" !important;

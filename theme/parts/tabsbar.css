@@ -220,6 +220,11 @@ tab[selected]:-moz-window-inactive {
 	border-bottom: 3px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
 }
 
+/* Tabs scroll buttons hover */
+#TabsToolbar .scrollbutton-up:not([disabled]):hover, #TabsToolbar .scrollbutton-down:not([disabled]):hover {
+	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
+}
+
 /* Full width tabs */
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
