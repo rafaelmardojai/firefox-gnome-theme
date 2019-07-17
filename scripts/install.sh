@@ -1,7 +1,7 @@
 #!/bin/bash
 
 THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
-FIREFOXFOLDER=~/.mozilla/firefox/
+FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 GNOMISHEXTRAS=false
 
@@ -17,7 +17,7 @@ done
 # Define profile folder path.
 if test -z "$PROFILENAME" 
 	then
-		PROFILEFOLDER="$FIREFOXFOLDER/*.default"
+		PROFILEFOLDER="$FIREFOXFOLDER/*.default*"
 	else
 		PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
 fi
