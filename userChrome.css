@@ -8,16 +8,16 @@
  * the beginning of the line. To disable it, put the "/*" back.
  */
 
-/* Hide the tab bar when only one tab is open 
+/* Hide the tab bar when only one tab is open (GNOMISH)
  * You should move the new tab button somewhere else for this to work, because by
  * default it is on the tab bar too. */
 /*@import "theme/hide-single-tab.css"; /**/
 
-/* Limit the URL bar's autocompletion popup's width to the URL bar's width */
+/* Limit the URL bar's autocompletion popup's width to the URL bar's width (GNOMISH) */
 /*@import "theme/matching-autocomplete-width.css"; /**/
 
-/* Use GNOME stack icons */
-/*@import "theme/gnome-icons.css"; /**/
+/* Use system theme icons instead of Adwaita icons included by theme */
+/*@import "theme/system-icons.css"; /**/
 
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "theme/symbolic-tab-icons.css"; /**/
