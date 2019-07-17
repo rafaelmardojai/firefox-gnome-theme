@@ -13,11 +13,6 @@
 	background: none !important;
 }
 
-.toolbarbutton-icon {
-	color: var(--gnome-toolbar-color);
-	fill: var(--gnome-toolbar-color);
-}
-
 #nav-bar, #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
 	border: 0 !important;
 	background: var(--gnome-toolbar-background) !important;

@@ -65,7 +65,6 @@
 }
 :root[tabsintitlebar] #titlebar .titlebar-button .toolbarbutton-icon,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {
-	filter: var(--gnome-window-icons-hack-filter) !important;
 	width: 16px;
 }
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button .toolbarbutton-icon,
@@ -84,23 +83,6 @@
 	background: var(--gnome-button-active-background);
 	box-shadow: var(--gnome-button-active-box-shadow);
 	border-color: var(--gnome-button-active-border-color) !important;
-}
-
-/* Use stack icons for window buttons */
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon {
-	list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
-}
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon {
-	list-style-image: url("moz-icon://stock/window-maximize-symbolic?size=dialog") !important;
-}
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon {
-	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=dialog") !important;
-}
-:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
-	list-style-image: url("moz-icon://stock/view-restore-symbolic?size=dialog") !important;
 }
 
 /* Remove close and minimize buttons from fullscreen buttons */

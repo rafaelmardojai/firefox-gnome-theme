@@ -1,0 +1,310 @@
+/* Replace icons */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Built-in firefox icons color */
+.toolbarbutton-icon {
+	fill: var(--gnome-toolbar-color);
+}
+
+/* Popovers subview menu arrow */
+.PanelUI-subView .subviewbutton-nav::after {
+    content: "" !important;
+	background: url("../icons/pan-start-symbolic.svg");
+	background-size: contain;
+	height: 16px;
+	width: 16px;
+	margin-top: -2px !important;
+}
+
+/* Popovers subview back button */
+.subviewbutton-back {
+	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+}
+
+/* Sub menu arrow */
+.menu-right {
+	-moz-appearance: none !important;
+	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
+	width: 16px !important;
+    height: 16px !important;
+}
+menu[disabled] > .menu-right {
+	opacity: 0.3;
+}
+@media (prefers-color-scheme: light) {
+	menu:not([disabled]):hover > .menu-right,
+	menu[open] > .menu-right {
+		filter: invert(100%) brightness(200%);
+	}
+}
+
+/* Arrow down buttons */
+.expander-down > .button-box,
+#sidebar-switcher-arrow,
+#viewButton .button-menu-dropmarker {
+	-moz-appearance: none !important;
+    list-style-image: url("../icons/pan-down-symbolic.svg") !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+.menulist-label-box:after {
+	content: url("../icons/pan-down-symbolic.svg") !important;
+}
+
+/* Arrow up buttons */
+.expander-up > .button-box {
+	-moz-appearance: none !important;
+    list-style-image: url("../icons/pan-up-symbolic.svg") !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Search entries */
+#urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
+.searchbar-search-icon,
+#search-box .textbox-search-sign {
+    list-style-image: url(../icons/edit-find-symbolic.svg) !important;
+	opacity: 0.7 !important;
+}
+#search-box .textbox-search-sign {
+	width: 16px !important;
+	margin: 2px 0;
+}
+
+/* Tree views */
+treechildren::-moz-tree-twisty {
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
+	width: 16px !important;
+    height: 16px !important;
+}
+treechildren::-moz-tree-twisty(open) {
+	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
+}
+treechildren::-moz-tree-twisty(selected, focus) {
+	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+}
+treechildren::-moz-tree-twisty(selected, focus, open) {
+	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+}
+
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty {
+	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+}
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
+	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+}
+
+/* Toolbars close button */
+.close-icon:not(.tab-close-button) {
+	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+}
+
+/* Window buttons */
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon {
+	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+}
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon {
+	list-style-image: url("../icons/window-maximize-symbolic.svg") !important;
+}
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon {
+	list-style-image: url("../icons/window-minimize-symbolic.svg") !important;
+}
+:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
+	list-style-image: url("../icons/view-restore-symbolic.svg") !important;
+}
+
+/* Private browsing button */
+#privatebrowsing-button .toolbarbutton-icon {
+	list-style-image: url("../icons/user-not-tracked.svg") !important;
+}
+/* Sidebar button */
+#sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, #sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon {
+    list-style-image: url("../icons/toggle-sidebar-symbolic.svg") !important;
+}
+#sidebar-button  .toolbarbutton-icon {
+    list-style-image: url("../icons/toggle-right-sidebar-symbolic.svg");
+}
+/* Back button */	
+#nav-bar #back-button .toolbarbutton-icon,
+#context-back .menu-iconic-icon { 
+	list-style-image: url("../icons/go-previous-symbolic.svg") !important;
+}
+/* Forward button */	
+#nav-bar #forward-button .toolbarbutton-icon,
+#context-forward .menu-iconic-icon { 
+	list-style-image: url("../icons/go-next-symbolic.svg") !important;
+}
+/* Menu button */
+#PanelUI-menu-button .toolbarbutton-icon {
+	list-style-image: url("../icons/open-menu-symbolic.svg") !important;
+}
+/* New tab button */
+#new-tab-button .toolbarbutton-icon {
+	list-style-image: url("../icons/tab-new-symbolic.svg") !important;
+}
+/* Home button */
+#home-button .toolbarbutton-icon {
+	list-style-image: url("../icons/user-home-symbolic.svg") !important;
+}
+/* Preferences button */
+#preferences-button .toolbarbutton-icon {
+	list-style-image: url("../icons/preferences-system-symbolic.svg") !important;
+}
+/* Fullscreen button */
+#fullscreen-button .toolbarbutton-icon,
+#appMenu-fullscreen-button .toolbarbutton-icon {
+	list-style-image: url("../icons/view-fullscreen-symbolic.svg") !important;
+}
+/* Zoom out button */
+#zoom-out-button .toolbarbutton-icon,
+#appMenu-zoomReduce-button .toolbarbutton-icon {
+	list-style-image: url("../icons/zoom-out-symbolic.svg") !important;
+}
+/* Zoom in button */
+#zoom-in-button .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button .toolbarbutton-icon {
+	list-style-image: url("../icons/zoom-in-symbolic.svg") !important;
+}
+/* Developer button */
+#developer-button .toolbarbutton-icon {
+	list-style-image: url("../icons/applications-engineering-symbolic.svg") !important;
+}
+/* Email link button */
+#email-link-button .toolbarbutton-icon {
+	list-style-image: url("../icons/mail-unread-symbolic.svg") !important;
+}
+/* Print button */
+#print-button .toolbarbutton-icon {
+	list-style-image: url("../icons/printer-symbolic.svg") !important;
+}
+/* Addons button */
+#add-ons-button .toolbarbutton-icon {
+	list-style-image: url("../icons/application-x-addon-symbolic.svg") !important;
+}
+/* Find button */
+#find-button .toolbarbutton-icon {
+	list-style-image: url("../icons/edit-find-symbolic.svg") !important;
+}
+/* New window button */
+#new-window-button .toolbarbutton-icon {
+	list-style-image: url("../icons/window-new-symbolic.svg.svg") !important;
+}
+/* History button */
+#history-panelmenu .toolbarbutton-icon {
+	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
+}
+/* All tabs button */
+#alltabs-button .toolbarbutton-icon {
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
+}
+/* Cut button */
+#cut-button .toolbarbutton-icon,
+#appMenu-cut-button .toolbarbutton-icon {
+	list-style-image: url("../icons/edit-cut-symbolic.svg") !important;
+}
+/* Copy button */
+#copy-button .toolbarbutton-icon,
+#appMenu-copy-button .toolbarbutton-icon {
+	list-style-image: url("../icons/edit-copy-symbolic.svg") !important;
+}
+/* Paste button */
+#paste-button .toolbarbutton-icon,
+#appMenu-paste-button .toolbarbutton-icon {
+	list-style-image: url("../icons/edit-paste-symbolic.svg") !important;
+}
+/* Overflow button */
+#nav-bar-overflow-button .toolbarbutton-icon {
+	list-style-image: url("../icons/view-more-horizontal-symbolic.svg") !important;
+}
+/* Glitch - animations (may be possible to fix in about:config)
+#reload-button .toolbarbutton-icon { /* Reload button
+	list-style-image: url("../icons/view-refresh-symbolic.svg") !important;
+}
+#stop-button .toolbarbutton-icon { /* Stop button
+	list-style-image: url("../icons/process-stop-symbolic.svg") !important;
+}
+#downloads-button { /* Downloads button / Glitch - it swaps to the default one anyway
+	list-style-image: url("../icons/folder-download-symbolic.svg") !important;
+}
+*/
+
+/* Invert icons color in dark variant */
+@media (prefers-color-scheme: dark) {
+	.PanelUI-subView .subviewbutton-nav::after,
+	.subviewbutton-back .toolbarbutton-icon,
+
+	.menu-right,
+
+	#urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
+	.searchbar-search-icon,
+	#search-box .textbox-search-sign,
+
+	.menulist-label-box:after,
+	.expander-down image,
+	.expander-up image,
+	#sidebar-switcher-arrow,
+	#viewButton .button-menu-dropmarker,
+	
+	.close-icon:not(.tab-close-button) image,
+	
+	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
+	:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon,
+	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
+	:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon,
+	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
+	:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon,
+	:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon,
+	
+	#privatebrowsing-button .toolbarbutton-icon,
+	#sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, 
+	#sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon 
+	#sidebar-button  .toolbarbutton-icon,
+	#nav-bar #back-button .toolbarbutton-icon,
+	#context-back .menu-iconic-icon,
+	#nav-bar #forward-button .toolbarbutton-icon,
+	#context-forward .menu-iconic-icon,
+	#PanelUI-menu-button .toolbarbutton-icon,
+	#new-tab-button .toolbarbutton-icon,
+	#home-button .toolbarbutton-icon,
+	#preferences-button .toolbarbutton-icon,
+	#fullscreen-button .toolbarbutton-icon,
+	#appMenu-fullscreen-button .toolbarbutton-icon,
+	#zoom-out-button .toolbarbutton-icon,
+	#appMenu-zoomReduce-button .toolbarbutton-icon,
+	#zoom-in-button .toolbarbutton-icon,
+	#appMenu-zoomEnlarge-button .toolbarbutton-icon,
+	#developer-button .toolbarbutton-icon,
+	#email-link-button .toolbarbutton-icon,
+	#print-button .toolbarbutton-icon,
+	#add-ons-button .toolbarbutton-icon,
+	#find-button .toolbarbutton-icon,
+	#new-window-button .toolbarbutton-icon,
+	#history-panelmenu .toolbarbutton-icon,
+	#alltabs-button .toolbarbutton-icon,
+	#cut-button .toolbarbutton-icon,
+	#appMenu-cut-button .toolbarbutton-icon,
+	#copy-button .toolbarbutton-icon,
+	#appMenu-copy-button .toolbarbutton-icon,
+	#paste-button .toolbarbutton-icon,
+	#appMenu-paste-button .toolbarbutton-icon,
+	#nav-bar-overflow-button .toolbarbutton-icon {
+		filter: invert(100%) brightness(200%);
+	}
+	
+	/* Tree views */
+	treechildren::-moz-tree-twisty {
+		list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
+	}
+	treechildren::-moz-tree-twisty(open) {
+		list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+	}
+	
+	/* Fix for extensions icons */	
+	.webextension-browser-action {
+    	list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
+	}
+}
