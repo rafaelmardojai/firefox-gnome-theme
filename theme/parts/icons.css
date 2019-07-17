@@ -261,7 +261,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	
 	#privatebrowsing-button .toolbarbutton-icon,
 	#sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, 
-	#sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon 
+	#sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon,
 	#sidebar-button  .toolbarbutton-icon,
 	#nav-bar #back-button .toolbarbutton-icon,
 	#context-back .menu-iconic-icon,
