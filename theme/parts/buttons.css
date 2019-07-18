@@ -88,7 +88,7 @@
 }
 
 /* Hover buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):hover,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):not([checked]):hover,
 .subviewbutton.panel-subview-footer:hover,
 .panel-footer button:hover,
 #downloadsHistory:hover,
@@ -114,6 +114,7 @@ menulist:hover .menulist-label-box,
 /* Active buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):not(#hack):active,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[checked],
 .subviewbutton.panel-subview-footer:active,
 .panel-footer button:active,
 #downloadsHistory:active,
