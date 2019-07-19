@@ -117,7 +117,7 @@
 /* New window button */
 #new-window-button .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
-	list-style-image: url("moz-icon://stock/window-new-symbolic?size=dialog?size=dialog") !important;
+	list-style-image: url("moz-icon://stock/window-new-symbolic?size=dialog") !important;
 }
 /* History button */
 #history-panelmenu .toolbarbutton-icon {
