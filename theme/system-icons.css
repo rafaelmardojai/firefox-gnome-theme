@@ -119,6 +119,11 @@
 	filter: var(--gnome-icons-hack-filter);
 	list-style-image: url("moz-icon://stock/window-new-symbolic?size=dialog") !important;
 }
+/* Bookmarks menu button */
+#bookmarks-menu-button .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+	list-style-image: url("moz-icon://stock/starred-symbolic?size=dialog") !important;
+}
 /* History button */
 #history-panelmenu .toolbarbutton-icon {
 	filter: var(--gnome-icons-hack-filter);
