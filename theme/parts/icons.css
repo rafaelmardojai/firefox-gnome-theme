@@ -202,6 +202,10 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 #new-window-button {
 	list-style-image: url("../icons/window-new-symbolic.svg") !important;
 }
+/* Bookmarks menu button */
+#bookmarks-menu-button {
+	list-style-image: url("../icons/starred-symbolic.svg") !important;
+}
 /* History button */
 #history-panelmenu {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
