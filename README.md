@@ -6,16 +6,15 @@
 [![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
 
-<p align="center">A GNOME theme for Firefox</p>
+<p align="center"><strong>A GNOME theme for Firefox</strong></p>
 
-<p align="center"><em>(This theme follows lastest GNOME default gtk theme adwaita)</em></p>
+<p align="center">This theme follows lastest GNOME Adwaita style.</p>
 
 ![Screenshot of the theme](screenshot.png)
 
 ## Description
 
-This is a bunch of CSS code to make Firefox look closer to GNOME's default
-theme.
+This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
 The `master` branch track current Firefox and GNOME stable.
 
@@ -38,7 +37,7 @@ This theme is supposed to work with current supported Firefox releases:
 ### Installation script
 ```sh
 git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-gnome-theme
-./scripts/install.sh -g
+./scripts/install.sh
 ```
 
 #### Script options
@@ -161,7 +160,7 @@ Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
 
 ## Credits
-Developed by **Rafael Mardojai** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Sai Kurogetsu](https://github.com/kurogetsusai/firefox-gnome-theme)** original work.
+Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Sai Kurogetsu](https://github.com/kurogetsusai/firefox-gnome-theme)** original work.
 
 ## Donate
 If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM). Also consider donating upstream, [Firefox](https://donate.mozilla.org/) & [GNOME](https://www.gnome.org/support-gnome/).
