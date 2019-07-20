@@ -103,6 +103,10 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
 	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
 }
+/* Sidebar: History: clock icon */
+#historyTree treechildren::-moz-tree-image {
+	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
+}
 
 /* Toolbars close button */
 .close-icon:not(.tab-close-button) {
@@ -315,6 +319,9 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	}
 	treechildren::-moz-tree-twisty(open) {
 		list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
+	}
+	#historyTree treechildren::-moz-tree-image {
+		list-style-image: url("../icons/preferences-system-time-symbolic-light.svg") !important;
 	}
 	
 	/* Fix for extensions icons */	
