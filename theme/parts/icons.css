@@ -296,6 +296,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	#add-ons-button .toolbarbutton-icon,
 	#find-button .toolbarbutton-icon,
 	#new-window-button .toolbarbutton-icon,
+	#bookmarks-menu-button .toolbarbutton-icon,
 	#history-panelmenu .toolbarbutton-icon,
 	#alltabs-button .toolbarbutton-icon,
 	#cut-button .toolbarbutton-icon,
