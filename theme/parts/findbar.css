@@ -42,6 +42,6 @@ hbox[anonid="findbar-textbox-wrapper"] {
 		margin-left: 0 !important;
 	}
 	.findbar-find-status, .found-matches {
-		order: 0;
+		order: 0 !important;
 	}
 }
