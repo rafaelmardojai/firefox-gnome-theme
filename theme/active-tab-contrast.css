@@ -1,0 +1,10 @@
+/* Better active tab contrast */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.tab-background[selected=true],
+:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
+	background: var(--gnome-tabbar-tab-active-background-contrast) !important;
+	border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color-contrast) !important;
+}
+

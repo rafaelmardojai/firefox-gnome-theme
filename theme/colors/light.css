@@ -88,7 +88,9 @@
 	--gnome-tabbar-tab-hover-border-bottom-color: #b6b6b3;
 	--gnome-tabbar-tab-hover-color: rgb(93, 98, 99);
 	--gnome-tabbar-tab-active-background: #eae8e6;
+	--gnome-tabbar-tab-active-background-contrast: #F7F5F3;
 	--gnome-tabbar-tab-active-border-bottom-color: #4a90d9;
+	--gnome-tabbar-tab-active-border-bottom-color-contrast: #4a90d9;
 	--gnome-tabbar-tab-active-color: rgb(46, 52, 54);
 	--gnome-tabbar-tab-active-hover-background: #e6e6e6;
 	--gnome-inactive-tabbar-tab-color: #8b8e8f;

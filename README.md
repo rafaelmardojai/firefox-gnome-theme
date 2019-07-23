@@ -118,6 +118,10 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 
 	Limit the URL bar's autocompletion popup's width to the URL bar's width.
 
+- **active-tab-contrast.css**
+
+	Active tab better contrast.
+
 - **system-icons.css**
 
 	Use system theme icons instead of Adwaita icons included by theme.
