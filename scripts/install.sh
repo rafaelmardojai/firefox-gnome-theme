@@ -24,7 +24,7 @@ fi
 
 # Enter Firefox profile folder.
 if ! cd $PROFILEFOLDER ; then
-    echo "Error entering profile folder."
+	echo "Error entering profile folder."
 	exit 1
 fi
 
@@ -47,7 +47,7 @@ sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 # If GNOMISH extras enabled, import it in customChrome.css.
 if [ "$GNOMISHEXTRAS" = true ] ; then
 	echo "Enabling GNOMISH extra features"
-    [[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
+	[[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
 	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' firefox-gnome-theme/customChrome.css
 	sed -i '2s/^/@import "theme\/matching-autocomplete-width.css";\n/' firefox-gnome-theme/customChrome.css
 fi
