@@ -1,0 +1,32 @@
+/* Sidebar */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+#sidebar-box, .sidebar-panel {
+	background: var(--gnome-sidebar-background) !important;
+}
+#sidebar-box:-moz-window-inactive, .sidebar-panel:-moz-window-inactive {
+	background: var(--gnome-inactive-sidebar-background) !important;
+}
+#sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
+.sidebar-panel:-moz-window-inactive label, .sidebar-panel:-moz-window-inactive image,
+.sidebar-placesTreechildren:-moz-window-inactive {
+	opacity: 0.7 !important;
+}
+#sidebar-splitter {
+	background: var(--gnome-toolbar-border-color) !important;
+	border: 0 !important;
+	width: 1px !important;
+}
+#sidebar-splitter:-moz-window-inactive {
+	background: var(--gnome-inactive-toolbar-border-color) !important;
+}
+
+#sidebar-header {
+	padding: 6px !important;
+	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+}
+#sidebar-search-container {
+	padding: 6px !important;
+}
+
