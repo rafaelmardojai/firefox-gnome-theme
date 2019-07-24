@@ -102,6 +102,10 @@ Both manual and script installation methods should create a git clone in `your-p
 
 > Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
 
+## Uninstalling/removing the theme
+- Go to your profile folder (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory).
+- Remove `chrome` folder.
+
 ## Enabling optional features
 Open `chrome/firefox-gnome-theme/userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome.css` directly in your `chrome/firefox-gnome-theme` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
 
