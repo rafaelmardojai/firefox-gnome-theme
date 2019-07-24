@@ -156,7 +156,8 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	list-style-image: url("../icons/open-menu-symbolic.svg") !important;
 }
 /* New tab button */
-#new-tab-button {
+#new-tab-button,
+.tabs-newtab-button {
 	list-style-image: url("../icons/tab-new-symbolic.svg") !important;
 }
 /* Home button */
@@ -286,6 +287,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	#context-forward .menu-iconic-icon,
 	#PanelUI-menu-button .toolbarbutton-icon,
 	#new-tab-button .toolbarbutton-icon,
+	.tabs-newtab-button .toolbarbutton-icon,
 	#home-button .toolbarbutton-icon,
 	#preferences-button .toolbarbutton-icon,
 	#fullscreen-button .toolbarbutton-icon,
