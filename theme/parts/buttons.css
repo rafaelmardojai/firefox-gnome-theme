@@ -112,9 +112,9 @@ menulist:hover .menulist-label-box,
 }
 
 /* Active buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):not(#hack):active,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open],
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[checked],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):not(#hack):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled])[open],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled])[checked],
 .subviewbutton.panel-subview-footer:active,
 .panel-footer button:active,
 #downloadsHistory:active,
