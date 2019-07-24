@@ -62,6 +62,14 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	display: none !important;
 }
 
+/* Use --arrowpanel-background for popover background when content is remote */
+panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrowcontent {
+	background: var(--arrowpanel-background) !important;
+}
+panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrow  {
+	fill: var(--arrowpanel-background) !important;
+}
+
 /* Style popovers menu buttons */
 .subviewbutton, .toolbarbutton-1 {
 	border-radius: 3px !important;	
