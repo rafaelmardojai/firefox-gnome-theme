@@ -20,11 +20,11 @@ The `master` branch track current Firefox and GNOME stable.
 
 This theme is supposed to work with current supported Firefox releases:
 
-- Firefox 68.0
-- Firefox 68 ESR
+- Firefox 68
 - Firefox 60 ESR
-- Firefox 69.0 Beta
-- Firefox 70.0 Nightly
+- Firefox 68 ESR
+- Firefox 69 Beta
+- Firefox 70 Nightly
 
 ***Firefox 60 ESR issues:***
 
