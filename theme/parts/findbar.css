@@ -23,6 +23,9 @@ hbox[anonid="findbar-textbox-wrapper"] {
 .findbar-textbox {
 	margin-left: 60px !important;
 }
+.findbar-textbox.minimal {
+	margin: 0 auto !important;
+}
 
 .findbar-find-status:not(:-moz-only-whitespace), .found-matches[hidden] ~ .findbar-find-status, .found-matches {
 	flex: 1;
