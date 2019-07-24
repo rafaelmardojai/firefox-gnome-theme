@@ -8,11 +8,11 @@
 #search-box,
 .findbar-textbox {
 	-moz-appearance: none !important;
-	background: var(--gnome-urlbar-background) !important;
-	border: 1px solid var(--gnome-urlbar-border-color) !important;
+	background: var(--gnome-entry-background) !important;
+	border: 1px solid var(--gnome-entry-border-color) !important;
 	border-radius: 5px !important;
-	box-shadow: var(--gnome-urlbar-box-shadow) !important;
-	color: var(--gnome-urlbar-color) !important;
+	box-shadow: var(--gnome-entry-box-shadow) !important;
+	color: var(--gnome-entry-color) !important;
 	height: 34px !important;
 	max-height: 34px !important;
 	margin: 0 !important;
@@ -36,10 +36,10 @@
 #searchbar:-moz-window-inactive,
 #search-box:-moz-window-inactive,
 .findbar-textbox:-moz-window-inactive {
-	background: var(--gnome-inactive-urlbar-background) !important;
-	border-color: var(--gnome-inactive-urlbar-border-color) !important;
-	box-shadow: var(--gnome-inactive-urlbar-box-shadow) !important;
-	color: var(--gnome-inactive-urlbar-color) !important;
+	background: var(--gnome-inactive-entry-background) !important;
+	border-color: var(--gnome-inactive-entry-border-color) !important;
+	box-shadow: var(--gnome-inactive-entry-box-shadow) !important;
+	color: var(--gnome-inactive-entry-color) !important;
 }
 
 /* Entries combined */

@@ -70,15 +70,15 @@
 		--gnome-button-destructive-action-active-border-color: #851015;
 		--gnome-button-destructive-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 
-		/* URL bar */
-		--gnome-urlbar-background: linear-gradient(#2d2d2d, #2d2d2d);
-		--gnome-urlbar-border-color: #1b1b1b;
-		--gnome-urlbar-box-shadow: inset 0 0 0 1px rgba(21, 83, 158, 0);
-		--gnome-urlbar-color: #ffffff;
-		--gnome-inactive-urlbar-background: linear-gradient(#303030, #303030);
-		--gnome-inactive-urlbar-border-color: #202020;
-		--gnome-inactive-urlbar-box-shadow: none;
-		--gnome-inactive-urlbar-color: #d6d6d6;
+		/* Entries */
+		--gnome-entry-background: linear-gradient(#2d2d2d, #2d2d2d);
+		--gnome-entry-border-color: #1b1b1b;
+		--gnome-entry-box-shadow: inset 0 0 0 1px rgba(21, 83, 158, 0);
+		--gnome-entry-color: #ffffff;
+		--gnome-inactive-entry-background: linear-gradient(#303030, #303030);
+		--gnome-inactive-entry-border-color: #202020;
+		--gnome-inactive-entry-box-shadow: none;
+		--gnome-inactive-entry-color: #d6d6d6;
 		--gnome-focused-urlbar-border-color: #15539e;
 		--gnome-private-urlbar-background: #25003e;
 
