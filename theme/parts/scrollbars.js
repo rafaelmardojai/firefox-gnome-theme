@@ -38,7 +38,7 @@
 		border-style: solid !important;
 		display: flex !important;
 		justify-content: flex-end;
-		transition: all 0.2s ease;
+		transition: all 0.1s linear;
 	}
 	scrollbar[root="true"] {
 		z-index: 2147483647 !important;
