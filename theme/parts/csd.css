@@ -147,20 +147,6 @@
 	padding-bottom: 0 !important;
 }
 
-/* Allow window drag with headerbar buttons */
-:root[tabsintitlebar] #nav-bar *,
-:root[tabsintitlebar] #titlebar .titlebar-button,
-:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
-	-moz-window-dragging: drag;
-}
-
-:root[tabsintitlebar] #nav-bar .urlbar-input-box, 
-:root[tabsintitlebar] #nav-bar .urlbar-input-box *,
-#back-button,
-#forward-button{
-	-moz-window-dragging: no-drag !important;
-}
-
 /* FF 60 fixes */
 :root[tabsintitlebar] #titlebar[style="margin-bottom: -1px;"] {
     margin-bottom: -38px !important;

@@ -22,6 +22,10 @@
 /* Use system theme icons instead of Adwaita icons included by theme */
 /*@import "theme/system-icons.css"; /**/
 
+/* Allow drag window from headerbar buttons (GNOMISH) [BUGGED] 
+ * It can activate button action, with unpleasant behavior. */
+/*@import "theme/drag-window-headerbar-buttons.css"; /**/
+
 /* Make all tab icons look kinda like symbolic icons */
 /*@import "theme/symbolic-tab-icons.css"; /**/
 

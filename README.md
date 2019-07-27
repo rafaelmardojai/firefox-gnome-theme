@@ -135,6 +135,12 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 
 	Use system theme icons instead of Adwaita icons included by theme.
 
+- **drag-window-headerbar-buttons.css**
+
+	Allow drag window from headerbar buttons *GNOMISH* **[BUGGED]**
+
+	It can activate button action, with unpleasant behavior.
+
 - **symbolic-tab-icons.css**
 
 	Make all tab icons look kinda like symbolic icons.
