@@ -98,7 +98,11 @@ git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-g
 11. Be happy with your new gnomish Firefox.
 
 ## Updating
-Both manual and script installation methods should create a git clone in `your-profile-folder-path/chrome/firefox-gnome-theme`, so the easiet way to update the theme is to open this folder in terminal and perform a git pull `git pull origin master`.
+Both manual and script installation methods should create a git clone in `your-profile-folder-path/chrome/firefox-gnome-theme`, so the easiet way to update the theme is to open this folder in terminal and perform a git pull.
+
+```sh
+git pull origin master
+```
 
 > Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
 
