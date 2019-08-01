@@ -127,3 +127,13 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 #confirmation-hint-message {
 	color: white !important;
 }
+
+/* Identity popup */
+#identity-popup-security,
+.identity-popup-section,
+#identity-popup-security-expander .button-box {
+	border: 0 !important;
+}
+#identity-popup-permissions-content {
+	padding-right: 0 !important;
+}
