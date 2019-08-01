@@ -30,6 +30,7 @@
 .menulist-label-box,
 .expander-down, .expander-up,
 .notification-button,
+#protections-popup-settings-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -62,6 +63,7 @@
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
 .notification-button,
+#protections-popup-settings-button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -110,6 +112,7 @@
 menulist:hover .menulist-label-box,
 .expander-down:hover, .expander-up:hover,
 .notification-button:hover,
+#protections-popup-settings-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -137,6 +140,7 @@ menulist:hover .menulist-label-box,
 menulist[open] .menulist-label-box,
 .expander-down:active, .expander-up:active,
 .notification-button:active,
+#protections-popup-settings-button:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -204,7 +208,8 @@ menulist[open] .menulist-label-box,
 .panel-footer button:not(:only-of-type):not(:last-of-type),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
 #context-navigation menuitem:not(:last-of-type),
-.findbar-container toolbarbutton.findbar-find-previous {
+.findbar-container toolbarbutton.findbar-find-previous,
+.findbar-button:not(:last-of-type) {
 	border-top-right-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
 	border-right-width: 0 !important;
@@ -218,7 +223,8 @@ menulist[open] .menulist-label-box,
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#appMenu-fullscreen-button),
 #context-navigation menuitem:not(:first-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,
-.findbar-container toolbarbutton.findbar-find-next {
+.findbar-container toolbarbutton.findbar-find-next,
+.findbar-button:not(:first-of-type) {
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 	margin-left: 0 !important;

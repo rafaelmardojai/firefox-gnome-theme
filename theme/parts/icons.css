@@ -25,6 +25,9 @@
 	width: 16px;
 	margin-top: -2px !important;
 }
+.protections-popup-category::after {
+    content: url("../icons/pan-start-symbolic.svg") !important;
+}
 
 /* Popovers subview back button */
 .subviewbutton-back {
@@ -253,6 +256,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 /* Invert icons color in dark variant */
 @media (prefers-color-scheme: dark) {
 	.PanelUI-subView .subviewbutton-nav::after,
+	.protections-popup-category::after,
 	.subviewbutton-back .toolbarbutton-icon,
 
 	.menu-right,

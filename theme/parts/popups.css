@@ -33,8 +33,9 @@ panel[type=arrow] {
 /* Style popovers */
 .panel-arrowcontent .panel-arrowcontent, 
 .panel-header, .PanelUI-subView,
-.panel-subview-body, #widget-overflow-mainView,
+.panel-subview-body, #widget-overflow-mainView, #protections-popup-footer,
 panelview {
+	border: 0 !important;
 	background: transparent !important;
 }
 panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
@@ -52,7 +53,7 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	stroke: var(--gnome-popover-border-color) !important;
 }
 
-.panel-footer {
+.panel-footer, #protections-popup-settings-section {
 	background-color: transparent !important;
 	display: flex;
 	justify-content: flex-end;
@@ -71,7 +72,7 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrow  {
 }
 
 /* Style popovers menu buttons */
-.subviewbutton, .toolbarbutton-1 {
+.subviewbutton, .toolbarbutton-1, .protections-popup-category {
 	border-radius: 3px !important;	
 	color: var(--gnome-toolbar-color) !important;
 }
@@ -84,7 +85,7 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrow  {
 	opacity: 0.5 !important;
 }
 
-.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover {
+.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:hover {
 	background: var(--gnome-popover-button-hover-background) !important;
 }
 

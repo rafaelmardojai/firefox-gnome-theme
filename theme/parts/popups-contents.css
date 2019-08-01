@@ -137,3 +137,29 @@ panelview vbox.panel-subview-body > toolbarbutton label {
 #identity-popup-permissions-content {
 	padding-right: 0 !important;
 }
+
+/* Protections popup */
+#protections-popup-mainView-panel-header {
+	border-radius: 5px;
+}
+.protections-popup-section {
+	border: 0 !important;
+}
+#protections-popup-settings-section {
+	-moz-box-align: right;
+	display: flex;
+	margin: 8px 0;
+}
+#protections-popup[hasException] #protections-popup-tp-switch-section {
+    background: transparent !important;
+}
+
+#protections-popup-content,
+#protections-popup-settings-section,
+#protections-popup-footer  {
+    padding: 0 !important;
+}
+
+#protections-popup-show-full-report-link {
+	margin-right: 16px !important;
+}

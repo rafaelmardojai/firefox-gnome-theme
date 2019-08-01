@@ -111,6 +111,9 @@
 #tracking-protection-preferences-button > .toolbarbutton-text {
     padding-inline-end: 0 !important;
 }
+.protections-popup-settings-label {
+    margin-inline-start: 3px !important;
+}
 
 /* Fix findbar buttons issues */
 .findbar-container .findbar-find-previous image,
