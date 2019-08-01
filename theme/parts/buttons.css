@@ -28,7 +28,8 @@
 .close-icon:not(.tab-close-button),
 #TabsToolbar .toolbarbutton-1,
 .menulist-label-box,
-.expander-down, .expander-up {
+.expander-down, .expander-up,
+.notification-button,
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -59,7 +60,8 @@
 #appMenu-popup .panel-banner-item,
 #appMenu-zoomReset-button:not(#appMenu-fxa-label):not(#hack),
 #tracking-protection-preferences-button:not(#hack),
-.findbar-container toolbarbutton.findbar-button {
+.findbar-container toolbarbutton.findbar-button,
+.notification-button,
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -106,7 +108,8 @@
 .close-icon:not(.tab-close-button):hover,
 #TabsToolbar .toolbarbutton-1:hover,
 menulist:hover .menulist-label-box,
-.expander-down:hover, .expander-up:hover {
+.expander-down:hover, .expander-up:hover,
+.notification-button:hover,
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -132,7 +135,8 @@ menulist:hover .menulist-label-box,
 .close-icon:not(.tab-close-button):active,
 #TabsToolbar .toolbarbutton-1:active, #TabsToolbar .toolbarbutton-1[open],
 menulist[open] .menulist-label-box,
-.expander-down:active, .expander-up:active {
+.expander-down:active, .expander-up:active,
+.notification-button:active,
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -164,7 +168,8 @@ menulist[open] .menulist-label-box,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive,
 .findbar-container toolbarbutton:-moz-window-inactive,
 #sidebar-switcher-target:-moz-window-inactive,
-#viewButton:-moz-window-inactive {	
+#viewButton:-moz-window-inactive,
+.notification-button:-moz-window-inactive {	
 	background: var(--gnome-inactive-button-background) !important;
 	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
 	border-color: var(--gnome-inactive-button-border-color) !important;
