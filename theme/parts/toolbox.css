@@ -13,8 +13,7 @@
 	background: none !important;
 }
 
-#nav-bar, #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar,
-.notificationbox-stack notification {
+#nav-bar, #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
 	border: 0 !important;
 	background: var(--gnome-toolbar-background) !important;
 	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
@@ -26,7 +25,7 @@
 findbar:-moz-window-inactive,
 .notificationbox-stack notification:-moz-window-inactive {
 	background: var(--gnome-inactive-toolbar-background) !important;
-	border-bottom: 1px solid var(--gnome-inactive-toolbar-border-color) !important;
+	border-color: var(--gnome-inactive-toolbar-border-color) !important;
 }
 
 #navigator-toolbox:-moz-window-inactive label, #navigator-toolbox:-moz-window-inactive image, 
@@ -87,5 +86,14 @@ findbar:-moz-window-inactive description,
 
 /* Content notifications */
 .notificationbox-stack notification {
+	border: 0 !important;
+	background: var(--gnome-toolbar-background) !important;	
 	padding: 6px !important;
+}
+
+.notificationbox-stack[notificationside="top"] notification {
+	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+}
+.notificationbox-stack[notificationside="bottom"] notification {
+	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
 }
