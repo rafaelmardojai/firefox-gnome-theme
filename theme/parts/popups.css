@@ -53,7 +53,7 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	stroke: var(--gnome-popover-border-color) !important;
 }
 
-.panel-footer, #protections-popup-settings-section {
+.panel-footer {
 	background-color: transparent !important;
 	display: flex;
 	justify-content: flex-end;

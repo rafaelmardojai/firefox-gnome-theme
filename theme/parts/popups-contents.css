@@ -156,9 +156,22 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 #protections-popup-content,
-#protections-popup-settings-section,
 #protections-popup-footer  {
     padding: 0 !important;
+}
+
+#protections-popup-footer  {
+    display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+#protections-popup-show-report-stack {
+	width: 100% !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 6px;
 }
 
 #protections-popup-show-full-report-link {
@@ -209,5 +222,3 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
     border-color: var(--gnome-switch-active-slider-border-color) !important;
 	left: 24px;
 }
-
-

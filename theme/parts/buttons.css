@@ -30,7 +30,7 @@
 .menulist-label-box,
 .expander-down, .expander-up,
 .notification-button,
-#protections-popup-settings-button {
+.protections-popup-footer-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -63,7 +63,7 @@
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
 .notification-button,
-#protections-popup-settings-button {
+.protections-popup-footer-button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -112,7 +112,7 @@
 menulist:hover .menulist-label-box,
 .expander-down:hover, .expander-up:hover,
 .notification-button:hover,
-#protections-popup-settings-button:hover {
+.protections-popup-footer-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -140,7 +140,7 @@ menulist:hover .menulist-label-box,
 menulist[open] .menulist-label-box,
 .expander-down:active, .expander-up:active,
 .notification-button:active,
-#protections-popup-settings-button:active {
+.protections-popup-footer-button:not(#hack):active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -182,7 +182,8 @@ menulist[open] .menulist-label-box,
 /* Flat buttons */
 .subviewbutton-back:not(#hack),
 .close-icon:not(.tab-close-button),
-#TabsToolbar .toolbarbutton-1 {
+#TabsToolbar .toolbarbutton-1,
+#protections-popup-show-report-button {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
@@ -190,7 +191,8 @@ menulist[open] .menulist-label-box,
 }
 .subviewbutton-back:not(#hack):not(:active):hover,
 .close-icon:not(.tab-close-button):not(:active):hover,
-#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover {
+#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover,
+#protections-popup-show-report-button:not(:active):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
