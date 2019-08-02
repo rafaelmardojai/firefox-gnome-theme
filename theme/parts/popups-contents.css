@@ -25,10 +25,10 @@
 }
 
 /* Main menu remove items icons */
-panelview vbox.panel-subview-body > toolbarbutton image {
+panelview vbox.panel-subview-body > toolbarbutton image, #appMenu-protection-report-icon {
 	display: none;
 }
-panelview vbox.panel-subview-body > toolbarbutton label {
+panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-report-text {
 	padding-inline-start: 0 !important;
 }
 #appMenu-zoom-controls > spacer,
