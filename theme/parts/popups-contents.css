@@ -140,6 +140,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 
 /* Protections popup */
 #protections-popup-mainView-panel-header {
+	background: var(--gnome-button-suggested-action-background) !important;
 	border-radius: 5px;
 }
 .protections-popup-section {
