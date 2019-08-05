@@ -3,9 +3,11 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Built-in firefox icons color */
-.toolbarbutton-icon {
-	fill: var(--gnome-toolbar-color);
-	fill-opacity: 1;
+.toolbarbutton-icon,
+.protections-popup-category-icon,
+.protections-popup-footer-icon {
+	fill: var(--gnome-toolbar-color) !important;
+	fill-opacity: 1 !important;
 }
 
 /* Tabs scroll icons */

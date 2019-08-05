@@ -140,19 +140,26 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 
 /* Protections popup */
 #protections-popup-mainView-panel-header {
-	background: var(--gnome-button-suggested-action-background) !important;
+	background: var(--gnome-button-suggested-action-background) !important;	
 	border-radius: 5px;
+	min-height: 34px !important;
 }
 .protections-popup-section {
 	border: 0 !important;
 }
-#protections-popup-settings-section {
-	-moz-box-align: right;
-	display: flex;
-	margin: 8px 0;
-}
+
 #protections-popup[hasException] #protections-popup-tp-switch-section {
     background: transparent !important;
+}
+
+#protections-popup-category-list {
+    margin: 0 !important;
+}
+.protections-popup-category-label {
+    margin-inline-start: 6px !important;
+}
+.protections-popup-category-state-label {
+	opacity: 0.7;
 }
 
 #protections-popup-content,
