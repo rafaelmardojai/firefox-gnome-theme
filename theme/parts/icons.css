@@ -30,6 +30,9 @@
 .protections-popup-category::after {
     content: url("../icons/pan-start-symbolic.svg") !important;
 }
+#identity-popup-security-expander .button-icon {
+	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+}
 
 /* Popovers subview back button */
 .subviewbutton-back {
@@ -113,9 +116,13 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
 }
 
-/* Toolbars close button */
-.close-icon:not(.tab-close-button) {
+/* Close button */
+.close-icon:not(.tab-close-button),
+.identity-popup-permission-remove-button .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+}
+.identity-popup-permission-remove-button .button-icon { /* Destructive action, always white */
+	filter: invert(100%) brightness(200%);
 }
 
 /* Window buttons */
@@ -259,6 +266,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 @media (prefers-color-scheme: dark) {
 	.PanelUI-subView .subviewbutton-nav::after,
 	.protections-popup-category::after,
+	#identity-popup-security-expander .button-icon,
 	.subviewbutton-back .toolbarbutton-icon,
 
 	.menu-right,
