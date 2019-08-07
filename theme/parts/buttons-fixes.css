@@ -155,6 +155,9 @@ menulist {
 }
 
 /* Identity popup expander button */
+#identity-popup-security {
+	-moz-box-align: center;
+}
 #identity-popup-security-expander {
 	width: 34px !important;
 }

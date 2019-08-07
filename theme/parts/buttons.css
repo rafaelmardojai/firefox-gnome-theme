@@ -291,12 +291,12 @@ button.popup-notification-primary-button.popup-notification-button:active,
 }
 
 #editBookmarkPanelRemoveButton:hover,
-.identity-popup-permission-remove-button:hover {
-	background: var(--gnome-button-destructive-action-hover-background) !important;	
+.identity-popup-permission-remove-button:not(#hack):hover {
+	background: var(--gnome-button-destructive-action-hover-background) !important;
 }
 
 #editBookmarkPanelRemoveButton:active,
-.identity-popup-permission-remove-button:active {
+.identity-popup-permission-remove-button:not(#hack):active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
 	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
