@@ -148,3 +148,16 @@ menulist {
 .expander-down image, .expander-up image {
 	margin: 6px !important;
 }
+
+/* Identity popup delete permission button */
+.identity-popup-permission-remove-button {
+	opacity: 1 !important;
+}
+
+/* Identity popup expander button */
+#identity-popup-security-expander {
+	width: 34px !important;
+}
+#identity-popup-security-expander .button-icon {
+	margin: 0 !important;
+}

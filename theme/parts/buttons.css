@@ -10,7 +10,7 @@
 	border: 0 !important;
 }
 
-/* Buttons  */
+/* Buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
@@ -30,7 +30,9 @@
 .menulist-label-box,
 .expander-down, .expander-up,
 .notification-button,
-.protections-popup-footer-button {
+.protections-popup-footer-button,
+.identity-popup-permission-remove-button,
+#identity-popup-security-expander {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -43,6 +45,14 @@
 	min-height: 34px !important;
 	min-width: 34px !important;
 	color: var(--gnome-toolbar-color) !important;
+}
+
+/* Small buttons */
+.identity-popup-permission-remove-button {
+	height: 26px !important;
+	max-height: 26px !important;
+	min-height: 26px !important;
+	min-width: 26px !important;
 }
 
 /* Buttons with margins */
@@ -112,7 +122,9 @@
 menulist:hover .menulist-label-box,
 .expander-down:hover, .expander-up:hover,
 .notification-button:hover,
-.protections-popup-footer-button:hover {
+.protections-popup-footer-button:hover,
+.identity-popup-permission-remove-button:hover,
+#identity-popup-security-expander:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -140,7 +152,9 @@ menulist:hover .menulist-label-box,
 menulist[open] .menulist-label-box,
 .expander-down:active, .expander-up:active,
 .notification-button:active,
-.protections-popup-footer-button:not(#hack):active {
+.protections-popup-footer-button:not(#hack):active,
+.identity-popup-permission-remove-button:active,
+#identity-popup-security-expander:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -199,7 +213,8 @@ menulist[open] .menulist-label-box,
 }
 
 /* Circle buttons */
-#downloadsPanel-mainView .download-state .downloadButton {
+#downloadsPanel-mainView .download-state .downloadButton,
+.identity-popup-permission-remove-button {
 	border-radius: 100% !important;
 }
 
@@ -265,7 +280,8 @@ button.popup-notification-primary-button.popup-notification-button:active,
 }
 
 /* Buttons with destructive action */
-#editBookmarkPanelRemoveButton {
+#editBookmarkPanelRemoveButton,
+.identity-popup-permission-remove-button {
 	color: white !important;
 	background: var(--gnome-button-destructive-action-background) !important;
 	border-color: var(--gnome-button-destructive-action-border-color) !important;
@@ -274,11 +290,13 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	text-shadow: 0 -1px rgba(0, 0, 0, 0.558275) !important;
 }
 
-#editBookmarkPanelRemoveButton:hover {
+#editBookmarkPanelRemoveButton:hover,
+.identity-popup-permission-remove-button:hover {
 	background: var(--gnome-button-destructive-action-hover-background) !important;	
 }
 
-#editBookmarkPanelRemoveButton:active {
+#editBookmarkPanelRemoveButton:active,
+.identity-popup-permission-remove-button:active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
 	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;

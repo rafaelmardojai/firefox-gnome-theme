@@ -131,7 +131,8 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 /* Identity popup */
 #identity-popup-security,
 .identity-popup-section,
-#identity-popup-security-expander .button-box {
+#identity-popup-security-expander .button-box,
+.identity-popup-security-content {
 	border: 0 !important;
 }
 #identity-popup-permissions-content {
