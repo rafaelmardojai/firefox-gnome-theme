@@ -44,11 +44,15 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	border-color: var(--gnome-popover-border-color) !important;
 	border-radius: 9px;
 	box-shadow: var(--gnome-popover-shadow) !important;
-	padding: 10px !important;
+	padding: 14px !important;
 	color: var(--gnome-toolbar-color) !important;
 }
 .panel-subview-body {
 	padding: 0 !important;
+}
+
+.PanelUI-subView toolbarseparator:not([orient="vertical"]) {
+    margin: 10px 2px !important;
 }
 
 .panel-arrow {    
@@ -75,9 +79,14 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrow  {
 }
 
 /* Style popovers menu buttons */
-.subviewbutton, .toolbarbutton-1, .protections-popup-category {
-	border-radius: 3px !important;	
+.subviewbutton:not(.subviewbutton-back),
+.toolbarbutton-1, .protections-popup-category {
+	border-radius: 5px !important;	
 	color: var(--gnome-toolbar-color) !important;
+}
+.subviewbutton:not(.subviewbutton-back),
+.protections-popup-category {	
+	padding: 5px !important;
 }
 
 .subviewbutton[disabled], .toolbarbutton-1[disabled] {
