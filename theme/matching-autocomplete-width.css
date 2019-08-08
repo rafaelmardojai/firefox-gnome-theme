@@ -1,13 +1,21 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Set popover size and position */
-#urlbar-results {
+#urlbar-results { 
 	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 8px);
 	--fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
+	box-sizing: border-box;
 	border-radius: 9px;
 	margin-left: 0 !important;
 	margin-top: 0 !important;	
 	max-width: var(--box-width) !important;
+}
+#urlbar-container #urlbar-results { /* FF 70 */
+	left: calc(var(--item-padding-start) - 6px) !important;
+	right: var(--item-padding-end) !important;
+	top: 40px !important;
+	z-index: 10 !important;
+	max-width: 100% !important;
 }
 
 /* Style as regular popover */
@@ -16,24 +24,23 @@
 	border: 1px solid !important;
 	border-color: var(--gnome-popover-border-color) !important;
 	border-radius: 9px;
-	box-shadow: var(--gnome-popover-shadow) !important; /* BUG: Not showing any shadow at all */
+	box-shadow: var(--gnome-popover-shadow) !important;
 	color: var(--gnome-toolbar-color) !important;
 	padding: 8px;
 }
 
 /* Results box */
-#urlbar-results .urlbarView-body-inner {
-	max-width: calc(var(--box-width) - 18px) !important;
-}
-
 #urlbarView-results {	
-  --item-padding-start: 0 !important;
+    --item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
 	max-height: 35vh !important;
 	overflow-x: auto;
 }
 
 /* Search panel  */
+#urlbar-results .search-one-offs {
+	width: 100%;
+}
 #urlbar-results .search-panel-one-offs-header, #urlbar-results .search-panel-one-offs {
 	background: transparent !important;
 	border: 0 !important;
