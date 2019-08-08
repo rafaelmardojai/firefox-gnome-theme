@@ -41,6 +41,12 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	-moz-box-ordinal-group: 0;
 	margin: 0 8px 0 0 !important;
 }
+#appMenu-popup .toolbaritem-combined-buttons {
+    margin-inline-end: 0 !important;
+}
+#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label {
+    padding-left: 28px !important;
+}
 
 /* User sync account remove avatar */
 #fxa-menu-avatar {
