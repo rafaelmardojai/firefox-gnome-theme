@@ -82,20 +82,23 @@
 }
 
 /* Drop down buttons */
-.menulist-label-box,
 #sidebar-switcher-target,
 #viewButton {
 	padding: 2px 16px !important;
+	position: relative;
+}
+#sidebar-switcher-arrow,
+#viewButton .button-menu-dropmarker { /* Arrow position, type b */
+	transform: translate(6px, 0)
+}
+.menulist-label-box {
+	padding: 2px 26px 2px 16px !important;
 	position: relative;
 }
 .menulist-label-box:after { /* Arrow position */
 	position: absolute !important;
 	right: 8px !important;
 	top: 8px !important;
-}
-#sidebar-switcher-arrow,
-#viewButton .button-menu-dropmarker { /* Arrow position, type b */
-	transform: translate(6px, 0)
 }
 .menulist-label-box:after { /* Create arrow if icon tag no exist */
 	content: "";

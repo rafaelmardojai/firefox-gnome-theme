@@ -141,10 +141,15 @@
     margin-inline-start: 6px !important;
 }
 
-/* Bookmarks editor buttons */
+/* Menulist */
 menulist {
 	-moz-appearance: none !important;
 }
+#identity-popup-popup-menulist {
+	margin-right: 0 !important;
+}
+
+/* Bookmarks editor buttons */
 .expander-down image, .expander-up image {
 	margin: 6px !important;
 }
