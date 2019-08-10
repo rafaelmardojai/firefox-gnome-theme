@@ -44,7 +44,8 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 #appMenu-popup .toolbaritem-combined-buttons {
     margin-inline-end: 0 !important;
 }
-#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label {
+#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label,
+#appMenu-fxa-container[fxastatus="signedin"] > #appMenu-fxa-status > #appMenu-fxa-label {
     padding-left: 28px !important;
 }
 
