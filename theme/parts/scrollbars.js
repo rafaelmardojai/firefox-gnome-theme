@@ -5,23 +5,23 @@
 
 	/* Colours - can't be read from chrome CSS. Setting on :root doesn't work. */
 	:not(select):not(hbox) > scrollbar {
-        --gnome-scrollbars-hover-bgcolor: rgba(192, 192, 192, 0.75);
-        --gnome-scrollbars-hover-border-color: rgba(192, 192, 192, 0.75);
-        --gnome-scrollbars-thumb-bgcolor: rgba(0, 0, 0, 0.32);
-        --gnome-scrollbars-thumb-blend-mode: multiply;
-        --gnome-scrollbars-thumb-outline: 1px solid rgba(255, 255, 255, 0.4);
-        --gnome-scrollbars-thumb-hover-bgcolor: #75797a;
-        --gnome-scrollbars-thumb-active-bgcolor: #4a90d9;
-    }
+		--gnome-scrollbars-hover-bgcolor: rgba(192, 192, 192, 0.75);
+		--gnome-scrollbars-hover-border-color: rgba(192, 192, 192, 0.75);
+		--gnome-scrollbars-thumb-bgcolor: rgba(0, 0, 0, 0.32);
+		--gnome-scrollbars-thumb-blend-mode: multiply;
+		--gnome-scrollbars-thumb-outline: 1px solid rgba(255, 255, 255, 0.4);
+		--gnome-scrollbars-thumb-hover-bgcolor: #75797a;
+		--gnome-scrollbars-thumb-active-bgcolor: #4a90d9;
+	}
 	@media (prefers-color-scheme: dark) {
 		:not(select):not(hbox) > scrollbar {
-		    --gnome-scrollbars-hover-bgcolor: rgba(29, 30, 31, 0.75);
-		    --gnome-scrollbars-hover-border-color: rgba(13, 17, 18, 0.75);
-		    --gnome-scrollbars-thumb-bgcolor: rgba(252, 254, 251, 0.58);
-		    --gnome-scrollbars-thumb-blend-mode: screen;
-		    --gnome-scrollbars-thumb-outline: 1px solid rgba(0, 0, 0, 0.4);
-		    --gnome-scrollbars-thumb-hover-bgcolor: #d4d5d4;
-		    --gnome-scrollbars-thumb-active-bgcolor: #15539e;
+			--gnome-scrollbars-hover-bgcolor: rgba(29, 30, 31, 0.75);
+			--gnome-scrollbars-hover-border-color: rgba(13, 17, 18, 0.75);
+			--gnome-scrollbars-thumb-bgcolor: rgba(252, 254, 251, 0.58);
+			--gnome-scrollbars-thumb-blend-mode: screen;
+			--gnome-scrollbars-thumb-outline: 1px solid rgba(0, 0, 0, 0.4);
+			--gnome-scrollbars-thumb-hover-bgcolor: #d4d5d4;
+			--gnome-scrollbars-thumb-active-bgcolor: #15539e;
 		}
 	}
 
@@ -116,8 +116,8 @@
 		background-color: var(--gnome-scrollbars-thumb-active-bgcolor);
 		mix-blend-mode: normal;
 	}
-    `;
-
+	`;
+	
 	var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
 	var uri = makeURI('data:text/css;charset=UTF=8,' + encodeURIComponent(css));    
 	sss.loadAndRegisterSheet(uri, sss.AGENT_SHEET)
