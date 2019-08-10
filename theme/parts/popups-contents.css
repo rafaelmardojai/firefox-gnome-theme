@@ -164,7 +164,8 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 /* Protections popup */
 #protections-popup-mainView-panel-header {
 	background: var(--gnome-button-suggested-action-background) !important;	
-	border-radius: 5px;
+	border: 1px solid var(--gnome-button-suggested-action-border-color) !important;
+	border-radius: 5px 5px 0 0;
 	min-height: 34px !important;
 }
 .protections-popup-section,
@@ -172,8 +173,21 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	border: 0 !important;
 }
 
+#protections-popup-tp-switch-section {
+    background: var(--gnome-button-background) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-top: 0 !important;
+	border-radius: 0 0 5px 5px;
+}
 #protections-popup[hasException] #protections-popup-tp-switch-section {
-    background: transparent !important;
+    background: var(--gnome-button-destructive-action-background) !important;
+	border-color: var(--gnome-button-destructive-action-border-color) !important;
+	margin-bottom: 10px !important;
+	color: white !important;
+}
+
+#protections-popup-no-trackers-found-description {
+	margin: 0 !important;
 }
 
 #protections-popup-blocking-section-header, #protections-popup-not-blocking-section-header {
@@ -199,24 +213,27 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
     display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
-	margin-top: 10px;
+	margin-top: 3px;
 }
 #protections-popup-show-report-stack {
 	width: 100% !important;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 6px;
+	margin-top: 10px;
 }
 
-#protections-popup-show-full-report-link {
-	margin-right: 16px !important;
+#protections-popup-trackers-blocked-counter-box {
+    margin-inline-end: 0 !important;
 }
 
 .protections-popup-tp-switch-box {
 	margin: 16px !important;
 	padding: 0 !important;
 	-moz-box-pack: start !important;
+}
+#protections-popup-tp-switch:not([enabled])[showdotindicator]::after {
+	display: none !important;
 }
 #protections-popup-tp-switch { /*TODO: consider switchers section*/
 	background: var(--gnome-switch-background) !important;
