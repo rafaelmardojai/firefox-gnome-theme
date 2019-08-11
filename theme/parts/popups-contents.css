@@ -175,13 +175,13 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 #protections-popup-tp-switch-section {
-    background: var(--gnome-button-background) !important;
+	background: var(--gnome-button-background) !important;
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-top: 0 !important;
 	border-radius: 0 0 5px 5px;
 }
 #protections-popup[hasException] #protections-popup-tp-switch-section {
-    background: var(--gnome-button-destructive-action-background) !important;
+	background: var(--gnome-button-destructive-action-background) !important;
 	border-color: var(--gnome-button-destructive-action-border-color) !important;
 	margin-bottom: 10px !important;
 	color: white !important;
@@ -192,14 +192,14 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 #protections-popup-blocking-section-header, #protections-popup-not-blocking-section-header {
-    padding: 10px 5px !important;
+	padding: 10px 5px !important;
 }
 
 #protections-popup-category-list {
-    margin: 0 !important;
+	margin: 0 !important;
 }
 .protections-popup-category-label {
-    margin-inline-start: 6px !important;
+	margin-inline-start: 6px !important;
 }
 .protections-popup-category-state-label {
 	opacity: 0.7;
@@ -207,11 +207,11 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 
 #protections-popup-content,
 #protections-popup-footer  {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 #protections-popup-footer  {
-    display: flex;
+	display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
 	margin-top: 3px;
@@ -225,7 +225,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 #protections-popup-trackers-blocked-counter-box {
-    margin-inline-end: 0 !important;
+	margin-inline-end: 0 !important;
 }
 
 .protections-popup-tp-switch-box {
@@ -264,7 +264,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	transition: left .2s ease;
 }
 #protections-popup-tp-switch[enabled] {
-    background: var(--gnome-switch-active-background) !important;
+	background: var(--gnome-switch-active-background) !important;
 	border-color: var(--gnome-switch-active-border-color) !important;
 	padding-inline-start: 24px !important;
 }
@@ -272,6 +272,6 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	border-color: var(--gnome-switch-active-border-color) !important;
 }
 #protections-popup-tp-switch[enabled]::before {
-    border-color: var(--gnome-switch-active-slider-border-color) !important;
+	border-color: var(--gnome-switch-active-slider-border-color) !important;
 	left: 24px;
 }

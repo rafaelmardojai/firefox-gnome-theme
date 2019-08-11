@@ -58,11 +58,24 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 }
 
 .panel-subview-body, .panel-view-body-unscrollable, .panel-header, .panel-footer {
-    padding: 14px !important;
+	padding: 14px !important;
+}
+#notification-popup .panel-arrowcontent,
+#identity-popup  .panel-arrowcontent,
+#protections-popup .panel-arrowcontent {
+	padding: 14px !important;
+}
+#notification-popup .panel-footer,
+#identity-popup .panel-footer,
+#identity-popup .panel-header,
+#protections-popup .panel-footer,
+#protections-popup .panel-header {
+	padding: 0 !important;
+	margin: 0 !important;
 }
 
 .PanelUI-subView toolbarseparator:not([orient="vertical"]) {
-    margin: 10px 2px !important;
+	margin: 10px 2px !important;
 }
 
 .panel-arrow {    
