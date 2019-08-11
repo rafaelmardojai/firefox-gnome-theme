@@ -32,7 +32,8 @@
 .notification-button,
 .protections-popup-footer-button,
 .identity-popup-permission-remove-button,
-#identity-popup-security-expander {
+#identity-popup-security-expander,
+#PanelUI-panic-view-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -73,7 +74,8 @@
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
 .notification-button,
-.protections-popup-footer-button {
+.protections-popup-footer-button,
+#PanelUI-panic-view-button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -284,7 +286,8 @@ button.popup-notification-primary-button.popup-notification-button:active,
 
 /* Buttons with destructive action */
 #editBookmarkPanelRemoveButton,
-.identity-popup-permission-remove-button {
+.identity-popup-permission-remove-button,
+#PanelUI-panic-view-button {
 	color: white !important;
 	background: var(--gnome-button-destructive-action-background) !important;
 	border-color: var(--gnome-button-destructive-action-border-color) !important;
@@ -294,12 +297,14 @@ button.popup-notification-primary-button.popup-notification-button:active,
 }
 
 #editBookmarkPanelRemoveButton:hover,
-.identity-popup-permission-remove-button:not(#hack):hover {
+.identity-popup-permission-remove-button:not(#hack):hover,
+#PanelUI-panic-view-button:hover {
 	background: var(--gnome-button-destructive-action-hover-background) !important;
 }
 
 #editBookmarkPanelRemoveButton:active,
-.identity-popup-permission-remove-button:not(#hack):active {
+.identity-popup-permission-remove-button:not(#hack):active,
+#PanelUI-panic-view-button:active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
 	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
