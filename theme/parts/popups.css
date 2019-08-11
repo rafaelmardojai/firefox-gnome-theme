@@ -20,6 +20,8 @@ menupopup menupopup {
 menubar > menu > menupopup {
 	border-top-left-radius: 0 !important;
 	border-top-right-radius: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
 }
 
 menuitem, menupopup menu {
