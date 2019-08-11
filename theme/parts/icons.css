@@ -116,7 +116,7 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
 }
 
-/* Menu checkbutton */
+/* Menu checkbox */
 menuitem[type="checkbox"] {
 	list-style-image: url("../icons/checkbox-symbolic.svg") !important;
 }
@@ -124,6 +124,17 @@ menuitem[type="checkbox"][checked="true"] {
 	list-style-image: url("../icons/checkbox-checked-symbolic.svg") !important;
 }
 menuitem[type="checkbox"]:hover .menu-iconic-icon {
+	filter: invert(100%) brightness(200%);
+}
+
+/* Menu radio */
+menuitem[type="radio"] {
+	list-style-image: url("../icons/radio-symbolic.svg") !important;
+}
+menuitem[type="radio"][checked="true"] {
+	list-style-image: url("../icons/radio-checked-symbolic.svg") !important;
+}
+menuitem[type="radio"]:hover .menu-iconic-icon {
 	filter: invert(100%) brightness(200%);
 }
 
@@ -293,6 +304,7 @@ menuitem[type="checkbox"]:hover .menu-iconic-icon {
 	#viewButton .button-menu-dropmarker,
 	
 	menuitem[type="checkbox"] .menu-iconic-icon,
+	menuitem[type="radio"] .menu-iconic-icon,
 	
 	.close-icon:not(.tab-close-button) image,	
 	
