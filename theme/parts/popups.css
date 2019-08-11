@@ -22,6 +22,15 @@ menubar > menu > menupopup {
 	border-top-right-radius: 0 !important;
 }
 
+menuitem, menupopup menu {
+	-moz-appearance: none !important;
+	padding: 4px 8px !important;
+}
+
+menuitem[disabled]:hover, menupopup menu[disabled]:hover {
+	background: transparent !important;
+}
+
 /* Adjust popovers position */
 panel[type=arrow] {
 	margin-top: 9px !important;

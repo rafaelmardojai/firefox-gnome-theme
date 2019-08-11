@@ -116,6 +116,17 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
 }
 
+/* Menu checkbutton */
+menuitem[type="checkbox"] {
+	list-style-image: url("../icons/checkbox-symbolic.svg") !important;
+}
+menuitem[type="checkbox"][checked="true"] {
+	list-style-image: url("../icons/checkbox-checked-symbolic.svg") !important;
+}
+menuitem[type="checkbox"]:hover .menu-iconic-icon {
+	filter: invert(100%) brightness(200%);
+}
+
 /* Close button */
 .close-icon:not(.tab-close-button),
 .identity-popup-permission-remove-button .button-icon {
@@ -281,7 +292,9 @@ treechildren::-moz-tree-twisty(selected, focus, open) {
 	#sidebar-switcher-arrow,
 	#viewButton .button-menu-dropmarker,
 	
-	.close-icon:not(.tab-close-button) image,
+	menuitem[type="checkbox"] .menu-iconic-icon,
+	
+	.close-icon:not(.tab-close-button) image,	
 	
 	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
 	:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon,
