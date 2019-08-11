@@ -61,11 +61,14 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	padding: 14px !important;
 }
 #notification-popup .panel-arrowcontent,
+#appMenu-notification-popup .panel-arrowcontent,
 #identity-popup  .panel-arrowcontent,
-#protections-popup .panel-arrowcontent {
+#protections-popup .panel-arrowcontent,
+#sidebarMenu-popup .panel-arrowcontent {
 	padding: 14px !important;
 }
 #notification-popup .panel-footer,
+#appMenu-notification-popup .panel-footer,
 #identity-popup .panel-footer,
 #identity-popup .panel-header,
 #protections-popup .panel-footer,
@@ -135,7 +138,7 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-header {
 }
 
 .subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:hover {
-	background: var(--gnome-popover-button-hover-background) !important;
+	background-color: var(--gnome-popover-button-hover-background) !important;
 }
 
 /* Style popover separators */
