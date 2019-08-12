@@ -29,6 +29,10 @@ menuitem, menupopup menu {
 	padding: 4px 8px !important;
 }
 
+menuitem[type="checkbox"] image, menuitem[type="radio"] image {
+	visibility: visible !important;
+}
+
 menuitem[disabled]:hover, menupopup menu[disabled]:hover {
 	background: transparent !important;
 }
