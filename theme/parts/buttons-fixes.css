@@ -84,8 +84,8 @@
 
 /* Fix library animation */
 #library-animatable-box  {
-    --library-button-height: 46px !important;
-    --library-icon-x: 1716px !important;
+	--library-button-height: 46px !important;
+	--library-icon-x: 1716px !important;
 	/*--library-icon-x: 1715.9833984375px !important;*/
 }
 #library-button[animate] > .toolbarbutton-icon {
@@ -109,10 +109,10 @@
 	list-style-image: url("chrome://browser/skin/settings.svg") !important;
 }
 #tracking-protection-preferences-button > .toolbarbutton-text {
-    padding-inline-end: 0 !important;
+	padding-inline-end: 0 !important;
 }
 .protections-popup-footer-button-label {
-    margin-inline-start: 3px !important;
+	margin-inline-start: 3px !important;
 }
 
 /* Fix findbar buttons issues */
@@ -137,8 +137,8 @@
 
 /* Sidebar history view */
 #viewButton {
-    margin: 0 !important;
-    margin-inline-start: 6px !important;
+	margin: 0 !important;
+	margin-inline-start: 6px !important;
 }
 
 /* Menulist */
@@ -152,6 +152,11 @@ menulist {
 /* Bookmarks editor buttons */
 .expander-down image, .expander-up image {
 	margin: 6px !important;
+}
+
+/* Identity popup tracking protection button */
+.tracking-protection-button {
+	margin-inline-end: 0 !important;
 }
 
 /* Identity popup delete permission button */

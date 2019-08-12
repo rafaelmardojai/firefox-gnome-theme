@@ -64,7 +64,8 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 #appMenu-notification-popup .panel-arrowcontent,
 #identity-popup  .panel-arrowcontent,
 #protections-popup .panel-arrowcontent,
-#sidebarMenu-popup .panel-arrowcontent {
+#sidebarMenu-popup .panel-arrowcontent,
+#UITourTooltip .panel-arrowcontent {
 	padding: 10px !important;
 }
 #notification-popup .panel-footer,
@@ -120,12 +121,14 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-header {
 
 /* Style popovers menu buttons */
 .subviewbutton:not(.subviewbutton-back),
-.toolbarbutton-1, .protections-popup-category {
+.toolbarbutton-1, .protections-popup-category,
+.identity-popup-content-blocking-category {
 	border-radius: 5px !important;	
 	color: var(--gnome-toolbar-color) !important;
 }
 .subviewbutton:not(.subviewbutton-back),
-.protections-popup-category {	
+.protections-popup-category,
+.identity-popup-content-blocking-category {	
 	padding: 5px !important;
 }
 
@@ -137,7 +140,8 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-header {
 	opacity: 0.5 !important;
 }
 
-.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:hover {
+.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:hover,
+.identity-popup-content-blocking-category:hover {
 	background-color: var(--gnome-popover-button-hover-background) !important;
 }
 

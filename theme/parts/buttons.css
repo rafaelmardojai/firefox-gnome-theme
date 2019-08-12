@@ -33,7 +33,8 @@
 .protections-popup-footer-button,
 .identity-popup-permission-remove-button,
 #identity-popup-security-expander,
-#PanelUI-panic-view-button {
+#PanelUI-panic-view-button,
+.tracking-protection-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -67,7 +68,8 @@
 .findbar-container toolbarbutton.findbar-button,
 .notification-button,
 .protections-popup-footer-button,
-#PanelUI-panic-view-button {
+#PanelUI-panic-view-button,
+.tracking-protection-button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -121,7 +123,8 @@ menulist:hover .menulist-label-box,
 .notification-button:hover,
 .protections-popup-footer-button:hover,
 .identity-popup-permission-remove-button:hover,
-#identity-popup-security-expander:hover {
+#identity-popup-security-expander:hover,
+.tracking-protection-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -151,7 +154,8 @@ menulist[open] .menulist-label-box,
 .notification-button:active,
 .protections-popup-footer-button:not(#hack):active,
 .identity-popup-permission-remove-button:active,
-#identity-popup-security-expander:active {
+#identity-popup-security-expander:active,
+.tracking-protection-button:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -251,7 +255,8 @@ menulist[open] .menulist-label-box,
 /* Buttons with suggested action */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"],
 button.popup-notification-primary-button,
-#editBookmarkPanelDoneButton {
+#editBookmarkPanelDoneButton,
+#tracking-action-block {
 	color: white !important;
 	background: var(--gnome-button-suggested-action-background) !important;
 	border-color: var(--gnome-button-suggested-action-border-color) !important;
@@ -262,13 +267,15 @@ button.popup-notification-primary-button,
 
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
 button.popup-notification-primary-button.popup-notification-button:hover,
-#editBookmarkPanelDoneButton:hover {
+#editBookmarkPanelDoneButton:hover,
+#tracking-action-block:hover {
 	background: var(--gnome-button-suggested-action-hover-background) !important;
 }
 
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
 button.popup-notification-primary-button.popup-notification-button:active,
-#editBookmarkPanelDoneButton:active {
+#editBookmarkPanelDoneButton:active,
+#tracking-action-block:active {
 	background: var(--gnome-button-suggested-action-active-background) !important;
 	border-color: var(--gnome-button-suggested-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-suggested-action-active-box-shadow) !important;

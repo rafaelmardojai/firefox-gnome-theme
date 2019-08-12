@@ -30,6 +30,9 @@
 .protections-popup-category::after {
     content: url("../icons/pan-start-symbolic.svg") !important;
 }
+.identity-popup-content-blocking-category::after {
+    content: url("../icons/pan-start-symbolic.svg") !important;
+}
 #identity-popup-security-expander .button-icon {
 	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
 }
@@ -288,6 +291,7 @@ menuitem[type="radio"]:hover .menu-iconic-icon {
 @media (prefers-color-scheme: dark) {
 	.PanelUI-subView .subviewbutton-nav::after,
 	.protections-popup-category::after,
+	.identity-popup-content-blocking-category::after,
 	#identity-popup-security-expander .button-icon,
 	.subviewbutton-back .toolbarbutton-icon,
 
