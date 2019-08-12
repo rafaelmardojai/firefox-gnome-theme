@@ -163,8 +163,8 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 .identity-popup-security-connection {	/* FF70 */
-	background-position: 6px 50% !important;
-	padding-inline-start: 22px !important;
+	background-position: 0 50% !important;
+	padding-inline-start: 16px !important;
 }
 #identity-popup-security-description { /* FF70 */
 	padding-inline-start: 0 !important;
@@ -183,9 +183,8 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 #identity-popup-permissions-content {
 	padding-right: 0 !important;
 }
-#identity-popup-permissions-content,
-.identity-popup-permission-item {
-	
+#identity-popup-permissions-content description  {
+	margin-inline-start: 0 !important;
 }
 #identity-popup-permissions-content {
 	padding-bottom: 10px !important;

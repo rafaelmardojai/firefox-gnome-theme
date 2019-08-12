@@ -198,7 +198,8 @@ menulist[open] .menulist-label-box,
 .subviewbutton-back:not(#hack),
 .close-icon:not(.tab-close-button),
 #TabsToolbar .toolbarbutton-1,
-#protections-popup-show-report-button {
+#protections-popup-show-report-button,
+.identity-popup-permission-remove-button:not(#hack) {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
@@ -214,7 +215,8 @@ menulist[open] .menulist-label-box,
 }
 
 /* Circle buttons */
-#downloadsPanel-mainView .download-state .downloadButton {
+#downloadsPanel-mainView .download-state .downloadButton,
+.identity-popup-permission-remove-button:not(#hack) {
 	border-radius: 100% !important;
 }
 
@@ -306,6 +308,15 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	background: var(--gnome-button-destructive-action-active-background) !important;
 	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
+}
+
+.identity-popup-permission-remove-button:not(#hack):hover { /* Is flat */
+	border-color: var(--gnome-button-destructive-action-border-color) !important;
+	border-bottom-color: var(--gnome-button-destructive-action-border-accent-color) !important;
+	box-shadow: var(--gnome-button-destructive-action-box-shadow) !important;
+}
+.identity-popup-permission-remove-button:not(#hack):hover .button-icon {
+	filter: invert(100%) brightness(200%);
 }
 	
 /* User sync menu, bigger avatar */

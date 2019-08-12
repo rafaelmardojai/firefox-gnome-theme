@@ -47,7 +47,7 @@
 	-moz-appearance: none !important;
 	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
 	width: 16px !important;
-    height: 16px !important;
+	height: 16px !important;
 }
 menu[disabled] > .menu-right {
 	opacity: 0.3;
@@ -145,9 +145,6 @@ menuitem[type="radio"]:hover .menu-iconic-icon {
 .close-icon:not(.tab-close-button),
 .identity-popup-permission-remove-button .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-}
-.identity-popup-permission-remove-button .button-icon { /* Destructive action, always white */
-	filter: invert(100%) brightness(200%);
 }
 
 /* Window buttons */
@@ -310,7 +307,8 @@ menuitem[type="radio"]:hover .menu-iconic-icon {
 	menuitem[type="checkbox"] .menu-iconic-icon,
 	menuitem[type="radio"] .menu-iconic-icon,
 	
-	.close-icon:not(.tab-close-button) image,	
+	.close-icon:not(.tab-close-button) image,
+	.identity-popup-permission-remove-button .button-icon,
 	
 	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
 	:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon,
