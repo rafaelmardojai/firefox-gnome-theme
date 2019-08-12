@@ -58,14 +58,14 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 }
 
 .panel-subview-body, .panel-view-body-unscrollable, .panel-header, .panel-footer {
-	padding: 14px !important;
+	padding: 10px !important;
 }
 #notification-popup .panel-arrowcontent,
 #appMenu-notification-popup .panel-arrowcontent,
 #identity-popup  .panel-arrowcontent,
 #protections-popup .panel-arrowcontent,
 #sidebarMenu-popup .panel-arrowcontent {
-	padding: 14px !important;
+	padding: 10px !important;
 }
 #notification-popup .panel-footer,
 #appMenu-notification-popup .panel-footer,
@@ -108,7 +108,7 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 /* Use --arrowpanel-background for popover background when content is remote */
 panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrowcontent {
 	background: var(--arrowpanel-background) !important;
-	padding: 14px !important;
+	padding: 10px !important;
 }
 panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-arrow  {
 	fill: var(--arrowpanel-background) !important;
