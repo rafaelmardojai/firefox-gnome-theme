@@ -160,6 +160,22 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 #identity-popup-permissions-content,
 .identity-popup-permission-item {
 	padding-inline-end: 0 !important;
+	padding-inline-start: 0 !important;
+}
+#identity-popup-permissions-content {
+	padding-bottom: 10px !important;
+}
+
+/* TODO: create custom --gnome-list vars */
+#identity-popup-permission-list:not(:empty) {
+	border: 1px solid var(--gnome-button-border-color);
+	border-bottom: 0 !important;
+}
+.identity-popup-permission-item {
+	background: var(--gnome-menu-background);
+	border-bottom: 1px solid var(--gnome-button-border-color);
+	padding: 6px !important;
+	margin: 0 !important;
 }
 
 /* Protections popup */
@@ -228,6 +244,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	margin-inline-end: 0 !important;
 }
 
+/* TODO: consider switchers section */
 .protections-popup-tp-switch-box {
 	margin: 16px !important;
 	padding: 0 !important;
@@ -236,7 +253,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 #protections-popup-tp-switch:not([enabled])[showdotindicator]::after {
 	display: none !important;
 }
-#protections-popup-tp-switch { /*TODO: consider switchers section*/
+#protections-popup-tp-switch {
 	background: var(--gnome-switch-background) !important;
 	border: 1px solid var(--gnome-switch-border-color) !important;
 	border-radius: 24px !important;

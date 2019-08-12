@@ -48,14 +48,6 @@
 	color: var(--gnome-toolbar-color) !important;
 }
 
-/* Small buttons */
-.identity-popup-permission-remove-button {
-	height: 26px !important;
-	max-height: 26px !important;
-	min-height: 26px !important;
-	min-width: 26px !important;
-}
-
 /* Buttons with margins */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
 	margin: 0 3px !important;
@@ -218,8 +210,7 @@ menulist[open] .menulist-label-box,
 }
 
 /* Circle buttons */
-#downloadsPanel-mainView .download-state .downloadButton,
-.identity-popup-permission-remove-button {
+#downloadsPanel-mainView .download-state .downloadButton {
 	border-radius: 100% !important;
 }
 
