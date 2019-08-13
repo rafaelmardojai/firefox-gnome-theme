@@ -3,7 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 toolbarbutton#alltabs-button {
-    -moz-binding: url("scrollbars.xml#js");
+	-moz-binding: url("scrollbars.xml#js");
 }
 
 #alltabs-button:not(#hack) {

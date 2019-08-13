@@ -20,8 +20,6 @@ menupopup menupopup {
 menubar > menu > menupopup {
 	border-top-left-radius: 0 !important;
 	border-top-right-radius: 0 !important;
-	padding: 0 !important;
-	overflow: hidden;
 }
 
 menuitem, menupopup menu {
@@ -33,7 +31,7 @@ menuitem[type="checkbox"] image, menuitem[type="radio"] image {
 	visibility: visible !important;
 }
 
-menuitem[disabled]:hover, menupopup menu[disabled]:hover {
+menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
 }
 

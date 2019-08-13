@@ -42,11 +42,11 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	margin: 0 8px 0 0 !important;
 }
 #appMenu-popup .toolbaritem-combined-buttons {
-    margin-inline-end: 0 !important;
+	margin-inline-end: 0 !important;
 }
 #appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label,
 #appMenu-fxa-container[fxastatus="signedin"] > #appMenu-fxa-status > #appMenu-fxa-label {
-    padding-left: 28px !important;
+	padding-left: 28px !important;
 }
 
 /* User sync account remove avatar */
@@ -81,7 +81,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	background-color: var(--gnome-popover-button-hover-background) !important;	
 }
 #downloadsPanel-mainView .download-state:last-child {
-    margin-bottom: 8px !important;
+	margin-bottom: 8px !important;
 }
 
 #downloadsPanel-mainView .downloadMainArea {
@@ -228,7 +228,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 #protections-popup-no-trackers-found-description {
-	margin: 0 !important;
+	margin: 10px 0 0 !important;
 }
 
 #protections-popup-blocking-section-header, #protections-popup-not-blocking-section-header {

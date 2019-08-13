@@ -149,7 +149,7 @@
 
 /* FF 60 fixes */
 :root[tabsintitlebar] #titlebar[style="margin-bottom: -1px;"] {
-    margin-bottom: -38px !important;
+	margin-bottom: -38px !important;
 }
 :root[tabsintitlebar] #titlebar-content {
 	display: block !important;

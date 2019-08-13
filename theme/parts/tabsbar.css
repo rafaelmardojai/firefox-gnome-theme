@@ -254,7 +254,7 @@ tab[selected]:-moz-window-inactive {
 .tabbrowser-tab[class*="identity-color-"] .tab-content::before {
 	content: "";
 	display: block;
-    background-image: var(#userContext-icons:--identity-icon);
+	background-image: var(#userContext-icons:--identity-icon);
 	background: var( --identity-tab-color);
 	-moz-context-properties: fill;
 	fill: var(--identity-icon-color);
