@@ -34,7 +34,8 @@
 .identity-popup-permission-remove-button,
 #identity-popup-security-expander,
 #PanelUI-panic-view-button,
-.tracking-protection-button {
+.tracking-protection-button,
+.dialog-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -69,7 +70,8 @@
 .notification-button,
 .protections-popup-footer-button,
 #PanelUI-panic-view-button,
-.tracking-protection-button {
+.tracking-protection-button,
+.dialog-button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -124,7 +126,8 @@ menulist:hover .menulist-label-box,
 .protections-popup-footer-button:hover,
 .identity-popup-permission-remove-button:hover,
 #identity-popup-security-expander:hover,
-.tracking-protection-button:hover {
+.tracking-protection-button:hover,
+.dialog-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -155,7 +158,8 @@ menulist[open] .menulist-label-box,
 .protections-popup-footer-button:not(#hack):active,
 .identity-popup-permission-remove-button:active,
 #identity-popup-security-expander:active,
-.tracking-protection-button:active {
+.tracking-protection-button:active,
+.dialog-button:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
