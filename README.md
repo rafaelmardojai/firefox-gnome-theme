@@ -16,12 +16,10 @@
 
 This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
-The `master` branch track current Firefox and GNOME stable.
-
 This theme is supposed to work with current supported Firefox releases:
 
 - Firefox 68
-- Firefox 60 ESR
+- Firefox 60 ESR*
 - Firefox 68 ESR
 - Firefox 69 Beta
 - Firefox 70 Nightly
