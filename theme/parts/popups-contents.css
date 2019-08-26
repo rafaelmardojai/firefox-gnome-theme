@@ -231,8 +231,10 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	margin: 10px 0 0 !important;
 }
 
-#protections-popup-blocking-section-header, #protections-popup-not-blocking-section-header {
-	padding: 10px 5px !important;
+#protections-popup-blocking-section-header, #protections-popup-not-found-section-header {
+	padding: 0px 5px !important;
+	margin-top: 20px !important;
+	height: auto !important;
 }
 
 #protections-popup-category-list {
