@@ -1,7 +1,42 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/* FIREFOX 70 FIX */
+#urlbar .urlbarView {
+	left: calc(var(--item-padding-start) - 6px) !important;
+	right: var(--item-padding-end) !important;
+	top: 40px !important;
+	z-index: 10 !important;
+	max-width: 100% !important;
+	
+	background: var(--gnome-popover-background) !important;
+	border: 1px solid !important;
+	border-color: var(--gnome-popover-border-color) !important;
+	border-radius: 9px;
+	box-shadow: var(--gnome-popover-shadow) !important;
+	color: var(--gnome-toolbar-color) !important;
+	padding: 8px;
+}
+	
+#urlbar .search-one-offs {
+	padding: 8px 0 0 0 !important;
+	margin-top: 8px !important;
+	border-color: var(--gnome-popover-separator-color) !important;
+}
+
+#urlbar .search-panel-header > label {
+    margin-top: 0px !important;
+}
+
+.urlbarView-body-outer {
+	--item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
+}
+
+/**************************************************************************************
+*********************************** FIREFOX 68 ****************************************
+**************************************************************************************/
 /* Set popover size and position */
-#urlbar-results { 
+panel#urlbar-results { 
 	--box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 8px);
 	--fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
 	box-sizing: border-box;
@@ -10,16 +45,9 @@
 	margin-top: 0 !important;	
 	max-width: var(--box-width) !important;
 }
-#urlbar-container #urlbar-results { /* FF 70 */
-	left: calc(var(--item-padding-start) - 6px) !important;
-	right: var(--item-padding-end) !important;
-	top: 40px !important;
-	z-index: 10 !important;
-	max-width: 100% !important;
-}
 
 /* Style as regular popover */
-#urlbar-results {
+panel#urlbar-results {
 	background: var(--gnome-popover-background) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popover-border-color) !important;
@@ -30,60 +58,64 @@
 }
 
 /* Results box */
-#urlbarView-results {	
-    --item-padding-start: 0 !important;
+#urlbarView-results {
+	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
 	max-height: 35vh !important;
 	overflow-x: auto;
+	max-width: calc(var(--box-width) - 18px) !important;
 }
 
 /* Search panel  */
-#urlbar-results .search-one-offs {
+.search-one-offs {
 	width: 100%;
-}
-#urlbar-results .search-panel-one-offs-header, #urlbar-results .search-panel-one-offs {
-	background: transparent !important;
-	border: 0 !important;
-}
-#urlbar-results .search-panel-one-offs-header {
-	border-top: 1px solid var(--gnome-popover-separator-color) !important;
-}
-#urlbar-results .search-panel-one-offs {
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
 }
+.search-panel-one-offs-header, .search-panel-one-offs {
+	background: transparent !important;
+	border: 0 !important;
+}
+panel#urlbar-results.search-panel-one-offs-header {
+	border-top: 1px solid var(--gnome-popover-separator-color) !important;
+}
 
 /* Search engines buttons */
-#urlbar-results .searchbar-engine-one-off-item:not(.dummy) {
+.searchbar-engine-one-off-item:not(.dummy) {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
+
+.searchbar-engine-one-off-item:not(.dummy) {
 	-moz-appearance: none !important;
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
+	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
-	box-shadow: var(--gnome-button-box-shadow);
-	border-width: 1px 1px 1px 0;
-	border-style: solid;
-	border-color: var(--gnome-button-border-color) !important;
+	box-shadow: var(--gnome-button-box-shadow) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-left-width: 0 !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	padding: 0 2px !important;
-	height: 34px !important;
-	color: var(--gnome-toolbar-color) !important;
-	box-sizing: border-box !important;
+	min-height: 34px !important;
+	min-width: 34px !important;
+	margin: 0 !important;
 }
-#urlbar-results .searchbar-engine-one-off-item:hover, #urlbar-results .searchbar-engine-one-off-item[selected] {	
+.searchbar-engine-one-off-item:hover, .searchbar-engine-one-off-item[selected] {
 	background: var(--gnome-button-hover-background) !important;
 	color: unset !important;
 }
-#urlbar-results .searchbar-engine-one-off-item:first-child {	
+.searchbar-engine-one-off-item:first-child {	
 	border-radius: 5px 0 0 5px;
 	border-left-width: 1px !important;
 }
-#urlbar-results .searchbar-engine-one-off-item.last-engine {	
+.searchbar-engine-one-off-item.last-engine, .searchbar-engine-one-off-item:last-child {	
 	border-radius: 0 5px 5px 0;
 }
-#urlbar-results .searchbar-engine-one-off-item.dummy {
+.searchbar-engine-one-off-item.dummy {
 	display: none !important;
 }
-#urlbar-results .searchbar-engine-one-off-item:not(.last-row) {
+.searchbar-engine-one-off-item:not(.last-row) {
 	box-sizing: border-box !important;
 }
 #urlbar-anon-search-settings-compact {
@@ -98,8 +130,10 @@
 	filter: var(--gnome-convert-icon-to-symbolic-hack-filter);
 }
 
-/* Firefox 67 */
-/* TODO: Remove when FF =< 67 is deprecated or merge 69+ code. */
+/**************************************************************************************
+********************************** FIREFOX 60-67 **************************************
+**************************************************************************************/
+/* TODO: Remove when FF =< 67 is deprecated */
 #PopupAutoCompleteRichResult {
 	margin-left: 0 !important;
 	margin-top: -7px;
