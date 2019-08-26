@@ -48,6 +48,7 @@
 	min-height: 34px !important;
 	min-width: 34px !important;
 	color: var(--gnome-toolbar-color) !important;
+	font: menu !important;
 }
 
 /* Buttons with margins */

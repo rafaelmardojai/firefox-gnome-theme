@@ -127,6 +127,7 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-header {
 .identity-popup-content-blocking-category {
 	border-radius: 5px !important;	
 	color: var(--gnome-toolbar-color) !important;
+	font: menu !important;
 }
 .subviewbutton:not(.subviewbutton-back),
 .protections-popup-category,
