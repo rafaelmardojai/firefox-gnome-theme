@@ -203,15 +203,25 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 }
 
 /* Protections popup */
+.protections-popup-section,
+#protections-popup-not-blocking-section-header {
+	border: 0 !important;
+}
+
 #protections-popup-mainView-panel-header {
 	background: var(--gnome-button-suggested-action-background) !important;	
 	border: 1px solid var(--gnome-button-suggested-action-border-color) !important;
 	border-radius: 5px 5px 0 0;
 	min-height: 34px !important;
 }
-.protections-popup-section,
-#protections-popup-not-blocking-section-header {
-	border: 0 !important;
+#protections-popup[toast] #protections-popup-mainView-panel-header {
+	border-radius: 5px !important;
+}
+
+#protections-popup-message {
+	height: 100% !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
 }
 
 #protections-popup-tp-switch-section {
@@ -221,17 +231,23 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	border-radius: 0 0 5px 5px;
 }
 #protections-popup[hasException] #protections-popup-tp-switch-section {
-	background: var(--gnome-button-destructive-action-background) !important;
-	border-color: var(--gnome-button-destructive-action-border-color) !important;
 	margin-bottom: 10px !important;
 	color: white !important;
 }
 
-#protections-popup-no-trackers-found-description {
-	margin: 10px 0 0 !important;
+#protections-popup[hasException] #protections-popup-tp-switch-section,
+#protections-popup[hasException] #protections-popup-mainView-panel-header{
+	background: var(--gnome-button-destructive-action-background) !important;
+	border-color: var(--gnome-button-destructive-action-border-color) !important;
 }
 
-#protections-popup-blocking-section-header, #protections-popup-not-found-section-header {
+#protections-popup-no-trackers-found-description {
+	margin: 10px 0 !important;
+}
+
+#protections-popup-blocking-section-header,
+#protections-popup-not-found-section-header,
+#protections-popup-not-blocking-section-header{
 	padding: 0px 5px !important;
 	margin-top: 20px !important;
 	height: auto !important;
@@ -305,6 +321,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 	height: 24px !important;
 	width: 24px !important;
 	transition: left .2s ease;
+	outline: 0 !important;
 }
 #protections-popup-tp-switch[enabled] {
 	background: var(--gnome-switch-active-background) !important;
