@@ -288,7 +288,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 
 /* TODO: consider switchers section */
 .protections-popup-tp-switch-box {
-	margin: 16px !important;
+	margin-top: 16px;
 	padding: 0 !important;
 	-moz-box-pack: start !important;
 }
