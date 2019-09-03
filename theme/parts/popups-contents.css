@@ -197,6 +197,7 @@ panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-rep
 #identity-popup-permission-list:not(:empty) {
 	border: 1px solid var(--gnome-button-border-color);
 	border-bottom: 0 !important;
+	padding: 0 !important;
 }
 .identity-popup-permission-item {
 	background: var(--gnome-menu-background);
