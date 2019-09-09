@@ -123,7 +123,10 @@ menuitem[type="checkbox"] {
 menuitem[type="checkbox"][checked="true"] {
 	list-style-image: url("../icons/checkbox-checked-symbolic.svg") !important;
 }
-menuitem[type="checkbox"]:hover .menu-iconic-icon {
+menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
+	opacity: 0.5;
+}
+menuitem[type="checkbox"]:not([disabled="true"]):hover .menu-iconic-icon {
 	filter: invert(100%) brightness(200%);
 }
 
@@ -134,7 +137,10 @@ menuitem[type="radio"] {
 menuitem[type="radio"][checked="true"] {
 	list-style-image: url("../icons/radio-checked-symbolic.svg") !important;
 }
-menuitem[type="radio"]:hover .menu-iconic-icon {
+menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
+	opacity: 0.5;
+}
+menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 	filter: invert(100%) brightness(200%);
 }
 
