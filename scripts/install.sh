@@ -50,6 +50,7 @@ if [ "$GNOMISHEXTRAS" = true ] ; then
 	[[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
 	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' firefox-gnome-theme/customChrome.css
 	sed -i '2s/^/@import "theme\/matching-autocomplete-width.css";\n/' firefox-gnome-theme/customChrome.css
+	sed -i '3s/^/@import "theme\/rounded-title-buttons.css";\n/' firefox-gnome-theme/customChrome.css
 fi
 
 # Symlink user.js to firefox-gnome-theme one.

@@ -128,6 +128,10 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 - **matching-autocomplete-width.css** *GNOMISH*
 
 	Limit the URL bar's autocompletion popup's width to the URL bar's width.
+	
+- **rounded-title-buttons.css** *GNOMISH*
+
+	 Rounded title buttons (headerbar window controls).
 
 - **active-tab-contrast.css**
 

@@ -16,6 +16,9 @@
 /* Limit the URL bar's autocompletion popup's width to the URL bar's width (GNOMISH) */
 /*@import "theme/matching-autocomplete-width.css"; /**/
 
+/* Rounded title buttons (headerbar window controls) (GNOMISH) */
+/*@import "theme/rounded-title-buttons.css"; /**/
+
 /* Active tab high contrast */
 /*@import "theme/active-tab-contrast.css"; /**/
 
