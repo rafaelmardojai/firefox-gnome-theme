@@ -97,10 +97,6 @@ panel:not(.tooltip-xul-wrapper) .panel-arrowcontent {
 	stroke: var(--gnome-popover-border-color) !important;
 }
 
-.panel-header {
-	margin-top: 10px !important;
-}
-
 .panel-footer {
 	background-color: transparent !important;
 	display: flex;
