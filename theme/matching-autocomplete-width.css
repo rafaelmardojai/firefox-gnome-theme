@@ -16,6 +16,11 @@
 	color: var(--gnome-toolbar-color) !important;
 	padding: 8px;
 }
+
+#urlbar .urlbarView-body-outer {
+	max-height: 35vh !important;
+	overflow-x: auto;
+}
 	
 #urlbar .search-one-offs {
 	padding: 8px 0 0 0 !important;
