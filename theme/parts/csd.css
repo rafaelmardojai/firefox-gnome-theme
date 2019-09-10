@@ -42,7 +42,7 @@
 :root[tabsintitlebar] #titlebar-buttonbox-container,
 :root[tabsintitlebar][inFullscreen] #window-controls {
 	-moz-appearance: none !important;
-	padding: 0 3px 0 4px;
+	padding: 6px 3px;
 	position: absolute !important;	
 	right: 0;
 	top: 0;	
@@ -59,7 +59,7 @@
 	border-color: transparent !important;
 	border-radius: 5px !important;
 	height: 34px;
-	margin: 6px 3px !important;
+	margin: 0 3px !important;
 	padding: 0 2px !important;
 	width: 34px;
 }
