@@ -99,7 +99,6 @@
 	
 	/* Window buttons box */
 	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
-		padding: 0 3px 0 4px;
 		left: 0;
 		right: auto;
 	}
