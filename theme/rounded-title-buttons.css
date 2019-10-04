@@ -8,7 +8,3 @@
 	width: 30px !important;
 	margin: 2px 5px !important;
 }
-
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
-	padding: 6px 0 !important;
-}
