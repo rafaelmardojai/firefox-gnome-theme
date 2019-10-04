@@ -2,6 +2,25 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+#urlbar {
+	--urlbar-height: 34.00px;
+	--urlbar-toolbar-height: 34.00px !important;
+}
+
+/* Megabar fixes  */
+#urlbar.megabar {
+	border: 0 !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	background: transparent !important;
+	--urlbar-icon-padding: 2px !important;;
+}
+#urlbar.megabar[breakout][breakout-extend] {
+	left: 0 !important;
+	top: 0 !important;
+	width: 100% !important;
+}
+
 /* Center the URL bar */
 toolbarspring {
 	max-width: 10000px !important;
