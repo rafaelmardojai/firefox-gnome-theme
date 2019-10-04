@@ -13,7 +13,7 @@
 	box-shadow: none !important;
 	border-radius: 0 !important;
 	background: transparent !important;
-	--urlbar-icon-padding: 2px !important;;
+	--urlbar-icon-padding: 2px !important;
 }
 #urlbar.megabar[breakout][breakout-extend] {
 	left: 0 !important;
