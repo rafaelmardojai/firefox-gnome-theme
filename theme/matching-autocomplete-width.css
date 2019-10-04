@@ -1,41 +1,8 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* FIREFOX 70 FIX */
-#urlbar .urlbarView {
-	left: calc(var(--item-padding-start) - 6px) !important;
-	right: var(--item-padding-end) !important;
-	top: 40px !important;
-	z-index: 10 !important;
-	max-width: 100% !important;
-	
-	background: var(--gnome-popover-background) !important;
-	border: 1px solid !important;
-	border-color: var(--gnome-popover-border-color) !important;
-	border-radius: 9px;
-	box-shadow: var(--gnome-popover-shadow) !important;
-	color: var(--gnome-toolbar-color) !important;
-	padding: 8px;
-}
-
-#urlbar .urlbarView-body-outer {
-	max-height: 35vh !important;
-	overflow-x: auto;
-}
-	
-#urlbar .search-one-offs {
-	padding: 8px 0 0 0 !important;
-	margin-top: 8px !important;
-	border-color: var(--gnome-popover-separator-color) !important;
-}
-
-#urlbar .search-panel-header > label {
-    margin-top: 0px !important;
-}
-
-.urlbarView-body-outer {
-	--item-padding-start: 0 !important;
-	--item-padding-end: 0 !important;
-}
+/*
+This feature is included by default for Firefox 70+
+*/
 
 /**************************************************************************************
 *********************************** FIREFOX 68 ****************************************

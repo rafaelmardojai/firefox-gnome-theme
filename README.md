@@ -128,6 +128,7 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 - **matching-autocomplete-width.css** *GNOMISH*
 
 	Limit the URL bar's autocompletion popup's width to the URL bar's width.
+	*This feature is included by default for Firefox 70+*
 	
 - **rounded-title-buttons.css** *GNOMISH*
 
