@@ -7,7 +7,7 @@
 	--urlbar-toolbar-height: 34.00px !important;
 }
 
-/* Megabar fixes  */
+/* Megabar reset  */
 #urlbar.megabar {
 	border: 0 !important;
 	box-shadow: none !important;
@@ -24,7 +24,7 @@
 	height: 34px !important;
 }
 
-/* Megabar breakout  */
+/* Megabar breakout styles  */
 #urlbar.megabar[breakout][breakout-extend][open] {
 	box-shadow: var(--gnome-popover-shadow) !important;
 	border-radius: 5px 5px 9px 9px !important;
@@ -112,15 +112,23 @@ toolbarspring {
 	margin-top: -8px !important;
 	box-shadow: none !important;
 	border-top: 0 !important;
-	padding-top: 0px !important;
+	padding: 0px !important;
+}
+#urlbar.megabar .urlbarView-body-outer {
+	padding: 0 8px !important;
 }
 #urlbar.megabar .urlbarView-body-inner {
 	border: 0 !important;
 }
-
 #urlbar.megabar .urlbarView-row {
 	padding: 6px !important;
 	border-radius: 5px !important;
+}
+#urlbar.megabar .search-one-offs {
+	margin-top: 6px !important;
+	padding: 8px !important;
+	background: var(--gnome-popover-background) !important;
+	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 
 /* Search engines buttons */
