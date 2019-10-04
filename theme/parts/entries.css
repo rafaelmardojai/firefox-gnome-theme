@@ -3,7 +3,8 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Entries */
-#urlbar,
+#urlbar.megabar #urlbar-input-container,
+#urlbar:not(.megabar),
 #searchbar,
 #search-box,
 .findbar-textbox {
@@ -21,7 +22,8 @@
 }
 
 /* Entries focused */
-#urlbar[focused],
+#urlbar.megabar[focused] #urlbar-input-container,
+#urlbar:not(.megabar)[focused],
 #searchbar:focus-within,
 #search-box[focused], 
 .findbar-textbox[focused],
@@ -32,7 +34,8 @@
 }
 
 /* Inactive window entries */
-#urlbar:-moz-window-inactive,
+#urlbar.megabar #urlbar-input-container:-moz-window-inactive,
+#urlbar:not(.megabar):-moz-window-inactive,
 #searchbar:-moz-window-inactive,
 #search-box:-moz-window-inactive,
 .findbar-textbox:-moz-window-inactive {
