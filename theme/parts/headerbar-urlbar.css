@@ -20,6 +20,9 @@
 	top: 0 !important;
 	width: 100% !important;
 }
+#urlbar.megabar[breakout][breakout-extend]:not([open]) {
+	height: 34px !important;
+}
 
 /* Megabar breakout  */
 #urlbar.megabar[breakout][breakout-extend][open] {
@@ -27,10 +30,10 @@
 	border-radius: 5px 5px 9px 9px !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] #urlbar-input-container {
-	-moz-outline-radius: 5px 5px 0 0 !important;
+	border-bottom-color: transparent !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
-	border-radius: 0 0 9px 9px !important;
+	border-radius: 0 0 5px 5px !important;
 }
 
 /* Center the URL bar */
@@ -92,7 +95,8 @@ toolbarspring {
 }
 
 #urlbar .search-panel-header > label {
-    margin-top: 0px !important;
+	margin-top: 0px !important;
+	margin-left: 6px !important;
 }
 
 .urlbarView-body-outer {
@@ -102,11 +106,56 @@ toolbarspring {
 
 /* URL bar results megabar fixes */
 #urlbar.megabar .urlbarView {
+	background: var(--gnome-entry-background) !important;
 	width: 100% !important;
 	margin: 0 !important;
-	margin-top: -6px !important;
+	margin-top: -8px !important;
 	box-shadow: none !important;
+	border-top: 0 !important;
+	padding-top: 0px !important;
 }
 #urlbar.megabar .urlbarView-body-inner {
 	border: 0 !important;
+}
+
+#urlbar.megabar .urlbarView-row {
+	padding: 6px !important;
+	border-radius: 5px !important;
+}
+
+/* Search engines buttons */
+#urlbar .searchbar-engine-one-off-item {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
+
+#urlbar .searchbar-engine-one-off-item {
+	-moz-appearance: none !important;
+	background: var(--gnome-button-background) !important;
+	box-shadow: var(--gnome-button-box-shadow) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-left-width: 0 !important;
+	border-bottom-color: var(--gnome-button-border-accent-color) !important;
+	padding: 0 2px !important;
+	min-height: 34px !important;
+	min-width: 34px !important;
+	margin: 0 !important;
+}
+#urlbar .searchbar-engine-one-off-item:hover, .searchbar-engine-one-off-item[selected] {
+	background: var(--gnome-button-hover-background) !important;
+	color: unset !important;
+}
+#urlbar .searchbar-engine-one-off-item:first-child {	
+	border-radius: 5px 0 0 5px;
+	border-left-width: 1px !important;
+}
+#urlbar .searchbar-engine-one-off-item.last-engine, .searchbar-engine-one-off-item:last-child {	
+	border-radius: 0 5px 5px 0;
+}
+
+#urlbar  #urlbar-anon-search-settings-compact {
+	border-left-width: 1px !important;
+	border-bottom: 1px solid var(--gnome-button-border-accent-color) !important;
+	border-radius: 5px;	
+	margin-left: 6px !important;
 }

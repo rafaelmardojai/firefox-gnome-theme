@@ -22,7 +22,7 @@
 }
 
 /* Entries focused */
-#urlbar.megabar[focused] #urlbar-input-container,
+#urlbar.megabar[breakout][breakout-extend],
 #urlbar:not(.megabar)[focused],
 #searchbar:focus-within,
 #search-box[focused], 
