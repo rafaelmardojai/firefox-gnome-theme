@@ -27,7 +27,6 @@ toolbarspring {
 }
 
 /* URL bar and Search bar */
-
 #urlbar[focused] .urlbar-textbox-container {
 	margin: -1px !important;
 }
@@ -87,4 +86,14 @@ toolbarspring {
 .urlbarView-body-outer {
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
+}
+
+/* URL bar results megabar fixes */
+#urlbar.megabar .urlbarView {
+	width: 100% !important;
+	margin: 0 !important;
+	box-shadow: none !important;
+}
+#urlbar.megabar .urlbarView-body-inner {
+	border: 0 !important;
 }
