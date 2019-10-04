@@ -139,7 +139,9 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-header {
 	padding: 5px !important;
 }
 
-.subviewbutton[disabled], .toolbarbutton-1[disabled] {
+.subviewbutton[disabled], .toolbarbutton-1[disabled],
+.protections-popup-category[disabled],
+.identity-popup-content-blocking-category[disabled] {
 	opacity: 0.5 !important;
 }
 
@@ -147,8 +149,8 @@ panel:not(.tooltip-xul-wrapper)[type=arrow][remote] .panel-header {
 	opacity: 0.5 !important;
 }
 
-.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:hover,
-.identity-popup-content-blocking-category:hover {
+.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
+.identity-popup-content-blocking-category:not([disabled]):hover {
 	background-color: var(--gnome-popover-button-hover-background) !important;
 }
 
