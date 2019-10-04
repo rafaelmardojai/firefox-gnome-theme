@@ -21,6 +21,18 @@
 	width: 100% !important;
 }
 
+/* Megabar breakout  */
+#urlbar.megabar[breakout][breakout-extend][open] {
+	box-shadow: var(--gnome-popover-shadow) !important;
+	border-radius: 5px 5px 9px 9px !important;
+}
+#urlbar.megabar[breakout][breakout-extend][open] #urlbar-input-container {
+	-moz-outline-radius: 5px 5px 0 0 !important;
+}
+#urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
+	border-radius: 0 0 9px 9px !important;
+}
+
 /* Center the URL bar */
 toolbarspring {
 	max-width: 10000px !important;
@@ -92,6 +104,7 @@ toolbarspring {
 #urlbar.megabar .urlbarView {
 	width: 100% !important;
 	margin: 0 !important;
+	margin-top: -6px !important;
 	box-shadow: none !important;
 }
 #urlbar.megabar .urlbarView-body-inner {
