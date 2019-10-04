@@ -105,8 +105,8 @@ git pull origin master
 > Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
 
 ## Uninstalling/removing the theme
-- Go to your profile folder (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory).
-- Remove `chrome` folder.
+1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
+2. Remove `chrome` folder.
 
 ## Enabling optional features
 Open `chrome/firefox-gnome-theme/userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome.css` directly in your `chrome/firefox-gnome-theme` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
@@ -125,9 +125,10 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 
 	You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
 
-- **matching-autocomplete-width.css** *GNOMISH*
+- **matching-autocomplete-width.css** *GNOMISH (FF 60-69)*
 
 	Limit the URL bar's autocompletion popup's width to the URL bar's width.
+	
 	*This feature is included by default for Firefox 70+*
 	
 - **rounded-title-buttons.css** *GNOMISH*
