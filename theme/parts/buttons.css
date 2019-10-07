@@ -58,6 +58,9 @@
 #TabsToolbar .toolbarbutton-1 {
 	margin: 2px 3px !important;
 }
+.close-icon:not(.tab-close-button) {
+	margin-left: 6px !important;
+}
 
 /* Text buttons */
 .subviewbutton.panel-subview-footer,
