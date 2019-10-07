@@ -52,7 +52,8 @@
 }
 
 /* Buttons with margins */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+.notification-button {
 	margin: 0 3px !important;
 }
 #TabsToolbar .toolbarbutton-1 {
