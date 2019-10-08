@@ -17,8 +17,13 @@
 	height: 34px !important;
 	max-height: 34px !important;
 	margin: 0 !important;
-	padding: 2px 8px !important;
+	padding: 6px !important;
 	box-sizing: border-box;
+}
+#urlbar.megabar #urlbar-input-container,
+#urlbar:not(.megabar),
+#searchbar {
+	padding: 0 !important;
 }
 
 /* Entries focused */
