@@ -14,6 +14,16 @@
 	border-radius: 0 !important;
 	background: transparent !important;
 }
+#urlbar.megabar, #urlbar.megabar > #urlbar-input-container, #urlbar.megabar > .urlbarView {
+	position: none !important;
+	transition: none !important;
+}
+#urlbar-background {
+	display: none !important;
+}
+#urlbar.megabar[breakout][breakout-extend][breakout-extend-animate]  > .urlbarView {
+	animation: none !important;
+}
 #urlbar.megabar[breakout][breakout-extend] {
 	left: 0 !important;
 	top: 0 !important;
@@ -108,7 +118,7 @@ toolbarspring {
 	background: var(--gnome-entry-background) !important;
 	width: 100% !important;
 	margin: 0 !important;
-	margin-top: -8px !important;
+	margin-top: -4px !important;
 	box-shadow: none !important;
 	border-top: 0 !important;
 	padding: 0px !important;
