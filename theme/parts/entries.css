@@ -61,9 +61,9 @@
 }
 
 /* Entries fixes */
-#urlbar-container {
+#urlbar-container, #search-container {
 	padding: 0 !important;
-	margin: 0 !important;
+	margin: 0 3px !important;
 }
 #urlbar, #searchbar {
 	margin: 0 3px !important;
