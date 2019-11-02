@@ -18,17 +18,10 @@ This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
 This theme is supposed to work with current supported Firefox releases:
 
-- Firefox 69
-- Firefox 60 ESR*
+- Firefox 70
 - Firefox 68 ESR
-- Firefox 70 Beta
-- Firefox 71 Nightly
-
-***Firefox 60 ESR issues:***
-
-*(Dark theme variant is broken in Firefox < 67).*
-
-*https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme#Browser_compatibility*
+- Firefox 71 Beta
+- Firefox 72 Nightly
 
 ## Installation
 
