@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <g font-weight="400" font-family="Sans" fill='context-fill' stroke='context-stroke' fill-opacity='context-fill-opacity' stroke-opacity='context-stroke-opacity'>
+        <path d="M14.902 2a1.047 1.047 0 0 0-.125.032c-.447.1-.793.542-.782 1v1.687C14 6.032 14 6.032 12.433 6.032h-1.438c-.523 0-1 .476-1 1a1 1 0 0 0 0 .218v.782h6v-5a.979.979 0 0 0 0-.188v-.812h-.812A1.002 1.002 0 0 0 14.902 2zM.005 8v5a.979.979 0 0 0 0 .188V14h.812c.092.024.187.034.281.031.043-.008.084-.018.125-.031.447-.1.793-.542.782-1v-1.688C2 10 2 10 3.567 10h1.438c.523 0 1-.476 1-1a1 1 0 0 0 0-.219V8z" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" overflow="visible"/>
+        <path d="M8 1C4.847 1 2.18 3.126 1.312 6h2.094A5.013 5.013 0 0 1 8 3a5.013 5.013 0 0 1 4.594 3h2.094C13.819 3.126 11.152 1 8 1zm-6.688 9c.869 2.874 3.535 5 6.688 5 3.153 0 5.82-2.126 6.688-5h-2.094A5.013 5.013 0 0 1 8 13a5.013 5.013 0 0 1-4.594-3z" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" overflow="visible"/>
+    </g>
+</svg>

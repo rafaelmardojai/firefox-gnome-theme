@@ -40,9 +40,11 @@ cp -R $THEMEDIRECTORY $PWD
 
 # Create single-line user CSS files if non-existent or empty.
 [[ -s userChrome.css ]] || echo >> userChrome.css
+[[ -s userContent.css ]] || echo >> userContent.css
 
 # Import this theme at the beginning of the CSS files.
 sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
+sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
 
 # If GNOMISH extras enabled, import it in customChrome.css.
 if [ "$GNOMISHEXTRAS" = true ] ; then

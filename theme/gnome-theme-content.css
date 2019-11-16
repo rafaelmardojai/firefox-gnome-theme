@@ -1,0 +1,177 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+@-moz-document url-prefix(about:) {
+	.icon.icon-settings {
+		background-image: url("icons-userContent/settings-symbolic.svg") !important;
+	}
+	
+	.preferences-icon {
+		list-style-image: url("icons-userContent/settings-symbolic.svg") !important;
+	}
+	
+	.addons-icon {
+		list-style-image: url("icons-userContent/application-x-addon-symbolic.svg") !important;
+	}
+	
+	.help-icon {
+		list-style-image: url("icons-userContent/help-browser-symbolic.svg") !important;
+	}
+	
+	.geo-icon {
+		list-style-image: url("icons-userContent/find-location-symbolic.svg") !important;
+	}
+	
+	.camera-icon {
+		list-style-image: url("icons-userContent/camera-2-symbolic.svg") !important;
+	}
+	
+	.microphone-icon {
+		list-style-image: url("icons-userContent/microphone-symbolic.svg") !important;
+	}
+	
+	.desktop-notification-icon {
+		list-style-image: url("icons-userContent/note-symbolic.svg") !important;
+	}
+	
+	.message-bar-icon {
+		list-style-image: url("icons-userContent/dialog-information-symbolic.svg") !important;
+	}
+	
+	.message-bar-warning > .message-bar-icon {
+		list-style-image: url("icons-userContent/warning-symbolic.svg") !important;
+	}
+	
+	.more-options-button {
+		background: url("icons-userContent/view-more-horizontal-symbolic.svg") no-repeat center center !important;
+		background-image: url("icons-userContent/view-more-horizontal-symbolic.svg") !important;
+	}
+	
+	.content-blocking-warning-image {
+		list-style-image: url("icons-userContent/warning-symbolic.svg") !important;
+	}
+	
+	.reload-tabs-button {
+		list-style-image: url("icons-userContent/view-refresh-symbolic.svg") !important;
+	}
+
+	.icon.icon-download {
+		background-image: url("icons-userContent/folder-download-symbolic.svg") !important;
+	}
+	
+	.face-smile {
+		list-style-image: url("icons-userContent/face-smile-big-symbolic.svg") !important;
+	}
+	
+	.textbox-search-icon[searchbutton],
+	textbox:not([searchbutton]) > .textbox-search-sign {
+		list-style-image: url("icons-userContent/loupe-symbolic.svg") !important;
+	}
+	
+	html|select:not([size]):not([multiple]) {
+		background-image: url("icons-userContent/pan-down-symbolic.svg") !important;
+	}
+	
+	#category-general > .category-icon {
+		list-style-image: url("icons-userContent/settings-symbolic.svg") !important;
+	}
+	
+	#category-home > .category-icon {
+		list-style-image: url("icons-userContent/home-symbolic.svg") !important;
+	}
+	
+	#category-search > .category-icon {
+		list-style-image: url("icons-userContent/loupe-symbolic.svg") !important;
+	}
+	
+	#category-privacy > .category-icon {
+		list-style-image: url("icons-userContent/padlock-symbolic.svg") !important;
+	}
+	
+	#category-sync > .category-icon {
+		list-style-image: url("icons-userContent/emblem-synchronizing-symbolic.svg") !important;
+	}
+
+	#category-extension > .category-icon {
+		list-style-image: url("icons-userContent/application-x-addon-symbolic.svg") !important;
+	}
+	
+	#category-theme > .category-icon {
+		list-style-image: url("icons-userContent/paintbrush-symbolic.svg") !important;
+	}
+	
+	#category-dictionary > .category-icon {
+		list-style-image: url("icons-userContent/dictionary-symbolic.svg") !important;
+	}
+	
+	#go-back > .button-box > .button-icon {
+		list-style-image: url("icons-userContent/go-previous-symbolic.svg") !important;
+	}
+	
+	#header-utils-btn > .button-box > hbox > .button-icon {
+		list-style-image: url("icons-userContent/settings-symbolic.svg") !important;
+	}
+	
+	.button-menu-dropmarker {
+		list-style-image: url("icons-userContent/pan-down-symbolic.svg") !important;
+		margin-top: 4px;
+	}
+	
+	xul|*.menulist-dropmarker {
+		list-style-image: url("icons-userContent/pan-down-symbolic.svg") !important;
+	}
+
+	.info-panel > description,
+	.extension-controlled > description {
+		background: url("icons-userContent/dialog-information-symbolic.svg") 10px 14px no-repeat !important;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	@-moz-document url-prefix(about:) {
+		[class^="icon-"],
+		[class$="-icon"],
+		[class^="button-"],
+		[class$="-button"],
+		html|select:not([size]):not([multiple]),
+		.textbox-search-icon[searchbutton],
+		textbox:not([searchbutton]) > .textbox-search-sign {
+			fill: #eeeeec !important;
+			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
+		}
+		
+		.info-panel > description,
+		.extension-controlled > description,
+		.face-smile,
+		.content-blocking-warning-image,
+		.checkbox-icon {
+			fill: #ffffff !important;
+			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
+		}
+	}
+}
+
+@media (prefers-color-scheme: light),
+@media (prefers-color-scheme: no-preference) {
+	@-moz-document url-prefix(about:) {
+		[class^="icon-"],
+		[class$="-icon"],
+		[class^="button-"],
+		[class$="-button"],
+		html|select:not([size]):not([multiple]),
+		.textbox-search-icon[searchbutton],
+		textbox:not([searchbutton]) > .textbox-search-sign {
+			fill: #2e3436 !important;
+			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
+		}
+		
+		.info-panel > description,
+		.extension-controlled > description,
+		.face-smile,
+		.content-blocking-warning-image,
+		.checkbox-icon {
+			fill: #000000 !important;
+			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
+		}
+	}
+}

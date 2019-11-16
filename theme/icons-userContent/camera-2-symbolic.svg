@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <g fill='context-fill' stroke='context-stroke' fill-opacity='context-fill-opacity' stroke-opacity='context-stroke-opacity'>
+        <path d="M6 4h8c.554 0 1 .446 1 1v7c0 .554-.446 1-1 1H6c-.554 0-1-.446-1-1V5c0-.554.446-1 1-1zM5 8.47L1.53 5H1v7h.5z" style="marker:none" overflow="visible"/>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <g fill='context-fill' stroke='context-stroke' fill-opacity='context-fill-opacity' stroke-opacity='context-stroke-opacity'>
+        <path d="M4.273 1.063c-.857.003-2.358.913-2.358 2.521v9.854A1.57 1.57 0 0 0 3.477 15h9.438c1.125.031.934-.989.934-.989l-9.336.026c-2.283.006-2.085-2.992-.037-2.994l9.408-.012.031-10zm.638 1.875H7.6c3.317 0 4.271 1.263 4.25 3.03-.03 2.469-2.19 3.013-4.814 3.104-.622.022-1.506.022-2.124.022zM6.943 4v4.031c1.942.023 2.998-.683 3-2.062C9.946 4.2 8.702 4.03 6.943 4z" overflow="visible"/>
+        <path d="M2.404 11.063h10.448c-1.183.492-1.295 2.458 0 3H2.404z" overflow="visible" opacity=".3"/>
+    </g>
+</svg>
