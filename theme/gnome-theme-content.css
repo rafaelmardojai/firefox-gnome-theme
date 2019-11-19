@@ -1,7 +1,47 @@
 @namespace html "http://www.w3.org/1999/xhtml";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-@-moz-document url-prefix(about:) {
+@-moz-document url-prefix("about:"), url-prefix("chrome://") {
+
+	@media (prefers-color-scheme: light),
+	(prefers-color-scheme: no-preference) {
+		*|*:root {
+			--in-content-page-background: #f6f5f4 !important;
+			--in-content-text-color: #2e3436 !important;
+			--in-content-deemphasized-text: #929595 !important;
+			--in-content-box-background: #ffffff !important;
+			--in-content-box-border-color: #cdc7c2 !important;
+			--in-content-border-active: #3584e4 !important;
+			--in-content-border-active-shadow: var(--in-content-border-active) !important;
+			--in-content-link-color: #1b6acb !important;
+		}
+		
+		.textbox-search-icon {
+			color: #585d5e !important;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		*|*:root {
+			--in-content-page-background: #353535 !important;
+			--in-content-text-color: #eeeeec !important;
+			--in-content-deemphasized-text: #919190 !important;
+			--in-content-box-background: #2d2d2d !important;
+			--in-content-box-border-color: #1b1b1b !important;
+			--in-content-border-active: #15539e !important;
+			--in-content-border-active-shadow: #030C17 !important;
+			--in-content-link-color: #3584e4 !important;
+		}
+    
+		.textbox-search-icon {
+			color: #c7c7c6 !important;
+		}
+	}
+
+	*|*:root {
+		--in-content-border-hover: var(--in-content-box-border-color) !important;
+	}
+	
 	.icon.icon-settings {
 		background-image: url("icons-userContent/settings-symbolic.svg") !important;
 	}
@@ -42,8 +82,8 @@
 		list-style-image: url("icons-userContent/warning-symbolic.svg") !important;
 	}
 	
-	.more-options-button {
-		background: url("icons-userContent/view-more-horizontal-symbolic.svg") no-repeat center center !important;
+	.more-options-button,
+	.context-menu-button {
 		background-image: url("icons-userContent/view-more-horizontal-symbolic.svg") !important;
 	}
 	
@@ -117,6 +157,10 @@
 		margin-top: 4px;
 	}
 	
+	.collapsible-arrow {
+		background-image: url("icons-userContent/pan-down-symbolic.svg") !important;
+	}
+	
 	xul|*.menulist-dropmarker {
 		list-style-image: url("icons-userContent/pan-down-symbolic.svg") !important;
 	}
@@ -125,53 +169,30 @@
 	.extension-controlled > description {
 		background: url("icons-userContent/dialog-information-symbolic.svg") 10px 14px no-repeat !important;
 	}
-}
 
-@media (prefers-color-scheme: dark) {
-	@-moz-document url-prefix(about:) {
-		[class^="icon-"],
-		[class$="-icon"],
-		[class^="button-"],
-		[class$="-button"],
-		html|select:not([size]):not([multiple]),
-		.textbox-search-icon[searchbutton],
-		textbox:not([searchbutton]) > .textbox-search-sign {
-			fill: #eeeeec !important;
-			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
-		}
-		
-		.info-panel > description,
-		.extension-controlled > description,
-		.face-smile,
-		.content-blocking-warning-image,
-		.checkbox-icon {
-			fill: #ffffff !important;
-			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
-		}
+	textbox {
+		border-radius: 1px !important;
 	}
-}
 
-@media (prefers-color-scheme: light),
-@media (prefers-color-scheme: no-preference) {
-	@-moz-document url-prefix(about:) {
-		[class^="icon-"],
-		[class$="-icon"],
-		[class^="button-"],
-		[class$="-button"],
-		html|select:not([size]):not([multiple]),
-		.textbox-search-icon[searchbutton],
-		textbox:not([searchbutton]) > .textbox-search-sign {
-			fill: #2e3436 !important;
-			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
-		}
-		
-		.info-panel > description,
-		.extension-controlled > description,
-		.face-smile,
-		.content-blocking-warning-image,
-		.checkbox-icon {
-			fill: #000000 !important;
-			-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
-		}
+	body {
+		--newtab-background-color: var(--in-content-page-background) !important;
+		--newtab-textbox-background-color: var(--in-content-box-background) !important;
+		--newtab-textbox-border: var(--in-content-box-border-color) !important;
+		--newtab-textbox-focus-color: var(--in-content-border-active) !important;
+	}
+	
+	[class^="icon-"],
+	[class$="-icon"],
+	[class^="button-"],
+	[class$="-button"],
+	html|select:not([size]):not([multiple]),
+	.textbox-search-icon[searchbutton],
+	textbox:not([searchbutton]) > .textbox-search-sign,
+	.info-panel > description,
+	.extension-controlled > description,
+	.face-smile,
+	.content-blocking-warning-image {
+		fill: var(--in-content-text-color) !important;
+		-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
 	}
 }
