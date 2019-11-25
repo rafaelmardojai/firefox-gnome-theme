@@ -1,7 +1,7 @@
 @namespace html "http://www.w3.org/1999/xhtml";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-@-moz-document url-prefix("about:"), url-prefix("chrome://") {
+@-moz-document url-prefix("about:"), url-prefix("chrome://"), url-prefix("moz-extension://92b622f3-2990-45dc-ad6f-5b88a7b304ff/") {
 
 	@media (prefers-color-scheme: light),
 	(prefers-color-scheme: no-preference) {
