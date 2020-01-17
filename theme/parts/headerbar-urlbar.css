@@ -8,15 +8,12 @@
 }
 
 /* Megabar reset  */
+
 #urlbar.megabar {
 	border: 0 !important;
 	box-shadow: none !important;
 	border-radius: 0 !important;
 	background: transparent !important;
-}
-#urlbar.megabar, #urlbar.megabar > #urlbar-input-container, #urlbar.megabar > .urlbarView {
-	position: none !important;
-	transition: none !important;
 }
 #urlbar-background {
 	display: none !important;
@@ -40,6 +37,7 @@
 }
 #urlbar.megabar[breakout][breakout-extend][open] #urlbar-input-container {
 	border-bottom-color: transparent !important;
+	border-radius: 5px 5px 0 0 !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
 	border-radius: 0 0 5px 5px !important;
@@ -118,7 +116,7 @@ toolbarspring {
 	background: var(--gnome-entry-background) !important;
 	width: 100% !important;
 	margin: 0 !important;
-	margin-top: -4px !important;
+	margin-top: -40px !important;
 	box-shadow: none !important;
 	border-top: 0 !important;
 	padding: 0px !important;

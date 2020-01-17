@@ -197,7 +197,7 @@ menulist[open] .menulist-label-box,
 .findbar-container toolbarbutton:-moz-window-inactive,
 #sidebar-switcher-target:-moz-window-inactive,
 #viewButton:-moz-window-inactive,
-.notification-button:-moz-window-inactive {	
+.notification-button:-moz-window-inactive {
 	background: var(--gnome-inactive-button-background) !important;
 	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
 	border-color: var(--gnome-inactive-button-border-color) !important;

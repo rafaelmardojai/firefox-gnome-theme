@@ -27,7 +27,6 @@
 }
 
 /* Entries focused */
-#urlbar.megabar[breakout][breakout-extend],
 #urlbar:not(.megabar)[focused],
 #searchbar:focus-within,
 #search-box[focused], 
