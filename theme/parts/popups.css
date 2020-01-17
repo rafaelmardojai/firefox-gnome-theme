@@ -40,10 +40,6 @@ panel[type=arrow] {
 	margin-top: 9px !important;
 	max-height: 80vh !important;
 }
-panel[type=arrow] {
-	margin-right: -40px !important;
-	margin-left: -40px !important;
-}
 panel[type=arrow][position] .panel-arrow {
 	margin-right: 30px !important;
 	margin-left: 30px !important;
