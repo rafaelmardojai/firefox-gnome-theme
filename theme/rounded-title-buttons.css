@@ -8,3 +8,7 @@
 	width: 30px !important;
 	margin: 2px 5px !important;
 }
+
+:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button {
+	border-color: var(--gnome-inactive-button-border-color) !important;
+}
