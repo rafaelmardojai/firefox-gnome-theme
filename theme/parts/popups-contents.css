@@ -24,18 +24,6 @@
 	visibility: visible;
 }
 
-/* Main menu remove items icons */
-panelview vbox.panel-subview-body > toolbarbutton image, #appMenu-protection-report-icon {
-	display: none;
-}
-panelview vbox.panel-subview-body > toolbarbutton label, #appMenu-protection-report-text {
-	padding-inline-start: 0 !important;
-}
-#appMenu-zoom-controls > spacer,
-#appMenu-edit-controls > spacer {
-	width: 12px !important;
-}
-
 /* Main menu */
 #appMenu-popup .panel-banner-item:after {
 	-moz-box-ordinal-group: 0;
