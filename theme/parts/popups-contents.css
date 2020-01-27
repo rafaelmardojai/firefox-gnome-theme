@@ -32,9 +32,11 @@
 #appMenu-popup .toolbaritem-combined-buttons {
 	margin-inline-end: 0 !important;
 }
-#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label,
-#appMenu-fxa-container[fxastatus="signedin"] > #appMenu-fxa-status > #appMenu-fxa-label {
+#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label {
 	padding-left: 28px !important;
+}
+#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-avatar {
+	margin-inline-start: 5px !important;
 }
 
 /* User sync account remove avatar */
