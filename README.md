@@ -124,9 +124,7 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 	
 	*This feature is included by default for Firefox 70+*
 	
-- **rounded-title-buttons.css** *GNOMISH*
 
-	 Rounded title buttons (headerbar window controls).
 
 - **active-tab-contrast.css**
 
