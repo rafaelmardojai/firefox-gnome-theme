@@ -17,6 +17,8 @@
  * This feature is included by default for Firefox 70+ */
 /*@import "theme/matching-autocomplete-width.css"; /**/
 
+/* Use square title buttons old style. */
+/*@import "theme/square-title-buttons.css"; /**/
 
 /* Active tab high contrast */
 /*@import "theme/active-tab-contrast.css"; /**/

@@ -124,7 +124,9 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 	
 	*This feature is included by default for Firefox 70+*
 	
+- **square-title-buttons.css**
 
+	Use square title buttons old style.
 
 - **active-tab-contrast.css**
 
