@@ -128,6 +128,10 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 
 	Use square title buttons old style.
 
+- **normal-width-tabs.css**
+
+	Use normal width tabs.
+
 - **active-tab-contrast.css**
 
 	Active tab better contrast.
