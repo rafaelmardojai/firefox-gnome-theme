@@ -97,7 +97,7 @@ git pull origin master
 
 > Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
 
-## Uninstalling/removing the theme
+## Uninstalling/removing
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 
