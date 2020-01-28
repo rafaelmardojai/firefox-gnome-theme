@@ -14,10 +14,10 @@
 /*@import "theme/hide-single-tab.css"; /**/
 
 /* Limit the URL bar's autocompletion popup's width to the URL bar's width (GNOMISH) 
- * This feature is included by default for Firefox 70+ */
+ * This feature is included by default for Firefox 70+. */
 /*@import "theme/matching-autocomplete-width.css"; /**/
 
-/* Use square title buttons old style. */
+/* Use square title buttons old style */
 /*@import "theme/square-title-buttons.css"; /**/
 
 /* Active tab high contrast */
