@@ -332,3 +332,8 @@
 	border-color: var(--gnome-switch-active-slider-border-color) !important;
 	left: 24px;
 }
+
+/* Feature recommendation notification, fix width */
+#contextual-feature-recommendation-notification {
+    width: auto !important;
+}
