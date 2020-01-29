@@ -42,7 +42,7 @@
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 5px !important;
-	padding: 0 3px !important;
+	padding: 0 2px !important;
 	height: 34px !important;
 	max-height: 34px !important;
 	min-height: 34px !important;
