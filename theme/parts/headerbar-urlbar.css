@@ -8,7 +8,6 @@
 }
 
 /* Megabar reset  */
-
 #urlbar.megabar {
 	border: 0 !important;
 	box-shadow: none !important;
@@ -32,15 +31,21 @@
 
 /* Megabar breakout styles  */
 #urlbar.megabar[breakout][breakout-extend][open] {
-	box-shadow: var(--gnome-popover-shadow) !important;
 	border-radius: 5px 5px 9px 9px !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] #urlbar-input-container {
-	border-bottom-color: transparent !important;
 	border-radius: 5px 5px 0 0 !important;
+	border-color: var(--gnome-focused-urlbar-border-color) !important;
+	border-bottom-color: transparent !important;
+	border-width: 2px !important;
+}
+#urlbar.megabar[breakout][breakout-extend][open] #identity-box {
+	padding-inline-start: 5px !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
 	border-radius: 0 0 5px 5px !important;
+	border-color: var(--gnome-focused-urlbar-border-color) !important;
+	border-width: 2px !important;
 }
 
 /* Center the URL bar */
@@ -79,8 +84,7 @@ toolbarspring {
 	right: var(--item-padding-end) !important;
 	top: 40px !important;
 	z-index: 10 !important;
-	max-width: 100% !important;
-	
+	max-width: 100% !important;	
 	background: var(--gnome-popover-background) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popover-border-color) !important;
@@ -116,10 +120,11 @@ toolbarspring {
 	background: var(--gnome-entry-background) !important;
 	width: 100% !important;
 	margin: 0 !important;
-	margin-top: -40px !important;
+	margin-top: -42px !important;
 	box-shadow: none !important;
 	border-top: 0 !important;
 	padding: 0px !important;
+	border-color: var(--gnome-entry-border-color) !important;
 }
 #urlbar.megabar .urlbarView-body-outer {
 	padding: 0 8px !important;
