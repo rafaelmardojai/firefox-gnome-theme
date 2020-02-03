@@ -39,8 +39,12 @@
 	border-bottom-color: transparent !important;
 	border-width: 2px !important;
 }
-#urlbar.megabar[breakout][breakout-extend][open] #identity-box {
+#urlbar.megabar[breakout][breakout-extend][open] #identity-box[pageproxystate="invalid"],
+#urlbar.megabar[breakout][breakout-extend][open] #tracking-protection-icon-container {
 	padding-inline-start: 5px !important;
+}
+#urlbar.megabar[breakout][breakout-extend][open] .urlbar-page-action:last-child {
+	margin-right: -1px !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
 	border-radius: 0 0 5px 5px !important;
