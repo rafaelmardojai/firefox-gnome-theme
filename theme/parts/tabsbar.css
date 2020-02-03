@@ -6,7 +6,7 @@
 	--space-above-tabbar: 0 !important;
 }
 
-#TabsToolbar:not([inFullscreen]) #tabbrowser-tabs {
+#TabsToolbar:not([inFullscreen]) > .toolbar-items {
 	margin-bottom: -1px !important;
 }
 
