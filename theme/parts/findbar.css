@@ -11,6 +11,7 @@ findbar label, findbar description {
 }
 
 .findbar-container {
+	align-items: center;
 	padding: 6px !important;
 	display: flex;
 	justify-content: flex-start;
@@ -29,7 +30,6 @@ hbox[anonid="findbar-textbox-wrapper"] {
 
 .findbar-find-status, .found-matches {	
 	margin-right: 6px !important;
-	padding: 7px 0;
 }
 
 .findbar-closebutton {
