@@ -41,7 +41,7 @@
 	/* Window buttons box */
 	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
 		left: 0;
-		right: auto;
+		right: auto !important;
 	}
 
 	/* Window controls: at least 1 button */
