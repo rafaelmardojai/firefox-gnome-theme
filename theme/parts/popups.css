@@ -40,6 +40,9 @@ panel[type=arrow] {
 	margin-top: 9px !important;
 	max-height: 80vh !important;
 }
+#BMB_bookmarksPopup {
+	max-height: 80vh !important;
+}
 
 /* Style popovers */
 .panel-arrowcontent .panel-arrowcontent, 
