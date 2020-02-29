@@ -109,6 +109,15 @@ toolbarspring {
 	border-color: var(--gnome-popover-separator-color) !important;
 }
 
+#urlbar .urlbarView-row {
+	padding: 5px !important;
+	border-radius: 5px !important;
+	margin-bottom: 5px !important;
+}
+#urlbar .urlbarView-row-inner, #urlbar .urlbarView-no-wrap  {
+	align-items: center !important;
+}
+
 #urlbar .search-panel-header > label {
 	margin-top: 0px !important;
 	margin-left: 6px !important;
@@ -136,9 +145,12 @@ toolbarspring {
 #urlbar.megabar .urlbarView-body-inner {
 	border: 0 !important;
 }
-#urlbar.megabar .urlbarView-row {
-	padding: 6px !important;
+#urlbar.megabar .urlbarView-row-inner {
+	padding-block: 5px !important;
 	border-radius: 5px !important;
+}
+#urlbar.megabar .urlbarView-row-inner, #urlbar .urlbarView-no-wrap  {
+	align-items: center !important;
 }
 #urlbar.megabar .search-one-offs {
 	margin-top: 6px !important;
