@@ -35,7 +35,7 @@ mkdir -p chrome
 cd chrome
 
 # Copy theme repo inside
-echo "Coping repo in $PWD"
+echo "Copying repo in $PWD"
 cp -R $THEMEDIRECTORY $PWD
 
 # Create single-line user CSS files if non-existent or empty.
