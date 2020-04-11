@@ -5,9 +5,17 @@ FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 GNOMISHEXTRAS=false
 
+# Determine firefox profile being currently used programatically
+# credits: https://stackoverflow.com/questions/57526217/
+function current_profile() {
+  pgrep firefox | xargs -I{} lsof -p {} 2>/dev/null | grep .parentlock |
+    awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
+}
+
+
 # Get options.
 while getopts 'f:p:g' flag; do
-	case "${flag}" in    
+	case "${flag}" in
 		f) FIREFOXFOLDER="${OPTARG}" ;;
 		p) PROFILENAME="${OPTARG}" ;;
 		g) GNOMISHEXTRAS=true ;;
@@ -15,9 +23,9 @@ while getopts 'f:p:g' flag; do
 done
 
 # Define profile folder path.
-if test -z "$PROFILENAME" 
+if test -z "$PROFILENAME"
 	then
-		PROFILEFOLDER="$FIREFOXFOLDER/*.default*"
+    PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
 	else
 		PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
 fi
