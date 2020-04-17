@@ -158,6 +158,13 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 ### CSD have sharp corners
 See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 
+To solve it, go to the `about:config` page and type this:
+`mozilla.widget.use-argb-visuals`.
+
+Set it as a `boolean` and click on the add button.
+
+Now reboot, and it should look good !
+
 ### Icons color broken with system-icons.css
 Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them directly in the `system-icons.css` file, look for `--gnome-icons-hack-filter` & `--gnome-window-icons-hack-filter` vars and play with css filters.
 
