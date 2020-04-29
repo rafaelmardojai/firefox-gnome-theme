@@ -26,10 +26,16 @@ This theme is supposed to work with current supported Firefox releases:
 ## Installation
 
 ### Installation script
-```sh
-git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-gnome-theme
-./scripts/install.sh
-```
+1. Clone this repo and enter folder:
+	```sh
+	git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-gnome-theme
+	```
+
+2. Run installation script:
+	```sh
+	./scripts/install.sh # Standard
+	./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+	```
 
 #### Script options
 - -f `<firefox_folder>` *optional*
@@ -38,7 +44,7 @@ git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-g
 
 - -p `<profile_folder>` *optional*
 	- Set custom profile folder name, for example `e0j6yb0p.default-nightly`
-	- Default: `*.default` (standard default profile)
+	- Default: standard default profile
 
 - -g *optional*
 	- Auto enable GNOMISH extra features `hide-single-tab.css` & `matching-autocomplete-width.css`
@@ -51,7 +57,7 @@ git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-g
 
 3. Open directory in a terminal.
 
-4. Create a `chrome` directory if it doesn't exist.
+4. Create a `chrome` directory if it doesn't exist:
 
 	```sh
 	mkdir -p chrome
