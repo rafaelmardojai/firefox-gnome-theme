@@ -158,12 +158,16 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 ### CSD have sharp corners
 See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 
-To solve it, go to the `about:config` page and type this:
-`mozilla.widget.use-argb-visuals`.
+#### Wayland fix:
+1. Go to the `about:config` page
+2. Search for the `layers.acceleration.force-enabled` preference and set it to true.
+3. Now restart Firefox, and it should look good!
 
-Set it as a `boolean` and click on the add button.
-
-Now reboot, and it should look good !
+#### X.Org fix:
+1. Go to the `about:config` page 
+2. Type `mozilla.widget.use-argb-visuals`
+3. Set it as a `boolean` and click on the add button
+4. Now restart Firefox, and it should look good!
 
 ### Icons color broken with system-icons.css
 Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them directly in the `system-icons.css` file, look for `--gnome-icons-hack-filter` & `--gnome-window-icons-hack-filter` vars and play with css filters.
