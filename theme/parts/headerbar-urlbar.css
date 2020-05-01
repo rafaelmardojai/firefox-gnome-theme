@@ -24,6 +24,7 @@
 	left: 0 !important;
 	top: 0 !important;
 	width: 100% !important;
+	z-index: 5 !important;
 }
 #urlbar.megabar[breakout][breakout-extend]:not([open]) {
 	height: 34px !important;
