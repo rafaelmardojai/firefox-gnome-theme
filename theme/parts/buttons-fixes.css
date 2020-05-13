@@ -149,6 +149,11 @@ menulist {
 	margin-right: 0 !important;
 }
 
+/* Auto complete popup button*/
+.autocomplete-richlistitem[type="loginsFooter"] {
+	margin: 4px 4px 0 4px !important;
+}
+
 /* Bookmarks editor buttons */
 .expander-down image, .expander-up image {
 	margin: 6px !important;
