@@ -37,6 +37,7 @@
 .tracking-protection-button,
 .dialog-button,
 .autocomplete-richlistitem[type="loginsFooter"],
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -79,6 +80,7 @@
 .tracking-protection-button,
 .dialog-button,
 .autocomplete-richlistitem[type="loginsFooter"],
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -136,6 +138,7 @@ menulist:hover .menulist-label-box,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -169,6 +172,7 @@ menulist[open] .menulist-label-box,
 .tracking-protection-button:active,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -300,7 +304,8 @@ button.popup-notification-primary-button.popup-notification-button:active,
 /* Buttons with destructive action */
 #editBookmarkPanelRemoveButton,
 .identity-popup-permission-remove-button,
-#PanelUI-panic-view-button {
+#PanelUI-panic-view-button,
+tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1'] {
 	color: white !important;
 	background: var(--gnome-button-destructive-action-background) !important;
 	border-color: var(--gnome-button-destructive-action-border-color) !important;
@@ -311,13 +316,15 @@ button.popup-notification-primary-button.popup-notification-button:active,
 
 #editBookmarkPanelRemoveButton:hover,
 .identity-popup-permission-remove-button:not(#hack):hover,
-#PanelUI-panic-view-button:hover {
+#PanelUI-panic-view-button:hover,
+tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1']:hover {
 	background: var(--gnome-button-destructive-action-hover-background) !important;
 }
 
 #editBookmarkPanelRemoveButton:active,
 .identity-popup-permission-remove-button:not(#hack):active,
-#PanelUI-panic-view-button:active {
+#PanelUI-panic-view-button:active,
+tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1']:active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
 	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
