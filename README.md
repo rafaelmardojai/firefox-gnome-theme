@@ -16,7 +16,7 @@
 
 # The following is from the original github repo
 
-##Description
+## Description
 
 This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
