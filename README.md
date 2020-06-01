@@ -12,7 +12,7 @@
 
 <p align="center">This is a fork of <a href="https://github.com/rafaelmardojai/firefox-gnome-theme">rafaelmardojai/firefox-gnome-theme</a> which I used and changed a few bits (Some icons and some colour tweaks). If you would like to, feel free to make changes and send through as a pull request.</p> <br>
 
-##You will need to manually move the userContent.css to your chrome dir to get the custom new tab theme.
+## You will need to manually move the userContent.css to your chrome dir to get the custom new tab theme.
 
 ![Screenshot of the theme](screenshot.png)
 
