@@ -14,6 +14,8 @@
 
 ## You will need to manually move the userContent.css to your chrome dir to get the custom new tab theme. Do not use releases, not up to date with my changes.
 
+<p align="center"> Running this in the terminal should also work: cd  ~/Downloads/; git clone https://github.com/botrosco/firefox-pop_os-theme.git; cd firefox-pop_os-theme;bash ./scripts/install.sh -g; cp userContent.css ~/.mozilla/firefox/*.default-release*/chrome/ </p>
+
 ![Screenshot of the theme](screenshot.png)
 
 # The following is from the original github repo
