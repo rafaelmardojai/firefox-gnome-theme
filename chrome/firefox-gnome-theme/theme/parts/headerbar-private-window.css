@@ -1,0 +1,27 @@
+/* Private window headerbar */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Add private window headerbar indicator */
+:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
+	background: url("../icons/user-not-tracked.svg") no-repeat;
+	background-size: 64px 64px;
+	content: "";
+	display: block;	
+	position: absolute;
+	width: 64px;
+	height: 46px;
+	top: 0;
+	opacity: 0.3;
+	transform: translate(15px, 0);	
+}
+@media (prefers-color-scheme: dark) {
+	:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
+		filter: invert(100%);
+	}
+}
+
+/* Hide tabsbar default private browsing indicator */
+#TabsToolbar .private-browsing-indicator {
+	display: none !important;
+}

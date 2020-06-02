@@ -1,0 +1,14 @@
+/* Square title buttons old style */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root[tabsintitlebar] #titlebar .titlebar-button {
+	border-radius: 5px !important;
+	height: 34px !important;
+	margin: 0 3px !important;
+	width: 34px !important;
+}
+
+:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button {
+	border-color: transparent !important;
+}
