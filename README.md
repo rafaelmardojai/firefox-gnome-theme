@@ -38,12 +38,12 @@ This theme is supposed to work with current supported Firefox releases:
 	```
 
 #### Script options
-- -f `<firefox_folder>` *optional*
+- `-f <firefox_folder_path>` *optional*
 	- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
 	- Default: `~/.mozilla/firefox/`
 
-- -p `<profile_folder>` *optional*
-	- Set custom profile folder name, for example `e0j6yb0p.default-nightly`
+- `-p <profile_name>` *optional*
+	- Set custom profile name, for example `e0j6yb0p.default-nightly`
 	- Default: standard default profile
 
 - -g *optional*
