@@ -8,8 +8,8 @@ GNOMISHEXTRAS=false
 # Determine firefox profile being currently used programatically
 # credits: https://stackoverflow.com/questions/57526217/
 function current_profile() {
-  pgrep firefox | xargs -I{} lsof -p {} 2>/dev/null | grep .parentlock |
-    awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
+	pgrep firefox | xargs -I{} lsof -p {} 2>/dev/null | grep .parentlock |
+		awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
 }
 
 
@@ -25,7 +25,7 @@ done
 # Define profile folder path.
 if test -z "$PROFILENAME"
 	then
-    PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
+		PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
 	else
 		PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
 fi
