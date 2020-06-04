@@ -13,6 +13,18 @@
     .search-wrapper .logo-and-wordmark .wordmark {
      fill: #fff !important;
      }
+    .search-wrapper .search-button {
+     fill: #ccc !important
+     }
+     .prefs-button button {
+     fill: #ccc !important
+     }
 }
 
 input#newtab-search-text{border:1px solid #252525 !important; background: #252525 !important; color: #ccc !important;}
+
+button#searchSubmit{
+	.search-wrapper .search-button {
+	 fill: #ccc !important
+	}
+}
