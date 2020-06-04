@@ -48,7 +48,7 @@
 	color: var(--gnome-toolbar-color) !important;
 	margin: -2px 0 0 0 !important;
 	width: 100% !important;
-  border-radius: 0 0 5px 5px !important;
+	border-radius: 0 0 5px 5px !important;
 	border: 2px solid var(--gnome-focused-urlbar-border-color) !important;
 	border-top: 0 !important;
 }
