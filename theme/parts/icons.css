@@ -159,6 +159,9 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 :root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon {
 	list-style-image: url("../icons/window-maximize-symbolic.svg") !important;
 }
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	list-style-image: url("../icons/window-restore-symbolic.svg") !important;
+}
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon {
 	list-style-image: url("../icons/window-minimize-symbolic.svg") !important;
