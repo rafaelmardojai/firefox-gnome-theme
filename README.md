@@ -46,7 +46,7 @@ This theme is supposed to work with current supported Firefox releases:
 	- Set custom profile name, for example `e0j6yb0p.default-nightly`
 	- Default: standard default profile
 
-- -g *optional*
+- `-g` *optional*
 	- Auto enable GNOMISH extra features `hide-single-tab.css` & `matching-autocomplete-width.css`
 
 
@@ -103,7 +103,7 @@ git pull origin master
 
 > Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
 
-## Uninstalling/removing
+## Uninstalling
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 
