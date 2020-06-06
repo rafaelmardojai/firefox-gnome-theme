@@ -12,13 +12,10 @@
 	width: 64px;
 	height: 46px;
 	top: 0;
-	opacity: 0.3;
-	transform: translate(15px, 0);	
-}
-@media (prefers-color-scheme: dark) {
-	:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
-		filter: invert(100%);
-	}
+	transform: translate(15px, 0);
+	fill: var(--gnome-toolbar-color) !important;
+	fill-opacity: 0.3 !important;
+	-moz-context-properties: fill, fill-opacity;
 }
 
 /* Hide tabsbar default private browsing indicator */
