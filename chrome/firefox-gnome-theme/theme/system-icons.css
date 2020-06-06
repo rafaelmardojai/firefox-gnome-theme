@@ -26,6 +26,9 @@
 :root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon {
 	list-style-image: url("moz-icon://stock/window-maximize-symbolic?size=dialog") !important;
 }
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	list-style-image: url("moz-icon://stock/window-restore-symbolic?size=dialog") !important;
+}
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon {
 	list-style-image: url("moz-icon://stock/window-minimize-symbolic?size=dialog") !important;

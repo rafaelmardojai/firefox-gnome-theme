@@ -3,8 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Entries */
-#urlbar.megabar #urlbar-input-container,
-#urlbar:not(.megabar),
+#urlbar #urlbar-input-container,
 #searchbar,
 #search-box,
 .findbar-textbox {
@@ -20,14 +19,13 @@
 	padding: 6px !important;
 	box-sizing: border-box;
 }
-#urlbar.megabar #urlbar-input-container,
-#urlbar:not(.megabar),
+#urlbar #urlbar-input-container,
 #searchbar {
 	padding: 0 !important;
 }
 
 /* Entries focused */
-#urlbar:not(.megabar)[focused],
+#urlbar[breakout][breakout-extend]:not([open]) #urlbar-input-container,
 #searchbar:focus-within,
 #search-box[focused], 
 .findbar-textbox[focused],
@@ -38,8 +36,7 @@
 }
 
 /* Inactive window entries */
-#urlbar.megabar #urlbar-input-container:-moz-window-inactive,
-#urlbar:not(.megabar):-moz-window-inactive,
+#urlbar #urlbar-input-container:-moz-window-inactive,
 #searchbar:-moz-window-inactive,
 #search-box:-moz-window-inactive,
 .findbar-textbox:-moz-window-inactive {
