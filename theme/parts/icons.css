@@ -54,10 +54,10 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 }
 
 /* Tabs scroll icons */
-#TabsToolbar .scrollbutton-up {
+#scrollbutton-up {
 	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
 }
-#TabsToolbar .scrollbutton-down {
+#scrollbutton-down {
 	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
 }
 
