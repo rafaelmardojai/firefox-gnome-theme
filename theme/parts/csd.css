@@ -130,9 +130,6 @@
 	margin: 2px 5px !important;
 	width: 30px;
 }
-:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button {
-	border-color: var(--gnome-inactive-button-border-color) !important;
-}
 
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	border-radius: 5px !important;
