@@ -171,6 +171,16 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 .identity-popup-permission-remove-button .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 }
+@media (prefers-color-scheme: light) {
+	.notificationbox-stack notification[type="critical"] .close-icon:not(.tab-close-button):not(:hover) {
+		fill: #fff !important;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.notificationbox-stack notification[type="warning"] .close-icon:not(.tab-close-button):not(:hover) image {
+		fill: rgb(46, 52, 54) !important;
+	}
+}
 
 /* Window buttons */
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,

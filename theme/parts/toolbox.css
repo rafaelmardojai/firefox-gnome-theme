@@ -97,17 +97,6 @@ findbar:-moz-window-inactive description,
   background: #d70022 !important;
 }
 
-@media (prefers-color-scheme: light) {
-	.notificationbox-stack notification[type="critical"] .close-icon:not(.tab-close-button):not(:hover) image {
-		filter: invert(100%) brightness(200%);
-	}
-}
-@media (prefers-color-scheme: dark) {
-	.notificationbox-stack notification[type="warning"] .close-icon:not(.tab-close-button):not(:hover) image {
-		filter: none !important;
-	}
-}
-
 .notificationbox-stack[notificationside="top"] notification {
 	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 }
