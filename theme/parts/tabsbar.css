@@ -153,15 +153,13 @@ tab[selected]:-moz-window-inactive {
 	box-sizing: content-box; /* Avoid deformation on flexbox */
 	border-radius: 5px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+	fill: var(--gnome-toolbar-color) !important;
+	fill-opacity: 1 !important;
+	-moz-context-properties: fill, fill-opacity;
 	height: 16px;
 	opacity: .3;
 	padding: 2px;
 	width: 16px;
-}
-@media (prefers-color-scheme: dark) {
-	.tab-close-button {	
-		list-style-image: url("../icons/window-close-symbolic-light.svg") !important;
-	}
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
