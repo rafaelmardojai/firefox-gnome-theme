@@ -275,3 +275,10 @@ tab[selected]:-moz-window-inactive {
 	position: relative;
 	margin-right: -10px;
 }
+
+/* OPTIONAL: Hide Single Tab */
+@supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
+	#tabbrowser-tabs tab:only-of-type {
+		display: none !important;
+	}
+}
