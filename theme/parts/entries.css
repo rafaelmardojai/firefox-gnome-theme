@@ -30,6 +30,15 @@
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
 }
+@media (prefers-color-scheme: dark) {
+	#urlbar[breakout][breakout-extend],
+	#searchbar:focus-within,
+	#search-box[focused], 
+	.findbar-textbox[focused],
+	.findbar-textbox:focus {		
+		outline-width: 1px !important;
+	}
+}
 
 /* Inactive window entries */
 #urlbar:-moz-window-inactive,
