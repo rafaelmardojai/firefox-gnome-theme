@@ -12,15 +12,14 @@ toolbarspring {
 	max-width: 10000px !important;
 }
 
-/* Reset */
+/* URL bar */
 #urlbar {
-	border: 0 !important;
 	box-shadow: none !important;
-	border-radius: 0 !important;
-	background: transparent !important;
 }
 #urlbar-background {
-	display: none !important;
+	box-shadow: var(--gnome-entry-box-shadow) !important;
+	border: 0 !important;
+	background: transparent !important;
 }
 
 #urlbar[breakout][breakout-extend] {
@@ -28,34 +27,24 @@ toolbarspring {
 	top: 0 !important;
 	width: 100% !important;
 	z-index: 5 !important;
+	padding: 0 !important;
 }
-#urlbar[breakout][breakout-extend]:not([open]) {
-	height: 34px !important;
+#urlbar[breakout][breakout-extend][open] {
+	height: auto !important;
+	max-height: unset !important;
 }
-
-/* Breakout input  */
-#urlbar[breakout][breakout-extend][open] #urlbar-input-container {
-	border-radius: 5px 5px 0 0 !important;
-	border: 2px solid var(--gnome-focused-urlbar-border-color) !important;
-	border-bottom-color: transparent !important;
-}
-#urlbar[breakout][breakout-extend][open] #identity-box[pageproxystate="invalid"],
-#urlbar[breakout][breakout-extend][open] #tracking-protection-icon-container {
-	padding-inline-start: 5px !important;
-}
-#urlbar[breakout][breakout-extend][open] .urlbar-page-action:last-child {
-	margin-right: -1px !important;
+#urlbar[breakout][breakout-extend] #urlbar-input-container {
+	height: 32px !important;
+	max-height: 32px !important;
+	padding: 0 !important;
 }
 
 /* URL bar results */
 .urlbarView {
-	background: var(--gnome-entry-background) !important;
+	background: transparent !important;
 	color: var(--gnome-toolbar-color) !important;
 	margin: -2px 0 0 0 !important;
 	width: 100% !important;
-	border-radius: 0 0 5px 5px !important;
-	border: 2px solid var(--gnome-focused-urlbar-border-color) !important;
-	border-top: 0 !important;
 }
 
 .urlbarView-body-outer {
@@ -81,9 +70,11 @@ toolbarspring {
 /* Search engines buttons */	
 .search-one-offs {
 	margin-top: 6px !important;
+	margin-bottom: 2px !important;
 	padding: 8px !important;
 	background: var(--gnome-popover-background) !important;
-	border-top: 1px solid var(--gnome-popover-separator-color) !important;
+	border-top: 1px solid var(--gnome-entry-border-color) !important;
+	border-radius: 0 0 5px 5px !important;
 }
 
 .searchbar-engine-one-off-item {
