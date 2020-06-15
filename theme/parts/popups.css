@@ -160,6 +160,14 @@ panel[type="autocomplete-richlistbox"] {
 }
 
 /* TODO: Move to a new file */
+
+/* Browser dialog promts center */
+.content-prompt {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Browser dialog promts */
 tabmodalprompt[role="dialog"] .tabmodalprompt-mainContainer {
 	background: var(--gnome-popover-background) !important;
