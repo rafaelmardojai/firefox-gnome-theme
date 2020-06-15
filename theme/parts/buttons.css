@@ -304,8 +304,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 /* Buttons with destructive action */
 #editBookmarkPanelRemoveButton,
 .identity-popup-permission-remove-button,
-#PanelUI-panic-view-button,
-tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1'] {
+#PanelUI-panic-view-button {
 	color: white !important;
 	background: var(--gnome-button-destructive-action-background) !important;
 	border-color: var(--gnome-button-destructive-action-border-color) !important;
@@ -316,15 +315,13 @@ tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1'] {
 
 #editBookmarkPanelRemoveButton:hover,
 .identity-popup-permission-remove-button:not(#hack):hover,
-#PanelUI-panic-view-button:hover,
-tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1']:hover {
+#PanelUI-panic-view-button:hover {
 	background: var(--gnome-button-destructive-action-hover-background) !important;
 }
 
 #editBookmarkPanelRemoveButton:active,
 .identity-popup-permission-remove-button:not(#hack):active,
-#PanelUI-panic-view-button:active,
-tabmodalprompt[role="dialog"] button[class='tabmodalprompt-button1']:active {
+#PanelUI-panic-view-button:active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
 	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
