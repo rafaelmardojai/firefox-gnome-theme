@@ -33,6 +33,7 @@ fi
 # Enter Firefox profile folder.
 if ! cd $PROFILEFOLDER ; then
 	echo "Error entering profile folder."
+	echo "Try using -p flag to specify a custom profile name."
 	exit 1
 fi
 
