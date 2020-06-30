@@ -15,6 +15,6 @@
 
 /* Set theme version text in customization panel */
 #customization-footer::before {
-	content: "Firefox GNOME theme v77";
+	content: "Firefox GNOME theme v78";
 	padding: 9px;
 }
