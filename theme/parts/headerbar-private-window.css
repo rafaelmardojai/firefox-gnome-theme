@@ -43,7 +43,7 @@
 
 /* Add private window headerbar indicator */
 :root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
-	background: url("../icons/user-not-tracked.svg") no-repeat;
+	background: url("../icons/user-not-tracked-symbolic.svg") no-repeat;
 	background-size: 64px 64px;
 	content: "";
 	display: block;	
@@ -53,7 +53,7 @@
 	top: 0;
 	transform: translate(15px, 0);
 	fill: var(--gnome-toolbar-color) !important;
-	fill-opacity: 0.3 !important;
+	fill-opacity: 0.2 !important;
 	-moz-context-properties: fill, fill-opacity;
 }
 
