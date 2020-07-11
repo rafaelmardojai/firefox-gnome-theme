@@ -77,7 +77,7 @@ toolbarspring {
 	margin-bottom: 2px !important;
 	padding: 8px !important;
 	background: var(--gnome-popover-background) !important;
-	border-top: 1px solid var(--gnome-entry-border-color) !important;
+	border-top: 1px solid var(--gnome-popover-border-color) !important;
 	border-radius: 0 0 5px 5px !important;
 }
 
