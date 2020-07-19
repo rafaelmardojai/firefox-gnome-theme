@@ -16,6 +16,15 @@
 	height: auto !important;
 	min-height: auto !important;
 }
+
+#TabsToolbar {
+	background-color: var(--gnome-tabbar-tab-background) !important;
+}
+
+#TabsToolbar:-moz-window-inactive {
+	background-color: var(--gnome-inactive-tabbar-tab-background) !important;
+}
+
 tab > stack {
 	height: 38px !important;
 	min-height: 38px !important;
@@ -55,6 +64,7 @@ tab > stack {
 .tabbrowser-tab::before {
 	border-color: transparent !important;
 	border-image: none !important;
+	border-width: 0 !important;
 }
 
 /* Space between tabs */
@@ -66,7 +76,7 @@ tab > stack {
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
 	font-family: Cantarell, inherit;
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 1em;
 }
 tab:hover {
@@ -74,12 +84,16 @@ tab:hover {
 }
 tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
+	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 tab:-moz-window-inactive {
 	color: var(--gnome-inactive-tabbar-tab-color) !important;
 }
 tab[selected]:-moz-window-inactive {
 	color: var(--gnome-inactive-tabbar-tab-active-color) !important;
+	border-left: 1px solid var(--gnome-inactive-headerbar-border-color) !important;
+	border-right: 1px solid var(--gnome-inactive-headerbar-border-color) !important;
 }
 
 /* Center all inside tab */
@@ -200,7 +214,7 @@ tab[selected]:-moz-window-inactive {
 	background-image: none !important;
 	border: 0 !important;
 	border-image: none !important;
-	border-bottom: 3px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;
+	border-bottom: 4px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
@@ -219,7 +233,7 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-image: none !important;
-	border-bottom: 3px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
+	border-bottom: 4px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
 }
 
 /* Tabs scroll buttons hover */
