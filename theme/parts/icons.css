@@ -33,10 +33,14 @@ menuitem[type="radio"][checked="true"],
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
-	fill: var(--gnome-toolbar-color) !important;
+	fill: var(--gnome-toolbar-icon-fill) !important;
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity;
 }
+.toolbarbutton-icon:-moz-window-inactive {
+	fill: var(--gnome-inactive-toolbar-icon-fill) !important;
+}
+
 .protections-popup-category::after,
 .PanelUI-subView .subviewbutton-nav::after {
 	fill-opacity: 0.6 !important;
