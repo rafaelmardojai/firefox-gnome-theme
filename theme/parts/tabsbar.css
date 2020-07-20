@@ -78,22 +78,24 @@ tab {
 	font-family: Cantarell, inherit;
 	font-weight: normal;
 	font-size: 1em;
+	border-left: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
 }
 tab:hover {
 	color: var(--gnome-tabbar-tab-hover-color) !important;
 }
 tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
-	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
-	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+	border-left-color: var(--gnome-tabbar-tab-border-color) !important;
+	border-right-color: var(--gnome-tabbar-tab-border-color) !important;
 }
 tab:-moz-window-inactive {
 	color: var(--gnome-inactive-tabbar-tab-color) !important;
 }
 tab[selected]:-moz-window-inactive {
 	color: var(--gnome-inactive-tabbar-tab-active-color) !important;
-	border-left: 1px solid var(--gnome-inactive-headerbar-border-color) !important;
-	border-right: 1px solid var(--gnome-inactive-headerbar-border-color) !important;
+	border-left-color: var(--gnome-inactive-headerbar-border-color) !important;
+	border-right-color: var(--gnome-inactive-headerbar-border-color) !important;
 }
 
 /* Center all inside tab */
