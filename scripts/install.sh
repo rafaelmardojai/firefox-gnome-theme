@@ -60,10 +60,12 @@ if [ "$GNOMISHEXTRAS" = true ] ; then
 	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' firefox-gnome-theme/customChrome.css
 fi
 
+cd ..
+
 # Symlink user.js to firefox-gnome-theme one.
 
 echo "Set configuration user.js file"
-if ! ln -s chrome/firefox-gnome-theme/configuration/user.js ../user.js ; then
+if ! ln -s chrome/firefox-gnome-theme/configuration/user.js user.js ; then
 	echo "Please, manually copy theme's user.js contents to yours."
 fi
 
