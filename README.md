@@ -18,11 +18,11 @@ This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
 This theme is supposed to work with current supported Firefox releases:
 
-- Firefox 78
+- Firefox 80
 - Firefox 78 ESR
 - Firefox 68 ESR
-- Firefox 79 Beta
-- Firefox 80 Nightly
+- Firefox 81 Beta
+- Firefox 82 Nightly
 
 ## Installation
 
