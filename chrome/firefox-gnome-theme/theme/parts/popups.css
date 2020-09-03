@@ -37,7 +37,7 @@ menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 
 /* Adjust popovers position */
 panel[type=arrow] {
-	margin-top: 9px !important;
+	margin-top: 10px !important;
 	max-height: 80vh !important;
 }
 #BMB_bookmarksPopup {
@@ -160,7 +160,15 @@ panel[type="autocomplete-richlistbox"] {
 }
 
 /* TODO: Move to a new file */
-/* Browser dialog promts */
+
+/* Browser dialog prompts center */
+.content-prompt {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Browser dialog prompts */
 tabmodalprompt[role="dialog"] .tabmodalprompt-mainContainer {
 	background: var(--gnome-popover-background) !important;
 	border: 0 !important;

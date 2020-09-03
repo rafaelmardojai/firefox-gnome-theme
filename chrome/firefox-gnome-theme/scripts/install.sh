@@ -8,8 +8,8 @@ GNOMISHEXTRAS=false
 # Determine firefox profile being currently used programatically
 # credits: https://stackoverflow.com/questions/57526217/
 function current_profile() {
-  pgrep firefox | xargs -I{} lsof -p {} 2>/dev/null | grep .parentlock |
-    awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
+	pgrep firefox | xargs -I{} lsof -p {} 2>/dev/null | grep .parentlock |
+		awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
 }
 
 
@@ -25,7 +25,7 @@ done
 # Define profile folder path.
 if test -z "$PROFILENAME"
 	then
-    PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
+		PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
 	else
 		PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
 fi
@@ -33,6 +33,7 @@ fi
 # Enter Firefox profile folder.
 if ! cd $PROFILEFOLDER ; then
 	echo "Error entering profile folder."
+	echo "Try using -p flag to specify a custom profile name."
 	exit 1
 fi
 
@@ -57,12 +58,15 @@ if [ "$GNOMISHEXTRAS" = true ] ; then
 	echo "Enabling GNOMISH extra features"
 	[[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
 	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' firefox-gnome-theme/customChrome.css
-	sed -i '2s/^/@import "theme\/matching-autocomplete-width.css";\n/' firefox-gnome-theme/customChrome.css
-	sed -i '3s/^/@import "theme\/rounded-title-buttons.css";\n/' firefox-gnome-theme/customChrome.css
 fi
 
+cd ..
+
 # Symlink user.js to firefox-gnome-theme one.
+
 echo "Set configuration user.js file"
-ln -s chrome/firefox-gnome-theme/configuration/user.js ../user.js
+if ! ln -s chrome/firefox-gnome-theme/configuration/user.js user.js ; then
+	echo "Please, manually copy theme's user.js contents to yours."
+fi
 
 echo "Done."

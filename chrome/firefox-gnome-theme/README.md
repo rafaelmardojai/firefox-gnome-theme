@@ -1,22 +1,16 @@
 <h1 align="center">
 	<img src="icon.svg" alt="Firefox GNOME theme" width="100" height="100"/><br>
- Firefox Pop_OS! theme
+ Firefox GNOME theme
 </h1>
 
 [![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
 
-<p align="center"><strong>A Pop_OS! theme for Firefox</strong></p>
+<p align="center"><strong>A GNOME theme for Firefox</strong></p>
 
-<p align="center">This theme follows lastest Pop_OS! style, *CURRENTLY ONLY DARK MODE*.</p>
-
-<p align="center">This is a fork of <a href="https://github.com/rafaelmardojai/firefox-gnome-theme">rafaelmardojai/firefox-gnome-theme</a> which I used and changed a few bits (Some icons and some colour tweaks). If you would like to, feel free to make changes and send through as a pull request.</p> <br>
-
-## You will need to manually move the userContent.css to your chrome dir to get the custom new tab theme.
+<p align="center">This theme follows lastest GNOME Adwaita style.</p>
 
 ![Screenshot of the theme](screenshot.png)
-
-# The following is from the original github repo
 
 ## Description
 
@@ -24,10 +18,11 @@ This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
 This theme is supposed to work with current supported Firefox releases:
 
-- Firefox 76
+- Firefox 80
+- Firefox 78 ESR
 - Firefox 68 ESR
-- Firefox 77 Beta
-- Firefox 78 Nightly
+- Firefox 81 Beta
+- Firefox 82 Nightly
 
 ## Installation
 
@@ -44,15 +39,15 @@ This theme is supposed to work with current supported Firefox releases:
 	```
 
 #### Script options
-- -f `<firefox_folder>` *optional*
+- `-f <firefox_folder_path>` *optional*
 	- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
 	- Default: `~/.mozilla/firefox/`
 
-- -p `<profile_folder>` *optional*
-	- Set custom profile folder name, for example `e0j6yb0p.default-nightly`
+- `-p <profile_name>` *optional*
+	- Set custom profile name, for example `e0j6yb0p.default-nightly`
 	- Default: standard default profile
 
-- -g *optional*
+- `-g` *optional*
 	- Auto enable GNOMISH extra features `hide-single-tab.css` & `matching-autocomplete-width.css`
 
 
@@ -109,7 +104,7 @@ git pull origin master
 
 > Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
 
-## Uninstalling/removing
+## Uninstalling
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 

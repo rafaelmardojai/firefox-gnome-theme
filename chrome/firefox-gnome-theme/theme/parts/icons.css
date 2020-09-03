@@ -2,19 +2,66 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Built-in firefox icons color */
+/* Icons color */
 .toolbarbutton-icon,
-.protections-popup-category-icon,
-.protections-popup-footer-icon {
-	fill: var(--gnome-toolbar-color) !important;
+.protections-popup-category::after,
+.protections-popup-footer-icon,
+.PanelUI-subView .subviewbutton-nav::after,
+#identity-popup-security-expander .button-icon,
+.menu-right,
+.expander-down > .button-box,
+#sidebar-switcher-arrow,
+#viewButton .button-menu-dropmarker,
+.menulist-label-box:after,
+.expander-up > .button-box,
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] > #identity-icon,
+.searchbar-search-icon,
+.textbox-search-sign,
+treechildren::-moz-tree-twisty,
+#historyTree treechildren::-moz-tree-image,
+menuitem[type="checkbox"],
+menuitem[type="checkbox"][checked="true"],
+menuitem[type="radio"],
+menuitem[type="radio"][checked="true"],
+.close-icon:not(.tab-close-button),
+.identity-popup-permission-remove-button .button-icon,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon,
+:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
+	fill: var(--gnome-toolbar-icon-fill) !important;
 	fill-opacity: 1 !important;
+	-moz-context-properties: fill, fill-opacity;
+}
+.toolbarbutton-icon:-moz-window-inactive {
+	fill: var(--gnome-inactive-toolbar-icon-fill) !important;
+}
+
+.protections-popup-category::after,
+.PanelUI-subView .subviewbutton-nav::after {
+	fill-opacity: 0.6 !important;
+}
+
+/* Icons active color */
+menu:not([disabled]):hover > .menu-right,
+treechildren::-moz-tree-twisty(selected, focus),
+treechildren::-moz-tree-twisty(selected, focus, open),
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty,
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open),
+menuitem[type="checkbox"]:not([disabled="true"]):hover .menu-iconic-icon,
+menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
+	fill: #fff !important;
 }
 
 /* Tabs scroll icons */
-#TabsToolbar .scrollbutton-up {
+#scrollbutton-up {
 	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
 }
-#TabsToolbar .scrollbutton-down {
+#scrollbutton-down {
 	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
 }
 
@@ -52,9 +99,6 @@
 menu[disabled] > .menu-right {
 	opacity: 0.3;
 }
-menu:not([disabled]):hover > .menu-right {
-	filter: invert(100%) brightness(200%);
-}
 
 /* Arrow down buttons */
 .expander-down > .button-box,
@@ -78,13 +122,13 @@ menu:not([disabled]):hover > .menu-right {
 }
 
 /* Search entries */
-#urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] > #identity-icon,
 .searchbar-search-icon,
-#search-box .textbox-search-sign {
+.textbox-search-sign {
 	list-style-image: url(../icons/edit-find-symbolic.svg) !important;
 	opacity: 0.7 !important;
 }
-#search-box .textbox-search-sign {
+.textbox-search-sign {
 	width: 16px !important;
 	margin: 2px 0;
 }
@@ -98,19 +142,7 @@ treechildren::-moz-tree-twisty {
 treechildren::-moz-tree-twisty(open) {
 	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
 }
-treechildren::-moz-tree-twisty(selected, focus) {
-	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
-}
-treechildren::-moz-tree-twisty(selected, focus, open) {
-	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
-}
 
-.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty {
-	list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
-}
-.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
-	list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
-}
 /* Sidebar: History: clock icon */
 #historyTree treechildren::-moz-tree-image {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
@@ -126,9 +158,6 @@ menuitem[type="checkbox"][checked="true"] {
 menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
 	opacity: 0.5;
 }
-menuitem[type="checkbox"]:not([disabled="true"]):hover .menu-iconic-icon {
-	filter: invert(100%) brightness(200%);
-}
 
 /* Menu radio */
 menuitem[type="radio"] {
@@ -140,14 +169,21 @@ menuitem[type="radio"][checked="true"] {
 menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	opacity: 0.5;
 }
-menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
-	filter: invert(100%) brightness(200%);
-}
 
 /* Close button */
 .close-icon:not(.tab-close-button),
 .identity-popup-permission-remove-button .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+}
+@media (prefers-color-scheme: light) {
+	.notificationbox-stack notification[type="critical"] .close-icon:not(.tab-close-button):not(:hover) {
+		fill: #fff !important;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.notificationbox-stack notification[type="warning"] .close-icon:not(.tab-close-button):not(:hover) image {
+		fill: rgb(46, 52, 54) !important;
+	}
 }
 
 /* Window buttons */
@@ -172,7 +208,7 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 
 /* Private browsing button */
 #privatebrowsing-button {
-	list-style-image: url("../icons/user-not-tracked.svg") !important;
+	list-style-image: url("../icons/user-not-tracked-symbolic.svg") !important;
 }
 /* Sidebar button */
 #sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, #sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon {
@@ -290,90 +326,8 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 }
 */
 
-/* Invert icons color in dark variant */
+/* Fix for extensions icons */
 @media (prefers-color-scheme: dark) {
-	.PanelUI-subView .subviewbutton-nav::after,
-	.protections-popup-category::after,
-	.identity-popup-content-blocking-category::after,
-	#identity-popup-security-expander .button-icon,
-	.subviewbutton-back .toolbarbutton-icon,
-
-	.menu-right,
-
-	#urlbar[pageproxystate="invalid"] > #identity-box > #identity-icon,
-	.searchbar-search-icon,
-	#search-box .textbox-search-sign,
-
-	.menulist-label-box:after,
-	.expander-down image,
-	.expander-up image,
-	#sidebar-switcher-arrow,
-	#viewButton .button-menu-dropmarker,
-	
-	menuitem[type="checkbox"] .menu-iconic-icon,
-	menuitem[type="radio"] .menu-iconic-icon,
-	
-	.close-icon:not(.tab-close-button) image,
-	.identity-popup-permission-remove-button .button-icon,
-	
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
-	:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon,
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
-	:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon,
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
-	:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon,
-	:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon,
-	
-	#privatebrowsing-button .toolbarbutton-icon,
-	#sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, 
-	#sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon,
-	#sidebar-button  .toolbarbutton-icon,
-	#nav-bar #back-button .toolbarbutton-icon,
-	#context-back .menu-iconic-icon,
-	#nav-bar #forward-button .toolbarbutton-icon,
-	#context-forward .menu-iconic-icon,
-	#PanelUI-menu-button .toolbarbutton-icon,
-	#new-tab-button .toolbarbutton-icon,
-	.tabs-newtab-button .toolbarbutton-icon,
-	#home-button .toolbarbutton-icon,
-	#preferences-button .toolbarbutton-icon,
-	#fullscreen-button .toolbarbutton-icon,
-	#appMenu-fullscreen-button .toolbarbutton-icon,
-	#zoom-out-button .toolbarbutton-icon,
-	#appMenu-zoomReduce-button .toolbarbutton-icon,
-	#zoom-in-button .toolbarbutton-icon,
-	#appMenu-zoomEnlarge-button .toolbarbutton-icon,
-	#developer-button .toolbarbutton-icon,
-	#email-link-button .toolbarbutton-icon,
-	#print-button .toolbarbutton-icon,
-	#add-ons-button .toolbarbutton-icon,
-	#find-button .toolbarbutton-icon,
-	#new-window-button .toolbarbutton-icon,
-	#bookmarks-menu-button .toolbarbutton-icon,
-	#history-panelmenu .toolbarbutton-icon,
-	#alltabs-button .toolbarbutton-icon,
-	#cut-button .toolbarbutton-icon,
-	#appMenu-cut-button .toolbarbutton-icon,
-	#copy-button .toolbarbutton-icon,
-	#appMenu-copy-button .toolbarbutton-icon,
-	#paste-button .toolbarbutton-icon,
-	#appMenu-paste-button .toolbarbutton-icon,
-	#nav-bar-overflow-button .toolbarbutton-icon {
-		filter: invert(100%) brightness(200%);
-	}
-	
-	/* Tree views */
-	treechildren::-moz-tree-twisty {
-		list-style-image: url("../icons/pan-down-symbolic-light.svg") !important;
-	}
-	treechildren::-moz-tree-twisty(open) {
-		list-style-image: url("../icons/pan-end-symbolic-light.svg") !important;
-	}
-	#historyTree treechildren::-moz-tree-image {
-		list-style-image: url("../icons/preferences-system-time-symbolic-light.svg") !important;
-	}
-	
-	/* Fix for extensions icons */	
 	.webextension-browser-action {
 		list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
 	}

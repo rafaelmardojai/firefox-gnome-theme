@@ -2,9 +2,48 @@
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+:root[privatebrowsingmode="temporary"] {
+	/* Change headerbar colors */
+	--gnome-headerbar-background: var(--gnome-private-headerbar-background) !important;
+	--gnome-headerbar-border-color: var(--gnome-private-headerbar-border-color) !important;
+	--gnome-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow) !important;
+	--gnome-inactive-headerbar-background: var(--gnome-private-inactive-headerbar-background) !important;
+	--gnome-inactive-headerbar-border-color: var(--gnome-private-inactive-headerbar-border-color) !important;
+	--gnome-inactive-headerbar-box-shadow: var(--gnome-private-inactive-headerbar-box-shadow) !important;
+	
+	/* Change urlbar colors */
+	--gnome-entry-border-color: var(--gnome-private-entry-border-color) !important;
+	--gnome-focused-urlbar-border-color: var(--gnome-private-focused-urlbar-border-color) !important;
+	
+	/* Change tabs colors */
+	--gnome-tabbar-tab-active-border-bottom-color: var(--gnome-private-tabbar-tab-active-border-bottom-color) !important;
+	--gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-private-tabbar-tab-active-border-bottom-color) !important;
+}
+
+/* Change headerbar buttons colors */
+:root[privatebrowsingmode="temporary"] #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+:root[privatebrowsingmode="temporary"][tabsintitlebar] #titlebar .titlebar-button,
+:root[privatebrowsingmode="temporary"][tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
+	--gnome-button-background: var(--gnome-private-button-background) !important;
+	--gnome-button-border-color: var(--gnome-private-button-border-color) !important;
+	--gnome-button-border-accent-color: var(--gnome-private-button-border-accent-color) !important;
+	--gnome-button-box-shadow: var(--gnome-private-button-box-shadow) !important;
+	--gnome-button-hover-background: var(--gnome-private-button-hover-background) !important;
+	--gnome-button-active-background: var(--gnome-private-button-active-background) !important;
+	--gnome-button-active-border-color: var(--gnome-private-button-active-border-color) !important;
+	--gnome-button-active-border-accent-color: var(--gnome-private-button-active-border-accent-color) !important;
+	--gnome-button-active-box-shadow: var(--gnome-private-button-active-box-shadow) !important;
+	--gnome-button-disabled-background: var(--gnome-private-button-disabled-background) !important;
+	--gnome-button-disabled-border-color: var(--gnome-private-button-disabled-border-color) !important;
+	--gnome-button-disabled-box-shadow: var(--gnome-private-button-disabled-box-shadow) !important;
+	--gnome-inactive-button-background: var(--gnome-private-inactive-button-background) !important;
+	--gnome-inactive-button-border-color: var(--gnome-private-inactive-button-border-color) !important;
+	--gnome-inactive-button-box-shadow: var(--gnome-private-inactive-button-box-shadow) !important;
+}
+
 /* Add private window headerbar indicator */
 :root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
-	background: url("../icons/user-not-tracked.svg") no-repeat;
+	background: url("../icons/user-not-tracked-symbolic.svg") no-repeat;
 	background-size: 64px 64px;
 	content: "";
 	display: block;	
@@ -12,13 +51,10 @@
 	width: 64px;
 	height: 46px;
 	top: 0;
-	opacity: 0.3;
-	transform: translate(15px, 0);	
-}
-@media (prefers-color-scheme: dark) {
-	:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
-		filter: invert(100%);
-	}
+	transform: translate(15px, 0);
+	fill: var(--gnome-toolbar-color) !important;
+	fill-opacity: 0.2 !important;
+	-moz-context-properties: fill, fill-opacity;
 }
 
 /* Hide tabsbar default private browsing indicator */
