@@ -127,12 +127,6 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 	Hide the tab bar when only one tab is open.
 
 	You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
-
-- **matching-autocomplete-width.css** *GNOMISH (FF 60-69)*
-
-	Limit the URL bar's autocompletion popup's width to the URL bar's width.
-	
-	*This feature is included by default for Firefox 70+*
 	
 - **square-title-buttons.css**
 
