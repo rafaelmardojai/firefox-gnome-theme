@@ -116,39 +116,35 @@ Optional features can be enabled by crating new `boolean` preferences in `about:
 
 ### Features
 
-#### Hide single tab
-`gnomeTheme.hideSingleTab`
+- **Hide single tab** `gnomeTheme.hideSingleTab`
 
-Hide the tab bar when only one tab is open.
+	Hide the tab bar when only one tab is open.
 
-> You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
+	> **Note:** You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
 
-#### Normal width tabs
-`gnomeTheme.normalWidthTabs`
+- **Normal width tabs** `gnomeTheme.normalWidthTabs`
 
-Use normal width tabs as default Firefox.
+	Use normal width tabs as default Firefox.
 
-#### Active tab contrast
-`gnomeTheme.activeTabContrast`
+- **Active tab contrast** `gnomeTheme.activeTabContrast`
 
-Add more contrast to the active tab.
+	Add more contrast to the active tab.
 
-#### System icons
-`gnomeTheme.systemIcons`
+- **System icons** `gnomeTheme.systemIcons`
 
-Use system theme icons instead of Adwaita icons included by theme.
+	Use system theme icons instead of Adwaita icons included by theme.
 
-#### Drag window from headerbar buttons [BUGGED]
-`gnomeTheme.dragWindowHeaderbarButtons`
+- **Symbolic tab icons** `gnomeTheme.symbolicTabIcons`
 
-Allow draging the window from headerbar buttons.
+	Make all tab icons look kinda like symbolic icons.
 
-> **Note:** It can activate button action, with unpleasant behavior.
+	> **Note** This feature has a [known color bug](#icons-color-broken-with-system-icons).
 
-#### Symbolic tab icons
-`gnomeTheme.symbolicTabIcons`
+- **Drag window from headerbar buttons** `gnomeTheme.dragWindowHeaderbarButtons`
 
-Make all tab icons look kinda like symbolic icons.
+	Allow draging the window from headerbar buttons.
+
+	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
 
 ## Known bugs
 
@@ -166,7 +162,7 @@ See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 3. Set it as a `boolean` and click on the add button
 4. Now restart Firefox, and it should look good!
 
-### Icons color broken with system-icons.css
+### Icons color broken with System icons
 Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them directly in the `system-icons.css` file, look for `--gnome-icons-hack-filter` & `--gnome-window-icons-hack-filter` vars and play with css filters.
 
 ## Development
