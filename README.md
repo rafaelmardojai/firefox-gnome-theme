@@ -46,10 +46,6 @@ This theme is supposed to work with current supported Firefox releases:
 	- Set custom profile name, for example `e0j6yb0p.default-nightly`
 	- Default: standard default profile
 
-- `-g` *optional*
-	- Auto enable GNOMISH extra features `hide-single-tab.css` & `matching-autocomplete-width.css`
-
-
 ### Manual installation
 1. Go to `about:support` in Firefox.
 

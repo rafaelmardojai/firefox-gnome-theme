@@ -3,7 +3,6 @@
 THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
-GNOMISHEXTRAS=false
 
 # Determine firefox profile being currently used programatically
 # credits: https://stackoverflow.com/questions/57526217/
@@ -18,7 +17,6 @@ while getopts 'f:p:g' flag; do
 	case "${flag}" in
 		f) FIREFOXFOLDER="${OPTARG}" ;;
 		p) PROFILENAME="${OPTARG}" ;;
-		g) GNOMISHEXTRAS=true ;;
 	esac
 done
 
@@ -52,13 +50,6 @@ cp -R $THEMEDIRECTORY $PWD
 
 # Import this theme at the beginning of the CSS files.
 sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
-
-# If GNOMISH extras enabled, import it in customChrome.css.
-if [ "$GNOMISHEXTRAS" = true ] ; then
-	echo "Enabling GNOMISH extra features"
-	[[ -s customChrome.css ]] || echo >> firefox-gnome-theme/customChrome.css
-	sed -i '1s/^/@import "theme\/hide-single-tab.css";\n/' firefox-gnome-theme/customChrome.css
-fi
 
 cd ..
 
