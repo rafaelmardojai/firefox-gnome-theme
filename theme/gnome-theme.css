@@ -11,10 +11,12 @@
 @import "parts/icons.css";
 @import "colors/light.css";
 @import "colors/dark.css";
+@import "system-icons.css";
+@import "symbolic-tab-icons.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Set theme version text in customization panel */
 #customization-footer::before {
-	content: "Firefox GNOME theme v80";
+	content: "Firefox GNOME theme v81";
 	padding: 9px;
 }

@@ -292,9 +292,27 @@ tab[selected]:-moz-window-inactive {
 	margin-right: -10px;
 }
 
-/* OPTIONAL: Hide Single Tab */
+/* OPTIONAL: Hide single tab */
 @supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs tab:only-of-type {
 		display: none !important;
+	}
+}
+
+/* OPTIONAL: Use normal width tabs */
+@supports -moz-bool-pref("gnomeTheme.normalWidthTabs") {
+	.tabbrowser-tab:not([style^="max-width"]):not([pinned]),
+	.tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
+		max-width: 225px !important;
+	}
+}
+
+/* OPTIONAL: Add more contrast to the active tab */
+@supports -moz-bool-pref("gnomeTheme.activeTabContrast") {
+	.tab-background[selected=true],
+	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
+		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
+		border-bottom-width: 5px !important;
+		border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color-contrast) !important;
 	}
 }

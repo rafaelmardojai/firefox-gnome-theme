@@ -159,3 +159,18 @@
 	box-shadow: var(--gnome-button-active-box-shadow);
 	border-color: var(--gnome-button-active-border-color) !important;
 }
+
+/* OPTIONAL: Allow draging the window from headerbar buttons */
+@supports -moz-bool-pref("gnomeTheme.dragWindowHeaderbarButtons") {
+	:root[tabsintitlebar] #nav-bar *,
+	:root[tabsintitlebar] #titlebar .titlebar-button,
+	:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
+		-moz-window-dragging: drag;
+	}
+	
+	/* Avoid window dragging from urlbar */
+	:root[tabsintitlebar] #nav-bar .urlbar-input-box,
+	:root[tabsintitlebar] #nav-bar .urlbar-input-box * {
+		-moz-window-dragging: no-drag !important;
+	}
+}

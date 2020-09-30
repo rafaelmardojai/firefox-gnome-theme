@@ -111,47 +111,48 @@ git pull origin master
 To achieve Firefox with overlay scrollbars install [firefox-gnome-scrollbars](https://github.com/rafaelmardojai/firefox-gnome-scrollbars).
 
 ## Enabling optional features
-Open `chrome/firefox-gnome-theme/userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome.css` directly in your `chrome/firefox-gnome-theme` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
+Optional features can be enabled by crating new `boolean` preferences in `about:config`.
 
-Alternatively you can run installation script with `-g` flag to auto install GNOMISH features.
+1. Go to the `about:config` page 
+2. Type the key of the feature you want to enable
+3. Set it as a `boolean` and click on the add button
+4. Restart Firefox
 
-```sh
-./scripts/install.sh -g
-```
+### Features
 
-*Those features are not included by default, because can introduce bugs or Firefox functionalities lost.*
+#### Hide single tab
+`gnomeTheme.hideSingleTab`
 
-- **hide-single-tab.css** *GNOMISH*
+Hide the tab bar when only one tab is open.
 
-	Hide the tab bar when only one tab is open.
+> You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
 
-	You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
-	
-- **square-title-buttons.css**
+#### Normal width tabs
+`gnomeTheme.normalWidthTabs`
 
-	Use square title buttons old style.
+Use normal width tabs as default Firefox.
 
-- **normal-width-tabs.css**
+#### Active tab contrast
+`gnomeTheme.activeTabContrast`
 
-	Use normal width tabs.
+Add more contrast to the active tab.
 
-- **active-tab-contrast.css**
+#### System icons
+`gnomeTheme.systemIcons`
 
-	Active tab better contrast.
+Use system theme icons instead of Adwaita icons included by theme.
 
-- **system-icons.css**
+#### Drag window from headerbar buttons [BUGGED]
+`gnomeTheme.dragWindowHeaderbarButtons`
 
-	Use system theme icons instead of Adwaita icons included by theme.
+Allow draging the window from headerbar buttons.
 
-- **drag-window-headerbar-buttons.css**
+> **Note:** It can activate button action, with unpleasant behavior.
 
-	Allow drag window from headerbar buttons *GNOMISH* **[BUGGED]**
+#### Symbolic tab icons
+`gnomeTheme.symbolicTabIcons`
 
-	It can activate button action, with unpleasant behavior.
-
-- **symbolic-tab-icons.css**
-
-	Make all tab icons look kinda like symbolic icons.
+Make all tab icons look kinda like symbolic icons.
 
 ## Known bugs
 
