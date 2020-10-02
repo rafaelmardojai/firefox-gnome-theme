@@ -134,7 +134,7 @@ Optional features can be enabled by crating new `boolean` preferences in `about:
 
 	Use system theme icons instead of Adwaita icons included by theme.
 
-	> **Note** This feature has a [known color bug](#icons-color-broken-with-system-icons).
+	> **Note:** This feature has a [known color bug](#icons-color-broken-with-system-icons).
 
 - **Symbolic tab icons** `gnomeTheme.symbolicTabIcons`
 
