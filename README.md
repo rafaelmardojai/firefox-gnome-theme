@@ -134,11 +134,11 @@ Optional features can be enabled by crating new `boolean` preferences in `about:
 
 	Use system theme icons instead of Adwaita icons included by theme.
 
+	> **Note** This feature has a [known color bug](#icons-color-broken-with-system-icons).
+
 - **Symbolic tab icons** `gnomeTheme.symbolicTabIcons`
 
 	Make all tab icons look kinda like symbolic icons.
-
-	> **Note** This feature has a [known color bug](#icons-color-broken-with-system-icons).
 
 - **Drag window from headerbar buttons** `gnomeTheme.dragWindowHeaderbarButtons`
 
