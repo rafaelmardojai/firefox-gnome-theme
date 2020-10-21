@@ -3,6 +3,7 @@
 THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
+THEME=DEFAULT
 
 # Determine firefox profile being currently used programatically
 # credits: https://stackoverflow.com/questions/57526217/
@@ -13,10 +14,19 @@ function current_profile() {
 
 
 # Get options.
-while getopts 'f:p:g' flag; do
+while getopts 'f:p:g:t:h' flag; do
 	case "${flag}" in
 		f) FIREFOXFOLDER="${OPTARG}" ;;
 		p) PROFILENAME="${OPTARG}" ;;
+		t) THEME="${OPTARG}" ;;
+		h) 
+		echo "Gnome Theme Install Script:"
+		echo "  -f <firefox_folder_path>. Set custom Firefox folder path."
+		echo "  -p <profile_name>. Set custom profile name."
+		echo "  -t <theme_name>. Set the colors used in the theme."
+		echo "  -h to show this message."
+		exit 0
+		;;
 	esac
 done
 
@@ -51,6 +61,16 @@ cp -R $THEMEDIRECTORY $PWD
 # Import this theme at the beginning of the CSS files.
 sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 
+if [ $THEME != "DEFAULT" ]; then
+	if [ $THEME = "yaru" ]; then
+		echo "Setting $THEME theme."
+		echo '@import "firefox-gnome-theme\/theme/colors/dark-yaru.css";' >> userChrome.css
+		echo '@import "firefox-gnome-theme\/theme/colors/light-yaru.css";' >> userChrome.css
+	fi
+else
+	echo "No theme set, using default adwaita."
+fi
+
 cd ..
 
 # Symlink user.js to firefox-gnome-theme one.
@@ -61,3 +81,4 @@ if ! ln -s chrome/firefox-gnome-theme/configuration/user.js user.js ; then
 fi
 
 echo "Done."
+
