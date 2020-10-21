@@ -9,17 +9,17 @@ THEME=DEFAULT
 # credits: https://stackoverflow.com/questions/57526217/
 function current_profile() {
 	pgrep firefox | xargs -I{} lsof -p {} 2>/dev/null | grep .parentlock |
-		awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
+	awk '{for(i=9;i<=NF;++i)printf $i""FS ; print ""}'  | cut -d'/' -f6
 }
 
 
 # Get options.
 while getopts 'f:p:g:t:h' flag; do
 	case "${flag}" in
-		f) FIREFOXFOLDER="${OPTARG}" ;;
-		p) PROFILENAME="${OPTARG}" ;;
-		t) THEME="${OPTARG}" ;;
-		h) 
+	f) FIREFOXFOLDER="${OPTARG}" ;;
+	p) PROFILENAME="${OPTARG}" ;;
+	t) THEME="${OPTARG}" ;;
+	h)
 		echo "Gnome Theme Install Script:"
 		echo "  -f <firefox_folder_path>. Set custom Firefox folder path."
 		echo "  -p <profile_name>. Set custom profile name."
@@ -32,10 +32,10 @@ done
 
 # Define profile folder path.
 if test -z "$PROFILENAME"
-	then
-		PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
-	else
-		PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
+then
+	PROFILEFOLDER="$FIREFOXFOLDER/$(current_profile)"
+else
+	PROFILEFOLDER="$FIREFOXFOLDER/$PROFILENAME"
 fi
 
 # Enter Firefox profile folder.
@@ -53,32 +53,33 @@ cd chrome
 
 # Copy theme repo inside
 echo "Copying repo in $PWD"
-cp -R $THEMEDIRECTORY $PWD
+cp -fR $THEMEDIRECTORY $PWD
 
 # Create single-line user CSS files if non-existent or empty.
-[[ -s userChrome.css ]] || echo >> userChrome.css
+if [ -s userChrome.css ]; then
+	# Remove older theme imports
+	sed 's/@import "firefox-gnome-theme.*.//g' userChrome.css | sed '/^\s*$/d' > userChrome.css
+	echo >> userChrome.css
+else
+	echo >> userChrome.css
+fi
 
 # Import this theme at the beginning of the CSS files.
 sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 
-if [ $THEME != "DEFAULT" ]; then
-	if [ $THEME = "yaru" ]; then
-		echo "Setting $THEME theme."
-		echo '@import "firefox-gnome-theme\/theme/colors/light-yaru.css";' >> userChrome.css
-		echo '@import "firefox-gnome-theme\/theme/colors/dark-yaru.css";' >> userChrome.css
-	fi
-else
+if [ $THEME = "DEFAULT" ]; then
 	echo "No theme set, using default adwaita."
+else
+	echo "Setting $THEME theme."
+	echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userChrome.css
+	echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userChrome.css
 fi
 
 cd ..
 
 # Symlink user.js to firefox-gnome-theme one.
-
 echo "Set configuration user.js file"
-if ! ln -s chrome/firefox-gnome-theme/configuration/user.js user.js ; then
-	echo "Please, manually copy theme's user.js contents to yours."
-fi
+ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
 
 echo "Done."
 
