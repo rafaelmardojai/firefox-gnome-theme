@@ -64,8 +64,8 @@ sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 if [ $THEME != "DEFAULT" ]; then
 	if [ $THEME = "yaru" ]; then
 		echo "Setting $THEME theme."
-		echo '@import "firefox-gnome-theme\/theme/colors/dark-yaru.css";' >> userChrome.css
 		echo '@import "firefox-gnome-theme\/theme/colors/light-yaru.css";' >> userChrome.css
+		echo '@import "firefox-gnome-theme\/theme/colors/dark-yaru.css";' >> userChrome.css
 	fi
 else
 	echo "No theme set, using default adwaita."
