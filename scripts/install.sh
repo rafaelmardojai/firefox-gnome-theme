@@ -68,7 +68,7 @@ if [ $THEME != "DEFAULT" ]; then
 		echo '@import "firefox-gnome-theme\/theme/colors/light-yaru.css";' >> userChrome.css
 	fi
 else
-	echo "No theme set, using default adwaite."
+	echo "No theme set, using default adwaita."
 fi
 
 cd ..
@@ -81,3 +81,4 @@ if ! ln -s chrome/firefox-gnome-theme/configuration/user.js user.js ; then
 fi
 
 echo "Done."
+
