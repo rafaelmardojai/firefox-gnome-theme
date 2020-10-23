@@ -26,12 +26,9 @@ menuitem[type="radio"][checked="true"],
 .close-icon:not(.tab-close-button),
 .identity-popup-permission-remove-button .button-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
 	fill: var(--gnome-toolbar-icon-fill) !important;
 	fill-opacity: 1 !important;
@@ -187,19 +184,16 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 }
 
 /* Window buttons */
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon {
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 }
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon {
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon {
 	list-style-image: url("../icons/window-maximize-symbolic.svg") !important;
 }
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
 	list-style-image: url("../icons/window-restore-symbolic.svg") !important;
 }
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon {
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
 	list-style-image: url("../icons/window-minimize-symbolic.svg") !important;
 }
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
