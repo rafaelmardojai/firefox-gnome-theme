@@ -87,8 +87,16 @@ findbar:-moz-window-inactive description,
 /* Content notifications */
 .notificationbox-stack notification {
 	border: 0 !important;
-	background: var(--gnome-toolbar-background) !important;	
+	background: var(--gnome-toolbar-background) !important;
+	font-size: 1em !important;
 	padding: 6px !important;
+}
+.notificationbox-stack notification .messageImage {
+	height: 16px !important;
+	width: 16px !important;
+}
+.notificationbox-stack notification .messageText {
+	margin-block: 0 !important;
 }
 .notificationbox-stack notification[type="warning"] {
   background: #ffe900 !important;	

@@ -93,10 +93,11 @@
 }
 
 /* Fix toolbars close icons */
-.close-icon:not(.tab-close-button) image {
+.close-icon:not(.tab-close-button) .toolbarbutton-icon {
 	height: 16px !important;
 	width: 16px !important;
 	margin: 6px !important;
+	padding: 0 !important;
 }
 
 /* */
