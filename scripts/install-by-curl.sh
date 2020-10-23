@@ -12,6 +12,7 @@ cd $FOLDERPATH
 curl -LJo $FILENAME https://github.com/rafaelmardojai/firefox-gnome-theme/tarball/$VERSION
 
 tar -xzf $FILENAME --strip-components=1
+rm $FILENAME
 
 chmod +x scripts/install.sh
 ./scripts/install.sh
