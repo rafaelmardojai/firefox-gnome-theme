@@ -17,7 +17,8 @@
 
 /* Set theme version text in customization panel */
 #customization-footer::before {
+	background: url(../icon.svg) no-repeat;
+	background-size: contain;
 	content: "Firefox GNOME theme v81";
-	padding: 9px;
+	padding: 9px 9px 9px 50px;
 }
-
