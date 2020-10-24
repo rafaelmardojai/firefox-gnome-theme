@@ -7,7 +7,7 @@
 }
 
 /* Headerbar top border corners rounded */
-:root[tabsintitlebar]:not([inFullscreen]):not([sizemode="maximized"]) #nav-bar {
+:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
 	border-radius: 7px 7px 0 0 !important;
 }
 
