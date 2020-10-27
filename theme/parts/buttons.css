@@ -33,6 +33,7 @@
 .protections-popup-footer-button,
 .identity-popup-permission-remove-button,
 #identity-popup-security-expander,
+#protections-popup-info-button,
 #PanelUI-panic-view-button,
 .tracking-protection-button,
 .dialog-button,
@@ -50,6 +51,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
 	min-height: 34px !important;
 	min-width: 34px !important;
 	color: var(--gnome-toolbar-color) !important;
+	outline: 0 !important;
 	font: menu !important;
 }
 
@@ -135,6 +137,7 @@ menulist:hover .menulist-label-box,
 .protections-popup-footer-button:hover,
 .identity-popup-permission-remove-button:hover,
 #identity-popup-security-expander:hover,
+#protections-popup-info-button:hover,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
@@ -169,6 +172,8 @@ menulist[open] .menulist-label-box,
 .protections-popup-footer-button:not(#hack):active,
 .identity-popup-permission-remove-button:active,
 #identity-popup-security-expander:active,
+#protections-popup-info-button:not(#hack):active,
+#protections-popup-info-button:not(#hack)[checked],
 .tracking-protection-button:active,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
@@ -215,7 +220,8 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 .subviewbutton-back:not(#hack),
 .close-icon:not(.tab-close-button),
 #TabsToolbar .toolbarbutton-1,
-.identity-popup-permission-remove-button:not(#hack) {
+.identity-popup-permission-remove-button:not(#hack),
+#protections-popup-info-button {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
@@ -223,7 +229,8 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 }
 .subviewbutton-back:not(#hack):not(:active):hover,
 .close-icon:not(.tab-close-button):not(:active):hover,
-#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover {
+#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover,
+#protections-popup-info-button:hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
