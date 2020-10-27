@@ -99,10 +99,10 @@ findbar:-moz-window-inactive description,
 	margin-block: 0 !important;
 }
 .notificationbox-stack notification[type="warning"] {
-  background: #ffe900 !important;	
+	background: #ffe900 !important;	
 }
 .notificationbox-stack notification[type="critical"] {
-  background: #d70022 !important;
+	background: #d70022 !important;
 }
 
 .notificationbox-stack[notificationside="top"] notification {
