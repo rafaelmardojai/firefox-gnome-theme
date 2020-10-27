@@ -49,6 +49,14 @@ This theme is supposed to work with current supported Firefox releases:
     - Set the colors used in the theme."
 	- Default: Adwaita.
 	- Options: `yaru`, `adwaita`.
+	
+### One command curled script
+
+You can also install this theme with one command:
+
+`curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash`
+
+It will download the latest version of the theme and run the installation script for you.
 
 ### Manual installation
 1. Go to `about:support` in Firefox.
@@ -101,7 +109,7 @@ Both manual and script installation methods should create a git clone in `your-p
 git pull origin master
 ```
 
-> Note: Running installation script to update after cloning again the repo can work, but also can introduce duplication in CSS sheets.
+> Note: You can also run the installation script again to update (after cloning again the repo).
 
 ## Uninstalling
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
