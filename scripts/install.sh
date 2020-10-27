@@ -24,6 +24,8 @@ while getopts 'f:p:g:t:h' flag; do
 done
 
 function saveProfile(){
+	local PROFILE_PATH="$1"
+
 	cd $FIREFOXFOLDER/$PROFILE_PATH
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
@@ -77,14 +79,12 @@ if [ ${#PROFILES_PATHS[@]} -eq 0 ]; then
 	>&2 echo "failed, no profiles found at ${PROFILES_FILE}"
 	exit 0
 elif [ ${#PROFILES_PATHS[@]} -eq 1 ]; then
-	echo "one profile found"
-	saveProfile "0" "${PROFILES_PATHS[0]}"
+	echo "One profile found"
+	saveProfile "${PROFILES_PATHS[0]}"
 else
 	echo "${#PROFILES_PATHS[@]} profiles found"
-	ITEM=0
 	for PROFILE_PATH in "${PROFILES_PATHS[@]}"; do
-	    saveProfile "${ITEM}" "${PROFILE_PATH}"
-	    ITEM="$((${ITEM}+1))"
+	    saveProfile "${PROFILE_PATH}"
 	done
 fi
 
