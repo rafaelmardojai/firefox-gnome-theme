@@ -107,12 +107,9 @@
 
 /* Customization overflow menu position */
 #customization-panel-container {
-	padding: 0 75px 25px !important;
-	margin-top: 10px;
+	padding-left: 20p !important;
+	margin-top: -38px;
 	z-index: 10;
-}
-#customization-panelWrapper > .panel-arrowbox {    
-	margin-bottom: -5px !important;
 }
 
 /* Confirmation Hint */
@@ -185,15 +182,21 @@
 
 /* TODO: create custom --gnome-list vars */
 #identity-popup-permission-list:not(:empty) {
+	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color);
-	border-bottom: 0 !important;
+	border-radius: 6px;
 	padding: 0 !important;
 }
 .identity-popup-permission-item {
-	background: var(--gnome-menu-background);
-	border-bottom: 1px solid var(--gnome-button-border-color);
 	padding: 6px !important;
 	margin: 0 !important;
+}
+.identity-popup-permission-item:not(:last-child) {
+	border-bottom: 1px solid var(--gnome-button-border-color);
+}
+.identity-popup-permission-label {
+    margin-inline: 0 !important;
+	margin-inline-start: 6px !important;
 }
 
 /* Protections popup */
@@ -206,40 +209,63 @@
 }
 
 #protections-popup-mainView-panel-header {
-	background: var(--gnome-button-suggested-action-background) !important;	
-	border: 1px solid var(--gnome-button-suggested-action-border-color) !important;
-	border-radius: 5px 5px 0 0;
+	background: var(--gnome-menu-background) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-bottom-width: 0 !important;
+	border-radius: 6px 6px 0 0;
+	color: var(--gnome-toolbar-color) !important;
 	min-height: 34px !important;
 }
+#protections-popup[hasException] #protections-popup-tp-switch-section,
+#protections-popup[hasException] #protections-popup-mainView-panel-header{
+	background: var(--gnome-menu-background) !important;
+}
+#protections-popup-main-header-label {
+	margin-inline-start: 12px !important;
+	text-align: left !important;
+}
+#protections-popup-mainView-panel-header-span {
+	margin-inline-start: 0 !important
+}
 #protections-popup[toast] #protections-popup-mainView-panel-header {
+	border-bottom-width: 1px !important;
 	border-radius: 5px !important;
+	padding: 12px !important;
 }
 
+#messaging-system-message-container {
+    height: 150px !important;
+}
+#protections-popup #messaging-system-message-container[disabled] {
+    margin-bottom: -150px !important;
+}
 #protections-popup-message {
+	background: var(--gnome-menu-background) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-bottom: 0 !important;
+	border-top: 0 !important; 
+	color: var(--gnome-toolbar-color) !important;
 	height: 100% !important;
 	margin: 0 !important;
 	border-radius: 0 !important;
 }
+#protections-popup-message .text-link {
+	color: var(--gnome-toolbar-color) !important;
+}
 
 #protections-popup-tp-switch-section {
-	background: var(--gnome-button-background) !important;
+	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color) !important;
-	border-top: 0 !important;
-	border-radius: 0 0 5px 5px;
+	border-radius: 0 0 6px 6px;
+	padding: 12px !important;
 }
 #protections-popup[hasException] #protections-popup-tp-switch-section {
 	margin-bottom: 10px !important;
-	color: white !important;
-}
-
-#protections-popup[hasException] #protections-popup-tp-switch-section,
-#protections-popup[hasException] #protections-popup-mainView-panel-header{
-	background: var(--gnome-button-destructive-action-background) !important;
-	border-color: var(--gnome-button-destructive-action-border-color) !important;
 }
 
 #protections-popup-no-trackers-found-description {
-	margin: 10px 0 !important;
+	margin: 12px 0 !important;
+	text-align: left !important;
 }
 
 #protections-popup-blocking-section-header,
@@ -267,7 +293,7 @@
 
 #protections-popup-footer  {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin-top: 3px;
 }
@@ -283,9 +309,15 @@
 	margin-inline-end: 0 !important;
 }
 
+.protections-popup-description {
+    border-bottom: 0 !important;
+}
+.protections-popup-description > description {
+    margin: 8px !important;
+}
+
 /* TODO: consider switchers section */
 .protections-popup-tp-switch-box {
-	margin-top: 16px;
 	padding: 0 !important;
 	-moz-box-pack: start !important;
 }

@@ -215,7 +215,6 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 .subviewbutton-back:not(#hack),
 .close-icon:not(.tab-close-button),
 #TabsToolbar .toolbarbutton-1,
-#protections-popup-show-report-button,
 .identity-popup-permission-remove-button:not(#hack) {
 	background: transparent !important;
 	box-shadow: none !important;
@@ -224,8 +223,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 }
 .subviewbutton-back:not(#hack):not(:active):hover,
 .close-icon:not(.tab-close-button):not(:active):hover,
-#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover,
-#protections-popup-show-report-button:not(:active):hover {
+#TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;

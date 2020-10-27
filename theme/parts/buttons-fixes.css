@@ -180,3 +180,14 @@ menulist {
 #identity-popup-security-expander .button-icon {
 	margin: 0 !important;
 }
+
+/* Protections popup */
+.protections-popup-footer-icon {
+	display: none !important;
+}
+.protections-popup-footer-button-label {
+    margin-inline-start: 0px !important;
+}
+#protections-popup-footer-protection-type-label {
+    margin-inline-end: 0px !important;
+}
