@@ -1,0 +1,29 @@
+
+ @supports -moz-bool-pref("gnomeTheme.systemWindowButtons"){
+
+    :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
+        list-style-image: none !important;
+    }
+    :root[tabsintitlebar] #titlebar .titlebar-button.titlebar-close:not(#hack) {
+        -moz-appearance: -moz-window-button-close !important;
+        list-style-position: inherit;
+        height:  10px !important;
+        padding: 0px 0px 0px 3px !important;
+    }
+  :root[sizemode="fullscreen"] .titlebar-buttonbox {
+    display: none !important; /* fullscreen no window control buttons */
+    -moz-appearance: -moz-window-button-close !important;
+  }
+
+
+    :root[tabsintitlebar] #titlebar .titlebar-button.titlebar-max:not(#hack) {
+        -moz-appearance: -moz-window-button-maximize !important;
+    }
+    :root[tabsintitlebar] #titlebar .titlebar-button.titlebar-restore:not(#hack) {
+        -moz-appearance: -moz-window-button-restore !important;
+    }
+    :root[tabsintitlebar] #titlebar .titlebar-button.titlebar-min:not(#hack) {
+        -moz-appearance: -moz-window-button-minimize !important;
+    }
+
+}

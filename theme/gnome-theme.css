@@ -13,6 +13,7 @@
 @import "colors/dark.css";
 @import "system-icons.css";
 @import "symbolic-tab-icons.css";
+@import "system-window-buttons.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Set theme version text in customization panel */
