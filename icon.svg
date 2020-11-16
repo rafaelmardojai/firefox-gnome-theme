@@ -9,7 +9,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="icon.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
    viewBox="0 0 16.933333 16.933334"
@@ -17,6 +17,102 @@
    width="64">
   <defs
      id="defs2">
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.20582496,-0.04976221,0.05823237,0.24097613,2136.8688,1938.9047)"
+       r="20.396999"
+       cy="-8491.5459"
+       cx="-7935.6201"
+       id="radialGradient2139"
+       fx="-7935.6201"
+       fy="-8491.5459"
+       fr="0"
+       spreadMethod="pad">
+      <stop
+         id="stop2135"
+         stop-opacity=".064"
+         stop-color="#8c4ff3"
+         offset="0.38133141"
+         style="stop-color:#735eeb;stop-opacity:1" />
+      <stop
+         id="stop2137"
+         stop-opacity=".6"
+         stop-color="#6e008b"
+         offset=".975"
+         style="stop-color:#b138e0;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.20582496,-0.04976221,0.05823237,0.24097613,2136.8688,1938.9047)"
+       r="20.396999"
+       cy="-8491.5459"
+       cx="-7935.6201"
+       id="radialGradient2133"
+       fx="-7935.6201"
+       fy="-8491.5459"
+       fr="0"
+       spreadMethod="pad">
+      <stop
+         id="stop2129"
+         stop-opacity=".064"
+         stop-color="#8c4ff3"
+         offset="0.38133141"
+         style="stop-color:#735eeb;stop-opacity:1" />
+      <stop
+         id="stop2131"
+         stop-opacity=".6"
+         stop-color="#6e008b"
+         offset=".975"
+         style="stop-color:#b138e0;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.20582496,-0.04976221,0.05823237,0.24097613,2136.8688,1938.9047)"
+       r="20.396999"
+       cy="-8491.5459"
+       cx="-7935.6201"
+       id="radialGradient2127"
+       fx="-7935.6201"
+       fy="-8491.5459"
+       fr="0"
+       spreadMethod="pad">
+      <stop
+         id="stop2123"
+         stop-opacity=".064"
+         stop-color="#8c4ff3"
+         offset="0.38133141"
+         style="stop-color:#735eeb;stop-opacity:1" />
+      <stop
+         id="stop2125"
+         stop-opacity=".6"
+         stop-color="#6e008b"
+         offset=".975"
+         style="stop-color:#b138e0;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.20582496,-0.04976221,0.05823237,0.24097613,2136.8688,1938.9047)"
+       r="20.396999"
+       cy="-8491.5459"
+       cx="-7935.6201"
+       id="radialGradient2121"
+       fx="-7935.6201"
+       fy="-8491.5459"
+       fr="0"
+       spreadMethod="pad">
+      <stop
+         id="stop2117"
+         stop-opacity=".064"
+         stop-color="#8c4ff3"
+         offset="0.38133141"
+         style="stop-color:#735eeb;stop-opacity:1" />
+      <stop
+         id="stop2119"
+         stop-opacity=".6"
+         stop-color="#6e008b"
+         offset=".975"
+         style="stop-color:#b138e0;stop-opacity:1" />
+    </radialGradient>
     <linearGradient
        id="linearGradient1460"
        inkscape:collect="always">
@@ -2441,33 +2537,28 @@
          offset="1" />
     </radialGradient>
     <radialGradient
-       xlink:href="#e"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.20582496,-0.04976221,0.05823237,0.24097613,2136.8688,1938.9047)"
        r="20.396999"
        cy="-8491.5459"
        cx="-7935.6201"
-       id="f">
-      <stop
-         id="stop899"
-         stop-opacity="0"
-         stop-color="#9059ff"
-         offset=".206" />
+       id="f"
+       fx="-7935.6201"
+       fy="-8491.5459"
+       fr="0"
+       spreadMethod="pad">
       <stop
          id="stop901"
          stop-opacity=".064"
          stop-color="#8c4ff3"
-         offset=".278" />
-      <stop
-         id="stop903"
-         stop-opacity=".45"
-         stop-color="#7716a8"
-         offset=".747" />
+         offset="0.38133141"
+         style="stop-color:#735eeb;stop-opacity:1" />
       <stop
          id="stop905"
          stop-opacity=".6"
          stop-color="#6e008b"
-         offset=".975" />
+         offset=".975"
+         style="stop-color:#b138e0;stop-opacity:1" />
     </radialGradient>
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -2633,7 +2724,8 @@
          id="stop969-3"
          stop-opacity=".8"
          stop-color="#fff44f"
-         offset=".167" />
+         offset=".167"
+         style="stop-color:#6d63ea;stop-opacity:1" />
       <stop
          id="stop971-7"
          stop-opacity=".634"
@@ -2648,7 +2740,8 @@
          id="stop975"
          stop-opacity="0"
          stop-color="#fff44f"
-         offset=".6" />
+         offset=".6"
+         style="stop-color:#b338e2;stop-opacity:1" />
     </linearGradient>
     <clipPath
        id="clipPath1113-1"
@@ -2731,21 +2824,141 @@
        id="linearGradient1462"
        xlink:href="#linearGradient1460"
        inkscape:collect="always" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter1631">
+      <feFlood
+         flood-opacity="0.317647"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1621" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite1"
+         id="feComposite1623" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur1625" />
+      <feOffset
+         dx="-0.3"
+         dy="0.3"
+         result="offset"
+         id="feOffset1627" />
+      <feComposite
+         in="offset"
+         in2="SourceGraphic"
+         operator="atop"
+         result="composite2"
+         id="feComposite1629" />
+    </filter>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.20582496,-0.04976221,0.05823237,0.24097613,2136.8688,1938.9047)"
+       r="20.396999"
+       cy="-8491.5459"
+       cx="-7935.6201"
+       id="f-6"
+       fx="-7935.6201"
+       fy="-8491.5459"
+       fr="0"
+       spreadMethod="pad">
+      <stop
+         id="stop901-7"
+         stop-opacity=".064"
+         stop-color="#8c4ff3"
+         offset="0.3217251"
+         style="stop-color:#735eeb;stop-opacity:1" />
+      <stop
+         id="stop905-5"
+         stop-opacity=".6"
+         stop-color="#6e008b"
+         offset=".975"
+         style="stop-color:#b138e0;stop-opacity:1" />
+    </radialGradient>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter1631-3">
+      <feFlood
+         flood-opacity="0.317647"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1621-5" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite1"
+         id="feComposite1623-6" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur1625-2" />
+      <feOffset
+         dx="-0.3"
+         dy="0.3"
+         result="offset"
+         id="feOffset1627-9" />
+      <feComposite
+         in="offset"
+         in2="SourceGraphic"
+         operator="atop"
+         result="composite2"
+         id="feComposite1629-1" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter1999">
+      <feFlood
+         flood-opacity="0.423529"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1989" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite1"
+         id="feComposite1991" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.2"
+         result="blur"
+         id="feGaussianBlur1993" />
+      <feOffset
+         dx="-0.1"
+         dy="0.1"
+         result="offset"
+         id="feOffset1995" />
+      <feComposite
+         in="offset"
+         in2="SourceGraphic"
+         operator="atop"
+         result="composite2"
+         id="feComposite1997" />
+    </filter>
   </defs>
   <sodipodi:namedview
      inkscape:document-rotation="0"
      inkscape:window-maximized="1"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-x="0"
-     inkscape:window-height="1016"
-     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-width="1680"
      units="px"
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="38.242833"
-     inkscape:cx="24.305455"
-     inkscape:zoom="5.656854"
+     inkscape:cy="38.995739"
+     inkscape:cx="0.83128905"
+     inkscape:zoom="3.9999998"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -2760,7 +2973,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2893,5 +3106,25 @@
        cx="-19.34717"
        id="circle1970"
        style="display:inline;opacity:1;fill:#d5d3cf;fill-opacity:1;stroke:none;stroke-width:0.0409094;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.163638, 0.0818188;stroke-dashoffset:0;stroke-opacity:1;enable-background:new;stop-opacity:1" />
+    <g
+       id="g2145"
+       transform="matrix(0.89758496,0,0,0.89758496,0.86711408,29.55015)">
+      <path
+         id="path2093"
+         style="fill:#9a46e4;fill-opacity:1;stroke-width:0.336801"
+         d="M 8.4666847,288.53331 H 12.147597 A 3.6809736,3.6809736 0 0 0 8.4666847,284.8524 Z" />
+      <path
+         id="path2095"
+         style="fill:#a142e3;fill-opacity:1;stroke-width:0.336801"
+         d="M 4.7857378,288.53331 H 8.46665 v -3.68092 a 3.6809736,3.6809736 0 0 0 -3.6809122,3.68092 z" />
+      <path
+         id="path2097"
+         style="fill:#8f4de6;fill-opacity:1;stroke-width:0.336801"
+         d="m 4.7857725,288.53331 a 3.6809736,3.6809736 0 0 0 3.6809122,3.68091 v -3.68091 z" />
+      <path
+         id="path2099"
+         style="fill:#7f56e9;fill-opacity:1;stroke-width:0.336801"
+         d="m 8.4666847,288.53331 v 3.68091 a 3.6809736,3.6809736 0 0 0 3.6809113,-3.68091 z" />
+    </g>
   </g>
 </svg>
