@@ -48,7 +48,7 @@ This theme is supposed to work with current supported Firefox releases:
 - `-t <theme_name>` *optional*
     - Set the colors used in the theme."
 	- Default: Adwaita.
-	- Options: `yaru`, `adwaita`.
+	- Options: `yaru`, `adwaita`, `maia`.
 	
 ### One command curled script
 
