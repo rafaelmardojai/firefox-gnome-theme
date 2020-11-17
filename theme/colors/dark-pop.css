@@ -5,6 +5,32 @@
  * built-in in Firefox, so you need to add an !important if you wanna
  * override them. */
 @media (prefers-color-scheme: dark) {
+	/* Editing Title bar  */
+	:root[tabsintitlebar] #titlebar .titlebar-button {
+		margin: 2px 2.5px !important;
+		margin-inline-end: 2px !important;
+    }
+		/* Window buttons: at least 1 button */
+	@media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
+		:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
+			padding-right: 40px !important;
+		}
+	}
+	/* Window buttons: at least 2 buttons */
+	@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
+		(-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
+		(-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+		:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
+			padding-right: 70px !important;
+		}
+	}
+	/* Window buttons: 3 buttons */
+	@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+		:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
+			padding-right: 110px  !important;
+		}
+	}
+
 	:root {
 		/* Browser area before a page starts loading */
 		--gnome-browser-before-load-background: #353535;

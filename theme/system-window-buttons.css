@@ -1,5 +1,8 @@
 
  @supports -moz-bool-pref("gnomeTheme.systemWindowButtons"){
+    :root[tabsintitlebar] #titlebar .titlebar-button:hover:not(#hack) {
+        box-shadow: none !important;
+    }
     :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
         list-style-image: none !important;
     }
