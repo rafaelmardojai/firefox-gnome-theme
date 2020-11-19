@@ -1,0 +1,36 @@
+sysThemeNames=("'Pop-dark'" "'Pop-light'" "'Yaru-dark'" "'Yaru-light'")
+themeNames=("pop" "pop" "yaru" "yaru")
+
+firefoxInstalationPaths=(
+    ~/.mozilla/firefox
+    ~/.var/app/org.mozilla.firefox/.mozilla/firefox
+)
+
+currentTheme=$(gsettings get org.gnome.desktop.interface gtk-theme ) || currentTheme=""
+installScript="./scripts/install.sh"
+themeArg=""
+folderArg=""
+foldersFoundCount=0
+
+for i in "${!sysThemeNames[@]}"; do
+   if [[ "${sysThemeNames[$i]}" = "${currentTheme}" ]]; then
+        themeArg=" -t ${themeNames[i]}"
+   fi
+done
+
+for folder in "${firefoxInstalationPaths[@]}"; do
+    if [ -d $folder ]; then
+    echo Firefox installation folder found
+
+    folderArg=" -f $folder"
+    eval ${installScript}${themeArg}${folderArg}   
+    foldersFoundCount+=1
+
+    fi
+
+done
+
+if [ $foldersFoundCount = 0 ];then
+    echo No firefox folder found ;
+    fi
+if [ -d "$FOLDERPATH" ]; then rm -Rf $FOLDERPATH; fi
