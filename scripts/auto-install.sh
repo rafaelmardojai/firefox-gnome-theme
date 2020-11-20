@@ -12,6 +12,8 @@ themeArg=""
 folderArg=""
 foldersFoundCount=0
 
+eval "chmod +x ${installScript}"
+
 for i in "${!sysThemeNames[@]}"; do
    if [[ "${sysThemeNames[$i]}" = "${currentTheme}" ]]; then
         themeArg=" -t ${themeNames[i]}"
@@ -33,4 +35,3 @@ done
 if [ $foldersFoundCount = 0 ];then
     echo No firefox folder found ;
     fi
-if [ -d "$FOLDERPATH" ]; then rm -Rf $FOLDERPATH; fi
