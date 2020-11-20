@@ -1,5 +1,5 @@
-sysThemeNames=("'Pop-dark'" "'Pop-light'" "'Yaru-dark'" "'Yaru-light'")
-themeNames=("pop" "pop" "yaru" "yaru")
+sysThemeNames=("'Pop'" "'Pop-dark'" "'Pop-light'" "'Yaru'" "'Yaru-dark'" "'Yaru-light'" "'Adwaita-maia'" "'Adwaita-maia-dark'")
+themeNames=("pop" "pop" "pop" "yaru" "yaru" "yaru" "maia" "maia")
 
 firefoxInstalationPaths=(
     ~/.mozilla/firefox
