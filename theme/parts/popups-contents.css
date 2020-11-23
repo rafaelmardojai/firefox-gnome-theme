@@ -107,8 +107,7 @@
 
 /* Customization overflow menu position */
 #customization-panel-container {
-	padding-left: 20p !important;
-	margin-top: -38px;
+	margin-top: 10px;
 	z-index: 10;
 }
 
