@@ -126,8 +126,9 @@ menu[disabled] > .menu-right {
 	opacity: 0.7 !important;
 }
 .textbox-search-sign {
-	width: 16px !important;
 	margin: 2px 0;
+	max-height: 16px !important;
+	width: 16px !important;
 }
 
 /* Tree views */
