@@ -25,6 +25,7 @@ menuitem[type="radio"],
 menuitem[type="radio"][checked="true"],
 .close-icon:not(.tab-close-button),
 .identity-popup-permission-remove-button .button-icon,
+#urlbar-search-mode-indicator-close,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon,
@@ -172,6 +173,9 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 .close-icon:not(.tab-close-button),
 .identity-popup-permission-remove-button .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+}
+#urlbar-search-mode-indicator-close {
+	background-image: url("../icons/window-close-symbolic.svg") !important;
 }
 @media (prefers-color-scheme: light) {
 	.notificationbox-stack notification[type="critical"] .close-icon:not(.tab-close-button):not(:hover) {

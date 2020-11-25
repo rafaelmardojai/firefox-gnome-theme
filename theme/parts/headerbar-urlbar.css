@@ -43,7 +43,7 @@ toolbarspring {
 .urlbarView {
 	background: transparent !important;
 	color: var(--gnome-toolbar-color) !important;
-	margin: -2px 0 0 0 !important;
+	margin: 0 !important;
 	width: 100% !important;
 }
 
@@ -73,7 +73,6 @@ toolbarspring {
 
 /* Search engines buttons */	
 .search-one-offs {
-	margin-top: 6px !important;
 	margin-bottom: 2px !important;
 	padding: 8px !important;
 	background: var(--gnome-popover-background) !important;
@@ -137,4 +136,21 @@ toolbarspring {
 .searchbar-search-button:hover:active .searchbar-search-icon {
 	background-color: transparent !important;
 	fill-opacity: 1 !important;
+}
+
+/* Search mode indicator */
+#urlbar-search-mode-indicator {
+	background: var(--gnome-popover-background) !important;
+	border: 1px solid var(--gnome-popover-border-color) !important;
+	border-radius: 9px;
+	outline: 0 !important;
+	margin: 4px 0;
+}
+#urlbar-search-mode-indicator-title {
+    color: #0060df;
+    padding-inline: 4px !important;;
+}
+#urlbar-search-mode-indicator-close {
+	border-radius: 0 9px 9px 0;
+	opacity: 0.8;
 }
