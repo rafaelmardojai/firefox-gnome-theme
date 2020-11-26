@@ -43,12 +43,12 @@ This theme is supposed to work with current supported Firefox releases:
 	- Default: `~/.mozilla/firefox/`
 
 - `-p <profile_name>` *optional*
-	- Set custom profile name, for example `e0j6yb0p.default-nightly`
+	- Set custom profile name, for example `e0j6yb0p.default-nightly`.
 	- Default: standard default profile
 - `-t <theme_name>` *optional*
-    - Set the colors used in the theme."
+	- Set the colors used in the theme.
 	- Default: Adwaita.
-	- Options: `yaru`, `adwaita`, `maia`.
+	- Options: `adwaita`, `maia`, `yaru`.
 	
 ### One command curled script
 
