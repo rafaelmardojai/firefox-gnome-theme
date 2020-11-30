@@ -42,7 +42,7 @@
 	--gnome-toolbar-background: #e0ddda;	
 	--gnome-toolbar-color: rgb(46, 52, 54);
 	--gnome-toolbar-border-color: #b6b6b3;
-	--gnome-toolbar-icon-fill: #2e3436;
+	--gnome-toolbar-icon-fill: #574F4A;
 	--gnome-inactive-toolbar-background: #f6f5f4;	
 	--gnome-inactive-toolbar-color: #d5d0cc;
 	--gnome-inactive-toolbar-border-color: #d5d0cc;
@@ -64,18 +64,18 @@
 	/* Header bar */
 	--gnome-headerbar-background: linear-gradient(to top, /*#dad6d2,*/ #574F4A, #4d4642 2px, #3b3633);
 	--gnome-headerbar-border-color: #574F4A;
-	--gnome-headerbar-box-shadow: 0 -1px rgb(217, 217, 217) inset, 0 1px #fff inset;
-	--gnome-inactive-headerbar-background: linear-gradient(#f6f5f4, #f6f5f4);
-	--gnome-inactive-headerbar-border-color: #d5d0cc;
-	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
+	--gnome-headerbar-box-shadow: 0 -1px #4d4642 inset, 0 1px #4d4642 inset;
+	--gnome-inactive-headerbar-background: linear-gradient(#3b3633, #4d4642);
+	--gnome-inactive-headerbar-border-color: #4d4642;
+	--gnome-inactive-headerbar-box-shadow: 0 1px #4d4642 inset;
 
 	/* Buttons */
 	--gnome-button-background: linear-gradient(to top, #edebe9 2px, #f6f5f4);
 	--gnome-button-border-color: #cdc7c2;
 	--gnome-button-border-accent-color: #bfb8b1;
 	--gnome-button-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.07);
-	--gnome-button-hover-background: linear-gradient(to top, #f6f5f4, #f8f8f7 1px);
-	--gnome-button-active-background: linear-gradient(#cfcac4, #cfcac4);
+	--gnome-button-hover-background:linear-gradient(#c7c6c6, #c7c6c6);
+	--gnome-button-active-background: linear-gradient(#adacab, #adacab);
 	--gnome-button-active-border-color: #c6bfb9;
 	--gnome-button-active-border-accent-color: #bab3ab;
 	--gnome-button-active-box-shadow: 0 1px rgba(255, 255, 255, 0) inset;
