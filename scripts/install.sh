@@ -26,7 +26,7 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd $FIREFOXFOLDER/$PROFILE_PATH
+	cd "$FIREFOXFOLDER/$PROFILE_PATH"
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
@@ -74,6 +74,7 @@ fi
 echo "Profiles file found"
 
 PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' ))
+PROFILES_PATHS=($(sed -e 's/\s\+/SPACECHARACTER/g' <<< $PROFILES_PATHS)) #replace spaces with SPACECHARACTER
 PROFILES_PATHS=($(sed 's/Path=/::/g' <<< $PROFILES_PATHS))
 PROFILES_PATHS+=::
 
@@ -92,8 +93,8 @@ else
 	do
 		if [[ ! -z "$i" ]];
 		then
-			echo Installing Theme on  $i ;
-			saveProfile "${i}"
+			echo Installing Theme on $(sed 's/SPACECHARACTER/ /g' <<< $i) ;
+			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
 	
 	done
