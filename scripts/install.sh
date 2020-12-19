@@ -34,7 +34,7 @@ function saveProfile(){
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD"
-	cp -fR $THEMEDIRECTORY $PWD
+	cp -fR "$THEMEDIRECTORY" "$PWD"
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
