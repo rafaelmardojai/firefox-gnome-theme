@@ -73,9 +73,7 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 fi
 echo "Profiles file found"
 
-PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' ))
-PROFILES_PATHS=($(sed -e 's/\s\+/SPACECHARACTER/g' <<< $PROFILES_PATHS)) #replace spaces with SPACECHARACTER
-PROFILES_PATHS=($(sed 's/Path=/::/g' <<< $PROFILES_PATHS))
+PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' )) 
 PROFILES_PATHS+=::
 
 PROFILES_ARRAY=()
