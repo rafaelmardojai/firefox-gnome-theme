@@ -367,3 +367,8 @@
 #contextual-feature-recommendation-notification {
     width: auto !important;
 }
+
+/* Extensions sometimes assume a white background */
+.webextension-popup-browser {
+  background-color: #fff !important;
+}
