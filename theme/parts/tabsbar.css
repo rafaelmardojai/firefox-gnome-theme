@@ -29,13 +29,11 @@ tab > stack {
 	height: 38px !important;
 	min-height: 38px !important;
 }
-/* Extra margin for the first and last tabs */
-.tabbrowser-tab[first-tab]:not([pinned=true]) {
-	margin-left: 8px !important;
-}
+/* Outline for the last tab */
 .tabbrowser-tab[last-tab]:not([pinned=true]) {
-	margin-right: 8px !important;
-}
+  border-right: 0px solid transparent !important;	
+
+}*/
 
 /* Remove hover effects on tab bar buttons */
 #TabsToolbar {
@@ -69,7 +67,7 @@ tab > stack {
 
 /* Space between tabs */
 .tabbrowser-tab:not([pinned=true]) {
-	margin: 0 4px !important;
+	margin: 0px !important;
 }
 
 /* Tab labels */
@@ -78,16 +76,14 @@ tab {
 	font-family: Cantarell, inherit;
 	font-weight: normal;
 	font-size: 1em;
-	border-left: 1px solid transparent !important;
-	border-right: 1px solid transparent !important;
+	border-left: 0px solid var(--gnome-tabbar-tab-border-color) !important;	
+	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;	
 }
 tab:hover {
 	color: var(--gnome-tabbar-tab-hover-color) !important;
 }
 tab[selected] {
 	color: var(--gnome-tabbar-tab-active-color) !important;
-	border-left-color: var(--gnome-tabbar-tab-border-color) !important;
-	border-right-color: var(--gnome-tabbar-tab-border-color) !important;
 }
 tab:-moz-window-inactive {
 	color: var(--gnome-inactive-tabbar-tab-color) !important;
@@ -167,7 +163,7 @@ tab[selected]:-moz-window-inactive {
 	-moz-appearance: none !important;
 	border: 1px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
-	border-radius: 5px;
+	border-radius: 99px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 1 !important;
@@ -177,14 +173,15 @@ tab[selected]:-moz-window-inactive {
 	padding: 2px;
 	width: 16px;
 }
+
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
-	background-image: var(--gnome-button-background);
-	box-shadow: var(--gnome-button-box-shadow);
+	background-color: #D2D1D1;
+	/*box-shadow: var(--gnome-button-box-shadow); 
 	border: 1px solid var(--gnome-button-border-color);
-	border-bottom-color: var(--gnome-button-border-accent-color);
+	border-bottom-color: var(--gnome-button-border-accent-color); */
 	opacity: 1;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:active {
@@ -216,7 +213,7 @@ tab[selected]:-moz-window-inactive {
 	background-image: none !important;
 	border: 0 !important;
 	border-image: none !important;
-	border-bottom: 4px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
@@ -235,7 +232,7 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-image: none !important;
-	border-bottom: 4px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
 }
 
 /* Tabs scroll buttons hover */
@@ -316,3 +313,4 @@ tab[selected]:-moz-window-inactive {
 		border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color-contrast) !important;
 	}
 }
+
