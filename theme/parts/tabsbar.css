@@ -165,20 +165,28 @@ tab[selected]:-moz-window-inactive {
 	box-sizing: content-box; /* Avoid deformation on flexbox */
 	border-radius: 99px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-	fill: var(--gnome-toolbar-color) !important;
+	fill: var(--gnome-toolbar-color);
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity;
-	height: 16px;
-	opacity: .3;
+	height: 16px; 
 	padding: 2px;
 	width: 16px;
 }
 
+/* Autohide close button */
+.tabbrowser-tab:not([selected="true"]) .tab-close-button {
+  /*opacity: 0;*/
+  visibility: hidden;
+}
+.tabbrowser-tab:hover .tab-close-button {
+  opacity: 1;
+  visibility: visible;
+}
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
-	background-color: #D2D1D1;
+	background-color: #D2D1D1; /* this should be unhardcoded */
 	/*box-shadow: var(--gnome-button-box-shadow); 
 	border: 1px solid var(--gnome-button-border-color);
 	border-bottom-color: var(--gnome-button-border-accent-color); */
@@ -313,4 +321,3 @@ tab[selected]:-moz-window-inactive {
 		border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color-contrast) !important;
 	}
 }
-
