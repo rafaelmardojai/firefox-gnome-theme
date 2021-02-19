@@ -186,7 +186,7 @@ tab[selected]:-moz-window-inactive {
 	opacity: .18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
-	background-color: #D2D1D1; /* this should be unhardcoded */
+	background-color: var(--gnome-tabbar-close-hover);
 	/*box-shadow: var(--gnome-button-box-shadow); 
 	border: 1px solid var(--gnome-button-border-color);
 	border-bottom-color: var(--gnome-button-border-accent-color); */
@@ -221,11 +221,11 @@ tab[selected]:-moz-window-inactive {
 	background-image: none !important;
 	border: 0 !important;
 	border-image: none !important;
-	border-bottom: 1px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
-	border-bottom-color: var(--gnome-inactive-tabbar-tab-active-border-bottom-color) !important;
+	border-bottom-color: var(--gnome-tabbar-tab-border-color) !important;
 }
 
 /* Tab hover */
