@@ -65,7 +65,7 @@ panelview {
 	fill: var(--arrowpanel-background) !important;
 	stroke: var(--gnome-popover-border-color) !important;
 }
-panel:not([remote]) {
+panel:not([remote]), #BMB_bookmarksPopup {
 	--arrowpanel-background: var(--gnome-popover-background) !important;
 }
 
