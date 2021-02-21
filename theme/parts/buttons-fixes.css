@@ -196,3 +196,8 @@ menulist {
     margin-inline-end: 0 !important;
 	margin-block: 0 !important;
 }
+
+/* Close button */
+.close-icon:not(.tab-close-button) .toolbarbutton-icon {
+	outline:  0 !important;
+}

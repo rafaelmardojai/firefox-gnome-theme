@@ -368,6 +368,11 @@
     width: auto !important;
 }
 
+/* Notification popups */
+.popup-notification-learnmore-link {
+	margin-top: 40px !important;
+}
+
 /* Extensions sometimes assume a white background */
 .webextension-popup-browser {
   background-color: #fff !important;
