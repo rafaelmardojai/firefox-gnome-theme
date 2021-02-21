@@ -55,12 +55,19 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 	fill: #fff !important;
 }
 
-/* Tabs scroll icons */
+
+/* Scroll icons */
 #scrollbutton-up {
-	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+	list-style-image: var(--scrollbutton-icon-name) !important;
 }
 #scrollbutton-down {
-	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+	list-style-image: var(--scrollbutton-icon-name) !important;
+}
+arrowscrollbox {
+	--scrollbutton-icon-name: url("../icons/pan-down-symbolic.svg");
+}
+arrowscrollbox[orient="horizontal"] {
+	--scrollbutton-icon-name: url("../icons/pan-start-symbolic.svg");
 }
 
 /* Popovers subview menu arrow */
