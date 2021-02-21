@@ -211,3 +211,12 @@ tabmodalprompt[role="dialog"] button.tabmodalprompt-button1:not(#hack) {
 	border-left: 0 !important;
 	border-radius: 0 0 0 9px !important;
 }
+
+/* Main menu fxa */
+#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label {
+	padding-left: 22px !important;
+	margin-inline-start: -22px !important;
+}
+#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-avatar {
+	margin-inline-start: 5px !important;
+}
