@@ -353,13 +353,7 @@ tab[selected]:-moz-window-inactive {
 
 	/* Adjust Margins */
 
-	.tabbrowser-tab[first-tab]:not([pinned=true]) {
-		margin-left: 0px !important;
-	}
-	.tabbrowser-tab[last-tab]:not([pinned=true]) {
-		margin-right: 0px !important;
-	}
-	.tabbrowser-tab:not([pinned=true]) {
+	.tabbrowser-tab[first-tab]:not([pinned=true]), .tabbrowser-tab[last-tab]:not([pinned=true]), .tabbrowser-tab:not([pinned=true]) {
 		margin-left: 0px !important;
 		margin-right: 0px !important;
 	}
