@@ -351,4 +351,12 @@ tab[selected]:-moz-window-inactive {
 		background-color: var(--gnome-tabbar-tab-hover-background-new) !important;
 		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
 	}
+	.tabbrowser-tab:not([selected="true"]) .tab-close-button {
+		visibility: hidden;
+		display: none;
+	}
+	.tabbrowser-tab:hover .tab-close-button {
+		visibility: visible;
+		display:block;
+	}
 }	
