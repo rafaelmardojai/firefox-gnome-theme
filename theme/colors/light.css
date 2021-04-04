@@ -117,6 +117,8 @@
 	--gnome-tabbar-tab-border-color-new: #bfb8b1;
 	--gnome-tabbar-tab-hover-background-new: #e1dedb;
 	--gnome-tabbar-close-hover: #d2d1d1;
+	--gnome-tabbar-tab-active-hover-background-new: #EFEDEC;
+	--gnome-tabbar-tab-active-background-new: #e8e6e3;
 } 
 
 /* Private window colors */

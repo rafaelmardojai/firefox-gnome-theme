@@ -320,11 +320,39 @@ tab[selected]:-moz-window-inactive {
 /* OPTIONAL: Use HdyTabBar styling */
 @supports -moz-bool-pref("gnomeTheme.newTabs") {
 
-	/* Change the tab background */
-	#TabsToolbar {
-	background-color: var(--gnome-tabbar-tab-background-new) !important;
+	/* Change the tab styling */
+
+	/* Active tab */
+	.tab-background[selected=true] {
+		background-color: var(--gnome-tabbar-tab-active-background-new) !important;
+		border-right: 1px !important;
+		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
+		transition: background-color 2s ease-out 100ms;
 	}
+	/* Hover */
+	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
+		background-color: var(--gnome-tabbar-tab-active-hover-background-new) !important;
+	}
+	/* Inactive tab */
+	#TabsToolbar {
+		background-color: var(--gnome-tabbar-tab-background-new) !important;
+	}
+	/* Hover */
+	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+		background-color: var(--gnome-tabbar-tab-hover-background-new) !important;
+		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
+	}
+
+
+	/* Adjust Borders */
+
+	tab, tab[selected] {
+		border-left: 0px !important;	/* this is a bodge */
+		border-right: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;	
+	}
+
 	/* Adjust Margins */
+
 	.tabbrowser-tab[first-tab]:not([pinned=true]) {
 		margin-left: 0px !important;
 	}
@@ -332,31 +360,32 @@ tab[selected]:-moz-window-inactive {
 		margin-right: 0px !important;
 	}
 	.tabbrowser-tab:not([pinned=true]) {
-		margin: 0px !important;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
 	}
 
-	/* Adjust Borders */
 
-	tab {
-		border-left: 0px solid var(--gnome-tabbar-tab-border-color-new) !important;	/* this is a bodge */
-		border-right: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;	
+	/* Close Button Styling */
+
+	.tab-close-button {
+		border-radius: 99px;
+		opacity: 1;
+	}
+	:root:not(:-moz-window-inactive) .tab-close-button:hover {	
+		background-image: none;
+		background-size: 24px;
+		background-color: var(--gnome-tabbar-close-hover);
+		box-shadow: 0px 0px transparent; 
+	    border: 0px solid transparent;
+	    border-bottom-color: transparent;
 	}
 
-	/* Active Tab */
-	.tab-background[selected=true] {
-		border-right: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
-		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
-	}
-	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
-		background-color: var(--gnome-tabbar-tab-hover-background-new) !important;
-		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
-	}
+	/* This is horrible. */
+
 	.tabbrowser-tab:not([selected="true"]) .tab-close-button {
 		visibility: hidden;
-		display: none;
 	}
 	.tabbrowser-tab:hover .tab-close-button {
 		visibility: visible;
-		display:block;
 	}
 }	
