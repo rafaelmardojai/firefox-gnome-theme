@@ -112,12 +112,17 @@
 	--gnome-inactive-tabbar-tab-active-background: #f6f5f4;
 	--gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color);
 	--gnome-inactive-tabbar-tab-active-color: var(--gnome-inactive-tabbar-tab-color);
+<<<<<<< HEAD
 	
 	--gnome-tabbar-tab-background-new: #dad6d2;
 	--gnome-tabbar-tab-border-color-new: #bfb8b1;
 	--gnome-tabbar-tab-hover-background-new: #e1dedb;
 	--gnome-tabbar-close-hover: #d2d1d1;
 } 
+=======
+	--gnome-tabbar-close-hover: #d2d1d1;
+}
+>>>>>>> 05c331affb51de32df01993bb1c06bf1f354fe30
 
 /* Private window colors */
 :root {
