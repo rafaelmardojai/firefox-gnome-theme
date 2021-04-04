@@ -112,7 +112,8 @@
 	--gnome-inactive-tabbar-tab-active-background: #f6f5f4;
 	--gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color);
 	--gnome-inactive-tabbar-tab-active-color: var(--gnome-inactive-tabbar-tab-color);
-
+	
+	--gnome-tabbar-tab-background-new: #dad6d2;
 	--gnome-tabbar-tab-border-color-new: #bfb8b1;
 	--gnome-tabbar-tab-hover-background-new: #e1dedb;
 	--gnome-tabbar-close-hover: #d2d1d1;
