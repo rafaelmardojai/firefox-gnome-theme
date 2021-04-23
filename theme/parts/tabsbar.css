@@ -98,6 +98,13 @@ tab[selected]:-moz-window-inactive {
 	border-right-color: var(--gnome-inactive-headerbar-border-color) !important;
 }
 
+/* Reset tab background */
+.tab-background {
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	margin-block: 0 !important;
+}
+
 /* Center all inside tab */
 .tab-content {
 	display: flex;
