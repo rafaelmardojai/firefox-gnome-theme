@@ -45,7 +45,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 5px !important;
-	padding: 0 2px !important;
+	padding: 0 !important;
 	height: 34px !important;
 	max-height: 34px !important;
 	min-height: 34px !important;
@@ -75,7 +75,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
 #downloadsHistory,
 #overflowMenu-customize-button,
 #appMenu-popup .panel-banner-item,
-#appMenu-zoomReset-button:not(#appMenu-fxa-label):not(#hack),
+#appMenu-popup #appMenu-zoomReset-button2:not(#hack),
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
 .notification-button,
@@ -84,7 +84,8 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
 .tracking-protection-button,
 .dialog-button,
 .autocomplete-richlistitem[type="loginsFooter"],
-tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'],
+#appMenu-popup #appMenu-fxa-label2:not(#hack) {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
