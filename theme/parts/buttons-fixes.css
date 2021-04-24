@@ -109,6 +109,9 @@
 	margin: 6px !important;
 	padding: 0 !important;
 }
+button.close {
+	margin: 0 !important;
+}
 
 /* */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]::after {
