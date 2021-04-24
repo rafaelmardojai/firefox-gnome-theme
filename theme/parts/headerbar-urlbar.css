@@ -33,10 +33,12 @@ toolbarspring {
 	height: auto !important;
 	max-height: unset !important;
 }
+#urlbar #urlbar-input-container {
+	padding: 0 !important;
+}
 #urlbar[breakout][breakout-extend] #urlbar-input-container {
 	height: 32px !important;
 	max-height: 32px !important;
-	padding: 0 !important;
 }
 
 /* URL bar results */
