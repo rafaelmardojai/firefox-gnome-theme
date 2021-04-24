@@ -10,6 +10,11 @@
 	margin-bottom: -1px !important;
 }
 
+/* Fix tabs bar icon sizes */
+#TabsToolbar {
+    --toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
+}
+
 /* Tabs bar height */
 #tabbrowser-tabs,
 #tabbrowser-tabs arrowscrollbox {
