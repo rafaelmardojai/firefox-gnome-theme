@@ -26,6 +26,7 @@
 #sidebar-switcher-target,
 #viewButton,
 .close-icon:not(.tab-close-button),
+button.close,
 #TabsToolbar .toolbarbutton-1,
 .menulist-label-box,
 .expander-down, .expander-up,
@@ -133,6 +134,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'],
 #sidebar-switcher-target:hover,
 #viewButton:hover,
 .close-icon:not(.tab-close-button):hover,
+button.close:hover,
 #TabsToolbar .toolbarbutton-1:hover,
 menulist:hover .menulist-label-box,
 .expander-down:hover, .expander-up:hover,
@@ -168,6 +170,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:hover {
 #sidebar-switcher-target:active, #sidebar-switcher-target.active,
 #viewButton[open],
 .close-icon:not(.tab-close-button):active,
+button.close:active,
 #TabsToolbar .toolbarbutton-1:active, #TabsToolbar .toolbarbutton-1[open],
 menulist[open] .menulist-label-box,
 .expander-down:active, .expander-up:active,
@@ -222,6 +225,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 /* Flat buttons */
 .subviewbutton-back:not(#hack),
 .close-icon:not(.tab-close-button),
+button.close,
 #TabsToolbar .toolbarbutton-1,
 .identity-popup-permission-remove-button:not(#hack),
 #protections-popup-info-button {
@@ -232,6 +236,7 @@ tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:active {
 }
 .subviewbutton-back:not(#hack):not(:active):hover,
 .close-icon:not(.tab-close-button):not(:active):hover,
+button.close:not(:active):hover,
 #TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover,
 #protections-popup-info-button:hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
