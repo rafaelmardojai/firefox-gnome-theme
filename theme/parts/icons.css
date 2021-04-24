@@ -230,7 +230,7 @@ button.close::before {
 
 /* Private browsing button */
 #privatebrowsing-button {
-	list-style-image: url("../icons/user-not-tracked-symbolic.svg") !important;
+	list-style-image: url("../icons/eye-not-looking-symbolic.svg") !important;
 }
 /* Sidebar button */
 #sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, #sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon {
