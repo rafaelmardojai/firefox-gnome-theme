@@ -37,7 +37,7 @@ menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 
 /* Adjust popovers position */
 panel[type=arrow] {
-	margin-top: 10px !important;
+	margin-top: 8px !important;
 	max-height: 80vh !important;
 }
 #BMB_bookmarksPopup {
@@ -64,6 +64,7 @@ panelview {
 .panel-arrow {    
 	fill: var(--arrowpanel-background) !important;
 	stroke: var(--gnome-popover-border-color) !important;
+	display: -moz-inline-box !important;
 }
 panel:not([remote]), #BMB_bookmarksPopup {
 	--arrowpanel-background: var(--gnome-popover-background) !important;
