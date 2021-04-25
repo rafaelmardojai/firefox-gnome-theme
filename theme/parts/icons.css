@@ -4,6 +4,7 @@
 
 /* Icons color */
 .toolbarbutton-icon,
+.bookmark-item[container],
 .protections-popup-category::after,
 .protections-popup-footer-icon,
 .PanelUI-subView .subviewbutton-nav::after,
@@ -339,6 +340,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	}
 }
 
+/* Bookmarks folder icon */
 .bookmark-item[container] {
-	list-style-image: url("../icons/folder-symbolic.svg") !important
+	list-style-image: url("../icons/folder-symbolic.svg") !important;
 }
