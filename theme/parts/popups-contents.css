@@ -188,7 +188,7 @@
 	border-bottom: 1px solid var(--gnome-button-border-color);
 }
 .identity-popup-permission-label {
-    margin-inline: 0 !important;
+	margin-inline: 0 !important;
 	margin-inline-start: 6px !important;
 }
 
