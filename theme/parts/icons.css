@@ -338,3 +338,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 		list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
 	}
 }
+
+.bookmark-item[container] {
+	list-style-image: url("../icons/folder-symbolic.svg") !important
+}
