@@ -160,7 +160,7 @@
 	/* Navbar overflow button */
 	#nav-bar-overflow-button .toolbarbutton-icon {
 		filter: var(--gnome-icons-hack-filter);
-		list-style-image: url("moz-icon://stock/view-more-horizontal-symbolic?size=dialog") !important;
+		list-style-image: url("moz-icon://stock/pan-down-symbolic?size=dialog") !important;
 	}
 
 	/* Context back button */	
