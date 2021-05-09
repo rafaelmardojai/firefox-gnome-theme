@@ -319,7 +319,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 }
 /* Overflow button */
 #nav-bar-overflow-button {
-	list-style-image: url("../icons/view-more-horizontal-symbolic.svg") !important;
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
 /* Glitch - animations (may be possible to fix in about:config)
 #reload-button .toolbarbutton-icon { /* Reload button
