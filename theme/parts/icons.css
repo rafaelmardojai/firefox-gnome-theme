@@ -71,6 +71,13 @@ button.close::before {
 	width: 100%;
 }
 
+/* Fix main menu zoom controls icons */
+#appMenu-zoom-controls2 .toolbarbutton-icon {
+	padding: 0 !important;
+	padding-block: 0 !important;
+	padding-inline: 0 !important;
+}
+
 /* Scroll icons */
 #scrollbutton-up {
 	list-style-image: var(--scrollbutton-icon-name) !important;
