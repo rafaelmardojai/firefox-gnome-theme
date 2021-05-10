@@ -273,8 +273,16 @@ button.close::before {
 	list-style-image: url("../icons/user-home-symbolic.svg") !important;
 }
 /* Preferences button */
-#preferences-button {
-	list-style-image: url("../icons/preferences-system-symbolic.svg") !important;
+#preferences-button,
+.search-setting-button-compact > .button-box > .button-icon {
+	list-style-image: url("../icons/settings-symbolic.svg") !important;
+}
+/* Tabs sync */
+#sync-button,
+#sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
+.urlbarView-row[source="tabs"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
+#urlbar-engine-one-off-item-tabs {
+	list-style-image: url("../icons/tab-symbolic.svg") !important;
 }
 /* Fullscreen button */
 #fullscreen-button,
@@ -316,11 +324,17 @@ button.close::before {
 	list-style-image: url("../icons/window-new-symbolic.svg") !important;
 }
 /* Bookmarks menu button */
-#bookmarks-menu-button {
+#bookmarks-menu-button,
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
+.urlbarView-row[source="bookmarks"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
+#urlbar-engine-one-off-item-bookmarks {
 	list-style-image: url("../icons/starred-symbolic.svg") !important;
 }
 /* History button */
-#history-panelmenu {
+#history-panelmenu,
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-ico0,
+.urlbarView-row[source="history"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
+#urlbar-engine-one-off-item-history {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
 }
 /* All tabs button */
