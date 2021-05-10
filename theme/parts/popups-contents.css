@@ -35,12 +35,6 @@
 #appMenu-popup .toolbaritem-combined-buttons .before-label {
 	width: 32px !important;
 }
-#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label {
-	padding-left: 28px !important;
-}
-#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-avatar {
-	margin-inline-start: 5px !important;
-}
 
 /* User sync account remove avatar */
 #fxa-menu-avatar {
@@ -368,7 +362,13 @@
     width: auto !important;
 }
 
+/* Notification popups */
+.popup-notification-learnmore-link {
+	margin-top: 40px !important;
+}
+
 /* Extensions sometimes assume a white background */
 .webextension-popup-browser {
-  background-color: #fff !important;
+	background-color: #fff !important;
 }
+

@@ -4,6 +4,7 @@
 
 /* Icons color */
 .toolbarbutton-icon,
+.notification-anchor-icon,
 .protections-popup-category::after,
 .protections-popup-footer-icon,
 .PanelUI-subView .subviewbutton-nav::after,
@@ -24,8 +25,12 @@ menuitem[type="checkbox"][checked="true"],
 menuitem[type="radio"],
 menuitem[type="radio"][checked="true"],
 .close-icon:not(.tab-close-button),
+button.close::before,
 .identity-popup-permission-remove-button .button-icon,
 #urlbar-search-mode-indicator-close,
+#tracking-protection-icon,
+#identity-icon,
+#permissions-granted-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon,
@@ -55,12 +60,28 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 	fill: #fff !important;
 }
 
-/* Tabs scroll icons */
+/* Fix flat buttons icons aproach */
+button.close::before {
+	content: "";
+	display: block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+/* Scroll icons */
 #scrollbutton-up {
-	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+	list-style-image: var(--scrollbutton-icon-name) !important;
 }
 #scrollbutton-down {
-	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+	list-style-image: var(--scrollbutton-icon-name) !important;
+}
+arrowscrollbox {
+	--scrollbutton-icon-name: url("../icons/pan-down-symbolic.svg");
+}
+arrowscrollbox[orient="horizontal"] {
+	--scrollbutton-icon-name: url("../icons/pan-start-symbolic.svg");
 }
 
 /* Popovers subview menu arrow */
@@ -174,7 +195,8 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 .identity-popup-permission-remove-button .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 }
-#urlbar-search-mode-indicator-close {
+#urlbar-search-mode-indicator-close,
+button.close::before {
 	background-image: url("../icons/window-close-symbolic.svg") !important;
 }
 @media (prefers-color-scheme: light) {
@@ -207,7 +229,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 
 /* Private browsing button */
 #privatebrowsing-button {
-	list-style-image: url("../icons/user-not-tracked-symbolic.svg") !important;
+	list-style-image: url("../icons/eye-not-looking-symbolic.svg") !important;
 }
 /* Sidebar button */
 #sidebar-button:-moz-locale-dir(ltr):not([positionend])  .toolbarbutton-icon, #sidebar-button:-moz-locale-dir(rtl)[positionend]  .toolbarbutton-icon {
@@ -231,9 +253,12 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	list-style-image: url("../icons/open-menu-symbolic.svg") !important;
 }
 /* New tab button */
-#new-tab-button,
-.tabs-newtab-button {
+#new-tab-button {
 	list-style-image: url("../icons/tab-new-symbolic.svg") !important;
+}
+#tabs-newtab-button,
+#TabsToolbar #new-tab-button {
+	list-style-image: url("../icons/list-add-symbolic.svg") !important;
 }
 /* Home button */
 #home-button {
@@ -324,6 +349,30 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	list-style-image: url("../icons/folder-download-symbolic.svg") !important;
 }
 */
+
+/* Url Bar icons */
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+    list-style-image: url("../icons/edit-find-symbolic.svg") !important;
+}
+#urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
+  list-style-image: url("../icons/security-high-symbolic.svg") !important;
+}
+#urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon {
+  list-style-image: url("../icons/security-low-symbolic.svg") !important;
+}
+#urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon {
+  list-style-image: url()"../icons/security-high-symbolic.svg") !important;
+}
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+  list-style-image: url("../icons/padlock-symbolic.svg") !important;
+}
+#permissions-granted-icon {
+    list-style-image: url("../icons/general-properties-symbolic.svg") !important;
+}
+.popup-notification-icon[popupid="web-notifications"], .desktop-notification-icon {
+    list-style-image: url("../icons/message-symbolic.svg") !important;
+}
 
 /* Fix for extensions icons */
 @media (prefers-color-scheme: dark) {

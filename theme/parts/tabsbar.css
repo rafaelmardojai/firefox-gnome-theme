@@ -10,6 +10,11 @@
 	margin-bottom: -1px !important;
 }
 
+/* Fix tabs bar icon sizes */
+#TabsToolbar {
+    --toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
+}
+
 /* Tabs bar height */
 #tabbrowser-tabs,
 #tabbrowser-tabs arrowscrollbox {
@@ -98,6 +103,13 @@ tab[selected]:-moz-window-inactive {
 	border-right-color: var(--gnome-inactive-headerbar-border-color) !important;
 }
 
+/* Reset tab background */
+.tab-background {
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	margin-block: 0 !important;
+}
+
 /* Center all inside tab */
 .tab-content {
 	display: flex;
@@ -131,26 +143,12 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Force tab favicon to the center */
-.tabbrowser-tab:not([class*="identity-color-"]) .tab-throbber, .tabbrowser-tab:not([class*="identity-color-"]) .tab-throbber-fallback {
-	margin-left: auto;
-}
-.tabbrowser-tab:not([busy]):not([class*="identity-color-"]) .tab-icon-image {
-	margin-left: auto;
-}
-
-/* If tab favicon is not present, force tab label to the center */
-.tabbrowser-tab .tab-label-container {
-	margin-left: 0 !important;
-}
-.tabbrowser-tab:not([image]):not([busy]):not([progress]):not([class*="identity-color-"]) .tab-label-container {
+.tabbrowser-tab:not([class*="identity-color-"]) .tab-icon-stack {
 	margin-left: auto !important;
 }
 
 /* If tab close button is not present, don't force favicon to the center */
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber,
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber-fallback,
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([busy]) .tab-icon-image,
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([image]) .tab-label-container {
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-icon-stackr {
 	margin-left: 0 !important;
 }
 
@@ -167,15 +165,15 @@ tab[selected]:-moz-window-inactive {
 	-moz-appearance: none !important;
 	border: 1px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
-	border-radius: 5px;
+	border-radius: 5px !important;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 1 !important;
-	-moz-context-properties: fill, fill-opacity;
-	height: 16px;
-	opacity: .3;
-	padding: 2px;
-	width: 16px;
+	-moz-context-properties: fill, fill-opacity !important;
+	height: 16px !important;
+	opacity: .3 !important;
+	padding: 2px !important;
+	width: 16px !important;
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
@@ -185,7 +183,7 @@ tab[selected]:-moz-window-inactive {
 	box-shadow: var(--gnome-button-box-shadow);
 	border: 1px solid var(--gnome-button-border-color);
 	border-bottom-color: var(--gnome-button-border-accent-color);
-	opacity: 1;
+	opacity: 1 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:active {
 	background-image: var(--gnome-button-active-background) !important;
@@ -260,7 +258,7 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Remove container bottom line indicator */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	display: none;
 }
 
@@ -290,6 +288,7 @@ tab[selected]:-moz-window-inactive {
 	top: -8px;
 	position: relative;
 	margin-right: -10px;
+	z-index: 1;
 }
 
 /* OPTIONAL: Hide single tab */

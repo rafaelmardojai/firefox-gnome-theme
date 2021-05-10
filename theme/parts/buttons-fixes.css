@@ -1,6 +1,16 @@
 /* Buttons Issues/Glitches fixes */
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Fix hover background */
+.toolbarbutton-badge-stack:not(#hack), .toolbarbutton-icon:not(#hack), .toolbarbutton-text:not(#hack) {
+	background: transparent !important;
+}
+
+/* Fix button box */
+.panel-footer.panel-footer-menulike > button > .button-box {
+	display: -moz-box !important;
+}
+
 /* Overrides: Make the back button the same as other buttons */
 :root:not([uidensity=compact]) #back-button {
 	border-radius: var(--toolbarbutton-border-radius) !important;
@@ -99,6 +109,9 @@
 	margin: 6px !important;
 	padding: 0 !important;
 }
+button.close {
+	margin: 0 !important;
+}
 
 /* */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]::after {
@@ -143,9 +156,6 @@
 }
 
 /* Menulist */
-menulist {
-	-moz-appearance: none !important;
-}
 #identity-popup-popup-menulist {
 	margin-right: 0 !important;
 }
@@ -196,3 +206,9 @@ menulist {
     margin-inline-end: 0 !important;
 	margin-block: 0 !important;
 }
+
+/* Close button */
+.close-icon:not(.tab-close-button) .toolbarbutton-icon {
+	outline:  0 !important;
+}
+
