@@ -75,6 +75,11 @@ tab > stack {
 #TabsToolbar {
 	padding: 0 !important;
 }
+
+.tabbrowser-tab {
+	padding-inline: 0 !important;
+}
+
 /* Tab labels */
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
