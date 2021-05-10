@@ -361,16 +361,16 @@ tab[selected]:-moz-window-inactive {
 	/* Close Button Styling */
 
 	.tab-close-button {
-		border-radius: 99px;
-		opacity: 1;
+		border-radius: 99px !important;
+		opacity: 1 !important;
+		background-image: none !important;
+		background-size: 24px !important;
+		box-shadow: 0px 0px transparent !important; 
+	    border: 0px solid transparent !important;
+	    border-bottom-color: transparent !important;
 	}
 	:root:not(:-moz-window-inactive) .tab-close-button:hover {	
-		background-image: none;
-		background-size: 24px;
-		background-color: var(--gnome-tabbar-close-hover);
-		box-shadow: 0px 0px transparent; 
-	    border: 0px solid transparent;
-	    border-bottom-color: transparent;
+		background-color: var(--gnome-tabbar-close-hover) !important;
 	}
 
 	/* This is horrible. */
