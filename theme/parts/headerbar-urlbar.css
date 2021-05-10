@@ -115,7 +115,8 @@ toolbarspring {
 }
 
 /* Search mode indicator */
-#urlbar-search-mode-indicator {
+#urlbar-search-mode-indicator,
+#urlbar-label-box {
 	background: var(--gnome-popover-background) !important;
 	border: 1px solid var(--gnome-popover-border-color) !important;
 	border-radius: 9px;
@@ -127,6 +128,7 @@ toolbarspring {
     padding-inline: 4px !important;;
 }
 #urlbar-search-mode-indicator-close {
+	background-size: contain !important;
 	border-radius: 0 9px 9px 0;
 	opacity: 0.8;
 }
