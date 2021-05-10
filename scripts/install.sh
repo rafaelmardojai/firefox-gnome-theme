@@ -26,7 +26,7 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd $FIREFOXFOLDER/$PROFILE_PATH
+	cd "$FIREFOXFOLDER/$PROFILE_PATH"
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
@@ -34,7 +34,7 @@ function saveProfile(){
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD"
-	cp -fR $THEMEDIRECTORY $PWD
+	cp -fR "$THEMEDIRECTORY" "$PWD"
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
@@ -73,18 +73,27 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 fi
 echo "Profiles file found"
 
-PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | cut -d "=" -f2-))
+PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' )) 
+PROFILES_PATHS+=::
 
-if [ ${#PROFILES_PATHS[@]} -eq 0 ]; then
-	>&2 echo "failed, no profiles found at ${PROFILES_FILE}"
-	exit 0
-elif [ ${#PROFILES_PATHS[@]} -eq 1 ]; then
-	echo "One profile found"
-	saveProfile "${PROFILES_PATHS[0]}"
+PROFILES_ARRAY=()
+while [[ $PROFILES_PATHS ]]; do
+    PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
+    PROFILES_PATHS=${PROFILES_PATHS#*::}
+done
+
+
+if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
+	echo No Profiles found on $PROFILES_FILE;
+
 else
-	echo "${#PROFILES_PATHS[@]} profiles found"
-	for PROFILE_PATH in "${PROFILES_PATHS[@]}"; do
-	    saveProfile "${PROFILE_PATH}"
+	for i in "${PROFILES_ARRAY[@]}"
+	do
+		if [[ ! -z "$i" ]];
+		then
+			echo Installing Theme on $(sed 's/SPACECHARACTER/ /g' <<< $i) ;
+			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
+		fi;
+	
 	done
 fi
-
