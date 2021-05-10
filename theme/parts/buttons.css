@@ -39,7 +39,8 @@ button.close,
 .tracking-protection-button,
 .dialog-button,
 .autocomplete-richlistitem[type="loginsFooter"],
-tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'] {
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button'],
+.searchbar-engine-one-off-item {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -146,7 +147,8 @@ menulist:hover .menulist-label-box,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
-tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:hover {
+tabmodalprompt[role="dialog"] button[class*='tabmodalprompt-button']:hover,
+.searchbar-engine-one-off-item:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -256,7 +258,8 @@ button.close:not(:active):hover,
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
 #context-navigation menuitem:not(:last-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,
-.findbar-button:not(:last-of-type) {
+.findbar-button:not(:last-of-type),
+.search-panel-one-offs .searchbar-engine-one-off-item:not(:last-child) {
 	border-top-right-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
 	border-right-width: 0 !important;
@@ -269,7 +272,8 @@ button.close:not(:active):hover,
 #context-navigation menuitem:not(:first-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,
 .findbar-container toolbarbutton.findbar-find-next,
-.findbar-button:not(:first-of-type) {
+.findbar-button:not(:first-of-type),
+.search-panel-one-offs .searchbar-engine-one-off-item:not(:first-child) {
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 	margin-left: 0 !important;
