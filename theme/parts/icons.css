@@ -278,17 +278,17 @@ button.close::before {
 }
 /* Fullscreen button */
 #fullscreen-button,
-#appMenu-fullscreen-button {
+#appMenu-fullscreen-button2 {
 	list-style-image: url("../icons/view-fullscreen-symbolic.svg") !important;
 }
 /* Zoom out button */
 #zoom-out-button,
-#appMenu-zoomReduce-button {
+#appMenu-zoomReduce-button2 {
 	list-style-image: url("../icons/zoom-out-symbolic.svg") !important;
 }
 /* Zoom in button */
 #zoom-in-button,
-#appMenu-zoomEnlarge-button {
+#appMenu-zoomEnlarge-button2 {
 	list-style-image: url("../icons/zoom-in-symbolic.svg") !important;
 }
 /* Developer button */
