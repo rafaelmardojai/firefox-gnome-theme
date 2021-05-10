@@ -38,10 +38,6 @@ menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 /* Adjust popovers position */
 panel[type=arrow] {
 	margin-top: 8px !important;
-	max-height: 80vh !important;
-}
-#BMB_bookmarksPopup {
-	max-height: 80vh !important;
 }
 
 /* Style popovers */
@@ -77,14 +73,27 @@ panel:not([remote]), #BMB_bookmarksPopup {
 .panel-header {
 	padding: 0 0 10px 0 !important;
 }
+.panel-header + toolbarseparator,
+#identity-popup-mainView-panel-header + toolbarseparator,
+#permission-popup-mainView-panel-header + toolbarseparator,
+#protections-popup-mainView-panel-header-section + toolbarseparator {
+	display: none !important;
+}
 .panel-footer {
 	background-color: transparent !important;
 	display: flex;
 	justify-content: flex-end;
 	padding-top: 0px !important;
 }
+.panel-footer.panel-footer-menulike {
+	border-top: 0 !important;
+	margin-top: 8px !important;
+}
 .panel-footer toolbarseparator {
 	display: none !important;
+}
+.proton-zap {
+	border-image: unset !important;
 }
 
 .panel-subview-body {
@@ -106,6 +115,7 @@ panel:not([remote]), #BMB_bookmarksPopup {
 .protections-popup-category,
 .identity-popup-content-blocking-category {	
 	padding: 5px !important;
+	margin: 0 !important;
 }
 
 .subviewbutton[disabled], .toolbarbutton-1[disabled],

@@ -68,7 +68,7 @@ function saveProfile(){
 
 PROFILES_FILE="${FIREFOXFOLDER}/profiles.ini"
 if [ ! -f "${PROFILES_FILE}" ]; then
-	>&2 echo "failed, lease check Firefox installation, unable to find profile.ini at ${FIREFOX_DIR}"
+	>&2 echo "failed, lease check Firefox installation, unable to find profile.ini at ${FIREFOXFOLDER}"
 	exit 1
 fi
 echo "Profiles file found"

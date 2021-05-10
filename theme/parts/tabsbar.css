@@ -148,7 +148,7 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* If tab close button is not present, don't force favicon to the center */
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-icon-stackr {
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-icon-stack {
 	margin-left: 0 !important;
 }
 

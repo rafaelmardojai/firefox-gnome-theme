@@ -4,6 +4,10 @@
 
 /* Icons color */
 .toolbarbutton-icon,
+<<<<<<< HEAD
+=======
+.bookmark-item[container],
+>>>>>>> origin/beta
 .notification-anchor-icon,
 .protections-popup-category::after,
 .protections-popup-footer-icon,
@@ -336,7 +340,7 @@ button.close::before {
 }
 /* Overflow button */
 #nav-bar-overflow-button {
-	list-style-image: url("../icons/view-more-horizontal-symbolic.svg") !important;
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
 /* Glitch - animations (may be possible to fix in about:config)
 #reload-button .toolbarbutton-icon { /* Reload button
@@ -379,4 +383,9 @@ button.close::before {
 	.webextension-browser-action {
 		list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
 	}
+}
+
+/* Bookmarks folder icon */
+.bookmark-item[container] {
+	list-style-image: url("../icons/folder-symbolic.svg") !important;
 }
