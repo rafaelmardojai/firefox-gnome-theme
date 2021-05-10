@@ -34,13 +34,7 @@ tab > stack {
 	height: 38px !important;
 	min-height: 38px !important;
 }
-/* Extra margin for the first and last tabs */
-.tabbrowser-tab[first-tab]:not([pinned=true]) {
-	margin-left: 8px !important;
-}
-.tabbrowser-tab[last-tab]:not([pinned=true]) {
-	margin-right: 8px !important;
-}
+
 
 /* Remove hover effects on tab bar buttons */
 #TabsToolbar {
@@ -73,10 +67,14 @@ tab > stack {
 }
 
 /* Space between tabs */
-.tabbrowser-tab:not([pinned=true]) {
-	margin: 0 4px !important;
+.tabbrowser-tab:not([pinned=true])  {
+	margin-left: -1px !important;
+	margin-right: 0px !important;
 }
 
+#TabsToolbar {
+	padding: 0 !important;
+}
 /* Tab labels */
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
@@ -163,27 +161,24 @@ tab[selected]:-moz-window-inactive {
 }
 .tab-close-button {
 	-moz-appearance: none !important;
-	border: 1px solid transparent;
+	border: 0px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
-	border-radius: 5px !important;
+	border-radius: 99px !important;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	height: 16px !important;
-	opacity: .3 !important;
+	opacity: 1 !important;
 	padding: 2px !important;
 	width: 16px !important;
+	background-size: 24px;
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
-	background-image: var(--gnome-button-background);
-	box-shadow: var(--gnome-button-box-shadow);
-	border: 1px solid var(--gnome-button-border-color);
-	border-bottom-color: var(--gnome-button-border-accent-color);
-	opacity: 1 !important;
+	background-image: var(--gnome-tabbar-close-hover);
 }
 :root:not(:-moz-window-inactive) .tab-close-button:active {
 	background-image: var(--gnome-button-active-background) !important;
@@ -196,6 +191,15 @@ tab[selected]:-moz-window-inactive {
 .tab-close-button:active:not(:hover) {
 	background-image: none !important;
 	box-shadow: none !important;
+}
+	
+/* Autohide (Still Horrible) */
+
+.tabbrowser-tab:not([selected="true"]) .tab-close-button {
+	visibility: hidden;
+}
+.tabbrowser-tab:hover .tab-close-button {
+	visibility: visible;
 }
 
 /* Tab close button etc. positioning */
@@ -214,11 +218,11 @@ tab[selected]:-moz-window-inactive {
 	background-image: none !important;
 	border: 0 !important;
 	border-image: none !important;
-	border-bottom: 4px solid var(--gnome-tabbar-tab-active-border-bottom-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
-	border-bottom-color: var(--gnome-inactive-tabbar-tab-active-border-bottom-color) !important;
+	border-bottom-color: var(--gnome-tabbar-tab-border-color) !important; 
 }
 
 /* Tab hover */
@@ -233,7 +237,7 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-image: none !important;
-	border-bottom: 4px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 
 /* Tabs scroll buttons hover */
@@ -291,6 +295,10 @@ tab[selected]:-moz-window-inactive {
 	z-index: 1;
 }
 
+tab, tab[selected] {
+	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;	
+}
 /* OPTIONAL: Hide single tab */
 @supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs tab:only-of-type {
@@ -311,7 +319,6 @@ tab[selected]:-moz-window-inactive {
 	.tab-background[selected=true],
 	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
-		border-bottom-width: 5px !important;
-		border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color-contrast) !important;
 	}
 }
+
