@@ -346,17 +346,20 @@ tab[selected]:-moz-window-inactive {
 	/* Adjust Borders */
 
 	tab, tab[selected] {
-		border-left: 0px !important;	/* this is a bodge */
+		border-left: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;	/* this is a bodge */
 		border-right: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;	
 	}
 
 	/* Adjust Margins */
 
-	.tabbrowser-tab[first-tab]:not([pinned=true]), .tabbrowser-tab[last-tab]:not([pinned=true]), .tabbrowser-tab:not([pinned=true]) {
-		margin-left: 0px !important;
+	.tabbrowser-tab:not([pinned=true])  {
+		margin-left: -1px !important;
 		margin-right: 0px !important;
 	}
 
+	#TabsToolbar {
+		padding: 0 !important;
+	}
 
 	/* Close Button Styling */
 
