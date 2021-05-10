@@ -42,8 +42,8 @@ findbar:-moz-window-inactive description,
 	margin-bottom: 0 !important;
 }
 #PersonalToolbar {
-	padding-top: 2px !important;
-	height: 32px;
+	padding: 2px !important;
+	height: 36px;
 }
 
 /* Overrides: Remove border below the menu bar / above the header bar */
