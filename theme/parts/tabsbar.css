@@ -331,16 +331,24 @@ tab[selected]:-moz-window-inactive {
 	/* Hover */
 	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
 		background-color: var(--gnome-tabbar-tab-active-hover-background-new) !important;
+		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
 	}
-	/* Inactive tab */
-	#TabsToolbar {
-		background-color: var(--gnome-tabbar-tab-background-new) !important;
-	}
-	/* Hover */
 	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 		background-color: var(--gnome-tabbar-tab-hover-background-new) !important;
 		border-bottom: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
 	}
+
+	/* Inactive Window Colors */
+	.tab-background[selected=true]:-moz-window-inactive {
+		background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
+		border-bottom-color: var(--gnome-tabbar-tab-border-color-new) !important;
+	}
+
+	/* Inactive tab */
+	#TabsToolbar {
+		background-color: var(--gnome-tabbar-tab-background-new) !important;
+	}
+
 
 
 	/* Adjust Borders */
