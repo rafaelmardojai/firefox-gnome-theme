@@ -10,6 +10,7 @@
 .protections-popup-footer-icon,
 .PanelUI-subView .subviewbutton-nav::after,
 #identity-popup-security-expander .button-icon,
+#identity-popup[connection^="secure"] .identity-popup-security-connection,
 .menu-right,
 .expander-down > .button-box,
 #sidebar-switcher-arrow,
@@ -388,6 +389,9 @@ button.close::before {
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   list-style-image: url("../icons/padlock-symbolic.svg") !important;
+}
+#identity-popup[connection^="secure"] .identity-popup-security-connection {
+	background-image: url("../icons/padlock-symbolic.svg") !important;
 }
 #permissions-granted-icon {
     list-style-image: url("../icons/general-properties-symbolic.svg") !important;

@@ -69,8 +69,8 @@ toolbarspring {
 	border-radius: 5px !important;
 }
 
-.urlbarView-row-inner:active, .urlbarView-row[selected] .urlbarView-row-inner {
-	background: var(--gnome-tabbar-tab-active-border-bottom-color) !important;
+.urlbarView-action {
+	background: transparent !important;
 }
 
 /* Search engines buttons */	
