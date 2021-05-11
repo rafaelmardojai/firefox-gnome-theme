@@ -52,7 +52,8 @@ This theme is supposed to work with current supported Firefox releases:
 
 	- `-p <profile_name>` *optional*
 		- Set custom profile name, for example `e0j6yb0p.default-nightly`.
-		- Default: standard default profile
+		- Default: All the profiles found in the firefox folder
+
 	- `-t <theme_name>` *optional*
 		- Set the colors used in the theme.
 		- Default: Adwaita.
