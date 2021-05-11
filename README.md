@@ -27,34 +27,44 @@ This theme is supposed to work with current supported Firefox releases:
 
 ### Installation script
 1. Clone this repo and enter folder:
+	
 	```sh
 	git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-gnome-theme
 	```
+2. Run installation script
 
-2. Run installation script:
+	#### Auto install script
+	
+	This script will lookup Firefox profiles location and enable a theme variant for your GTK theme if it exists.
+	```sh
+	./scripts/auto-install.sh
+	```
+	#### Install script
 	```sh
 	./scripts/install.sh # Standard
 	./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
 	```
 
-#### Script options
-- `-f <firefox_folder_path>` *optional*
-	- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
-	- Default: `~/.mozilla/firefox/`
+	##### Script options
+	- `-f <firefox_folder_path>` *optional*
+		- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
+		- Default: `~/.mozilla/firefox/`
 
-- `-p <profile_name>` *optional*
-	- Set custom profile name, for example `e0j6yb0p.default-nightly`.
-	- Default: standard default profile
-- `-t <theme_name>` *optional*
-	- Set the colors used in the theme.
-	- Default: Adwaita.
-	- Options: `adwaita`, `maia`, `yaru`.
+	- `-p <profile_name>` *optional*
+		- Set custom profile name, for example `e0j6yb0p.default-nightly`.
+		- Default: standard default profile
+	- `-t <theme_name>` *optional*
+		- Set the colors used in the theme.
+		- Default: Adwaita.
+		- Options: `adwaita`, `maia`, `yaru`.
 	
 ### One command curled script
 
 You can also install this theme with one command:
 
-`curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash`
+```sh
+curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+```
 
 It will download the latest version of the theme and run the installation script for you.
 
@@ -93,7 +103,8 @@ It will download the latest version of the theme and run the installation script
 8. Symlink preferences file:
 
 	```sh
-	ln -s chrome/firefox-gnome-theme/configuration/user.js ../user.js
+	cd .. # Go back to the profile directory
+	ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
 	```
 
 9. Restart Firefox.
