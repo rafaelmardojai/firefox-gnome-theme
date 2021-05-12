@@ -77,10 +77,18 @@ PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\
 PROFILES_PATHS+=::
 
 PROFILES_ARRAY=()
-while [[ $PROFILES_PATHS ]]; do
-    PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
-    PROFILES_PATHS=${PROFILES_PATHS#*::}
-done
+if [ "${PROFILENAME}" != "" ];
+	then
+		echo "Using ${PROFILENAME} theme"
+		PROFILES_ARRAY+=${PROFILENAME}
+else
+	echo "Finding all avaliable themes";
+	while [[ $PROFILES_PATHS ]]; do
+		PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
+		PROFILES_PATHS=${PROFILES_PATHS#*::}
+	done
+fi
+
 
 
 if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
