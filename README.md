@@ -19,8 +19,8 @@ This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 This theme is supposed to work with current supported Firefox releases:
 
 - Firefox 88
-- Firefox 78 ESR
-- Firefox 89 Beta
+- Firefox 78 ESR *(Recommended to use the `v78.1` git tag)*
+- Firefox 89 Beta *(Recommended to use the `beta` git branch)*
 - Firefox 90 Nightly
 
 ## Installation
@@ -31,7 +31,13 @@ This theme is supposed to work with current supported Firefox releases:
 	```sh
 	git clone https://github.com/rafaelmardojai/firefox-gnome-theme/ && cd firefox-gnome-theme
 	```
-2. Run installation script
+2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step. 
+	```sh
+	git checkout beta # Set beta branch 
+	git checkout v78.1 # Set v78.1 tag 
+	```
+
+3. Run installation script
 
 	#### Auto install script
 	
@@ -67,7 +73,7 @@ You can also install this theme with one command:
 curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
 ```
 
-It will download the latest version of the theme and run the installation script for you.
+It will download the latest version of the theme and run the auto installation script for you.
 
 ### Manual installation
 1. Go to `about:support` in Firefox.
