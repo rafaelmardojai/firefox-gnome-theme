@@ -123,7 +123,7 @@ It will download the latest version of the theme and run the auto installation s
 ### Required Firefox preferences
 We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work. 
 
-You should already have this file installed if you followed one of the installation methods but in any case be sure this preferences are enabled under `about:config`:
+You should already have this file installed if you followed one of the installation methods, but in any case be sure this preferences are enabled under `about:config`:
 
 - `toolkit.legacyUserProfileCustomizations.stylesheets`
 
