@@ -120,6 +120,21 @@ It will download the latest version of the theme and run the auto installation s
 
 11. Be happy with your new gnomish Firefox.
 
+### Required Firefox preferences
+We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work. 
+
+You should already have this file installed if you followed one of the installation methods but in any case be sure this preferences are enabled under `about:config`:
+
+- `toolkit.legacyUserProfileCustomizations.stylesheets`
+
+	This preference is need to load the custom CSS in Firefox, otherwise the theme wouldn't work.
+
+- `svg.context-properties.content.enabled`
+
+	This preference is need to recolor the icons, otherwise you will get black icons everywhere.
+
+> For other non essential preferences checkout `configuration/user.js`.
+
 ## Updating
 Both manual and script installation methods should create a git clone in `your-profile-folder-path/chrome/firefox-gnome-theme`, so the easiet way to update the theme is to open this folder in terminal and perform a git pull.
 
