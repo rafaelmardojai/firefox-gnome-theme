@@ -127,11 +127,11 @@ You should already have this file installed if you followed one of the installat
 
 - `toolkit.legacyUserProfileCustomizations.stylesheets`
 
-	This preference is need to load the custom CSS in Firefox, otherwise the theme wouldn't work.
+	This preference is required to load the custom CSS in Firefox, otherwise the theme wouldn't work.
 
 - `svg.context-properties.content.enabled`
 
-	This preference is need to recolor the icons, otherwise you will get black icons everywhere.
+	This preference is required to recolor the icons, otherwise you will get black icons everywhere.
 
 > For other non essential preferences checkout `configuration/user.js`.
 
