@@ -111,3 +111,11 @@ findbar:-moz-window-inactive description,
 .notificationbox-stack[notificationside="bottom"] notification {
 	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
 }
+
+/* OPTIONAL: Hide WebRTC indicator */
+@supports -moz-bool-pref("gnomeTheme.hideWebrtcIndicator") {
+	#webrtcIndicator {
+		display: none;
+	}
+}
+

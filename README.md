@@ -185,6 +185,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	Make all tab icons look kinda like symbolic icons.
 
+- **Hide WebRTC indicator** `gnomeTheme.hideWebrtcIndicator`
+
+	Hide redundant WebRTC indicator since GNOME provides their own privacy icons in the top right.
+
 - **Drag window from headerbar buttons** `gnomeTheme.dragWindowHeaderbarButtons`
 
 	Allow draging the window from headerbar buttons.
