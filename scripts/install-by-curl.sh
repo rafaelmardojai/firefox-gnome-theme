@@ -1,3 +1,5 @@
+#! /bin/bash
+
 VERSION=$(curl -s "https://github.com/rafaelmardojai/firefox-gnome-theme/releases/latest/download" 2>&1 | sed "s/^.*download\/\([^\"]*\).*/\1/")
 FILENAME=firefox-gnome-theme-$VERSION.tar.gz
 FOLDERPATH=$PWD/firefox-gnome-theme
