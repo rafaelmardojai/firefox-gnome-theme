@@ -76,16 +76,19 @@ tab > stack {
 #TabsToolbar {
 	padding: 0 !important;
 }
+#TabsToolbar .toolbarbutton-1:last-child {
+	margin-right: 4px !important;
+}
 
 /* Tabs borders */
-.tabbrowser-tab:not(:last-of-type) {
+.tabbrowser-tab {
 	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+}
+#TabsToolbar {
+	margin-right: -1px !important;
 }
 #tabbrowser-tabs[overflow=true] .tabbrowser-tab[first-visible-unpinned-tab] {
 	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
-}
-#tabbrowser-tabs[overflow=true] .tabbrowser-tab:last-of-type {
-	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 
 /* Tab labels */
