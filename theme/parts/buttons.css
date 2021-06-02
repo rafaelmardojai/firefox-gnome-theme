@@ -87,7 +87,7 @@ button.close,
 .dialog-button,
 .autocomplete-richlistitem[type="loginsFooter"],
 .dialog-button-box button,
-#appMenu-popup #appMenu-fxa-label2:not(#hack) {
+#appMenu-fxa-status2:not([fxastatus="signedin"]) #appMenu-fxa-label2 {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
