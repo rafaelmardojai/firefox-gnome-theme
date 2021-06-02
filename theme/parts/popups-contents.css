@@ -10,6 +10,12 @@
 #appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-avatar {
 	margin-inline-start: 5px !important;
 }
+#appMenu-fxa-status2[fxastatus] > #appMenu-fxa-label2 > vbox > #appMenu-header-description, #appMenu-fxa-text {
+    font-weight: 400 !important;
+}
+#appMenu-fxa-label2 {
+	padding: 0 !important;
+}
 
 /* Style main context menu & buttons */
 #context-navigation {
