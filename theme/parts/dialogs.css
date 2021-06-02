@@ -10,14 +10,19 @@
 }
 
 /* Dialog */
-#commonDialogWindow {
+.dialogBox {
+    border-radius: 9px !important;
+	margin-top: 0 !important;
+}
+
+#commonDialog {
 	background: var(--gnome-popover-background) !important;
 	border: 0 !important;
-	border-radius: 9px !important;
 	box-shadow: var(--gnome-popover-shadow) !important;
-	padding-top: 0 !important;
+	padding: 0 !important;
 }
-dialog#commonDialog {
+
+dialog {
 	padding: 0 !important;
 }
 
@@ -37,23 +42,18 @@ dialog#commonDialog {
 .dialog-button-box button:not(#hack) {
 	height: auto !important;
 	max-height: unset !important;
-  padding: 10px 14px !important;
+	padding: 10px 14px !important;
 	margin: 0 !important;
 	border-radius: 0 !important;
 	flex: 1;
 	border-bottom: 0 !important;
 }
 
-/* Buttons border-radius - only suppor for cancel/ok */
+/* Buttons borders - only suppor for cancel/ok */
 .dialog-button-box button[dlgtype="accept"] {
-	border-radius: 0 0 9px 9px !important;
 	border-right: 0 !important;
 	border-left: 0 !important;
 }
-.dialog-button-box button[dlgtype="cancel"]:not([hidden]) ~ button.tabmodalprompt-button0:not(#hack) {
-	border-radius: 0 0 9px 0 !important;
-}
 .dialog-button-box button[dlgtype="cancel"]:not(#hack) {
 	border-left: 0 !important;
-	border-radius: 0 0 0 9px !important;
 }
