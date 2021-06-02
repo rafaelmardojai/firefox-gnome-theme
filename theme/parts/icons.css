@@ -399,6 +399,19 @@ button.close::before {
 .popup-notification-icon[popupid="web-notifications"], .desktop-notification-icon {
     list-style-image: url("../icons/message-symbolic.svg") !important;
 }
+#reader-mode-button {
+	list-style-image: url("../icons/reader-mode-symbolic.svg") !important;
+}
+#star-button {
+    list-style-image: url("../icons/non-starred-symbolic.svg") !important;
+}
+#star-button[starred] {
+    list-style-image: url("../icons/starred-symbolic.svg") !important;
+	fill: orange !important;
+}
+.urlbar-icon {
+	margin: 2px 0 !important;
+}
 
 /* Fix for extensions icons */
 @media (prefers-color-scheme: dark) {
