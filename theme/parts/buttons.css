@@ -33,7 +33,6 @@ button.close,
 .expander-down, .expander-up,
 .notification-button,
 .protections-popup-footer-button,
-.identity-popup-permission-remove-button,
 #identity-popup-security-expander,
 #protections-popup-info-button,
 #PanelUI-panic-view-button,
@@ -41,7 +40,8 @@ button.close,
 .dialog-button,
 .autocomplete-richlistitem[type="loginsFooter"],
 .dialog-button-box button,
-.searchbar-engine-one-off-item {
+.searchbar-engine-one-off-item,
+.permission-popup-permission-remove-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -144,14 +144,14 @@ menulist:hover .menulist-label-box,
 .expander-down:hover, .expander-up:hover,
 .notification-button:hover,
 .protections-popup-footer-button:hover,
-.identity-popup-permission-remove-button:hover,
 #identity-popup-security-expander:hover,
 #protections-popup-info-button:hover,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
 .dialog-button-box button:hover,
-.searchbar-engine-one-off-item:hover {
+.searchbar-engine-one-off-item:hover,
+.permission-popup-permission-remove-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -182,14 +182,14 @@ menulist[open] .menulist-label-box,
 .expander-down:active, .expander-up:active,
 .notification-button:active,
 .protections-popup-footer-button:not(#hack):active,
-.identity-popup-permission-remove-button:active,
 #identity-popup-security-expander:active,
 #protections-popup-info-button:not(#hack):active,
 #protections-popup-info-button:not(#hack)[checked],
 .tracking-protection-button:active,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
-.dialog-button-box button:active {
+.dialog-button-box button:active,
+.permission-popup-permission-remove-button:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -233,8 +233,8 @@ menulist[open] .menulist-label-box,
 .close-icon:not(.tab-close-button),
 button.close,
 #TabsToolbar .toolbarbutton-1,
-.identity-popup-permission-remove-button:not(#hack),
-#protections-popup-info-button {
+#protections-popup-info-button,
+.permission-popup-permission-remove-button {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
@@ -244,7 +244,8 @@ button.close,
 .close-icon:not(.tab-close-button):not(:active):hover,
 button.close:not(:active):hover,
 #TabsToolbar .toolbarbutton-1:not(:active):not([open]):hover,
-#protections-popup-info-button:hover {
+#protections-popup-info-button:hover,
+.permission-popup-permission-remove-button:not(:active):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
@@ -252,7 +253,7 @@ button.close:not(:active):hover,
 
 /* Circle buttons */
 #downloadsPanel-mainView .download-state .downloadButton,
-.identity-popup-permission-remove-button:not(#hack) {
+.permission-popup-permission-remove-button:not(#hack) {
 	border-radius: 100% !important;
 }
 

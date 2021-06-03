@@ -141,12 +141,9 @@
 	border: 0 !important;
 }
 
-.identity-popup-security-content, #identity-popup-permissions-content, #identity-popup-content-blocking-content {
+.identity-popup-security-content {
 	padding-inline-end: 0 !important;
 	padding-inline-start: 0 !important;
-}
-#identity-popup-permissions-content, #identity-popup-content-blocking-content {
-	background-image: none !important;
 }
 .identity-popup-security-content {
 	background-position: 0em 0.8em !important;
@@ -156,56 +153,39 @@
 	margin-left: 1.4em !important;
 }
 
-#identity-popup-content-blocking-category-list, #identity-popup-permission-list {
-	margin-inline-start: 0 !important;
+
+/* Permission popup */
+#permission-popup-permissions-content {
+	padding: 0 !important;
 }
 
-.identity-popup-security-connection {	/* FF70 */
-	background-position: 0 50% !important;
-	padding-inline-start: 16px !important;
-}
-#identity-popup-security-description { /* FF70 */
-	padding-inline-start: 0 !important;
+.permission-popup-permission-item, #permission-popup-storage-access-permission-list-header {
+    margin-top: 0 !important;
 }
 
-.identity-popup-content-blocking-category-icon, .identity-popup-permission-icon {
-	margin-inline-start: 0 !important;
-}
-.identity-popup-content-blocking-category-label {
-	margin-inline-start: 6px !important;
-}
-.identity-popup-content-blocking-category-state-label {
-	opacity: 0.7;
-}
-
-#identity-popup-permissions-content {
-	padding-right: 0 !important;
-}
-#identity-popup-permissions-content description  {
-	margin-inline-start: 0 !important;
-}
-#identity-popup-permissions-content {
-	padding-bottom: 10px !important;
-}
-
-/* TODO: create custom --gnome-list vars */
-#identity-popup-permission-list:not(:empty) {
+#permission-popup-permission-list {
 	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color);
 	border-radius: 6px;
 	padding: 0 !important;
 }
-.identity-popup-permission-item {
+
+.permission-popup-permission-list-anchor {
 	padding: 6px !important;
 	margin: 0 !important;
 }
-.identity-popup-permission-item:not(:last-child) {
+.permission-popup-permission-list-anchor:not(:last-child) {
 	border-bottom: 1px solid var(--gnome-button-border-color);
 }
-.identity-popup-permission-label {
-	margin-inline: 0 !important;
-	margin-inline-start: 6px !important;
+
+.permission-popup-permission-remove-button {
+	opacity: 1 !important;
 }
+
+.permission-popup-permission-state-label {
+    display: none !important;
+}
+
 
 /* Protections popup */
 .protections-popup-section,
