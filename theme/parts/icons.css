@@ -172,6 +172,14 @@ menu[disabled] > .menu-right {
 	width: 16px !important;
 }
 
+/* Findbar */
+.findbar-find-previous {
+    list-style-image: url("../icons/go-up-symbolic.svg") !important;
+}
+.findbar-find-next {
+    list-style-image: url("../icons/go-down-symbolic.svg") !important;
+}
+
 /* Tree views */
 treechildren::-moz-tree-twisty {
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;

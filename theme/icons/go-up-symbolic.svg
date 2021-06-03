@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g fill="context-fill" stroke="context-stroke" fill-opacity="context-fill-opacity" stroke-opacity="context-stroke-opacity">
+        <path d="M8 3.586L2.293 9.293l1.414 1.414L8 6.414l4.293 4.293 1.414-1.414z" font-family="sans-serif" font-weight="400" overflow="visible" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none"/>
+        <path d="M13 10v1h1v-1zM2 10v1h1v-1z" overflow="visible"/>
+        <path d="M2 10c0 .554.446 1 1 1s1-.446 1-1-.446-1-1-1-1 .446-1 1zm10 0c0 .554.446 1 1 1s1-.446 1-1-.446-1-1-1-1 .446-1 1z" overflow="visible"/>
+    </g>
+</svg>
