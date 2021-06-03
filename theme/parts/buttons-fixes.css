@@ -11,6 +11,11 @@
 	display: -moz-box !important;
 }
 
+/* menulist */
+#label-box:not([native]) {
+    font-weight: 400 !important;
+}
+
 /* Overrides: Make the back button the same as other buttons */
 :root:not([uidensity=compact]) #back-button {
 	border-radius: var(--toolbarbutton-border-radius) !important;

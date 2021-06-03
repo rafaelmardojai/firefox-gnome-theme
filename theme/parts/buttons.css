@@ -11,6 +11,7 @@
 }
 
 /* Buttons */
+menulist,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
@@ -72,6 +73,7 @@ button.close,
 }
 
 /* Text buttons */
+menulist,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsHistory,
@@ -119,6 +121,7 @@ button.close,
 }
 
 /* Hover buttons */
+menulist:hover,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):not([checked]):hover,
 .subviewbutton.panel-subview-footer:hover,
 .panel-footer button:hover,
@@ -154,6 +157,7 @@ menulist:hover .menulist-label-box,
 }
 
 /* Active buttons */
+menulist[open],
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):not(#hack):active,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled])[open],
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled])[checked],
