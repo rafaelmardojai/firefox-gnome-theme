@@ -17,6 +17,7 @@
 .menu-right,
 .expander-down > .button-box,
 #sidebar-switcher-arrow,
+#sidebar-icon,
 #viewButton .button-menu-dropmarker,
 .menulist-label-box:after,
 .expander-up > .button-box,
@@ -24,7 +25,7 @@
 .searchbar-search-icon,
 .textbox-search-sign,
 treechildren::-moz-tree-twisty,
-#historyTree treechildren::-moz-tree-image,
+treechildren::-moz-tree-image,
 menuitem[type="checkbox"],
 menuitem[type="checkbox"][checked="true"],
 menuitem[type="radio"],
@@ -56,6 +57,10 @@ button.close::before,
 .menu-iconic-icon {
 	height: 16px !important;
 	width: 16px !important;
+}
+/* Fix icon color */
+#sidebar-icon {
+	opacity: 1 !important;
 }
 
 /* Icons active color */
@@ -190,9 +195,14 @@ treechildren::-moz-tree-twisty(open) {
 	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
 }
 
-/* Sidebar: History: clock icon */
-#historyTree treechildren::-moz-tree-image {
-	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
+/* Tree view icons */
+treechildren::-moz-tree-image(title, container),
+treechildren::-moz-tree-image(title, open) {
+  list-style-image: url("../icons/folder-symbolic.svg") !important;
+}
+treechildren::-moz-tree-image(title, query, dayContainer),
+treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
+  list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
 }
 
 /* Menu checkbox */
@@ -370,10 +380,9 @@ button.close::before {
 	fill: orange !important;
 }
 
-
 /* History button */
 #history-panelmenu,
-#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-ico0,
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
 .urlbarView-row[source="history"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
 #urlbar-engine-one-off-item-history {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;

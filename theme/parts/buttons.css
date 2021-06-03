@@ -42,7 +42,8 @@ button.close,
 .dialog-button-box button,
 .searchbar-engine-one-off-item,
 .permission-popup-permission-remove-button,
-#protections-popup-trackers-blocked-counter-box {
+#protections-popup-trackers-blocked-counter-box,
+.button.connect-device {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -91,7 +92,8 @@ menulist,
 .autocomplete-richlistitem[type="loginsFooter"],
 .dialog-button-box button,
 #appMenu-fxa-status2:not([fxastatus="signedin"]) #appMenu-fxa-label2,
-#protections-popup-trackers-blocked-counter-box {
+#protections-popup-trackers-blocked-counter-box,
+.button.connect-device {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -154,7 +156,8 @@ menulist:hover .menulist-label-box,
 .dialog-button-box button:hover,
 .searchbar-engine-one-off-item:hover,
 .permission-popup-permission-remove-button:hover,
-#protections-popup-trackers-blocked-counter-box:hover {
+#protections-popup-trackers-blocked-counter-box:hover,
+.button.connect-device:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -193,7 +196,8 @@ menulist[open] .menulist-label-box,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
 .dialog-button-box button:active,
 .permission-popup-permission-remove-button:active,
-#protections-popup-trackers-blocked-counter-box:active {
+#protections-popup-trackers-blocked-counter-box:active,
+.button.connect-device:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -299,7 +303,8 @@ button.close:not(:active):hover,
 #appMenu-popup .panel-banner-item[notificationid="update-restart"],
 button.popup-notification-primary-button,
 #editBookmarkPanelDoneButton,
-#tracking-action-block {
+#tracking-action-block,
+.button.connect-device {
 	color: white !important;
 	background: var(--gnome-button-suggested-action-background) !important;
 	border-color: var(--gnome-button-suggested-action-border-color) !important;
@@ -311,14 +316,16 @@ button.popup-notification-primary-button,
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
 button.popup-notification-primary-button.popup-notification-button:hover,
 #editBookmarkPanelDoneButton:hover,
-#tracking-action-block:hover {
+#tracking-action-block:hover,
+.button.connect-device:hover {
 	background: var(--gnome-button-suggested-action-hover-background) !important;
 }
 
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
 button.popup-notification-primary-button.popup-notification-button:active,
 #editBookmarkPanelDoneButton:active,
-#tracking-action-block:active {
+#tracking-action-block:active,
+.button.connect-device:active {
 	background: var(--gnome-button-suggested-action-active-background) !important;
 	border-color: var(--gnome-button-suggested-action-active-border-color) !important;
 	box-shadow: var(--gnome-button-suggested-action-active-box-shadow) !important;
