@@ -146,6 +146,10 @@ tab[selected]:-moz-window-inactive {
 /* Force tab favicon to the center */
 .tabbrowser-tab:not([class*="identity-color-"]) .tab-icon-stack {
 	margin-left: auto !important;
+}
+
+/* Tab icon margin */
+.tabbrowser-tab:not([pinned]) .tab-icon-stack {
 	margin-right: 2px;
 }
 
