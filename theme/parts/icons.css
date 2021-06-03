@@ -4,10 +4,13 @@
 
 /* Icons color */
 .toolbarbutton-icon,
+.menu-iconic-icon,
 .bookmark-item[container],
 .notification-anchor-icon,
 .protections-popup-category::after,
 .protections-popup-footer-icon,
+#identity-popup-mainView .subviewbutton-nav::after,
+.widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after,
 #identity-popup-security-expander .button-icon,
 #identity-popup[connection^="secure"] .identity-popup-security-connection,
@@ -26,9 +29,11 @@ menuitem[type="checkbox"],
 menuitem[type="checkbox"][checked="true"],
 menuitem[type="radio"],
 menuitem[type="radio"][checked="true"],
+.tab-icon-overlay,
 .close-icon:not(.tab-close-button),
 button.close::before,
 .identity-popup-permission-remove-button .button-icon,
+.permission-popup-permission-remove-button > .button-box > .button-icon,
 #urlbar-search-mode-indicator-close,
 #tracking-protection-icon,
 #identity-icon,
@@ -46,9 +51,11 @@ button.close::before,
 	fill: var(--gnome-inactive-toolbar-icon-fill) !important;
 }
 
-.protections-popup-category::after,
-.PanelUI-subView .subviewbutton-nav::after {
-	fill-opacity: 0.6 !important;
+/* Fix icons sizes */
+.permission-popup-permission-remove-button > .button-box > .button-icon,
+.menu-iconic-icon {
+	height: 16px !important;
+	width: 16px !important;
 }
 
 /* Icons active color */
@@ -94,6 +101,8 @@ arrowscrollbox[orient="horizontal"] {
 }
 
 /* Popovers subview menu arrow */
+#identity-popup-mainView .subviewbutton-nav::after,
+.widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after {
 	content: "" !important;
 	background: url("../icons/pan-end-symbolic.svg");
@@ -101,6 +110,7 @@ arrowscrollbox[orient="horizontal"] {
 	height: 16px;
 	width: 16px;
 	margin-top: -2px !important;
+	fill-opacity: 1 !important;
 }
 .protections-popup-category::after {
 	content: url("../icons/pan-start-symbolic.svg") !important;
@@ -201,7 +211,8 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 
 /* Close button */
 .close-icon:not(.tab-close-button),
-.identity-popup-permission-remove-button .button-icon {
+.identity-popup-permission-remove-button .button-icon,
+.permission-popup-permission-remove-button > .button-box > .button-icon {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 }
 #urlbar-search-mode-indicator-close,
@@ -234,6 +245,14 @@ button.close::before {
 }
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
 	list-style-image: url("../icons/view-restore-symbolic.svg") !important;
+}
+
+/* Sound icons */
+.tab-icon-overlay[soundplaying] {
+    list-style-image: url("../icons/audio-playing-symbolic.svg") !important;
+}
+.tab-icon-overlay[muted] {
+    list-style-image: url("../icons/audio-muted-symbolic.svg") !important;
 }
 
 /* Private browsing button */
@@ -331,6 +350,19 @@ button.close::before {
 #urlbar-engine-one-off-item-bookmarks {
 	list-style-image: url("../icons/starred-symbolic.svg") !important;
 }
+#context-bookmarkpage[starred="true"],
+#star-button[starred] {
+	list-style-image: url("../icons/starred-symbolic.svg") !important;
+}
+#context-bookmarkpage,
+#star-button {
+	list-style-image: url("../icons/non-starred-symbolic.svg") !important;
+}
+#star-button[starred] {
+	fill: orange !important;
+}
+
+
 /* History button */
 #history-panelmenu,
 #sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-ico0,
@@ -393,6 +425,14 @@ button.close::before {
 #identity-popup[connection^="secure"] .identity-popup-security-connection {
 	background-image: url("../icons/padlock-symbolic.svg") !important;
 }
+#identity-box[pageproxystate="valid"].notSecure #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
+#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon {
+    list-style-image: url("../icons/padlock-insecure-symbolic.svg") !important;
+}
+.identity-popup-security-connection {
+	background-image: url("../icons/padlock-insecure-symbolic.svg") !important;
+}
 #permissions-granted-icon {
     list-style-image: url("../icons/general-properties-symbolic.svg") !important;
 }
@@ -401,13 +441,6 @@ button.close::before {
 }
 #reader-mode-button {
 	list-style-image: url("../icons/reader-mode-symbolic.svg") !important;
-}
-#star-button {
-    list-style-image: url("../icons/non-starred-symbolic.svg") !important;
-}
-#star-button[starred] {
-    list-style-image: url("../icons/starred-symbolic.svg") !important;
-	fill: orange !important;
 }
 .urlbar-icon {
 	margin: 2px 0 !important;
