@@ -139,20 +139,14 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Put tab close button and icon sound to the right */
-.tab-icon-sound[soundplaying="true"], .tab-icon-sound[muted="true"],
-.tab-icon-sound[activemedia-blocked="true"] {
-	margin-left: auto !important;
-}
 .tabbrowser-tab .tab-close-button {
 	margin-left: auto !important;
-}
-.tab-icon-sound {
-	margin-right: 6px;
 }
 
 /* Force tab favicon to the center */
 .tabbrowser-tab:not([class*="identity-color-"]) .tab-icon-stack {
 	margin-left: auto !important;
+	margin-right: 2px;
 }
 
 /* If tab close button is not present, don't force favicon to the center */
@@ -160,30 +154,40 @@ tab[selected]:-moz-window-inactive {
 	margin-left: 0 !important;
 }
 
-/* Close tab button */
-:root {	
-	--gnome-fill-icon: red !important;
-}
+/* Tab buttons */
+.tab-icon-overlay,
 .tab-close-button {
 	-moz-appearance: none !important;
 	border: 0px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
 	border-radius: 99px !important;
+	padding: 4px !important;
+	background-size: 24px;
+}
+:root:not(:-moz-window-inactive) .tab-icon-overlay:hover,
+:root:not(:-moz-window-inactive) .tab-close-button:hover {
+	background-image: var(--gnome-tabbar-close-hover);
+}
+
+.tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) image {
+	 margin: auto !important;
+}
+
+/* Close tab button */
+:root {	
+	--gnome-fill-icon: red !important;
+}
+.tab-close-button {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	height: 16px !important;
 	opacity: 1 !important;
-	padding: 2px !important;
 	width: 16px !important;
-	background-size: 24px;
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
-}
-:root:not(:-moz-window-inactive) .tab-close-button:hover {	
-	background-image: var(--gnome-tabbar-close-hover);
 }
 :root:not(:-moz-window-inactive) .tab-close-button:active {
 	background-image: var(--gnome-button-active-background) !important;
