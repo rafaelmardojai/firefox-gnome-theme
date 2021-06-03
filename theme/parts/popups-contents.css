@@ -152,10 +152,18 @@
 .identity-popup-security-content .identity-popup-headline {
 	margin-left: 1.4em !important;
 }
-
+#identity-popup-security-button {
+	padding: 3px 0 !important;
+}
+.identity-popup-security-connection.identity-button {
+	width: 29.5em !important;
+}
 
 /* Permission popup */
 #permission-popup-permissions-content {
+	padding: 0 !important;
+}
+.permission-popup-section {
 	padding: 0 !important;
 }
 
@@ -166,7 +174,7 @@
 #permission-popup-permission-list {
 	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color);
-	border-radius: 6px;
+	border-radius: 9px;
 	padding: 0 !important;
 }
 
@@ -195,6 +203,9 @@
 #protections-popup-mainView-panel-header-section {
 	background: transparent !important;
 }
+#protections-popup-mainView toolbarseparator {
+	display: none !important;
+}
 
 #protections-popup-mainView-panel-header {
 	color: var(--gnome-toolbar-color) !important;
@@ -203,7 +214,6 @@
 #protections-popup[hasException] #protections-popup-mainView-panel-header {
 	background: none !important;
 }
-
 #protections-popup-main-header-label {
 	height: auto !important;
 	margin-inline-start: 6px !important;
@@ -218,13 +228,16 @@
 	border-radius: 5px !important;
 	padding: 0px !important;
 }
+#protections-popup-info-button {
+	margin: 0 !important;
+}
 
 #messaging-system-message-container {
-    height: 150px !important;
+    height: 120px !important;
 	border: 0 !important;
 }
 #protections-popup #messaging-system-message-container[disabled] {
-    margin-bottom: -150px !important;
+    margin-bottom: -120px !important;
 }
 #protections-popup-message {
 	background: none !important;
@@ -240,8 +253,9 @@
 #protections-popup-tp-switch-section {
 	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color) !important;
-	border-radius: 6px;
+	border-radius: 9px;
 	padding: 12px !important;
+	margin: 0 !important;
 }
 #protections-popup[hasException] #protections-popup-tp-switch-section {
 	background: var(--gnome-menu-background) !important;
@@ -291,11 +305,15 @@
 	align-items: center;
 	margin-top: 10px;
 }
-
+.protections-popup-footer-button {
+	margin: 0 !important;
+}
+#protections-popup-footer-protection-type-label {
+	margin-left: 8px !important;
+}
 #protections-popup-trackers-blocked-counter-box {
 	margin-inline-end: 0 !important;
 }
-
 .protections-popup-description {
     border-bottom: 0 !important;
 }
