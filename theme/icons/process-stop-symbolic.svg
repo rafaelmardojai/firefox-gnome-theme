@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g color="#bebebe" fill="context-fill" stroke="context-stroke" fill-opacity="context-fill-opacity" stroke-opacity="context-stroke-opacity">
+        <path d="M5.682 2l-.291.29L2 5.647v4.645L5.678 14h4.648L14 10.293V5.648L10.32 2zm.824 2h2.992L12 6.482V9.47L9.492 12H6.51L4 9.469V6.482z" font-family="sans-serif" font-weight="400" overflow="visible" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none"/>
+        <path d="M6.856 5L5 6.84v2.288L6.856 11h2.29L11 9.128V6.84L9.145 5z" overflow="visible"/>
+    </g>
+</svg>

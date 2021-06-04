@@ -217,3 +217,44 @@ button.close {
 	outline:  0 !important;
 }
 
+/* Downloads button */
+#downloads-indicator-progress-inner {
+	background: conic-gradient(var(--gnome-toolbar-icon-fill) var(--download-progress-pcent), transparent var(--download-progress-pcent)) !important;
+}
+#downloads-indicator-progress-outer,
+#downloads-indicator-start-image,
+#downloads-indicator-finish-image {
+	border: 0 !important;
+	padding: 0 !important;
+	border-radius: 100% !important;
+}
+#downloads-indicator-progress-outer,
+#downloads-indicator-start-image {
+	background: var(--gnome-toolbar-border-color) !important;
+}
+#downloads-indicator-finish-image {
+	background: var(--gnome-toolbar-icon-fill) !important;
+}
+#downloads-button .toolbarbutton-animatable-box {
+	top: 8px !important;
+    left: 8px !important;
+}
+#downloads-button .toolbarbutton-animatable-box,
+#downloads-button .toolbarbutton-animatable-image,
+#downloads-indicator-progress-inner {
+	height: 16px !important;
+	width: 16px !important;
+}
+#downloads-button .toolbarbutton-animatable-image {
+	--anim-steps: 1 !important;
+	transform: none !important;
+	list-style-image: none !important;
+}
+
+/* Stop/Reload button */
+#stop-reload-button  .toolbarbutton-animatable-image:not(#hack) {
+	--anim-steps: 1 !important;
+	transform: none !important;
+	list-style-image: none !important;
+	display: none !important;
+}
