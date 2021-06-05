@@ -349,7 +349,9 @@ button.close::before {
 	list-style-image: url("../icons/printer-symbolic.svg") !important;
 }
 /* Addons button */
-#add-ons-button {
+#add-ons-button,
+#addons-notification-icon,
+.install-icon {
 	list-style-image: url("../icons/application-x-addon-symbolic.svg") !important;
 }
 /* Find button */
