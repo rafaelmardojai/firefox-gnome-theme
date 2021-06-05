@@ -65,7 +65,7 @@ button.close,
 .notification-button,
 .subviewbutton.panel-subview-footer:not(:only-of-type),
 .panel-footer button:not(:only-of-type) {
-	margin: 0 3px !important;
+	margin: 0 4px !important;
 }
 #TabsToolbar .toolbarbutton-1 {
 	margin: 2px 3px !important;
