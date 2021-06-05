@@ -42,13 +42,22 @@ tab > stack {
 	padding: 0 3px !important;
 }
 
-/* New hover effect */
-#TabsToolbar toolbarbutton {
-	fill-opacity: .6 !important;
+/* Tabsbar buttons */
+#TabsToolbar .toolbarbutton-1:not(#hack) {
+	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+	border-radius: 0 !important;
+	margin: 0 !important;
+	padding: 0 9px !important;	
 }
-#TabsToolbar toolbarbutton:not([disabled]):hover,
-#TabsToolbar toolbarbutton[open=true] {
-	fill-opacity: 1 !important;
+#tabbrowser-tabs[overflow=true] + .toolbarbutton-1:first-of-type {
+	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+}
+#TabsToolbar .toolbarbutton-1:not([disabled]):not(:active):not([open]):hover {
+	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
+}
+#TabsToolbar .toolbarbutton-1:active, #TabsToolbar .toolbarbutton-1[open] {
+	background-color: var(--gnome-tabbar-tab-border-color) !important;
 }
 
 /* Remove shadow next to tab scroll buttons */
@@ -75,9 +84,6 @@ tab > stack {
 }
 #TabsToolbar {
 	padding: 0 !important;
-}
-#TabsToolbar .toolbarbutton-1:last-child {
-	margin-right: 4px !important;
 }
 
 /* Tabs borders */
