@@ -9,7 +9,9 @@
 .findbar-textbox,
 #loginTextbox,
 #password1Textbox,
-.tabsFilter {
+.tabsFilter,
+#editBMPanel_namePicker,
+#editBMPanel_tagsField {
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
 	border: 1px solid var(--gnome-entry-border-color) !important;
@@ -31,7 +33,9 @@
 .findbar-textbox:focus,
 #loginTextbox:focus,
 #password1Textbox:focus,
-.tabsFilter[focused] {
+.tabsFilter[focused],
+#editBMPanel_namePicker:focus-visible,
+#editBMPanel_tagsField:focus-visible {
 	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
@@ -44,7 +48,9 @@
 	.findbar-textbox:focus,
 	#loginTextbox:focus,
 	#password1Textbox:focus,
-	.tabsFilter[focused] {		
+	.tabsFilter[focused],
+	#editBMPanel_namePicker:focus-visible,
+	#editBMPanel_tagsField:focus-visible {		
 		outline-width: 1px !important;
 	}
 }

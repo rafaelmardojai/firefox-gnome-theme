@@ -71,6 +71,18 @@
 	margin: 0 !important;
 }
 
+/* Add bookmark */
+#editBookmarkPanelInfoArea {
+	padding: 0 !important;
+}
+#editBookmarkPanelRows,
+#editBookmarkPanelBottomContent {
+	padding: 6px 1px !important;
+}
+#editBookmarkPanelBottomButtons {
+	margin: 12px 0 0 !important;
+}
+
 /* Downloads popover */
 #downloadsPanel-mainView .download-state {
 	padding: 8px !important;
