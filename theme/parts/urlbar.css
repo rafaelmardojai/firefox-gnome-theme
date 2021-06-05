@@ -116,7 +116,8 @@ toolbarspring {
 
 /* Search mode indicator */
 #urlbar-search-mode-indicator,
-#urlbar-label-box {
+#urlbar-label-box,
+#urlbar-zoom-button {
 	background: var(--gnome-popover-background) !important;
 	border: 1px solid var(--gnome-popover-border-color) !important;
 	border-radius: 9px;
@@ -131,6 +132,12 @@ toolbarspring {
 	background-size: contain !important;
 	border-radius: 0 9px 9px 0;
 	opacity: 0.8;
+}
+#urlbar-zoom-button {
+	opacity: 0.8;
+}
+#urlbar-zoom-button:hover {
+	opacity: 1;
 }
 
 /* Firefox identity box */
