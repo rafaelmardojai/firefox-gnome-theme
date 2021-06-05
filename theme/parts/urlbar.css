@@ -125,10 +125,33 @@ toolbarspring {
 }
 #urlbar-search-mode-indicator-title {
     color: #0060df;
-    padding-inline: 4px !important;;
+    padding-inline: 4px !important;
 }
 #urlbar-search-mode-indicator-close {
 	background-size: contain !important;
 	border-radius: 0 9px 9px 0;
 	opacity: 0.8;
+}
+
+/* Firefox identity box */
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
+#urlbar-label-box {
+  background-color: transparent !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:not([open]),
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:not([open]),
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:not([open]) {
+  background-color: hsla(0,0%,70%,.2) !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:active,
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button[open=true],
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:active,
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open=true],
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:active,
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open=true] {
+  background-color: hsla(0,0%,70%,.3) !important;
 }
