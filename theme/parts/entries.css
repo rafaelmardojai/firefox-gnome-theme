@@ -79,6 +79,39 @@
 	-moz-outline-radius: 5px 0 0 5px !important;
 }
 
+/* Entry button */
+.identity-box-button,
+#tracking-protection-icon-container,
+#notification-popup-box,
+.urlbar-page-action,
+.urlbar-icon {
+	fill-opacity: 0.8 !important;
+}
+
+.identity-box-button:hover:not([open="true"]),
+#tracking-protection-icon-container:hover:not([open="true"]),
+#notification-popup-box:hover:not([open="true"]),
+.urlbar-page-action:hover:not([open="true"]),
+.urlbar-page-action:hover:not([open="true"]) .urlbar-icon,
+.urlbar-icon:not([disabled]):hover {
+    background: none !important;
+	fill-opacity: 1 !important;	
+}
+
+.identity-box-button:hover:active,
+.identity-box-button[open=true],
+#tracking-protection-icon-container:hover:active,
+#tracking-protection-icon-container[open=true],
+#notification-popup-box:hover:active,
+#notification-popup-box[open=true],
+.urlbar-page-action:hover:active,
+.urlbar-page-action[open=true],
+.urlbar-page-action:hover:active .urlbar-icon,
+.urlbar-page-action[open=true] .urlbar-icon {
+	background: none !important;
+	fill-opacity: 1 !important;	
+}
+
 /* Entries fixes */
 #urlbar-container, #search-container {
 	padding: 0 !important;

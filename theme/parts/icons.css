@@ -5,6 +5,7 @@
 /* Icons color */
 .toolbarbutton-icon,
 .menu-iconic-icon,
+.urlbar-page-action:not([readeractive]),
 .button-icon:not(#hack),
 .bookmark-item[container],
 .notification-anchor-icon,
@@ -32,6 +33,7 @@ menuitem[type="checkbox"][checked="true"],
 menuitem[type="radio"],
 menuitem[type="radio"][checked="true"],
 .tab-icon-overlay,
+.tab-throbber::before,
 .close-icon:not(.tab-close-button),
 button.close::before,
 #urlbar-search-mode-indicator-close,
@@ -45,7 +47,6 @@ button.close::before,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
 	fill: var(--gnome-toolbar-icon-fill) !important;
-	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity;
 }
 .toolbarbutton-icon:-moz-window-inactive {
@@ -300,7 +301,9 @@ button.close::before {
 }
 /* Forward button */	
 #nav-bar #forward-button,
-#context-forward { 
+#context-forward,
+#urlbar-go-button,
+.search-go-button { 
 	list-style-image: url("../icons/go-next-symbolic.svg") !important;
 }
 /* Menu button */
