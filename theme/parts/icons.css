@@ -26,6 +26,7 @@
 .textbox-search-sign,
 treechildren::-moz-tree-twisty,
 treechildren::-moz-tree-image,
+.item.client .item-twisty-container,
 menuitem[type="checkbox"],
 menuitem[type="checkbox"][checked="true"],
 menuitem[type="radio"],
@@ -66,6 +67,9 @@ button.close::before,
 menu:not([disabled]):hover > .menu-right,
 treechildren::-moz-tree-twisty(selected, focus),
 treechildren::-moz-tree-twisty(selected, focus, open),
+treechildren::-moz-tree-image(selected, focus),
+treechildren::-moz-tree-image(selected, focus, open),
+.item.client:focus .item-twisty-container,
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty,
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open),
 menuitem[type="checkbox"]:not([disabled="true"]):hover .menu-iconic-icon,
@@ -185,16 +189,22 @@ menu[disabled] > .menu-right {
 }
 
 /* Tree views */
-treechildren::-moz-tree-twisty {
+treechildren::-moz-tree-twisty,
+.item.client .item-twisty-container {
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 	width: 16px !important;
 	height: 16px !important;
 }
+.item.client .item-twisty-container {
+	background-image: url("../icons/pan-down-symbolic.svg") !important;
+}
 treechildren::-moz-tree-twisty(open) {
 	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
 }
+.item.client.closed .item-twisty-container {
+	background-image: url("../icons/pan-end-symbolic.svg") !important;
+}
 
-/* Tree view icons */
 treechildren::-moz-tree-image(title, container),
 treechildren::-moz-tree-image(title, open) {
   list-style-image: url("../icons/folder-symbolic.svg") !important;
