@@ -50,7 +50,7 @@ button.close,
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 5px !important;
-	padding: 0 !important;
+	padding: 0 1px !important;
 	height: 34px !important;
 	max-height: 34px !important;
 	min-height: 34px !important;
@@ -65,7 +65,7 @@ button.close,
 .notification-button,
 .subviewbutton.panel-subview-footer:not(:only-of-type),
 .panel-footer button:not(:only-of-type) {
-	margin: 0 4px !important;
+	margin: 0 3px !important;
 }
 #TabsToolbar .toolbarbutton-1 {
 	margin: 2px 3px !important;
