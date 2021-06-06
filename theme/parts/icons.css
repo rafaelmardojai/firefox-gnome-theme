@@ -63,6 +63,10 @@ button.close::before,
 #sidebar-icon {
 	opacity: 1 !important;
 }
+treechildren::-moz-tree-twisty,
+treechildren::-moz-tree-image {
+	fill-opacity: 1 !important;
+}
 
 /* Icons active color */
 menu:not([disabled]):hover > .menu-right,
