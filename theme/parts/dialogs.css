@@ -21,6 +21,9 @@ dialog[subdialog] {
 	box-shadow: var(--gnome-popover-shadow) !important;
 	padding: 0 !important;
 }
+dialog {
+	padding: 0 !important;
+}
 
 /* Content */
 .dialog-content-box {
