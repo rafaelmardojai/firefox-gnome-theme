@@ -15,14 +15,10 @@
 	margin-top: 0 !important;
 }
 
-#commonDialog {
+dialog[subdialog] {
 	background: var(--gnome-popover-background) !important;
 	border: 0 !important;
 	box-shadow: var(--gnome-popover-shadow) !important;
-	padding: 0 !important;
-}
-
-dialog {
 	padding: 0 !important;
 }
 
