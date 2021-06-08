@@ -428,13 +428,16 @@ button.close::before {
 #nav-bar-overflow-button {
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
+/* Reload */
 #reload-button,
-.downloadIconRetry > .button-box > .button-icon  {
+.downloadIconRetry > .button-box > .button-icon,
+#context-reload {
 	list-style-image: url("../icons/view-refresh-symbolic.svg") !important;
 }
 /* Stop */
 #stop-button,
-.downloadIconCancel > .button-box > .button-icon  {
+.downloadIconCancel > .button-box > .button-icon,
+#context-stop {
 	list-style-image: url("../icons/process-stop-symbolic.svg") !important;
 }
 /* Downlaod */
