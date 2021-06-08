@@ -56,3 +56,11 @@ dialog {
 .dialog-button-box button[dlgtype="cancel"]:not(#hack) {
 	border-left: 0 !important;
 }
+
+/* Hadler dialog */
+#os-default-handler image {
+	display: none !important;	
+}
+#os-default-handler .name {
+	font-weight: normal !important;
+}

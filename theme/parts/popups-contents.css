@@ -179,33 +179,15 @@
 	padding: 0 !important;
 }
 
-.permission-popup-permission-item, #permission-popup-storage-access-permission-list-header {
+.permission-popup-permission-item:first-child, #permission-popup-storage-access-permission-list-header {
     margin-top: 0 !important;
 }
-
-#permission-popup-permission-list {
-	background: var(--gnome-menu-background);
-	border: 1px solid var(--gnome-button-border-color);
-	border-radius: 9px;
-	padding: 0 !important;
-}
-
-.permission-popup-permission-list-anchor {
-	padding: 6px !important;
-	margin: 0 !important;
-}
-.permission-popup-permission-list-anchor:not(:last-child) {
-	border-bottom: 1px solid var(--gnome-button-border-color);
-}
-
 .permission-popup-permission-remove-button {
 	opacity: 1 !important;
 }
-
 .permission-popup-permission-state-label {
     display: none !important;
 }
-
 
 /* Protections popup */
 .protections-popup-section,

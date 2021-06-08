@@ -1,0 +1,31 @@
+/* Lists */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* TODO: create list color vars */
+/* List container */
+#permission-popup-permission-list,
+richlistbox#items {
+    background: var(--gnome-menu-background) !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
+	border-radius: 9px !important;
+	padding: 0 !important;
+}
+
+/* List item */
+.permission-popup-permission-list-anchor,
+richlistbox#items richlistitem {
+	padding: 6px !important;
+	margin: 0 !important;
+}
+.permission-popup-permission-list-anchor:not(:last-child),
+richlistbox#items richlistitem:not(:last-child) {
+	border-bottom: 1px solid var(--gnome-button-border-color);
+}
+
+/* Fix list buttons on selected state */
+@media (prefers-color-scheme: light) {
+	richlistbox#items richlistitem[selected=true] button:not(:hover) {
+		filter: invert() brightness(200%) !important;
+	}
+}

@@ -42,7 +42,8 @@ button.close,
 .searchbar-engine-one-off-item,
 .permission-popup-permission-remove-button,
 #protections-popup-trackers-blocked-counter-box,
-.button.connect-device {
+.button.connect-device,
+#item-choose button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: var(--gnome-button-box-shadow) !important;
@@ -89,7 +90,8 @@ menulist,
 .dialog-button-box button,
 #appMenu-fxa-status2:not([fxastatus="signedin"]) #appMenu-fxa-label2,
 #protections-popup-trackers-blocked-counter-box,
-.button.connect-device {
+.button.connect-device,
+#item-choose button {
 	padding: 2px 16px !important;
 	text-align: center !important;
 }
@@ -152,7 +154,8 @@ menulist:hover .menulist-label-box,
 .searchbar-engine-one-off-item:hover,
 .permission-popup-permission-remove-button:hover,
 #protections-popup-trackers-blocked-counter-box:hover,
-.button.connect-device:hover {
+.button.connect-device:hover,
+#item-choose button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -191,7 +194,8 @@ menulist[open] .menulist-label-box,
 .dialog-button-box button:active,
 .permission-popup-permission-remove-button:active,
 #protections-popup-trackers-blocked-counter-box:active,
-.button.connect-device:active {
+.button.connect-device:active,
+#item-choose button:active {
 	background: var(--gnome-button-active-background) !important;
 	box-shadow: var(--gnome-button-active-box-shadow) !important;
 	border-color: var(--gnome-button-active-border-color) !important;
@@ -235,11 +239,18 @@ menulist[open] .menulist-label-box,
 .close-icon:not(.tab-close-button),
 button.close,
 #protections-popup-info-button,
-.permission-popup-permission-remove-button,
 #protections-popup-trackers-blocked-counter-box {
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
+	border-radius: 5px !important;
+}
+/* List style */
+.permission-popup-permission-remove-button,
+#item-choose button {
+	background: transparent !important;
+	box-shadow: none !important;
+	border-color: var(--gnome-popover-separator-color) !important;
 	border-radius: 5px !important;
 }
 .subviewbutton-back:not(#hack):not(:active):hover,
@@ -247,7 +258,8 @@ button.close,
 button.close:not(:active):hover,
 #protections-popup-info-button:hover,
 .permission-popup-permission-remove-button:not(:active):hover,
-#protections-popup-trackers-blocked-counter-box:not(:active):hover {
+#protections-popup-trackers-blocked-counter-box:not(:active):hover,
+#item-choose button:not(:active):hover {
 	box-shadow: var(--gnome-button-box-shadow) !important;
 	border-color: var(--gnome-button-border-color) !important;
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
