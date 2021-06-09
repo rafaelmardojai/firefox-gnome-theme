@@ -308,6 +308,26 @@ tab[selected]:-moz-window-inactive {
 	z-index: 1;
 }
 
+/* OPTIONAL: GNOME spinner */
+/* Temporal until I find time to work around the rendering issue */
+@supports -moz-bool-pref("gnomeTheme.spinner") {
+	/* Tab spinner */
+	.tab-throbber::before {
+		animation: gnome-spinner 1s linear infinite !important;
+		background-image: url("../icons/process-working-symbolic.svg") !important;
+		width: 16px !important;
+		opacity: 1 !important;
+	}
+	@keyframes gnome-spinner {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
+
 /* OPTIONAL: Hide single tab */
 @supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs tab:only-of-type {
@@ -330,4 +350,3 @@ tab[selected]:-moz-window-inactive {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
 	}
 }
-
