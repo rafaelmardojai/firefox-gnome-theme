@@ -15,6 +15,7 @@
 .widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after,
 #identity-popup[connection^="secure"] .identity-popup-security-connection,
+.panel-info-button > image,
 .menu-right,
 .expander-down > .button-box,
 #sidebar-switcher-arrow,
@@ -34,6 +35,7 @@ menuitem[type="radio"],
 menuitem[type="radio"][checked="true"],
 .tab-icon-overlay,
 .tab-throbber::before,
+.tab-icon-stack::before,
 .close-icon:not(.tab-close-button),
 button.close::before,
 #urlbar-search-mode-indicator-close,
@@ -444,6 +446,17 @@ button.close::before {
 #downloads-button,
 #downloads-indicator-icon {
 	list-style-image: url("../icons/folder-download-symbolic.svg") !important;
+}
+/* Info */
+.panel-info-button > image,
+#identity-icon {
+	list-style-image: url("../icons/info-symbolic.svg") !important;
+}
+.tabbrowser-tab[image="chrome://global/skin/icons/info.svg"]:not([busy]):not([progress]) .tab-icon-stack::before {
+	content: "";
+	height: 16px;
+	width: 16px;
+	background-image: url("../icons/info-symbolic.svg") !important;
 }
 
 /* Url Bar icons */
