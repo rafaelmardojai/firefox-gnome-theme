@@ -167,20 +167,15 @@ tab[selected]:-moz-window-inactive {
 	margin-right: 2px;
 }
 
-/* If tab close button is not present, don't force favicon to the center */
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-icon-stack {
-	margin-left: 0 !important;
-}
-
 /* Tab buttons */
 .tab-icon-overlay,
 .tab-close-button {
-	-moz-appearance: none !important;
 	border: 0px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
 	border-radius: 99px !important;
 	padding: 4px !important;
 	background-size: 24px;
+	transition: all 0.2s ease-out !important;
 }
 :root:not(:-moz-window-inactive) .tab-icon-overlay:hover,
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
@@ -203,6 +198,7 @@ tab[selected]:-moz-window-inactive {
 	height: 16px !important;
 	opacity: 1 !important;
 	width: 16px !important;
+	z-index: 100 !important;
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
@@ -220,13 +216,48 @@ tab[selected]:-moz-window-inactive {
 	box-shadow: none !important;
 }
 	
-/* Autohide (Still Horrible) */
-
+/* Autohide */
 .tabbrowser-tab:not([selected="true"]) .tab-close-button {
-	visibility: hidden;
+	visibility: hidden !important;
+	opacity: 0 !important;
 }
 .tabbrowser-tab:hover .tab-close-button {
-	visibility: visible;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* Fix close button position */
+.tabbrowser-tab:not([pinned]) .tab-label-container {
+	margin-right: -16px;
+	max-width: 80% !important;
+}
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([pinned]) .tab-close-button {
+	display: block !important;
+}
+
+/* Close button overlay */
+.tabbrowser-tab:not([pinned]) .tab-content::after {
+	bottom: 1px;
+	content: "";
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	width: 55px;
+	z-index: 99;
+	transition: all 0.2s ease-out;
+}
+.tabbrowser-tab:not([pinned]):is([selected="true"], :hover) .tab-content::after {
+	opacity: 1;
+}
+.tabbrowser-tab:not([pinned])[selected="true"] .tab-content::after {
+	background: linear-gradient(to left, var(--gnome-tabbar-tab-active-background) 50%, transparent);
+}
+:root:not(:-moz-window-inactive) .tabbrowser-tab:not([pinned])[selected="true"]:hover .tab-content::after {
+	background: linear-gradient(to left, var(--gnome-tabbar-tab-active-hover-background) 50%, transparent);
+}
+.tabbrowser-tab:not([pinned]):hover .tab-content::after {
+	background: linear-gradient(to left, var(--gnome-tabbar-tab-hover-background) 50%, transparent);
 }
 
 /* Tab close button etc. positioning */
