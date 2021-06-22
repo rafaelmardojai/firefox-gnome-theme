@@ -17,6 +17,6 @@ rm $FILENAME
 
 chmod +x scripts/auto-install.sh
 
-./auto-install.sh
+./scripts/auto-install.sh
 
 if [ -d "$FOLDERPATH" ]; then rm -Rf $FOLDERPATH; fi
