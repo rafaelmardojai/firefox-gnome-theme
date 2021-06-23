@@ -229,7 +229,6 @@ tab[selected]:-moz-window-inactive {
 /* Fix close button position */
 .tabbrowser-tab:not([pinned]) .tab-label-container {
 	margin-right: -16px;
-	max-width: 80% !important;
 }
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([pinned]) .tab-close-button {
 	display: block !important;
