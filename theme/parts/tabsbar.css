@@ -7,7 +7,7 @@
 }
 
 #TabsToolbar:not([inFullscreen]) > .toolbar-items {
-	margin-bottom: -1px !important;
+	margin-bottom: -2px !important;
 }
 
 /* Fix tabs bar icon sizes */
