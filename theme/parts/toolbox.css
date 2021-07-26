@@ -126,7 +126,7 @@ findbar:-moz-window-inactive description,
 	}
 }
 
-/* OPTIONAL: Move bookmarks bar under tabs */
+/* OPTIONAL: Move Bookmarks toolbar under tabs */
 @supports -moz-bool-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
 	#navigator-toolbox #titlebar {
 		-moz-box-ordinal-group: 1 !important;

@@ -150,7 +150,7 @@ menulist:hover .menulist-label-box,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
-.dialog-button-box button:hover,
+.dialog-button-box button:not([disabled]):hover,
 .searchbar-engine-one-off-item:hover,
 .permission-popup-permission-remove-button:hover,
 #protections-popup-trackers-blocked-counter-box:hover,
@@ -191,7 +191,7 @@ menulist[open] .menulist-label-box,
 .tracking-protection-button:active,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
-.dialog-button-box button:active,
+.dialog-button-box button:not([disabled]):active,
 .permission-popup-permission-remove-button:active,
 #protections-popup-trackers-blocked-counter-box:active,
 .button.connect-device:active,
@@ -206,7 +206,8 @@ menulist[open] .menulist-label-box,
 /* Disabled buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled],
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled],
-#context-navigation menuitem[disabled] {
+#context-navigation menuitem[disabled],
+.dialog-button-box button[disabled] {
 	background: var(--gnome-button-disabled-background) !important;
 	border-color: var(--gnome-button-disabled-border-color) !important;
 	box-shadow: var(--gnome-button-disabled-box-shadow) !important;
@@ -214,7 +215,8 @@ menulist[open] .menulist-label-box,
 }
 #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image,
-#context-navigation menuitem[disabled] image {
+#context-navigation menuitem[disabled] image,
+.dialog-button-box button[disabled] label {
 	opacity: .4 !important;
 }
 
