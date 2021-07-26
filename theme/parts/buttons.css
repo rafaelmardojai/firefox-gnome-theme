@@ -93,9 +93,26 @@ menulist,
 .button.connect-device,
 #item-choose button {
 	padding: 2px 16px !important;
-	text-align: center !important;
 }
-.subviewbutton.panel-subview-footer label {
+.subviewbutton.panel-subview-footer label,
+.panel-footer button,
+#downloadsHistory,
+#overflowMenu-customize-button,
+#appMenu-popup .panel-banner-item,
+#appMenu-popup #appMenu-zoomReset-button2:not(#hack),
+#tracking-protection-preferences-button:not(#hack),
+.findbar-container toolbarbutton.findbar-button,
+.notification-button,
+.protections-popup-footer-button,
+#PanelUI-panic-view-button,
+.tracking-protection-button,
+.dialog-button,
+.autocomplete-richlistitem[type="loginsFooter"],
+.dialog-button-box button,
+#appMenu-fxa-status2:not([fxastatus="signedin"]) #appMenu-fxa-label2,
+#protections-popup-trackers-blocked-counter-box,
+.button.connect-device,
+#item-choose button {
 	text-align: center !important;
 }
 
