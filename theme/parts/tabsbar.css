@@ -63,6 +63,19 @@ tab > stack {
 	display: none;
 }
 
+/* Fake tabsbar border */
+#tabbrowser-arrowscrollbox:after {
+	content: "";
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color);
+	height: 1px;
+	min-height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
 /* Remove tab separators */
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
