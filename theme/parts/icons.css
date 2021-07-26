@@ -458,6 +458,10 @@ button.close::before {
 	width: 16px;
 	background-image: url("../icons/info-symbolic.svg") !important;
 }
+/* Password */
+#password-notification-icon {
+	list-style-image: url("../icons/key-symbolic.svg") !important;
+}
 
 /* Url Bar icons */
 #urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
