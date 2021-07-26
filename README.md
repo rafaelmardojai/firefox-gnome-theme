@@ -17,12 +17,15 @@
 
 This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
-This theme is supposed to work with current supported Firefox releases:
 
-- Firefox 90
-- Firefox 78 ESR *(Recommended to use the `v78.1` git tag)*
-- Firefox 91 Beta *(Recommended to use the `beta` git branch)*
-- Firefox 92 Nightly
+### Firefox versions support
+
+The `master` branch of this repo supports the current Firefox stable release `90`.
+
+Theme versions complatible with older Firefox releases are preserved as git tags. Use the `v78.1` tag for Firefox 78 ESR support.
+
+We also have the `beta` branch for fixes only aplicable to the current Firefox beta version.
+
 
 ## Installation
 
