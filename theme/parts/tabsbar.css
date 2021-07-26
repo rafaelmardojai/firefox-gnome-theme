@@ -6,13 +6,10 @@
 	--space-above-tabbar: 0 !important;
 }
 
-#TabsToolbar:not([inFullscreen]) > .toolbar-items {
-	margin-bottom: -2px !important;
-}
-
 /* Fix tabs bar icon sizes */
 #TabsToolbar {
     --toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
+	border-bottom: 0 !important;
 }
 
 /* Tabs bar height */
@@ -89,6 +86,7 @@ tab > stack {
 /* Tabs borders */
 .tabbrowser-tab {
 	border-right: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 #TabsToolbar {
 	margin-right: -1px !important;
@@ -122,6 +120,7 @@ tab[selected]:-moz-window-inactive {
 	border-radius: 0 !important;
 	box-shadow: none !important;
 	margin-block: 0 !important;
+	border: 0 !important;
 }
 
 /* Center all inside tab */
@@ -279,7 +278,6 @@ tab[selected]:-moz-window-inactive {
 	background-image: none !important;
 	border: 0 !important;
 	border-image: none !important;
-	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
@@ -298,7 +296,6 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-image: none !important;
-	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
 
 /* Full width tabs */
