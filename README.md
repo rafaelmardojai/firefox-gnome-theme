@@ -180,6 +180,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	Use normal width tabs as default Firefox.
 
+- **Bookmarks toolbar under tabs** `gnomeTheme.bookmarksToolbarUnderTabs`
+
+	Move Bookmarks toolbar under tabs.
+
 - **Active tab contrast** `gnomeTheme.activeTabContrast`
 
 	Add more contrast to the active tab.
