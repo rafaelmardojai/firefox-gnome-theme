@@ -1,6 +1,17 @@
 /* Buttons Issues/Glitches fixes */
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Fix notification dropmarker */
+.popup-notification-dropmarker dropmarker {
+	display: none !important;
+}
+.popup-notification-dropmarker > .button-box > hbox {
+	display: -moz-box !important;
+}
+.panel-footer button.popup-notification-dropmarker {
+	padding: 0 1px 0 4px !important;
+}
+
 /* Fix hover background */
 .toolbarbutton-badge-stack:not(#hack), .toolbarbutton-icon:not(#hack), .toolbarbutton-text:not(#hack) {
 	background: transparent !important;

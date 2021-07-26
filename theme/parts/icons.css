@@ -156,7 +156,8 @@ menu[disabled] > .menu-right {
 /* Arrow down buttons */
 .expander-down > .button-box,
 #sidebar-switcher-arrow,
-#viewButton .button-menu-dropmarker {
+#viewButton .button-menu-dropmarker,
+.popup-notification-dropmarker .button-icon {
 	-moz-appearance: none !important;
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 	width: 16px !important;
