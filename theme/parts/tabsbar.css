@@ -236,6 +236,7 @@ tab[selected]:-moz-window-inactive {
 
 /* Close button overlay */
 .tabbrowser-tab:not([pinned]) .tab-content::after {
+	background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
 	bottom: 1px;
 	content: "";
 	height: 100%;
@@ -246,17 +247,20 @@ tab[selected]:-moz-window-inactive {
 	z-index: 99;
 	transition: all 0.2s ease-out;
 }
-.tabbrowser-tab:not([pinned]):is([selected="true"], :hover) .tab-content::after {
+.tabbrowser-tab:not([pinned], :-moz-window-inactive):is([selected="true"], :hover) .tab-content::after {
 	opacity: 1;
 }
 .tabbrowser-tab:not([pinned])[selected="true"] .tab-content::after {
-	background: linear-gradient(to left, var(--gnome-tabbar-tab-active-background) 50%, transparent);
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
 }
 :root:not(:-moz-window-inactive) .tabbrowser-tab:not([pinned])[selected="true"]:hover .tab-content::after {
-	background: linear-gradient(to left, var(--gnome-tabbar-tab-active-hover-background) 50%, transparent);
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background);
 }
 .tabbrowser-tab:not([pinned]):hover .tab-content::after {
-	background: linear-gradient(to left, var(--gnome-tabbar-tab-hover-background) 50%, transparent);
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
+}
+.tabbrowser-tab:not([pinned])[selected="true"]:-moz-window-inactive .tab-content::after {
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-inactive-tabbar-tab-active-background);
 }
 
 /* Tab close button etc. positioning */
