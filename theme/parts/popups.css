@@ -13,6 +13,9 @@ menupopup {
 	color: var(--gnome-toolbar-color) !important;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
+.menupopup-arrowscrollbox {
+	border: 0 !important;
+}
 menupopup menupopup {
 	margin: -5px 0 0 -4px;
 }
@@ -41,20 +44,18 @@ panel[type=arrow] {
 }
 
 /* Style popovers */
-.panel-arrowcontent .panel-arrowcontent, 
+.panel-arrowcontent,
 .panel-header, .PanelUI-subView,
 .panel-subview-body, #widget-overflow-mainView, #protections-popup-footer,
 panelview {
 	border: 0 !important;
 	background: transparent !important;
 }
-
 .panel-arrowcontent {
 	background: var(--arrowpanel-background) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popover-border-color) !important;
 	border-radius: 9px !important;
-	padding: 12px !important;
 	color: var(--gnome-toolbar-color) !important;
 }
 .panel-arrow {    
@@ -64,6 +65,10 @@ panelview {
 }
 panel:not([remote]), #BMB_bookmarksPopup {
 	--arrowpanel-background: var(--gnome-popover-background) !important;
+}
+
+panelview {
+	padding: 12px !important;
 }
 
 .PanelUI-subView toolbarseparator:not([orient="vertical"]) {
