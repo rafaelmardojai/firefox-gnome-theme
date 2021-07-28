@@ -72,6 +72,7 @@ panel:not([remote]), #BMB_bookmarksPopup {
 
 .panel-header {
 	padding: 0 0 10px 0 !important;
+	position: relative !important;
 }
 .panel-header + toolbarseparator,
 #identity-popup-mainView-panel-header + toolbarseparator,
@@ -104,17 +105,18 @@ panel:not([remote]), #BMB_bookmarksPopup {
 }
 
 /* Style popovers menu buttons */
-.subviewbutton:not(.subviewbutton-back),
+.subviewbutton,
 .toolbarbutton-1, .protections-popup-category,
 .identity-popup-content-blocking-category {
 	border-radius: 5px !important;	
 	color: var(--gnome-toolbar-color) !important;
 	font: menu !important;
+	width: 100%;
 }
-.subviewbutton:not(.subviewbutton-back),
+.subviewbutton,
 .protections-popup-category,
 .identity-popup-content-blocking-category {	
-	padding: 5px !important;
+	padding: 4px !important;
 	margin: 0 !important;
 }
 
@@ -131,6 +133,22 @@ panel:not([remote]), #BMB_bookmarksPopup {
 .subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
 .identity-popup-content-blocking-category:not([disabled]):hover {
 	background-color: var(--gnome-popover-button-hover-background) !important;
+}
+
+.subviewbutton-back {
+	width: 100%;
+	-moz-box-align: start !important;
+	-moz-box-pack: start !important;
+	padding: 10px !important;
+}
+.subviewbutton-back + h1 {
+	font-weight: normal !important;
+	left: 0 !important;
+	padding: 5px !important;
+	pointer-events: none;
+	position: absolute !important;
+	top: 0 !important;
+	width: 100%;
 }
 
 /* Style popover separators */
