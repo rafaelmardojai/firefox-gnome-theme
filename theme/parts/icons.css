@@ -128,7 +128,7 @@ arrowscrollbox[orient="horizontal"] {
 	fill-opacity: 1 !important;
 }
 .protections-popup-category::after {
-	content: url("../icons/pan-start-symbolic.svg") !important;
+	content: url("../icons/pan-end-symbolic.svg") !important;
 }
 .identity-popup-content-blocking-category::after {
 	content: url("../icons/pan-start-symbolic.svg") !important;
