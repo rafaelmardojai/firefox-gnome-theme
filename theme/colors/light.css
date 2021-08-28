@@ -5,16 +5,16 @@
  * built-in in Firefox, so you need to add an !important if you wanna
  * override them. */
 
-:root {	
+:root {
 	/* Browser area before a page starts loading */
 	--gnome-browser-before-load-background: #d6d6d6;
 
 	/* Toolbars */
-	--gnome-toolbar-background: #e0ddda;	
+	--gnome-toolbar-background: #e0ddda;
 	--gnome-toolbar-color: rgb(46, 52, 54);
 	--gnome-toolbar-border-color: #b6b6b3;
 	--gnome-toolbar-icon-fill: #2e3436;
-	--gnome-inactive-toolbar-background: #f6f5f4;	
+	--gnome-inactive-toolbar-background: #f6f5f4;
 	--gnome-inactive-toolbar-color: #d5d0cc;
 	--gnome-inactive-toolbar-border-color: #d5d0cc;
 	--gnome-inactive-toolbar-icon-fill: #929595;
@@ -63,7 +63,7 @@
 	--gnome-button-suggested-action-hover-background: linear-gradient(to top, #3584e4, #3987e5 1px);
 	--gnome-button-suggested-action-active-background: #1961b9;
 	--gnome-button-suggested-action-active-border-color: #1b6acb;
-	--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
+	--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 	--gnome-button-destructive-action-background: linear-gradient(to top, #ce1921 2px, #e01b24);
 	--gnome-button-destructive-action-border-color: #b2161d;
 	--gnome-button-destructive-action-border-accent-color: #851015;
@@ -83,13 +83,13 @@
 	--gnome-inactive-entry-box-shadow: none;
 	--gnome-inactive-entry-color: #323232;
 	--gnome-focused-urlbar-border-color: #4a90d9;
-	
+
 	/* Switch */
 	--gnome-switch-background: #e1dedb;
 	--gnome-switch-border-color: #cdc7c2;
 	--gnome-switch-slider-background: linear-gradient(to bottom, white 10%, white 90%);
 	--gnome-switch-slider-border-color: #bfb8b1;
-	--gnome-switch-slider-box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);	
+	--gnome-switch-slider-box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
 	--gnome-switch-active-background: #3584e4;
 	--gnome-switch-active-border-color: #185fb4;
 	--gnome-switch-active-slider-border-color: #185fb4;
@@ -109,7 +109,7 @@
 	--gnome-inactive-tabbar-tab-active-background: #f6f5f4;
 	--gnome-inactive-tabbar-tab-active-color: var(--gnome-inactive-tabbar-tab-color);
 	--gnome-tabbar-close-hover: #d2d1d1;
-} 
+}
 
 /* Private window colors */
 :root {
@@ -120,8 +120,8 @@
 	--gnome-private-inactive-headerbar-background: #ECE6F1;
 	--gnome-private-inactive-headerbar-border-color: rgb(200, 183, 215);
 	--gnome-private-inactive-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow);
-	
-	/* Buttons */	
+
+	/* Buttons */
 	--gnome-private-button-background: linear-gradient(to top, rgb(226, 217, 234) 2px, rgb(236, 230, 241));
 	--gnome-private-button-border-color: rgb(191, 171, 208);
 	--gnome-private-button-border-accent-color: rgb(179, 152, 197);
@@ -137,11 +137,11 @@
 	--gnome-private-inactive-button-background: #ECE6F1;
 	--gnome-private-inactive-button-border-color: rgb(200, 183, 215);
 	--gnome-private-inactive-button-box-shadow:  0 1px rgba(255, 255, 255, 0) inset;
-	
+
 	/* Entries */
 	--gnome-private-entry-border-color: rgb(191, 171, 208);
 	--gnome-private-focused-urlbar-border-color: rgb(132, 77, 179);
-	
+
 	/* Tabs */
 	--gnome-private-tabbar-tab-active-border-bottom-color: rgb(132, 77, 179);
 }

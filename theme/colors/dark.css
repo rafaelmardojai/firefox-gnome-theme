@@ -10,12 +10,12 @@
 		--gnome-browser-before-load-background: #353535;
 
 		/* Toolbars */
-		--gnome-toolbar-background: #282828;	
+		--gnome-toolbar-background: #282828;
 		--gnome-toolbar-color: #ffffff;
 		--gnome-toolbar-border-color: #1b1b1b;
 		--gnome-toolbar-icon-fill: #eeeeec;
 		--gnome-inactive-toolbar-color: #919190;
-		--gnome-inactive-toolbar-background: #353535;	
+		--gnome-inactive-toolbar-background: #353535;
 		--gnome-inactive-toolbar-border-color: #202020;
 		--gnome-inactive-toolbar-icon-fill: #919190;
 
@@ -40,16 +40,16 @@
 		--gnome-inactive-headerbar-border-color: #202020;
 		--gnome-inactive-headerbar-box-shadow: inset 0 1px rgba(238, 238, 236, 0.07);
 
-		/* Buttons */	
+		/* Buttons */
 		--gnome-button-background: linear-gradient(to top, #323232 2px, #353535);
 		--gnome-button-border-color: #1b1b1b;
-		--gnome-button-border-accent-color: #070707;	
-		--gnome-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);	
-		--gnome-button-hover-background: linear-gradient(to top, #323232, #373737 1px);	
+		--gnome-button-border-accent-color: #070707;
+		--gnome-button-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);
+		--gnome-button-hover-background: linear-gradient(to top, #323232, #373737 1px);
 		--gnome-button-active-background: linear-gradient(#1e1e1e, #1e1e1e);
 		--gnome-button-active-border-color: #1b1b1b;
 		--gnome-button-active-border-accent-color: #000000;
-		--gnome-button-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
+		--gnome-button-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 		--gnome-button-disabled-background: #323232;
 		--gnome-button-disabled-border-color: #202020;
 		--gnome-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
@@ -63,7 +63,7 @@
 		--gnome-button-suggested-action-hover-background: linear-gradient(to top, #155099, #1655a2 1px);
 		--gnome-button-suggested-action-active-background: #103e75;
 		--gnome-button-suggested-action-active-border-color: #0f3b71;
-		--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);	
+		--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 		--gnome-button-destructive-action-background: linear-gradient(to top, #ae151c 2px, #b2161d);
 		--gnome-button-destructive-action-border-color: #851015;
 		--gnome-button-destructive-action-border-accent-color: #570b0e;
@@ -89,7 +89,7 @@
 		--gnome-switch-border-color: #1b1b1b;
 		--gnome-switch-slider-background: linear-gradient(to bottom, #3c3c3c 20%, #353535 90%);
 		--gnome-switch-slider-border-color: #111111;
-		--gnome-switch-slider-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);	
+		--gnome-switch-slider-box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
 		--gnome-switch-active-background: #15539e;
 		--gnome-switch-active-border-color: #030c17;
 		--gnome-switch-active-slider-border-color: #030c17;
@@ -110,7 +110,7 @@
 		--gnome-inactive-tabbar-tab-active-color: rgb(141, 144, 145);
 		--gnome-tabbar-close-hover: #565656;
 	}
-	
+
 	/* Private window colors */
 	:root {
 		/* Header bar */
@@ -121,7 +121,7 @@
 		--gnome-private-inactive-headerbar-border-color: rgb(77, 41, 102);
 		--gnome-private-inactive-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow);
 
-		/* Buttons */	
+		/* Buttons */
 		--gnome-private-button-background: linear-gradient(to top, rgb(94, 52, 127) 2px, rgb(97, 53, 131));
 		--gnome-private-button-border-color: rgb(70, 38, 95);
 		--gnome-private-button-border-accent-color: rgb(49, 27, 66);
@@ -130,7 +130,7 @@
 		--gnome-private-button-active-background: rgb(73, 40, 98);
 		--gnome-private-button-active-border-color: rgb(62, 34, 84);
 		--gnome-private-button-active-border-accent-color: rgb(49, 27, 66);
-		--gnome-private-button-active-box-shadow: 0 1px rgba(255, 255, 255, 0) inset;	
+		--gnome-private-button-active-box-shadow: 0 1px rgba(255, 255, 255, 0) inset;
 		--gnome-private-button-disabled-background: #613583;
 		--gnome-private-button-disabled-border-color: rgb(74, 41, 102);
 		--gnome-private-button-disabled-box-shadow:  0 1px rgba(255, 255, 255, 0) inset;
@@ -141,7 +141,7 @@
 		/* Entries */
 		--gnome-private-entry-border-color: #202020;
 		--gnome-private-focused-urlbar-border-color: rgb(158, 70, 224);
-		
+
 		/* Tabs */
 		--gnome-private-tabbar-tab-active-border-bottom-color: rgb(158, 70, 224);
 	}
