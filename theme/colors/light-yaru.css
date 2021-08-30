@@ -6,18 +6,11 @@
  * override them. */
 
 :root {
-
 	/* Entries */
 	--gnome-focused-urlbar-border-color: #864780;
 
 	/* Tabs */
-	--gnome-tabbar-tab-background: #e1dedb;
-	--gnome-tabbar-tab-border-color: #dbd7d4;
-	--gnome-tabbar-tab-hover-background: #e4e2de;
-	--gnome-tabbar-tab-hover-border-bottom-color: #b6b6b3;
-	--gnome-tabbar-tab-active-background: #ebe9e7;
 	--gnome-tabbar-tab-active-border-bottom-color: #864780;
 	--gnome-tabbar-tab-active-border-bottom-color-contrast: #864780;
-	--gnome-tabbar-tab-active-hover-background: #e6e6e6;
 	--gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color);
 }
