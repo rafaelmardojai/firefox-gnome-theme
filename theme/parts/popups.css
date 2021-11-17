@@ -119,7 +119,7 @@ panel[type="arrow"].panel-no-padding::part(content) {
 }
 
 /* Style popovers menu buttons */
-.subviewbutton,
+.subviewbutton:not(#appMenu-fxa-label2),
 .toolbarbutton-1, .protections-popup-category,
 .identity-popup-content-blocking-category {
 	border-radius: 5px !important;	

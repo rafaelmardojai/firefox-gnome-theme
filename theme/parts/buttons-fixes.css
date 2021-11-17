@@ -269,3 +269,6 @@ button.close {
 	list-style-image: none !important;
 	display: none !important;
 }
+#stop-reload-button .toolbarbutton-icon {
+	margin-top: -2px !important;
+}

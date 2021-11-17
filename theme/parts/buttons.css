@@ -57,6 +57,7 @@ button.close,
 	color: var(--gnome-toolbar-color) !important;
 	outline: 0 !important;
 	font: menu !important;
+	-moz-box-align: center;
 }
 .subviewbutton-iconic {
 	-moz-box-pack: center !important;

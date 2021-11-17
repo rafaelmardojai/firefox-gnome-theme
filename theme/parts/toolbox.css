@@ -99,6 +99,7 @@ findbar:-moz-window-inactive description,
 	background: var(--gnome-toolbar-background) !important;
 	box-shadow: none !important;
 	padding: 6px !important;
+	border-radius: 0 !important;
 }
 .container.infobar::before {
 	display: none !important;
