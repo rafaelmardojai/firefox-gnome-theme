@@ -27,6 +27,7 @@
 
 /* Entries focused */
 #urlbar[breakout][breakout-extend],
+#urlbar[focused="true"]:not([suppress-focus-border]),
 #searchbar:focus-within,
 #search-box[focused], 
 .findbar-textbox[focused],
@@ -133,4 +134,7 @@
 }
 #searchbar > .searchbar-textbox[focused] .searchbar-search-button:not(#hack) {
 	margin: 0 !important;
+}
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background {
+	outline: 0 !important;
 }
