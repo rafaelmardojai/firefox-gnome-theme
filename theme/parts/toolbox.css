@@ -88,8 +88,11 @@ findbar:-moz-window-inactive description,
 	border: 0 !important;
 	font-size: 1em !important;
 	padding: 0 !important;
-	margin: 0 !important;
 	border-radius: 0 !important;
+	margin: 0 !important;
+}
+.notificationbox-stack notification-message[style*="margin-top"] {
+	margin-top: -48px !important;
 }
 
 .container.infobar {
