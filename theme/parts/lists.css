@@ -6,16 +6,17 @@
 /* List container */
 #permission-popup-permission-list,
 richlistbox#items {
-    background: var(--gnome-menu-background) !important;
+	background: var(--gnome-menu-background) !important;
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-radius: 9px !important;
 	padding: 0 !important;
+	overflow: hidden;
 }
 
 /* List item */
 .permission-popup-permission-list-anchor,
 richlistbox#items richlistitem {
-	padding: 6px !important;
+	padding: 6px 6px 1px !important;
 	margin: 0 !important;
 }
 .permission-popup-permission-list-anchor:not(:last-child),

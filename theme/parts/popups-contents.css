@@ -203,6 +203,21 @@
     display: none !important;
 }
 
+.permission-popup-permission-list-anchor[anchorfor="3rdPartyStorage"] {
+	padding: 0 !important;
+}
+.permission-popup-permission-list-anchor[anchorfor="3rdPartyStorage"] > vbox:only-child {
+	display: block !important;
+	height: 0 !important;
+	overflow: hidden;
+	visibility: hidden;
+	margin: 0 !important;
+	margin-bottom: -1px !important;
+}
+#permission-popup-storage-access-permission-list-header {
+	padding: 6px !important;
+}
+
 /* Protections popup */
 .protections-popup-section,
 #protections-popup-not-blocking-section-header {	
