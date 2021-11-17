@@ -4,7 +4,7 @@
 
 /* Icons color */
 .toolbarbutton-icon,
-.menu-iconic-icon,
+menuitem:not([class*='identity']) .menu-iconic-left .menu-iconic-icon,
 .urlbar-page-action:not([readeractive]),
 .button-icon:not(#hack),
 .bookmark-item[container],
