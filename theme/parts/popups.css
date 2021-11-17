@@ -65,7 +65,6 @@ panelview {
 }
 panel:not([remote]), #BMB_bookmarksPopup {
 	--arrowpanel-background: var(--gnome-popover-background) !important;
-	padding: 20px !important;
 }
 
 panel {
