@@ -6,6 +6,9 @@
  * override them. */
 
 :root {
+  /* Accent */
+	--gnome-accent: #16A085;
+	
 	/* Buttons */
 	--gnome-button-suggested-action-background: linear-gradient(to top, rgb(36, 235, 195) 2px, #16A085);
 	--gnome-button-suggested-action-border-color: #16A085;
@@ -14,18 +17,9 @@
 	--gnome-button-suggested-action-active-background: rgb(16, 129, 107);
 	--gnome-button-suggested-action-active-border-color: rgb(13, 109, 90);
 
-	/* Entries */
-	--gnome-focused-urlbar-border-color: #864780;
-
 	/* Switch */
-	--gnome-switch-active-background: #16A085;
 	--gnome-switch-active-border-color: #1fdab5;
 	--gnome-switch-active-slider-border-color: #1fdab5;
-
-	/* Tabs */
-	--gnome-tabbar-tab-active-border-bottom-color: #16A085;
-	--gnome-tabbar-tab-active-border-bottom-color-contrast: rgb(42, 253, 211);
-	--gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color);
 }
 
 /* Recolor some elements that are blue by default */

@@ -8,6 +8,9 @@
 :root {
 	/* Browser area before a page starts loading */
 	--gnome-browser-before-load-background: #d6d6d6;
+	
+	/* Accent */
+	--gnome-accent: #3584e4;
 
 	/* Toolbars */
 	--gnome-toolbar-background: #e0ddda;
@@ -82,7 +85,8 @@
 	--gnome-inactive-entry-border-color: #d5d0cc;
 	--gnome-inactive-entry-box-shadow: none;
 	--gnome-inactive-entry-color: #323232;
-	--gnome-focused-urlbar-border-color: #4a90d9;
+	--gnome-focused-urlbar-border-color: var(--gnome-accent);
+	--gnome-focused-urlbar-item-hover: var(--gnome-toolbar-background);
 
 	/* Switch */
 	--gnome-switch-background: #e1dedb;
@@ -90,11 +94,11 @@
 	--gnome-switch-slider-background: linear-gradient(to bottom, white 10%, white 90%);
 	--gnome-switch-slider-border-color: #bfb8b1;
 	--gnome-switch-slider-box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
-	--gnome-switch-active-background: #3584e4;
+	--gnome-switch-active-background: var(--gnome-accent);
 	--gnome-switch-active-border-color: #185fb4;
 	--gnome-switch-active-slider-border-color: #185fb4;
 
-/* Tabs */
+  /* Tabs */
 	--gnome-tabbar-tab-color: #2e3436;
 	--gnome-tabbar-tab-background: #dad6d2;
 	--gnome-tabbar-tab-border-color: #bfb8b1;
@@ -113,6 +117,8 @@
 
 /* Private window colors */
 :root {
+	--gnome-private-accent: rgb(132, 77, 179);
+	
 	/* Header bar */
 	--gnome-private-headerbar-background: linear-gradient(to top, rgb(206, 191, 219), rgb(214, 201, 255));
 	--gnome-private-headerbar-border-color: rgb(176, 152, 197);
@@ -140,9 +146,4 @@
 
 	/* Entries */
 	--gnome-private-entry-border-color: rgb(191, 171, 208);
-	--gnome-private-focused-urlbar-border-color: rgb(132, 77, 179);
-
-	/* Tabs */
-	--gnome-private-tabbar-tab-active-border-bottom-color: rgb(132, 77, 179);
 }
-

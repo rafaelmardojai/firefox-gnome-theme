@@ -6,6 +6,9 @@
  * override them. */
 @media (prefers-color-scheme: dark) {
 	:root {
+	  /* Accent */
+		--gnome-accent: #16A085;
+		
 		/* Buttons */
 		--gnome-button-suggested-action-background: linear-gradient(to top, rgb(36, 235, 195) 2px, #16A085);
 		--gnome-button-suggested-action-border-color: #16A085;
@@ -13,16 +16,5 @@
 		--gnome-button-suggested-action-hover-background: linear-gradient(to top, rgb(36, 235, 195), #16A085 1px);
 		--gnome-button-suggested-action-active-background: rgb(16, 129, 107);
 		--gnome-button-suggested-action-active-border-color: rgb(13, 109, 90);
-
-		/* Entries */
-		--gnome-focused-urlbar-border-color: #16A085;
-
-		/* Switch */
-		--gnome-switch-active-background: #16A085;
-
-		/* Tabs */
-		--gnome-tabbar-tab-active-border-bottom-color: #16A085;
-		--gnome-tabbar-tab-active-border-bottom-color-contrast: rgb(42, 253, 211);
-		--gnome-inactive-tabbar-tab-active-border-bottom-color: #16A085;
 	}
 }

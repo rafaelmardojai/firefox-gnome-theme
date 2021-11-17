@@ -68,6 +68,14 @@ toolbarspring {
 	border-radius: 5px !important;
 }
 
+.urlbarView-row[selected] .urlbarView-row-inner {
+	background: var(--gnome-accent) !important;
+	color: white;
+}
+.urlbarView-row:not([selected]):hover .urlbarView-row-inner {
+	background: var(--gnome-focused-urlbar-item-hover) !important;
+}
+
 .urlbarView-action {
 	background: transparent !important;
 }
