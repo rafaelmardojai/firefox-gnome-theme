@@ -58,6 +58,9 @@ button.close,
 	outline: 0 !important;
 	font: menu !important;
 }
+.subviewbutton-iconic {
+	-moz-box-pack: center !important;
+}
 
 /* Buttons with margins */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
