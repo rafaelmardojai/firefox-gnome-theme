@@ -65,10 +65,20 @@ panelview {
 }
 panel:not([remote]), #BMB_bookmarksPopup {
 	--arrowpanel-background: var(--gnome-popover-background) !important;
+	padding: 20px !important;
 }
 
-panelview {
-	padding: 12px !important;
+panel {
+	--panel-padding: 12px !important;
+}
+.panel-no-padding panelview, .panel-no-padding > .panel-subview-body, .panel-no-padding > .panel-header {
+	padding: var(--panel-padding) !important;
+}
+.panel-no-padding > .panel-header {
+	padding-bottom: 0 !important;
+}
+panel[type="arrow"].panel-no-padding::part(content) {
+	padding: var(--panel-padding) !important;
 }
 
 .PanelUI-subView toolbarseparator:not([orient="vertical"]) {
