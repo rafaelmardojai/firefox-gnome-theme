@@ -26,16 +26,6 @@
 	--toolbarbutton-hover-background: transparent !important;
 }
 
-/* Remove icons from the main context menu */
-#contentAreaContextMenu menuitem image,
-#contentAreaContextMenu menu image {
-	visibility: hidden;
-}
-#contentAreaContextMenu menugroup menuitem image,
-#contentAreaContextMenu .menu-right image {
-	visibility: visible;
-}
-
 /* Main menu */
 #appMenu-popup .panel-banner-item:after {
 	-moz-box-ordinal-group: 0;
