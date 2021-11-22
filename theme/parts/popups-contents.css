@@ -193,6 +193,10 @@
     display: none !important;
 }
 
+#permission-popup-permission-list-default-anchor:empty {
+	padding: 0 !important;
+	border: 0 !important;
+}
 .permission-popup-permission-list-anchor[anchorfor="3rdPartyStorage"] {
 	padding: 0 !important;
 }
@@ -203,6 +207,10 @@
 	visibility: hidden;
 	margin: 0 !important;
 	margin-bottom: -1px !important;
+}
+.permission-popup-permission-item-3rdPartyStorage {
+	margin-right: 6px;
+	margin-bottom: 6px !important;
 }
 #permission-popup-storage-access-permission-list-header {
 	padding: 6px !important;
