@@ -152,16 +152,6 @@ git pull origin master
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 
-## Scrollbars
-To achieve Firefox with overlay scrollbars install [firefox-gnome-scrollbars](https://github.com/rafaelmardojai/firefox-gnome-scrollbars).
-
-## Enabling optional features
-Optional features can be enabled by creating new `boolean` preferences in `about:config`.
-
-1. Go to the `about:config` page 
-2. Type the key of the feature you want to enable
-3. Set it as a `boolean` and click on the add button
-4. Restart Firefox
 
 ### Features
 
