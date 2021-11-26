@@ -10,3 +10,6 @@ user_pref("browser.uidensity", 0);
 
 // Enable SVG context-propertes
 user_pref("svg.context-properties.content.enabled", true);
+
+// Enable overlay scrollbars
+user_pref("ui.useOverlayScrollbars", 1);
