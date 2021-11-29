@@ -13,8 +13,15 @@ menupopup {
 	color: var(--gnome-toolbar-color) !important;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
+menupopup[placespopup="true"] {
+	background: var(--gnome-popover-background) !important;
+	padding: 4px !important;
+}
 .menupopup-arrowscrollbox {
+	background: none !important;
+	box-shadow: none !important;
 	border: 0 !important;
+	padding: 0 !important;
 }
 menupopup menupopup {
 	margin: -5px 0 0 -4px;
@@ -28,6 +35,7 @@ menubar > menu > menupopup {
 menuitem, menupopup menu {
 	-moz-appearance: none !important;
 	padding: 4px 8px !important;
+	margin: 0 !important;
 }
 
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {
@@ -121,7 +129,8 @@ panel[type="arrow"].panel-no-padding::part(content) {
 /* Style popovers menu buttons */
 .subviewbutton:not(#appMenu-fxa-label2),
 .toolbarbutton-1, .protections-popup-category,
-.identity-popup-content-blocking-category {
+.identity-popup-content-blocking-category,
+.bookmark-item {
 	border-radius: 5px !important;	
 	color: var(--gnome-toolbar-color) !important;
 	font: menu !important;
@@ -144,8 +153,12 @@ panel[type="arrow"].panel-no-padding::part(content) {
 	opacity: 0.5 !important;
 }
 
+.bookmark-item .menu-right {
+	fill-opacity: 1 !important;
+}
+
 .subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
-.identity-popup-content-blocking-category:not([disabled]):hover {
+.identity-popup-content-blocking-category:not([disabled]):hover, .bookmark-item:hover, .bookmark-item[open], .bookmark-item[_moz-menuactive] {
 	background-color: var(--gnome-popover-button-hover-background) !important;
 }
 
