@@ -153,6 +153,14 @@ git pull origin master
 2. Remove `chrome` folder.
 
 
+## Enabling optional features
+Optional features can be enabled by creating new `boolean` preferences in `about:config`.
+
+1. Go to the `about:config` page 
+2. Type the key of the feature you want to enable
+3. Set it as a `boolean` and click on the add button
+4. Restart Firefox
+
 ### Features
 
 - **Hide single tab** `gnomeTheme.hideSingleTab`
