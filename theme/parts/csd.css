@@ -122,13 +122,14 @@
 	border-color: transparent !important;
 	border-radius: 5px !important;	
 	padding: 0 2px !important;
+    background: var(--gnome-button-close-background);
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button {
 	border-radius: 100% !important;
-	height: 30px !important;
-	margin: 2px 5px !important;
-	width: 30px;
+	height: 22px !important;
+	margin: 7px 15px !important;
+	width: 22px !important;
 }
 
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
