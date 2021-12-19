@@ -321,6 +321,18 @@ tab[selected]:-moz-window-inactive {
 	display: none !important;
 }
 
+/* Pinned tab sound indicator */
+.tab-icon-overlay:is([pinned], [sharing]):not([crashed]) {
+	background: rgba(255, 255, 255, 0.5) !important;
+    stroke: unset !important;
+}
+.tab-icon-overlay:is([pinned], [sharing]):not([crashed]):hover {
+	background: rgba(255, 255, 255, 0.8) !important;
+}
+.tabbrowser-tab[pinned] {
+	max-width: 37px !important;
+}
+
 /* Remove container bottom line indicator */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	display: none;
