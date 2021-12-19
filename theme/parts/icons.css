@@ -71,8 +71,8 @@ treechildren::-moz-tree-image {
 }
 
 /* Icons active color */
-menu:not([disabled]):not(.bookmark-item):hover > .menu-right,
-menu:not([disabled]):not(.bookmark-item)[open] > .menu-right,
+menu:not([disabled]):not(#PlacesToolbar .bookmark-item):hover > .menu-right,
+menu:not([disabled]):not(#PlacesToolbar .bookmark-item)[open] > .menu-right,
 treechildren::-moz-tree-twisty(selected, focus),
 treechildren::-moz-tree-twisty(selected, focus, open),
 treechildren::-moz-tree-image(selected, focus),
