@@ -2,6 +2,10 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+window {
+	padding: 0 !important;
+}
+
 /* Browser dialog prompts center */
 .content-prompt {
     display: flex !important;
@@ -11,7 +15,7 @@
 
 /* Dialog */
 .dialogBox {
-    border-radius: 9px !important;
+	border-radius: 9px !important;
 	margin-top: 0 !important;
 }
 

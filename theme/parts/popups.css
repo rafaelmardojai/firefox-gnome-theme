@@ -1,6 +1,5 @@
 /* Popup menus and context menus */
 
-@import "popups-contents.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Style menus */
@@ -13,7 +12,7 @@ menupopup {
 	color: var(--gnome-toolbar-color) !important;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
-menupopup[placespopup="true"] {
+#PlacesToolbar menupopup {
 	background: var(--gnome-popover-background) !important;
 	padding: 4px !important;
 }
@@ -22,14 +21,7 @@ menupopup[placespopup="true"] {
 	box-shadow: none !important;
 	border: 0 !important;
 	padding: 0 !important;
-}
-menupopup menupopup {
-	margin: -5px 0 0 -4px;
-}
-
-menubar > menu > menupopup {
-	border-top-left-radius: 0 !important;
-	border-top-right-radius: 0 !important;
+	margin: 0 !important;
 }
 
 menuitem, menupopup menu {
@@ -130,7 +122,7 @@ panel[type="arrow"].panel-no-padding::part(content) {
 .subviewbutton:not(#appMenu-fxa-label2),
 .toolbarbutton-1, .protections-popup-category,
 .identity-popup-content-blocking-category,
-.bookmark-item {
+#PlacesToolbar .bookmark-item {
 	border-radius: 5px !important;	
 	color: var(--gnome-toolbar-color) !important;
 	font: menu !important;
@@ -158,7 +150,7 @@ panel[type="arrow"].panel-no-padding::part(content) {
 }
 
 .subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
-.identity-popup-content-blocking-category:not([disabled]):hover, .bookmark-item:hover, .bookmark-item[open], .bookmark-item[_moz-menuactive] {
+.identity-popup-content-blocking-category:not([disabled]):hover, #PlacesToolbar .bookmark-item:hover, #PlacesToolbar .bookmark-item[open], #PlacesToolbar .bookmark-item[_moz-menuactive] {
 	background-color: var(--gnome-popover-button-hover-background) !important;
 }
 
@@ -188,32 +180,3 @@ toolbarseparator:not([orient="vertical"]) {
 toolbarseparator[orient="vertical"] {
 	margin: 0 3px !important;
 }
-
-/* Auto complete popups */
-panel[type="autocomplete-richlistbox"] {
-	background: var(--gnome-menu-background) !important;
-	border: 1px solid var(--gnome-menu-border-color) !important;
-	padding: 4px 0 !important;
-	color: var(--gnome-toolbar-color) !important;
-}
-.autocomplete-richlistbox {
-	margin: 0 !important;
-}
-
-.autocomplete-richlistitem:not([type="loginsFooter"]) {
-	color: var(--gnome-toolbar-color) !important;
-	font: menu !important;
-	margin: 0 !important;
-}
-.autocomplete-richlistitem:not([type="loginsFooter"]) .ac-site-icon {
-	fill: var(--gnome-toolbar-color) !important;
-	opacity: 0.5;
-}
-.autocomplete-richlistitem:not([type="loginsFooter"]):hover {
-	color: #fff !important;
-	background-color: Highlight !important;
-}
-.autocomplete-richlistitem:not([type="loginsFooter"]):hover .ac-site-icon {
-	fill: #fff !important;
-}
-
