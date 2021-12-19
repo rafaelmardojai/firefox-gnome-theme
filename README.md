@@ -33,7 +33,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 1. Clone this repo and enter folder:
 	
 	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme && cd firefox-gnome-theme
+	git clone https://github.com/CleoMenezes/firefox-gnome-theme && cd firefox-gnome-theme
 	```
 2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step. 
 	```sh
