@@ -180,32 +180,3 @@ toolbarseparator:not([orient="vertical"]) {
 toolbarseparator[orient="vertical"] {
 	margin: 0 3px !important;
 }
-
-/* Auto complete popups */
-panel[type="autocomplete-richlistbox"] {
-	background: var(--gnome-menu-background) !important;
-	border: 1px solid var(--gnome-menu-border-color) !important;
-	padding: 4px 0 !important;
-	color: var(--gnome-toolbar-color) !important;
-}
-.autocomplete-richlistbox {
-	margin: 0 !important;
-}
-
-.autocomplete-richlistitem:not([type="loginsFooter"]) {
-	color: var(--gnome-toolbar-color) !important;
-	font: menu !important;
-	margin: 0 !important;
-}
-.autocomplete-richlistitem:not([type="loginsFooter"]) .ac-site-icon {
-	fill: var(--gnome-toolbar-color) !important;
-	opacity: 0.5;
-}
-.autocomplete-richlistitem:not([type="loginsFooter"]):hover {
-	color: #fff !important;
-	background-color: Highlight !important;
-}
-.autocomplete-richlistitem:not([type="loginsFooter"]):hover .ac-site-icon {
-	fill: #fff !important;
-}
-
