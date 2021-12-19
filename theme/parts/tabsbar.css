@@ -280,11 +280,6 @@ tab[selected]:-moz-window-inactive {
 	margin-top: 0 !important;
 }
 
-/* Remove blue line above tabs */
-.tab-line {
-	display: none;
-}
-
 /* Active tab */
 .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-background) !important;
