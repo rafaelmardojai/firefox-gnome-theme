@@ -15,7 +15,7 @@
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
 	border: 1px solid var(--gnome-entry-border-color) !important;
-	border-radius: 5px !important;
+	border-radius: 8px !important;
 	box-shadow: var(--gnome-entry-box-shadow) !important;
 	color: var(--gnome-entry-color) !important;
 	height: 34px !important;
