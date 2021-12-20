@@ -200,7 +200,7 @@ tab[selected]:-moz-window-inactive {
 
 /* Close tab button */
 :root {	
-	--gnome-fill-icon: red !important;
+    --gnome-fill-icon: #CDCDCD !important;
 }
 .tab-close-button {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
