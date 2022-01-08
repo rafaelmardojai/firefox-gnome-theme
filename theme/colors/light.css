@@ -29,10 +29,10 @@
 	/* Popups */
 	--gnome-menu-background: #ffffff;
 	--gnome-menu-border-color: #cdc7c2;
-	--gnome-popover-background: #f6f5f4;
+	--gnome-popover-background: #ffffff;
 	--gnome-popover-border-color: #cdc7c2;
 	--gnome-popover-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-	--gnome-popover-button-hover-background: #ffffff;
+	--gnome-popover-button-hover-background: #ebebeb;
 	--gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
