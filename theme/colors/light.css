@@ -29,10 +29,10 @@
 	/* Popups */
 	--gnome-menu-background: #ffffff;
 	--gnome-menu-border-color: #cdc7c2;
-	--gnome-popover-background: #f6f5f4;
+	--gnome-popover-background: #ffffff;
 	--gnome-popover-border-color: #cdc7c2;
 	--gnome-popover-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-	--gnome-popover-button-hover-background: #ffffff;
+	--gnome-popover-button-hover-background: #ebebeb;
 	--gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
@@ -48,7 +48,7 @@
 	--gnome-button-border-color: none;
 	--gnome-button-border-accent-color: none;
 	--gnome-button-box-shadow: none;
-	--gnome-button-hover-background: #E5E2E1;
+	--gnome-button-hover-background: #DEDEDE;
 	--gnome-button-active-background: #CDCDCD;
 	--gnome-button-active-border-color: none;
 	--gnome-button-active-border-accent-color: #bab3ab;
@@ -97,7 +97,8 @@
 	--gnome-switch-active-background: var(--gnome-accent);
 	--gnome-switch-active-border-color: #185fb4;
 	--gnome-switch-active-slider-border-color: #185fb4;
-  /* Tabs */
+
+	/* Tabs */
 	--gnome-tabbar-tab-color: #303030;
 	--gnome-tabbar-tab-background: #E1E1E1;
 	--gnome-tabbar-tab-border-color: #D5D5D5;
@@ -106,7 +107,7 @@
 	--gnome-tabbar-tab-active-background: #EBEBEB;
 	--gnome-tabbar-tab-active-background-contrast: #EBEBEB;
 	--gnome-tabbar-tab-active-color: #303030;
-	--gnome-tabbar-tab-active-hover-background: #E1E1E1;
+	--gnome-tabbar-tab-active-hover-background: #E5E5E5;
 	--gnome-inactive-tabbar-tab-color: #303030;
 	--gnome-inactive-tabbar-tab-background: #EFEFEF;
 	--gnome-inactive-tabbar-tab-active-background: #FAFAFA;
@@ -146,3 +147,4 @@
 	/* Entries */
 	--gnome-private-entry-border-color: rgb(191, 171, 208);
 }
+
