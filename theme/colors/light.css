@@ -40,7 +40,7 @@
 	--gnome-headerbar-border-color: #D5D5D5;
 	--gnome-headerbar-box-shadow: none;
 	--gnome-inactive-headerbar-background: #FAFAFA;
-	--gnome-inactive-headerbar-border-color: #d5d0cc;
+	--gnome-inactive-headerbar-border-color: #DCDCDC;
 	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
 
 	/* Buttons */
@@ -105,7 +105,7 @@
 	--gnome-tabbar-tab-hover-background: #DCDCDC;
 	--gnome-tabbar-tab-hover-color: #303030;
 	--gnome-tabbar-tab-active-background: #EBEBEB;
-	--gnome-tabbar-tab-active-background-contrast: #EBEBEB;
+	--gnome-tabbar-tab-active-background-contrast: #FAFAFA;
 	--gnome-tabbar-tab-active-color: #303030;
 	--gnome-tabbar-tab-active-hover-background: #E5E5E5;
 	--gnome-inactive-tabbar-tab-color: #303030;
