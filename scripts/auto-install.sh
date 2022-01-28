@@ -6,6 +6,7 @@ themeNames=("pop" "pop" "pop" "yaru" "yaru" "yaru" "maia" "maia")
 firefoxInstalationPaths=(
     ~/.mozilla/firefox
     ~/.var/app/org.mozilla.firefox/.mozilla/firefox
+    ~/snap/firefox/common/.mozilla/firefox
 )
 
 currentTheme=$(gsettings get org.gnome.desktop.interface gtk-theme ) || currentTheme=""
