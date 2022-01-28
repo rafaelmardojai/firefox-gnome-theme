@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
 THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
-FIREFOXFOLDER=~/.mozilla/firefox
+if [[ -f "~/snap" ]]
+    then
+    FIREFOXFOLDER=~/snap/firefox/common/.mozilla/firefox
+    else
+    FIREFOXFOLDER=~/.mozilla/firefox
+fi
 PROFILENAME=""
 THEME=DEFAULT
 
