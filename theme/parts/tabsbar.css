@@ -164,13 +164,13 @@ tab[selected]:-moz-window-inactive {
 	min-width: 0 !important;
 }
 
-/* Put tab close button and icon sound to the right */
+/* Put tab close button to the right */
 .tabbrowser-tab .tab-close-button {
 	margin-left: auto !important;
 }
 
 /* Force tab favicon to the center */
-.tabbrowser-tab:not([class*="identity-color-"]) .tab-icon-stack {
+.tabbrowser-tab .tab-icon-stack {
 	margin-left: auto !important;
 }
 
@@ -242,37 +242,11 @@ tab[selected]:-moz-window-inactive {
 .tabbrowser-tab:not([pinned]) .tab-label-container {
 	margin-right: -16px;
 }
+.tabbrowser-tab:not([pinned]):is([selected="true"], :hover) .tab-label-container[textoverflow="true"] {
+	margin-right: 0;
+}
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([pinned]) .tab-close-button {
 	display: block !important;
-}
-
-/* Close button overlay */
-.tabbrowser-tab:not([pinned]) .tab-content::after {
-	background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
-	bottom: 1px;
-	content: "";
-	height: 100%;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-	width: 55px;
-	z-index: 99;
-	transition: all 0.2s ease-out;
-}
-.tabbrowser-tab:not([pinned], :-moz-window-inactive):is([selected="true"], :hover) .tab-content::after {
-	opacity: 1;
-}
-.tabbrowser-tab:not([pinned])[selected="true"] .tab-content::after {
-	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
-}
-:root:not(:-moz-window-inactive) .tabbrowser-tab:not([pinned])[selected="true"]:hover .tab-content::after {
-	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background);
-}
-.tabbrowser-tab:not([pinned]):hover .tab-content::after {
-	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
-}
-.tabbrowser-tab:not([pinned])[selected="true"]:-moz-window-inactive .tab-content::after {
-	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-inactive-tabbar-tab-active-background);
 }
 
 /* Tab close button etc. positioning */
