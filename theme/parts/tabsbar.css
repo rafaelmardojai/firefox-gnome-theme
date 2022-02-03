@@ -249,6 +249,41 @@ tab[selected]:-moz-window-inactive {
 	display: block !important;
 }
 
+/* Close button overlay */
+.tabbrowser-tab:not([pinned]) .tab-content::after, .tabbrowser-tab:not([pinned]) .tab-content::before {
+	bottom: 1px;
+	content: "";
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	transition: all 0.2s ease-out;
+	width: 55px;
+}
+.tabbrowser-tab:not([pinned]) .tab-content::after {
+	background: transparent;
+	z-index: 90;
+}
+.tabbrowser-tab:not([pinned]) .tab-content::before {
+	background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
+	z-index: 99;
+}
+.tabbrowser-tab:not([pinned], :-moz-window-inactive):is([selected="true"], :hover) .tab-content::before {
+	opacity: 1;
+}
+.tabbrowser-tab:not([pinned])[selected="true"] .tab-content::before {
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
+}
+:root:not(:-moz-window-inactive) .tabbrowser-tab:not([pinned])[selected="true"]:hover .tab-content::before {
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background);
+}
+.tabbrowser-tab:not([pinned]):hover .tab-content::before {
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
+}
+.tabbrowser-tab:not([pinned])[selected="true"]:-moz-window-inactive .tab-content::before {
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-inactive-tabbar-tab-active-background);
+}
+
 /* Tab close button etc. positioning */
 .tab-throbber, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-sound, .tab-close-button {
 	margin-top: 0 !important;
@@ -314,17 +349,38 @@ tab[selected]:-moz-window-inactive {
 
 /* Create new container tab indicator */
 .tabbrowser-tab[class*="identity-color-"] .tab-background:not(#hack)  { /* Normal */
-	background: var( --identity-tab-color) !important;
+	background: var(--identity-tab-color) !important;
 	opacity: .2;
 }
 :root:not(:-moz-window-inactive) .tabbrowser-tab[class*="identity-color-"]:hover > .tab-stack > .tab-background:not([selected=true]) {  /* Hover */
-    opacity: .3 !important;
+    opacity: .2 !important;
 }
 .tabbrowser-tab[class*="identity-color-"] .tab-background[selected=true] {  /* Active */
-	opacity: .5 !important;;
+	opacity: .4 !important;;
 }
 :root:not(:-moz-window-inactive) .tabbrowser-tab[class*="identity-color-"]:hover > .tab-stack > .tab-background[selected=true] { /* Active + Hover */
-	opacity: .6 !important;
+	opacity: .4 !important;
+}
+
+.tabbrowser-tab[class*="identity-color-"]:not([pinned], :-moz-window-inactive):is([selected="true"], :hover) .tab-content::after {
+	background: linear-gradient(to left, var(--gnome-tabbar-tab-background) 50%, transparent);
+	opacity: 1;
+}
+.tabbrowser-tab[class*="identity-color-"]:not([pinned])[selected="true"] .tab-content::before,
+:root:not(:-moz-window-inactive) .tabbrowser-tab[class*="identity-color-"]:not([pinned])[selected="true"]:hover .tab-content::before,
+.tabbrowser-tab[class*="identity-color-"]:not([pinned]):hover .tab-content::before,
+.tabbrowser-tab[class*="identity-color-"]:not([pinned])[selected="true"]:-moz-window-inactive .tab-content::before {
+	--gnome-tabbar-tab-close-overlay-bg: var(--identity-tab-color)  !important;
+}
+.tabbrowser-tab[class*="identity-color-"]:not([pinned])[selected="true"] .tab-content::before,
+:root:not(:-moz-window-inactive) .tabbrowser-tab[class*="identity-color-"]:not([pinned])[selected="true"]:hover .tab-content::before {
+	opacity: .4;
+}
+.tabbrowser-tab[class*="identity-color-"]:not([pinned]):hover .tab-content::before {
+	opacity: .2;
+}
+.tabbrowser-tab[class*="identity-color-"]:not([pinned])[selected="true"]:-moz-window-inactive .tab-content::before {
+	opacity: .1;
 }
 
 /* OPTIONAL: GNOME spinner */
