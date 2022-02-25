@@ -8,7 +8,7 @@
 
 /* Headerbar top border corners rounded */
 :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
-	border-radius: 7px 7px 0 0 !important;
+	border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important;
 }
 
 /* Window buttons: at least 1 button */
