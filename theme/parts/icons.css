@@ -476,7 +476,7 @@ button.close::before {
   list-style-image: url("../icons/security-low-symbolic.svg") !important;
 }
 #urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon {
-  list-style-image: url()"../icons/security-high-symbolic.svg") !important;
+  list-style-image: url("../icons/security-high-symbolic.svg") !important;
 }
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
