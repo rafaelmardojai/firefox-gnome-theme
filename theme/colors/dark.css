@@ -117,34 +117,34 @@
 
 	/* Private window colors */
 	:root {
-		--gnome-private-accent: rgb(158, 70, 224);
+		--gnome-private-accent: #5A79A4;
 		
 		/* Header bar */
-		--gnome-private-headerbar-background: linear-gradient(to top, rgb(81, 44, 109), rgb(86, 47, 116));
-		--gnome-private-headerbar-border-color: rgb(49, 27, 66);
-		--gnome-private-headerbar-box-shadow: 0 1px rgba(255, 255, 255, .07) inset;
-		--gnome-private-inactive-headerbar-background: #613583;
-		--gnome-private-inactive-headerbar-border-color: rgb(77, 41, 102);
+		--gnome-private-headerbar-background: #252F49;
+		--gnome-private-headerbar-border-color: #3F475E;
+		--gnome-private-headerbar-box-shadow: none;
+		--gnome-private-inactive-headerbar-background: #1C2438;
+		--gnome-private-inactive-headerbar-border-color: #3A4152;
 		--gnome-private-inactive-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow);
 
 		/* Buttons */
-		--gnome-private-button-background: linear-gradient(to top, rgb(94, 52, 127) 2px, rgb(97, 53, 131));
-		--gnome-private-button-border-color: rgb(70, 38, 95);
-		--gnome-private-button-border-accent-color: rgb(49, 27, 66);
-		--gnome-private-button-box-shadow: 0 1px rgba(255, 255, 255, .02) inset, 0 1px 2px rgba(0, 0, 0, .07);
-		--gnome-private-button-hover-background: linear-gradient(to top, rgb(94, 52, 127), rgb(100, 54, 135) 1px);
-		--gnome-private-button-active-background: rgb(73, 40, 98);
-		--gnome-private-button-active-border-color: rgb(62, 34, 84);
-		--gnome-private-button-active-border-accent-color: rgb(49, 27, 66);
-		--gnome-private-button-active-box-shadow: 0 1px rgba(255, 255, 255, 0) inset;
-		--gnome-private-button-disabled-background: #613583;
-		--gnome-private-button-disabled-border-color: rgb(74, 41, 102);
-		--gnome-private-button-disabled-box-shadow:  0 1px rgba(255, 255, 255, 0) inset;
-		--gnome-private-inactive-button-background: #613583;
-		--gnome-private-inactive-button-border-color: rgb(74, 41, 102);
-		--gnome-private-inactive-button-box-shadow:  0 1px rgba(255, 255, 255, 0) inset;
+		--gnome-private-button-background: #252F49;
+		--gnome-private-button-border-color: none;
+		--gnome-private-button-border-accent-color: none;
+		--gnome-private-button-box-shadow: none;
+		--gnome-private-button-hover-background: #343E56;
+		--gnome-private-button-active-background: var(--gnome-private-button-background);
+		--gnome-private-button-active-border-color: none;
+		--gnome-private-button-active-border-accent-color: none;
+		--gnome-private-button-active-box-shadow: none;
+		--gnome-private-button-disabled-background: #252F49;
+		--gnome-private-button-disabled-border-color: none;
+		--gnome-private-button-disabled-box-shadow:  none;
+		--gnome-private-inactive-button-background: #1C2438;
+		--gnome-private-inactive-button-border-color: none;
+		--gnome-private-inactive-button-box-shadow:  none;
 
 		/* Entries */
-		--gnome-private-entry-border-color: #202020;
+		--gnome-private-entry-border-color: none;
 	}
 }
