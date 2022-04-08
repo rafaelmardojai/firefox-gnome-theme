@@ -127,9 +127,9 @@
 
 :root[tabsintitlebar] #titlebar .titlebar-button {
 	border-radius: 100% !important;
-	height: 22px !important;
-	margin: 7px 15px !important;
-	width: 22px !important;
+	height: 24px !important;
+	margin: 5px 7px !important;
+	width: 24px !important;
 }
 
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
@@ -143,8 +143,8 @@
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {
 	width: 16px;
 }
-:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button .toolbarbutton-icon,
-:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton .toolbarbutton-icon {
+:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button,
+:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton {
 	opacity: .3 !important;
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):hover,
