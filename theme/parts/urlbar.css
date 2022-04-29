@@ -53,7 +53,7 @@ toolbarspring {
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
 	overflow-x: auto;
-	padding: 0 8px !important;
+	padding: 0 20px !important;
 }
 
 .urlbarView-body-inner {
