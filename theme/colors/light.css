@@ -13,13 +13,13 @@
 	--gnome-accent: #83ADE1;
 
 	/* Toolbars */
-	--gnome-toolbar-background: #F8F7F7;
+	--gnome-toolbar-background: var(--gnome-headerbar-background);
 	--gnome-toolbar-color: rgb(46, 52, 54);
-	--gnome-toolbar-border-color: #D5D5D5;
+	--gnome-toolbar-border-color: var(--gnome-headerbar-border-color);
 	--gnome-toolbar-icon-fill: #2e3436;
-	--gnome-inactive-toolbar-background: #f6f5f4;
+	--gnome-inactive-toolbar-background: var(--gnome-inactive-headerbar-background);
 	--gnome-inactive-toolbar-color: #d5d0cc;
-	--gnome-inactive-toolbar-border-color: #d5d0cc;
+	--gnome-inactive-toolbar-border-color: var(--gnome-inactive-headerbar-border-color);
 	--gnome-inactive-toolbar-icon-fill: #929595;
 
 	/* Sidebar */
