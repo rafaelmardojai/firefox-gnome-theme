@@ -23,7 +23,7 @@
 	--gnome-inactive-toolbar-icon-fill: #929595;
 
 	/* Sidebar */
-	--gnome-sidebar-background: #FAFAFA;
+	--gnome-sidebar-background: var(--gnome-headerbar-background);
 	--gnome-inactive-sidebar-background: var(--gnome-sidebar-background);
 
 	/* Popups */
