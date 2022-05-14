@@ -29,31 +29,29 @@ toolbarspring {
 	z-index: 5 !important;
 	padding: 0 !important;
 }
-#urlbar[breakout][breakout-extend][open] {
-	height: auto !important;
-	max-height: unset !important;
-}
+
 #urlbar #urlbar-input-container {
 	padding: 0 !important;
-}
-#urlbar[breakout][breakout-extend] #urlbar-input-container {
-	height: 32px !important;
-	max-height: 32px !important;
 }
 
 /* URL bar results */
 .urlbarView {
 	background: transparent !important;
 	color: var(--gnome-toolbar-color) !important;
-	margin: 0 !important;
+	margin: 10px 0 0 0 !important;
 	width: 100% !important;
+    position: absolute !important;
+    box-shadow: var(--gnome-popover-shadow) !important;
+    border-radius: 8px !important
 }
 
 .urlbarView-body-outer {
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
+    background: var(--gnome-urlbar-view) !important;
 	overflow-x: auto;
-	padding: 0 20px !important;
+	padding: 0 8px !important;
+    border-radius: 8px 8px 0 0 !important;
 }
 
 .urlbarView-body-inner {
@@ -69,10 +67,11 @@ toolbarspring {
 }
 
 .urlbarView-row[selected] .urlbarView-row-inner {
-	background: var(--gnome-accent) !important;
-	color: white;
+	background: transparent !important;
+    outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 }
-.urlbarView-row:not([selected]):hover .urlbarView-row-inner {
+.urlbarView-row:hover .urlbarView-row-inner {
 	background: var(--gnome-focused-urlbar-item-hover) !important;
 }
 
@@ -82,17 +81,16 @@ toolbarspring {
 
 /* Search engines buttons */	
 .search-one-offs {
-	margin-bottom: 2px !important;
 	padding: 8px !important;
-	background: var(--gnome-popover-background) !important;
-	border-top: 1px solid var(--gnome-popover-border-color) !important;
-	border-radius: 0 0 5px 5px !important;
+	background: var(--gnome-urlbar-view) !important;
+	border-top: 1px solid var(--gnome-headerbar-border-color) !important;
+	border-radius: 0 0 8px 8px !important;
 }
 
 #urlbar-anon-search-settings-compact {
 	border-left-width: 1px !important;
 	border-bottom: 1px solid var(--gnome-button-border-accent-color) !important;
-	border-radius: 5px;	
+	border-radius: 5px;
 	margin-left: 6px !important;
 }
 
