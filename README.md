@@ -170,14 +170,6 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too. See [#54](https://github.com/rafaelmardojai/firefox-gnome-theme/issues/54).
 
-- **Spinner** `gnomeTheme.spinner`
-
-	Use the GNOME spinner for tabs loading.
-
-	> **Note:** This is optional because Firefox has issues rendering the spinner SVG:
-	>
-	> <img src="theme/icons/process-working-symbolic.svg" alt="GTK Spinner" width="50"/>
-
 - **Normal width tabs** `gnomeTheme.normalWidthTabs`
 
 	Use normal width tabs as default Firefox.
