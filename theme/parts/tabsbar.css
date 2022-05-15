@@ -159,6 +159,12 @@ tab[selected]:-moz-window-inactive {
 	min-width: 16px;
 }
 
+/* Center tab icon contents */
+.tabbrowser-tab .tab-icon-stack {
+	align-items: center;
+	justify-items: center;
+}
+
 /* Adjust tab label width */
 .tab-label-container {
 	min-width: 0 !important;
@@ -178,6 +184,25 @@ tab[selected]:-moz-window-inactive {
 .tabbrowser-tab:not([pinned]) .tab-icon-stack {
 	margin-right: 2px;
 }
+.tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
+  margin-inline-end: 0 !important;
+}
+.tabbrowser-tab:not([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-stack {
+	padding: 4px;
+}
+
+/* Hide favicon when mute icon is present */
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-image {
+	display: none;
+}
+/* Always show the muted icon when poresent */
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tabbrowser-tab:not(:hover) .tab-icon-overlay[indicator-replaces-favicon] {
+	opacity: 1 !important;
+}
+/* Hide secondary label about muting */
+.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-secondary-label {
+	display: none;
+}
 
 /* Tab buttons */
 .tab-icon-overlay,
@@ -196,6 +221,13 @@ tab[selected]:-moz-window-inactive {
 
 .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) image {
 	 margin: auto !important;
+}
+
+/* Icon overlay smaller if pinned */
+.tabbrowser-tab[pinned] .tab-icon-overlay {
+	width: 12px !important;
+    height: 12px !important;
+	padding: 2px !important;
 }
 
 /* Close tab button */
