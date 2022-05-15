@@ -107,6 +107,9 @@ tab > stack {
 #tabbrowser-tabs[overflow=true] .tabbrowser-tab[first-visible-unpinned-tab] {
 	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 }
+#tabbrowser-tabs[movingtab=true] .tabbrowser-tab[selected=true] {
+	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
+}
 
 /* Tab labels */
 tab {
