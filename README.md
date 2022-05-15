@@ -1,15 +1,16 @@
-<h1 align="center">
-	<img src="icon.svg" alt="Firefox GNOME theme" width="100" height="100"/><br>
- Firefox GNOME theme
-</h1>
+<img src="icon.svg" alt="Firefox GNOME theme" width="128" align="left"/>
+
+# Firefox GNOME theme
 
 [![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
 [![Liberapay](https://img.shields.io/liberapay/receives/rafaelmardojai.svg?logo=liberapay)](https://liberapay.com/rafaelmardojai/donate)
 
-<p align="center"><strong>A GNOME theme for Firefox</strong></p>
+<br>
 
-<p align="center">This theme follows lastest GNOME Adwaita style.</p>
+**A GNOME theme for Firefox**
+
+This theme follows lastest GNOME Adwaita style.
 
 ![Screenshot of the theme](screenshot.png)
 
