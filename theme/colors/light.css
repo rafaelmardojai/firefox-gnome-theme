@@ -71,7 +71,7 @@
 	--gnome-button-hover-close-background: #CECECE;
 
 	/* Entries */
-	--gnome-entry-background: #D9D9D9;
+	--gnome-entry-background: rgba(0, 0, 0, .08);
 	--gnome-entry-border-color: none;
 	--gnome-entry-box-shadow: none;
 	--gnome-entry-color: #303030;

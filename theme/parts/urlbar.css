@@ -83,7 +83,7 @@ toolbarspring {
 .search-one-offs {
 	padding: 8px !important;
 	background: var(--gnome-urlbar-view) !important;
-	border-top: 1px solid var(--gnome-headerbar-border-color) !important;
+	border-top: 1px solid var(--gnome-popover-separator-color) !important;
 	border-radius: 0 0 8px 8px !important;
 }
 

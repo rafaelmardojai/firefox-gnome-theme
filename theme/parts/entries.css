@@ -41,19 +41,6 @@
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
 }
-@media (prefers-color-scheme: dark) {
-	#searchbar:focus-within,
-	#search-box[focused], 
-	.findbar-textbox[focused],
-	.findbar-textbox:focus,
-	#loginTextbox:focus,
-	#password1Textbox:focus,
-	.tabsFilter[focused],
-	#editBMPanel_namePicker:focus-visible,
-	#editBMPanel_tagsField:focus-visible {		
-		outline-width: 1px !important;
-	}
-}
 
 /* Inactive window entries */
 #urlbar:-moz-window-inactive,
