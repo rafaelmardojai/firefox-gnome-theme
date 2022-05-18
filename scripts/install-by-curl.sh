@@ -5,6 +5,8 @@ FILENAME=firefox-gnome-theme-$VERSION.tar.gz
 
 (
 
+cd $(mktemp -d) || exit 1
+
 curl -LJo $FILENAME https://github.com/rafaelmardojai/firefox-gnome-theme/tarball/$VERSION
 
 tar -xzf $FILENAME --strip-components=1
