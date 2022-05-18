@@ -66,9 +66,10 @@
 		--gnome-button-destructive-action-active-background: #3D3E3D;
 		--gnome-button-destructive-action-active-border-color: none;
 		--gnome-button-destructive-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-		--gnome-button-close-background: #444444;
-		--gnome-button-active-close-background: #6F6F6F;
-		--gnome-button-hover-close-background: #4f4f4f;
+
+		--gnome-button-close-background: var(--gnome-button-flat-hover-background);
+		--gnome-button-hover-close-background:var(--gnome-button-hover-background);
+		--gnome-button-active-close-background: var(--gnome-button-active-background);
 
 		/* Entries */
 		--gnome-entry-background: rgba(255, 255, 255, .1);

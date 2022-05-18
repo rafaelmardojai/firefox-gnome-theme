@@ -118,9 +118,6 @@
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-appearance: none !important;
-	border: 1px solid var(--gnome-button-border-color) !important;
-	border-color: transparent !important;
-	border-radius: 5px !important;	
 	padding: 0 2px !important;
     background: var(--gnome-button-close-background);
 }
@@ -133,7 +130,7 @@
 }
 
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
-	border-radius: 5px !important;
+	border-radius: 6px !important;
 	height: 34px;
 	margin: 0 3px !important;
 	width: 34px;
@@ -149,16 +146,11 @@
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):hover,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
-	background-image: var(--gnome-button-hover-background);
-	border-color: var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-	box-shadow: var(--gnome-button-box-shadow);
+	background: var(--gnome-button-hover-background);
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):active,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
 	background: var(--gnome-button-active-close-background);
-	box-shadow: var(--gnome-button-active-box-shadow);
-	border-color: var(--gnome-button-active-border-color) !important;
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button:where(:hover) {
