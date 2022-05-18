@@ -195,13 +195,11 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Hide favicon when mute icon is present */
-.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-image {
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-image:not([sharing]),
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked], [crashed])[selected] .tab-icon-image {
 	display: none;
 }
-/* Always show the muted icon when poresent */
-#tabbrowser-tabs:not([secondarytext-unsupported]) .tabbrowser-tab:not(:hover) .tab-icon-overlay[indicator-replaces-favicon] {
-	opacity: 1 !important;
-}
+
 /* Hide secondary label about muting */
 .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-secondary-label {
 	display: none;
@@ -219,18 +217,38 @@ tab[selected]:-moz-window-inactive {
 }
 :root:not(:-moz-window-inactive) .tab-icon-overlay:hover,
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
-	background-image: var(--gnome-tabbar-close-hover);
+	background: var(--gnome-tabbar-close-hover) !important;
 }
 
 .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) image {
 	 margin: auto !important;
 }
 
-/* Icon overlay smaller if pinned */
-.tabbrowser-tab[pinned] .tab-icon-overlay {
+/* Always show the muted icon when poresent */
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tabbrowser-tab:not(:hover) .tab-icon-overlay[indicator-replaces-favicon] {
+	opacity: 1 !important;
+}
+
+/* Icon overlay smaller */
+.tab-icon-overlay[pinned], .tab-icon-overlay:not([indicator-replaces-favicon="true"], [selected]) {
 	width: 12px !important;
     height: 12px !important;
 	padding: 2px !important;
+}
+/* Icon overlay small style */
+.tab-icon-overlay:is([pinned], [sharing]):not([crashed]) {
+    stroke: unset !important;
+}
+.tab-icon-overlay:is([pinned], [sharing]):not([crashed], [selected]) {
+	background: rgba(255, 255, 255, 0.5) !important;
+}
+.tab-icon-overlay:is([pinned], [sharing]):not([crashed], [selected]):hover {
+	background: rgba(255, 255, 255, 0.8) !important;
+}
+/* Fix icon overlay posisition when sharing */
+.tab-icon-overlay:not([crashed], [pinned]):is([sharing])[selected] {
+	top: 0 !important;
+	inset-inline-end: 0 !important;
 }
 
 /* Close tab button */
@@ -365,14 +383,7 @@ tab[selected]:-moz-window-inactive {
 	display: none !important;
 }
 
-/* Pinned tab sound indicator */
-.tab-icon-overlay:is([pinned], [sharing]):not([crashed]) {
-	background: rgba(255, 255, 255, 0.5) !important;
-    stroke: unset !important;
-}
-.tab-icon-overlay:is([pinned], [sharing]):not([crashed]):hover {
-	background: rgba(255, 255, 255, 0.8) !important;
-}
+/* Pinned tab size */
 .tabbrowser-tab[pinned] {
 	max-width: 37px !important;
 }
