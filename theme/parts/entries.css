@@ -26,7 +26,7 @@
 }
 
 /* Entries focused */
-/* #urlbar[breakout][breakout-extend], */
+#urlbar[breakout][breakout-extend],
 #urlbar[focused="true"]:not([suppress-focus-border]),
 #searchbar:focus-within,
 #search-box[focused], 
