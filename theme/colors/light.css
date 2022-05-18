@@ -29,11 +29,9 @@
 	/* Popups */
 	--gnome-menu-background: #ffffff;
 	--gnome-menu-border-color: #cdc7c2;
-	--gnome-popover-background: #ffffff;
-	--gnome-popover-border-color: #cdc7c2;
-	--gnome-popover-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    --gnome-popover-button-hover-background: var(--gnome-button-hover-background);
-	--gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
+	--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
+	--gnome-menu-button-hover-background: var(--gnome-button-hover-background);
+    --gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
 	--gnome-headerbar-background: #EBEBEB;

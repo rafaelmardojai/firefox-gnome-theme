@@ -41,7 +41,7 @@ toolbarspring {
 	margin: 11px 0 0 0 !important;
 	width: 100% !important;
     position: absolute !important;
-    box-shadow: var(--gnome-popover-shadow) !important;
+    box-shadow: var(--gnome-menu-shadow) !important;
     border-radius: 8px !important
 }
 
@@ -67,12 +67,11 @@ toolbarspring {
 }
 
 .urlbarView-row[selected] .urlbarView-row-inner {
-	background: transparent !important;
-    outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
-	color: var(--gnome-toolbar-color) !important;
+	background: var(--gnome-accent) !important;
+	color: white !important;
 }
-.urlbarView-row:hover .urlbarView-row-inner {
-	background: var(--gnome-focused-urlbar-item-hover) !important;
+.urlbarView-row:not([selected]):hover .urlbarView-row-inner {
+	background: var(--gnome-menu-button-hover-background) !important;
 }
 
 .urlbarView-action {

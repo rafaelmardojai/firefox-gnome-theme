@@ -119,28 +119,28 @@ arrowscrollbox[orient="horizontal"] {
 /* Popovers subview menu arrow */
 #identity-popup-mainView .subviewbutton-nav::after,
 .widget-overflow-list .subviewbutton-nav::after,
+.PanelUI-subView .subviewbutton-nav::after,
+.protections-popup-category::after,
+.subviewbutton-back {
+	fill-opacity: 1 !important;
+	opacity: .3;
+}
+#identity-popup-mainView .subviewbutton-nav::after,
+.widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after {
 	content: "" !important;
-	background: url("../icons/pan-end-symbolic.svg");
+	background: url("../icons/go-next-symbolic.svg");
 	background-size: contain;
 	height: 16px;
 	width: 16px;
-	margin-top: -2px !important;
-	fill-opacity: 1 !important;
 }
 .protections-popup-category::after {
-	content: url("../icons/pan-end-symbolic.svg") !important;
-}
-.identity-popup-content-blocking-category::after {
-	content: url("../icons/pan-start-symbolic.svg") !important;
-}
-#identity-popup-security-expander .button-icon {
-	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+	content: url("../icons/go-next-symbolic.svg") !important;
 }
 
 /* Popovers subview back button */
 .subviewbutton-back {
-	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+	list-style-image: url("../icons/go-previous-symbolic.svg") !important;
 }
 
 /* Sub menu arrow */

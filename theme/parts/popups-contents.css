@@ -37,6 +37,10 @@
 #appMenu-popup .toolbaritem-combined-buttons .before-label {
 	width: 32px !important;
 }
+.subviewbutton#appMenu-zoom-controls2 {
+	padding-right: 0 !important;
+	padding-top: 6px !important;
+}
 
 /* User sync account remove avatar */
 #fxa-menu-avatar {
@@ -148,6 +152,16 @@
 	max-width: initial !important;
 }
 
+/* URLbar popups */
+#identity-popup-mainView,
+#permission-popup-mainView,
+#protections-popup-mainView,
+#identity-popup-mainView-panel-header,
+#permission-popup-mainView-panel-header,
+#protections-popup-mainView-panel-header {
+  min-width: calc(var(--popup-width) + 16px) !important;
+  max-width: calc(var(--popup-width) + 16px) !important;
+}
 
 /* Identity popup */
 #identity-popup-security,
@@ -309,11 +323,6 @@
 }
 .protections-popup-category-state-label {
 	opacity: 0.7;
-}
-
-#protections-popup-content,
-#protections-popup-footer  {
-	padding: 0 !important;
 }
 
 #protections-popup-footer  {
