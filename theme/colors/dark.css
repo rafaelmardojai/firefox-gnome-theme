@@ -122,25 +122,5 @@
 		--gnome-private-inactive-headerbar-background: #1C2438;
 		--gnome-private-inactive-headerbar-border-color: #3A4152;
 		--gnome-private-inactive-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow);
-
-		/* Buttons */
-		--gnome-private-button-background: #252F49;
-		--gnome-private-button-border-color: none;
-		--gnome-private-button-border-accent-color: none;
-		--gnome-private-button-box-shadow: none;
-		--gnome-private-button-hover-background: #343E56;
-		--gnome-private-button-active-background: var(--gnome-private-button-background);
-		--gnome-private-button-active-border-color: none;
-		--gnome-private-button-active-border-accent-color: none;
-		--gnome-private-button-active-box-shadow: none;
-		--gnome-private-button-disabled-background: #252F49;
-		--gnome-private-button-disabled-border-color: none;
-		--gnome-private-button-disabled-box-shadow:  none;
-		--gnome-private-inactive-button-background: #1C2438;
-		--gnome-private-inactive-button-border-color: none;
-		--gnome-private-inactive-button-box-shadow:  none;
-
-		/* Entries */
-		--gnome-private-entry-border-color: none;
 	}
 }
