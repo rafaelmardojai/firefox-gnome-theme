@@ -15,7 +15,7 @@
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
 	border: 1px solid var(--gnome-entry-border-color) !important;
-	border-radius: 5px !important;
+	border-radius: 8px !important;
 	box-shadow: var(--gnome-entry-box-shadow) !important;
 	color: var(--gnome-entry-color) !important;
 	height: 34px !important;
@@ -40,20 +40,6 @@
 	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
-}
-@media (prefers-color-scheme: dark) {
-	#urlbar[breakout][breakout-extend],
-	#searchbar:focus-within,
-	#search-box[focused], 
-	.findbar-textbox[focused],
-	.findbar-textbox:focus,
-	#loginTextbox:focus,
-	#password1Textbox:focus,
-	.tabsFilter[focused],
-	#editBMPanel_namePicker:focus-visible,
-	#editBMPanel_tagsField:focus-visible {		
-		outline-width: 1px !important;
-	}
 }
 
 /* Inactive window entries */

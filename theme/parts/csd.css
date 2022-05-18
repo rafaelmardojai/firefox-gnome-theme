@@ -8,7 +8,7 @@
 
 /* Headerbar top border corners rounded */
 :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
-	border-radius: 7px 7px 0 0 !important;
+	border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important;
 }
 
 /* Window buttons: at least 1 button */
@@ -118,21 +118,19 @@
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-appearance: none !important;
-	border: 1px solid var(--gnome-button-border-color) !important;
-	border-color: transparent !important;
-	border-radius: 5px !important;	
 	padding: 0 2px !important;
+    background: var(--gnome-button-close-background);
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button {
 	border-radius: 100% !important;
-	height: 30px !important;
-	margin: 2px 5px !important;
-	width: 30px;
+	height: 24px !important;
+	margin: 6px 6px !important;
+	width: 24px !important;
 }
 
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
-	border-radius: 5px !important;
+	border-radius: 6px !important;
 	height: 34px;
 	margin: 0 3px !important;
 	width: 34px;
@@ -142,22 +140,21 @@
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {
 	width: 16px;
 }
-:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button .toolbarbutton-icon,
-:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton .toolbarbutton-icon {
+:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button,
+:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton {
 	opacity: .3 !important;
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):hover,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
-	background-image: var(--gnome-button-hover-background);
-	border-color: var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-	box-shadow: var(--gnome-button-box-shadow);
+	background: var(--gnome-button-hover-background);
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):active,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
-	background: var(--gnome-button-active-background);
-	box-shadow: var(--gnome-button-active-box-shadow);
-	border-color: var(--gnome-button-active-border-color) !important;
+	background: var(--gnome-button-active-close-background);
+}
+
+:root[tabsintitlebar] #titlebar .titlebar-button:where(:hover) {
+	background: var(--gnome-button-hover-close-background);
 }
 
 /* OPTIONAL: Allow draging the window from headerbar buttons */

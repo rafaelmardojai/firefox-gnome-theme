@@ -149,9 +149,12 @@ panel[type="arrow"].panel-no-padding::part(content) {
 	fill-opacity: 1 !important;
 }
 
-.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
+.subviewbutton:not([disabled], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
 .identity-popup-content-blocking-category:not([disabled]):hover, #PlacesToolbar .bookmark-item:hover, #PlacesToolbar .bookmark-item[open], #PlacesToolbar .bookmark-item[_moz-menuactive] {
 	background-color: var(--gnome-popover-button-hover-background) !important;
+}
+#appMenu-fxa-label2:hover {
+	background: transparent !important;
 }
 
 .subviewbutton-back {
