@@ -44,21 +44,12 @@
 	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
 
 	/* Buttons */
-	--gnome-button-background: #EBEBEB;
-	--gnome-button-border-color: none;
-	--gnome-button-border-accent-color: none;
-	--gnome-button-box-shadow: none;
-	--gnome-button-hover-background: #DEDEDE;
-	--gnome-button-active-background: #CDCDCD;
-	--gnome-button-active-border-color: none;
-	--gnome-button-active-border-accent-color: #bab3ab;
-	--gnome-button-active-box-shadow: 0 1px rgba(255, 255, 255, 0);
-	--gnome-button-disabled-background: var(--gnome-button-background);
-	--gnome-button-disabled-border-color: #cdc7c2;
-	--gnome-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-	--gnome-inactive-button-background: #FAFAFA;
-	--gnome-inactive-button-border-color: none;
-	--gnome-inactive-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
+	--gnome-button-background: rgba(0, 0, 0, .08);
+	--gnome-button-hover-background: rgba(0, 0, 0, .12);
+	--gnome-button-active-background: rgba(0, 0, 0, .24);
+	--gnome-button-flat-hover-background: rgba(0, 0, 0, .056);
+	--gnome-button-flat-active-background: rgba(0, 0, 0, .128);
+	
 	--gnome-button-suggested-action-background: linear-gradient(to top, #2379e2 2px, #3584e4);
 	--gnome-button-suggested-action-border-color: none;
 	--gnome-button-suggested-action-border-accent-color: #15539e;

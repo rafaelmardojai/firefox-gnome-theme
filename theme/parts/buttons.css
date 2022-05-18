@@ -45,10 +45,7 @@ button.close,
 #item-choose button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
-	box-shadow: var(--gnome-button-box-shadow) !important;
-	border: 1px solid var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-	border-radius: 5px !important;
+	border-radius: 6px !important;
 	padding: 0 1px !important;
 	height: 34px !important;
 	max-height: 34px !important;
@@ -61,6 +58,17 @@ button.close,
 }
 .subviewbutton-iconic {
 	-moz-box-pack: center !important;
+}
+
+/* Flat Buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+.close-icon:not(.tab-close-button),
+button.close,
+#protections-popup-info-button,
+#protections-popup-trackers-blocked-counter-box,
+.permission-popup-permission-remove-button,
+#item-choose button {
+	background: transparent !important;
 }
 
 /* Buttons with margins */
@@ -143,7 +151,6 @@ menulist,
 
 /* Hover buttons */
 menulist:hover,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):not([checked]):hover,
 .subviewbutton.panel-subview-footer:hover,
 .panel-footer button:hover,
 #downloadsHistory:hover,
@@ -157,32 +164,35 @@ menulist:hover,
 .findbar-closebutton .toolbarbutton-icon:hover,
 #sidebar-switcher-target:hover,
 #viewButton:hover,
-.close-icon:not(.tab-close-button):hover,
-button.close:hover,
 menulist:hover .menulist-label-box,
 .expander-down:hover, .expander-up:hover,
 .notification-button:hover,
 .protections-popup-footer-button:hover,
 #identity-popup-security-expander:hover,
-#protections-popup-info-button:hover,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
 .dialog-button-box button:not([disabled]):hover,
 .searchbar-engine-one-off-item:hover,
-.permission-popup-permission-remove-button:hover,
-#protections-popup-trackers-blocked-counter-box:hover,
-.button.connect-device:hover,
-#item-choose button:hover {
+.button.connect-device:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
 
+/* Hover flat buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):not([checked]):hover,
+.close-icon:not(.tab-close-button):hover,
+button.close:hover,
+#protections-popup-info-button:hover,
+#protections-popup-trackers-blocked-counter-box:hover,
+.permission-popup-permission-remove-button:hover,
+#item-choose button:hover {
+	outline: 0 !important;
+	background: var(--gnome-button-flat-hover-background) !important;
+}
+
 /* Active buttons */
 menulist[open],
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):not(#hack):active,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled])[open],
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled])[checked],
 .subviewbutton.panel-subview-footer:active,
 .panel-footer button:active,
 #downloadsHistory:active,
@@ -196,28 +206,31 @@ menulist[open],
 .findbar-container toolbarbutton:active,
 #sidebar-switcher-target:active, #sidebar-switcher-target.active,
 #viewButton[open],
-.close-icon:not(.tab-close-button):active,
-button.close:active,
 menulist[open] .menulist-label-box,
 .expander-down:active, .expander-up:active,
 .notification-button:active,
 .protections-popup-footer-button:not(#hack):active,
 #identity-popup-security-expander:active,
-#protections-popup-info-button:not(#hack):active,
-#protections-popup-info-button:not(#hack)[checked],
 .tracking-protection-button:active,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
 .dialog-button-box button:not([disabled]):active,
-.permission-popup-permission-remove-button:active,
-#protections-popup-trackers-blocked-counter-box:active,
-.button.connect-device:active,
-#item-choose button:active {
+.button.connect-device:active {
 	background: var(--gnome-button-active-background) !important;
-	box-shadow: var(--gnome-button-active-box-shadow) !important;
-	border-color: var(--gnome-button-active-border-color) !important;
-	border-bottom-color: var(--gnome-button-active-border-color) !important;
-	border-top-color: var(--gnome-button-active-border-accent-color) !important;
+}
+
+/* Active flat buttons */
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):not(#hack):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled])[open],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled])[checked],
+.close-icon:not(.tab-close-button):active,
+button.close:active,
+#protections-popup-info-button:not(#hack):active,
+#protections-popup-info-button:not(#hack)[checked],
+#protections-popup-trackers-blocked-counter-box:active,
+.permission-popup-permission-remove-button:active,
+#item-choose button:active {
+	background: var(--gnome-button-flat-active-background) !important;
 }
 
 /* Disabled buttons */
@@ -225,21 +238,7 @@ menulist[open] .menulist-label-box,
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled],
 #context-navigation menuitem[disabled],
 .dialog-button-box button[disabled] {
-	background: var(--gnome-button-disabled-background) !important;
-	border-color: var(--gnome-button-disabled-border-color) !important;
-	box-shadow: var(--gnome-button-disabled-box-shadow) !important;
-	opacity: 1 !important;
-}
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled] image,
-#context-navigation menuitem[disabled] image,
-.dialog-button-box button[disabled] label {
-	opacity: .4 !important;
-}
-
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled]:hover,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled]:hover {
-	background: var(--gnome-button-disabled-background) !important;
+	opacity: .5 !important;
 }
 
 /* Inactive window buttons */
@@ -253,35 +252,6 @@ menulist[open] .menulist-label-box,
 	border-color: var(--gnome-inactive-button-border-color) !important;
 }
 
-/* Flat buttons */
-.close-icon:not(.tab-close-button),
-button.close,
-#protections-popup-info-button,
-#protections-popup-trackers-blocked-counter-box {
-	background: transparent !important;
-	box-shadow: none !important;
-	border-color: transparent !important;
-	border-radius: 5px !important;
-}
-/* List style */
-.permission-popup-permission-remove-button,
-#item-choose button {
-	background: transparent !important;
-	box-shadow: none !important;
-	border-color: var(--gnome-popover-separator-color) !important;
-	border-radius: 5px !important;
-}
-.close-icon:not(.tab-close-button):not(:active):hover,
-button.close:not(:active):hover,
-#protections-popup-info-button:hover,
-.permission-popup-permission-remove-button:not(:active):hover,
-#protections-popup-trackers-blocked-counter-box:not(:active):hover,
-#item-choose button:not(:active):hover {
-	box-shadow: var(--gnome-button-box-shadow) !important;
-	border-color: var(--gnome-button-border-color) !important;
-	border-bottom-color: var(--gnome-button-border-accent-color) !important;
-}
-
 /* Circle buttons */
 #downloadsPanel-mainView .download-state .downloadButton,
 .permission-popup-permission-remove-button:not(#hack) {
@@ -290,7 +260,6 @@ button.close:not(:active):hover,
 
 /* Combined buttons */
 #nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#hack),
-#nav-bar #back-button:not(#hack),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
 #context-navigation menuitem:not(:last-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,
@@ -303,7 +272,6 @@ button.close:not(:active):hover,
 }
 
 #nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#hack),
-#nav-bar #forward-button:not(#hack),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#appMenu-fullscreen-button),
 #context-navigation menuitem:not(:first-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,
