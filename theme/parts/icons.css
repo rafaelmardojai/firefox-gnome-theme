@@ -71,17 +71,13 @@ treechildren::-moz-tree-image {
 }
 
 /* Icons active color */
-menu:not([disabled]):not(#PlacesToolbar .bookmark-item):hover > .menu-right,
-menu:not([disabled]):not(#PlacesToolbar .bookmark-item)[open] > .menu-right,
 treechildren::-moz-tree-twisty(selected, focus),
 treechildren::-moz-tree-twisty(selected, focus, open),
 treechildren::-moz-tree-image(selected, focus),
 treechildren::-moz-tree-image(selected, focus, open),
 .item.client:focus .item-twisty-container,
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty,
-.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open),
-menuitem[type="checkbox"]:not([disabled="true"]):hover .menu-iconic-icon,
-menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
+.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
 	fill: #fff !important;
 }
 
@@ -121,9 +117,16 @@ arrowscrollbox[orient="horizontal"] {
 .widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after,
 .protections-popup-category::after,
-.subviewbutton-back {
+.subviewbutton-back,
+.menu-right {
 	fill-opacity: 1 !important;
 	opacity: .3;
+}
+.menu-right {
+	-moz-appearance: none !important;
+	list-style-image: url("../icons/go-next-symbolic.svg") !important;
+	width: 16px !important;
+	height: 16px !important;
 }
 #identity-popup-mainView .subviewbutton-nav::after,
 .widget-overflow-list .subviewbutton-nav::after,
@@ -141,17 +144,6 @@ arrowscrollbox[orient="horizontal"] {
 /* Popovers subview back button */
 .subviewbutton-back {
 	list-style-image: url("../icons/go-previous-symbolic.svg") !important;
-}
-
-/* Sub menu arrow */
-.menu-right {
-	-moz-appearance: none !important;
-	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
-	width: 16px !important;
-	height: 16px !important;
-}
-menu[disabled] > .menu-right {
-	opacity: 0.3;
 }
 
 /* Arrow down buttons */

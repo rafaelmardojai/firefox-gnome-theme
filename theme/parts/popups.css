@@ -4,35 +4,27 @@
 
 /* Style menus */
 menupopup {
+	-moz-appearance: none !important;	
+	color: var(--gnome-toolbar-color) !important;
+	padding: 8px !important;
+	margin: -8px !important;
+}
+menu menupopup {
+	margin-top: -16px !important;
+}
+.menupopup-arrowscrollbox {
 	-moz-appearance: none !important;
 	background: var(--gnome-menu-background) !important;
 	border: 1px solid var(--gnome-menu-border-color) !important;
-	border-radius: 12px;
-	padding: 4px 0 !important;
-	color: var(--gnome-toolbar-color) !important;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
-}
-#PlacesToolbar menupopup {
-	padding: 4px !important;
-}
-.menupopup-arrowscrollbox {
-	background: none !important;
-	box-shadow: none !important;
-	border: 0 !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
-menuitem, menupopup menu {
-	-moz-appearance: none !important;
-	padding: 4px 8px !important;
+	border-radius: 12px !important;
+	box-shadow: var(--gnome-menu-shadow) !important;
+	padding: 6px !important;
 	margin: 0 !important;
 }
 
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {
 	visibility: visible !important;
 }
-
 menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
 }
@@ -43,13 +35,13 @@ panel[type=arrow] {
 }
 
 /* Style popovers */
-panel:not([remote]), #BMB_bookmarksPopup {
+panel:not([remote]) {
 	--arrowpanel-background: var(--gnome-menu-background) !important;
 }
 panel  {
+	--arrowpanel-padding: 0 !important;
 	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
 	--arrowpanel-border-radius: 12px !important;
-	--arrowpanel-padding: 0 !important;
 }
 
 /* Padding rules */
@@ -57,7 +49,7 @@ panel  {
 .protections-popup-section,
 #protections-popup-mainView-panel-header-section,
 .identity-popup-section {
-	padding: 0 8px 8px !important;
+	padding: 0 6px 6px !important;
 }
 :is(
     .panel-subview-body, .panel-header,
@@ -65,29 +57,14 @@ panel  {
     #protections-popup-mainView-panel-header-section,
     .identity-popup-section
 ):first-child {
-	padding-top: 8px !important;
+	padding-top: 6px !important;
 }
 /* Padding with margign */
 .subviewbutton.panel-subview-footer-button {
-	margin: 8px !important;
+	margin: 6px !important;
 }
 #identity-popup-security-button {
-	margin: 0 8px !important;
-}
-
-/* Separator */
-.PanelUI-subView toolbarseparator:not([orient="vertical"]) {
-	margin: 6px 2px !important;
-}
-.panel-subview-body + toolbarseparator:not([orient="vertical"]),
-#identity-popup-clear-sitedata-footer toolbarseparator,
-#identity-popup-more-info-footer toolbarseparator {
-	margin: 0 !important;
-}
-
-.panel-subview-body:has(scrollbar) {
-	background: red !important;
-	border-top: 1px solid var(--gnome-popover-separator-color) !important;
+	margin: 0 6px !important;
 }
 
 /* Panel arrow */
@@ -148,28 +125,27 @@ panel[type="arrow"].panel-no-padding::part(content) {
 	display: none !important;
 }
 
-/* Style popovers menu buttons */
+/* Menu buttons */
+menuitem, menupopup menu,
 .subviewbutton:not(#appMenu-fxa-label2),
-.toolbarbutton-1, .protections-popup-category,
+.toolbarbutton-1,
+.protections-popup-category,
 .identity-popup-content-blocking-category,
 #PlacesToolbar .bookmark-item {
+	-moz-appearance: none !important;
 	border-radius: 6px !important;	
 	color: var(--gnome-toolbar-color) !important;
 	font: menu !important;
 	width: 100%;
-	padding: 0 12px !important;
+	padding: 4px 12px !important;
+	min-height: 32px !important;
 }
 .subviewbutton,
 .protections-popup-category,
-.identity-popup-content-blocking-category {
-	min-height: 32px !important;
+.identity-popup-content-blocking-category,
+#PlacesToolbar menupopup[placespopup="true"] .bookmark-item,
+.openintabs-menuitem {
 	margin: 0 !important;
-}
-
-.subviewbutton[disabled], .toolbarbutton-1[disabled],
-.protections-popup-category[disabled],
-.identity-popup-content-blocking-category[disabled] {
-	opacity: 0.5 !important;
 }
 
 .subviewbutton[shortcut]:after {
@@ -180,10 +156,26 @@ panel[type="arrow"].panel-no-padding::part(content) {
 	fill-opacity: 1 !important;
 }
 
-.subviewbutton:not([disabled], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
-.identity-popup-content-blocking-category:not([disabled]):hover, #PlacesToolbar .bookmark-item:hover, #PlacesToolbar .bookmark-item[open], #PlacesToolbar .bookmark-item[_moz-menuactive] {
-	background-color: var(--gnome-menu-button-hover-background) !important;
+/* Menu buttons disabled */
+.subviewbutton[disabled], .toolbarbutton-1[disabled],
+.protections-popup-category[disabled],
+.identity-popup-content-blocking-category[disabled] {
+	opacity: .5 !important;
 }
+
+/* Menu buttons hover */
+menuitem:not([disabled]):is(:hover, [open], [_moz-menuactive]),
+menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
+.subviewbutton:not([disabled],
+#appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
+.toolbarbutton-1:not([disabled]):hover,
+.protections-popup-category:not([disabled]):hover,
+.identity-popup-content-blocking-category:not([disabled]):hover,
+#PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]) {
+	background: var(--gnome-menu-button-hover-background) !important;
+}
+
+/* Menu buttons fix */
 #appMenu-fxa-label2 {
 	padding: 0 !important;
 }
@@ -191,6 +183,7 @@ panel[type="arrow"].panel-no-padding::part(content) {
 	background: transparent !important;
 }
 
+/* Menu buttons back */
 .subviewbutton-back {
 	width: 100%;
 	-moz-box-align: center !important;
@@ -208,11 +201,27 @@ panel[type="arrow"].panel-no-padding::part(content) {
 
 /* Style popover separators */
 toolbarseparator, menuseparator {
-	border-color: var(--gnome-popover-separator-color) !important;
+	border-color: var(--gnome-menu-separator-color) !important;
 }
-toolbarseparator:not([orient="vertical"]) {
-	margin: 3px 0 !important;
+
+.panel-subview-body + toolbarseparator:not([orient="vertical"]),
+#identity-popup-clear-sitedata-footer toolbarseparator,
+#identity-popup-more-info-footer toolbarseparator {
+	margin: 0 !important;
+}
+
+#PlacesToolbar menupopup[placespopup="true"] menuseparator {
+	border-top: 1px solid var(--gnome-menu-separator-color) !important;
+	padding: 0 !important;
+	margin: 6px 0 !important;
+}
+#PlacesToolbar menupopup[placespopup="true"] menuseparator::before {
+	border: 0 !important;
+}
+
+toolbarseparator:not([orient="vertical"]), menupopup menuseparator {
+	margin: 6px 0 !important;
 }
 toolbarseparator[orient="vertical"] {
-	margin: 0 3px !important;
+	margin: 0 6px !important;
 }

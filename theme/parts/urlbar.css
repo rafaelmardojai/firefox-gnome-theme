@@ -42,7 +42,7 @@ toolbarspring {
 	width: 100% !important;
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
-    border-radius: 8px !important
+    border-radius: 12px !important
 }
 
 .urlbarView-body-outer {
@@ -50,7 +50,7 @@ toolbarspring {
 	--item-padding-end: 0 !important;
     background: var(--gnome-urlbar-view) !important;
 	overflow-x: auto;
-	padding: 0 8px !important;
+	padding: 2px 6px !important;
     border-radius: 8px 8px 0 0 !important;
 }
 
@@ -82,7 +82,7 @@ toolbarspring {
 .search-one-offs {
 	padding: 8px !important;
 	background: var(--gnome-urlbar-view) !important;
-	border-top: 1px solid var(--gnome-popover-separator-color) !important;
+	border-top: 1px solid var(--gnome-menu-separator-color) !important;
 	border-radius: 0 0 8px 8px !important;
 }
 

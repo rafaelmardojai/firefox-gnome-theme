@@ -10,7 +10,8 @@
 	--gnome-browser-before-load-background: #F8F7F7;
 	
 	/* Accent */
-	--gnome-accent: #83ADE1;
+	--gnome-accent: #3584e4;
+	--gnome-accent-fg: #83ADE1;
 
 	/* Toolbars */
 	--gnome-toolbar-background: var(--gnome-headerbar-background);
@@ -26,12 +27,12 @@
 	--gnome-sidebar-background: var(--gnome-headerbar-background);
 	--gnome-inactive-sidebar-background: var(--gnome-sidebar-background);
 
-	/* Popups */
+	/* Menu */
 	--gnome-menu-background: #ffffff;
-	--gnome-menu-border-color: #cdc7c2;
+	--gnome-menu-border-color: rgba(0, 0, 0, .14);
 	--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
 	--gnome-menu-button-hover-background: var(--gnome-button-hover-background);
-    --gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
+    --gnome-menu-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
 	--gnome-headerbar-background: #EBEBEB;
@@ -79,7 +80,7 @@
 	--gnome-inactive-entry-border-color: none;
 	--gnome-inactive-entry-box-shadow: none;
 	--gnome-inactive-entry-color: #303030;
-	--gnome-focused-urlbar-border-color: var(--gnome-accent);
+	--gnome-focused-urlbar-border-color: var(--gnome-accent-fg);
 	--gnome-focused-urlbar-item-hover: #ebebeb;
     --gnome-urlbar-view: #FFFFFF;
 

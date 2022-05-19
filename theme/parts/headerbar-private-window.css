@@ -4,6 +4,7 @@
 
 :root[privatebrowsingmode="temporary"] {
 	--gnome-accent: var(--gnome-private-accent) !important;
+	--gnome-accent-fg: var(--gnome-private-accent) !important;
 	/* Change headerbar colors */
 	--gnome-headerbar-background: var(--gnome-private-headerbar-background) !important;
 	--gnome-headerbar-border-color: var(--gnome-private-headerbar-border-color) !important;
