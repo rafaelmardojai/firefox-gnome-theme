@@ -10,37 +10,35 @@
 	--gnome-browser-before-load-background: #F8F7F7;
 	
 	/* Accent */
-	--gnome-accent: #3584e4;
-	--gnome-accent-fg: #83ADE1;
+	--gnome-accent-bg: #3584e4;
+	--gnome-accent: #83ADE1;
 
 	/* Toolbars */
-	--gnome-toolbar-background: var(--gnome-headerbar-background);
+	--gnome-toolbar-background: #fafafa;
 	--gnome-toolbar-color: rgb(46, 52, 54);
-	--gnome-toolbar-border-color: var(--gnome-headerbar-border-color);
+	--gnome-toolbar-border-color: #CECECE;
 	--gnome-toolbar-icon-fill: #2e3436;
-	--gnome-inactive-toolbar-background: var(--gnome-inactive-headerbar-background);
+	--gnome-inactive-toolbar-background: var(--gnome-toolbar-background);
 	--gnome-inactive-toolbar-color: #d5d0cc;
-	--gnome-inactive-toolbar-border-color: var(--gnome-inactive-headerbar-border-color);
+	--gnome-inactive-toolbar-border-color: #DCDCDC;
 	--gnome-inactive-toolbar-icon-fill: #929595;
 
 	/* Sidebar */
-	--gnome-sidebar-background: var(--gnome-headerbar-background);
+	--gnome-sidebar-background: var(--gnome-toolbar-background);
 	--gnome-inactive-sidebar-background: var(--gnome-sidebar-background);
 
 	/* Menu */
 	--gnome-menu-background: #ffffff;
 	--gnome-menu-border-color: rgba(0, 0, 0, .14);
 	--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
-	--gnome-menu-button-hover-background: var(--gnome-button-hover-background);
+	--gnome-menu-button-hover-background: var(--gnome-button-background);
     --gnome-menu-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
 	--gnome-headerbar-background: #EBEBEB;
-	--gnome-headerbar-border-color: #CECECE;
-	--gnome-headerbar-box-shadow: none;
-	--gnome-inactive-headerbar-background: #FAFAFA;
-	--gnome-inactive-headerbar-border-color: #DCDCDC;
-	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
+	--gnome-headerbar-border-color: var(--gnome-toolbar-border-color);
+	--gnome-inactive-headerbar-background: var(--gnome-inactive-toolbar-background);
+	--gnome-inactive-headerbar-border-color: var(--gnome-inactive-toolbar-border-color);
 
 	/* Buttons */
 	--gnome-button-background: rgba(0, 0, 0, .08);
@@ -49,22 +47,13 @@
 	--gnome-button-flat-hover-background: rgba(0, 0, 0, .056);
 	--gnome-button-flat-active-background: rgba(0, 0, 0, .128);
 	
-	--gnome-button-suggested-action-background: linear-gradient(to top, #2379e2 2px, #3584e4);
-	--gnome-button-suggested-action-border-color: none;
-	--gnome-button-suggested-action-border-accent-color: #15539e;
-	--gnome-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+	--gnome-button-suggested-action-background: var(--gnome-accent-bg);
 	--gnome-button-suggested-action-hover-background: linear-gradient(to top, #3584e4, #3987e5 1px);
-	--gnome-button-suggested-action-active-background: #1961b9;
-	--gnome-button-suggested-action-active-border-color: #1b6acb;
-	--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+	--gnome-button-suggested-action-active-background: #1961b9;	
+
 	--gnome-button-destructive-action-background: var(--gnome-button-background);
-	--gnome-button-destructive-action-border-color: #E5E2E1;
-	--gnome-button-destructive-action-border-accent-color: #851015;
-	--gnome-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
 	--gnome-button-destructive-action-hover-background: linear-gradient(to top, #e01b24, #e41c26 1px);
 	--gnome-button-destructive-action-active-background: #E4E2E0;
-	--gnome-button-destructive-action-active-border-color: none;
-	--gnome-button-destructive-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 	
 	--gnome-button-close-background: var(--gnome-button-flat-hover-background);
 	--gnome-button-hover-close-background:var(--gnome-button-hover-background);
@@ -80,7 +69,7 @@
 	--gnome-inactive-entry-border-color: none;
 	--gnome-inactive-entry-box-shadow: none;
 	--gnome-inactive-entry-color: #303030;
-	--gnome-focused-urlbar-border-color: var(--gnome-accent-fg);
+	--gnome-focused-urlbar-border-color: var(--gnome-accent);
 	--gnome-focused-urlbar-item-hover: #ebebeb;
     --gnome-urlbar-view: #FFFFFF;
 
