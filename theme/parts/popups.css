@@ -45,6 +45,9 @@ panel  {
 }
 
 /* Padding rules */
+#sidebarMenu-popup {
+	--arrowpanel-padding: 6px !important;
+}
 .panel-subview-body, .panel-header,
 .protections-popup-section,
 #protections-popup-mainView-panel-header-section,
@@ -144,7 +147,8 @@ menuitem, menupopup menu,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
 #PlacesToolbar menupopup[placespopup="true"] .bookmark-item,
-.openintabs-menuitem {
+.openintabs-menuitem,
+.widget-overflow-list .toolbarbutton-1 {
 	margin: 0 !important;
 }
 
