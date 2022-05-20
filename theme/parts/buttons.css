@@ -296,11 +296,8 @@ button.popup-notification-primary-button,
 #tracking-action-block,
 .button.connect-device {
 	color: white !important;
+	font-weight: bold !important;
 	background: var(--gnome-button-suggested-action-background) !important;
-	border-color: var(--gnome-button-suggested-action-border-color) !important;
-	border-bottom-color: var(--gnome-button-suggested-action-border-accent-color) !important;	
-	box-shadow: var(--gnome-button-suggested-action-box-shadow) !important;
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.559216) !important;
 }
 
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
@@ -317,9 +314,6 @@ button.popup-notification-primary-button.popup-notification-button:active,
 #tracking-action-block:active,
 .button.connect-device:active {
 	background: var(--gnome-button-suggested-action-active-background) !important;
-	border-color: var(--gnome-button-suggested-action-active-border-color) !important;
-	box-shadow: var(--gnome-button-suggested-action-active-box-shadow) !important;
-	text-shadow: none !important;
 }
 
 /* Buttons with destructive action */
@@ -327,11 +321,8 @@ button.popup-notification-primary-button.popup-notification-button:active,
 .identity-popup-permission-remove-button,
 #PanelUI-panic-view-button {
 	color: white !important;
+	font-weight: bold !important;
 	background: var(--gnome-button-destructive-action-background) !important;
-	border-color: var(--gnome-button-destructive-action-border-color) !important;
-	border-bottom-color: var(--gnome-button-destructive-action-border-accent-color) !important;
-	box-shadow: var(--gnome-button-destructive-action-box-shadow) !important;
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.558275) !important;
 }
 
 #editBookmarkPanelRemoveButton:hover,
@@ -344,8 +335,6 @@ button.popup-notification-primary-button.popup-notification-button:active,
 .identity-popup-permission-remove-button:not(#hack):active,
 #PanelUI-panic-view-button:active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
-	border-color: var(--gnome-button-destructive-action-active-border-color) !important;
-	box-shadow: var(--gnome-button-destructive-action-active-box-shadow) !important;
 }
 
 .identity-popup-permission-remove-button:not(#hack):hover { /* Is flat */
