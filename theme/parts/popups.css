@@ -42,32 +42,51 @@ panel  {
 	--arrowpanel-padding: 0 !important;
 	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
 	--arrowpanel-border-radius: 12px !important;
+	--gnome-menu-padding: 6px;
 }
 
 /* Padding rules */
 #sidebarMenu-popup {
-	--arrowpanel-padding: 6px !important;
+	--arrowpanel-padding: var(--gnome-menu-padding) !important;
 }
-.panel-subview-body, .panel-header,
+.panel-header, .panel-footer,
+.panel-subview-body,
 .protections-popup-section,
 #protections-popup-mainView-panel-header-section,
-.identity-popup-section {
-	padding: 0 6px 6px !important;
+.permission-popup-section,
+.identity-popup-section,
+.popup-notification-header-container,
+.popup-notification-body-container,
+.popup-notification-footer-container {
+	padding: 0 var(--gnome-menu-padding) var(--gnome-menu-padding) !important;
 }
 :is(
-    .panel-subview-body, .panel-header,
+    .panel-header, .panel-footer,
+    .panel-subview-body,
     .protections-popup-section,
     #protections-popup-mainView-panel-header-section,
-    .identity-popup-section
-):first-child {
-	padding-top: 6px !important;
+    .permission-popup-section,
+    .identity-popup-section,
+		.popup-notification-header-container,
+		.popup-notification-body-container,
+		.popup-notification-footer-container
+):first-child:not(:empty) {
+	padding-top: var(--gnome-menu-padding) !important;
 }
 /* Padding with margign */
 .subviewbutton.panel-subview-footer-button {
-	margin: 6px !important;
+	margin: var(--gnome-menu-padding) !important;
 }
 #identity-popup-security-button {
-	margin: 0 6px !important;
+	margin: 0 var(--gnome-menu-padding) !important;
+}
+
+/* No menu */
+#notification-popup,
+#protections-popup,
+#permission-popup,
+#editBookmarkPanel {
+	--gnome-menu-padding: 12px !important;
 }
 
 /* Panel arrow */
@@ -83,17 +102,6 @@ panel  {
 	display: -moz-inline-box !important;
 }
 
-.panel-no-padding panelview, .panel-no-padding > .panel-subview-body, .panel-no-padding > .panel-header {
-	padding: var(--panel-padding) !important;
-	
-}
-.panel-no-padding > .panel-header {
-	padding-bottom: 0 !important;
-}
-panel[type="arrow"].panel-no-padding::part(content) {
-	padding: var(--panel-padding) !important;
-}
-
 /* Panel header */
 .panel-header {
 	position: relative !important;
@@ -102,9 +110,10 @@ panel[type="arrow"].panel-no-padding::part(content) {
 /* Panel footer */
 .panel-footer {
 	background-color: transparent !important;
-	display: flex;
-	justify-content: flex-end;
-	padding-top: 0px !important;
+	margin: 0 !important;
+}
+.panel-subview-body .panel-footer {
+	padding: 0 !important;
 }
 .panel-footer.panel-footer-menulike {
 	border-top: 0 !important;
@@ -199,7 +208,7 @@ menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
 	padding: 0 !important;
 	pointer-events: none;
 	position: absolute !important;
-	top: 11px !important;
+	top: 8px !important;
 	width: 100%;
 }
 

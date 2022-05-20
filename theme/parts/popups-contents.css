@@ -68,10 +68,18 @@
 }
 #editBookmarkPanelRows,
 #editBookmarkPanelBottomContent {
-	padding: 6px 1px !important;
+	padding: 0 !important;
 }
 #editBookmarkPanelBottomButtons {
-	margin: 12px 0 0 !important;
+	margin: 0 !important;
+}
+#editBookmarkPanelBottomContent {
+	margin-bottom: 12px !important;
+}
+#editBookmarkPanelBottomContent,
+#editBookmarkPanelRows vbox {
+		margin: 6px 0;
+
 }
 
 /* Downloads popover */
@@ -159,8 +167,8 @@
 #identity-popup-mainView-panel-header,
 #permission-popup-mainView-panel-header,
 #protections-popup-mainView-panel-header {
-  min-width: calc(var(--popup-width) + 16px) !important;
-  max-width: calc(var(--popup-width) + 16px) !important;
+  min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
+  min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
 }
 
 /* Identity popup */
@@ -191,9 +199,6 @@
 
 /* Permission popup */
 #permission-popup-permissions-content {
-	padding: 0 !important;
-}
-.permission-popup-section {
 	padding: 0 !important;
 }
 
