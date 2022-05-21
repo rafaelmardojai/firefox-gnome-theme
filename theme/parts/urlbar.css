@@ -45,6 +45,11 @@ toolbarspring {
     border-radius: 12px !important
 }
 
+/* Search bar result */
+#PopupSearchAutoComplete {
+  margin-top: 7px !important;
+}
+
 .urlbarView-body-outer {
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
@@ -84,6 +89,10 @@ toolbarspring {
 	background: var(--gnome-menu-background) !important;
 	border-top: 1px solid var(--gnome-menu-separator-color) !important;
 	border-radius: 0 0 8px 8px !important;
+}
+
+.search-one-offs[is_searchbar="true"] {
+  margin-bottom: -8px !important;
 }
 
 /* URL bar and Search bar */
