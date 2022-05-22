@@ -18,6 +18,9 @@ This theme follows lastest GNOME Adwaita style.
 
 This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
 
+### Getting in Touch
+
+Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnome-theme:matrix.org)
 
 ### Firefox versions support
 
