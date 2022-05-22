@@ -395,7 +395,7 @@ button.close::before {
 	list-style-image: url("../icons/non-starred-symbolic.svg") !important;
 }
 #star-button[starred] {
-	fill: orange !important;
+	fill: var(--gnome-accent) !important;
 }
 
 /* History button */
