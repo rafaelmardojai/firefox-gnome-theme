@@ -14,9 +14,9 @@
 #editBMPanel_tagsField {
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
-	border: 1px solid var(--gnome-entry-border-color) !important;
+	border: 0;
 	border-radius: 8px !important;
-	box-shadow: var(--gnome-entry-box-shadow) !important;
+	box-shadow: none !important;
 	color: var(--gnome-entry-color) !important;
 	height: 34px !important;
 	max-height: 34px !important;
@@ -51,8 +51,6 @@
 #password1Textbox:-moz-window-inactive,
 .tabsFilter:-moz-window-inactive {
 	background: var(--gnome-inactive-entry-background) !important;
-	border-color: var(--gnome-inactive-entry-border-color) !important;
-	box-shadow: var(--gnome-inactive-entry-box-shadow) !important;
 	color: var(--gnome-inactive-entry-color) !important;
 }
 

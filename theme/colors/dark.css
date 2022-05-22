@@ -10,8 +10,8 @@
 		--gnome-browser-before-load-background: #242424;
 		
 		/* Accent */
-		--gnome-accent-bg: #3584e4;
-	    --gnome-accent: #78aeed;
+    --gnome-accent-bg: #3584e4;
+		--gnome-accent: #78aeed;
 
 		/* Toolbars */
 		--gnome-toolbar-background: #242424;
@@ -59,17 +59,11 @@
 		--gnome-button-active-close-background: var(--gnome-button-active-background);
 
 		/* Entries */
-		--gnome-entry-background: rgba(255, 255, 255, .1);
-		--gnome-entry-border-color: none;
-		--gnome-entry-box-shadow: none;
+    --gnome-entry-background: rgba(255, 255, 255, .1);
 		--gnome-entry-color: #ffffff;
 		--gnome-inactive-entry-background: #2E2E2E;
-		--gnome-inactive-entry-border-color: none;
-		--gnome-inactive-entry-box-shadow: none;
 		--gnome-inactive-entry-color: #d6d6d6;
-		--gnome-focused-urlbar-border-color: var(--gnome-accent);
-		--gnome-focused-urlbar-item-hover: #4c4c4c;
-        --gnome-urlbar-view: #383838;
+		--gnome-focused-urlbar-border-color: rgba(120, 174, 237, .5); /* Same as --gnome-accent but with opacity*/
 
 		/* Switch */
 		--gnome-switch-background: #535353;

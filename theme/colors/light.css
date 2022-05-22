@@ -49,8 +49,7 @@
 	
 	--gnome-button-suggested-action-background: var(--gnome-accent-bg);
 	--gnome-button-suggested-action-hover-background: var(--gnome-accent-bg);
-	--gnome-button-suggested-action-active-background: var(--gnome-accent-bg);	
-
+	--gnome-button-suggested-action-active-background: var(--gnome-accent-bg);
 	--gnome-button-destructive-action-background: #e01b24;
 	--gnome-button-destructive-action-hover-background: #e01b24;
 	--gnome-button-destructive-action-active-background: #e01b24;
@@ -62,16 +61,10 @@
 
 	/* Entries */
 	--gnome-entry-background: rgba(0, 0, 0, .08);
-	--gnome-entry-border-color: none;
-	--gnome-entry-box-shadow: none;
 	--gnome-entry-color: #303030;
 	--gnome-inactive-entry-background: #F0F0F0;
-	--gnome-inactive-entry-border-color: none;
-	--gnome-inactive-entry-box-shadow: none;
 	--gnome-inactive-entry-color: #303030;
 	--gnome-focused-urlbar-border-color: var(--gnome-accent);
-	--gnome-focused-urlbar-item-hover: #ebebeb;
-    --gnome-urlbar-view: #FFFFFF;
 
 	/* Switch */
 	--gnome-switch-background: #E0E0E0;
