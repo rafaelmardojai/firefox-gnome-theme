@@ -124,20 +124,27 @@ toolbarspring {
 #urlbar-search-mode-indicator,
 #urlbar-label-box,
 #urlbar-zoom-button {
-	background: var(--gnome-popover-background) !important;
-	border: 1px solid var(--gnome-popover-border-color) !important;
-	border-radius: 9px;
+	background: var(--gnome-button-background) !important;
+	border: 0 !important;
+	border-radius: 26px !important;
 	outline: 0 !important;
 	margin: 4px 0;
 }
+#urlbar-search-mode-indicator {
+	padding-right: 0 !important;
+}
 #urlbar-search-mode-indicator-title {
-    color: #0060df;
-    padding-inline: 4px !important;
+	color: var(--gnome-toolbar-color);
+	padding-inline: 4px !important;
 }
 #urlbar-search-mode-indicator-close {
-	background-size: contain !important;
-	border-radius: 0 9px 9px 0;
-	opacity: 0.8;
+	background-size: 16px !important;
+	background-position: center;
+	border-radius: 26px !important;
+	padding: 5px !important;
+}
+#urlbar-search-mode-indicator-close:hover {
+	background-color: var(--gnome-button-hover-background) !important;
 }
 #urlbar-zoom-button {
 	opacity: 0.8;
