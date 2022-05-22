@@ -39,7 +39,8 @@ button.close,
 .searchbar-engine-one-off-item,
 .permission-popup-permission-remove-button,
 .button.connect-device,
-#item-choose button {
+#item-choose button,
+#editBMPanel_newFolderButton {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	border-radius: 6px !important;
@@ -96,7 +97,8 @@ menulist,
 .dialog-button-box button,
 .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > #appMenu-fxa-label2:not(#hack),
 .button.connect-device,
-#item-choose button {
+#item-choose button,
+#editBMPanel_newFolderButton {
 	padding: 2px 16px !important;
 }
 .subviewbutton.panel-subview-footer label,
@@ -163,7 +165,8 @@ menulist:hover .menulist-label-box,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
 .dialog-button-box button:not([disabled]):hover,
 .searchbar-engine-one-off-item:hover,
-.button.connect-device:hover {
+.button.connect-device:hover,
+#editBMPanel_newFolderButton:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -201,7 +204,8 @@ menulist[open] .menulist-label-box,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
 .dialog-button-box button:not([disabled]):active,
-.button.connect-device:active {
+.button.connect-device:active,
+#editBMPanel_newFolderButton:active {
 	background: var(--gnome-button-active-background) !important;
 }
 
