@@ -32,7 +32,7 @@
 		--gnome-menu-border-color: rgba(0, 0, 0, .14);
 		--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
 		--gnome-menu-button-hover-background: var(--gnome-button-background);
-		--gnome-menu-separator-color: rgba(0, 0, 0, 0.1);
+		--gnome-menu-separator-color: rgba(255, 255, 255, .1);
 
 		/* Header bar */
 		--gnome-headerbar-background: #303030;

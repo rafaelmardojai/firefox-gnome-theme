@@ -11,7 +11,7 @@
 	
 	/* Accent */
 	--gnome-accent-bg: #3584e4;
-	--gnome-accent: #83ADE1;
+	--gnome-accent: #1c71d8;
 
 	/* Toolbars */
 	--gnome-toolbar-background: #fafafa;
@@ -32,7 +32,7 @@
 	--gnome-menu-border-color: rgba(0, 0, 0, .14);
 	--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
 	--gnome-menu-button-hover-background: var(--gnome-button-background);
-    --gnome-menu-separator-color: rgba(0, 0, 0, 0.1);
+	--gnome-menu-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
 	--gnome-headerbar-background: #EBEBEB;
@@ -57,14 +57,13 @@
 	--gnome-button-close-background: var(--gnome-button-flat-hover-background);
 	--gnome-button-hover-close-background:var(--gnome-button-hover-background);
 	--gnome-button-active-close-background: var(--gnome-button-active-background);
-	
 
 	/* Entries */
 	--gnome-entry-background: rgba(0, 0, 0, .08);
 	--gnome-entry-color: #303030;
 	--gnome-inactive-entry-background: #F0F0F0;
 	--gnome-inactive-entry-color: #303030;
-	--gnome-focused-urlbar-border-color: var(--gnome-accent);
+	--gnome-focused-urlbar-border-color: rgba(28, 113, 216, .5);
 
 	/* Switch */
 	--gnome-switch-background: rgba(0, 0, 0, .12);
