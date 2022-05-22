@@ -46,13 +46,8 @@
 		--gnome-button-active-background: rgba(255, 255, 255, .3);
 		--gnome-button-flat-hover-background: rgba(255, 255, 255, .07);
 		--gnome-button-flat-active-background: rgba(255, 255, 255, .1);
-		
 		--gnome-button-suggested-action-background: var(--gnome-accent-bg);
-		--gnome-button-suggested-action-hover-background: var(--gnome-accent-bg);
-		--gnome-button-suggested-action-active-background: var(--gnome-accent-bg);
-		--gnome-button-destructive-action-background: #ae151c;
-		--gnome-button-destructive-action-hover-background: #ae151c;
-		--gnome-button-destructive-action-active-background: #ae151c;
+		--gnome-button-destructive-action-background: #e01b24;
 
 		--gnome-button-close-background: var(--gnome-button-flat-hover-background);
 		--gnome-button-hover-close-background:var(--gnome-button-hover-background);

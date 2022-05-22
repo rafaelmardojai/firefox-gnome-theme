@@ -277,59 +277,51 @@ button.close:active,
 	margin-right: 0 !important;
 }
 
+/* Opaque buttons */
+#appMenu-popup .panel-banner-item[notificationid="update-restart"],
+button.popup-notification-primary-button,
+#editBookmarkPanelDoneButton,
+#tracking-action-block,
+.button.connect-device,
+#editBookmarkPanelRemoveButton,
+#PanelUI-panic-view-button {
+	color: white !important;
+	font-weight: bold !important;
+}
+
 /* Buttons with suggested action */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"],
 button.popup-notification-primary-button,
 #editBookmarkPanelDoneButton,
 #tracking-action-block,
 .button.connect-device {
-	color: white !important;
-	font-weight: bold !important;
-	background: var(--gnome-button-suggested-action-background) !important;
-}
-
-#appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
-button.popup-notification-primary-button.popup-notification-button:hover,
-#editBookmarkPanelDoneButton:hover,
-#tracking-action-block:hover,
-.button.connect-device:hover {
-	background: var(--gnome-button-suggested-action-hover-background) !important;
-}
-
-#appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
-button.popup-notification-primary-button.popup-notification-button:active,
-#editBookmarkPanelDoneButton:active,
-#tracking-action-block:active,
-.button.connect-device:active {
-	background: var(--gnome-button-suggested-action-active-background) !important;
+	background-color: var(--gnome-button-suggested-action-background) !important;
 }
 
 /* Buttons with destructive action */
 #editBookmarkPanelRemoveButton,
-.identity-popup-permission-remove-button,
 #PanelUI-panic-view-button {
-	color: white !important;
-	font-weight: bold !important;
-	background: var(--gnome-button-destructive-action-background) !important;
+	background-color: var(--gnome-button-destructive-action-background) !important;
 }
 
+/* Opaque buttons hover */
+#appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
+button.popup-notification-primary-button.popup-notification-button:hover,
+#editBookmarkPanelDoneButton:hover,
+#tracking-action-block:hover,
+.button.connect-device:hover,
 #editBookmarkPanelRemoveButton:hover,
-.identity-popup-permission-remove-button:not(#hack):hover,
 #PanelUI-panic-view-button:hover {
-	background: var(--gnome-button-destructive-action-hover-background) !important;
+	background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)) !important;
 }
 
+/* Opaque buttons active */
+#appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
+button.popup-notification-primary-button.popup-notification-button:active,
+#editBookmarkPanelDoneButton:active,
+#tracking-action-block:active,
+.button.connect-device:active,
 #editBookmarkPanelRemoveButton:active,
-.identity-popup-permission-remove-button:not(#hack):active,
 #PanelUI-panic-view-button:active {
-	background: var(--gnome-button-destructive-action-active-background) !important;
-}
-
-.identity-popup-permission-remove-button:not(#hack):hover { /* Is flat */
-	border-color: var(--gnome-button-destructive-action-border-color) !important;
-	border-bottom-color: var(--gnome-button-destructive-action-border-accent-color) !important;
-	box-shadow: var(--gnome-button-destructive-action-box-shadow) !important;
-}
-.identity-popup-permission-remove-button:not(#hack):hover .button-icon {
-	filter: invert(100%) brightness(200%);
+	background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)) !important;
 }
