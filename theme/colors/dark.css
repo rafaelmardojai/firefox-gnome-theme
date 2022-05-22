@@ -66,14 +66,10 @@
 		--gnome-focused-urlbar-border-color: rgba(120, 174, 237, .5); /* Same as --gnome-accent but with opacity*/
 
 		/* Switch */
-		--gnome-switch-background: #535353;
-		--gnome-switch-border-color: var(--gnome-switch-background);
-		--gnome-switch-slider-background: #FFFFFF;
-		--gnome-switch-slider-border-color: var(--gnome-switch-background);
-		--gnome-switch-slider-box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
-		--gnome-switch-active-background: #3584E4;
-		--gnome-switch-active-border-color: var(--gnome-switch-active-background);
-		--gnome-switch-active-slider-border-color: var(--gnome-switch-active-background);
+		--gnome-switch-background: rgba(255, 255, 255, .15);
+		--gnome-switch-slider-background: #d2d2d2;
+		--gnome-switch-active-background: var(--gnome-accent-bg);
+		--gnome-switch-active-slider-background: #ffffff;
 
 		/* Tabs */
 		--gnome-tabbar-tab-color: rgb(141, 144, 145);
