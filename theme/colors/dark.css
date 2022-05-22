@@ -24,11 +24,11 @@
 		--gnome-inactive-toolbar-icon-fill: #919190;
 
 		/* Sidebar */
-        --gnome-sidebar-background: var(--gnome-toolbar-background);
+		--gnome-sidebar-background: var(--gnome-toolbar-background);
 		--gnome-inactive-sidebar-background: var(--gnome-sidebar-background);
 
 		/* Menus */
-		--gnome-menu-background: #2f2f2f;
+		--gnome-menu-background: #383838;
 		--gnome-menu-border-color: rgba(0, 0, 0, .14);
 		--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
 		--gnome-menu-button-hover-background: var(--gnome-button-background);
