@@ -14,7 +14,7 @@
 #editBMPanel_tagsField {
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
-	border: 0;
+	border: 0 !important;
 	border-radius: 8px !important;
 	box-shadow: none !important;
 	color: var(--gnome-entry-color) !important;
