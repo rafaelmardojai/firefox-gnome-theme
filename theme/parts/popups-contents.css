@@ -144,29 +144,11 @@
 	color: white !important;
 }
 
-/* Url popups */
-#identity-popup-mainView-panel-header,
-#permission-popup-mainView-panel-header,
-#protections-popup-mainView-panel-header,
-#permission-popup-mainView-panel-header-span,
-#identity-popup-mainView-panel-header-span,
-#protections-popup-mainView-panel-header-span,
-#protections-popup-toast-panel-tp-on-desc,
-#protections-popup-toast-panel-tp-off-desc,
-#protections-popup .panel-header > h1 > span,
-#permission-popup .panel-header > h1 > span,
-#identity-popup .panel-header > h1 > span {
-	min-width: auto !important;
-	max-width: initial !important;
-}
-
 /* URLbar popups */
 #identity-popup-mainView,
 #permission-popup-mainView,
 #protections-popup-mainView,
-#identity-popup-mainView-panel-header,
-#permission-popup-mainView-panel-header,
-#protections-popup-mainView-panel-header {
+#identity-popup-mainView-panel-header {
   min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
   min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
 }
@@ -294,18 +276,20 @@
 	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-radius: 9px;
-	padding: 12px !important;
+	padding: 12px 16px !important;
 	margin: 0 !important;
 }
+
 #protections-popup[hasException] #protections-popup-tp-switch-section {
 	background: var(--gnome-menu-background) !important;
 }
 .protections-popup-tp-switch-label-box label {
+	margin-right: 12px !important;
 	font-weight: normal !important;
 }
 
 #protections-popup-no-trackers-found-description {
-	margin: 12px 0 !important;
+	margin: 12px 12px 0 !important;
 	text-align: left !important;
 }
 
@@ -338,19 +322,14 @@
 }
 #protections-popup-show-report-stack {
 	width: 100% !important;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 10px;
 }
-.protections-popup-footer-button {
+#protections-popup-show-report-button {
+	height: 32px !important;
+}
+#protections-popup-trackers-blocked-counter-box,
+#protections-popup-footer-protection-type-label  {
 	margin: 0 !important;
-}
-#protections-popup-footer-protection-type-label {
-	margin-left: 8px !important;
-}
-#protections-popup-trackers-blocked-counter-box {
-	margin-inline-end: 0 !important;
+	margin-inline: 0 !important;
 }
 .protections-popup-description {
     border-bottom: 0 !important;
