@@ -37,6 +37,7 @@ panel[type=arrow] {
 /* Style popovers */
 panel:not([remote]) {
 	--arrowpanel-background: var(--gnome-menu-background) !important;
+	--panel-item-hover-bgcolor: var(--gnome-menu-button-hover-background) !important;
 }
 panel  {
 	--arrowpanel-padding: 0 !important;
@@ -61,17 +62,20 @@ panel  {
 	padding: 0 var(--gnome-menu-padding) var(--gnome-menu-padding) !important;
 }
 :is(
-    .panel-header, .panel-footer,
-    .panel-subview-body,
-    .protections-popup-section,
-    #protections-popup-mainView-panel-header-section,
-    .permission-popup-section,
-    .identity-popup-section,
-		.popup-notification-header-container,
-		.popup-notification-body-container,
-		.popup-notification-footer-container
+	.panel-header, .panel-footer,
+	.panel-subview-body,
+	.protections-popup-section,
+	#protections-popup-mainView-panel-header-section,
+	.permission-popup-section,
+	.identity-popup-section,
+	.popup-notification-header-container,
+	.popup-notification-body-container,
+	.popup-notification-footer-container
 ):first-child:not(:empty) {
 	padding-top: var(--gnome-menu-padding) !important;
+}
+.panel-subview-body > .panel-subview-body {
+	padding: 0 !important;
 }
 /* Padding with margign */
 .subviewbutton.panel-subview-footer-button {
@@ -186,9 +190,7 @@ menuitem, menupopup menu,
 /* Menu buttons hover */
 menuitem:not([disabled]):is(:hover, [open], [_moz-menuactive]),
 menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
-.subviewbutton:not([disabled],
-#appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
-.toolbarbutton-1:not([disabled]):hover,
+.subviewbutton:not([disabled], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
 .protections-popup-footer-button:not([disabled]):hover,
 #protections-popup-show-report-stack:hover .protections-popup-footer-button,
 .protections-popup-category:not([disabled]):hover,
@@ -207,6 +209,7 @@ menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
 
 /* Menu buttons back */
 .subviewbutton-back {
+	opacity: 1 !important;
 	width: 100%;
 	-moz-box-align: center !important;
 	-moz-box-pack: start !important;
@@ -219,6 +222,14 @@ menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
 	position: absolute !important;
 	top: 8px !important;
 	width: 100%;
+}
+
+/* Menu headers */
+.subview-subheader {
+	font: menu !important;
+	font-weight: bold !important;
+	padding-block: 0 !important;
+	margin: 0 4px !important;
 }
 
 /* Style popover separators */

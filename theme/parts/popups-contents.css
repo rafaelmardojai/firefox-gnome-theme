@@ -149,7 +149,7 @@
 #permission-popup-mainView,
 #protections-popup-mainView,
 #identity-popup-mainView-panel-header {
-  min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
+  max-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
   min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
 }
 
@@ -182,6 +182,10 @@
 /* Permission popup */
 #permission-popup-permissions-content {
 	padding: 0 !important;
+}
+#permission-popup-mainView {
+  min-width: unset !important;
+  max-width: unset !important;
 }
 
 .permission-popup-permission-item:first-child, #permission-popup-storage-access-permission-list-header {
