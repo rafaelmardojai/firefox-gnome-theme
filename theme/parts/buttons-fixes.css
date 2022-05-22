@@ -181,11 +181,6 @@ button.close {
 	margin: 4px 4px 0 4px !important;
 }
 
-/* Bookmarks editor buttons */
-.expander-down image, .expander-up image {
-	margin: 6px !important;
-}
-
 /* Identity popup tracking protection button */
 .tracking-protection-button {
 	margin-inline-end: 0 !important;
