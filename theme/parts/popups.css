@@ -234,7 +234,7 @@ menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
 
 /* Style popover separators */
 toolbarseparator, menuseparator {
-	border-color: var(--gnome-menu-separator-color) !important;
+	appearance: none !important;
 }
 
 #PlacesToolbar menupopup[placespopup="true"] menuseparator {
@@ -247,6 +247,7 @@ toolbarseparator, menuseparator {
 }
 
 toolbarseparator:not([orient="vertical"]), menupopup menuseparator {
+	border-top: 1px solid var(--gnome-menu-separator-color) !important;
 	margin: 6px 0 !important;
 }
 toolbarseparator[orient="vertical"] {
