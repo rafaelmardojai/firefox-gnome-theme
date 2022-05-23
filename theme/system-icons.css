@@ -157,6 +157,25 @@
 		list-style-image: url("moz-icon://stock/edit-paste-symbolic?size=dialog") !important;
 	}
 
+	/* Reload */
+	#reload-button,
+	#context-reload .toolbarbutton-icon {
+		filter: var(--gnome-icons-hack-filter);
+		list-style-image: url("moz-icon://stock/view-refresh-symbolic?size=dialog") !important;
+	}
+	/* Stop */
+	#stop-button,
+	#context-stop .toolbarbutton-icon {
+		filter: var(--gnome-icons-hack-filter);
+		list-style-image: url("moz-icon://stock/process-stop-symbolic?size=dialog") !important;
+	}
+	/* Downlaod */
+	#downloads-button,
+	#downloads-indicator-icon .toolbarbutton-icon {
+		filter: var(--gnome-icons-hack-filter);
+		list-style-image: url("moz-icon://stock/folder-download-symbolic?size=dialog") !important;
+	}
+
 	/* Navbar overflow button */
 	#nav-bar-overflow-button .toolbarbutton-icon {
 		filter: var(--gnome-icons-hack-filter);
