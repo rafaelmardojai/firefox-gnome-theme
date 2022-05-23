@@ -56,6 +56,26 @@ function saveProfile(){
 		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userChrome.css
 	fi
 
+	# Create single-line user content CSS files if non-existent or empty.
+	if [ -s userContent.css ]; then
+		# Remove older theme imports
+		sed 's/@import "firefox-gnome-theme.*.//g' userContent.css | sed '/^\s*$/d' > userContent.css
+		echo >> userContent.css
+	else
+		echo >> userContent.css
+	fi
+
+	# Import this theme at the beginning of the CSS files.
+	sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
+
+	if [ $THEME = "DEFAULT" ]; then
+		echo "No theme set, using default adwaita."
+	else
+		echo "Setting $THEME theme."
+		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userContent.css
+		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userContent.css
+	fi
+
 	cd ..
 
 	# Symlink user.js to firefox-gnome-theme one.
