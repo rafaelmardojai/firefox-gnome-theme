@@ -217,7 +217,7 @@ tab[selected]:-moz-window-inactive {
 }
 :root:not(:-moz-window-inactive) .tab-icon-overlay:hover,
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
-	background: var(--gnome-tabbar-close-hover) !important;
+	background: var(--gnome-button-flat-hover-background) !important;
 }
 
 .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) image {
@@ -232,22 +232,21 @@ tab[selected]:-moz-window-inactive {
 /* Icon overlay smaller */
 .tab-icon-overlay[pinned], .tab-icon-overlay:not([indicator-replaces-favicon="true"], [selected]) {
 	width: 12px !important;
-    height: 12px !important;
+	height: 12px !important;
 	padding: 2px !important;
 }
 /* Icon overlay small style */
 .tab-icon-overlay:is([pinned], [sharing]):not([crashed]) {
-    stroke: unset !important;
+	stroke: unset !important;
 }
-.tab-icon-overlay:is([pinned], [sharing]):not([crashed], [selected]) {
-	background: rgba(255, 255, 255, 0.5) !important;
+.tab-icon-overlay:is([pinned]):not([crashed]),
+.tab-icon-overlay:is([sharing]):not([crashed], [selected]) {
+	background: var(--gnome-tab-button-background) !important;
 }
-.tab-icon-overlay:is([pinned], [sharing]):not([crashed], [selected]):hover {
-	background: rgba(255, 255, 255, 0.8) !important;
+.tab-icon-overlay:is([pinned], [sharing]):not([crashed]):hover {
+	background: var(--gnome-tab-button-hover-background) !important;
 }
-.tab-icon-overlay:is([pinned],[selected]) {
-	background: rgba(255, 255, 255, 0.5) !important;
-}
+
 /* Fix icon overlay posisition when sharing */
 .tab-icon-overlay:not([crashed], [pinned]):is([sharing])[selected] {
 	top: 0 !important;
