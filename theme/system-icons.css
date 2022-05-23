@@ -40,11 +40,9 @@
 	}
 
 	/* Toolbars close button */
-	.close-icon:not(.tab-close-button) {	
+	.close-icon {
+		filter: var(--gnome-icons-hack-filter);
 		list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
-	}
-	.close-icon:not(.tab-close-button) image {
-		filter: var(--gnome-window-icons-hack-filter) !important;
 	}
 
 	/* Navbar icons */
