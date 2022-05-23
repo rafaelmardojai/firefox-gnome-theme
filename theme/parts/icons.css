@@ -187,7 +187,7 @@ arrowscrollbox[orient="horizontal"] {
 	list-style-image: url(../icons/edit-find-symbolic.svg) !important;
 }
 .textbox-search-sign {
-	margin: 2px 0;
+	margin: 3px 0;
 	max-height: 16px !important;
 	width: 16px !important;
 }
