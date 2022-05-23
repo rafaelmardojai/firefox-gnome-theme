@@ -291,7 +291,7 @@ button.popup-notification-primary-button,
 
 /* Buttons with suggested action */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"],
-button.popup-notification-primary-button,
+button.popup-notification-primary-button:not(#hack),
 #editBookmarkPanelDoneButton,
 #tracking-action-block,
 .button.connect-device {
@@ -306,7 +306,7 @@ button.popup-notification-primary-button,
 
 /* Opaque buttons hover */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
-button.popup-notification-primary-button.popup-notification-button:hover,
+button.popup-notification-primary-button:hover,
 #editBookmarkPanelDoneButton:hover,
 #tracking-action-block:hover,
 .button.connect-device:hover,
@@ -317,7 +317,7 @@ button.popup-notification-primary-button.popup-notification-button:hover,
 
 /* Opaque buttons active */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
-button.popup-notification-primary-button.popup-notification-button:active,
+button.popup-notification-primary-button:active,
 #editBookmarkPanelDoneButton:active,
 #tracking-action-block:active,
 .button.connect-device:active,
