@@ -50,6 +50,10 @@ panel  {
 #sidebarMenu-popup {
 	--arrowpanel-padding: var(--gnome-menu-padding) !important;
 }
+#downloadsPanel-blockedSubview,
+#downloadsPanel-mainView {
+	padding:  var(--gnome-menu-padding) !important;
+}
 .panel-header, .panel-footer,
 .panel-subview-body,
 .protections-popup-section,
@@ -78,13 +82,13 @@ panel  {
 	padding: 0 !important;
 }
 /* Padding with margign */
-.subviewbutton.panel-subview-footer-button {
+.subviewbutton.panel-subview-footer-button:not(#downloadsHistory) {
 	margin: var(--gnome-menu-padding) !important;
 }
-.subviewbutton.panel-subview-footer-button:not(:only-child) {
+.subviewbutton.panel-subview-footer-button:not(:only-child, #downloadsHistory) {
 	margin: 0 var(--gnome-menu-padding) !important;
 }
-.subviewbutton.panel-subview-footer-button:not(:only-child):last-child {
+.subviewbutton.panel-subview-footer-button:not(:only-child, #downloadsHistory):last-child {
 	margin-bottom: var(--gnome-menu-padding) !important;
 }
 #identity-popup-security-button {
@@ -94,7 +98,8 @@ panel  {
 /* No menu */
 #notification-popup,
 #permission-popup,
-#editBookmarkPanel {
+#editBookmarkPanel,
+#downloadsPanel {
 	--gnome-menu-padding: 12px !important;
 }
 
@@ -153,7 +158,8 @@ menuitem, menupopup menu,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
-#PlacesToolbar .bookmark-item {
+#PlacesToolbar .bookmark-item,
+#downloadsPanel-mainView .download-state {
 	-moz-appearance: none !important;
 	border-radius: 6px !important;	
 	color: var(--gnome-toolbar-color) !important;
@@ -195,7 +201,8 @@ menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
 #protections-popup-show-report-stack:hover .protections-popup-footer-button,
 .protections-popup-category:not([disabled]):hover,
 .identity-popup-content-blocking-category:not([disabled]):hover,
-#PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]) {
+#PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
+#downloadsPanel-mainView .download-state:hover {
 	background: var(--gnome-menu-button-hover-background) !important;
 }
 

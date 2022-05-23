@@ -84,17 +84,12 @@
 
 /* Downloads popover */
 #downloadsPanel-mainView .download-state {
-	padding: 8px !important;
+	padding: 12px !important;
 	border: 0 !important;
-	border-radius: 5px !important;
 	display: flex;
 	align-items: center;
-}
-#downloadsPanel-mainView .download-state:hover {
-	background-color: var(--gnome-popover-button-hover-background) !important;	
-}
-#downloadsPanel-mainView .download-state:last-child {
-	margin-bottom: 8px !important;
+	height: 64px !important;
+	margin: 0 !important;
 }
 
 #downloadsPanel-mainView .downloadMainArea {
