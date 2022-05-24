@@ -82,6 +82,7 @@
 	--gnome-inactive-tabbar-tab-active-color: var(--gnome-inactive-tabbar-tab-color);
 	--gnome-tab-button-background: rgba(255, 255, 255, .5);
 	--gnome-tab-button-hover-background: rgba(255, 255, 255, .6);
+	--gnome-tabbar-tab-identity-base-opacity: .1;
 }
 
 /* Private window colors */
