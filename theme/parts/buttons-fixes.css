@@ -267,3 +267,11 @@ button.close {
 #stop-reload-button .toolbarbutton-icon {
 	margin-top: -2px !important;
 }
+
+/* Panel banner */
+#appMenu-popup .panel-banner-item {
+	margin: 0 0 6px !important;
+}
+#appMenu-popup .panel-banner-item > .toolbarbutton-text {
+	margin-inline: 0 !important;
+}

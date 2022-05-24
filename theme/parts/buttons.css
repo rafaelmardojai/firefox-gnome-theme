@@ -52,7 +52,7 @@ button.close,
 	color: var(--gnome-toolbar-color) !important;
 	outline: 0 !important;
 	font: menu !important;
-	-moz-box-align: center;
+	-moz-box-align: center !important;
 }
 .subviewbutton-iconic {
 	-moz-box-pack: center !important;
@@ -101,7 +101,7 @@ menulist,
 }
 .subviewbutton.panel-subview-footer label,
 .panel-footer button,
-#appMenu-popup .panel-banner-item,
+#appMenu-popup .panel-banner-item .toolbarbutton-text,
 #appMenu-popup #appMenu-zoomReset-button2:not(#hack),
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
