@@ -144,13 +144,8 @@ You should already have this file installed if you followed one of the installat
 > For other non essential preferences checkout `configuration/user.js`.
 
 ## Updating
-Both manual and script installation methods should create a git clone in `your-profile-folder-path/chrome/firefox-gnome-theme`, so the easiet way to update the theme is to open this folder in terminal and perform a git pull.
 
-```sh
-git pull origin master
-```
-
-> Note: You can also run the installation script again to update (after cloning again the repo).
+You can follow the installation script steps again to update the theme.
 
 ## Uninstalling
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
