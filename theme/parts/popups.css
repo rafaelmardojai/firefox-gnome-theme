@@ -187,10 +187,14 @@ menuitem, menupopup menu,
 }
 
 /* Menu buttons disabled */
+menuitem[disabled], menupopup menu[disabled],
 .subviewbutton[disabled], .toolbarbutton-1[disabled],
 .protections-popup-category[disabled],
 .identity-popup-content-blocking-category[disabled] {
 	opacity: .5 !important;
+}
+menuitem[disabled][_moz-menuactive], menupopup menu[disabled][_moz-menuactive] {
+	background: transparent !important;
 }
 
 /* Menu buttons hover */
