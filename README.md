@@ -143,6 +143,8 @@ You should already have this file installed if you followed one of the installat
 
 > For other non essential preferences checkout `configuration/user.js`.
 
+Also though is not obligatory, some weird issues might happen if you don't use the Firefox's default/system theme because the theme is never tested against the Firefox's light or dark theme.
+
 ## Updating
 
 You can follow the installation script steps again to update the theme.
