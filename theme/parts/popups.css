@@ -198,8 +198,8 @@ menuitem[disabled][_moz-menuactive], menupopup menu[disabled][_moz-menuactive] {
 }
 
 /* Menu buttons hover */
-menuitem:not([disabled]):is(:hover, [open], [_moz-menuactive]),
-menupopup menu:not([disabled]):is(:hover, [open], [_moz-menuactive]),
+menuitem:not([disabled]):is(:hover, [_moz-menuactive]),
+menupopup menu:not([disabled]):is(:hover, [_moz-menuactive]),
 .subviewbutton:not([disabled], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
 .protections-popup-footer-button:not([disabled]):hover,
 #protections-popup-show-report-stack:hover .protections-popup-footer-button,
