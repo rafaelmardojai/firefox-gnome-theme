@@ -187,24 +187,24 @@ menuitem, menupopup menu,
 }
 
 /* Menu buttons disabled */
-menuitem[disabled], menupopup menu[disabled],
-.subviewbutton[disabled], .toolbarbutton-1[disabled],
-.protections-popup-category[disabled],
-.identity-popup-content-blocking-category[disabled] {
+menuitem[disabled="true"], menupopup menu[disabled="true"],
+.subviewbutton[disabled="true"], .toolbarbutton-1[disabled="true"],
+.protections-popup-category[disabled="true"],
+.identity-popup-content-blocking-category[disabled="true"] {
 	opacity: .5 !important;
 }
-menuitem[disabled][_moz-menuactive], menupopup menu[disabled][_moz-menuactive] {
+menuitem[disabled="true"][_moz-menuactive], menupopup menu[disabled="true"][_moz-menuactive] {
 	background: transparent !important;
 }
 
 /* Menu buttons hover */
-menuitem:not([disabled]):is(:hover, [_moz-menuactive]),
-menupopup menu:not([disabled]):is(:hover, [_moz-menuactive]),
-.subviewbutton:not([disabled], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
-.protections-popup-footer-button:not([disabled]):hover,
+menuitem:not([disabled="true"]):is(:hover, [_moz-menuactive]),
+menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
+.subviewbutton:not([disabled="true"], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
+.protections-popup-footer-button:not([disabled="true"]):hover,
 #protections-popup-show-report-stack:hover .protections-popup-footer-button,
-.protections-popup-category:not([disabled]):hover,
-.identity-popup-content-blocking-category:not([disabled]):hover,
+.protections-popup-category:not([disabled="true"]):hover,
+.identity-popup-content-blocking-category:not([disabled="true"]):hover,
 #PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
 #downloadsPanel-mainView .download-state:hover {
 	background: var(--gnome-menu-button-hover-background) !important;
