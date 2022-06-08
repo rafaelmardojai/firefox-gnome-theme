@@ -96,5 +96,14 @@
 		--gnome-private-inactive-headerbar-background: #1C2438;
 		--gnome-private-inactive-headerbar-border-color: #3A4152;
 		--gnome-private-inactive-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow);
+
+		/* Text color for Firefox Logo in new private tab */
+		--gnome-private-wordmark: #FBFBFE;
+
+		/* New private tab background */
+		--gnome-private-in-content-page-background: #1C2438;
+
+		/* Private browsing info box */
+		--gnome-private-text-primary-color: #FBFBFE;
 	}
 }
