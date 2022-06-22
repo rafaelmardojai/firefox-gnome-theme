@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<svg
+   viewBox="0 0 20 20"
+   width="20"
+   height="20"
+   version="1.1"
+   id="svg10"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs14" />
+  <circle
+     fill="#8000D7"
+     cx="10"
+     cy="10"
+     r="9.5"
+     id="circle2"
+     style="fill:#345cc6;fill-opacity:1" />
+  <path
+     fill="#ffffff"
+     d="M 17.436,7.357 C 16.007,5.481 13.201,5.241 11.454,6.846 L 10.477,7.744 H 9.52 L 8.543,6.846 C 6.795,5.241 3.989,5.481 2.56,7.357 c -0.185,0.731 0.101,3.431 0.263,3.856 0.325,1.715 1.727,3.005 3.408,3.005 0.839,0 1.599,-0.335 2.2,-0.871 l 0.366,-0.313 a 1.813,1.813 0 0 1 2.354,-0.019 l 0.55,0.456 v -0.002 c 0.579,0.466 1.289,0.751 2.065,0.751 1.68,0 3.082,-1.29 3.408,-3.005 0.161,-0.427 0.457,-3.115 0.262,-3.858 z"
+     id="path4" />
+  <path
+     fill="#8000D7"
+     d="m 6.625,8.553 c -0.697,0 -1.317,0.291 -1.717,0.743 a 0.65,0.65 0 0 0 0,0.848 c 0.4,0.452 1.02,0.743 1.717,0.743 0.697,0 1.317,-0.291 1.717,-0.743 a 0.65,0.65 0 0 0 0,-0.848 C 7.942,8.844 7.322,8.553 6.625,8.553 Z"
+     id="path6"
+     style="fill:#345cc6;fill-opacity:1" />
+  <path
+     fill="#8000D7"
+     d="m 13.375,8.553 c -0.697,0 -1.317,0.291 -1.717,0.743 a 0.65,0.65 0 0 0 0,0.848 c 0.4,0.452 1.02,0.743 1.717,0.743 0.697,0 1.317,-0.291 1.717,-0.743 a 0.65,0.65 0 0 0 0,-0.848 c -0.4,-0.452 -1.02,-0.743 -1.717,-0.743 z"
+     id="path8"
+     style="fill:#345cc6;fill-opacity:1" />
+</svg>

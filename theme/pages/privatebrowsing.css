@@ -1,0 +1,10 @@
+/* about:privatebrowsing */
+
+@-moz-document url("about:privatebrowsing") {
+    html.private {
+	--in-content-page-background: var(--gnome-private-background) !important;
+    }
+    .info {
+    	background-image: url("../icons/indicator-private-browsing.svg") !important;
+    }
+}

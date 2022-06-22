@@ -88,6 +88,7 @@
 	/* Private window colors */
 	:root {
 		--gnome-private-accent: #71A1DB;
+		--gnome-private-background: #151B2B;
 		
 		/* Header bar */
 		--gnome-private-headerbar-background: #252F49;
