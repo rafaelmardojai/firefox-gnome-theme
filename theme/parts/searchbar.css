@@ -1,0 +1,11 @@
+/* Search bar */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+.searchbar-engine-one-off-item[selected] {
+	background-color: var(--button-active-bgcolor) !important;
+}
+
+.searchbar-engine-one-off-item {
+	background-color: transparent !important;
+}
