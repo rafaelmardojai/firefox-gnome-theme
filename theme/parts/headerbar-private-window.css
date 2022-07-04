@@ -5,13 +5,14 @@
 :root[privatebrowsingmode="temporary"] {
 	--gnome-accent: var(--gnome-private-accent) !important;
 	--gnome-accent-fg: var(--gnome-private-accent) !important;
+	/* Toolbars */
+	--gnome-toolbar-background: var(--gnome-private-toolbar-background) !important;
+	--gnome-inactive-toolbar-background: var(--gnome-private-inactive-toolbar-background)  !important;		
+	/* Menus */
+	--gnome-menu-background: var(--gnome-private-menu-background) !important;		
 	/* Change headerbar colors */
 	--gnome-headerbar-background: var(--gnome-private-headerbar-background) !important;
-	--gnome-headerbar-border-color: var(--gnome-private-headerbar-border-color) !important;
-	--gnome-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow) !important;
 	--gnome-inactive-headerbar-background: var(--gnome-private-inactive-headerbar-background) !important;
-	--gnome-inactive-headerbar-border-color: var(--gnome-private-inactive-headerbar-border-color) !important;
-	--gnome-inactive-headerbar-box-shadow: var(--gnome-private-inactive-headerbar-box-shadow) !important;
 }
 
 /* Add private window headerbar indicator */

@@ -83,13 +83,14 @@
 :root {
 	--gnome-private-accent: #272F42;
 	
+	/* Toolbars */
+	--gnome-private-toolbar-background: #EAF0F7;
+	--gnome-private-inactive-toolbar-background: var(--gnome-private-toolbar-background);
+	/* Menus */
+	--gnome-private-menu-background: #D7E3F0;
 	/* Header bar */
 	--gnome-private-headerbar-background: #D7E3F0;
-	--gnome-private-headerbar-border-color: #BEC9D5;
-	--gnome-private-headerbar-box-shadow: none;
-	--gnome-private-inactive-headerbar-background: #EAF0F7;
-	--gnome-private-inactive-headerbar-border-color: #D8DEE4;
-	--gnome-private-inactive-headerbar-box-shadow: var(--gnome-private-headerbar-box-shadow);
+	--gnome-private-inactive-headerbar-background: var(--gnome-private-toolbar-background);
 
 	/* Text color for Firefox Logo in new private tab */
 	--gnome-private-wordmark: #20123A;
