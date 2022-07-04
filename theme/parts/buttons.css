@@ -63,8 +63,7 @@ button.close,
 .close-icon:not(.tab-close-button),
 button.close,
 #protections-popup-info-button,
-.permission-popup-permission-remove-button,
-#item-choose button {
+.permission-popup-permission-remove-button {
 	background: transparent !important;
 }
 
@@ -145,8 +144,8 @@ menulist:hover,
 .panel-footer button:hover,
 #downloadsPanel-mainView .download-state .downloadButton:hover,
 #appMenu-popup .panel-banner-item:hover,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(#appMenu-fxa-label):not([disabled]):hover,
-#context-navigation menuitem:not([disabled]):hover,
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(#appMenu-fxa-label):not([disabled="true"]):hover,
+#context-navigation menuitem:not([disabled="true"]):hover,
 .identity-popup-preferences-button:not(#hack):hover,
 .findbar-container toolbarbutton:hover,
 .findbar-closebutton .toolbarbutton-icon:hover,
@@ -159,7 +158,7 @@ menulist:hover .menulist-label-box,
 .tracking-protection-button:hover,
 .dialog-button:hover,
 .autocomplete-richlistitem[type="loginsFooter"]:hover,
-.dialog-button-box button:not([disabled]):hover,
+.dialog-button-box button:not([disabled="true"]):hover,
 .searchbar-engine-one-off-item:hover,
 .button.connect-device:hover,
 #editBMPanel_newFolderButton:hover {
@@ -168,7 +167,7 @@ menulist:hover .menulist-label-box,
 }
 
 /* Hover flat buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled]):not([checked]):hover,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled="true"]):not([checked]):hover,
 .close-icon:not(.tab-close-button):hover,
 button.close:hover,
 #protections-popup-info-button:hover,
@@ -184,8 +183,8 @@ menulist[open],
 .panel-footer button:active,
 #downloadsPanel-mainView .download-state .downloadButton:active,
 #appMenu-popup .panel-banner-item:active,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not([disabled]):not(#appMenu-fxa-label):active,
-#context-navigation menuitem:active:not([disabled]),
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not([disabled="true"]):not(#appMenu-fxa-label):active,
+#context-navigation menuitem:active:not([disabled="true"]),
 .identity-popup-preferences-button:not(#hack):active,
 .findbar-container toolbarbutton[checked],
 .findbar-container toolbarbutton:active,
@@ -198,16 +197,16 @@ menulist[open] .menulist-label-box,
 .tracking-protection-button:active,
 .dialog-button:active,
 .autocomplete-richlistitem[type="loginsFooter"]:active,
-.dialog-button-box button:not([disabled]):active,
+.dialog-button-box button:not([disabled="true"]):active,
 .button.connect-device:active,
 #editBMPanel_newFolderButton:active {
 	background: var(--gnome-button-active-background) !important;
 }
 
 /* Active flat buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):not(#hack):active,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled])[open],
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled])[checked],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled="true"]):not(#hack):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled="true"])[open],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled="true"])[checked],
 .close-icon:not(.tab-close-button):active,
 button.close:active,
 #protections-popup-info-button:not(#hack):active,
@@ -218,10 +217,10 @@ button.close:active,
 }
 
 /* Disabled buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled],
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled],
-#context-navigation menuitem[disabled],
-.dialog-button-box button[disabled] {
+#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled="true"],
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled="true"],
+#context-navigation menuitem[disabled="true"],
+.dialog-button-box button[disabled="true"] {
 	opacity: .5 !important;
 }
 
