@@ -41,7 +41,7 @@ toolbarspring {
 	width: 100% !important;
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
-    border-radius: 12px !important
+    border-radius: 12px !important;
 }
 
 /* Search bar result */

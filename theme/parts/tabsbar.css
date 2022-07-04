@@ -75,7 +75,7 @@ tab > stack {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 2;
 }
 
 #tabbrowser-tabs[movingtab=true] #tabbrowser-arrowscrollbox::after  {
