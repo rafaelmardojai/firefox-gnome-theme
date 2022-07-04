@@ -50,7 +50,6 @@
 #loginTextbox:-moz-window-inactive,
 #password1Textbox:-moz-window-inactive,
 .tabsFilter:-moz-window-inactive {
-	background: var(--gnome-inactive-entry-background) !important;
 	color: var(--gnome-inactive-entry-color) !important;
 }
 

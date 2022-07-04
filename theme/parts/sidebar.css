@@ -14,12 +14,14 @@
 	opacity: 0.7 !important;
 }
 #sidebar-splitter {
-	background: var(--gnome-toolbar-border-color) !important;
+	background: var(--gnome-toolbar-background) !important;
 	border: 0 !important;
-	width: 1px !important;
+	border-right: 1px solid var(--gnome-toolbar-border-color) !important;
+	width: 0 !important;
 }
 #sidebar-splitter:-moz-window-inactive {
-	background: var(--gnome-inactive-toolbar-border-color) !important;
+	background: var(--gnome-inactive-toolbar-background) !important;
+	border-color: var(--gnome-inactive-toolbar-border-color) !important;
 }
 
 #sidebar-header {

@@ -64,16 +64,23 @@ tab > stack {
 }
 
 /* Fake tabsbar border */
-#tabbrowser-arrowscrollbox:after {
+#tabbrowser-arrowscrollbox::after {
 	content: "";
 	display: block;
 	width: 100%;
+	background: var(--gnome-toolbar-background);
 	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color);
-	height: 1px;
-	min-height: 1px;
+	height: 0;
+	min-height: 0;
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	z-index: 100;
+}
+
+#tabbrowser-tabs[movingtab=true] #tabbrowser-arrowscrollbox::after  {
+	bottom: unset;
+	top: 38px;
 }
 
 /* Remove tab separators */
@@ -113,22 +120,10 @@ tab > stack {
 
 /* Tab labels */
 tab {
-	color: var(--gnome-tabbar-tab-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 	font-family: Cantarell, inherit;
 	font-weight: normal;
 	font-size: 1em;
-}
-tab:hover {
-	color: var(--gnome-tabbar-tab-hover-color) !important;
-}
-tab[selected] {
-	color: var(--gnome-tabbar-tab-active-color) !important;
-}
-tab:-moz-window-inactive {
-	color: var(--gnome-inactive-tabbar-tab-color) !important;
-}
-tab[selected]:-moz-window-inactive {
-	color: var(--gnome-inactive-tabbar-tab-active-color) !important;
 }
 
 /* Reset tab background */
