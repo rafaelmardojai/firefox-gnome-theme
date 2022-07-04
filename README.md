@@ -24,7 +24,7 @@ Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnom
 
 ### Firefox versions support
 
-The `master` branch of this repo supports the current Firefox stable release `100`.
+The `master` branch of this repo supports the current Firefox stable release `102`.
 
 Theme versions complatible with older Firefox releases are preserved as git tags. Use the `v78.1` tag for Firefox 78 ESR support.
 
