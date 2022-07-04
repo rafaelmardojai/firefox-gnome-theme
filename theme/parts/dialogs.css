@@ -24,9 +24,9 @@ window {
 }
 
 window[role="dialog"] {
-	background: var(--gnome-popover-background) !important;
+	background: var(--gnome-toolbar-background) !important;
 	border: 0 !important;
-	box-shadow: var(--gnome-popover-shadow) !important;
+	box-shadow: var(--gnome-menu-shadow) !important;
 	padding: 0 !important;
 }
 dialog {	
@@ -39,6 +39,9 @@ dialog {
 }
 #titleContainer {
 	justify-content: center !important;
+}
+.titleIcon {
+	background-color: transparent !important;
 }
 
 /* Buttons */
