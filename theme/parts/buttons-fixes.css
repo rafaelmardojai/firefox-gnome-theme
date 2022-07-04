@@ -275,3 +275,12 @@ button.close {
 #appMenu-popup .panel-banner-item > .toolbarbutton-text {
 	margin-inline: 0 !important;
 }
+
+/* User menu */
+#fxa-toolbar-menu-button .toolbarbutton-badge-stack {
+	padding: 0 !important;
+}
+#fxa-avatar-image {
+	min-height: 24px !important;
+	width: 24px !important;
+}
