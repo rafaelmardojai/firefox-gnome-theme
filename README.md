@@ -33,6 +33,14 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 
 ## Installation
 
+### One command curled script
+
+You can install this theme with one command:
+
+```sh
+curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+```
+
 ### Installation script
 1. Clone this repo and enter folder:
 	
@@ -72,14 +80,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 		- Set the colors used in the theme.
 		- Default: Adwaita.
 		- Options: `adwaita`, `maia`, `yaru`.
-	
-### One command curled script
 
-You can also install this theme with one command:
-
-```sh
-curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
-```
 
 It will download the latest version of the theme and run the auto installation script for you.
 
