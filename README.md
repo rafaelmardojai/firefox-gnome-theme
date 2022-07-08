@@ -13,7 +13,7 @@
 This theme follows lastest GNOME Adwaita style.
 
 > ### Disclaimer:
-> This is a Firefox tinkering project made for fun, be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is also repoducible in vanilla Firefox. 
+> Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is repoducible in vanilla Firefox. 
 >
 > If you are a software distribution maintainer, please do not ship this changes by default to your users unless you made extremely clear that they are using a modified version of Firefox UI.
 
