@@ -13,7 +13,7 @@
 This theme follows lastest GNOME Adwaita style.
 
 > ### Disclaimer:
-> Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is repoducible in vanilla Firefox. 
+> Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is repoducible in vanilla Firefox.
 >
 > If you are a software distribution maintainer, please do not ship this changes by default to your users unless you made extremely clear that they are using a modified version of Firefox UI.
 
@@ -40,20 +40,20 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 
 ### Installation script
 1. Clone this repo and enter folder:
-	
+
 	```sh
 	git clone https://github.com/rafaelmardojai/firefox-gnome-theme && cd firefox-gnome-theme
 	```
-2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step. 
+2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step.
 	```sh
-	git checkout beta # Set beta branch 
-	git checkout v78.1 # Set v78.1 tag 
+	git checkout beta # Set beta branch
+	git checkout v78.1 # Set v78.1 tag
 	```
 
 3. Run installation script
 
 	#### Auto install script
-	
+
 	This script will lookup Firefox profiles location and enable a theme variant for your GTK theme if it exists.
 	```sh
 	./scripts/auto-install.sh
@@ -77,7 +77,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 		- Set the colors used in the theme.
 		- Default: Adwaita.
 		- Options: `adwaita`, `maia`, `yaru`.
-	
+
 ### One command curled script
 
 You can also install this theme with one command:
@@ -121,7 +121,7 @@ It will download the latest version of the theme and run the auto installation s
 	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 	sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
 	```
-	
+
 8. Symlink preferences file:
 
 	```sh
@@ -136,7 +136,7 @@ It will download the latest version of the theme and run the auto installation s
 11. Be happy with your new gnomish Firefox.
 
 ### Required Firefox preferences
-We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work. 
+We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work.
 
 You should already have this file installed if you followed one of the installation methods, but in any case be sure this preferences are enabled under `about:config`:
 
@@ -163,7 +163,7 @@ You can follow the installation script steps again to update the theme.
 ## Enabling optional features
 Optional features can be enabled by creating new `boolean` preferences in `about:config`.
 
-1. Go to the `about:config` page 
+1. Go to the `about:config` page
 2. Type the key of the feature you want to enable
 3. Set it as a `boolean` and click on the add button
 4. Restart Firefox
@@ -187,6 +187,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 - **Active tab contrast** `gnomeTheme.activeTabContrast`
 
 	Add more contrast to the active tab.
+
+- **Close only selected tabs** `gnomeTheme.closeOnlySelectedTabs`
+
+	Show the close button on the selected tab only.
 
 - **System icons** `gnomeTheme.systemIcons`
 
@@ -219,7 +223,7 @@ See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 3. Now restart Firefox, and it should look good!
 
 #### X11 fix:
-1. Go to the `about:config` page 
+1. Go to the `about:config` page
 2. Type `mozilla.widget.use-argb-visuals`
 3. Set it as a `boolean` and click on the add button
 4. Now restart Firefox, and it should look good!

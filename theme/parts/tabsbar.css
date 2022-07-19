@@ -45,7 +45,7 @@ tab > stack {
 	border-bottom: 1px solid var(--gnome-tabbar-tab-border-color) !important;
 	border-radius: 0 !important;
 	margin: 0 !important;
-	padding: 0 9px !important;	
+	padding: 0 9px !important;
 }
 #tabbrowser-tabs[overflow=true] + .toolbarbutton-1:first-of-type {
 	border-left: 1px solid var(--gnome-tabbar-tab-border-color) !important;
@@ -249,7 +249,7 @@ tab {
 }
 
 /* Close tab button */
-:root {	
+:root {
 	--gnome-fill-icon: red !important;
 }
 .tab-close-button {
@@ -277,7 +277,7 @@ tab {
 	background-image: none !important;
 	box-shadow: none !important;
 }
-	
+
 /* Autohide */
 .tabbrowser-tab:not([selected="true"]) .tab-close-button {
 	visibility: hidden !important;
@@ -348,7 +348,7 @@ tab {
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
-	border-bottom-color: var(--gnome-tabbar-tab-border-color) !important; 
+	border-bottom-color: var(--gnome-tabbar-tab-border-color) !important;
 }
 
 /* Tab hover */
@@ -465,5 +465,22 @@ tab {
 	.tab-background[selected=true],
 	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
+	}
+}
+
+/* OPTIONAL: Show the close button on the selected tab only */
+@supports -moz-bool-pref("gnomeTheme.closeOnlySelectedTabs") {
+	/* Hide the close buttons on hover */
+	.tabbrowser-tab:not([selected="true"]):hover .tab-close-button {
+		visibility: hidden !important;
+		opacity: 0 !important;
+	}
+	/* Hide the close button overlay on hover */
+	.tabbrowser-tab:not([pinned]):hover .tab-content::before {
+		--gnome-tabbar-tab-close-overlay-bg: unset;
+	}
+	/* Reset the overflow position of the tab label container */
+	.tabbrowser-tab:not([pinned]):not([selected="true"]):hover .tab-label-container[textoverflow="true"] {
+		margin-right: -16px;
 	}
 }
