@@ -208,7 +208,7 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 - **Drag window from headerbar buttons** `gnomeTheme.dragWindowHeaderbarButtons`
 
-	Allow draging the window from headerbar buttons.
+	Allow dragging the window from headerbar buttons.
 
 	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
 
