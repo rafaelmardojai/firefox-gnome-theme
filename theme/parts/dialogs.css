@@ -10,11 +10,15 @@ window {
 .dialogOverlay {
     display: grid;
 	place-content: center;
-	 justify-content: center;
+	justify-content: center;
 	grid-auto-rows: min(90%, var(--doc-height-px));
 }
-.dialogOverlay[topmost="true"], #window-modal-dialog::backdrop {
+.dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog), #window-modal-dialog::backdrop {
 	background-color: rgba(0, 0, 0, .5) !important;
+}
+
+#window-modal-dialog {
+	margin-top: auto !important;
 }
 
 /* Dialog */
