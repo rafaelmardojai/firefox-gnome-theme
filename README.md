@@ -62,6 +62,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 	```sh
 	./scripts/install.sh # Standard
 	./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+	./scripts/install.sh -f ~/snap/firefox/common/.mozilla/firefox #Snap
 	```
 
 	##### Script options
