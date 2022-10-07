@@ -87,10 +87,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	padding: 0 9px !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled]):not(:active):not([open]):hover {
-	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
+	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 }
 #TabsToolbar .toolbarbutton-1:active, #TabsToolbar .toolbarbutton-1[open] {
-	background-color: var(--gnome-tabbar-tab-border-color) !important;
+	background-color: var(--gnome-tabbar-tab-active-background) !important;
 }
 
 /* Fake tabsbar border */
