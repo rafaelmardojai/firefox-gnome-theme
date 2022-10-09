@@ -67,11 +67,13 @@
 
 		/* Tabs */
 		--gnome-tabbar-background: var(--gnome-headerbar-background);
+		--gnome-tabbar-tab-separator-color: var(--gnome-toolbar-border-color);
 		--gnome-tabbar-tab-hover-background: #3f3f3f; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #444444; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background-contrast: #FAFAFA;
 		--gnome-tabbar-tab-active-hover-background: #4b4b4b; /* Hardcoded color */
 		--gnome-inactive-tabbar-background: var(--gnome-inactive-headerbar-background);
+		--gnome-inactive-tabbar-tab-hover-background: #2c2c2c; /* Hardcoded color */
 		--gnome-inactive-tabbar-tab-active-background: #2e2e2e; /* Hardcoded color */
 		--gnome-tab-button-background: rgba(0, 0, 0, .5);
 		--gnome-tab-button-hover-background: rgba(0, 0, 0, .6);
