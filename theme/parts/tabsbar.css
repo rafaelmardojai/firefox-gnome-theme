@@ -134,7 +134,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 .tabbrowser-tab:not([selected], :hover, [last-visible-tab="true"], [beforeselected-visible="true"], [beforehovered="true"])::after {
 	content: "";
 	display: block;
-	border-left: 1px solid var(--gnome-toolbar-border-color) !important;
+	border-left: 1px solid var(--gnome-tabbar-tab-separator-color) !important;
 	height: 26px;
 	position: absolute;
 	top: 9px;
@@ -325,7 +325,7 @@ tab {
 }
 
 /* Close button overlay */
-.tabbrowser-tab:not([pinned]) .tab-content::after, .tabbrowser-tab:not([pinned]) .tab-content::before {
+.tabbrowser-tab:not([pinned]) .tab-content::before {
 	border-radius: 0 6px 6px 0;
 	content: "";
 	height: 100%;
@@ -335,10 +335,6 @@ tab {
 	top: 0;
 	transition: all 0.2s ease-out;
 	width: 55px;
-}
-.tabbrowser-tab:not([pinned]) .tab-content::after {
-	background: transparent;
-	z-index: 90;
 }
 .tabbrowser-tab:not([pinned]) .tab-content::before {
 	background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
@@ -378,7 +374,7 @@ tab {
 }
 
 /* Tab hover */
-:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
+.tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
@@ -386,9 +382,12 @@ tab {
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
 	background-color: transparent !important;
 }
-:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-image: none !important;
+}
+:root:-moz-window-inactive .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+	background-color: var(--gnome-inactive-tabbar-tab-hover-background) !important;
 }
 
 /* Full width tabs */
