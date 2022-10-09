@@ -20,7 +20,7 @@
 	--gnome-toolbar-icon-fill: #2e3436;
 	--gnome-inactive-toolbar-background: var(--gnome-toolbar-background);
 	--gnome-inactive-toolbar-color: #d5d0cc;
-	--gnome-inactive-toolbar-border-color: #DCDCDC;
+	--gnome-inactive-toolbar-border-color: var(--gnome-toolbar-border-color);
 	--gnome-inactive-toolbar-icon-fill: #929595;
 
 	/* Sidebar */
