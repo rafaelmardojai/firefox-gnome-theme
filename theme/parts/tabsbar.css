@@ -33,6 +33,7 @@
 
 tab > stack {
 	height: 34px !important;
+	width: 34px !important;
 	min-height: 34px !important;
 }
 
@@ -119,7 +120,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	padding: 5px 3px 6px !important;
 	position: relative;
 }
-.tabbrowser-tab[first-visible-tab="true"]{
+.tabbrowser-tab[first-visible-tab="true"]:not([pinned]){
 	padding-left: 5px !important;
 }
 .tabbrowser-tab[last-visible-tab="true"] {
@@ -404,11 +405,6 @@ tab {
 /* Remove blank spaces on tabs start and end */
 #TabsToolbar .titlebar-spacer {
 	display: none !important;
-}
-
-/* Pinned tab size */
-.tabbrowser-tab[pinned] {
-	max-width: 37px !important;
 }
 
 /* Remove container bottom line indicator */
