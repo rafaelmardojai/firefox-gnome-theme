@@ -111,7 +111,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 #tabbrowser-tabs[movingtab=true] #tabbrowser-arrowscrollbox::after  {
 	bottom: unset;
-	top: 38px;
+	top: 44px;
 }
 
 /* Tab */
