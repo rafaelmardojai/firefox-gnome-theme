@@ -16,11 +16,11 @@
 		/* Toolbars */
 		--gnome-toolbar-background: #242424;
 		--gnome-toolbar-color: #ffffff;
-		--gnome-toolbar-border-color: rgba(255, 255, 255, .15);
+		--gnome-toolbar-border-color: rgba(0, 0, 0, .36);
 		--gnome-toolbar-icon-fill: #eeeeec;
 		--gnome-inactive-toolbar-color: #919190;
 		--gnome-inactive-toolbar-background: var(--gnome-toolbar-background);
-		--gnome-inactive-toolbar-border-color: #3F3F3F;
+		--gnome-inactive-toolbar-border-color: var(--gnome-toolbar-border-color);
 		--gnome-inactive-toolbar-icon-fill: #919190;
 
 		/* Sidebar */
@@ -67,7 +67,7 @@
 
 		/* Tabs */
 		--gnome-tabbar-background: var(--gnome-headerbar-background);
-		--gnome-tabbar-tab-separator-color: var(--gnome-toolbar-border-color);
+		--gnome-tabbar-tab-separator-color: rgba(255, 255, 255, .15);
 		--gnome-tabbar-tab-hover-background: #3f3f3f; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #444444; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background-contrast: #FAFAFA;
