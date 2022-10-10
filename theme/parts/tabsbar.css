@@ -48,7 +48,7 @@ tab > stack {
 #scrollbutton-up:not([disabled])::after,
 #scrollbutton-down:not([disabled])::after {
 	content: "";
-	height: 100%;
+	height: 44px;
 	position: absolute;
 	top: 0;
 	z-index: -1;
@@ -200,7 +200,7 @@ tab {
 }
 
 /* Force tab favicon to the center */
-.tabbrowser-tab .tab-icon-stack {
+.tabbrowser-tab:not([pinned]) .tab-icon-stack {
 	margin-left: auto !important;
 }
 
