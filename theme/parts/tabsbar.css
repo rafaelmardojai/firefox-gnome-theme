@@ -450,9 +450,13 @@ tab {
 
 /* OPTIONAL: Add more contrast to the active tab */
 @supports -moz-bool-pref("gnomeTheme.activeTabContrast") {
-	.tab-background[selected=true],
+	.tab-background[selected=true]:not(#hack),
 	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
+	}
+	.tabbrowser-tab:not([pinned])[selected="true"] .tab-content::before,
+	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover .tab-content::before {
+		--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background-contrast) !important;
 	}
 }
 

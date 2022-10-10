@@ -70,7 +70,7 @@
 	--gnome-tabbar-tab-separator-color: var(--gnome-toolbar-border-color);
 	--gnome-tabbar-tab-hover-background: #dedede; /* Hardcoded color */
 	--gnome-tabbar-tab-active-background: #d9d9d9; /* Hardcoded color */
-	--gnome-tabbar-tab-active-background-contrast: #4F4F4F;
+	--gnome-tabbar-tab-active-background-contrast: #FAFAFA; /* Hardcoded color */
 	--gnome-tabbar-tab-active-hover-background: #d2d2d2; /* Hardcoded color */
 	--gnome-inactive-tabbar-background: var(--gnome-inactive-headerbar-background);
 	--gnome-inactive-tabbar-tab-hover-background: #f3f3f3; /* Hardcoded color */
