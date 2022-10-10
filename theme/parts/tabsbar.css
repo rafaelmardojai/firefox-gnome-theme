@@ -167,7 +167,7 @@ tab {
 	align-items: center;
 	margin-top: -1px;
 	min-width: 100% !important;
-	padding: 0 10px !important;
+	padding: 0 4px !important;
 }
 
 /* Fix custom info tab icon */
@@ -284,6 +284,7 @@ tab {
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	height: 16px !important;
+	margin-right: 0 !important;
 	opacity: 1 !important;
 	width: 16px !important;
 	z-index: 100 !important;
