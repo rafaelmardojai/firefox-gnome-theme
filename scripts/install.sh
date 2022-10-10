@@ -80,7 +80,7 @@ function saveProfile(){
 
 	# Symlink user.js to firefox-gnome-theme one.
 	echo "Set configuration user.js file"
-	ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
+	ln -is chrome/firefox-gnome-theme/configuration/user.js user.js
 
 	echo "Done."
 	cd ..
