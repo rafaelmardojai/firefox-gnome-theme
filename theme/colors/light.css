@@ -68,17 +68,15 @@
 	/* Tabs */
 	--gnome-tabbar-background: var(--gnome-headerbar-background);
 	--gnome-tabbar-tab-separator-color: var(--gnome-toolbar-border-color);
-	--gnome-tabbar-tab-hover-background: #dedede; /* Hardcoded color */
-	--gnome-tabbar-tab-active-background: #d9d9d9; /* Hardcoded color */
-	--gnome-tabbar-tab-active-background-contrast: #c0c0c0; /* Hardcoded color */
-	--gnome-tabbar-tab-active-hover-background: #d2d2d2; /* Hardcoded color */
+	--gnome-tabbar-tab-hover-background: rgba(0, 0, 0, .056);
+	--gnome-tabbar-tab-active-background: rgba(0, 0, 0, .08);
+	--gnome-tabbar-tab-active-background-contrast: rgba(0, 0, 0, .24);
+	--gnome-tabbar-tab-active-hover-background: rgba(0, 0, 0, .104);
 	--gnome-inactive-tabbar-background: var(--gnome-inactive-headerbar-background);
-	--gnome-inactive-tabbar-tab-hover-background: #f3f3f3; /* Hardcoded color */
-	--gnome-inactive-tabbar-tab-active-background: #f0f0f0; /* Hardcoded color */
 	--gnome-tab-button-background: rgba(255, 255, 255, .5);
 	--gnome-tab-button-hover-background: rgba(255, 255, 255, .6);
 	--gnome-tabbar-tab-identity-base-opacity: .1;
-  --gnome-tabbar-tab-needs-attetion: #84AEE2;
+	--gnome-tabbar-tab-needs-attetion: #84AEE2;
 }
 
 /* Private window colors */
