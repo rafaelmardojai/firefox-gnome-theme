@@ -217,7 +217,7 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 We also have optional features to enable support for some Firefox extensions.
 
-> **Be aware that extensions support is maintained by the community, so requests to support new extensions are not allowed and the included ones could get broken until someone shows up to fix them.**
+> **Be aware that extensions support are maintained by the community, so requests to support new extensions are not allowed and the included ones could get broken until someone shows up to fix them.**
 
 - **Tab center reborn support** `gnomeTheme.extensions.tabCenterReborn`
 
