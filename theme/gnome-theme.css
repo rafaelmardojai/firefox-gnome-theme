@@ -20,6 +20,9 @@
 
 @import "parts/remove-white-flash.css";
 
+/* Facultative Extension support*/
+@import "parts/tab-center-reborn.css";
+
 @import "colors/light.css";
 @import "colors/dark.css";
 
