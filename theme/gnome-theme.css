@@ -21,7 +21,7 @@
 @import "parts/remove-white-flash.css";
 
 /* Extensions support */
-@import "parts/tab-center-reborn.css";
+@import "extensions/tab-center-reborn.css";
 
 @import "colors/light.css";
 @import "colors/dark.css";
