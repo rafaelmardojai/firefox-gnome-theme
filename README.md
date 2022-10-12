@@ -213,6 +213,12 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
 
+### Extensions support
+
+We also have optional features to enable support for some Firefox extensions.
+
+> **Be aware that extensions support is maintained by the community, so requests to support new extensions are not allowed and the included ones could get broken until someone shows up to fix them.**
+
 - **Tab center reborn support** `gnomeTheme.extensions.tabCenterReborn`
 
 	Enable the vertical tab trough the extension : [Tab Center Reborn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/).
