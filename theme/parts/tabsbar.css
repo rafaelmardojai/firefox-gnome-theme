@@ -330,6 +330,9 @@ tab {
 .tabbrowser-tab:not([pinned]):is([selected="true"], :hover) {
 	--tab-label-mask-size: 32px !important;
 }
+.tabbrowser-tab:not([pinned]):is([selected="true"], :hover) .tab-label-container:not([textoverflow]) {
+	mask-image: linear-gradient(to left, transparent calc(var(--tab-label-mask-size) - 20px), black var(--tab-label-mask-size)) !important;
+}
 
 /* Tab close button etc. positioning */
 .tab-throbber, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-sound, .tab-close-button {
