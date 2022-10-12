@@ -213,6 +213,12 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
 
+- **Tab center reborn support** `gnomeTheme.extensions.tabCenterReborn`
+
+	Enable the vertical tab trough the extension : [Tab Center Reborn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/).
+
+	> **Note:** You also need to copy the contents of the file `configuration/extensions/tab-center-reborn.css` into the settings page of Tabcenter-reborn..
+	
 ## Known bugs
 
 ### CSD have sharp corners
