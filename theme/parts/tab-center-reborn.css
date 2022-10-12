@@ -1,4 +1,4 @@
-@supports -moz-bool-pref("gnomeTheme.tabCenterReborn") {
+@supports -moz-bool-pref("gnomeTheme.extensions.tabCenterReborn") {
     :root {
         --delay: 0s;
         --transition-time: 0.2s;
