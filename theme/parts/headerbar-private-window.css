@@ -7,12 +7,19 @@
 	--gnome-accent-fg: var(--gnome-private-accent) !important;
 	/* Toolbars */
 	--gnome-toolbar-background: var(--gnome-private-toolbar-background) !important;
-	--gnome-inactive-toolbar-background: var(--gnome-private-inactive-toolbar-background)  !important;		
+	--gnome-inactive-toolbar-background: var(--gnome-private-inactive-toolbar-background)  !important;
 	/* Menus */
 	--gnome-menu-background: var(--gnome-private-menu-background) !important;		
 	/* Change headerbar colors */
 	--gnome-headerbar-background: var(--gnome-private-headerbar-background) !important;
 	--gnome-inactive-headerbar-background: var(--gnome-private-inactive-headerbar-background) !important;
+	/* Tabs */
+	--gnome-tabbar-tab-hover-background: var(--gnome-private-tabbar-tab-hover-background);
+	--gnome-tabbar-tab-active-background: var(--gnome-private-tabbar-tab-active-background);
+	--gnome-tabbar-tab-active-background-contrast: var(--gnome-private-tabbar-tab-active-background-contrast);
+	--gnome-tabbar-tab-active-hover-background: var(--gnome-private-tabbar-tab-active-hover-background);
+	--gnome-inactive-tabbar-tab-hover-background: var(--gnome-private-inactive-tabbar-tab-hover-background);
+	--gnome-inactive-tabbar-tab-active-background: var(--gnome-private-inactive-tabbar-tab-active-background);
 }
 
 /* Add private window headerbar indicator */
