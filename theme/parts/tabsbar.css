@@ -417,12 +417,6 @@ tab {
 .tabbrowser-tab[class*="identity-color-"] .tab-label-container {
 	color: var(--identity-tab-color) !important;
 }
-/*.tabbrowser-tab.tabbrowser-tab[class*="identity-color-"] {
-	background-image: radial-gradient(ellipse closest-side, var(--identity-icon-color) 1%, transparent 95%);
-	background-repeat: no-repeat;
-	background-position: center 36px;
-	background-size: 150% 100%;
-}*/
 
 /* Needs attetion tab indicator */
 .tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
