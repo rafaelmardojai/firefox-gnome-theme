@@ -175,7 +175,11 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	Hide the tab bar when only one tab is open.
 
-	> **Note:** You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too. See [#54](https://github.com/rafaelmardojai/firefox-gnome-theme/issues/54).
+	> **Note:** 
+    > 
+    > You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
+    >
+    > You also need to set `browser.tabs.tabmanager.enabled` to `false` in `about:config`.
 
 - **Normal width tabs** `gnomeTheme.normalWidthTabs`
 
