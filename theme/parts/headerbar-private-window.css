@@ -39,6 +39,6 @@
 }
 
 /* Hide tabsbar default private browsing indicator */
-#TabsToolbar .private-browsing-indicator {
+#private-browsing-indicator-with-label {
 	display: none !important;
 }
