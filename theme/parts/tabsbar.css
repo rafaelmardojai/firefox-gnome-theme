@@ -458,8 +458,10 @@ tab {
 
 /* OPTIONAL: Hide single tab */
 @supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
-	#tabbrowser-tabs tab:only-of-type {
-		display: none !important;
+	#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]),
+	#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ toolbarbutton,
+	#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ #tabbrowser-arrowscrollbox-periphery {
+		visibility: collapse;
 	}
 }
 
