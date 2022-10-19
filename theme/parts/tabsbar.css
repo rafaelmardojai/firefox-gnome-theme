@@ -86,6 +86,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	border-radius: 6px !important;
 	margin: 5px 3px 6px !important;
 	padding: 0 9px !important;
+	min-height: 34px !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled]):not(:active):not([open]):hover {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
@@ -95,7 +96,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 }
 
 /* Fake tabsbar border */
-#tabbrowser-arrowscrollbox::after {
+#TabsToolbar::after {
 	content: "";
 	display: block;
 	width: 200%;
@@ -107,11 +108,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	bottom: 0;
 	left: 0;
 	z-index: 6;
-}
-
-#tabbrowser-tabs[movingtab=true] #tabbrowser-arrowscrollbox::after  {
-	bottom: unset;
-	top: 44px;
 }
 
 /* Tab */
@@ -132,6 +128,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 }
 
 /* Tab separators */
+#TabsToolbar #firefox-view-button::after,
 .tabbrowser-tab:not([selected], :hover, [last-visible-tab="true"], [beforeselected-visible="true"], [beforehovered="true"])::after {
 	content: "";
 	display: block;
@@ -142,6 +139,9 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 }
 .tabbrowser-tab::after {
 	right: -.5px;
+}
+#TabsToolbar #firefox-view-button::after {
+	left: 39px;
 }
 
 /* Tab labels */
@@ -440,6 +440,20 @@ tab {
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+/* Firefox View */
+#TabsToolbar #firefox-view-button .toolbarbutton-icon {
+	box-shadow: none !important;
+	fill: var(--gnome-toolbar-icon-fill) !important;
+	height: 16px !important;
+	opacity: 1 !important;
+	width: 16px !important;
+}
+:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
+  border-inline-start: 0 !important;
+  padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
+  margin-inline-start: 0 !important;
 }
 
 /* OPTIONAL: Hide single tab */

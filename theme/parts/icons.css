@@ -298,6 +298,11 @@ button.close::before {
     list-style-image: url("../icons/audio-muted-symbolic.svg") !important;
 }
 
+/* Firefox View */
+#firefox-view-button {
+	list-style-image: url("../icons/firefox-symbolic.svg") !important;
+}
+
 /* Private browsing button */
 #privatebrowsing-button {
 	list-style-image: url("../icons/eye-not-looking-symbolic.svg") !important;
