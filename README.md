@@ -175,11 +175,7 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	Hide the tab bar when only one tab is open.
 
-	> **Note:** 
-    > 
-    > You should move the new tab button somewhere else for this to work, because by default it is on the tab bar too.
-    >
-    > You also need to set `browser.tabs.tabmanager.enabled` to `false` in `about:config`.
+	> **Note:** You should move the new tab button out of the tabbar or it will be hidden when there is only one tab. You can rearrange the toolbars doing a right-click on any toolbar and selecting "Customize Toolbar…".
 
 - **Normal width tabs** `gnomeTheme.normalWidthTabs`
 

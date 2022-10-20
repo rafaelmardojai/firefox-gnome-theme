@@ -442,6 +442,14 @@ tab {
 	}
 }
 
+/* Tabs manager menu */
+#alltabs-button {
+	visibility: collapse;
+}
+#tabbrowser-tabs[overflow="true"] ~ #alltabs-button {
+	visibility: visible;
+}
+
 /* Firefox View */
 #TabsToolbar #firefox-view-button .toolbarbutton-icon {
 	box-shadow: none !important;
