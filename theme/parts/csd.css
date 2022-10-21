@@ -11,7 +11,6 @@
 	border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important;
 }
 
-
 /* Window buttons: at least 1 button */
 @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
 	:root {
@@ -71,6 +70,9 @@
 }
 
 /* Force the restore button to appear regardless of maximize button's status */
+:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container {
+  visibility: visible !important;
+}
 :root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container .titlebar-restore {
 	display: inherit !important;
 }
