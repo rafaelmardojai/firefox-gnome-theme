@@ -510,3 +510,83 @@ tab {
 		margin-right: -16px;
 	}
 }
+
+/* OPTIONAL: Use tabs as headerbar */
+@supports -moz-bool-pref("gnomeTheme.tabsAsHeaderbar") {
+	/* Rearrange bars */
+	#navigator-toolbox #titlebar {
+		-moz-box-ordinal-group: 0;
+	}
+	#navigator-toolbox #titlebar #TabsToolbar {
+		-moz-box-ordinal-group: 0;
+	}
+	#navigator-toolbox #titlebar #toolbar-menubar {
+		-moz-box-ordinal-group: 1;
+	}
+	#navigator-toolbox #nav-bar {
+		-moz-box-ordinal-group: 1;
+	}
+	#navigator-toolbox #PersonalToolbar {
+		-moz-box-ordinal-group: 2;
+	}
+	
+	/* Remove nav-bar rounding and padding */
+	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
+		border-radius: 0 !important;
+		padding-left: 3px !important;
+		padding-right: 3px !important;
+	}
+	
+	/* Round and pad tab-bar */
+	:root[tabsintitlebar] #TabsToolbar {
+		border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important
+	}
+	:root[tabsintitlebar] #TabsToolbar .toolbar-items {
+		padding: 0 46px;
+	}
+	
+	/* Hide duplicate window controls from menubar */
+	:root[tabsintitlebar] #toolbar-menubar .titlebar-buttonbox-container {
+		display: none !important;
+	}
+	
+	/* Force displaying controls in tab-bar */
+	:root[tabsintitlebar] #TabsToolbar .titlebar-buttonbox-container:not(#hack) {
+		display: -moz-box !important;
+		position: static !important;
+		visibility: visible !important;
+	}
+	
+	/* Blend single tab into whole bar */
+	@supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]),
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ toolbarbutton,
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ #tabbrowser-arrowscrollbox-periphery {
+			visibility: visible;
+		}
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) {
+			-moz-window-dragging: drag;
+		}
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-background {
+			display: none !important
+		}
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-close-button {
+			visibility: hidden !important;
+			opacity: 0 !important;
+		}
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-content::before {
+			--gnome-tabbar-tab-close-overlay-bg: unset !important;
+		}
+		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-labelk-container[textoverflow="true"] {
+			margin-right: -16px;
+		}
+		/* Override normal width tabs */
+		@supports -moz-bool-pref("gnomeTheme.normalWidthTabs") {
+			#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]):not([style^="max-width"]),
+			#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"][style^="max-width: 100px !important;"]:not([pinned]) {
+				max-width: 100% !important;
+				--tab-min-width: 131px !important;
+			}
+		}
+	}
+}

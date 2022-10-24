@@ -213,6 +213,12 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
 
+- **Tabs as headerbar** `gnomeTheme.tabsAsHeaderbar`
+
+	Place the tabs on the top of the window, and use the tabs bar to hold the window controls, like Firefox's standard tab bar.
+	
+	> **Note:** Enabling with `gnomeTheme.hideSingleTab` will replace the single tab with a title bar.
+
 ### Extensions support
 
 We also have optional features to enable support for some Firefox extensions.
