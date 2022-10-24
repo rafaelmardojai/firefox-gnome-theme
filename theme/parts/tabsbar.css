@@ -531,8 +531,7 @@ tab {
 	}
 	
 	/* Remove nav-bar rounding and padding */
-	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar,
-	:root[tabsintitlebar][inFullscreen] #nav-bar {
+	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
 		border-radius: 0 !important;
 		padding-left: 3px !important;
 		padding-right: 3px !important;
