@@ -176,6 +176,7 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 	Hide the tab bar when only one tab is open.
 
 	> **Note:** You should move the new tab button out of the tabbar or it will be hidden when there is only one tab. You can rearrange the toolbars doing a right-click on any toolbar and selecting "Customize Toolbar…".
+	> **Note2:** On Firefox 106 and above, you should also disable the tab manager. In `about:config`, toggle the `browser.tabs.tabmanager.enabled` to `False`, adn restart Friefox. 
 
 - **Normal width tabs** `gnomeTheme.normalWidthTabs`
 
