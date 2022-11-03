@@ -7,11 +7,16 @@ menupopup {
 	-moz-appearance: none !important;	
 	color: var(--gnome-toolbar-color) !important;
 	padding: 8px !important;
-	margin: -8px !important;
 }
+
 menu menupopup {
-	margin-top: -16px !important;
+	margin:	-13px 0px 0px 0px !important;
 }
+
+menulist {
+	padding: 0px !important;
+}
+
 .menupopup-arrowscrollbox {
 	-moz-appearance: none !important;
 	background: var(--gnome-menu-background) !important;
