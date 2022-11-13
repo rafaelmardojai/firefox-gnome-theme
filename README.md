@@ -48,6 +48,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 	```sh
 	git checkout beta # Set beta branch
 	git checkout v78.1 # Set v78.1 tag
+	git checkout v$(firefox --version | cut -d ' ' -f 3 | cut -d '.' -f 1) # Using Firefox version
 	```
 
 3. Run installation script
