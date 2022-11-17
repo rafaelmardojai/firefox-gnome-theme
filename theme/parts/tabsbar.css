@@ -50,7 +50,7 @@ tab > stack {
 	content: "";
 	height: 44px;
 	position: absolute;
-	top: 0;
+	top: -3px;
 	z-index: -1;
 	width: 50px;
 }
