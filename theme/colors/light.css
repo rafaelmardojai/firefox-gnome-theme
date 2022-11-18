@@ -14,7 +14,7 @@
 	--gnome-accent: #1c71d8;
 
 	/* Toolbars */
-	--gnome-toolbar-background: #fafafa;
+	--gnome-toolbar-background: var(--gnome-headerbar-background);
 	--gnome-toolbar-color: rgb(46, 52, 54);
 	--gnome-toolbar-border-color: rgba(0, 0, 0, .15);
 	--gnome-toolbar-icon-fill: #2e3436;
