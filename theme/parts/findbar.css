@@ -20,6 +20,7 @@ findbar label, findbar description {
 	flex-direction: row;
 	margin: 0 !important;
 	width: calc(100% - 42px);
+	height: auto !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"] {
