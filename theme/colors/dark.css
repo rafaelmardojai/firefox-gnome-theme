@@ -53,6 +53,8 @@
 		--gnome-button-hover-close-background:var(--gnome-button-hover-background);
 		--gnome-button-active-close-background: var(--gnome-button-active-background);
 
+		--gnome-toolbar-star-button:	#f8e45c;
+
 		/* Entries */
 		--gnome-entry-background: rgba(255, 255, 255, .1);
 		--gnome-entry-color: #ffffff;

@@ -411,7 +411,7 @@ button.close::before {
 	list-style-image: url("../icons/non-starred-symbolic.svg") !important;
 }
 #star-button[starred] {
-	fill: var(--gnome-accent) !important;
+	fill: var(--gnome-toolbar-star-button) !important;
 }
 
 /* History button */
