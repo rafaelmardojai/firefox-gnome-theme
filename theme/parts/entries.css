@@ -14,6 +14,7 @@
 #editBMPanel_tagsField {
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
+	outline: 2px solid var(--gnome-headerbar-background) !important;
 	border: 0 !important;
 	border-radius: 8px !important;
 	box-shadow: none !important;
@@ -23,6 +24,7 @@
 	margin: 0 !important;
 	padding: 6px !important;
 	box-sizing: border-box;
+	transition: 0.3s;
 }
 
 /* Entries focused */
@@ -70,6 +72,7 @@
 .urlbar-page-action,
 .urlbar-icon {
 	fill-opacity: 0.8 !important;
+	transition: 0.3s;
 }
 
 .identity-box-button:hover:not([open="true"]),

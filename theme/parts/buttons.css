@@ -53,6 +53,7 @@ button.close,
 	outline: 0 !important;
 	font: menu !important;
 	-moz-box-align: center !important;
+	transition: 0.3s;
 }
 .subviewbutton-iconic {
 	-moz-box-pack: center !important;
@@ -65,6 +66,7 @@ button.close,
 #protections-popup-info-button,
 .permission-popup-permission-remove-button {
 	background: transparent !important;
+	transition: 0.3s;
 }
 
 /* Buttons with margins */

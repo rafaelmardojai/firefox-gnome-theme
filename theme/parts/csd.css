@@ -122,6 +122,7 @@
 	-moz-appearance: none !important;
 	padding: 0 2px !important;
 	background: var(--gnome-button-close-background);
+	transition: 0.3s;
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button {
