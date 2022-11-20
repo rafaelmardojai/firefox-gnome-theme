@@ -334,7 +334,7 @@ tab {
 	position: absolute;
 	right: 0;
 	top: 0;
-	transition: all 0.2s ease-out;
+	transition: 0.2s;
 	width: 55px;
 }
 .tabbrowser-tab:not([pinned]) .tab-content::before {
