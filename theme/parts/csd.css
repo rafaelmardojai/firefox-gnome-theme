@@ -151,7 +151,7 @@
 }
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton {
-	opacity: .3 !important;
+	background: var(--gnome-inactive-tabbar-tab-active-background);
 }
 :root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):hover,
 :root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {

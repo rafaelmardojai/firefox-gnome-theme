@@ -33,7 +33,7 @@ findbar:-moz-window-inactive,
 	border-color: var(--gnome-inactive-toolbar-border-color) !important;
 }
 
-#navigator-toolbox:-moz-window-inactive label, #navigator-toolbox:-moz-window-inactive image, 
+#navigator-toolbox:-moz-window-inactive label,
 #downloads-indicator-anchor:-moz-window-inactive,
 findbar:-moz-window-inactive image:not(#hack),
 findbar:-moz-window-inactive label,
