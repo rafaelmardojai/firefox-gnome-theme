@@ -162,7 +162,7 @@
 	background: var(--gnome-button-active-close-background);
 }
 
-:root[tabsintitlebar] #titlebar .titlebar-button:where(:hover) {
+:root[tabsintitlebar] #titlebar .titlebar-button:where(:hover):not(:hover) {
 	background: var(--gnome-button-hover-close-background) !important;
 }
 
