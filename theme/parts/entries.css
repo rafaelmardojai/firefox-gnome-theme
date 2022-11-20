@@ -14,7 +14,7 @@
 #editBMPanel_tagsField {
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
-	outline: 2px solid var(--gnome-headerbar-background) !important;
+	outline: 2px solid transparent !important;
 	border: 0 !important;
 	border-radius: 8px !important;
 	box-shadow: none !important;
@@ -53,6 +53,7 @@
 #password1Textbox:-moz-window-inactive,
 .tabsFilter:-moz-window-inactive {
 	color: var(--gnome-inactive-entry-color) !important;
+	outline: 2px solid transparent !important;
 }
 
 /* Entries combined */
