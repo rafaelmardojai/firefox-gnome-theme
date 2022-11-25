@@ -49,13 +49,13 @@
 		padding-left: var(--gnome-navbar-csd-offset) !important;
 		padding-right: 3px !important;
 	}
-	
+
 	/* Window buttons box */
 	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
 		left: 0;
 		right: auto !important;
 	}
-	
+
 	/* Fullscreen headerbar padding for 1 button */
 	:root[tabsintitlebar][inFullscreen] #nav-bar {
 		padding-left: 50px !important;
@@ -107,7 +107,7 @@
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
 	-moz-appearance: none !important;
 	padding: 5px 3px;
-	position: absolute !important;	
+	position: absolute !important;
 	right: 0;
 	top: 0;
 	display: block !important;
@@ -166,6 +166,20 @@
 	background: var(--gnome-button-hover-close-background) !important;
 }
 
+@supports -moz-bool-pref("gnomeTheme.tabsAsHeaderbar") {
+	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar,
+	:root[tabsintitlebar][inFullscreen] #nav-bar {
+		padding-right: 3px !important;
+	}
+
+	@media (-moz-gtk-csd-reversed-placement) {
+		:root[tabsintitlebar]:not([inFullscreen]) #nav-bar,
+		:root[tabsintitlebar][inFullscreen] #nav-bar {
+			padding-left: 3px !important;
+		}
+	}
+}
+
 /* OPTIONAL: Allow draging the window from headerbar buttons */
 @supports -moz-bool-pref("gnomeTheme.dragWindowHeaderbarButtons") {
 	:root[tabsintitlebar] #nav-bar *,
@@ -173,7 +187,7 @@
 	:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 		-moz-window-dragging: drag;
 	}
-	
+
 	/* Avoid window dragging from urlbar */
 	:root[tabsintitlebar] #nav-bar .urlbar-input-box,
 	:root[tabsintitlebar] #nav-bar .urlbar-input-box * {
