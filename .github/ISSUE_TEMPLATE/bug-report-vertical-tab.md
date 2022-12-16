@@ -1,6 +1,6 @@
 ---
 name: Bug report Vertical tab
-about: Create a report to help us improve
+about: Report a bug with the "Tab Center Reborn" extension integration (gnomeTheme.extensions.tabCenterReborn)
 title: "[Vertical tab - Extension]"
 labels: bug
 assignees: BirdInFire
