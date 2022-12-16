@@ -497,10 +497,10 @@ button.close::before {
 }
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
-  list-style-image: url("../icons/padlock-symbolic.svg") !important;
+	list-style-image: url("../icons/padlock-symbolic.svg") !important;
 }
 #identity-popup[connection^="secure"] .identity-popup-security-connection {
-	background-image: url("../icons/padlock-symbolic.svg") !important;
+	list-style-image: url("../icons/padlock-symbolic.svg") !important;
 }
 #identity-box[pageproxystate="valid"].notSecure #identity-icon,
 #identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
@@ -508,7 +508,7 @@ button.close::before {
     list-style-image: url("../icons/padlock-insecure-symbolic.svg") !important;
 }
 .identity-popup-security-connection {
-	background-image: url("../icons/padlock-insecure-symbolic.svg") !important;
+	list-style-image: url("../icons/padlock-insecure-symbolic.svg") !important;
 }
 #permissions-granted-icon {
     list-style-image: url("../icons/general-properties-symbolic.svg") !important;
