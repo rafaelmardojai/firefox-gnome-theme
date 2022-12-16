@@ -14,7 +14,7 @@
 /* Window buttons: at least 1 button */
 @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
 	:root {
-		--gnome-navbar-csd-offset: 50px;
+		--gnome-navbar-csd-offset: 43px;
 	}
 }
 /* Window buttons: at least 2 buttons */
@@ -106,7 +106,7 @@
 /* Window buttons box */
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
 	-moz-appearance: none !important;
-	padding: 5px 3px;
+	padding: 5px;
 	position: absolute !important;	
 	right: 0;
 	top: 0;
