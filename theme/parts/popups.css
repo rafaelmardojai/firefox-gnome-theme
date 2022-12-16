@@ -158,8 +158,8 @@ panel  {
 
 /* Menu buttons */
 menuitem, menupopup menu,
-.subviewbutton:not(#appMenu-fxa-label2),
-.toolbarbutton-1,
+panelview .subviewbutton:not(#appMenu-fxa-label2),
+panelview .toolbarbutton-1,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,

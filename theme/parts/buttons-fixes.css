@@ -22,6 +22,11 @@
 	display: -moz-box !important;
 }
 
+/* Fix unified-extensions-item margin */
+toolbar .unified-extensions-item {
+  margin-inline: 0 3px !important;
+}
+
 /* menulist */
 #label-box:not([native]) {
     font-weight: 400 !important;

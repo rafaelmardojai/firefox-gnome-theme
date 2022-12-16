@@ -7,6 +7,10 @@
 	--urlbar-toolbar-height: 34.00px !important;
 }
 
+#urlbar-container {
+	--urlbar-container-height: 0 !important;
+}
+
 /* Center the URL bar */
 toolbarspring {
 	max-width: 10000px !important;
@@ -120,6 +124,10 @@ toolbarspring {
 .searchbar-search-button:hover:active .searchbar-search-icon {
 	background-color: transparent !important;
 	fill-opacity: 1 !important;
+}
+
+#urlbar .urlbar-icon {
+	margin: 0 !important;
 }
 
 /* Search mode indicator */
