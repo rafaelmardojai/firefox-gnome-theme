@@ -17,7 +17,7 @@
 	--gnome-toolbar-color: rgb(46, 52, 54);
 	--gnome-toolbar-border-color: #dbdbdb;
 	--gnome-toolbar-icon-fill: #2f2f2f;
-	--gnome-inactive-toolbar-background: var(--gnome-toolbar-background);
+	--gnome-inactive-toolbar-background: var(--gnome-inactive-headerbar-background);
 	--gnome-inactive-toolbar-color: #d5d0cc;
 	--gnome-inactive-toolbar-border-color: #e9e9e9;
 	--gnome-inactive-toolbar-icon-fill: #969696;
