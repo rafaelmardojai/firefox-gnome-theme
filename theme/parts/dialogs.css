@@ -38,8 +38,10 @@ dialog {
 }
 
 /* Content */
-.dialog-content-box {
+.dialog-content-box,
+#dialogGrid {
 	padding: 24px;
+	padding-bottom: 0;
 }
 #titleContainer {
 	justify-content: center !important;
