@@ -5,9 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Smoke test
     steps:
-      - uses: actions/checkout@v3
-
-      - run: |
+      - name: Setup 1 - Install Firefox.deb and create a profile
+        run: |
           sudo add-apt-repository ppa:mozillateam/ppa
           echo '
           Package: *
@@ -19,5 +18,21 @@ jobs:
           sudo apt install firefox
           firefox --headless --createprofile test
 
-      - name: Test ./scripts/install.sh
-        run: ./scripts/install.sh
+      - name: Test 1 - Run a web installer as in README
+
+      - run: curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+
+      - name: Teardown 1
+        run: rm -rf ls ~/.mozilla/firefox/
+
+
+      - name: Setup 2 - Install Firefox.deb and create a profile
+
+      - name: Test 2 - Run a regular installer
+        uses: actions/checkout@v3
+
+      - run: ./scripts/install.sh
+
+      - name: Teardown 2
+        run: rm -rf ls ~/.mozilla/firefox/
+
