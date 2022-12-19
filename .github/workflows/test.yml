@@ -10,5 +10,5 @@ jobs:
 
       - run: firefox --headless --createprofile test
 
-      - name: Test ./install.sh
-        run: ./install.sh
+      - name: Test ./scripts/install.sh
+        run: ./scripts/install.sh
