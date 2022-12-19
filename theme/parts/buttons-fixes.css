@@ -30,6 +30,10 @@ toolbar .unified-extensions-item {
 /* menulist */
 #label-box:not([native]) {
     font-weight: 400 !important;
+	padding: 0 8px;
+}
+dropmarker:not([native]) {
+	margin-right: 8px;
 }
 
 /* Overrides: Make the back button the same as other buttons */
