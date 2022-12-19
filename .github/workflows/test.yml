@@ -6,6 +6,12 @@ jobs:
     container: docker.io/linuxserver/firefox:latest
     name: Smoke test
     steps:
+      - name: Work around a weird checkout action 'node' placement
+        # details https://github.com/TriplEight/firefox-gnome-theme/actions/runs/3735689911/jobs/6339214781
+        run: |
+          mkdir -p /__e/node16/bin/
+          ln -s $(which node) /__e/node16/bin/node
+
       - uses: actions/checkout@v3
 
       - run: firefox --headless --createprofile test
