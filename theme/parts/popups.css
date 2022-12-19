@@ -61,10 +61,8 @@ panel  {
 }
 .panel-header, .panel-footer,
 .panel-subview-body,
-.protections-popup-section,
 #protections-popup-mainView-panel-header-section,
 .permission-popup-section,
-.identity-popup-section,
 .popup-notification-header-container,
 .popup-notification-body-container,
 .popup-notification-footer-container {
@@ -83,6 +81,10 @@ panel  {
 ):first-child:not(:empty) {
 	padding-top: var(--gnome-menu-padding) !important;
 }
+#protections-popup-footer,
+#identity-popup-clear-sitedata-footer {
+	padding: 0 var(--gnome-menu-padding) !important;
+}
 .panel-subview-body > .panel-subview-body {
 	padding: 0 !important;
 }
@@ -95,9 +97,6 @@ panel  {
 }
 .subviewbutton.panel-subview-footer-button:not(:only-child, #downloadsHistory):last-child {
 	margin-bottom: var(--gnome-menu-padding) !important;
-}
-#identity-popup-security-button {
-	margin: 0 var(--gnome-menu-padding) !important;
 }
 
 /* No menu */
@@ -273,7 +272,6 @@ toolbarseparator[orient="vertical"] {
 	margin: 0 0 6px !important;
 }
 panelview > toolbarseparator:not([orient="vertical"]),
-#identity-popup-clear-sitedata-footer toolbarseparator:not([orient="vertical"]),
 #identity-popup-more-info-footer toolbarseparator:not([orient="vertical"]){
 	margin: 6px !important;
 }
