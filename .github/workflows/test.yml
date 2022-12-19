@@ -18,7 +18,7 @@ jobs:
           sudo apt install firefox
       
       - name: Setup 1 - create a Firefox profile
-          firefox --headless --createprofile test
+        run: firefox --headless --createprofile test
 
       - name: Test 1 - Run a web installer as in README
         run: curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
