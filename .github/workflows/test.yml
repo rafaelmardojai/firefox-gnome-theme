@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: docker.io/linuxserver/firefox:latest
+    name: Smoke test
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: firefox --headless --createprofile test
+
+      - name: Test ./install.sh
+        run: ./install.sh
