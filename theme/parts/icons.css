@@ -208,18 +208,18 @@ arrowscrollbox[orient="horizontal"] {
 /* Tree views */
 treechildren::-moz-tree-twisty,
 .item.client .item-twisty-container {
-	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
+	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
 	width: 16px !important;
 	height: 16px !important;
 }
 .item.client .item-twisty-container {
-	background-image: url("../icons/pan-down-symbolic.svg") !important;
+	background-image: url("../icons/pan-end-symbolic.svg") !important;
 }
 treechildren::-moz-tree-twisty(open) {
-	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
 .item.client.closed .item-twisty-container {
-	background-image: url("../icons/pan-end-symbolic.svg") !important;
+	background-image: url("../icons/pan-down-symbolic.svg") !important;
 }
 
 treechildren::-moz-tree-image(title, container),
