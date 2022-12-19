@@ -26,15 +26,15 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd "$FIREFOXFOLDER/$PROFILE_PATH" || echo "FAIL, Firefox profile path was not found." && exit 1
-	echo "Installing theme in $PWD"
+	cd "$FIREFOXFOLDER/$PROFILE_PATH" || { echo "FAIL, Firefox profile path was not found."; exit 1; }
+	echo "Installing theme in $PWD" >$(tty)
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
-	cd chrome || echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'." && exit 1
+	cd chrome || { echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'."; exit 1; }
 
 	# Copy theme repo inside
-	echo "Copying repo in $PWD"
-	cp -fR "$THEMEDIRECTORY" "$PWD" || echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir." && exit 1
+	echo "Copying repo in $PWD" >&2
+	cp -fR "$THEMEDIRECTORY" "$PWD" || { echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir."; exit 1; }
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
@@ -49,9 +49,9 @@ function saveProfile(){
 	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 
 	if [ "$THEME" = "DEFAULT" ]; then
-		echo "No theme set, using default adwaita."
+		echo "No theme set, using default adwaita." >&2
 	else
-		echo "Setting $THEME theme."
+		echo "Setting $THEME theme." >&2
 		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userChrome.css
 		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userChrome.css
 	fi
@@ -69,7 +69,7 @@ function saveProfile(){
 	sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
 
 	if [ "$THEME" = "DEFAULT" ]; then
-		echo "No theme set, using default adwaita."
+		echo "No theme set, using default adwaita." >&2
 	else
 		echo "Setting $THEME theme."
 		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userContent.css
@@ -79,10 +79,10 @@ function saveProfile(){
 	cd ..
 
 	# Symlink user.js to firefox-gnome-theme one.
-	echo "Set configuration user.js file"
+	echo "Set configuration user.js file" >&2
 	ln -is chrome/firefox-gnome-theme/configuration/user.js user.js
 
-	echo "Done."
+	echo "Done." >&2
 	cd ..
 }
 
