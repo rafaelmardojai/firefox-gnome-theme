@@ -39,7 +39,7 @@
 }
 /* Fullscreen headerbar padding for 1 button */
 :root[tabsintitlebar][inFullscreen] #nav-bar {
-	padding-right: 50px !important;
+	padding-right: 43px !important;
 }
 
 /* Left window buttons */
@@ -73,7 +73,7 @@
 :root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container {
   visibility: visible !important;
 }
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container .titlebar-restore {
+:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container .titlebar-restore {
 	display: inherit !important;
 }
 

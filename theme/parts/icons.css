@@ -288,6 +288,9 @@ button.close::before {
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
 	list-style-image: url("../icons/window-restore-symbolic.svg") !important;
 }
+:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	list-style-image: url("../icons/view-restore-symbolic.svg") !important;
+}
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
 	list-style-image: url("../icons/window-minimize-symbolic.svg") !important;
 }
