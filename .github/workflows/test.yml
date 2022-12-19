@@ -8,8 +8,16 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: |
-        apt update && apt install firefox
-        firefox --headless --createprofile test
+          sudo add-apt-repository ppa:mozillateam/ppa
+          echo '
+          Package: *
+          Pin: release o=LP-PPA-mozillateam
+          Pin-Priority: 1001
+          ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+          echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+          sudo apt update
+          sudo apt install firefox
+          firefox --headless --createprofile test
 
       - name: Test ./scripts/install.sh
         run: ./scripts/install.sh
