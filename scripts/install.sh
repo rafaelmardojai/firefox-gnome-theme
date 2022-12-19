@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set +vux
-
 THEMEDIRECTORY=$(cd "$(dirname $0)" && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
@@ -28,15 +26,15 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd "$FIREFOXFOLDER/$PROFILE_PATH" || echo "FAIL, Firefox profile path was not found." && exit
+	cd "$FIREFOXFOLDER/$PROFILE_PATH" || echo "FAIL, Firefox profile path was not found." && exit 1
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
-	cd chrome || echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'." && exit
+	cd chrome || echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'." && exit 1
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD"
-	cp -fR "$THEMEDIRECTORY" "$PWD" || echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir." && exit
+	cp -fR "$THEMEDIRECTORY" "$PWD" || echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir." && exit 1
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
