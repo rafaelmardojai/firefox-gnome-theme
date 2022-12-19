@@ -3,21 +3,13 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: docker.io/linuxserver/firefox:latest
     name: Smoke test
     steps:
-      - name: Work around a weird checkout action 'node' placement
-        # details https://github.com/TriplEight/firefox-gnome-theme/actions/runs/3735689911/jobs/6339214781
-        run: |
-          echo "Checking for a usable node in /__e/node"
-           for f in /__e/node*/bin/node; do
-               echo "Testing: $f --version";
-               $f --version || echo "$f does not work, exit status: $?"
-          done
-
       - uses: actions/checkout@v3
 
-      - run: firefox --headless --createprofile test
+      - run: |
+        apt update && apt install firefox
+        firefox --headless --createprofile test
 
       - name: Test ./scripts/install.sh
         run: ./scripts/install.sh
