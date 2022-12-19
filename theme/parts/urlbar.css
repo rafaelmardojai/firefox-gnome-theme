@@ -26,9 +26,6 @@ toolbarspring {
 	border-radius: 8px !important;
 	background: transparent !important;
 }
-#urlbar-background:-moz-window-inactive {
-	background: var(--gnome-urlbar-inactive) !important;
-}
 
 #urlbar[breakout][breakout-extend] {
 	left: 0 !important;

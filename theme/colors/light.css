@@ -51,14 +51,13 @@
 	--gnome-button-close-background: #d8d8d8;
 	--gnome-button-hover-close-background:var(--gnome-button-hover-background);
 	--gnome-button-active-close-background: var(--gnome-button-active-background);
-
-  --gnome-toolbar-star-button:	#ae7b03;
+	
+	--gnome-toolbar-star-button: #ae7b03;
 
 	/* Entries */
 	--gnome-entry-background: rgba(0, 0, 0, .08);
 	--gnome-entry-color: #303030;
 	--gnome-inactive-entry-color: #303030;
-  --gnome-urlbar-inactive: #F0F0F0;
 	--gnome-focused-urlbar-border-color: rgba(28, 113, 216, .5);
 
 	/* Switch */

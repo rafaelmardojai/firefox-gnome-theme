@@ -59,7 +59,6 @@
 		--gnome-entry-background: rgba(255, 255, 255, .1);
 		--gnome-entry-color: #ffffff;
 		--gnome-inactive-entry-color: #d6d6d6;
-		--gnome-urlbar-inactive: #2E2E2E;
 		--gnome-focused-urlbar-border-color: rgba(120, 174, 237, .5); /* Same as --gnome-accent but with opacity*/
 
 		/* Switch */
