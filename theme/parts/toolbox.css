@@ -63,10 +63,10 @@ findbar:-moz-window-inactive description,
 	-moz-box-ordinal-group: 0;
 }
 #navigator-toolbox #PersonalToolbar {
-	-moz-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 0;
 }
 #navigator-toolbox #titlebar {
-	-moz-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 1;
 }
 #navigator-toolbox toolbar {
 	-moz-box-ordinal-group: 10;
