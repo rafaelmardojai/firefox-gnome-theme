@@ -14,8 +14,6 @@ jobs:
                echo "Testing: $f --version";
                $f --version || echo "$f does not work, exit status: $?"
           done
-          mkdir -p /__e/node16/bin/
-          ln -s $(which node) /__e/node16/bin/node
 
       - uses: actions/checkout@v3
 
