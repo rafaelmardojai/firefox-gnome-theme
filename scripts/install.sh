@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+set +vux
+
 THEMEDIRECTORY=$(cd "$(dirname $0)" && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
-THEME=DEFAULT
+THEME="DEFAULT"
 
 
 # Get options.
@@ -26,15 +28,15 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd "$FIREFOXFOLDER/$PROFILE_PATH" || echo "FAIL, Firefox profile path was not found" && exit
+	cd "$FIREFOXFOLDER/$PROFILE_PATH" || echo "FAIL, Firefox profile path was not found." && exit
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
-	cd chrome || echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'" && exit
+	cd chrome || echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'." && exit
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD"
-	cp -fR "$THEMEDIRECTORY" "$PWD" || echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir" && exit
+	cp -fR "$THEMEDIRECTORY" "$PWD" || echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir." && exit
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
@@ -88,10 +90,10 @@ function saveProfile(){
 
 PROFILES_FILE="${FIREFOXFOLDER}/profiles.ini"
 if [ ! -f "${PROFILES_FILE}" ]; then
-	>&2 echo "FAIL, please check Firefox installation, unable to find profile.ini at ${FIREFOXFOLDER}"
+	>&2 echo "FAIL, please check Firefox installation, unable to find 'profile.ini' at ${FIREFOXFOLDER}."
 	exit 1
 fi
-echo "Profiles file found"
+echo "'profiles.ini' found in ${FIREFOXFOLDER}"
 
 PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' )) 
 PROFILES_PATHS+=::
@@ -99,10 +101,10 @@ PROFILES_PATHS+=::
 PROFILES_ARRAY=()
 if [ "${PROFILENAME}" != "" ];
 	then
-		echo "Using ${PROFILENAME} theme"
+		echo "Using ${PROFILENAME} profile"
 		PROFILES_ARRAY+=${PROFILENAME}
 else
-	echo "Finding all avaliable themes";
+	echo "Finding all avaliable profiles";
 	while [[ "$PROFILES_PATHS" ]]; do
 		PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
 		PROFILES_PATHS=${PROFILES_PATHS#*::}
@@ -112,14 +114,14 @@ fi
 
 
 if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
-	echo "No Profiles found on $PROFILES_FILE";
+	echo "FAIL, no Firefox profiles found in $PROFILES_FILE".;
 
 else
 	for i in "${PROFILES_ARRAY[@]}"
 	do
 		if [[ -n "$i" ]];
 		then
-			echo "Installing Theme on $(sed 's/SPACECHARACTER/ /g' <<< $i)" ;
+			echo "Installing ${THEME} theme for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
 			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
 	
