@@ -26,15 +26,15 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd "$FIREFOXFOLDER/$PROFILE_PATH" || exit
+	cd "$FIREFOXFOLDER/$PROFILE_PATH" || echo "FAIL, Firefox profile path was not found" && exit
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
-	cd chrome || exit
+	cd chrome || echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'" && exit
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD"
-	cp -fR "$THEMEDIRECTORY" "$PWD"
+	cp -fR "$THEMEDIRECTORY" "$PWD" || echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir" && exit
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
