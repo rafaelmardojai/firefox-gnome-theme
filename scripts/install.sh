@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
+THEMEDIRECTORY=$(cd "$(dirname $0)" && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 THEME=DEFAULT
 
 
 # Get options.
-while getopts 'f:p:t:h' flag; do
+while getopts 'f:p:t' flag; do
 	case "${flag}" in
 	f) FIREFOXFOLDER="${OPTARG}" ;;
 	p) PROFILENAME="${OPTARG}" ;;
 	t) THEME="${OPTARG}" ;;
-	h)
+	*)
 		echo "Gnome Theme Install Script:"
 		echo "  -f <firefox_folder_path>. Set custom Firefox folder path."
 		echo "  -p <profile_name>. Set custom profile name."
@@ -26,11 +26,11 @@ done
 function saveProfile(){
 	local PROFILE_PATH="$1"
 
-	cd "$FIREFOXFOLDER/$PROFILE_PATH"
+	cd "$FIREFOXFOLDER/$PROFILE_PATH" || exit
 	echo "Installing theme in $PWD"
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
-	cd chrome
+	cd chrome || exit
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD"
@@ -39,7 +39,7 @@ function saveProfile(){
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then
 		# Remove older theme imports
-		sed 's/@import "firefox-gnome-theme.*.//g' userChrome.css | sed '/^\s*$/d' > userChrome.css
+		sed 's/@import "firefox-gnome-theme.*.//g' userChrome.css | sed '/^\s*$/d' > tmpfile && mv tmpfile userChrome.css
 		echo >> userChrome.css
 	else
 		echo >> userChrome.css
@@ -48,7 +48,7 @@ function saveProfile(){
 	# Import this theme at the beginning of the CSS files.
 	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 
-	if [ $THEME = "DEFAULT" ]; then
+	if [ "$THEME" = "DEFAULT" ]; then
 		echo "No theme set, using default adwaita."
 	else
 		echo "Setting $THEME theme."
@@ -59,7 +59,7 @@ function saveProfile(){
 	# Create single-line user content CSS files if non-existent or empty.
 	if [ -s userContent.css ]; then
 		# Remove older theme imports
-		sed 's/@import "firefox-gnome-theme.*.//g' userContent.css | sed '/^\s*$/d' > userContent.css
+		sed 's/@import "firefox-gnome-theme.*.//g' userContent.css | sed '/^\s*$/d' > tmpfile1 && mv tmpfile1 userContent.css
 		echo >> userContent.css
 	else
 		echo >> userContent.css
@@ -68,7 +68,7 @@ function saveProfile(){
 	# Import this theme at the beginning of the CSS files.
 	sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
 
-	if [ $THEME = "DEFAULT" ]; then
+	if [ "$THEME" = "DEFAULT" ]; then
 		echo "No theme set, using default adwaita."
 	else
 		echo "Setting $THEME theme."
@@ -88,7 +88,7 @@ function saveProfile(){
 
 PROFILES_FILE="${FIREFOXFOLDER}/profiles.ini"
 if [ ! -f "${PROFILES_FILE}" ]; then
-	>&2 echo "failed, lease check Firefox installation, unable to find profile.ini at ${FIREFOXFOLDER}"
+	>&2 echo "FAIL, please check Firefox installation, unable to find profile.ini at ${FIREFOXFOLDER}"
 	exit 1
 fi
 echo "Profiles file found"
@@ -103,7 +103,7 @@ if [ "${PROFILENAME}" != "" ];
 		PROFILES_ARRAY+=${PROFILENAME}
 else
 	echo "Finding all avaliable themes";
-	while [[ $PROFILES_PATHS ]]; do
+	while [[ "$PROFILES_PATHS" ]]; do
 		PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
 		PROFILES_PATHS=${PROFILES_PATHS#*::}
 	done
@@ -112,14 +112,14 @@ fi
 
 
 if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
-	echo No Profiles found on $PROFILES_FILE;
+	echo "No Profiles found on $PROFILES_FILE";
 
 else
 	for i in "${PROFILES_ARRAY[@]}"
 	do
-		if [[ ! -z "$i" ]];
+		if [[ -n "$i" ]];
 		then
-			echo Installing Theme on $(sed 's/SPACECHARACTER/ /g' <<< $i) ;
+			echo "Installing Theme on $(sed 's/SPACECHARACTER/ /g' <<< $i)" ;
 			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
 	
