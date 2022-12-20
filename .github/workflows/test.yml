@@ -1,0 +1,41 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Smoke test
+    steps:
+      - name: Setup - Install Firefox.deb
+        run: |
+          sudo add-apt-repository ppa:mozillateam/ppa
+          echo '
+          Package: *
+          Pin: release o=LP-PPA-mozillateam
+          Pin-Priority: 1001
+          ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+          echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+          sudo apt update
+          sudo apt install firefox
+      
+      - name: Setup 1 - create a Firefox profile
+        run: firefox --headless --createprofile test
+
+      - name: Test 1 - Run a web installer as in README
+        run: curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+
+      - name: Teardown 1
+        run: rm -rf ls ~/.mozilla/firefox/
+
+
+      - name: Setup 2 - create a new Firefox profile
+        run: firefox --headless --createprofile test
+
+      - name: Setup 2 - checkout the repo
+        uses: actions/checkout@v3
+
+      - name: Test 2 - Run a regular installer
+        run: ./scripts/install.sh
+
+      - name: Teardown 2
+        run: rm -rf ls ~/.mozilla/firefox/
+
