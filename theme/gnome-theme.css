@@ -34,6 +34,6 @@
 #customization-footer::before {
 	background: url(../icon.svg) no-repeat;
 	background-size: contain;
-	content: "Firefox GNOME theme v108";
+	content: "Firefox GNOME theme v108.1";
 	padding: 9px 9px 9px 50px;
 }
