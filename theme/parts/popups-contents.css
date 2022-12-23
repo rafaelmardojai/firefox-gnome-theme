@@ -313,7 +313,8 @@
 	flex-wrap: wrap;
 	margin-top: 12px;
 }
-#protections-popup-show-report-stack {
+#protections-popup-show-report-stack,
+#protections-popup-settings-button {
 	width: 100% !important;
 }
 #protections-popup-show-report-button {
