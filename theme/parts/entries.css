@@ -11,7 +11,8 @@
 #password1Textbox,
 .tabsFilter,
 #editBMPanel_namePicker,
-#editBMPanel_tagsField {
+#editBMPanel_tagsField,
+.popup-notification-body input {
 	-moz-appearance: none !important;
 	background: var(--gnome-entry-background) !important;
 	outline: 2px solid transparent !important;
@@ -24,7 +25,7 @@
 	margin: 0 !important;
 	padding: 6px !important;
 	box-sizing: border-box;
-	transition: 0.3s;
+	transition: outline 0.3s, outline-offset 0.3s;
 }
 
 /* Entries focused */
@@ -38,7 +39,8 @@
 #password1Textbox:focus,
 .tabsFilter[focused],
 #editBMPanel_namePicker:focus-visible,
-#editBMPanel_tagsField:focus-visible {
+#editBMPanel_tagsField:focus-visible,
+.popup-notification-body input:focus {
 	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
