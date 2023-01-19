@@ -10,3 +10,7 @@ user_pref("browser.uidensity", 0);
 
 // Enable SVG context-propertes
 user_pref("svg.context-properties.content.enabled", true);
+
+// Disable private window dark theme
+user_pref("browser.theme.dark-private-windows", false);
+

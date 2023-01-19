@@ -48,7 +48,7 @@
 	--gnome-button-suggested-action-background: var(--gnome-accent-bg);
 	--gnome-button-destructive-action-background: #e01b24;
 	
-	--gnome-button-close-background: #d8d8d8;
+	--gnome-button-close-background: var(--gnome-button-background);
 	--gnome-button-hover-close-background:var(--gnome-button-hover-background);
 	--gnome-button-active-close-background: var(--gnome-button-active-background);
 	
