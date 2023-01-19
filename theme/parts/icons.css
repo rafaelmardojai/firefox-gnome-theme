@@ -390,6 +390,7 @@ button.close::before {
 	list-style-image: url("../icons/printer-symbolic.svg") !important;
 }
 /* Addons button */
+#unified-extensions-button,
 #add-ons-button,
 #addons-notification-icon,
 .install-icon {
