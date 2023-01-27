@@ -293,3 +293,10 @@ button.close {
 	min-height: 24px !important;
 	width: 24px !important;
 }
+
+/* OPTIONAL: Hide unified-extensions-button */
+@supports -moz-bool-pref("gnomeTheme.hideUnifiedExtensions") {
+	#unified-extensions-button {
+		display: none;
+	}
+}

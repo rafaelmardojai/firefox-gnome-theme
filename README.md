@@ -208,6 +208,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	Hide redundant WebRTC indicator since GNOME provides their own privacy icons in the top right.
 
+- **Hide unified extensions button** `gnomeTheme.hideUnifiedExtensions`
+
+	Hide unified extensions button from the navbar, you can also use `extensions.unifiedExtensions.enabled` instead, which is only going to work till Firefox 111.
+
 - **Drag window from headerbar buttons** `gnomeTheme.dragWindowHeaderbarButtons`
 
 	Allow dragging the window from headerbar buttons.
