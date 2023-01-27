@@ -38,8 +38,8 @@ dialog {
 }
 
 /* Content */
-.dialog-content-box,
-#dialogGrid {
+.box-inherit[part="content-box"],
+.dialog-content-box {
 	padding: 24px;
 	padding-bottom: 0;
 }
