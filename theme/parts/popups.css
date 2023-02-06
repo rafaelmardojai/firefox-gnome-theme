@@ -234,7 +234,7 @@ menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
 	padding: 0 !important;
 	pointer-events: none;
 	position: absolute !important;
-	top: 8px !important;
+	top: 15px !important;
 	width: 100%;
 }
 
