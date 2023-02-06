@@ -87,7 +87,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	margin: 5px 3px 6px !important;
 	padding: 0 9px !important;
 	min-height: 34px !important;
-	transition: 0.3s;
+	transition: background 0.3s;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled]):not(:active):not([open]):hover {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
@@ -159,7 +159,7 @@ tab {
 	box-shadow: none !important;
 	margin-block: 0 !important;
 	border: 0 !important;
-	transition: 0.2s;
+	transition: background 0.2s;
 }
 
 /* Center all inside tab */

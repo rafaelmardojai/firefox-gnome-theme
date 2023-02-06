@@ -75,7 +75,7 @@
 .urlbar-page-action,
 .urlbar-icon {
 	fill-opacity: 0.8 !important;
-	transition: 0.3s;
+	transition: fill 0.3s, fill-opacity 0.3, opacity 0.3;
 }
 
 .identity-box-button:hover:not([open="true"]),
