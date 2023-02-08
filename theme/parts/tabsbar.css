@@ -543,7 +543,7 @@ tab {
 	}
 	
 	/* Round and pad tab-bar */
-	:root[tabsintitlebar] #TabsToolbar {
+	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #TabsToolbar {
 		border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important
 	}
 	:root[tabsintitlebar] #TabsToolbar .toolbar-items {
