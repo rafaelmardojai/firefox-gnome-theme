@@ -128,23 +128,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
   margin-inline-start: 0 !important;
 }
 
-/* Tab separators */
-#TabsToolbar #firefox-view-button::after,
-.tabbrowser-tab:not([selected], :hover, [last-visible-tab="true"], [beforeselected-visible="true"], [beforehovered="true"])::after {
-	content: "";
-	display: block;
-	border-left: 1px solid var(--gnome-tabbar-tab-separator-color) !important;
-	height: 26px;
-	position: absolute;
-	top: 9px;
-}
-.tabbrowser-tab::after {
-	right: -.5px;
-}
-#TabsToolbar #firefox-view-button::after {
-	left: 39px;
-}
-
 /* Tab labels */
 tab {
 	color: var(--gnome-toolbar-color) !important;
