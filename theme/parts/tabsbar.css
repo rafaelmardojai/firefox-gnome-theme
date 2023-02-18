@@ -113,8 +113,8 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tab */
 .tabbrowser-tab {
-	border: 0 !important;
-	padding: 5px 3px 6px !important;
+	border-width: 0 !important;
+	padding: 5px 2px 6px !important;
 	position: relative;
 }
 .tabbrowser-tab[first-visible-tab="true"]:not([pinned]){
@@ -126,6 +126,41 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
   margin-inline-start: 0 !important;
+}
+
+/* Tabs separators */
+.tabbrowser-tab {
+	border-style: solid !important;
+	border-left-width: 1px !important;
+	border-color: transparent !important;
+}
+.tabbrowser-tab:not([first-visible-unpinned-tab], [selected], :hover) {
+	--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
+	--gnome-tabbar-tab-separator-hack1: linear-gradient(
+		to bottom,
+		var(--gnome-tabbar-tab-separator-hack0) 0,
+		var(--gnome-tabbar-tab-separator-hack0) 9px,
+		var(--gnome-tabbar-tab-separator-color) 9px,
+		var(--gnome-tabbar-tab-separator-color) 35px,
+		var(--gnome-tabbar-tab-separator-hack0) 35px,
+		var(--gnome-tabbar-tab-separator-hack0) 45px
+	) 1;
+	border-image: var(--gnome-tabbar-tab-separator-hack1);
+}
+.tabbrowser-tab:not([first-visible-unpinned-tab]):-moz-window-inactive {
+	--gnome-tabbar-tab-separator-hack0: var(--gnome-inactive-tabbar-background);
+}
+.tabbrowser-tab[selected] ~ .tabbrowser-tab:not([hidden="true"]) {
+	border-image: none;
+}
+.tabbrowser-tab[selected] ~ .tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab:not([hidden="true"]) {
+	border-image: var(--gnome-tabbar-tab-separator-hack1);
+}
+.tabbrowser-tab:hover ~ .tabbrowser-tab:not([hidden="true"]) {
+	border-image: none !important;
+}
+.tabbrowser-tab:hover ~ .tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab:not([hidden="true"]) {
+	border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
 }
 
 /* Tab labels */
