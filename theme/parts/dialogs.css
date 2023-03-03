@@ -6,19 +6,16 @@ window {
 	padding: 0 !important;
 }
 
-/* Browser dialog prompts center */
-.dialogOverlay {
-    display: grid;
-	place-content: center;
+#window-modal-dialog {
+	display: flex;
 	justify-content: center;
-	grid-auto-rows: min(90%, var(--doc-height-px));
-}
-.dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog), #window-modal-dialog::backdrop {
-	background-color: rgba(0, 0, 0, .5) !important;
+	align-items: center;
+	height: 100vh;
 }
 
-#window-modal-dialog {
-	margin-top: auto !important;
+/* Browser dialog prompts center */
+.dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog), #window-modal-dialog::backdrop {
+	background-color: rgba(0, 0, 0, .5) !important;
 }
 
 /* Dialog */
