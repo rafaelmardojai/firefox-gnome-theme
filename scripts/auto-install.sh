@@ -3,7 +3,7 @@
 sysThemeNames=("'Pop'" "'Pop-dark'" "'Pop-light'" "'Yaru'" "'Yaru-dark'" "'Yaru-light'" "'Adwaita-maia'" "'Adwaita-maia-dark'")
 themeNames=("pop" "pop" "pop" "yaru" "yaru" "yaru" "maia" "maia")
 
-firefoxInstalationPaths=(
+firefoxInstallationPaths=(
     ~/.mozilla/firefox
     ~/.var/app/org.mozilla.firefox/.mozilla/firefox
     ~/.librewolf
@@ -25,7 +25,7 @@ for i in "${!sysThemeNames[@]}"; do
    fi
 done
 
-for folder in "${firefoxInstalationPaths[@]}"; do
+for folder in "${firefoxInstallationPaths[@]}"; do
     if [ -d $folder ]; then
     echo Firefox installation folder found
 

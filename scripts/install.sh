@@ -102,7 +102,7 @@ if [ "${PROFILENAME}" != "" ];
 		echo "Using ${PROFILENAME} profile"
 		PROFILES_ARRAY+=${PROFILENAME}
 else
-	echo "Finding all avaliable profiles";
+	echo "Finding all available profiles";
 	while [[ "$PROFILES_PATHS" ]]; do
 		PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
 		PROFILES_PATHS=${PROFILES_PATHS#*::}
@@ -112,7 +112,7 @@ fi
 
 
 if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
-	echo "FAIL, no Firefox profiles found in $PROFILES_FILE".;
+	echo "FAIL, no Firefox profile found in $PROFILES_FILE".;
 
 else
 	for i in "${PROFILES_ARRAY[@]}"
