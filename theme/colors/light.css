@@ -82,13 +82,13 @@
 
 /* Private window colors */
 :root {
-	--gnome-private-accent: #272F42;
+	--gnome-private-accent: #1c71d8;
 	
 	/* Toolbars */
-	--gnome-private-toolbar-background: #EAF0F7;
-	--gnome-private-inactive-toolbar-background: var(--gnome-private-toolbar-background);
+	--gnome-private-toolbar-background: var(--gnome-headerbar-background);
+	--gnome-private-inactive-toolbar-background: var(--gnome-inactive-headerbar-background);
 	/* Menus */
-	--gnome-private-menu-background: #D7E3F0;
+	--gnome-private-menu-background: #ffffff;
 	/* Header bar */
 	--gnome-private-headerbar-background: #D7E3F0;
 	--gnome-private-inactive-headerbar-background: var(--gnome-private-toolbar-background);
@@ -104,7 +104,7 @@
 	--gnome-private-wordmark: #20123A;
 
 	/* New private tab background */
-	--gnome-private-in-content-page-background: #EAF0F7;
+	--gnome-private-in-content-page-background: #FAFAFA;
 
 	/* Private browsing info box */
 	--gnome-private-text-primary-color: #15141A;
