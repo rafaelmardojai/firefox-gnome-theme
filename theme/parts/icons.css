@@ -352,7 +352,8 @@ button.close::before {
 }
 /* Preferences button */
 #preferences-button,
-.search-setting-button-compact > .button-box > .button-icon {
+.search-setting-button-compact > .button-box > .button-icon,
+.unified-extensions-item-menu-button.subviewbutton {
 	list-style-image: url("../icons/settings-symbolic.svg") !important;
 }
 /* Tabs sync */

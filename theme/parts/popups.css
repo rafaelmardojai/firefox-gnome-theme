@@ -157,8 +157,9 @@ panel  {
 
 /* Menu buttons */
 menuitem, menupopup menu,
-panelview .subviewbutton:not(#appMenu-fxa-label2),
+panelview .subviewbutton:not(#appMenu-fxa-label2, .unified-extensions-item-menu-button),
 panelview .toolbarbutton-1,
+panelview .unified-extensions-item-action-button,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
@@ -177,7 +178,8 @@ panelview .toolbarbutton-1,
 .identity-popup-content-blocking-category,
 #PlacesToolbar menupopup[placespopup="true"] .bookmark-item,
 .openintabs-menuitem,
-.widget-overflow-list .toolbarbutton-1 {
+.widget-overflow-list .toolbarbutton-1,
+panelview .unified-extensions-item {
 	margin: 0 !important;
 }
 
