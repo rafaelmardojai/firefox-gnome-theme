@@ -61,13 +61,16 @@ findbar:-moz-window-inactive description,
 
 /* Reorder toolbars */
 #navigator-toolbox #nav-bar {
-	-moz-box-ordinal-group: 0;
+	-moz-box-ordinal-group: 98;
+	order: 98;
 }
 #navigator-toolbox #PersonalToolbar {
-	-moz-box-ordinal-group: 0;
+	-moz-box-ordinal-group: 98;
+	order: 98;
 }
 #navigator-toolbox #titlebar {
-	-moz-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 99;
+	order: 99;
 }
 #navigator-toolbox toolbar {
 	-moz-box-ordinal-group: 10;
@@ -143,9 +146,11 @@ findbar:-moz-window-inactive description,
 /* OPTIONAL: Move Bookmarks toolbar under tabs */
 @supports -moz-bool-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
 	#navigator-toolbox #titlebar {
-		-moz-box-ordinal-group: 1 !important;
+		-moz-box-ordinal-group: 99 !important;
+		order: 99 !important;
 	}
 	#navigator-toolbox #PersonalToolbar {
-		-moz-box-ordinal-group: 2 !important;
+		-moz-box-ordinal-group: 100 !important;
+		order: 100 !important;
 	}
 }
