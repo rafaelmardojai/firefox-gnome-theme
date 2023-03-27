@@ -24,7 +24,7 @@ richlistbox#items {
 /* List item */
 .permission-popup-permission-list-anchor,
 richlistbox#items richlistitem {
-	padding: 6px 6px 1px !important;
+	padding: 6px !important;
 	margin: 0 !important;
 }
 .permission-popup-permission-list-anchor:not(:last-child),

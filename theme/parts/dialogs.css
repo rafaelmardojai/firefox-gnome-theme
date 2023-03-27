@@ -23,6 +23,9 @@ window {
 	border-radius: 12px !important;
 	margin-top: 0 !important;
 }
+.dialogBox[resizable="true"] {
+	margin-top: 24px !important;
+}
 
 window[role="dialog"] {
 	background: var(--gnome-toolbar-background) !important;
@@ -32,6 +35,10 @@ window[role="dialog"] {
 }
 dialog {	
 	padding: 0 !important;
+}
+dialog#handling {
+	display: flex;
+	flex-direction: column;
 }
 
 /* Content */
@@ -50,6 +57,7 @@ dialog {
 /* Buttons */
 .dialog-button-box {
 	display: flex !important;
+	margin-top: auto;
 }
 
 .dialog-button-box button:not(#hack) {
