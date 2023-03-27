@@ -61,22 +61,19 @@ findbar:-moz-window-inactive description,
 
 /* Reorder toolbars */
 #navigator-toolbox #nav-bar {
-	-moz-box-ordinal-group: 98;
 	order: 98;
 }
 #navigator-toolbox #PersonalToolbar {
-	-moz-box-ordinal-group: 98;
 	order: 98;
 }
 #navigator-toolbox #titlebar {
-	-moz-box-ordinal-group: 99;
 	order: 99;
 }
 #navigator-toolbox toolbar {
-	-moz-box-ordinal-group: 10;
+	order: 10;
 }
 #navigator-toolbox #TabsToolbar {
-	-moz-box-ordinal-group: 100;
+	order: 100;
 }
 
 /* Overrides: Don't shift other toolbars on tab drag and drop */
