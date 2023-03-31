@@ -78,10 +78,24 @@ function saveProfile(){
 
 	cd ..
 
-	# Symlink user.js to firefox-gnome-theme one.
-	echo "Set configuration user.js file" >&2
-	ln -is chrome/firefox-gnome-theme/configuration/user.js user.js
+	echo "Set configuration to user.js file" >&2
 
+	mapfile -t theme_prefs < <( grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js )
+	mapfile -t theme_prefs_unvalued < <( grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js|cut -d'"' -f 2 )
+	if [ ! -f "user.js" ]; then
+		mv chrome/firefox-gnome-theme/configuration/user.js .
+	else
+		cp user.js user.js.bak
+		OLDIFS=$IFS
+		IFS='/'
+		for t in "${theme_prefs_unvalued[@]}"; do
+			sed -i "/$t/d" "user.js"
+		done
+		for f in "${theme_prefs[@]}"; do
+			echo "$f" >> "user.js"
+		done
+		IFS=$OLDIFS
+	fi
 	echo "Done." >&2
 	cd ..
 }
@@ -93,7 +107,7 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 fi
 echo "'profiles.ini' found in ${FIREFOXFOLDER}"
 
-PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' )) 
+PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' ))
 PROFILES_PATHS+=::
 
 PROFILES_ARRAY=()
@@ -122,6 +136,5 @@ else
 			echo "Installing ${THEME} theme for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
 			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
-	
 	done
 fi
