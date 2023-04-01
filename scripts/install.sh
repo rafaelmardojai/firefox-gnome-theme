@@ -7,7 +7,7 @@ THEME="DEFAULT"
 
 
 # Get options.
-while getopts 'f:p:t' flag; do
+while getopts 'f:p:t:' flag; do
 	case "${flag}" in
 	f) FIREFOXFOLDER="${OPTARG}" ;;
 	p) PROFILENAME="${OPTARG}" ;;
