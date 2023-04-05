@@ -117,3 +117,14 @@
         }
     }
 }
+
+@supports -moz-bool-pref("gnomeTheme.extensions.tabCenterReborn-always-open") {
+    #sidebar-box[sidebarcommand*="tabcenter"] #sidebar,
+    #sidebar-box[sidebarcommand*="tabcenter"] {
+        min-width: 10vw !important;
+        width: 30vw !important;
+        max-width: 200px !important;
+        z-index: 1 !important;
+        transition: all var(--transition-time) ease var(--delay);
+    }
+}
