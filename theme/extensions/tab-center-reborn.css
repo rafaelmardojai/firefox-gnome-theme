@@ -39,6 +39,7 @@
         min-width: 48px;
         max-width: 48px;
         overflow: hidden;
+        
         border-right: 1px solid var(--sidebar-border-color);
         z-index: 1;
         top: 0;
@@ -126,5 +127,10 @@
         max-width: 200px !important;
         z-index: 1 !important;
         transition: all var(--transition-time) ease var(--delay);
+    }
+    
+    #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
+        position: relative;
+        margin-right: -50px;
     }
 }
