@@ -306,7 +306,7 @@ button.close::before {
     list-style-image: url("../icons/audio-muted-symbolic.svg") !important;
 }
 .tab-icon-overlay[activemedia-blocked] {
-  list-style-image: url("../icons/play-large-diabled-symbolic.svg") !important;
+	list-style-image: url("../icons/play-large-disabled-symbolic.svg") !important;
 }
 
 /* Firefox View */
