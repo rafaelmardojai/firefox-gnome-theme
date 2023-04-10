@@ -119,12 +119,12 @@
     }
 }
 
-@supports -moz-bool-pref("gnomeTheme.extensions.tabCenterReborn-always-open") {
+@supports -moz-bool-pref("gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
     #sidebar-box[sidebarcommand*="tabcenter"] #sidebar,
     #sidebar-box[sidebarcommand*="tabcenter"] {
         min-width: 10vw !important;
         width: 30vw !important;
-        max-width: 200px !important;
+        max-width: 250px !important;
         z-index: 1 !important;
         transition: all var(--transition-time) ease var(--delay);
     }
@@ -132,5 +132,12 @@
     #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
         position: relative;
         margin-right: -50px;
+    }
+    
+    @media (width >= 1200px) {
+        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
+        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
+            max-width: 250px !important;
+        }
     }
 }
