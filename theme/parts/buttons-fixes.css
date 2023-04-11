@@ -250,9 +250,16 @@ button.close {
 #downloads-indicator-finish-image {
 	background: var(--gnome-toolbar-icon-fill) !important;
 }
+
+/* Stop/Reload button */
+#stop-reload-button .toolbarbutton-icon {
+	margin-top: -2px !important;
+}
+
+/* Toolbar Animations */
 #downloads-button .toolbarbutton-animatable-box {
 	top: 8px !important;
-    left: 8px !important;
+	left: 8px !important;
 }
 #downloads-button .toolbarbutton-animatable-box,
 #downloads-button .toolbarbutton-animatable-image,
@@ -260,21 +267,13 @@ button.close {
 	height: 16px !important;
 	width: 16px !important;
 }
-#downloads-button .toolbarbutton-animatable-image {
-	--anim-steps: 1 !important;
-	transform: none !important;
-	list-style-image: none !important;
-}
-
-/* Stop/Reload button */
-#stop-reload-button  .toolbarbutton-animatable-image:not(#hack) {
+#downloads-button .toolbarbutton-animatable-image,
+#stop-reload-button  .toolbarbutton-animatable-image:not(#hack),
+#nav-bar-overflow-button  .toolbarbutton-animatable-image:not(#hack) {
 	--anim-steps: 1 !important;
 	transform: none !important;
 	list-style-image: none !important;
 	display: none !important;
-}
-#stop-reload-button .toolbarbutton-icon {
-	margin-top: -2px !important;
 }
 
 /* Panel banner */
