@@ -78,7 +78,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 	- `-t <theme_name>` *optional*
 		- Set the colors used in the theme.
 		- Default: Adwaita.
-		- Options: `adwaita`, `maia`, `yaru`.
+		- Options: `adwaita`, `maia`.
 
 ### One command curled script
 
