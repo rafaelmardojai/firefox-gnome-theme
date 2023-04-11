@@ -38,7 +38,7 @@
 		--gnome-headerbar-background: #303030;
 		--gnome-headerbar-border-color: var(--gnome-toolbar-border-color);
 		--gnome-inactive-headerbar-background: var(--gnome-browser-before-load-background);
-		--gnome-inactive-headerbar-border-color: var(--gnome-inactive-toolbar-border-color);
+		--gnome-inactive-headerbar-border-color: var(--gnome-toolbar-border-color);
 
 		/* Buttons */
 		--gnome-button-background: rgba(255, 255, 255, .1);
