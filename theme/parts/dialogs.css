@@ -42,10 +42,12 @@ dialog#handling {
 }
 
 /* Content */
-.box-inherit[part="content-box"],
 .dialog-content-box {
 	padding: 24px;
 	padding-bottom: 0;
+}
+.box-inherit[part="content-box"] {
+	padding: 12px 24px 12px 24px;
 }
 #titleContainer {
 	justify-content: center !important;
