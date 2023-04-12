@@ -53,6 +53,7 @@ tab > stack {
 	top: -3px;
 	z-index: -1;
 	width: 50px;
+	pointer-events: none;
 }
 
 #scrollbutton-up:not([disabled])::after {
