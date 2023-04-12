@@ -14,11 +14,6 @@
 
 /* OPTIONAL: Use system theme icons instead of Adwaita icons included by theme */
 @supports -moz-bool-pref("gnomeTheme.systemIcons") {
-	toolbar .toolbarbutton-1 > .toolbarbutton-icon {		
-		padding: 0 !important;
-		height: 16px !important;
-		width: 16px !important;
-	}
 	
 	/* Window buttons */
 	:root[tabsintitlebar] #titlebar .titlebar-button .toolbarbutton-icon,
