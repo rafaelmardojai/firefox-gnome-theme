@@ -87,6 +87,13 @@ toolbarspring {
 	background: transparent !important;
 }
 
+/* Fix items overflow */
+.urlbarView[actionoverride] .urlbarView-row[has-url] > .urlbarView-row-inner > .urlbarView-no-wrap,
+.urlbarView-row[has-url]:not([type$="tab"]) > .urlbarView-row-inner > .urlbarView-no-wrap, .urlbarView-row[has-url]:is([type="remotetab"],
+[sponsored]):is(:hover, [selected]) > .urlbarView-row-inner > .urlbarView-no-wrap {
+	max-width: calc(96% - 2 * (var(--urlbarView-favicon-width) + (6px + 2px))) !important;
+}
+
 /* Search engines buttons */	
 .search-one-offs {
 	padding: 8px !important;
