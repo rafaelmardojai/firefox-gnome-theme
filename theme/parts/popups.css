@@ -280,3 +280,10 @@ panelview > toolbarseparator:not([orient="vertical"]),
 #identity-popup-clear-sitedata-footer toolbarseparator:not([orient="vertical"]) {
 	margin-top: 0 !important;
 }
+
+toolbarbutton menupopup[placespopup] menuseparator {
+	padding: 0 !important;
+}
+toolbarbutton menupopup[placespopup] menuseparator::before {
+	display: none !important;
+}
