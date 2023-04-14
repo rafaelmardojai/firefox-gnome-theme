@@ -235,6 +235,7 @@ button.close {
 /* Downloads button */
 #downloads-indicator-progress-inner {
 	background: conic-gradient(var(--gnome-toolbar-icon-fill) var(--download-progress-pcent), transparent var(--download-progress-pcent)) !important;
+	background-color: var(--gnome-button-active-background) !important;
 }
 #downloads-indicator-progress-outer,
 #downloads-indicator-start-image,
@@ -249,6 +250,13 @@ button.close {
 }
 #downloads-indicator-finish-image {
 	background: var(--gnome-toolbar-icon-fill) !important;
+}
+
+#downloads-button[progress="true"] #downloads-indicator-progress-outer {
+  visibility: visible !important;
+}
+#downloads-button:not([progress="true"]) #downloads-indicator-icon {
+  visibility: visible !important;
 }
 
 /* Stop/Reload button */
