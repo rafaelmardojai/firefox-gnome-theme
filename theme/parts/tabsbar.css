@@ -118,10 +118,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	padding: 5px 2px 6px !important;
 	position: relative;
 }
-.tabbrowser-tab[first-visible-tab="true"]:not([pinned]){
+.tabbrowser-tab:not([hidden=true], [pinned]):first-of-type {
 	padding-left: 5px !important;
 }
-.tabbrowser-tab[last-visible-tab="true"] {
+.tabbrowser-tab:not([hidden="true"]):last-of-type {
 	padding-right: 5px !important;
 }
 
