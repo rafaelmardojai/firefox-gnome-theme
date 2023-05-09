@@ -12,6 +12,11 @@
 	padding: 0 1px 0 4px !important;
 }
 
+/* Fix subviewbutton icon buttons alignment */
+.subviewbutton.subviewbutton-iconic {
+	justify-content: center !important;
+}
+
 /* Fix hover background */
 .toolbarbutton-badge-stack:not(#hack), .toolbarbutton-icon:not(#hack), .toolbarbutton-text:not(#hack) {
 	background: transparent !important;
