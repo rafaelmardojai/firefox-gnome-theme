@@ -191,6 +191,8 @@ tab {
 	align-items: center;
 	margin-top: -1px;
 	min-width: 100% !important;
+}
+.tab-content:not([pinned]) {
 	padding: 0 4px !important;
 }
 
