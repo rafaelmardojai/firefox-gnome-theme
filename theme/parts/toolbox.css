@@ -75,6 +75,9 @@ findbar:-moz-window-inactive description,
 #navigator-toolbox #TabsToolbar {
 	order: 100;
 }
+.notificationbox-stack {
+	order: 1000;
+}
 
 /* Overrides: Don't shift other toolbars on tab drag and drop */
 #TabsToolbar[movingtab] {
