@@ -62,6 +62,10 @@ dialog#handling {
 	margin-top: auto;
 }
 
+.dialog-button-box .button-spacer {
+	display: none;
+}
+
 .dialog-button-box button:not(#hack) {
 	height: auto !important;
 	max-height: unset !important;
