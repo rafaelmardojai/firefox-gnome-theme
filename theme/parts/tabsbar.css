@@ -541,19 +541,19 @@ tab {
 @supports -moz-bool-pref("gnomeTheme.tabsAsHeaderbar") {
 	/* Rearrange bars */
 	#navigator-toolbox #titlebar {
-		-moz-box-ordinal-group: 0;
+		order: 0;
 	}
 	#navigator-toolbox #titlebar #TabsToolbar {
-		-moz-box-ordinal-group: 0;
+		order: 0;
 	}
 	#navigator-toolbox #titlebar #toolbar-menubar {
-		-moz-box-ordinal-group: 1;
+		order: 1;
 	}
 	#navigator-toolbox #nav-bar {
-		-moz-box-ordinal-group: 1;
+		order: 1;
 	}
 	#navigator-toolbox #PersonalToolbar {
-		-moz-box-ordinal-group: 2;
+		order: 2;
 	}
 	
 	/* Remove nav-bar rounding and padding */
@@ -581,7 +581,7 @@ tab {
 	
 	/* Force displaying controls in tab-bar */
 	:root[tabsintitlebar] #TabsToolbar .titlebar-buttonbox-container:not(#hack) {
-		display: -moz-box !important;
+		display: flex !important;
 		position: static !important;
 		visibility: visible !important;
 	}
