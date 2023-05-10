@@ -70,7 +70,7 @@
 }
 
 /* Force the restore button to appear regardless of maximize button's status */
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container {
+:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container {
   visibility: visible !important;
 }
 :root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container .titlebar-restore {
