@@ -61,22 +61,23 @@ findbar:-moz-window-inactive description,
 
 /* Reorder toolbars */
 #navigator-toolbox #nav-bar {
-	order: 98;
+	order: 0;
 }
 #navigator-toolbox #PersonalToolbar {
-	order: 98;
+	order: 2;
 }
 #navigator-toolbox #titlebar {
-	order: 99;
+	order: 3;
 }
-#navigator-toolbox toolbar {
-	order: 10;
-}
-#navigator-toolbox #TabsToolbar {
+#tab-notification-deck {
 	order: 100;
 }
 .notificationbox-stack {
 	order: 1000;
+}
+
+#navigator-toolbox #TabsToolbar {
+	order: 100;
 }
 
 /* Overrides: Don't shift other toolbars on tab drag and drop */
@@ -155,9 +156,9 @@ findbar:-moz-window-inactive description,
 /* OPTIONAL: Move Bookmarks toolbar under tabs */
 @supports -moz-bool-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
 	#navigator-toolbox #titlebar {
-		order: 99 !important;
+		order: 2 !important;
 	}
 	#navigator-toolbox #PersonalToolbar {
-		order: 100 !important;
+		order: 3 !important;
 	}
 }
