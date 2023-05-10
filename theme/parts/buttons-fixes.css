@@ -13,7 +13,7 @@
 }
 
 /* Fix subviewbutton icon buttons alignment */
-.subviewbutton.subviewbutton-iconic {
+.subviewbutton.subviewbutton-iconic:not(.subviewbutton-back) {
 	justify-content: center !important;
 }
 
