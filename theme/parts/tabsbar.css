@@ -186,11 +186,9 @@ tab {
 
 /* Center all inside tab */
 .tab-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: center !important;
+	align-items: center !important;
 	margin-top: -1px;
-	min-width: 100% !important;
 }
 .tab-content:not([pinned]) {
 	padding: 0 4px !important;
@@ -209,25 +207,9 @@ tab {
 	min-width: 16px;
 }
 
-/* Center tab icon contents */
-.tabbrowser-tab .tab-icon-stack {
-	align-items: center;
-	justify-items: center;
-}
-
-/* Adjust tab label width */
-.tab-label-container {
-	min-width: 0 !important;
-}
-
-/* Put tab close button to the right */
-.tabbrowser-tab .tab-close-button {
-	margin-left: auto !important;
-}
-
-/* Force tab favicon to the center */
-.tabbrowser-tab:not([pinned]) .tab-icon-stack {
-	margin-left: auto !important;
+/* Center tab text */
+.tab-label {
+	margin-inline: auto !important;
 }
 
 /* Tab icon margin */
@@ -235,7 +217,7 @@ tab {
 	margin-right: 2px;
 }
 .tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
-  margin-inline-end: 0 !important;
+	margin-inline-end: 0 !important;
 }
 .tabbrowser-tab:not([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-stack {
 	padding: 4px;
@@ -339,12 +321,6 @@ tab {
 }
 
 /* Fix close button position */
-.tabbrowser-tab:not([pinned]) .tab-label-container {
-	margin-right: -16px;
-}
-.tabbrowser-tab:not([pinned]):is([selected="true"], :hover) .tab-label-container[textoverflow="true"] {
-	margin-right: 0;
-}
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([pinned]) .tab-close-button {
 	display: block !important;
 }
