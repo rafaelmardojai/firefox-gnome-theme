@@ -207,9 +207,16 @@ tab {
 	min-width: 16px;
 }
 
-/* Center tab text */
-.tab-label {
-	margin-inline: auto !important;
+/* Center tab content */
+.tab-label-container {
+	min-width: 0 !important;
+	max-width: min-content !important;
+}
+.tabbrowser-tab:not([pinned]) .tab-icon-stack {
+	margin-left: auto !important;
+}
+.tab-close-button {
+	margin-left: auto;
 }
 
 /* Tab icon margin */
