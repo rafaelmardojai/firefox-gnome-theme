@@ -92,3 +92,13 @@ dialog#handling {
 #os-default-handler .name {
 	font-weight: normal !important;
 }
+
+/* Fullscreen warning */
+#fullscreen-warning {
+	background: var(--gnome-toolbar-background) !important;
+	border: none !important;
+}
+
+#fullscreen-warning::before {
+	background-image: url("../icons/padlock-symbolic.svg") !important;
+}
