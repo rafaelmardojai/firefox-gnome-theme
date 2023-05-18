@@ -45,6 +45,11 @@
 		filter: var(--gnome-icons-hack-filter);
 		list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
 	}
+	/* Icon size */
+	toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+		width: 16px !important;
+		height: 16px !important;
+	}
 
 	/* Navbar icons */
 
