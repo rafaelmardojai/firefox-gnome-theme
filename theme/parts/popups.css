@@ -27,6 +27,15 @@ menulist {
 	margin: 0 !important;
 }
 
+menuitem:not(#hack) {
+	padding-right: 18px !important;
+}
+menuitem :is(label, description)[value][crop]::before {
+	min-width: min-content !important;
+}
+menuitem:not([acceltext]) .menu-accel-container {
+	visibility: collapse !important;
+}
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {
 	visibility: visible !important;
 }
