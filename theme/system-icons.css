@@ -49,6 +49,7 @@
 	toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 		width: 16px !important;
 		height: 16px !important;
+		padding: 0 !important;
 	}
 
 	/* Navbar icons */
