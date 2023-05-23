@@ -213,6 +213,12 @@ tab {
 	min-width: 0 !important;
 	max-width: min-content !important;
 }
+.tabbrowser-tab:not([pinned]) .tab-label-container {
+	margin-right: -16px;
+}
+.tabbrowser-tab:not([pinned]):is([selected="true"], :hover) .tab-label-container[textoverflow="true"] {
+	margin-right: 0;
+}
 .tabbrowser-tab:not([pinned]) .tab-icon-stack {
 	margin-left: auto !important;
 }
