@@ -560,7 +560,7 @@ tab {
 	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #TabsToolbar {
 		border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important
 	}
-	:root[tabsintitlebar]:not([inFullscreen]) #TabsToolbar .toolbar-items {
+	:root[tabsintitlebar]:not([inFullscreen], [sizemode="maximized"]) #TabsToolbar .toolbar-items {
 		padding: 0 46px;
 	}
 	
