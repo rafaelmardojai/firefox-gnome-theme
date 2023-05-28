@@ -27,7 +27,7 @@ menulist {
 	margin: 0 !important;
 }
 
-menuitem:not(#hack) {
+menuitem:not(.menuitem-iconic) {
 	padding-right: 18px !important;
 }
 menuitem :is(label, description)[value][crop]::before {
