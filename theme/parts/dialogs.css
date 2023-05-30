@@ -95,11 +95,40 @@ dialog#handling {
 
 /* Fullscreen warning */
 #fullscreen-warning {
-	background: var(--gnome-toolbar-background) !important;
-	color: var(--gnome-toolbar-color) !important;
+	background: rgba(0, 0, 0, 0.7) !important;
+	border-radius: 150px !important;
 	border: none !important;
+	color: rgba(255, 255, 255, .9) !important;
+	padding: 6px 12px !important;
 }
 
 #fullscreen-warning::before {
 	background-image: url("../icons/padlock-symbolic.svg") !important;
+	height: 16px !important;
+	width: 16px !important;
+}
+
+#fullscreen-warning .pointerlockfswarning-domain-text {
+	font-size: 16px !important;
+	font-weight: normal !important;
+	margin: 0 12px 0 6px !important;
+}
+
+#fullscreen-exit-button {
+	appearance: none !important;
+	background: rgba(255, 255, 255, .09) !important;
+	border-radius: 6px !important;
+	border: 0 !important;
+	padding: 2px 16px !important;
+	height: 34px !important;
+	min-height: 34px !important;
+	color: rgba(255, 255, 255, .9) !important;
+	font-weight: bold !important;
+	transition: background .3s;
+}
+#fullscreen-exit-button:hover {
+	background: rgba(255, 255, 255, .135) !important;
+}
+#fullscreen-exit-button:active {
+	background: rgba(255, 255, 255, .27) !important;
 }
