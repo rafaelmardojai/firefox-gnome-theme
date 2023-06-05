@@ -141,3 +141,21 @@
         }
     }
 }
+
+#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"],
+#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] + splitter {
+    visibility: collapse;
+    animation: var(--transition-time) fadeOut;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
