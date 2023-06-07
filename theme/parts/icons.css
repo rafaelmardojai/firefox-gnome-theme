@@ -6,6 +6,8 @@
 .toolbarbutton-icon,
 menuitem:not([class*='identity']) .menu-iconic-left .menu-iconic-icon,
 .urlbar-page-action:not([readeractive]),
+.urlbar-icon,
+#blocked-permissions-container > .blocked-permission-icon,
 .button-icon:not(#hack),
 .bookmark-item[container],
 .notification-anchor-icon,
@@ -389,7 +391,7 @@ button.close::before {
 }
 /* Developer button */
 #developer-button {
-	list-style-image: url("../icons/applications-engineering-symbolic.svg") !important;
+	list-style-image: url("../icons/build-configure-symbolic.svg") !important;
 }
 /* Email link button */
 #email-link-button {
@@ -432,13 +434,35 @@ button.close::before {
 #star-button[starred] {
 	fill: var(--gnome-toolbar-star-button) !important;
 }
-
+/* Privacy */
+#print-button {
+	list-style-image: url("../icons/printer-symbolic.svg") !important;
+}
+/* Picture-in-picture */
+#picture-in-picture-button > .urlbar-icon {
+	list-style-image: url("../icons/pip-in-symbolic.svg") !important;
+}
+#picture-in-picture-button[pipactive] > .urlbar-icon {
+	list-style-image: url("../icons/pip-out-symbolic.svg") !important;
+}
+/* Blocked media */
+.autoplay-media-icon.blocked-permission-icon {
+	list-style-image: url("../icons/play-large-disabled-symbolic.svg") !important;
+}
+/* DRM */
+.drm-icon {
+	list-style-image: url("../icons/chain-link-symbolic.svg") !important;
+}
 /* History button */
 #history-panelmenu,
 #sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
 .urlbarView-row[source="history"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
 #urlbar-engine-one-off-item-history {
 	list-style-image: url("../icons/preferences-system-time-symbolic.svg") !important;
+}
+/* Forget history */
+#panic-button {
+	list-style-image: url("../icons/history-undo-symbolic.svg") !important;
 }
 /* All tabs button */
 #alltabs-button {
