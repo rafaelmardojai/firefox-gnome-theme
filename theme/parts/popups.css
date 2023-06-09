@@ -27,6 +27,10 @@ menulist {
 	margin: 0 !important;
 }
 
+menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
+menuitem[type="radio"] .menu-iconic-icon {
+	appearance: none !important;
+}
 menuitem:not(.menuitem-iconic) {
 	padding-right: 18px !important;
 }
