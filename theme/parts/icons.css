@@ -445,6 +445,13 @@ button.close::before {
 #picture-in-picture-button[pipactive] > .urlbar-icon {
 	list-style-image: url("../icons/pip-out-symbolic.svg") !important;
 }
+/* Read mode */
+#reader-mode-button > .urlbar-icon {
+	list-style-image: url("../icons/newspaper-symbolic.svg") !important;
+}
+#reader-mode-button[readeractive] > .urlbar-icon {
+	fill: var(--gnome-accent) !important;
+}
 /* Blocked media */
 .autoplay-media-icon.blocked-permission-icon {
 	list-style-image: url("../icons/play-large-disabled-symbolic.svg") !important;
