@@ -25,7 +25,10 @@
 /* Add private window headerbar indicator */
 :root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
 	background: url("../icons/eye-not-looking-symbolic.svg") no-repeat;
-	background-size: 64px 64px;
+	background-size: contain;
+	padding: 4px;
+  	box-sizing: border-box;
+ 	background-origin: content-box;
 	content: "";
 	display: block;	
 	position: absolute;
