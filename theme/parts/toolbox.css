@@ -32,6 +32,7 @@ findbar:-moz-window-inactive,
 .container.infobar:-moz-window-inactive {
 	background: var(--gnome-inactive-toolbar-background) !important;
 	border-color: var(--gnome-inactive-toolbar-border-color) !important;
+	transition: background .2s ease-out;
 }
 
 #navigator-toolbox:-moz-window-inactive label,
