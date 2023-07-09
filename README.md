@@ -159,6 +159,7 @@ You can follow the installation script steps again to update the theme.
 ## Uninstalling
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
+3. Remove the unwanted preferences from your `user.js` inside your profile folder. The install script append the needed prefs in that file, you can check what preferences does it append by checking `configuration/user.js` in this repo.
 
 ## Enabling optional features
 Optional features can be enabled by creating new `boolean` preferences in `about:config`.
