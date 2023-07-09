@@ -70,7 +70,8 @@
 		list-style-image: url("moz-icon://stock/open-menu-symbolic?size=dialog") !important;
 	}
 	/* New tab button */
-	#new-tab-button .toolbarbutton-icon {
+	#tabs-newtab-button  .toolbarbutton-icon,
+	#TabsToolbar #new-tab-button .toolbarbutton-icon {
 		filter: var(--gnome-icons-hack-filter);
 		list-style-image: url("moz-icon://stock/tab-new-symbolic?size=dialog") !important;
 	}
