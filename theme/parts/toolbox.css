@@ -147,6 +147,11 @@ findbar:-moz-window-inactive description,
 	color: var(--gnome-accent) !important;
 }
 
+/* Selection*/
+*::-moz-selection {
+	background-color: var(--gnome-selection-bg) !important;
+}
+
 /* OPTIONAL: Hide WebRTC indicator */
 @supports -moz-bool-pref("gnomeTheme.hideWebrtcIndicator") {
 	#webrtcIndicator {

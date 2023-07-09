@@ -12,6 +12,7 @@
 		/* Accent */
 		--gnome-accent-bg: #3584e4;
 		--gnome-accent: #78aeed;
+		--gnome-selection-bg: rgba(53, 132, 228, .25);
 
 		/* Toolbars */
 		--gnome-toolbar-background: var(--gnome-headerbar-background);
