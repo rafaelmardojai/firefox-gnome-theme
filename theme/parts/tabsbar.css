@@ -540,10 +540,16 @@ tab {
 		order: 1;
 	}
 	#navigator-toolbox #nav-bar {
-		order: 1;
+		order: 3;
 	}
 	#navigator-toolbox #PersonalToolbar {
-		order: 2;
+		order: 4;
+	}
+
+	@supports -moz-bool-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
+		#navigator-toolbox #PersonalToolbar {
+			order: 2 !important;
+		}
 	}
 	
 	/* Remove nav-bar rounding and padding */
