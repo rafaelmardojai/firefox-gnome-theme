@@ -17,7 +17,7 @@
 	background: var(--gnome-entry-background) !important;
 	outline: 2px solid transparent !important;
 	border: 0 !important;
-	border-radius: 8px !important;
+	border-radius: 6px !important;
 	box-shadow: none !important;
 	color: var(--gnome-entry-color) !important;
 	height: 34px !important;

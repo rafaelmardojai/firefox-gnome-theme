@@ -121,7 +121,7 @@
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-appearance: none !important;
 	padding: 0 2px !important;
-	background: var(--gnome-button-close-background);
+	background: var(--gnome-button-background);
 	transition: background 0.3s;
 }
 
@@ -149,21 +149,18 @@
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {
 	width: 16px;
 }
-:root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button,
-:root[tabsintitlebar][inFullscreen] #window-controls:-moz-window-inactive toolbarbutton {
-	background: var(--gnome-inactive-tabbar-tab-active-background) !important;
-}
-:root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):hover,
-:root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
+:root[tabsintitlebar] #titlebar .titlebar-button:not([disabled]):hover,
+:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton:not([disabled]):hover {
 	background: var(--gnome-button-hover-background) !important;
 }
-:root[tabsintitlebar] #titlebar:not(:-moz-window-inactive) .titlebar-button:not([disabled]):active,
-:root[tabsintitlebar][inFullscreen] #window-controls:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
-	background: var(--gnome-button-active-close-background) !important;
+:root[tabsintitlebar] #titlebar .titlebar-button:not([disabled]):active,
+:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton:not([disabled]):active {
+	background: var(--gnome-button-active-background) !important;
 }
 
-:root[tabsintitlebar] #titlebar .titlebar-button:where(:hover):not(:hover) {
-	background: var(--gnome-button-hover-close-background) !important;
+:root[tabsintitlebar] #titlebar .titlebar-button:-moz-window-inactive,
+:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton:-moz-window-inactive {
+	filter: opacity(0.5);
 }
 
 /* OPTIONAL: Allow draging the window from headerbar buttons */

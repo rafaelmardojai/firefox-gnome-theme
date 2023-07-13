@@ -8,8 +8,8 @@
 richlistbox#items {
 	--in-content-item-selected: var(--gnome-accent-bg) !important;
 	--in-content-item-selected-text: #fff !important;
-	background: var(--gnome-menu-background) !important;
-	border: 1px solid var(--gnome-button-border-color) !important;
+	background: var(--gnome-card-background) !important;
+	border: 0 !important;
 	border-radius: 12px !important;
 	padding: 0 !important;
 	overflow: hidden;
@@ -29,12 +29,12 @@ richlistbox#items richlistitem {
 }
 .permission-popup-permission-list-anchor:not(:last-child),
 richlistbox#items richlistitem:not(:last-child) {
-	border-bottom: 1px solid var(--gnome-menu-separator-color);
+	border-bottom: 1px solid var(--gnome-card-shade-color);
 }
 
 /* Fix list buttons on selected state */
 @media (prefers-color-scheme: light) {
-	richlistbox#items richlistitem[selected=true] button:not(:hover) {
+	richlistbox#items richlistitem[selected=true] button {
 		filter: invert() brightness(200%) !important;
 	}
 }

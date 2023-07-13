@@ -12,7 +12,7 @@
 	display: none !important;
 }
 #protections-popup-tp-switch {
-	background: var(--gnome-switch-background) !important;
+	background: var(--gnome-trough-background) !important;
 	border: 0 !important;
 	border-radius: 24px !important;
 	min-width: 48px !important;
@@ -23,11 +23,14 @@
 	display: block !important;
 	margin: 0 !important;
 }
+#protections-popup-tp-switch:hover {
+	background-image: var(--gnome-trough-hover-background) !important;
+}
 #protections-popup-tp-switch::before {
 	position: absolute !important;
 	top: 2px;
 	left: 2px;
-	background: var(--gnome-switch-slider-background) !important;
+	background: #fff !important;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 	border: 0 !important;
 	border-radius: 24px !important;
@@ -37,10 +40,10 @@
 	outline: 0 !important;
 }
 #protections-popup-tp-switch[enabled] {
-	background: var(--gnome-switch-active-background) !important;
+	background: var(--gnome-accent-bg) !important;
 	padding-inline-start: 24px !important;
 }
 #protections-popup-tp-switch[enabled]::before {
-	background: var(--gnome-switch-active-slider-background) !important;
+	background: #fff !important;
 	left: 24px;
 }

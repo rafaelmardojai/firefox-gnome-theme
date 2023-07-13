@@ -28,7 +28,7 @@ window {
 }
 
 window[role="dialog"] {
-	background: var(--gnome-toolbar-background) !important;
+	background: var(--gnome-window-background) !important;
 	border: 0 !important;
 	box-shadow: var(--gnome-menu-shadow) !important;
 	padding: 0 !important;

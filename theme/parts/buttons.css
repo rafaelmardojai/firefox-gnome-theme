@@ -179,7 +179,7 @@ button.close:hover,
 #item-choose button:hover,
 .unified-extensions-item-menu-button:hover {
 	outline: 0 !important;
-	background: var(--gnome-button-flat-hover-background) !important;
+	background: var(--gnome-hover-color) !important;
 }
 
 /* Active buttons */
@@ -219,7 +219,7 @@ button.close:active,
 .permission-popup-permission-remove-button:active,
 #item-choose button:active,
 .unified-extensions-item-menu-button:active {
-	background: var(--gnome-button-flat-active-background) !important;
+	background: var(--gnome-active-color) !important;
 }
 
 /* Disabled buttons */
@@ -228,17 +228,6 @@ button.close:active,
 #context-navigation menuitem[disabled="true"],
 .dialog-button-box button[disabled="true"] {
 	opacity: .5 !important;
-}
-
-/* Inactive window buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):-moz-window-inactive,
-.findbar-container toolbarbutton:-moz-window-inactive,
-#sidebar-switcher-target:-moz-window-inactive,
-#viewButton:-moz-window-inactive,
-.notification-button:-moz-window-inactive {
-	background: var(--gnome-inactive-button-background) !important;
-	box-shadow: var(--gnome-inactive-button-box-shadow) !important;
-	border-color: var(--gnome-inactive-button-border-color) !important;
 }
 
 /* Circle buttons */

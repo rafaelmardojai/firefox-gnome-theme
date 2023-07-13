@@ -60,7 +60,7 @@ button.close::before,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon:-moz-window-inactive,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon:-moz-window-inactive,
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
-	fill: var(--gnome-inactive-toolbar-icon-fill) !important;
+	fill-opacity: 0.5 !important;
 }
 
 /* Dimmed icons */

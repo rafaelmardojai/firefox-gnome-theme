@@ -2,12 +2,19 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-#sidebar-box, .sidebar-panel {
-	background: var(--gnome-sidebar-background) !important;
+#sidebar-header {
+	background: var(--gnome-toolbar-background) !important;
+	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+	padding: 6px !important;
 }
-#sidebar-box:-moz-window-inactive, .sidebar-panel:-moz-window-inactive {
-	background: var(--gnome-inactive-sidebar-background) !important;
+#sidebar-search-container {
+	padding: 6px !important;
 }
+
+#sidebar {
+	background: var(--gnome-window-background) !important;
+}
+
 #sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
 .sidebar-panel:-moz-window-inactive label, .sidebar-panel:-moz-window-inactive image,
 .sidebar-placesTreechildren:-moz-window-inactive {
@@ -16,19 +23,9 @@
 #sidebar-splitter {
 	background: var(--gnome-toolbar-background) !important;
 	border: 0 !important;
-	border-right: 1px solid var(--gnome-toolbar-border-color) !important;
+	border-right: 1px solid var(--gnome-border-color) !important;
 	width: 0 !important;
 }
-#sidebar-splitter:-moz-window-inactive {
-	background: var(--gnome-inactive-toolbar-background) !important;
-	border-color: var(--gnome-inactive-toolbar-border-color) !important;
-}
 
-#sidebar-header {
-	padding: 6px !important;
-	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
-}
-#sidebar-search-container {
-	padding: 6px !important;
-}
+
 

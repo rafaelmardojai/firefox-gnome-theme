@@ -55,7 +55,7 @@ panel[type=arrow] {
 /* Style popovers */
 panel:not([remote]) {
 	--arrowpanel-background: var(--gnome-menu-background) !important;
-	--panel-item-hover-bgcolor: var(--gnome-menu-button-hover-background) !important;
+	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
 }
 panel  {
 	--arrowpanel-padding: 0 !important;
@@ -225,7 +225,7 @@ menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
 .identity-popup-content-blocking-category:not([disabled="true"]):hover,
 #PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
 #downloadsPanel-mainView .download-state:hover {
-	background: var(--gnome-menu-button-hover-background) !important;
+	background: var(--gnome-selected-color) !important;
 }
 
 /* Menu buttons fix */
