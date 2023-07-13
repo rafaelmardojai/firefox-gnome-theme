@@ -157,6 +157,12 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 .tabbrowser-tab:hover ~ .tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab:not([hidden="true"]) {
 	border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
 }
+.tabbrowser-tab:hover ~ .tabbrowser-tab[selected] ~ .tabbrowser-tab:not([hidden="true"]) {
+	border-image: none !important;
+}
+.tabbrowser-tab:hover ~ .tabbrowser-tab[selected] ~ .tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab:not([hidden="true"]) {
+	border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
+}
 
 /* Tab labels */
 tab {
