@@ -116,7 +116,7 @@
 
 	/* Tabs */
 	--gnome-tabbar-background: var(--gnome-headerbar-background);
-	--gnome-tabbar-tab-separator-color: var(--gnome-headerbar-shade-color);
+	--gnome-tabbar-tab-separator-color: var(--gnome-border-color);
 	--gnome-tabbar-tab-hover-background: #dedede; /* Hardcoded color */
 	--gnome-tabbar-tab-active-background: #d9d9d9; /* Hardcoded color */
 	--gnome-tabbar-tab-active-background-contrast: #c0c0c0; /* Hardcoded color */
