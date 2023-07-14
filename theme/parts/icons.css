@@ -46,6 +46,7 @@ button.close::before,
 #permissions-granted-icon,
 #downloads-indicator-icon,
 .textbox-search-clear,
+.urlbarView-type-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon,
@@ -363,7 +364,7 @@ button.close::before {
 }
 /* Preferences button */
 #preferences-button,
-.search-setting-button-compact > .button-box > .button-icon,
+.search-setting-button > .button-box > .button-icon,
 .unified-extensions-item-menu-button.subviewbutton {
 	list-style-image: url("../icons/settings-symbolic.svg") !important;
 }

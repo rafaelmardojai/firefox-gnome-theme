@@ -75,12 +75,22 @@ toolbarspring {
 	border-radius: 5px !important;
 }
 
-.urlbarView-row[selected] .urlbarView-row-inner {
-	background: var(--gnome-accent-bg) !important;
-	color: white !important;
+.urlbarView-row[selected] {
+	background: var(--gnome-selected-color) !important;
+	color: var(--gnome-window-color) !important;
 }
-.urlbarView-row:not([selected]):hover .urlbarView-row-inner {
-	background: var(--gnome-menu-button-hover-background) !important;
+.urlbarView-row[selected]:hover {
+	background: var(--gnome-selected-hover-color) !important;
+}
+.urlbarView-row:not([selected]):hover {
+	background: var(--gnome-hover-color) !important;
+}
+.urlbarView-row:not([selected]):active {
+	background: var(--gnome-active-color) !important;
+}
+
+.urlbarView-url {
+	color: var(--gnome-accent) !important;
 }
 
 .urlbarView-action {
