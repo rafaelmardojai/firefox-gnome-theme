@@ -1,6 +1,12 @@
 /* Buttons Issues/Glitches fixes */
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Remove the header bar buttons' hover styles */
+#nav-bar {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
+
 /* Fix notification dropmarker */
 .popup-notification-dropmarker dropmarker {
 	display: none !important;
