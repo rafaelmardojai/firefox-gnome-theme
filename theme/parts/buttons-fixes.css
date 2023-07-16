@@ -18,7 +18,7 @@
 }
 
 /* Fix hover background */
-.toolbarbutton-badge-stack:not(#hack), .toolbarbutton-icon:not(#hack), .toolbarbutton-text:not(#hack) {
+#appMenu-fullscreen-button2 > .toolbarbutton-icon {
 	background: transparent !important;
 }
 

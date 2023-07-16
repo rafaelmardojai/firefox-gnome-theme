@@ -3,7 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Icons color */
-.toolbarbutton-icon,
+.toolbarbutton-icon:not([class*="identity-color-"] .toolbarbutton-icon),
 menuitem:not([class*='identity']) .menu-iconic-left .menu-iconic-icon,
 .urlbar-page-action:not([readeractive]),
 .urlbar-icon,
