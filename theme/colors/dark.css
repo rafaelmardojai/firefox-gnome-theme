@@ -37,6 +37,12 @@
 		--gnome-tabbar-tab-active-background-contrast: #4F4F4F; /* Hardcoded color */
 		--gnome-tabbar-tab-active-hover-background: #4b4b4b; /* Hardcoded color */
 		
+		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
+		--gnome-tabbar-identity-color-yellow: var(--gnome-palette-yellow-2);
+		--gnome-tabbar-identity-color-orange: var(--gnome-palette-orange-3);
+		--gnome-tabbar-identity-color-red: var(--gnome-palette-red-1);
+		--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-1);
+		
 		/* Text color for Firefox Logo in new private tab */
 		--gnome-private-wordmark: #FBFBFE;
 		/* New private tab background */

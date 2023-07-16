@@ -122,6 +122,15 @@
 	--gnome-tabbar-tab-active-background-contrast: #c0c0c0; /* Hardcoded color */
 	--gnome-tabbar-tab-active-hover-background: #d2d2d2; /* Hardcoded color */
 	--gnome-tabbar-tab-needs-attetion: var(--gnome-accent);
+	
+	--gnome-tabbar-identity-color-blue: var(--gnome-accent);
+	--gnome-tabbar-identity-color-turquoise: #00c79a;
+	--gnome-tabbar-identity-color-green: var(--gnome-palette-green-5);
+	--gnome-tabbar-identity-color-yellow: #ae7b03;
+	--gnome-tabbar-identity-color-orange: var(--gnome-palette-orange-4);
+	--gnome-tabbar-identity-color-red: var(--gnome-palette-red-3);
+	--gnome-tabbar-identity-color-pink: #ff4b84;
+	--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-4);
 		
 	/* Text color for Firefox Logo in new private tab */
 	--gnome-private-wordmark: #20123A;

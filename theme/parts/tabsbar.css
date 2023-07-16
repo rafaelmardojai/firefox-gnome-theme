@@ -397,14 +397,47 @@ tab {
 	display: none !important;
 }
 
-/* Remove container bottom line indicator */
+/* Tba containers */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	display: none;
 }
-
-/* Create new container tab indicator */
 .tabbrowser-tab[class*="identity-color-"] .tab-label-container {
 	color: var(--identity-tab-color) !important;
+	font-weight: bold !important;
+}
+.identity-color-blue,
+.identity-color-turquoise,
+.identity-color-green,
+.identity-color-yellow,
+.identity-color-orange,
+.identity-color-red,
+.identity-color-pink,
+.identity-color-purple {
+	--identity-icon-color: var(--identity-tab-color) !important;
+}
+.identity-color-blue {
+  --identity-tab-color: var(--gnome-tabbar-identity-color-blue)  !important;
+}
+.identity-color-turquoise {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-turquoise) !important;
+}
+.identity-color-green {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-green) !important;
+}
+.identity-color-yellow {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-yellow) !important;
+}
+.identity-color-orange {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-orange) !important;
+}
+.identity-color-red {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-red) !important;
+}
+.identity-color-pink {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-pink) !important;
+}
+.identity-color-purple {
+	--identity-tab-color: var(--gnome-tabbar-identity-color-purple) !important;
 }
 
 /* Needs attetion tab indicator */
