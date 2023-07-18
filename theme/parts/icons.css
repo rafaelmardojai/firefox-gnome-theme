@@ -137,7 +137,7 @@ arrowscrollbox[orient="horizontal"] {
 .widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after,
 .protections-popup-category::after,
-.subviewbutton-back,
+.subviewbutton-back .toolbarbutton-icon,
 .menu-right {
 	fill-opacity: 1 !important;
 	opacity: .3;
@@ -260,7 +260,7 @@ menuitem[type="radio"][checked="true"] {
 }
 menuitem[type="radio"] .menu-iconic-icon {
 	border-radius: 100%;
-	border: 1px solid var(--gnome-inactive-toolbar-icon-fill);
+	border: 1px solid var(--gnome-toolbar-icon-fill);
 }
 menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	opacity: 0.5;

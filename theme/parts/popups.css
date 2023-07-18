@@ -244,7 +244,7 @@ menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
 	-moz-box-pack: start !important;
 }
 .subviewbutton-back + h1 {
-	font-weight: bold !important;
+	font-weight: normal !important;
 	left: 0 !important;
 	padding: 0 !important;
 	pointer-events: none;
