@@ -582,7 +582,7 @@ tab {
 	}
 	
 	/* Force displaying controls in tab-bar */
-	:root[tabsintitlebar] #TabsToolbar .titlebar-buttonbox-container:not(#hack) {
+	:root[tabsintitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container:not(#hack) {
 		display: flex !important;
 		position: static !important;
 		visibility: visible !important;
