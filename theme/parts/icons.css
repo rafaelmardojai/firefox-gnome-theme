@@ -77,7 +77,8 @@ button.close::before,
 
 /* Fix icons sizes */
 .permission-popup-permission-remove-button > .button-box > .button-icon,
-.menu-iconic-icon {
+.menu-iconic-icon,
+link[href="chrome://global/skin/dropmarker.css"] + image {
 	height: 16px !important;
 	width: 16px !important;
 }
@@ -188,10 +189,7 @@ arrowscrollbox[orient="horizontal"] {
 
 /* Arrow up buttons */
 .expander-up > .button-box {
-	-moz-appearance: none !important;
 	list-style-image: url("../icons/pan-up-symbolic.svg") !important;
-	width: 16px !important;
-	height: 16px !important;
 }
 
 /* Search entries */
@@ -264,6 +262,11 @@ menuitem[type="radio"] .menu-iconic-icon {
 }
 menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	opacity: 0.5;
+}
+
+/* Dropmarker */
+link[href="chrome://global/skin/dropmarker.css"] + image {
+	 list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
 
 /* Close button */
