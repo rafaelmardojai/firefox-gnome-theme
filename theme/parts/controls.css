@@ -3,6 +3,49 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Checkbox */
+checkbox:not(.treenode-checkbox) > .checkbox-check {
+	border: 0 !important;
+	border-radius: 6px !important;
+	color: var(--gnome-window-color) !important;
+	height: 20px !important;
+	width: 20px !important;
+}
+checkbox:not(.treenode-checkbox) > .checkbox-check:not([checked]) {
+	background-color: transparent !important;
+	box-shadow: inset 0 0 0 2px var(--gnome-trough-background);
+}
+checkbox:not(.treenode-checkbox) > .checkbox-check:not([checked]):hover {
+	box-shadow: inset 0 0 0 2px var(--gnome-trough-hover-background);
+}
+checkbox:not(.treenode-checkbox) > .checkbox-check[checked] {
+	background-color: var(--gnome-accent-bg) !important;
+	background-image: url("../icons/select-symbolic.svg") !important;
+	background-size: 14px !important;
+	fill: white !important;
+}
+
+/* Radio */
+radio > .radio-check {
+	border: 0 !important;
+	color: var(--gnome-window-color) !important;
+	height: 20px !important;
+	padding: 3px !important;
+	width: 20px !important;
+}
+radio > .radio-check:not([selected]) {
+	background-color: transparent !important;
+	box-shadow: inset 0 0 0 2px var(--gnome-trough-background);
+}
+radio > .radio-check:not([selected]):hover {
+	box-shadow: inset 0 0 0 2px var(--gnome-trough-hover-background);
+}
+radio > .radio-check[selected] {
+	background-color: var(--gnome-accent-bg) !important;
+	list-style-image: url("../icons/bullet-symbolic.svg") !important;
+	fill: white !important;
+}
+
 /* Switchers */
 .protections-popup-tp-switch-box {
 	padding: 0 !important;
