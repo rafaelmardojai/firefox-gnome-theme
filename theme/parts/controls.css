@@ -4,6 +4,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Checkbox */
+input[type="checkbox"],
 checkbox:not(.treenode-checkbox) > .checkbox-check {
 	border: 0 !important;
 	border-radius: 6px !important;
@@ -11,13 +12,16 @@ checkbox:not(.treenode-checkbox) > .checkbox-check {
 	height: 20px !important;
 	width: 20px !important;
 }
+input[type="checkbox"]:not(:checked),
 checkbox:not(.treenode-checkbox) > .checkbox-check:not([checked]) {
 	background-color: transparent !important;
 	box-shadow: inset 0 0 0 2px var(--gnome-trough-background);
 }
+input[type="checkbox"]:not(:checked):hover,
 checkbox:not(.treenode-checkbox) > .checkbox-check:not([checked]):hover {
 	box-shadow: inset 0 0 0 2px var(--gnome-trough-hover-background);
 }
+input[type="checkbox"]:checked,
 checkbox:not(.treenode-checkbox) > .checkbox-check[checked] {
 	background-color: var(--gnome-accent-bg) !important;
 	background-image: url("../icons/select-symbolic.svg") !important;
