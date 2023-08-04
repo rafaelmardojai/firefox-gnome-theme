@@ -13,7 +13,7 @@
 This theme follows latest GNOME Adwaita style.
 
 > ### Disclaimer:
-> Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is repoducible in vanilla Firefox.
+> Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is reproducible in vanilla Firefox.
 >
 > If you are a software distribution maintainer, please do not ship this changes by default to your users unless you made extremely clear that they are using a modified version of Firefox UI.
 
@@ -29,11 +29,11 @@ Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnom
 
 ### Firefox versions support
 
-The `master` branch of this repo supports the current Firefox stable release `115`.
+The `master` branch of this repo supports the current Firefox stable release `116`.
 
-Theme versions complatible with older Firefox releases are preserved as git tags.
+Theme versions compatible with older Firefox releases are preserved as git tags.
 
-We also have the `beta` branch for fixes only aplicable to the current Firefox beta version.
+We also have the `beta` branch for fixes only applicable to the current Firefox beta version.
 
 
 ## Installation
