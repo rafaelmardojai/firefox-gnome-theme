@@ -28,7 +28,7 @@ window {
 }
 
 window[role="dialog"] {
-	background: var(--gnome-window-background) !important;
+	background: var(--gnome-menu-background) !important;
 	border: 0 !important;
 	box-shadow: var(--gnome-menu-shadow) !important;
 	padding: 0 !important;
@@ -58,8 +58,11 @@ dialog#handling {
 
 /* Buttons */
 .dialog-button-box {
+	background: transparent !important;
+	border-top: 1px solid var(--gnome-border-color) !important;
 	display: flex !important;
 	margin-top: auto;
+	padding: 0 !important;
 }
 
 .dialog-button-box .button-spacer {
@@ -76,13 +79,12 @@ dialog#handling {
 	border-bottom: 0 !important;
 }
 
-/* Buttons borders - only suppor for cancel/ok */
-.dialog-button-box button[dlgtype="accept"] {
-	border-right: 0 !important;
-	border-left: 0 !important;
+.dialog-button-box button:not(:last-child, :only-child) {
+	border-right: 1px solid var(--gnome-border-color) !important;
 }
-.dialog-button-box button[dlgtype="cancel"]:not(#hack) {
-	border-left: 0 !important;
+
+.dialog-button-box button[default] {
+	color: var(--gnome-accent) !important;
 }
 
 /* Hadler dialog */
