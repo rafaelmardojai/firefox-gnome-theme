@@ -48,6 +48,7 @@ findbar:-moz-window-inactive description,
 }
 #PersonalToolbar {
 	padding: 2px !important;
+	--bookmarks-toolbar-overlapping-browser-height: auto;
 }
 
 /* Overrides: Remove border below the menu bar / above the header bar */
