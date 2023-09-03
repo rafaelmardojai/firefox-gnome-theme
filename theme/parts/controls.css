@@ -6,6 +6,7 @@
 /* Checkbox */
 input[type="checkbox"],
 checkbox:not(.treenode-checkbox) > .checkbox-check {
+	appearance: none !important;
 	border: 0 !important;
 	border-radius: 6px !important;
 	color: var(--gnome-window-color) !important;
@@ -29,9 +30,15 @@ checkbox:not(.treenode-checkbox) > .checkbox-check[checked] {
 	fill: white !important;
 }
 
+.checkbox-label {
+	margin-inline-start: 6px !important;
+}
+
 /* Radio */
 radio > .radio-check {
+	appearance: none !important;
 	border: 0 !important;
+	border-radius: 50% !important;
 	color: var(--gnome-window-color) !important;
 	height: 20px !important;
 	padding: 3px !important;
@@ -48,6 +55,10 @@ radio > .radio-check[selected] {
 	background-color: var(--gnome-accent-bg) !important;
 	list-style-image: url("../icons/bullet-symbolic.svg") !important;
 	fill: white !important;
+}
+
+.radio-label {
+	margin-inline-start: 6px !important;
 }
 
 /* Switchers */
