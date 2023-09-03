@@ -58,7 +58,7 @@
 	--gnome-accent: var(--gnome-palette-blue-4);
 
 	--gnome-selection-bg: color-mix(in srgb, var(--gnome-accent-bg) 30%, transparent);
-	--gnome-toolbar-star-button: #ae7b03;
+	--gnome-toolbar-star-button: var(--gnome-palette-yellow-5);
 	
 	/* Window */
 	--gnome-window-background: #fafafa;

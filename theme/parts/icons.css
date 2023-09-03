@@ -56,6 +56,8 @@ radio > .radio-check,
 	fill: var(--gnome-toolbar-icon-fill) !important;
 	-moz-context-properties: fill, fill-opacity;
 }
+.urlbar-icon:-moz-window-inactive,
+#urlbar:-moz-window-inactive image,
 .toolbarbutton-icon:-moz-window-inactive,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close:-moz-window-inactive .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon:-moz-window-inactive,
