@@ -12,6 +12,7 @@
 
 /* Buttons */
 menulist,
+.customizationmode-button,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
@@ -85,6 +86,8 @@ button.close,
 
 /* Text buttons */
 menulist,
+.customizationmode-button,
+#sidebar-switcher-target,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #appMenu-popup .panel-banner-item,
@@ -101,7 +104,7 @@ menulist,
 .button.connect-device,
 #item-choose button,
 #editBMPanel_newFolderButton {
-	padding: 2px 16px !important;
+	padding: 2px 9px !important;
 }
 .subviewbutton.panel-subview-footer label,
 .panel-footer button,
@@ -120,31 +123,9 @@ menulist,
 	text-align: center !important;
 }
 
-/* Drop down buttons */
-#sidebar-switcher-target,
-#viewButton {
-	padding: 2px 16px !important;
-	position: relative;
-}
-#sidebar-switcher-arrow,
-#viewButton .button-menu-dropmarker { /* Arrow position, type b */
-	transform: translate(6px, 0)
-}
-.menulist-label-box {
-	padding: 2px 26px 2px 16px !important;
-	position: relative;
-}
-.menulist-label-box:after { /* Arrow position */
-	position: absolute !important;
-	right: 8px !important;
-	top: 8px !important;
-}
-.menulist-label-box:after { /* Create arrow if icon tag no exist */
-	content: "";
-}
-
 /* Hover buttons */
 menulist:hover,
+.customizationmode-button:hover,
 .subviewbutton.panel-subview-footer:hover,
 .panel-footer button:hover,
 #downloadsPanel-mainView .download-state .downloadButton:hover,
@@ -185,6 +166,7 @@ button.close:hover,
 
 /* Active buttons */
 menulist[open],
+.customizationmode-button:is([open], :active),
 .subviewbutton.panel-subview-footer:active,
 .panel-footer button:active,
 #downloadsPanel-mainView .download-state .downloadButton:active,

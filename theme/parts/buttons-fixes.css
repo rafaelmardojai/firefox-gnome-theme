@@ -4,6 +4,13 @@
 /* Menulist */
 link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 	align-items: center !important;
+	justify-content: center !important;
+}
+
+.button-menu-dropmarker {
+	appearance: none !important;
+	margin: 0 !important;
+	margin-inline-start: 6px !important;
 }
 
 /* Remove the header bar buttons' hover styles */

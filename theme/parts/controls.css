@@ -30,10 +30,6 @@ checkbox:not(.treenode-checkbox) > .checkbox-check[checked] {
 	fill: white !important;
 }
 
-.checkbox-label {
-	margin-inline-start: 6px !important;
-}
-
 /* Radio */
 radio > .radio-check {
 	appearance: none !important;
@@ -58,7 +54,7 @@ radio > .radio-check[selected] {
 }
 
 .radio-label {
-	margin-inline-start: 6px !important;
+	margin-inline-start: 3px !important;
 }
 
 /* Switchers */
