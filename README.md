@@ -33,8 +33,7 @@ The `master` branch of this repo supports the current Firefox stable release `11
 
 Theme versions compatible with older Firefox releases are preserved as git tags.
 
-We also have the `beta` branch for fixes only applicable to the current Firefox beta version.
-
+We also have the `beta` and `nightly` branches for fixes only applicable to the current Firefox beta and nightly versions.
 
 ## Installation
 
