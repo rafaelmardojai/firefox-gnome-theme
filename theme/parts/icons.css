@@ -55,7 +55,7 @@ link[href="chrome://global/skin/dropmarker.css"] + image,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
 	fill: var(--gnome-toolbar-icon-fill) !important;
-	-moz-context-properties: fill, fill-opacity;
+	-moz-context-properties: fill;
 }
 .urlbar-icon:-moz-window-inactive,
 #urlbar:-moz-window-inactive image,
@@ -65,7 +65,7 @@ link[href="chrome://global/skin/dropmarker.css"] + image,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon:-moz-window-inactive,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon:-moz-window-inactive,
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
-	fill-opacity: 0.5 !important;
+	opacity: 0.5 !important;
 }
 
 /* Dimmed icons */
