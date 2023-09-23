@@ -41,7 +41,7 @@ We also have the `beta` and `nightly` branches for fixes only applicable to the 
 1. Clone this repo and enter folder:
 
 	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme && cd firefox-gnome-theme
+	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git && cd firefox-gnome-theme
 	```
 2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step.
 	```sh
