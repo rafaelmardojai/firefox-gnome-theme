@@ -268,7 +268,7 @@
 	background: var(--gnome-menu-background);
 	border: 1px solid var(--gnome-button-border-color) !important;
 	border-radius: 9px;
-	padding: 12px 8px !important;
+	padding: 12px 0 !important;
 	margin: 0 !important;
 }
 
