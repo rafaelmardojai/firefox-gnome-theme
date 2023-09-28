@@ -339,3 +339,11 @@
 	background-color: #fff !important;
 }
 
+/* Translate */
+#translations-panel-translate:not(:only-child, #hack) {
+	margin: 0 !important;
+}
+
+#translations-panel-lang-selection > label {
+	margin-top: var(--gnome-menu-padding) !important;
+}
