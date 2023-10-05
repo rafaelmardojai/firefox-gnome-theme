@@ -333,11 +333,11 @@ tab {
 .tabbrowser-tab:not([pinned]) .tab-content::before {
 	border-radius: 0 6px 6px 0;
 	content: "";
-	height: 100%;
+	height: calc(100% - 4px);
 	opacity: 0;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 2px;
+	top: 2px;
 	transition: 0.2s;
 	width: 55px;
 }
