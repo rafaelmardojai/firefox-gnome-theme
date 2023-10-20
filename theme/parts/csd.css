@@ -160,7 +160,7 @@
 }
 
 /* OPTIONAL: Allow draging the window from headerbar buttons */
-@supports -moz-bool-pref("gnomeTheme.dragWindowHeaderbarButtons") {
+@media (-moz-bool-pref: "gnomeTheme.dragWindowHeaderbarButtons") {
 	:root[tabsintitlebar] #nav-bar *,
 	:root[tabsintitlebar] #titlebar .titlebar-button,
 	:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {

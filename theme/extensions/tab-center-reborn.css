@@ -1,4 +1,4 @@
-@supports -moz-bool-pref("gnomeTheme.extensions.tabCenterReborn") {
+@media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn") {
     :root {
         --delay: 0s;
         --transition-time: 0.2s;
@@ -137,7 +137,7 @@
     }
 }
 
-@supports -moz-bool-pref("gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
+@media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
     #sidebar-box[sidebarcommand*="tabcenter"] #sidebar,
     #sidebar-box[sidebarcommand*="tabcenter"] {
         min-width: 10vw !important;

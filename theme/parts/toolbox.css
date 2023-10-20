@@ -152,14 +152,14 @@ findbar:-moz-window-inactive description,
 }
 
 /* OPTIONAL: Hide WebRTC indicator */
-@supports -moz-bool-pref("gnomeTheme.hideWebrtcIndicator") {
+@media (-moz-bool-pref: "gnomeTheme.hideWebrtcIndicator") {
 	#webrtcIndicator {
 		display: none;
 	}
 }
 
 /* OPTIONAL: Move Bookmarks toolbar under tabs */
-@supports -moz-bool-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
+@media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
 	#navigator-toolbox #titlebar {
 		order: 2 !important;
 	}
