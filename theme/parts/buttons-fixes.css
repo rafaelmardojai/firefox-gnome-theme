@@ -253,7 +253,7 @@ button.close {
 }
 
 /* OPTIONAL: Hide unified-extensions-button */
-@supports -moz-bool-pref("gnomeTheme.hideUnifiedExtensions") {
+@media (-moz-bool-pref: "gnomeTheme.hideUnifiedExtensions") {
 	#unified-extensions-button {
 		display: none;
 	}

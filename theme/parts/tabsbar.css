@@ -514,7 +514,7 @@ tab {
 }
 
 /* OPTIONAL: Hide single tab */
-@supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
+@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs tab:only-of-type,
 	#tabbrowser-tabs tab:only-of-type ~ toolbarbutton,
 	#tabbrowser-tabs tab:only-of-type ~ #tabbrowser-arrowscrollbox-periphery {
@@ -523,7 +523,7 @@ tab {
 }
 
 /* OPTIONAL: Use normal width tabs */
-@supports -moz-bool-pref("gnomeTheme.normalWidthTabs") {
+@media (-moz-bool-pref: "gnomeTheme.normalWidthTabs") {
 	.tabbrowser-tab:not([style^="max-width"]):not([pinned]),
 	.tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
 		max-width: 225px !important;
@@ -532,7 +532,7 @@ tab {
 }
 
 /* OPTIONAL: Add more contrast to the active tab */
-@supports -moz-bool-pref("gnomeTheme.activeTabContrast") {
+@media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
 	.tab-background[selected=true]:not(#hack),
 	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
@@ -544,7 +544,7 @@ tab {
 }
 
 /* OPTIONAL: Show the close button on the selected tab only */
-@supports -moz-bool-pref("gnomeTheme.closeOnlySelectedTabs") {
+@media (-moz-bool-pref: "gnomeTheme.closeOnlySelectedTabs") {
 	/* Hide the close buttons on hover */
 	.tabbrowser-tab:not([selected="true"]):hover .tab-close-button {
 		visibility: hidden !important;
@@ -561,7 +561,7 @@ tab {
 }
 
 /* OPTIONAL: Use tabs as headerbar */
-@supports -moz-bool-pref("gnomeTheme.tabsAsHeaderbar") {
+@media (-moz-bool-pref: "gnomeTheme.tabsAsHeaderbar") {
 	/* Rearrange bars */
 	#navigator-toolbox #titlebar {
 		order: 0;
@@ -579,7 +579,7 @@ tab {
 		order: 4;
 	}
 
-	@supports -moz-bool-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
+	@media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
 		#navigator-toolbox #PersonalToolbar {
 			order: 2 !important;
 		}
@@ -616,7 +616,7 @@ tab {
 	}
 	
 	/* Blend single tab into whole bar */
-	@supports -moz-bool-pref("gnomeTheme.hideSingleTab") {
+	@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
 		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]),
 		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ toolbarbutton,
 		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ #tabbrowser-arrowscrollbox-periphery {
@@ -639,7 +639,7 @@ tab {
 			margin-right: -16px;
 		}
 		/* Override normal width tabs */
-		@supports -moz-bool-pref("gnomeTheme.normalWidthTabs") {
+		@media (-moz-bool-pref: "gnomeTheme.normalWidthTabs") {
 			#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]):not([style^="max-width"]),
 			#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"][style^="max-width: 100px !important;"]:not([pinned]) {
 				max-width: 100% !important;
