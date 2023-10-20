@@ -13,7 +13,7 @@
 }
 
 /* OPTIONAL: Use system theme icons instead of Adwaita icons included by theme */
-@supports -moz-bool-pref("gnomeTheme.systemIcons") {
+@media (-moz-bool-pref: "gnomeTheme.systemIcons") {
 	
 	/* Window buttons */
 	:root[tabsintitlebar] #titlebar .titlebar-button .toolbarbutton-icon,
