@@ -183,7 +183,7 @@ tab {
 	box-shadow: none !important;
 	margin-block: 0 !important;
 	border: 0 !important;
-	transition: background 0.2s !important;
+	transition: background 0.2s linear !important;
 }
 
 /* Center all inside tab */
@@ -338,7 +338,7 @@ tab {
 	position: absolute;
 	right: 2px;
 	top: 2px;
-	transition: background 0.2s;
+	transition: background 0.4s linear;
 	width: 55px;
 }
 .tabbrowser-tab:not([pinned]) .tab-content::before {
