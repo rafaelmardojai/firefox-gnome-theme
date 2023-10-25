@@ -278,7 +278,7 @@ tab {
 }
 
 /* Icon overlay smaller */
-.tab-icon-overlay[pinned], .tab-icon-overlay:not([indicator-replaces-favicon="true"], [selected]) {
+.tab-icon-overlay[pinned], .tab-icon-overlay:not([indicator-replaces-favicon], [selected]) {
 	width: 12px !important;
 	height: 12px !important;
 	padding: 2px !important;
