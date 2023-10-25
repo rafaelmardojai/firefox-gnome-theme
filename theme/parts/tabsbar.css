@@ -473,7 +473,7 @@ tab {
 #alltabs-button {
 	visibility: collapse;
 }
-#tabbrowser-tabs[overflow="true"] ~ #alltabs-button {
+#tabbrowser-tabs[overflow] ~ #alltabs-button {
 	visibility: visible;
 }
 
