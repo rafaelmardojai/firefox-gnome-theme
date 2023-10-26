@@ -102,7 +102,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	display: block;
 	width: 200%;
 	background: var(--gnome-toolbar-background);
-	border-bottom: 1px solid var(--gnome-toolbar-border-color);
 	height: 0;
 	min-height: 0;
 	position: absolute;
@@ -114,7 +113,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Tab */
 .tabbrowser-tab {
 	border-width: 0 !important;
-	padding: 5px 2px 6px !important;
+	padding: 0px 2px 6px !important;
 	position: relative;
 }
 .tabbrowser-tab:not([hidden=true], [pinned]):first-of-type {
@@ -584,7 +583,12 @@ tab {
 			order: 2 !important;
 		}
 	}
-	
+
+	/* Padding should be removed on the side touching the URL bar */
+	.tabbrowser-tab {
+		padding-bottom: 0px !important;
+	}
+
 	/* Remove nav-bar rounding and padding */
 	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar { 
 		border-radius: 0 !important; 
@@ -600,6 +604,7 @@ tab {
 		border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important
 	}
 	:root[tabsintitlebar]:not([inFullscreen], [sizemode="maximized"]) #TabsToolbar .toolbar-items {
+		margin-block: auto;
 		padding: 0 46px;
 	}
 	

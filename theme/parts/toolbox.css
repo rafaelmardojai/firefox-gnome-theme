@@ -9,17 +9,14 @@
 
 /* Toolbox colors */
 #navigator-toolbox {
-	border: 0 !important;
 	background: none !important;
+	border-color: var(--gnome-toolbar-border-color);
 }
 
 #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
 	appearance: none !important;
 	border: 0 !important;
 	background: var(--gnome-toolbar-background) !important;
-}
-#nav-bar, #PersonalToolbar, #toolbar-menubar:not([inactive=true]), #TabsToolbar {
-	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 findbar {
 	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
