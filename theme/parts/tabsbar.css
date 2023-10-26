@@ -38,10 +38,15 @@ tab > stack {
 	--gnome-tabbar-fade-background: var(--gnome-tabbar-background);
 }
 
+#scrollbutton-up,
+#scrollbutton-down {
+	border-top: 0 !important;
+}
+
 #scrollbutton-up:not([disabled])::after,
 #scrollbutton-down:not([disabled])::after {
 	content: "";
-	height: 44px;
+	height: 39px;
 	position: absolute;
 	top: -3px;
 	z-index: -1;
@@ -84,7 +89,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Tabsbar buttons */
 #TabsToolbar .toolbarbutton-1:not(#hack) {
 	border-radius: 6px !important;
-	margin: 5px 3px 6px !important;
+	margin: 0px 3px 6px !important;
 	padding: 0 9px !important;
 	min-height: 34px !important;
 	transition: background 0.3s;
@@ -138,11 +143,11 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	--gnome-tabbar-tab-separator-hack1: linear-gradient(
 		to bottom,
 		var(--gnome-tabbar-tab-separator-hack0) 0,
-		var(--gnome-tabbar-tab-separator-hack0) 9px,
-		var(--gnome-tabbar-tab-separator-color) 9px,
-		var(--gnome-tabbar-tab-separator-color) 35px,
-		var(--gnome-tabbar-tab-separator-hack0) 35px,
-		var(--gnome-tabbar-tab-separator-hack0) 45px
+		var(--gnome-tabbar-tab-separator-hack0) 3px,
+		var(--gnome-tabbar-tab-separator-color) 3px,
+		var(--gnome-tabbar-tab-separator-color) 31px,
+		var(--gnome-tabbar-tab-separator-hack0) 31px,
+		var(--gnome-tabbar-tab-separator-hack0) 40px
 	) 1;
 	border-image: var(--gnome-tabbar-tab-separator-hack1);
 }
