@@ -35,61 +35,91 @@ Theme versions compatible with older Firefox releases are preserved as git tags.
 
 We also have the `beta` and `nightly` branches for fixes only applicable to the current Firefox beta and nightly versions.
 
-## Installation
+## One command install with curl
 
-### Installation script
-1. Clone this repo and enter folder:
+To install this theme, you can run this command, which uses *curl* to download a script that will also download the latest released version of the theme (not the master version) and run the **auto-install** script for you.
 
-	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git && cd firefox-gnome-theme
-	```
-2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step.
-	```sh
-	git checkout beta # Set beta branch
-	git checkout v78.1 # Set v78.1 tag
-	git checkout v$(firefox --version | cut -d ' ' -f 3 | cut -d '.' -f 1) # Using Firefox version
-	```
-
-3. Run installation script
-
-	#### Auto install script
-
-	This script will lookup Firefox profiles location and enable a theme variant for your GTK theme if it exists.
-	```sh
-	./scripts/auto-install.sh
-	```
-	#### Install script
-	```sh
-	./scripts/install.sh # Standard
-	./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
-	./scripts/install.sh -f ~/snap/firefox/common/.mozilla/firefox #Snap
-	```
-
-	##### Script options
-	- `-f <firefox_folder_path>` *optional*
-		- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
-		- Default: `~/.mozilla/firefox/`
-
-	- `-p <profile_name>` *optional*
-		- Set custom profile name, for example `e0j6yb0p.default-nightly`.
-		- Default: All the profiles found in the firefox folder
-
-	- `-t <theme_name>` *optional*
-		- Set the colors used in the theme.
-		- Default: Adwaita.
-		- Options: `adwaita`, `maia`.
-
-### One command curled script
-
-You can also install this theme with one command:
+> **Warning**: Always be careful when running scripts from the Internet.
 
 ```sh
 curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
 ```
 
-It will download the latest version of the theme and run the auto installation script for you.
+## Installation scripts
 
-### Manual installation
+If you want to use other version of the theme than the stable one you can manually download the theme and run its install scripts.
+
+First you need to grab a fresh copy of the theme repository by cloning it with git.
+
+1. Clone this repo and enter folder:
+
+	```sh
+	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+	cd firefox-gnome-theme
+	```
+2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step.
+	```sh
+	git checkout beta # Set beta branch
+	git checkout v78.1 # Set v78.1 tag
+	```
+
+This theme provides two installation scripts in addition to the curled one.
+
+### Auto install script
+
+This script will look for Firefox profiles from various known locations (`~/.mozilla/firefox/`, Flatpak, Snap, etc) and install the theme in each one. 
+It will also enable a color variant for your GTK theme if it exists.
+
+You can execute it by running:
+
+```sh
+./scripts/auto-install.sh
+```
+
+### Manual install script
+
+This script will only install the theme into the profiles found in the default Firefox folder `~/.mozilla/firefox/`. The script accepts various flags to change its behavior.
+
+Here are some examples of how to use it:
+
+```sh
+./scripts/install.sh # Standard
+./scripts/install.sh -p pc8577yz.default-release # Only install in a profile named pc8577yz.default-release
+./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+./scripts/install.sh -f ~/snap/firefox/common/.mozilla/firefox #Snap
+```
+
+#### Script options
+- `-f <firefox_folder_path>` *optional*
+	- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
+	- Default: `~/.mozilla/firefox/`
+
+- `-p <profile_name>` *optional*
+	- Set custom profile name, for example `e0j6yb0p.default-nightly`.
+	- Default: All the profiles found in the firefox folder
+
+- `-t <theme_name>` *optional*
+	- Set the colors used in the theme.
+	- Default: Adwaita.
+	- Options: `adwaita`, `maia`.
+
+<details>
+    <summary>Advanced notes</summary>
+  
+### Advanced notes
+
+If you want to checkout the theme version tag matching you Firefox version you can run:
+
+```sh
+git checkout v$(firefox --version | cut -d ' ' -f 3 | cut -d '.' -f 1) # Using Firefox version
+```
+</details>
+
+<details>
+    <summary>Manual installation</summary>
+  
+## Manual installation
+
 1. Go to `about:support` in Firefox.
 
 2. Application Basics > Profile Directory > Open Directory.
@@ -98,45 +128,46 @@ It will download the latest version of the theme and run the auto installation s
 
 4. Create a `chrome` directory if it doesn't exist:
 
-	```sh
-	mkdir -p chrome
-	cd chrome
-	```
+    ```sh
+    mkdir -p chrome
+    cd chrome
+    ```
 
 5. Clone this repo to a subdirectory:
 
-	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
-	```
+    ```sh
+    git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+    ```
 
 6. Create single-line user CSS files if non-existent or empty (at least one line is needed for `sed`):
 
-	```sh
-	[[ -s userChrome.css ]] || echo >> userChrome.css
-	[[ -s userContent.css ]] || echo >> userContent.css
-	```
+    ```sh
+    [[ -s userChrome.css ]] || echo >> userChrome.css
+    [[ -s userContent.css ]] || echo >> userContent.css
+    ```
 
 7. Import this theme at the beginning of the CSS files (all `@import`s must come before any existing `@namespace` declarations):
 
-	```sh
-	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
-	sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
-	```
+    ```sh
+    sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
+    sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
+    ```
 
 8. Symlink preferences file:
 
-	```sh
-	cd .. # Go back to the profile directory
-	ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
-	```
+    ```sh
+    cd .. # Go back to the profile directory
+    ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
+    ```
 
 9. Restart Firefox.
 
 10. Open Firefox customization panel and move the new tab button to headerbar.
 
 11. Be happy with your new gnomish Firefox.
+</details>
 
-### Required Firefox preferences
+## Required Firefox preferences
 We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work.
 
 You should already have this file installed if you followed one of the installation methods, but in any case be sure this preferences are enabled under `about:config`:
