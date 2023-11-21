@@ -68,6 +68,8 @@
 	--gnome-view-selected-background: color-mix(in srgb, var(--gnome-accent-bg) 25%, transparent);
 	--gnome-view-selected-hover-background: color-mix(in srgb, var(--gnome-accent-bg) 32%, transparent);
 	--gnome-view-selected-active-background: color-mix(in srgb, var(--gnome-accent-bg) 39%, transparent);
+	--gnome-sidebar-background: #ebebeb;
+	--gnome-secondary-sidebar-background: #f3f3f3;
 	
 	/* Card */
 	--gnome-card-background: #ffffff;

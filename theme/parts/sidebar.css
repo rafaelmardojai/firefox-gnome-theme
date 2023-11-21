@@ -12,7 +12,7 @@
 }
 
 #sidebar {
-	background: var(--gnome-window-background) !important;
+	background: var(--gnome-sidebar-background) !important;
 }
 
 #sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,

@@ -16,6 +16,8 @@
 		--gnome-window-background: #242424;
 		--gnome-window-color: white;
 		--gnome-view-background: #1e1e1e;
+		--gnome-sidebar-background: #303030;
+		--gnome-secondary-sidebar-background: #2a2a2a;
 
 		/* Card */
 		--gnome-card-background: rgba(255, 255, 255, 0.08);
