@@ -190,7 +190,6 @@
 
 #permission-popup-permission-list-default-anchor:empty {
 	padding: 0 !important;
-	border: 0 !important;
 }
 .permission-popup-permission-list-anchor[anchorfor="3rdPartyStorage"] {
 	padding: 0 !important;
