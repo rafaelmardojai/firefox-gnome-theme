@@ -117,7 +117,7 @@
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-appearance: none !important;
 	padding: 0 2px !important;
-	background: var(--gnome-button-background);
+	background: var(--gnome-button-background) !important;
 	transition: background 0.3s;
 }
 
