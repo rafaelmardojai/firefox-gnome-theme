@@ -48,6 +48,10 @@ menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
 }
 
+.menu-iconic-icon {
+  padding: 0 !important;
+}
+
 /* Adjust popovers position */
 panel[type=arrow] {
 	margin-top: 8px !important;
