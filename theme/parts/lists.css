@@ -22,14 +22,25 @@ richlistbox#items {
 }
 
 /* List item */
-.permission-popup-permission-list-anchor,
+.permission-popup-permission-item,
 richlistbox#items richlistitem {
 	padding: 6px !important;
 	margin: 0 !important;
 }
-.permission-popup-permission-list-anchor:not(:last-child),
+.permission-popup-permission-list-anchor {
+	padding: 0 !important;
+}
+.permission-popup-permission-list-anchor:not(:has(.permission-popup-permission-item)) {
+	visibility: collapse;
+}
 richlistbox#items richlistitem:not(:last-child) {
 	border-bottom: 1px solid var(--gnome-card-shade-color);
+}
+.permission-popup-permission-list-anchor:not(#permission-popup-permission-list-default-anchor):has(.permission-popup-permission-item) {
+	border-top: 1px solid var(--gnome-card-shade-color);
+}
+#permission-popup-permission-list-default-anchor:empty + .permission-popup-permission-list-anchor {
+	border: 0 !important;
 }
 
 /* Fix list buttons on selected state */
