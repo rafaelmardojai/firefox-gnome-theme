@@ -211,6 +211,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	Use normal width tabs as default Firefox.
 
+- **Swap tab close button position** `gnomeTheme.swapTabClose`
+
+	By default the tab close buttons follows the position of the window controls, this preference reverts that behavior.
+
 - **Bookmarks toolbar under tabs** `gnomeTheme.bookmarksToolbarUnderTabs`
 
 	Move Bookmarks toolbar under tabs.

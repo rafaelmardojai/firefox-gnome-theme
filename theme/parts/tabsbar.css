@@ -496,7 +496,8 @@ tab {
 }
 
 /* Left close buttons */
-@media (-moz-gtk-csd-reversed-placement) {
+@media (-moz-gtk-csd-reversed-placement) and (not (-moz-bool-pref: "gnomeTheme.swapTabClose")),
+	   (-moz-bool-pref: "gnomeTheme.swapTabClose") and (not (-moz-gtk-csd-reversed-placement)) {
 	/* Reorder and fix alignment */
 	.tab-icon-stack {
 		order: 1 !important;
