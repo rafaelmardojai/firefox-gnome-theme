@@ -27,7 +27,6 @@ function saveProfile(){
 	local PROFILE_PATH="$1"
 
 	cd "$FIREFOXFOLDER/$PROFILE_PATH" || { echo "FAIL, Firefox profile path was not found."; exit 1; }
-	echo "Installing theme in $PWD" >$(tty)
 	# Create a chrome directory if it doesn't exist.
 	mkdir -p chrome
 	cd chrome || { echo "FAIL, couldn't create chrome dir in $PWD, please check if there's something else named 'chrome'."; exit 1; }
