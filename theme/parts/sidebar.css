@@ -2,6 +2,10 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+#sidebar-box {
+	background: var(--gnome-sidebar-background) !important;
+}
+
 #sidebar-header {
 	background: var(--gnome-toolbar-background) !important;
 	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
@@ -9,10 +13,6 @@
 }
 #sidebar-search-container {
 	padding: 6px !important;
-}
-
-#sidebar {
-	background: var(--gnome-sidebar-background) !important;
 }
 
 #sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
