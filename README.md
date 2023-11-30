@@ -207,6 +207,8 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** You should move the new tab button out of the tabbar or it will be hidden when there is only one tab. You can rearrange the toolbars doing a right-click on any toolbar and selecting "Customize Toolbar…".
 
+	> **Note 2:** This feature doesn't work when tabs are hidden, like when using the Simple Tab Groups extension. In this case, there's no way to tell from CSS that there's only one visible tab.
+
 - **Normal width tabs** `gnomeTheme.normalWidthTabs`
 
 	Use normal width tabs as default Firefox.
