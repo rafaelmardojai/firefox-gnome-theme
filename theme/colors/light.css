@@ -123,7 +123,7 @@
 	--gnome-tabbar-tab-active-background: #ebebeb; /* Hardcoded color */
 	--gnome-tabbar-tab-active-background-contrast: #c0c0c0; /* Hardcoded color */
 	--gnome-tabbar-tab-active-hover-background: #e4e4e4; /* Hardcoded color */
-	--gnome-tabbar-tab-needs-attetion: var(--gnome-accent);
+	--gnome-tabbar-tab-needs-attetion: var(--gnome-palette-blue-2);
 	
 	--gnome-tabbar-identity-color-blue: var(--gnome-accent);
 	--gnome-tabbar-identity-color-turquoise: #00c79a;
