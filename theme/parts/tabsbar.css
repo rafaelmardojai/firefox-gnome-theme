@@ -450,11 +450,23 @@ tab {
 }
 
 /* Needs attetion tab indicator */
-.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
-.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
-	background-image: radial-gradient(var(--gnome-tabbar-tab-needs-attetion), var(--gnome-tabbar-tab-needs-attetion) 10px) !important;
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content,
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged] {
+  background-size: 0px 0px !important;
 	background-position: center bottom !important;
-	background-size: 14px 2px !important;
+  transition-property: background-size;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]) {
+	background-image: radial-gradient(var(--gnome-tabbar-tab-needs-attetion), var(--gnome-tabbar-tab-needs-attetion) 10px) !important;
+	background-size: clamp(20%, 50%, 7rem) 2px !important;
+}
+
+.tab-label[attention]:not([selected]) {
+  font-weight: normal !important;
 }
 
 /* Tab spinner */
