@@ -21,9 +21,27 @@
 	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 0.2 !important;
 	-moz-context-properties: fill, fill-opacity;
-}
+  }
 
 /* Hide tabsbar default private browsing indicator */
 #private-browsing-indicator-with-label {
 	display: none !important;
+}
+
+/* Overlay headerbar on fullscreen */
+#navigator-toolbox[inFullscreen] {
+  position: fixed !important;
+  transition: margin 300ms ease-in-out 0s !important;
+  line-height: 0;
+  z-index: 1;
+  width: 100vw;
+}
+
+#navigator-toolbox[inFullscreen]:hover,
+#navigator-toolbox[inFullscreen]:focus-within {
+  margin-top: 0 !important;
+}
+
+#navigator-toolbox[inFullscreen] > * {
+  line-height: normal;
 }
