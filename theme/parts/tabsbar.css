@@ -38,9 +38,37 @@ tab > stack {
 	--gnome-tabbar-fade-background: var(--gnome-tabbar-background);
 }
 
+#tabbrowser-arrowscrollbox {
+  position: relative !important;
+}
+
 #scrollbutton-up,
 #scrollbutton-down {
 	border-top: 0 !important;
+	position: absolute !important;
+	z-index: 5 !important;
+  top: 0;
+  bottom: 0;
+}
+
+#scrollbutton-up[disabled],
+#scrollbutton-down[disabled] {
+  display: none;
+}
+
+#scrollbutton-up > .toolbarbutton-icon,
+#scrollbutton-down > .toolbarbutton-icon{
+  visibility: hidden;
+}
+
+#scrollbutton-down {
+  right: 0;
+  margin-right: -5px !important;
+}
+
+#scrollbutton-up {
+  left: 0;
+  margin-left: -5px !important;
 }
 
 #scrollbutton-up:not([disabled])::after,
@@ -68,11 +96,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	width: 0 !important;
 	border: 0 !important;
 	margin-inline: 0 !important;
-}
-
-#scrollbutton-up, #scrollbutton-down {
-	position: relative !important;
-	z-index: 5 !important;
 }
 
 /* Remove spacing between pinned tabs and first tab */
