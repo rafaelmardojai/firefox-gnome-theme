@@ -204,7 +204,8 @@ panelview .unified-extensions-item {
 }
 
 .subviewbutton[shortcut]:after {
-	opacity: 0.5 !important;
+ 	opacity: 0.5 !important;
+  color: var(--gnome-menu-color) !important;
 }
 
 .bookmark-item .menu-right {
