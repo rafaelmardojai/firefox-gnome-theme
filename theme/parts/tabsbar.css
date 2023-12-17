@@ -83,12 +83,12 @@ tab > stack {
 }
 
 #scrollbutton-up:not([disabled])::after {
-	background: linear-gradient(to right, var(--gnome-tabbar-fade-background) 25px, transparent);
+	background: linear-gradient(to right, var(--gnome-tabbar-fade-background) 10px, transparent);
 	left: 0;
 	
 }
 #scrollbutton-down:not([disabled])::after {
-	background: linear-gradient(to left, var(--gnome-tabbar-fade-background) 25px, transparent);
+	background: linear-gradient(to left, var(--gnome-tabbar-fade-background) 10px, transparent);
 	right: 0;
 }
 
