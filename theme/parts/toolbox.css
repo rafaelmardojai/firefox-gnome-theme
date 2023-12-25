@@ -10,7 +10,7 @@
 /* Toolbox colors */
 #navigator-toolbox {
 	background: none !important;
-	border-color: var(--gnome-toolbar-border-color);
+	border-color: var(--gnome-toolbar-border-color) !important;
 }
 
 #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
