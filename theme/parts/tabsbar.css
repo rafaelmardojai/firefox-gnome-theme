@@ -44,9 +44,9 @@ tab > stack {
 
 #scrollbutton-up,
 #scrollbutton-down {
-	border-top: 0 !important;
-	position: absolute !important;
-	z-index: 5 !important;
+  border-top: 0 !important;
+  position: relative !important;
+  z-index: 5 !important;
   top: 0;
   bottom: 0;
 }
