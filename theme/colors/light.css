@@ -85,11 +85,10 @@
 	
 	/* Header bar */
 	--gnome-headerbar-background: #ffffff;
-	--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.07);
+	--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.12);
 
 	/* Toolbars */
 	--gnome-toolbar-background: var(--gnome-headerbar-background);
-	--gnome-toolbar-color: var(--gnome-window-color);
 	--gnome-toolbar-border-color: var(--gnome-headerbar-shade-color);
 	--gnome-toolbar-icon-fill: #2f2f2f;
 	

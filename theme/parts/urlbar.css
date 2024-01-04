@@ -41,7 +41,7 @@ toolbarspring {
 /* URL bar results */
 .urlbarView {
 	background: transparent !important;
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 	margin: 11px 0 0 -3px !important;
 	width: 100% !important;
     position: absolute !important;
@@ -163,7 +163,7 @@ toolbarspring {
 	padding-right: 0 !important;
 }
 #urlbar-search-mode-indicator-title {
-	color: var(--gnome-toolbar-color);
+	color: var(--gnome-window-color);
 	padding-inline: 4px !important;
 }
 #urlbar-search-mode-indicator-close {

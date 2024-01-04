@@ -28,7 +28,7 @@
 
 		/* Header bar */
 		--gnome-headerbar-background: #303030;
-		--gnome-headerbar-shade-color: color-mix(in srgb, black 36%, transparent);
+		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
 
 		/* Toolbars */
 		--gnome-toolbar-icon-fill: #eeeeec;

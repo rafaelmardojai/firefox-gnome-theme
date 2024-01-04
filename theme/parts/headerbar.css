@@ -18,7 +18,7 @@
 	height: 46px;
 	top: 0;
 	transform: translate(15px, 0);
-	fill: var(--gnome-toolbar-color) !important;
+	fill: var(--gnome-window-color) !important;
 	fill-opacity: 0.2 !important;
 	-moz-context-properties: fill, fill-opacity;
   }

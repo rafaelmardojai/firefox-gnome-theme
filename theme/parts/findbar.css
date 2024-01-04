@@ -8,7 +8,7 @@ findbar {
 }
 
 findbar label, findbar description {
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 }
 
 .findbar-container {

@@ -9,7 +9,7 @@
 
 /* Toolbox colors */
 #navigator-toolbox {
-	background: none !important;
+	background: var(--gnome-toolbar-background) !important;
 	border-color: var(--gnome-toolbar-border-color) !important;
 }
 
