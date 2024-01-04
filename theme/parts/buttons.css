@@ -52,7 +52,7 @@ button.close,
 	max-height: 34px !important;
 	min-height: 34px !important;
 	min-width: 34px !important;
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 	outline: 0 !important;
 	font: menu !important;
 	-moz-box-align: center !important;

@@ -198,7 +198,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tab labels */
 tab {
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 	font-family: Cantarell, inherit;
 	font-weight: normal;
 	font-size: 1em;
@@ -331,7 +331,7 @@ tab {
 /* Close tab button */
 .tab-close-button {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-	fill: var(--gnome-toolbar-color) !important;
+	fill: var(--gnome-window-color) !important;
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	height: 16px !important;

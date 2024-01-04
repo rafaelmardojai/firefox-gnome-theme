@@ -223,7 +223,7 @@
 }
 
 #protections-popup-mainView-panel-header {
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 }
 #protections-popup[hasException] #protections-popup-mainView-panel-header {
 	background: none !important;
@@ -251,13 +251,13 @@
 	background-color: var(--gnome-entry-background);
 	border: 0 !important;
 	border-radius: 12px;
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 	height: 100% !important;
 	margin: 0 !important;
 }
 #protections-popup-message .text-link,
 #cfr-protections-panel-link-text {
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 }
 .whatsNew-message-body {
 	padding: 0 6px;
