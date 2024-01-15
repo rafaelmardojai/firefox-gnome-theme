@@ -29,19 +29,21 @@
 }
 
 /* Overlay headerbar on fullscreen */
-#navigator-toolbox[inFullscreen] {
-  position: fixed !important;
-  transition: margin 300ms ease-in-out 0s !important;
-  line-height: 0;
-  z-index: 1;
-  width: 100vw;
-}
+@media (-moz-bool-pref: "browser.fullscreen.autohide") {
+	#navigator-toolbox[inFullscreen] { 	
+		position: fixed !important;
+		transition: margin 300ms ease-in-out 0s !important;
+		line-height: 0;
+		z-index: 1;
+		width: 100vw;
+	}
 
-#navigator-toolbox[inFullscreen]:hover,
-#navigator-toolbox[inFullscreen]:focus-within {
-  margin-top: 0 !important;
-}
+	#navigator-toolbox[inFullscreen]:hover,
+	#navigator-toolbox[inFullscreen]:focus-within {
+		margin-top: 0 !important;
+	}
 
-#navigator-toolbox[inFullscreen] > * {
-  line-height: normal;
+	#navigator-toolbox[inFullscreen] > * {
+		line-height: normal;
+	}
 }
