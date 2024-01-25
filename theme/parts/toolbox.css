@@ -100,6 +100,9 @@ findbar:-moz-window-inactive description,
 .notificationbox-stack notification-message[style*="margin-top"] {
 	margin-top: -48px !important;
 }
+.notification-content {
+	padding-block: 0 !important;
+}
 
 .container.infobar {
 	background: var(--gnome-toolbar-background) !important;
@@ -114,6 +117,7 @@ findbar:-moz-window-inactive description,
 .container.infobar .icon {
 	height: 16px !important;
 	width: 16px !important;
+	margin: 8px 0 !important;
 }
 .notificationbox-stack notification-message[type="warning"] {
 	background: #ffe900 !important;	
