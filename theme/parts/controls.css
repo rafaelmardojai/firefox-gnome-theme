@@ -27,7 +27,10 @@ checkbox:not(.treenode-checkbox) > .checkbox-check[checked] {
 	background-color: var(--gnome-accent-bg) !important;
 	background-image: url("../icons/select-symbolic.svg") !important;
 	background-size: 14px !important;
+	background-repeat: no-repeat;
+	background-position: center;
 	fill: white !important;
+	-moz-context-properties: fill;
 }
 
 /* Radio */
@@ -51,6 +54,7 @@ radio > .radio-check[selected] {
 	background-color: var(--gnome-accent-bg) !important;
 	list-style-image: url("../icons/bullet-symbolic.svg") !important;
 	fill: white !important;
+	-moz-context-properties: fill;
 }
 
 .radio-label {
