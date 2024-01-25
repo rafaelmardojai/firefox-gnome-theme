@@ -227,7 +227,8 @@ button.close:active,
 #context-navigation menuitem:not(:last-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,
 .findbar-button:not(:last-of-type),
-.search-panel-one-offs .searchbar-engine-one-off-item:not(:last-child) {
+.search-panel-one-offs .searchbar-engine-one-off-item:not(:last-child),
+.popup-notification-secondary-button:not([dropmarkerhidden="true"]):not(#hack) {
 	border-top-right-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
 	border-right-width: 0 !important;
@@ -240,7 +241,8 @@ button.close:active,
 .findbar-container toolbarbutton.findbar-find-previous,
 .findbar-container toolbarbutton.findbar-find-next,
 .findbar-button:not(:first-of-type),
-.search-panel-one-offs .searchbar-engine-one-off-item:not(:first-child) {
+.search-panel-one-offs .searchbar-engine-one-off-item:not(:first-child),
+.popup-notification-dropmarker:not(#hack) {
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 	margin-left: 0 !important;

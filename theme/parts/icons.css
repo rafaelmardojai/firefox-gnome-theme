@@ -174,14 +174,16 @@ arrowscrollbox[orient="horizontal"] {
 /* Arrow down buttons */
 .expander-down > .button-box,
 #sidebar-switcher-arrow,
-#viewButton .button-menu-dropmarker,
-.popup-notification-dropmarker .button-icon {
+#viewButton .button-menu-dropmarker {
 	-moz-appearance: none !important;
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 }
+.popup-notification-dropmarker dropmarker {
+	-moz-appearance: none !important;
+	content: url("../icons/pan-down-symbolic.svg") !important;
+}
 #sidebar-switcher-arrow,
-#viewButton .button-menu-dropmarker,
-.popup-notification-dropmarker .button-icon {
+#viewButton .button-menu-dropmarker {
 	-moz-appearance: none !important;
 	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
 	width: 16px !important;

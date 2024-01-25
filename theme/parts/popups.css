@@ -25,6 +25,7 @@ menulist {
 	box-shadow: var(--gnome-menu-shadow) !important;
 	padding: 6px !important;
 	margin: 0 !important;
+	min-height: 60px !important;
 }
 
 menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,

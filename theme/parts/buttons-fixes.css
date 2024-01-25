@@ -21,13 +21,10 @@ link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 
 /* Fix notification dropmarker */
 .popup-notification-dropmarker dropmarker {
-	display: none !important;
+	margin-inline-start: 0 !important;
 }
 .popup-notification-dropmarker > .button-box > hbox {
 	display: -moz-box !important;
-}
-.panel-footer button.popup-notification-dropmarker {
-	padding: 0 1px 0 4px !important;
 }
 
 /* Fix subviewbutton icon buttons alignment */
