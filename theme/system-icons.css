@@ -75,6 +75,8 @@
 	#TabsToolbar #new-tab-button .toolbarbutton-icon {
 		filter: var(--gnome-icons-hack-filter);
 		list-style-image: url("moz-icon://stock/tab-new-symbolic?size=dialog") !important;
+		width: 16px !important;
+		height:16px !important;
 	}
 	/* Home button */
 	#home-button .toolbarbutton-icon {
