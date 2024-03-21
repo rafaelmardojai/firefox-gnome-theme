@@ -13,11 +13,11 @@
     #browser {
         position: relative;
     }
-    
+
     #tabbrowser-tabbox {
         z-index: 0 !important;
     }
-    
+
     #navigator-toolbox {
         z-index: 10 !important;
     }
@@ -47,7 +47,7 @@
         min-width: 48px;
         max-width: 48px;
         overflow: hidden;
-        
+
         border-right: 1px solid var(--sidebar-border-color);
         z-index: 1 !important;
         top: 0;
@@ -78,7 +78,16 @@
     @media (width >= 1200px) {
         #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
         #sidebar-box[sidebarcommand*="tabcenter"]:hover {
+
             max-width: 250px !important;
+        }
+    }
+
+    @media (width >= 2000px) {
+        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
+        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
+
+            max-width: 400px !important;
         }
     }
 
@@ -122,12 +131,12 @@
         #urlbar-container {
             min-width: 100% !important;
         }
-    
+
         #menubar-items {
             display: none !important;
         }
     }
-    
+
     #main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"],
     #main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] + splitter {
         visibility: collapse;
@@ -140,7 +149,7 @@
             visibility: visible;
             opacity: 1;
         }
-        
+
         100% {
             opacity: 0;
         }
@@ -156,16 +165,23 @@
         z-index: 1 !important;
         transition: all var(--transition-time) ease var(--delay);
     }
-    
+
     #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
         position: relative;
         margin-right: -50px;
     }
-    
+
     @media (width >= 1200px) {
         #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
         #sidebar-box[sidebarcommand*="tabcenter"]:hover {
             max-width: 250px !important;
+        }
+    }
+
+    @media (width >= 2000px) {
+        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
+        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
+            max-width: 400px !important;
         }
     }
 }
@@ -181,6 +197,4 @@
         animation-timing-function: linear;
         transition: none !important;
     }
-    
-    
 }
