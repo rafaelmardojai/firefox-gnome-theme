@@ -22,7 +22,7 @@
         z-index: 10 !important;
     }
 
-    #sidebar-box:not([lwt-sidebar]){
+    #sidebar-box:not([lwt-sidebar]) {
         appearance: unset !important;
     }
 
@@ -35,7 +35,7 @@
         display: none;
     }
 
-    [sidebarcommand*="tabcenter"] #sidebar, #sidebar-box[sidebarcommand*="tabcenter"]  {
+    [sidebarcommand*="tabcenter"] #sidebar, #sidebar-box[sidebarcommand*="tabcenter"] {
         min-width: 48px !important;
         max-width: 48px !important;
     }
@@ -47,7 +47,6 @@
         min-width: 48px;
         max-width: 48px;
         overflow: hidden;
-
         border-right: 1px solid var(--sidebar-border-color);
         z-index: 1 !important;
         top: 0;
@@ -69,16 +68,9 @@
         transition: all var(--transition-time) ease var(--delay);
     }
 
-    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) {
-        animation-timing-function: linear;
-        transition: all var(--transition-time) ease 0s;
-    }
-
     @media (width >= 1200px) {
         #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
         #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-
             max-width: 250px !important;
         }
     }
@@ -86,9 +78,14 @@
     @media (width >= 2000px) {
         #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
         #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-
             max-width: 400px !important;
         }
+    }
+
+    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) #sidebar,
+    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) {
+        animation-timing-function: linear;
+        transition: all var(--transition-time) ease 0s;
     }
 
     [sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
@@ -131,6 +128,7 @@
         #urlbar-container {
             min-width: 100% !important;
         }
+    }
 
         #menubar-items {
             display: none !important;
@@ -169,20 +167,6 @@
     #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
         position: relative;
         margin-right: -50px;
-    }
-
-    @media (width >= 1200px) {
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-            max-width: 250px !important;
-        }
-    }
-
-    @media (width >= 2000px) {
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-            max-width: 400px !important;
-        }
     }
 }
 
