@@ -15,8 +15,8 @@
 }
 /* Window buttons: at least 2 buttons */
 @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
-       (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
-       (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+			 (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
+			 (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
 	:root {
 		--gnome-navbar-csd-offset: 80px;
 	}
@@ -67,7 +67,7 @@
 
 /* Force the restore button to appear regardless of maximize button's status */
 :root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container {
-  visibility: visible !important;
+	visibility: visible !important;
 }
 :root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container .titlebar-restore {
 	display: inherit !important;
@@ -108,13 +108,13 @@
 }
 
 @media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
-  /* Window buttons style */
-  :root[tabsintitlebar]:not([inFullscreen]) #titlebar .titlebar-button {
-	  -moz-appearance: none !important;
-	  padding: 0 2px !important;
-	  background: var(--gnome-button-background) !important;
-	  transition: background 0.3s;
-  }
+	/* Window buttons style */
+	:root[tabsintitlebar]:not([inFullscreen]) #titlebar .titlebar-button {
+		-moz-appearance: none !important;
+		padding: 0 2px !important;
+		background: var(--gnome-button-background) !important;
+		transition: background 0.3s;
+	}
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button {
@@ -125,13 +125,13 @@
 }
 
 @media (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
-  :root[tabsintitlebar] #titlebar .titlebar-button {
-	  margin: 6px 0px !important;
-  }
+	:root[tabsintitlebar] #titlebar .titlebar-button {
+		margin: 6px 0px !important;
+	}
 }
 
 :root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox {
-  background: transparent !important;
+	background: transparent !important;
 	border-radius: 6px !important;
 	height: 34px !important;
 	width: 34px !important;
@@ -139,8 +139,8 @@
 }
 
 :root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox:hover {
-  outline: 0 !important;
-  background: var(--gnome-hover-color) !important;
+	outline: 0 !important;
+	background: var(--gnome-hover-color) !important;
 }
 
 :root[tabsintitlebar] #titlebar toolbarbutton > .toolbarbutton-icon {
