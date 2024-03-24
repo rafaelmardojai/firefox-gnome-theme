@@ -34,7 +34,7 @@
 	padding-right: var(--gnome-navbar-csd-offset) !important;
 }
 /* Fullscreen headerbar padding for 1 button */
-:root[tabsintitlebar][inFullscreen] #nav-bar {
+:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #nav-bar {
 	padding-right: 43px !important;
 }
 
@@ -53,7 +53,7 @@
 	}
 	
 	/* Fullscreen headerbar padding for 1 button */
-	:root[tabsintitlebar][inFullscreen] #nav-bar {
+	:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #nav-bar {
 		padding-left: 50px !important;
 		padding-right: 3px !important
 	}
