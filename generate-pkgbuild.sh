@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Exit on error
+set -e
+
 ver=$(echo "$RELEASE" | sed 's/v//')
 
 cat << EOF > ./PKGBUILD
