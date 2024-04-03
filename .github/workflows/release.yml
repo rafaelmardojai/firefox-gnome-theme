@@ -27,4 +27,3 @@ jobs:
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
           commit_message: ${{ github.event.release.tag_name }}
           updpkgsums: true
-          test: true
