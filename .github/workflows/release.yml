@@ -18,7 +18,7 @@ jobs:
         run: ./generate-pkgbuild.sh
 
       - name: Publish firefox-gnome-theme to the AUR
-        uses: KSXGitHub/github-actions-deploy-aur@v2.7.0
+        uses: KSXGitHub/github-actions-deploy-aur@v2.7.1
         with:
           pkgname: firefox-gnome-theme
           pkgbuild: ./PKGBUILD
@@ -27,3 +27,4 @@ jobs:
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
           commit_message: ${{ github.event.release.tag_name }}
           updpkgsums: true
+          test: true
