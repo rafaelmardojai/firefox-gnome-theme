@@ -631,6 +631,9 @@ tab {
 	.tabbrowser-tab {
 		padding-bottom: 0px !important;
 	}
+	#TabsToolbar .toolbarbutton-1:not(#hack), #TabsToolbar .titlebar-button:not(#hack) {
+		margin-bottom: 0 !important;
+	}
 
 	/* Remove nav-bar rounding and padding */
 	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar { 
@@ -647,7 +650,6 @@ tab {
 		border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important
 	}
 	:root[tabsintitlebar]:not([inFullscreen], [sizemode="maximized"]) #TabsToolbar .toolbar-items {
-		margin-block: auto;
 		padding: 0 46px;
 	}
 	
@@ -665,25 +667,27 @@ tab {
 	
 	/* Blend single tab into whole bar */
 	@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]),
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ toolbarbutton,
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) ~ #tabbrowser-arrowscrollbox-periphery {
+		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
+			tab,
+			tab ~ toolbarbutton,
+			tab ~ #tabbrowser-arrowscrollbox-periphery
+		) {
 			visibility: visible;
 		}
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) {
-			-moz-window-dragging: drag;
+		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
+			-moz-window-dragging: drag !important;
 		}
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-background {
+		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
 			display: none !important
 		}
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-close-button {
+		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
 			visibility: hidden !important;
 			opacity: 0 !important;
 		}
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-content::before {
+		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
 			--gnome-tabbar-tab-close-overlay-bg: unset !important;
 		}
-		#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]) .tab-labelk-container[textoverflow="true"] {
+		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-labelk-container[textoverflow="true"] {
 			margin-right: -16px;
 		}
 		/* Override normal width tabs */
