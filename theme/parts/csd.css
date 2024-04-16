@@ -4,8 +4,9 @@
 
 /* Headerbar top border corners rounded */
 :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
-	border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important;
+	border-radius: env(-moz-gtk-csd-titlebar-radius, 8px) env(-moz-gtk-csd-titlebar-radius, 8px) 0 0 !important;
 }
+
 
 /* Window buttons: at least 1 button */
 @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
