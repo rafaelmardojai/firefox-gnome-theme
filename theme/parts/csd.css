@@ -124,15 +124,13 @@
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
+	appearance: none !important;
 	padding: 0 !important;
 	stroke: none !important;
+	width: 16px;
 	-moz-context-properties: fill, fill-opacity !important;
 }
 
-:root[tabsintitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
-	appearance: none !important;
-	width: 16px;
-}
 :root[tabsintitlebar] #titlebar .titlebar-button:not([disabled]):hover {
 	background: var(--gnome-button-hover-background) !important;
 }
@@ -162,8 +160,7 @@
 /* OPTIONAL: Allow draging the window from headerbar buttons */
 @media (-moz-bool-pref: "gnomeTheme.dragWindowHeaderbarButtons") {
 	:root[tabsintitlebar] #nav-bar *,
-	:root[tabsintitlebar] #titlebar .titlebar-button,
-	:root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
+	:root[tabsintitlebar] #titlebar .titlebar-button {
 		-moz-window-dragging: drag;
 	}
 	
