@@ -125,9 +125,10 @@
 
 :root[tabsintitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
 	appearance: none !important;
+	height: 16px !important;
 	padding: 0 !important;
 	stroke: none !important;
-	width: 16px;
+	width: 16px !important;
 	-moz-context-properties: fill, fill-opacity !important;
 }
 
