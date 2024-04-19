@@ -15,7 +15,7 @@ jobs:
       - name: Generate PKGBUILD
         env:
           RELEASE: ${{ github.event.release.tag_name }}
-        run: ./generate-pkgbuild.sh
+        run: ./scripts/generate-pkgbuild.sh
 
       - name: Publish firefox-gnome-theme to the AUR
         uses: KSXGitHub/github-actions-deploy-aur@v2.7.1
