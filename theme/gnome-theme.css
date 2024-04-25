@@ -33,6 +33,6 @@
 #customization-footer::before {
 	background: url(../icon.svg) no-repeat;
 	background-size: contain;
-	content: "Firefox GNOME theme v124";
+	content: "Firefox GNOME theme v125";
 	padding: 9px 9px 9px 50px;
 }
