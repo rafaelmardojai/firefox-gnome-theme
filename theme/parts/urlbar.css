@@ -8,7 +8,7 @@
 }
 
 #urlbar-container {
-	--urlbar-container-height: 0 !important;
+	--urlbar-container-height: 34px !important;
 }
 
 /* Center the URL bar */
