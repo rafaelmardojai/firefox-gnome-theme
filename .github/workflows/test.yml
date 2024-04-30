@@ -1,3 +1,5 @@
+name: Test
+
 on: [push]
 
 jobs:
@@ -16,7 +18,7 @@ jobs:
           echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
           sudo apt update
           sudo apt install firefox
-      
+
       - name: Setup 1 - create a Firefox profile
         run: firefox --headless --createprofile test
 
@@ -25,7 +27,6 @@ jobs:
 
       - name: Teardown 1
         run: rm -rf ls ~/.mozilla/firefox/
-
 
       - name: Setup 2 - create a new Firefox profile
         run: firefox --headless --createprofile test
@@ -38,4 +39,3 @@ jobs:
 
       - name: Teardown 2
         run: rm -rf ls ~/.mozilla/firefox/
-

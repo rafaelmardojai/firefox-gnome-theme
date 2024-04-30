@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish_aur_package:
+    name: Publish AUR package
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate PKGBUILD
+        env:
+          RELEASE: ${{ github.event.release.tag_name }}
+        run: ./scripts/generate-pkgbuild.sh
+
+      - name: Publish firefox-gnome-theme to the AUR
+        uses: KSXGitHub/github-actions-deploy-aur@v2.7.1
+        with:
+          pkgname: firefox-gnome-theme
+          pkgbuild: ./PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: ${{ github.event.release.tag_name }}
+          updpkgsums: true
+          test: true
