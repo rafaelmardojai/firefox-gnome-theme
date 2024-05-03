@@ -12,6 +12,7 @@
 
 This theme follows latest GNOME Adwaita style.
 
+> [!WARNING]
 > ### Disclaimer:
 > Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is reproducible in vanilla Firefox.
 >
