@@ -36,6 +36,15 @@ Theme versions compatible with older Firefox releases are preserved as git tags.
 
 We also have the `beta` and `nightly` branches for fixes only applicable to the current Firefox beta and nightly versions.
 
+# Installation
+
+## Using package managers
+
+### Arch Linux
+
+1. Install the package `firefox-gnome-theme`
+2. Follow the instructions at `cat /usr/share/doc/firefox-gnome-theme/INSTALL.md`
+
 ## One command install with curl
 
 To install this theme, you can run this command, which uses *curl* to download a script that will also download the latest released version of the theme (not the master version) and run the **auto-install** script for you.
@@ -46,9 +55,10 @@ To install this theme, you can run this command, which uses *curl* to download a
 curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
 ```
 
+
 ## Installation scripts
 
-If you want to use other version of the theme than the stable one you can manually download the theme and run its install scripts.
+If you want to use other version of the theme than the stable one you can manually download the theme and run its install scripts .
 
 First you need to grab a fresh copy of the theme repository by cloning it with git.
 
@@ -65,6 +75,7 @@ First you need to grab a fresh copy of the theme repository by cloning it with g
 	```
 
 This theme provides two installation scripts in addition to the curled one.
+
 
 ### Auto install script
 
