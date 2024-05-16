@@ -42,7 +42,7 @@ We also have the `beta` and `nightly` branches for fixes only applicable to the 
 
 ### Arch Linux
 
-1. Install the package [AUR package](https://aur.archlinux.org/packages/firefox-gnome-theme) `firefox-gnome-theme` 
+1. Install the [AUR package](https://aur.archlinux.org/packages/firefox-gnome-theme) `firefox-gnome-theme` 
 2. Follow the instructions at `cat /usr/share/doc/firefox-gnome-theme/INSTALL.md`
 
 ## One command install with curl
