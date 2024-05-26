@@ -22,6 +22,10 @@
         z-index: 10 !important;
     }
 
+    #sidebar-box{
+        border-right: 0.01px solid var(--chrome-content-separator-color) !important;
+    }
+
     #sidebar-box:not([lwt-sidebar]){
         appearance: unset !important;
     }
