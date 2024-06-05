@@ -16,7 +16,7 @@ This theme follows latest GNOME Adwaita style.
 > ### Disclaimer:
 > Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is reproducible in vanilla Firefox.
 >
-> If you are a software distribution maintainer, please do not ship this changes by default to your users unless you made extremely clear that they are using a modified version of Firefox UI.
+> If you are a software distribution maintainer, please do not ship these changes by default to your users unless you make it extremely clear that they are using a modified version of the Firefox UI.
 
 ![Screenshot of the theme](screenshot.png)
 
