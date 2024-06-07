@@ -149,6 +149,12 @@ toolbarspring {
 	height: 100%  !important;
 }
 
+@media (-moz-bool-pref: "browser.urlbar.richSuggestions.featureGate") {
+	#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] > .identity-box-button {
+		margin-inline-start: 2px;
+	}
+}
+
 /* Search mode indicator */
 #urlbar-search-mode-indicator,
 #urlbar-label-box,
