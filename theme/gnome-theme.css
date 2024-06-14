@@ -24,6 +24,7 @@
 
 @import "colors/light.css";
 @import "colors/dark.css";
+@import "colors/black.css" screen and (-moz-bool-pref: "gnomeTheme.oledBlack"); 
 
 @import "system-icons.css";
 @import "symbolic-tab-icons.css";

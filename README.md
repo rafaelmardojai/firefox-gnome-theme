@@ -269,6 +269,11 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 	
 	> **Note:** Enabling with `gnomeTheme.hideSingleTab` will replace the single tab with a title bar.
 
+- **OLED black theme** `gnomeTheme.oledBlack`
+
+	Change the dark theme into the black variant.
+	
+
 ### Extensions support
 
 We also have optional features to enable support for some Firefox extensions.
