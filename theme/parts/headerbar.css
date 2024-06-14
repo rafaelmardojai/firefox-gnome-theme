@@ -4,6 +4,7 @@
 /* Headerbar */
 #nav-bar {
 	background: var(--gnome-headerbar-background) !important;
+	border: 0 !important;
 	padding: 6px 3px !important;
 }
 
