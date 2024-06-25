@@ -1,164 +1,164 @@
-@media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn") {
-    :root {
-        --delay: 0s;
-        --transition-time: 0.2s;
-        --positionX1: 48px;
-        --positionX2: absolute;
-    }
 
-	#tabbrowser-tabs {
-		display: none !important;
-	}
+:root {
+    --delay: 0s;
+    --transition-time: 0.2s;
+    --positionX1: 48px;
+    --positionX2: absolute;
+}
 
-    #browser {
-        position: relative;
-    }
+#tabbrowser-tabs {
+    display: none !important;
+}
 
-    #tabbrowser-tabbox {
-        z-index: 0 !important;
-    }
+#browser {
+    position: relative;
+}
 
-    #navigator-toolbox {
-        z-index: 10 !important;
-    }
+#tabbrowser-tabbox {
+    z-index: 0 !important;
+}
 
-    #sidebar-box{
-        border-right: 0.01px solid var(--chrome-content-separator-color) !important;
-    }
+#navigator-toolbox {
+    z-index: 10 !important;
+}
 
-    #sidebar-box:not([lwt-sidebar]){
-        appearance: unset !important;
-    }
+#sidebar-box{
+    border-right: 0.01px solid var(--chrome-content-separator-color) !important;
+}
 
-    #sidebar-box[sidebarcommand*="tabcenter"] {
-        z-index: 1 !important;
-    }
+#sidebar-box:not([lwt-sidebar]){
+    appearance: unset !important;
+}
 
-    #sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
-        visibility: collapse;
-        display: none;
-    }
+#sidebar-box[sidebarcommand*="tabcenter"] {
+    z-index: 1 !important;
+}
 
-    [sidebarcommand*="tabcenter"] #sidebar, #sidebar-box[sidebarcommand*="tabcenter"]  {
-        min-width: 48px !important;
-        max-width: 48px !important;
-    }
+#sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
+    visibility: collapse;
+    display: none;
+}
 
-    #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-        display: block;
-        position: var(--positionX2);
-        box-sizing: content-box;
-        min-width: 48px;
-        max-width: 48px;
-        overflow: hidden;
+[sidebarcommand*="tabcenter"] #sidebar, #sidebar-box[sidebarcommand*="tabcenter"]  {
+    min-width: 48px !important;
+    max-width: 48px !important;
+}
 
-        border-right: 1px solid var(--sidebar-border-color);
-        z-index: 1 !important;
-        top: 0;
-        bottom: 0;
-    }
+#sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
+    display: block;
+    position: var(--positionX2);
+    box-sizing: content-box;
+    min-width: 48px;
+    max-width: 48px;
+    overflow: hidden;
 
-    #main-window[inFullscreen] #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-        min-width: 1px;
-        max-width: 1px;
-    }
+    border-right: 1px solid var(--sidebar-border-color);
+    z-index: 1 !important;
+    top: 0;
+    bottom: 0;
+}
 
+#main-window[inFullscreen] #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
+    min-width: 1px;
+    max-width: 1px;
+}
+
+#sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
+#sidebar-box[sidebarcommand*="tabcenter"]:hover {
+    min-width: 10vw !important;
+    width: 30vw !important;
+    max-width: 200px !important;
+    z-index: 1 !important;
+    animation-timing-function: linear;
+    transition: all var(--transition-time) ease var(--delay);
+}
+
+#sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) #sidebar,
+#sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) {
+    animation-timing-function: linear;
+    transition: all var(--transition-time) ease 0s;
+}
+
+@media (width >= 1200px) {
     #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
     #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-        min-width: 10vw !important;
-        width: 30vw !important;
-        max-width: 200px !important;
-        z-index: 1 !important;
-        animation-timing-function: linear;
-        transition: all var(--transition-time) ease var(--delay);
-    }
 
-    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) {
-        animation-timing-function: linear;
-        transition: all var(--transition-time) ease 0s;
-    }
-
-    @media (width >= 1200px) {
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-
-            max-width: 250px !important;
-        }
-    }
-
-    @media (width >= 2000px) {
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-
-            max-width: 400px !important;
-        }
-    }
-
-    [sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-        display: none;
-    }
-
-    [sidebarcommand*="tabcenter"] #sidebar {
-        max-height: 100%;
-        height: 100%;
-    }
-
-    #main-window:not([inFullscreen]) #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent {
-        margin-left: var(--positionX1);
-    }
-
-    #main-window[inFullscreen][inDOMFullscreen] #appcontent {
-        margin-left: 0;
-    }
-
-    #main-window[inFullscreen] #sidebar {
-        height: 100vh;
-    }
-
-    [sidebarcommand*="tabcenter"] #sidebar-header {
-        background: #0C0C0D;
-        border-bottom: none !important;
-    }
-
-    [sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-        border-right-color: #0C0C0D !important;
-        border-left-color: #0C0C0D !important;
-    }
-
-    [sidebarcommand*="tabcenter"] #sidebar-switcher-target,
-    [sidebarcommand*="tabcenter"] #sidebar-close {
-        filter: invert(100%);
-    }
-
-    @media (max-width: 630px) {
-        #urlbar-container {
-            min-width: 100% !important;
-        }
-
-        #menubar-items {
-            display: none !important;
-        }
-    }
-
-    #main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"],
-    #main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] + splitter {
-        visibility: collapse;
-        animation: var(--transition-time) fadeOut;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes fadeOut {
-        0% {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
+        max-width: 250px !important;
     }
 }
+
+@media (width >= 2000px) {
+    #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
+    #sidebar-box[sidebarcommand*="tabcenter"]:hover {
+
+        max-width: 400px !important;
+    }
+}
+
+[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
+    display: none;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar {
+    max-height: 100%;
+    height: 100%;
+}
+
+#main-window:not([inFullscreen]) #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent {
+    margin-left: var(--positionX1);
+}
+
+#main-window[inFullscreen][inDOMFullscreen] #appcontent {
+    margin-left: 0;
+}
+
+#main-window[inFullscreen] #sidebar {
+    height: 100vh;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar-header {
+    background: #0C0C0D;
+    border-bottom: none !important;
+}
+
+[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
+    border-right-color: #0C0C0D !important;
+    border-left-color: #0C0C0D !important;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar-switcher-target,
+[sidebarcommand*="tabcenter"] #sidebar-close {
+    filter: invert(100%);
+}
+
+@media (max-width: 630px) {
+    #urlbar-container {
+        min-width: 100% !important;
+    }
+
+    #menubar-items {
+        display: none !important;
+    }
+}
+
+#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"],
+#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] + splitter {
+    visibility: collapse;
+    animation: var(--transition-time) fadeOut;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 
 @media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
     #sidebar-box[sidebarcommand*="tabcenter"] #sidebar,

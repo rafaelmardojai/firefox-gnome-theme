@@ -1,3 +1,4 @@
+/* Core */
 @import "parts/toolbox.css";
 @import "parts/headerbar.css";
 @import "parts/csd.css";
@@ -20,14 +21,17 @@
 @import "parts/remove-white-flash.css";
 
 /* Extensions support */
-@import "extensions/tab-center-reborn.css";
+@import "extensions/tab-center-reborn.css" screen and (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn");
 
+/* Colors */
 @import "colors/light.css";
 @import "colors/dark.css";
 @import "colors/black.css" screen and (-moz-bool-pref: "gnomeTheme.oledBlack"); 
 
-@import "system-icons.css";
-@import "symbolic-tab-icons.css";
+/* Optional */
+@import "system-icons.css" screen and (-moz-bool-pref: "gnomeTheme.systemIcons");
+@import "symbolic-tab-icons.css" screen and (-moz-bool-pref: "gnomeTheme.symbolicTabIcons");
+
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Set theme version text in customization panel */

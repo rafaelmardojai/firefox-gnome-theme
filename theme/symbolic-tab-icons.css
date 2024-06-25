@@ -10,10 +10,8 @@
 	}
 }
 
-/* OPTIONAL: Make all tab icons look kinda like symbolic icons */
-@media (-moz-bool-pref: "gnomeTheme.symbolicTabIcons") {	
-	tab .tab-icon-image {
-		filter: var(--gnome-convert-icon-to-symbolic-hack-filter);
-	}
+/* Make all tab icons look kinda like symbolic icons */
+tab .tab-icon-image {
+	filter: var(--gnome-convert-icon-to-symbolic-hack-filter);
 }
 
