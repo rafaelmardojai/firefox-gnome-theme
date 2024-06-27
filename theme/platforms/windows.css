@@ -1,0 +1,7 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Fixes for Microsoft Windows */
+
+:root {
+	--gnome-navbar-csd-offset: 117px;
+}

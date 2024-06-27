@@ -20,6 +20,9 @@
 
 @import "parts/remove-white-flash.css";
 
+/* Platforms */
+@import "platforms/windows.css" screen and (-moz-platform: windows);
+
 /* Extensions support */
 @import "extensions/tab-center-reborn.css" screen and (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn");
 
