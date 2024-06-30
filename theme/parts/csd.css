@@ -16,8 +16,8 @@
 }
 /* Window buttons: at least 2 buttons */
 @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
-       (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
-       (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+			 (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
+			 (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
 	:root {
 		--gnome-navbar-csd-offset: 80px;
 	}
@@ -68,7 +68,7 @@
 
 /* Force the restore button to appear regardless of maximize button's status */
 :root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container {
-  visibility: visible !important;
+	visibility: visible !important;
 }
 :root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container .titlebar-restore {
 	display: inherit !important;
@@ -110,7 +110,6 @@
 
 /* Window buttons style */
 :root[tabsintitlebar]:not([inFullscreen]) #titlebar .titlebar-button {
-	appearance: none !important;
 	padding: 0 2px !important;
 	background: var(--gnome-button-background) !important;
 	transition: background 0.3s;
@@ -119,17 +118,29 @@
 :root[tabsintitlebar] #titlebar .titlebar-button {
 	border-radius: 100% !important;
 	height: 24px !important;
-	margin: 6px 6.5px !important;
 	width: 24px !important;
+	margin: 6px 6px !important;
 }
 
-:root[tabsintitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
-	appearance: none !important;
-	height: 16px !important;
-	padding: 0 !important;
-	stroke: none !important;
-	width: 16px !important;
-	-moz-context-properties: fill, fill-opacity !important;
+@media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
+	:root[tabsintitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
+		appearance: none !important;
+		height: 16px !important;
+		padding: 0 !important;
+		stroke: none !important;
+		width: 16px !important;
+		-moz-context-properties: fill, fill-opacity !important;
+	}
+}
+
+.titlebar-button { /* Override config */
+	@media (-moz-bool-pref: "widget.gtk.non-native-titlebar-buttons.enabled") {
+		&:-moz-lwtheme {
+			& > .toolbarbutton-icon {
+				appearance: auto !important
+			}
+		}
+	}
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-button:not([disabled]):hover {

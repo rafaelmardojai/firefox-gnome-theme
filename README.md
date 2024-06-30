@@ -245,6 +245,12 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** This feature has a [known color bug](#icons-color-broken-with-system-icons).
 
+
+- **No themed Icons** `gnomeTheme.noThemedIcons`
+
+	Use default Firefox icons instead of the included icons.
+
+
 - **Symbolic tab icons** `gnomeTheme.symbolicTabIcons`
 
 	Make all tab icons look kinda like symbolic icons.
