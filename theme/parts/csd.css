@@ -110,7 +110,6 @@
 
 /* Window buttons style */
 :root[tabsintitlebar]:not([inFullscreen]) #titlebar .titlebar-button {
-	/*! appearance: none !important; */
 	padding: 0 2px !important;
 	background: var(--gnome-button-background) !important;
 	transition: background 0.3s;
@@ -120,7 +119,7 @@
 	border-radius: 100% !important;
 	height: 24px !important;
 	width: 24px !important;
-	margin: 6px 5px !important;
+	margin: 6px 6px !important;
 }
 
 @media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
