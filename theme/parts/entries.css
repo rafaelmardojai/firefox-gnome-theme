@@ -32,7 +32,7 @@
 #urlbar[breakout][breakout-extend],
 #urlbar[focused]:not([suppress-focus-border]),
 #searchbar:focus-within,
-#search-box[focused],
+#search-box[focused], 
 .findbar-textbox[focused],
 .findbar-textbox:focus,
 #loginTextbox:focus,
@@ -64,8 +64,7 @@
   border-bottom-right-radius: 0 !important;
   border-right-width: 0 !important;
 }
-.findbar-textbox:not(.minimal)[focused],
-.findbar-textbox:not(.minimal):focus {
+.findbar-textbox:not(.minimal)[focused], .findbar-textbox:not(.minimal):focus {
   -moz-outline-radius: 5px 0 0 5px !important;
 }
 
@@ -85,27 +84,26 @@
 .urlbar-page-action:hover:not([open="true"]),
 .urlbar-page-action:hover:not([open="true"]) .urlbar-icon,
 .urlbar-icon:not([disabled]):hover {
-  background: none !important;
-  fill-opacity: 1 !important;
+    background: none !important;
+  fill-opacity: 1 !important;	
 }
 
 .identity-box-button:hover:active,
-.identity-box-button[open="true"],
+.identity-box-button[open=true],
 #tracking-protection-icon-container:hover:active,
-#tracking-protection-icon-container[open="true"],
+#tracking-protection-icon-container[open=true],
 #notification-popup-box:hover:active,
-#notification-popup-box[open="true"],
+#notification-popup-box[open=true],
 .urlbar-page-action:hover:active,
-.urlbar-page-action[open="true"],
+.urlbar-page-action[open=true],
 .urlbar-page-action:hover:active .urlbar-icon,
-.urlbar-page-action[open="true"] .urlbar-icon {
+.urlbar-page-action[open=true] .urlbar-icon {
   background: none !important;
-  fill-opacity: 1 !important;
+  fill-opacity: 1 !important;	
 }
 
 /* Entries fixes */
-#urlbar-container,
-#search-container {
+#urlbar-container, #search-container {
   padding: 0 !important;
   margin: 0 3px !important;
 }
@@ -113,8 +111,7 @@
   background: transparent !important;
   border: 0 !important;
 }
-#urlbar,
-#searchbar {
+#urlbar, #searchbar {
   margin: 0 3px !important;
   padding: 0 3px !important;
 }
