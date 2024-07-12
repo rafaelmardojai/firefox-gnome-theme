@@ -13,24 +13,24 @@
 #editBMPanel_namePicker,
 #editBMPanel_tagsField,
 .popup-notification-body input {
-	-moz-appearance: none !important;
-	background: var(--gnome-entry-background) !important;
-	outline: 2px solid transparent !important;
-	border: 0 !important;
-	border-radius: 6px !important;
-	box-shadow: none !important;
-	color: var(--gnome-entry-color) !important;
-	height: 34px !important;
-	max-height: 34px !important;
-	margin: 0 !important;
-	padding: 6px !important;
-	box-sizing: border-box;
-	transition: outline 0.3s, outline-offset 0.3s;
+  -moz-appearance: none !important;
+  background: var(--gnome-entry-background) !important;
+  outline: 2px solid transparent !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  color: var(--gnome-entry-color) !important;
+  height: 34px !important;
+  max-height: 34px !important;
+  margin: 0 !important;
+  padding: 6px !important;
+  box-sizing: border-box;
+  transition: outline 0.3s, outline-offset 0.3s;
 }
 
 /* Entries focused */
 #urlbar[breakout][breakout-extend],
-#urlbar[focused="true"]:not([suppress-focus-border]),
+#urlbar[focused]:not([suppress-focus-border]),
 #searchbar:focus-within,
 #search-box[focused], 
 .findbar-textbox[focused],
@@ -41,9 +41,9 @@
 #editBMPanel_namePicker:focus-visible,
 #editBMPanel_tagsField:focus-visible,
 .popup-notification-body input:focus {
-	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
-	outline-offset: -2px;
-	-moz-outline-radius: 5px;
+  outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+  outline-offset: -2px;
+  -moz-outline-radius: 5px;
 }
 
 /* Inactive window entries */
@@ -54,18 +54,18 @@
 #loginTextbox:-moz-window-inactive,
 #password1Textbox:-moz-window-inactive,
 .tabsFilter:-moz-window-inactive {
-	color: var(--gnome-inactive-entry-color) !important;
-	outline: 2px solid transparent !important;
+  color: var(--gnome-inactive-entry-color) !important;
+  outline: 2px solid transparent !important;
 }
 
 /* Entries combined */
 .findbar-textbox:not(.minimal) {
-	border-top-right-radius: 0 !important;
-	border-bottom-right-radius: 0 !important;
-	border-right-width: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right-width: 0 !important;
 }
 .findbar-textbox:not(.minimal)[focused], .findbar-textbox:not(.minimal):focus {
-	-moz-outline-radius: 5px 0 0 5px !important;
+  -moz-outline-radius: 5px 0 0 5px !important;
 }
 
 /* Entry button */
@@ -74,8 +74,8 @@
 #notification-popup-box,
 .urlbar-page-action,
 .urlbar-icon {
-	fill-opacity: 0.8 !important;
-	transition: fill 0.3s, fill-opacity 0.3, opacity 0.3;
+  fill-opacity: 0.8 !important;
+  transition: fill 0.3s, fill-opacity 0.3, opacity 0.3;
 }
 
 .identity-box-button:hover:not([open="true"]),
@@ -85,7 +85,7 @@
 .urlbar-page-action:hover:not([open="true"]) .urlbar-icon,
 .urlbar-icon:not([disabled]):hover {
     background: none !important;
-	fill-opacity: 1 !important;	
+  fill-opacity: 1 !important;	
 }
 
 .identity-box-button:hover:active,
@@ -98,32 +98,32 @@
 .urlbar-page-action[open=true],
 .urlbar-page-action:hover:active .urlbar-icon,
 .urlbar-page-action[open=true] .urlbar-icon {
-	background: none !important;
-	fill-opacity: 1 !important;	
+  background: none !important;
+  fill-opacity: 1 !important;	
 }
 
 /* Entries fixes */
 #urlbar-container, #search-container {
-	padding: 0 !important;
-	margin: 0 3px !important;
+  padding: 0 !important;
+  margin: 0 3px !important;
 }
-#urlbar-input-container {
-	background: transparent !important;
-	border: 0 !important;
+.urlbar-input-container {
+  background: transparent !important;
+  border: 0 !important;
 }
 #urlbar, #searchbar {
-	margin: 0 3px !important;
-	padding: 0 3px !important;
+  margin: 0 3px !important;
+  padding: 0 3px !important;
 }
 .searchbar-textbox {
-	border: 0 !important;
-	padding: 0 !important;
-	margin: 0 !important;
-	min-height: auto !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
 }
 #searchbar > .searchbar-textbox[focused] .searchbar-search-button:not(#hack) {
-	margin: 0 !important;
+  margin: 0 !important;
 }
-#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background {
-	outline: 0 !important;
+#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+  outline: 0 !important;
 }

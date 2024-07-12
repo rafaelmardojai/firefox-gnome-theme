@@ -34,7 +34,7 @@ toolbarspring {
 	z-index: 5 !important;
 }
 
-#urlbar #urlbar-input-container {
+#urlbar .urlbar-input-container {
 	padding: 0 !important;
 }
 
@@ -150,7 +150,7 @@ toolbarspring {
 }
 
 @media (-moz-bool-pref: "browser.urlbar.richSuggestions.featureGate") {
-	#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] > .identity-box-button {
+	#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] > .identity-box-button {
 		margin-inline-start: 2px;
 	}
 }
