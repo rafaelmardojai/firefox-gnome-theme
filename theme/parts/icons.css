@@ -137,6 +137,7 @@ button.close::before {
 	arrowscrollbox[orient="horizontal"] {
 		--scrollbutton-icon-name: url("../icons/pan-start-symbolic.svg");
 	}
+
 	/* Popovers subview menu arrow */
 	#identity-popup-mainView .subviewbutton-nav::after,
 	.widget-overflow-list .subviewbutton-nav::after,
@@ -189,7 +190,8 @@ button.close::before {
 		width: 16px !important;
 		height: 16px !important;
 	}
-	.menulist-label-box:after {
+	.menulist-label-box:after,
+	link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 		content: url("../icons/pan-down-symbolic.svg") !important;
 	}
 
@@ -374,7 +376,8 @@ button.close::before {
 	/* Preferences button */
 	#preferences-button,
 	.search-setting-button > .button-box > .button-icon,
-	.unified-extensions-item-menu-button.subviewbutton {
+	.unified-extensions-item-menu-button.subviewbutton,
+	.translations-panel-settings-gear-icon > .toolbarbutton-icon {
 		list-style-image: url("../icons/settings-symbolic.svg") !important;
 	}
 	/* Tabs sync */
@@ -522,7 +525,7 @@ button.close::before {
 		list-style-image: url("../icons/folder-download-symbolic.svg") !important;
 	}
 	/* Info */
-	.panel-info-button > image,
+	.panel-info-button:not(.translations-panel-settings-gear-icon) > image,
 	#identity-icon {
 		list-style-image: url("../icons/info-symbolic.svg") !important;
 	}

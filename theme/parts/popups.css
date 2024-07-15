@@ -4,7 +4,7 @@
 
 /* Style menus */
 menupopup {
-	-moz-appearance: none !important;	
+	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
 	padding: 8px !important;
 }
@@ -18,7 +18,7 @@ menulist {
 }
 
 .menupopup-arrowscrollbox {
-	-moz-appearance: none !important;
+	appearance: none !important;
 	background: var(--gnome-menu-background) !important;
 	border: 1px solid var(--gnome-menu-border-color) !important;
 	border-radius: 12px !important;
@@ -75,7 +75,8 @@ panel  {
 	--arrowpanel-padding: var(--gnome-menu-padding) !important;
 }
 #downloadsPanel-blockedSubview,
-#downloadsPanel-mainView {
+#downloadsPanel-mainView,
+#select-translations-panel-main-content {
 	padding:  var(--gnome-menu-padding) !important;
 }
 .panel-header, .panel-footer,
