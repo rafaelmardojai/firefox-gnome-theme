@@ -11,16 +11,16 @@
 /* Add private window headerbar indicator */
 :root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
 	background: url("../icons/eye-not-looking-symbolic.svg") no-repeat;
-	background-size: 28px 28px;
+	background-size: 48px 48px;
 	content: "";
 	display: block;	
 	position: absolute;
 	width: 64px;
 	height: 46px;
-	top: 8px;
+	top: 0;
 	transform: translate(15px, 0);
-	fill: #a64ce3 !important;
-	fill-opacity: 0.7 !important;
+	fill: var(--gnome-window-color) !important;
+	fill-opacity: 0.2 !important;
 	-moz-context-properties: fill, fill-opacity;
   }
 
