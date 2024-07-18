@@ -16,11 +16,11 @@
 	display: block;	
 	position: absolute;
 	width: 64px;
-	height: 46px;
+	height: 64px;
 	top: 0;
-	transform: translate(15px, 0);
+	transform: translate(15px, -9px);
 	fill: var(--gnome-window-color) !important;
-	fill-opacity: 0.2 !important;
+	fill-opacity: 0.15 !important;
 	-moz-context-properties: fill, fill-opacity;
   }
 
