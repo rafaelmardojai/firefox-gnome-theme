@@ -511,9 +511,16 @@ tab {
 /* Tabs manager menu */
 #alltabs-button {
 	visibility: collapse;
-}
-#tabbrowser-tabs[overflow] ~ #alltabs-button {
-	visibility: visible;
+	
+	@media (-moz-bool-pref: "browser.tabs.tabmanager.enabled") {
+		#tabbrowser-tabs[overflow] ~ & {
+			visibility: visible;
+		}
+	}
+	
+	#tabbrowser-tabs:not([overflow])[using-closing-tabs-spacer] ~ & {
+		display: none !important;
+	}
 }
 
 /* Firefox View */
