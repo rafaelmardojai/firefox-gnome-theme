@@ -9,6 +9,10 @@ menupopup {
 	padding: 8px !important;
 }
 
+menucaption {
+	color: var(--gnome-window-color) !important;
+}
+
 menu menupopup {
 	margin:	-14px -8px 0px 0px !important;
 }
