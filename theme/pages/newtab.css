@@ -5,5 +5,7 @@
         --newtab-background-color: var(--gnome-window-background) !important;
         --newtab-background-color-secondary: var(--gnome-menu-background) !important;
         --newtab-primary-action-background: var(--gnome-accent) !important;
+
+        background-color: var(--gnome-window-background) !important;
     }
 }
