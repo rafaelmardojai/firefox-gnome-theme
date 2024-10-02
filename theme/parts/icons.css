@@ -4,6 +4,7 @@
 
 /* Icons color */
 .toolbarbutton-icon:not([class*="identity-color-"] .toolbarbutton-icon),
+link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"],
 menuitem:not([class*='identity']) .menu-iconic-left .menu-iconic-icon,
 .urlbar-page-action:not([readeractive]),
 .urlbar-icon,
@@ -123,8 +124,9 @@ button.close::before {
 	padding-inline: 0 !important;
 }
 
-/* Scroll icons */
+
 @media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
+	/* Scroll icons */
 	#scrollbutton-up {
 		list-style-image: var(--scrollbutton-icon-name) !important;
 	}

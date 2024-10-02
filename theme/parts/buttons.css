@@ -14,6 +14,7 @@
 menulist,
 .customizationmode-button,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+link[href="chrome://global/content/elements/moz-button.css"] + button,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsPanel-mainView .download-state .downloadButton,
@@ -44,7 +45,7 @@ button.close,
 .unified-extensions-item-menu-button {
 	-moz-appearance: none !important;
 	align-items: center !important;
-	background: var(--gnome-button-background) !important;
+	background-color: var(--gnome-button-background) !important;
 	border-radius: 6px !important;
 	border: 0 !important;
 	padding: 0 1px !important;
@@ -64,13 +65,14 @@ button.close,
 
 /* Flat Buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"],
 .close-icon:not(.tab-close-button),
 .dialog-button-box button,
 button.close,
 .panel-info-button,
 .permission-popup-permission-remove-button,
 .unified-extensions-item-menu-button {
-	background: transparent !important;
+	background-color: transparent !important;
 	transition: background .3s;
 }
 
@@ -125,6 +127,7 @@ menulist,
 }
 
 /* Hover buttons */
+link[href="chrome://global/content/elements/moz-button.css"] + button:not([disabled="true"]):hover,
 menulist:hover,
 .customizationmode-button:hover,
 .subviewbutton.panel-subview-footer:not([disabled="true"]):hover,
@@ -149,11 +152,12 @@ menulist:hover .menulist-label-box,
 .button.connect-device:hover,
 #editBMPanel_newFolderButton:hover {
 	outline: 0 !important;
-	background: var(--gnome-button-hover-background) !important;
+	background-color: var(--gnome-button-hover-background) !important;
 }
 
 /* Hover flat buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled="true"]):not([checked]):hover,
+link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"]:not([disabled="true"], [aria-pressed="true"]):hover,
 .close-icon:not(.tab-close-button):hover,
 button.close:hover,
 .dialog-button-box button:not([disabled="true"]):hover,
@@ -162,10 +166,11 @@ button.close:hover,
 #item-choose button:hover,
 .unified-extensions-item-menu-button:hover {
 	outline: 0 !important;
-	background: var(--gnome-hover-color) !important;
+	background-color: var(--gnome-hover-color) !important;
 }
 
 /* Active buttons */
+link[href="chrome://global/content/elements/moz-button.css"] + button:active,
 menulist[open],
 .customizationmode-button:is([open], :active),
 .subviewbutton.panel-subview-footer:active,
@@ -189,13 +194,14 @@ menulist[open] .menulist-label-box,
 .button.connect-device:active,
 .searchbar-engine-one-off-item[selected],
 #editBMPanel_newFolderButton:active {
-	background: var(--gnome-button-active-background) !important;
+	background-color: var(--gnome-button-active-background) !important;
 }
 
 /* Active flat buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled="true"]):not(#hack):active,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled="true"])[open],
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled="true"])[checked],
+link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"]:not([disabled="true"]):active,
 .close-icon:not(.tab-close-button):active,
 button.close:active,
 .dialog-button-box button:not([disabled="true"]):active,
@@ -203,7 +209,7 @@ button.close:active,
 .permission-popup-permission-remove-button:active,
 #item-choose button:active,
 .unified-extensions-item-menu-button:active {
-	background: var(--gnome-active-color) !important;
+	background-color: var(--gnome-active-color) !important;
 }
 
 /* Disabled buttons */
