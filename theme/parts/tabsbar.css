@@ -42,8 +42,8 @@ tab > stack {
 	position: relative !important;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]),
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down {
+#scrollbutton-up:has(~ scrollbox[orient="horizontal"]),
+scrollbox[orient="horizontal"] ~ #scrollbutton-down {
 	border-top: 0 !important;
 	position: absolute !important;
 	z-index: 5 !important;
@@ -51,28 +51,28 @@ tab > stack {
 	bottom: 0;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"])[disabled],
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down[disabled] {
+#scrollbutton-up:has(~ scrollbox[orient="horizontal"])[disabled],
+scrollbox[orient="horizontal"] ~ #scrollbutton-down[disabled] {
 	display: none;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]) > .toolbarbutton-icon,
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down > .toolbarbutton-icon{
+#scrollbutton-up:has(~ scrollbox[orient="horizontal"]) > .toolbarbutton-icon,
+scrollbox[orient="horizontal"] ~ #scrollbutton-down > .toolbarbutton-icon{
 	visibility: hidden;
 }
 
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down {
+scrollbox[orient="horizontal"] ~ #scrollbutton-down {
 	right: 0;
 	margin-right: -5px !important;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]) {
+#scrollbutton-up:has(~ scrollbox[orient="horizontal"]) {
 	left: 0;
 	margin-left: -5px !important;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]):not([disabled])::after,
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down:not([disabled])::after {
+#scrollbutton-up:has(~ scrollbox[orient="horizontal"]):not([disabled])::after,
+scrollbox[orient="horizontal"] ~ #scrollbutton-down:not([disabled])::after {
 	content: "";
 	height: 39px;
 	position: absolute;
@@ -82,12 +82,12 @@ tab > stack {
 	pointer-events: none;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]):not([disabled])::after {
+#scrollbutton-up:has(~ scrollbox[orient="horizontal"]):not([disabled])::after {
 	background: linear-gradient(to right, var(--gnome-tabbar-fade-background) 10px, transparent);
 	left: 0;
 	
 }
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down:not([disabled])::after {
+scrollbox[orient="horizontal"] ~ #scrollbutton-down:not([disabled])::after {
 	background: linear-gradient(to left, var(--gnome-tabbar-fade-background) 10px, transparent);
 	right: 0;
 }
