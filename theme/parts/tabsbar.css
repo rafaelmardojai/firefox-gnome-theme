@@ -300,6 +300,10 @@ tab {
 	background: var(--gnome-active-color) !important;
 }
 
+.tab-icon-stack[pinned]:is([soundplaying], [muted], [activemedia-blocked]) {
+	padding: 0 4px !important;
+}
+
 .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) image {
 	 margin: auto !important;
 }
