@@ -284,20 +284,22 @@ tab {
 /* Tab buttons */
 .tab-icon-overlay,
 .tab-close-button {
-	border: 0px solid transparent;
+	border: 0 !important;;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
 	border-radius: 99px !important;
 	padding: 4px !important;
+	background-image: none !important;
+	background-color: transparent !important;
 	background-size: 24px;
 	transition: all 0.2s ease-out !important;
 }
 :root:not(:-moz-window-inactive) .tab-icon-overlay:hover,
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
-	background: var(--gnome-hover-color) !important;
+	background-color: var(--gnome-hover-color) !important;
 }
 :root:not(:-moz-window-inactive) .tab-icon-overlay:active,
 :root:not(:-moz-window-inactive) .tab-close-button:active {
-	background: var(--gnome-active-color) !important;
+	background-color: var(--gnome-active-color) !important;
 }
 
 .tab-icon-stack[pinned]:is([soundplaying], [muted], [activemedia-blocked]) {
@@ -318,6 +320,7 @@ tab {
 	width: 12px !important;
 	height: 12px !important;
 	padding: 2px !important;
+	top: -6px !important;
 }
 /* Icon overlay small style */
 .tab-icon-overlay:is([pinned], [sharing]):not([crashed]) {
