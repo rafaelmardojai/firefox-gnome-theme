@@ -519,7 +519,9 @@ tab {
 
 /* Tabs manager menu */
 #alltabs-button {
-	visibility: collapse;
+	@media (not (-moz-bool-pref: "gnomeTheme.allTabsButton")) {
+		visibility: collapse;
+	}
 	
 	@media (-moz-bool-pref: "browser.tabs.tabmanager.enabled") {
 		#tabbrowser-tabs[overflow] ~ & {
