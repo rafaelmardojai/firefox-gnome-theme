@@ -301,23 +301,20 @@ button.close::before {
 	}
 
 	/* Window buttons */
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
+	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
 		list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon {
+	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-max .toolbarbutton-icon {
 		list-style-image: url("../icons/window-maximize-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
 		list-style-image: url("../icons/window-restore-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	:root[tabsintitlebar][inFullscreen] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
 		list-style-image: url("../icons/view-restore-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
+	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
 		list-style-image: url("../icons/window-minimize-symbolic.svg") !important;
-	}
-	:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
-		list-style-image: url("../icons/view-restore-symbolic.svg") !important;
 	}
 
 	/* Sound icons */
