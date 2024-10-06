@@ -13,7 +13,8 @@
 /* Buttons */
 menulist,
 .customizationmode-button,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
+:root[inFullscreen] .titlebar-button.titlebar-restore,
 link[href="chrome://global/content/elements/moz-button.css"] + button,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
@@ -65,7 +66,8 @@ button.close,
 }
 
 /* Flat Buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
+:root[inFullscreen] .titlebar-button.titlebar-restore,
 link[href="chrome://global/content/elements/moz-button.css"] + button:is([type~="icon"], :has([type~="icon"])),
 .close-icon:not(.tab-close-button),
 .dialog-button-box button,
@@ -78,7 +80,7 @@ button.close,
 }
 
 /* Buttons with margins */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
 .notification-button,
 .subviewbutton.panel-subview-footer:not(:only-of-type),
 .panel-footer button:not(:only-of-type) {
@@ -159,7 +161,8 @@ menulist:hover .menulist-label-box,
 }
 
 /* Hover flat buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([open]):not([disabled="true"]):not([checked]):hover,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not([open]):not([disabled="true"]):not([checked]):hover,
+:root[inFullscreen] .titlebar-button.titlebar-restore:hover,
 link[href="chrome://global/content/elements/moz-button.css"] + button:is([type~="icon"], :has([type~="icon"])):not([disabled="true"], [aria-pressed="true"]):hover,
 .close-icon:not(.tab-close-button):hover,
 button.close:hover,
@@ -202,9 +205,10 @@ menulist[open] .menulist-label-box,
 }
 
 /* Active flat buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled="true"]):not(#hack):active,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled="true"])[open],
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled="true"])[checked],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not([disabled="true"]):not(#hack):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not(.subviewbutton):not([disabled="true"])[open],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not([disabled="true"])[checked],
+:root[inFullscreen] .titlebar-button.titlebar-restore:active,
 link[href="chrome://global/content/elements/moz-button.css"] + button:is([type~="icon"], :has([type~="icon"])):not([disabled="true"]):active,
 link[href="chrome://global/content/elements/moz-button.css"] + button:has(.button-background:not([type~="ghost"])):not([disabled="true"]),
 .close-icon:not(.tab-close-button):active,
@@ -218,7 +222,7 @@ button.close:active,
 }
 
 /* Disabled buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled="true"],
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.titlebar-button)[disabled="true"],
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled="true"],
 #context-navigation menuitem[disabled="true"],
 .dialog-button-box button[disabled="true"] {

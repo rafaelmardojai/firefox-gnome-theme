@@ -2,171 +2,121 @@
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* Headerbar top border corners rounded */
-:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
-	border-radius: env(-moz-gtk-csd-titlebar-radius, 8px) env(-moz-gtk-csd-titlebar-radius, 8px) 0 0 !important;
-}
-
-
-/* Window buttons: at least 1 button */
-@media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
-	:root {
-		--gnome-navbar-csd-offset: 43px;
+:root[tabsintitlebar] {
+	/* Headerbar top border corners rounded */
+	&[sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
+		border-radius: env(-moz-gtk-csd-titlebar-radius, 8px) env(-moz-gtk-csd-titlebar-radius, 8px) 0 0 !important;
 	}
-}
-/* Window buttons: at least 2 buttons */
-@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
-			 (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
-			 (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
-	:root {
-		--gnome-navbar-csd-offset: 80px;
+
+	/* Always show nav bar window buttons*/
+	#nav-bar > .titlebar-buttonbox-container {
+		display: flex !important;
 	}
-}
-/* Window buttons: 3 buttons */
-@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
-	:root {
-		--gnome-navbar-csd-offset: 117px;
+
+	#toolbar-menubar { 
+		/* Prevent menubar from breaking */
+		&:not([inactive=true]) {
+			height: 30px !important;
+			margin-bottom: 8px;
+		}
+
+		/* Always hide menu bar window buttons*/
+		& > .titlebar-buttonbox-container {
+			display: none !important;
+		}
 	}
-}
 
-/* Right window buttons offset by button count */
-:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-	padding-left: 3px !important;
-	padding-right: var(--gnome-navbar-csd-offset) !important;
-}
-/* Fullscreen headerbar padding for 1 button */
-:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #nav-bar {
-	padding-right: 43px !important;
-}
+	&[inFullscreen] {
+		/* Remove close and minimize buttons from fullscreen buttons */
+		.titlebar-buttonbox-container .titlebar-min,
+		.titlebar-buttonbox-container .titlebar-close {
+			display: none !important;
+		}
 
-/* Left window buttons */
-@media (-moz-gtk-csd-reversed-placement) {
-	/* Window controls offset by button count */
-	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-left: var(--gnome-navbar-csd-offset) !important;
-		padding-right: 3px !important;
-	}
-	
-	/* Window buttons box */
-	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
-		left: 0;
-		right: auto !important;
-	}
-	
-	/* Fullscreen headerbar padding for 1 button */
-	:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #nav-bar {
-		padding-left: 50px !important;
-		padding-right: 3px !important
-	}
-}
-
-/* Remove close and minimize buttons from fullscreen buttons */
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container .titlebar-min,
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container .titlebar-close {
-	display: none !important;
-}
-
-/* Force the restore button to appear regardless of maximize button's status */
-:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container {
-	visibility: visible !important;
-}
-:root[tabsintitlebar][inFullscreen]:not([inDOMFullscreen]) #titlebar .titlebar-buttonbox-container .titlebar-restore {
-	display: inherit !important;
-}
-
-/* Remove tabsbar titlebar blank spaces */
-:root[tabsintitlebar] #TabsToolbar .titlebar-placeholder {
-	display: none !important;
-}
-
-/* Prevent menubar from breaking */
-:root[tabsintitlebar] #toolbar-menubar:not([inactive=true]) {
-	height: 30px !important;
-	margin-bottom: 8px;
-}
-
-/* Remove default style of titlebar */
-:root[tabsintitlebar] #titlebar {
-	appearance: none !important;
-}
-
-/* Fix the issue when dragging tabs */
-:root[tabsintitlebar] #navigator-toolbox[movingtab] #TabsToolbar {
-	padding-bottom: 0 !important;
-}
-
-/* Window buttons box */
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
-	appearance: none !important;
-	padding: 5px;
-	position: absolute !important;	
-	right: 0;
-	top: 0;
-	display: block !important;
-}
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox {
-	appearance: none !important;
-}
-
-/* Window buttons style */
-:root[tabsintitlebar]:not([inFullscreen]) #titlebar .titlebar-button {
-	padding: 0 2px !important;
-	background: var(--gnome-button-background) !important;
-	transition: background 0.3s;
-}
-
-:root[tabsintitlebar] #titlebar .titlebar-button {
-	border-radius: 100% !important;
-	height: 24px !important;
-	width: 24px !important;
-	margin: 6px 6px !important;
-}
-
-@media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
-	:root[tabsintitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
-		appearance: none !important;
-		height: 16px !important;
-		padding: 0 !important;
-		stroke: none !important;
-		width: 16px !important;
-		-moz-context-properties: fill, fill-opacity !important;
-	}
-}
-
-.titlebar-button { /* Override config */
-	@media (-moz-bool-pref: "widget.gtk.non-native-titlebar-buttons.enabled") {
-		&:-moz-lwtheme {
-			& > .toolbarbutton-icon {
-				appearance: auto !important
+		/* Force the restore button to appear regardless of maximize button's status */
+		&:not([inDOMFullscreen]) {
+			.titlebar-buttonbox-container {
+				visibility: visible !important;
+			}
+			.titlebar-restore {
+				display: inherit !important;
 			}
 		}
 	}
-}
 
-:root[tabsintitlebar] #titlebar .titlebar-button:not([disabled]):hover {
-	background: var(--gnome-button-hover-background) !important;
-}
-:root[tabsintitlebar] #titlebar .titlebar-button:hover > .toolbarbutton-icon {
-	background: none !important;
-}
-:root[tabsintitlebar] #titlebar .titlebar-button:not([disabled]):active {
-	background: var(--gnome-button-active-background) !important;
-}
+	&:not([inFullscreen]) {
+		.titlebar-buttonbox-container {
+			padding: 0 8px;
+		}
 
-:root[tabsintitlebar] #titlebar .titlebar-button:-moz-window-inactive {
-	filter: opacity(0.5);
-}
+		/* Window buttons style */
+		.titlebar-button {
+			background: var(--gnome-button-background) !important;
+			border-radius: 100% !important;
+			height: 24px !important;
+			transition: background 0.3s;
+			width: 24px !important;
 
-/* Restore button (fullscreen) */
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container {
-	padding: 0 !important;
-}
+			&:not([disabled]):hover {
+				background: var(--gnome-button-hover-background) !important;
 
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-button {
-	border-radius: 6px !important;
-	height: 34px !important;
-	width: 34px !important;
-	transition: background .3s;
+				& > .toolbarbutton-icon {
+					background: none !important;
+				}
+			}
+
+			&:not([disabled]):active {
+				background: var(--gnome-button-active-background) !important;
+			}
+
+			&::-moz-window-inactive {
+				filter: opacity(0.5);
+			}
+		}
+	}
+
+	.titlebar-buttonbox-container {
+		align-items: center;
+		padding: 0 3px;
+
+		.titlebar-buttonbox {
+			appearance: none !important;
+			gap: 13px;
+
+			.titlebar-button {
+				appearance: none !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				
+				&:hover > .toolbarbutton-icon {
+					background: none !important;
+				}				
+
+				@media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
+					& > .toolbarbutton-icon {
+						appearance: none !important;
+						height: 16px !important;
+						padding: 0 !important;
+						stroke: none !important;
+						width: 16px !important;
+						-moz-context-properties: fill, fill-opacity !important;
+					}
+				}
+
+				@media (-moz-bool-pref: "widget.gtk.non-native-titlebar-buttons.enabled") {
+					&:-moz-lwtheme { /* Override config */
+						& > .toolbarbutton-icon {
+							appearance: auto !important
+						}
+					}
+				}
+			}
+		}
+	}	
+
+	.titlebar-spacer {
+		display: none;
+	}
 }
 
 /* OPTIONAL: Allow draging the window from headerbar buttons */
