@@ -571,6 +571,14 @@ tab {
 	}
 }
 
+/* OPTIONAL: Align tab items left */
+@media (-moz-bool-pref: "gnomeTheme.tabAlignLeft") {
+	.tabbrowser-tab:not([pinned]) .tab-icon-stack {
+		margin-left: 0 !important;
+		padding: 0 5px !important;
+	}
+}
+
 /* OPTIONAL: Hide single tab */
 @media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
