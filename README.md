@@ -284,6 +284,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 	Show the `List All Tabs` button all the time, like stock Firefox.
 	
 	> **Note:** If you like it to only show up when the tabs overflow (when you have too many tabs that the width of the tabs no longer shrinks when new tabs are added), set `browser.tabs.tabmanager.enabled` to `true` instead.
+    
+- **Align tab title and icon to left** `gnomeTheme.tabAlignLeft`
+
+	Align the tab title and favicon to left of tab in place of center.
 
 ### Extensions support
 
