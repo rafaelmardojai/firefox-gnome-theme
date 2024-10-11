@@ -559,14 +559,16 @@ button.close::before {
 	#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
 		list-style-image: url("../icons/padlock-symbolic.svg") !important;
 	}
+	#identity-box[pageproxystate="valid"].notSecure #identity-icon,
+	#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
+	#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon,
+	#identity-box[pageproxystate="valid"].certUserOverridden #identity-icon {
+			list-style-image: url("../icons/padlock-insecure-symbolic.svg") !important;
+	}
 	#identity-popup[connection^="secure"] .identity-popup-security-connection {
 		list-style-image: url("../icons/padlock-symbolic.svg") !important;
 	}
-	#identity-box[pageproxystate="valid"].notSecure #identity-icon,
-	#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
-	#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon {
-			list-style-image: url("../icons/padlock-insecure-symbolic.svg") !important;
-	}
+	#identity-popup[connection="secure-cert-user-overridden"] .identity-popup-security-connection,
 	.identity-popup-security-connection {
 		list-style-image: url("../icons/padlock-insecure-symbolic.svg") !important;
 	}
