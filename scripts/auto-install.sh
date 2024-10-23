@@ -8,6 +8,7 @@ firefoxInstallationPaths=(
     ~/.mozilla/firefox # Package
     ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
     ~/snap/firefox/common/.mozilla/firefox # Snap
+    "$HOME/Library/Application Support/Firefox" # MacOS Package
 
     # Librewolf
     ~/.librewolf # Package
@@ -34,10 +35,10 @@ for i in "${!sysThemeNames[@]}"; do
 done
 
 for folder in "${firefoxInstallationPaths[@]}"; do
-    if [ -d $folder ]; then
+    if [ -d "$folder" ]; then
     echo Firefox installation folder found
 
-    folderArg=" -f $folder"
+    folderArg=" -f \"$folder\""
     eval ${installScript}${themeArg}${folderArg}   
     foldersFoundCount+=1
 
