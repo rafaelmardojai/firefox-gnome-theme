@@ -107,8 +107,16 @@ function saveProfile(){
 
 	echo "Set configuration to user.js file" >&2
 
-	mapfile -t theme_prefs < <( grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js )
-	mapfile -t theme_prefs_unvalued < <( grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js|cut -d'"' -f 2 )
+  theme_prefs=()
+  while IFS= read -r line; do
+    theme_prefs+=("$line")
+  done < <(grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js)
+  
+  theme_prefs_unvalued=()
+  while IFS= read -r line; do
+    theme_prefs_unvalued+=("$line")
+  done < <(grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js | cut -d'"' -f 2)
+
 	if [ ! -f "user.js" ]; then
 		mv chrome/firefox-gnome-theme/configuration/user.js .
 	else
