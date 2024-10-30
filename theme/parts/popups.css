@@ -36,12 +36,8 @@ menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
 menuitem[type="radio"] .menu-iconic-icon {
 	appearance: none !important;
 }
-menuitem:not(.menuitem-iconic) {
-	padding-right: 18px !important;
-}
-menuitem :is(label, description)[value][crop]::before,
-.menu-iconic-text[value][crop]::before {
-	min-width: min-content !important;
+menuitem {
+	padding-inline-end: 18px !important;
 }
 menuitem:not([acceltext]) .menu-accel-container {
 	visibility: collapse !important;
