@@ -28,10 +28,7 @@ toolbarspring {
 }
 
 #urlbar[breakout][breakout-extend] {
-	left: 0 !important;
-	top: 0 !important;
-	width: 100% !important;
-	z-index: 5 !important;
+	width: var(--urlbar-width) !important;
 }
 
 #urlbar .urlbar-input-container {
@@ -47,10 +44,10 @@ toolbarspring {
 	background: transparent !important;
 	color: var(--gnome-window-color) !important;
 	margin: 11px 0 0 -3px !important;
-	width: 100% !important;
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
     border-radius: 12px !important;
+	width: 100%;
 }
 
 /* Search bar result */
