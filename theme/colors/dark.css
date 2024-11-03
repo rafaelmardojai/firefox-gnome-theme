@@ -7,8 +7,7 @@
 @media (prefers-color-scheme: dark) {	
 	:root {
 		/* Accent */
-		--gnome-accent-bg: var(--gnome-palette-blue-3);
-		--gnome-accent: #78aeed;
+		--gnome-standalone-color-oklab: max(l, 0.85) a b;
 
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
