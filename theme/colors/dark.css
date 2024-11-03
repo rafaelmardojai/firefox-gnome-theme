@@ -6,8 +6,9 @@
  * override them. */
 @media (prefers-color-scheme: dark) {	
 	:root {
-		/* Accent */
+		/* Colors */
 		--gnome-standalone-color-oklab: max(l, 0.85) a b;
+		--gnome-destructive-bg: var(--gnome-palette-red-4);
 
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 

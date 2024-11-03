@@ -53,10 +53,12 @@
 	--gnome-palette-dark-4: #241f31;
 	--gnome-palette-dark-5: #000000;
 	
-	/* Accent */
+	/* Colors */
 	--gnome-standalone-color-oklab: min(l, 0.5) a b;
 	--gnome-accent-bg: AccentColor;
 	--gnome-accent: oklab(from var(--gnome-accent-bg) var(--gnome-standalone-color-oklab));
+	--gnome-destructive-bg: var(--gnome-palette-red-3);
+	--gnome-destructive: oklab(from var(--gnome-destructive-bg) var(--gnome-standalone-color-oklab));
 
 	--gnome-selection-bg: color-mix(in srgb, var(--gnome-accent-bg) 30%, transparent);
 	--gnome-toolbar-star-button: var(--gnome-palette-yellow-5);
@@ -108,8 +110,13 @@
 	--gnome-button-background: color-mix(in srgb, currentColor 10%, transparent);
 	--gnome-button-hover-background: color-mix(in srgb, currentColor 15%, transparent);
 	--gnome-button-active-background: color-mix(in srgb, currentColor 30%, transparent);
-	--gnome-button-suggested-action-background: var(--gnome-accent-bg);
-	--gnome-button-destructive-action-background: #e01b24;
+	--gnome-button-checked-background: var(--gnome-button-active-background);
+	--gnome-button-checked-hover-background: color-mix(in srgb, currentColor 35%, transparent);
+	--gnome-button-checked-active-background: color-mix(in srgb, currentColor 40%, transparent);
+	--gnome-button-suggested-background: var(--gnome-accent-bg);
+	--gnome-button-destructive-background: color-mix(in srgb, currentColor 15%, transparent);
+	--gnome-button-destructive-hover-background: color-mix(in srgb, currentColor 20%, transparent);
+	--gnome-button-destructive-active-background: color-mix(in srgb, currentColor 35%, transparent);
 
 	/* Entries */
 	--gnome-entry-background: var(--gnome-button-background);
