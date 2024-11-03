@@ -2,8 +2,8 @@
 
 /* Icons light/dark fix coloring hack filters */
 :root {
-	--gnome-icons-hack-filter: filter: brightness(0) saturate(100%) invert(37%) sepia(8%) saturate(683%) hue-rotate(183deg) brightness(95%) contrast(84%);
-	--gnome-window-icons-hack-filter: filter: brightness(0) saturate(100%) invert(37%) sepia(8%) saturate(683%) hue-rotate(183deg) brightness(95%) contrast(84%);
+	--gnome-icons-hack-filter: brightness(0) saturate(100%) invert(37%) sepia(8%) saturate(683%) hue-rotate(183deg) brightness(95%) contrast(84%);
+	--gnome-window-icons-hack-filter: brightness(0) saturate(100%) invert(37%) sepia(8%) saturate(683%) hue-rotate(183deg) brightness(95%) contrast(84%);
 }
 @media (prefers-color-scheme: dark) {
 	:root {
