@@ -54,8 +54,9 @@
 	--gnome-palette-dark-5: #000000;
 	
 	/* Accent */
-	--gnome-accent-bg: var(--gnome-palette-blue-3);
-	--gnome-accent: var(--gnome-palette-blue-4);
+	--gnome-standalone-color-oklab: min(l, 0.5) a b;
+	--gnome-accent-bg: AccentColor;
+	--gnome-accent: oklab(from var(--gnome-accent-bg) var(--gnome-standalone-color-oklab));
 
 	--gnome-selection-bg: color-mix(in srgb, var(--gnome-accent-bg) 30%, transparent);
 	--gnome-toolbar-star-button: var(--gnome-palette-yellow-5);
