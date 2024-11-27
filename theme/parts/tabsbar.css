@@ -634,13 +634,10 @@ tab {
 /* OPTIONAL: Use tabs as headerbar */
 @media (-moz-bool-pref: "gnomeTheme.tabsAsHeaderbar") {
 	/* Rearrange bars */
-	#navigator-toolbox #titlebar {
+	#navigator-toolbox #TabsToolbar {
 		order: 0;
 	}
-	#navigator-toolbox #titlebar #TabsToolbar {
-		order: 0;
-	}
-	#navigator-toolbox #titlebar #toolbar-menubar {
+	#navigator-toolbox #toolbar-menubar {
 		order: 1;
 	}
 	#navigator-toolbox #nav-bar {
@@ -655,6 +652,10 @@ tab {
 			order: 2 !important;
 		}
 	}
+	
+	#TabsToolbar {
+		padding: 6px 3px 0 !important;
+	}
 
 	/* Padding should be removed on the side touching the URL bar */
 	.tabbrowser-tab {
@@ -668,11 +669,6 @@ tab {
 	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar { 
 		border-radius: 0 !important; 
 	 } 
-	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar,
-	:root[tabsintitlebar][inFullscreen] #nav-bar {
-		padding-left: 3px !important;
-		padding-right: 3px !important;
-	}
 	
 	/* Round and pad tab-bar */
 	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #TabsToolbar {
@@ -682,8 +678,8 @@ tab {
 		padding: 0 46px;
 	}
 	
-	/* Hide duplicate window controls from menubar */
-	:root[tabsintitlebar] #toolbar-menubar .titlebar-buttonbox-container {
+	/* Hide duplicate window controls from navbar */
+	:root[tabsintitlebar] #nav-bar .titlebar-buttonbox-container {
 		display: none !important;
 	}
 	
