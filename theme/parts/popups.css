@@ -228,6 +228,7 @@ menuitem[disabled="true"][_moz-menuactive], menupopup menu[disabled="true"][_moz
 /* Menu buttons hover */
 menuitem:not([disabled="true"]):is(:hover, [_moz-menuactive]),
 menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
+panelview .toolbarbutton-1:hover,
 .subviewbutton:not([disabled="true"], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
 .protections-popup-footer-button:not([disabled="true"]):hover,
 #protections-popup-show-report-stack:hover .protections-popup-footer-button,
