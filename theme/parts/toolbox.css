@@ -63,30 +63,15 @@ findbar:-moz-window-inactive description,
 #navigator-toolbox #PersonalToolbar {
 	order: 2;
 }
-#navigator-toolbox #titlebar {
+#navigator-toolbox #TabsToolbar {
 	order: 3;
 }
+
 #tab-notification-deck {
 	order: 100;
 }
 .notificationbox-stack {
 	order: 1000;
-}
-
-#navigator-toolbox #TabsToolbar {
-	order: 100;
-}
-
-/* Overrides: Don't shift other toolbars on tab drag and drop */
-#TabsToolbar[movingtab] {
-	padding-bottom: 0 !important;
-}
-#TabsToolbar[movingtab] > .tabbrowser-tabs {
-	padding-bottom: 0 !important;
-	margin-bottom: 0 !important;
-}
-#TabsToolbar[movingtab] + #nav-bar {
-	margin-top: 0 !important;
 }
 
 /* Content notifications */
@@ -161,10 +146,10 @@ findbar:-moz-window-inactive description,
 
 /* OPTIONAL: Move Bookmarks toolbar under tabs */
 @media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
-	#navigator-toolbox #titlebar {
-		order: 2 !important;
-	}
 	#navigator-toolbox #PersonalToolbar {
-		order: 3 !important;
+		order: 3;
+	}
+	#navigator-toolbox #TabsToolbar {
+		order: 2;
 	}
 }
