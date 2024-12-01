@@ -503,17 +503,13 @@ tabs#tabbrowser-tabs {
 
 /* Tab spinner */
 .tab-throbber::before {
-	animation: gnome-spinner 1s linear infinite !important;
-	background-image: url("../icons/process-working-symbolic.svg") !important;
+	animation: none !important;
+	background-image: url("../icons/spinner.png") !important;
+	background-size: 16px;
 	width: 16px !important;
 	opacity: 1 !important;
-}
-@keyframes gnome-spinner {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
+	@media (prefers-color-scheme: dark) {
+		background-image: url("../icons/spinner-dark.png") !important;
 	}
 }
 
@@ -582,7 +578,6 @@ tabs#tabbrowser-tabs {
 		}		
 	}
 }
-
 
 /* OPTIONAL: Use tabs as headerbar */
 @media (-moz-bool-pref: "gnomeTheme.tabsAsHeaderbar") and (not (-moz-bool-pref: "sidebar.verticalTabs")) {
