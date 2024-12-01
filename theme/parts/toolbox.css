@@ -128,7 +128,7 @@ findbar:-moz-window-inactive description,
 }
 
 /* Text link */
-.text-link {
+.text-link, a {
 	color: var(--gnome-accent) !important;
 }
 
