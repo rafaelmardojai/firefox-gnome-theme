@@ -573,12 +573,13 @@ tabs#tabbrowser-tabs {
 
 /* OPTIONAL: Hide single tab */
 @media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
-	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
-		tab,
-		tab ~ toolbarbutton,
-		tab ~ #tabbrowser-arrowscrollbox-periphery
-	) {
-		visibility: collapse;
+	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
+		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
+			visibility: collapse;
+		}
+		~ #alltabs-button {
+			visibility: collapse;
+		}		
 	}
 }
 
