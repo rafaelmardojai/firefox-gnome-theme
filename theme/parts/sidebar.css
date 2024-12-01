@@ -61,5 +61,33 @@
 		border: 0 !important;
 		border-radius: 0 !important;;
 		box-shadow: none !important;
+	}	
+
+	/* Settings lists */
+	/* TODO: Move to lists.css when revamp is released */
+	.customize-group .extensions,
+	link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #inputs {
+		background: var(--gnome-card-background) !important;
+		border: 0 !important;
+		border-radius: 12px !important;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px 1px rgba(0, 0, 0, .07), 0 2px 6px 2px rgba(0, 0, 0, .03);
+		margin-top: 12px !important;
+		padding: 0 !important;
+	}
+
+	moz-checkbox, moz-radio, .customize-group .extension-item {
+		align-items: center;
+		padding: 0 12px !important;
+		min-height: 50px !important;
+
+		&:not(:last-of-type) {
+			border-bottom: 1px solid var(--gnome-card-shade-color) !important;
+		}
+	}
+
+	link[href="chrome://global/content/elements/moz-input-common.css"] ~ label {
+		align-items: center;
+		display: flex !important;
+		gap: 6px;
 	}
 }
