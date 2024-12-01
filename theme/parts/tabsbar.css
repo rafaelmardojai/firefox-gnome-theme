@@ -115,15 +115,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	margin-inline: 0 !important;
 }
 
-/* Remove spacing between pinned tabs and first tab */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-	margin-inline-start: 0 !important;
-}
-
-/* Tab */
+/* Tabs */
 tabs#tabbrowser-tabs {
 	&[orient="horizontal"] {
-		/* Tabs */
+		/* Tab */
 		tab {
 			border-color: transparent !important;
 			border-left-width: 1px !important;
@@ -422,6 +417,11 @@ tabs#tabbrowser-tabs {
 	}
 }
 
+/* Remove spacing between pinned tabs and first tab */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+	margin-inline-start: 0 !important;
+}
+
 /* Always display close icon (hidden) */
 #tabbrowser-tabs[closebuttons="activetab"] .tab-close-button:not([pinned]) {
 	display: block !important;
@@ -523,7 +523,7 @@ tabs#tabbrowser-tabs {
 		visibility: collapse;
 	}
 	
-	@media (-moz-bool-pref: "browser.tabs.tabmanager.enabled") {
+	@media (-moz-bool-pref: "browser.tabs.tabmanager.enabled"), (-moz-bool-pref: "gnomeTheme.allTabsButtonOnOverflow") {
 		#tabbrowser-tabs[overflow] ~ & {
 			visibility: visible;
 		}
