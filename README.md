@@ -40,11 +40,9 @@ We also have the `beta` and `nightly` branches for fixes only applicable to the 
 
 The most friendly way to get this theme is using the **Add Water** app.
 
-<div align='center'>
-    <a href='https://flathub.org/apps/dev.qwery.AddWater'>
-        <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
-    </a>
-</div>
+<a href='https://flathub.org/apps/dev.qwery.AddWater'>
+    <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
+</a>
 
 ## One command install with curl
 
