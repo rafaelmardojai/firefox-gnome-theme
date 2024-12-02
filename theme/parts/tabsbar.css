@@ -120,6 +120,7 @@ tabs#tabbrowser-tabs {
 	&[orient="horizontal"] {
 		/* Tab */
 		tab {
+			box-sizing: content-box;
 			border-color: transparent !important;
 			border-left-width: 1px !important;
 			border-style: solid !important;
