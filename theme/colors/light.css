@@ -59,6 +59,13 @@
 	--gnome-accent: oklab(from var(--gnome-accent-bg) var(--gnome-standalone-color-oklab));
 	--gnome-destructive-bg: var(--gnome-palette-red-3);
 	--gnome-destructive: oklab(from var(--gnome-destructive-bg) var(--gnome-standalone-color-oklab));
+	--gnome-success-bg: var(--gnome-palette-green-4);
+	--gnome-success: oklab(from var(--gnome-success-bg) var(--gnome-standalone-color-oklab));
+	--gnome-warning-bg: var(--gnome-palette-yellow-5);
+	--gnome-warning: oklab(from var(--gnome-warning-bg) var(--gnome-standalone-color-oklab));
+	--gnome-error-bg: var(--gnome-palette-red-3);
+	--gnome-error: oklab(from var(--gnome-error-bg) var(--gnome-standalone-color-oklab));
+	--gnome-focus-border-color: color-mix(in srgb, var(--gnome-accent) 50%, transparent);
 
 	--gnome-selection-bg: color-mix(in srgb, var(--gnome-accent-bg) 30%, transparent);
 	--gnome-toolbar-star-button: var(--gnome-palette-yellow-5);

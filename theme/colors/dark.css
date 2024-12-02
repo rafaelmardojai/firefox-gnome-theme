@@ -9,6 +9,9 @@
 		/* Colors */
 		--gnome-standalone-color-oklab: max(l, 0.85) a b;
 		--gnome-destructive-bg: var(--gnome-palette-red-4);
+		--gnome-success-bg: var(--gnome-palette-green-5);
+		--gnome-warning-bg: #cd9309;
+		--gnome-error-bg: var(--gnome-palette-red-4);
 
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
