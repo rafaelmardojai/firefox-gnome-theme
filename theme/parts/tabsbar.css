@@ -317,10 +317,10 @@ tabs#tabbrowser-tabs {
 
 			/* Tab hover */
 			&:hover {
-				.tab-background:not(:-moz-window-inactive) {
+				.tab-background {
 					background-color: var(--gnome-tabbar-tab-hover-background) !important;
 					border-image: none !important;
-					&[selected] {
+					&[selected]:not(:-moz-window-inactive) {
 						background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 					}
 				}

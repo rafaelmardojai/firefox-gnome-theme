@@ -17,6 +17,9 @@
 	appearance: none !important;
 	border: 0 !important;
 	background: var(--gnome-toolbar-background) !important;
+	&:-moz-window-inactive {
+		opacity: 1 !important;
+	}
 }
 findbar {
 	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
@@ -37,7 +40,7 @@ findbar:-moz-window-inactive label,
 findbar:-moz-window-inactive description,
 #viewButton:-moz-window-inactive dropmarker,
 .container.infobar:-moz-window-inactive {
-	opacity: 0.7 !important;
+	opacity: 0.5 !important;
 }
 
 #toolbar-menubar:not([inactive=true]) {
