@@ -129,6 +129,11 @@ findbar:-moz-window-inactive description,
 	border-image-source: none !important;
 	border-color: var(--gnome-tabbar-tab-separator-color) !important;
 }
+@media (-moz-bool-pref: "gnomeTheme.bookmarksOnFullscreen") { /* OPTIONAL: Show bookmarks bar while in fullscreen  */
+	:root[inFullscreen] #PersonalToolbar{
+		visibility: visible !important;
+	}
+}
 
 /* Text link */
 .text-link, a {

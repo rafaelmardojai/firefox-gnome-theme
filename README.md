@@ -294,6 +294,10 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 - **Align tab title and icon to left** `gnomeTheme.tabAlignLeft`
 
 	Align the tab title and favicon to left of tab in place of center.
+	
+- **Bookmarks bar in fullscreen** `gnomeTheme.bookmarksOnFullscreen`
+
+	 Show the bookmarks bar while in fullscreen.
 
 ### Extensions support
 
