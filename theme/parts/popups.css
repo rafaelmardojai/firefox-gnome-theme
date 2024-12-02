@@ -37,6 +37,7 @@ menuitem[type="radio"] .menu-iconic-icon {
 	appearance: none !important;
 }
 menuitem {
+	margin-inline: 0 !important;
 	padding-inline-end: 18px !important;
 }
 menuitem:not([acceltext]) .menu-accel-container {
