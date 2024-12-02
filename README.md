@@ -38,12 +38,13 @@ We also have the `beta` and `nightly` branches for fixes only applicable to the 
 
 # Installation
 
-## Package managers
+The most friendly way to get this theme is using the **Add Water** app.
 
-### Arch Linux
-
-1. Install the [AUR package](https://aur.archlinux.org/packages/firefox-gnome-theme) `firefox-gnome-theme` 
-2. Follow the instructions at `cat /usr/share/doc/firefox-gnome-theme/INSTALL.md`
+<div align='center'>
+    <a href='https://flathub.org/apps/dev.qwery.AddWater'>
+        <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
+    </a>
+</div>
 
 ## One command install with curl
 
@@ -124,6 +125,13 @@ If you want to checkout the theme version tag matching you Firefox version you c
 git checkout v$(firefox --version | cut -d ' ' -f 3 | cut -d '.' -f 1) # Using Firefox version
 ```
 </details>
+
+## Package managers
+
+### Arch Linux
+
+1. Install the [AUR package](https://aur.archlinux.org/packages/firefox-gnome-theme) `firefox-gnome-theme` 
+2. Follow the instructions at `cat /usr/share/doc/firefox-gnome-theme/INSTALL.md`
 
 <details>
     <summary>Manual installation</summary>
