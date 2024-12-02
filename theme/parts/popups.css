@@ -31,7 +31,6 @@ menulist {
 	margin: 0 !important;
 	min-height: 45px !important;
 }
-
 menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
 menuitem[type="radio"] .menu-iconic-icon {
 	appearance: none !important;
@@ -41,6 +40,10 @@ menuitem {
 }
 menu, menuitem {
 	margin-inline: 0 !important;
+	&:where([_moz-menuactive]:not([disabled="true"])) {
+		color: currentColor;
+		background-color: transparent !important;
+	}
 }
 menuitem:not([acceltext]) .menu-accel-container {
 	visibility: collapse !important;
