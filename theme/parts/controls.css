@@ -43,6 +43,11 @@ radio > .radio-check {
 	height: 20px !important;
 	padding: 3px !important;
 	width: 20px !important;
+	
+	radiogroup:focus-visible radio[focused] > & {
+		outline: 2px solid var(--gnome-focus-border-color) !important;
+		outline-offset: 2px !important;
+	}
 }
 input[type="radio"][aria-checked="false"],
 radio > .radio-check:not([selected]) {
@@ -61,6 +66,10 @@ radio > .radio-check[selected] {
 	background-position: center;
 	fill: white !important;
 	-moz-context-properties: fill;
+}
+
+.radio-label-box {
+	outline: 0 !important;
 }
 
 .radio-label {
