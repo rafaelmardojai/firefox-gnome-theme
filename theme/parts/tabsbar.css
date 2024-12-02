@@ -381,7 +381,7 @@ tabs#tabbrowser-tabs {
 		}
 		
 		/* Tabs separators */
-		:root[dir="ltr"] {
+		:root[dir="ltr"] & {
 			tab:not(:first-of-type, [selected], :hover) {
 				--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
 				--gnome-tabbar-tab-separator-hack1: linear-gradient(
