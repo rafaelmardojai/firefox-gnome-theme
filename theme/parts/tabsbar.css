@@ -80,12 +80,12 @@ scrollbox[orient="horizontal"] ~ #scrollbutton-down > .toolbarbutton-icon{
 
 scrollbox[orient="horizontal"] ~ #scrollbutton-down {
 	right: 0;
-	margin-right: -5px !important;
+	margin-inline-end: -5px !important;
 }
 
 #scrollbutton-up:has(~ scrollbox[orient="horizontal"]) {
 	left: 0;
-	margin-left: -5px !important;
+	margin-inline-start: -5px !important;
 }
 
 #scrollbutton-up:has(~ scrollbox[orient="horizontal"]):not([disabled])::after,
@@ -162,8 +162,8 @@ tabs#tabbrowser-tabs {
 				.tab-label-container {
 					min-width: 0 !important;
 					max-width: min-content !important;
-					&:not([pinned]) {
-						margin-right: -16px;
+					:root[dir="ltr"] &:not([pinned]) {
+						margin-inline-end: -16px;
 					}
 					
 					/* Hide secondary label, muted, playing, etc */
@@ -175,12 +175,12 @@ tabs#tabbrowser-tabs {
 				/* Tab icon */
 				.tab-icon-stack {
 					&:not([pinned]) {
-						margin-left: auto !important;
-						margin-right: 2px;
+						margin-inline-start: auto !important;
+						margin-inline-end: 2px;
 
 						@media (-moz-bool-pref: "gnomeTheme.tabAlignLeft") {
 							/* OPTIONAL: Align tab items left */
-							margin-left: 0 !important;
+							margin-inline-start: 0 !important;
 							padding: 0 5px !important;
 						}
 						
@@ -207,8 +207,8 @@ tabs#tabbrowser-tabs {
 					fill-opacity: 1 !important;
 					height: 16px !important;
 					list-style-image: url("../icons/window-close-symbolic.svg") !important;
-					margin-left: auto;
-					margin-right: 0 !important;
+					margin-inline-start: auto;
+					margin-inline-end: 0 !important;
 					opacity: 1 !important;
 					width: 16px !important;
 					z-index: 100 !important;
@@ -292,6 +292,9 @@ tabs#tabbrowser-tabs {
 				&:not([pinned])[selected]::before {
 					opacity: 1;
 					--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
+				}
+				:root[dir="rtl"] &:not([pinned])::before {
+					display: none;
 				}
 			}
 
@@ -378,36 +381,38 @@ tabs#tabbrowser-tabs {
 		}
 		
 		/* Tabs separators */
-		tab:not(:first-of-type, [selected], :hover) {
-			--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
-			--gnome-tabbar-tab-separator-hack1: linear-gradient(
-				to bottom,
-				var(--gnome-tabbar-tab-separator-hack0) 0,
-				var(--gnome-tabbar-tab-separator-hack0) 3px,
-				var(--gnome-tabbar-tab-separator-color) 3px,
-				var(--gnome-tabbar-tab-separator-color) 31px,
-				var(--gnome-tabbar-tab-separator-hack0) 31px,
-				var(--gnome-tabbar-tab-separator-hack0) 40px
-			) 1;
-			border-image: var(--gnome-tabbar-tab-separator-hack1);
-		}
-		tab[selected] ~ tab:not([hidden="true"]) {
-			border-image: none;
-		}
-		tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
-			border-image: var(--gnome-tabbar-tab-separator-hack1);
-		}
-		tab:hover ~ tab:not([hidden="true"]) {
-			border-image: none !important;
-		}
-		tab:hover ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
-			border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
-		}
-		tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) {
-			border-image: none !important;
-		}
-		tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
-			border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
+		:root[dir="ltr"] {
+			tab:not(:first-of-type, [selected], :hover) {
+				--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
+				--gnome-tabbar-tab-separator-hack1: linear-gradient(
+					to bottom,
+					var(--gnome-tabbar-tab-separator-hack0) 0,
+					var(--gnome-tabbar-tab-separator-hack0) 3px,
+					var(--gnome-tabbar-tab-separator-color) 3px,
+					var(--gnome-tabbar-tab-separator-color) 31px,
+					var(--gnome-tabbar-tab-separator-hack0) 31px,
+					var(--gnome-tabbar-tab-separator-hack0) 40px
+				) 1;
+				border-image: var(--gnome-tabbar-tab-separator-hack1);
+			}
+			tab[selected] ~ tab:not([hidden="true"]) {
+				border-image: none;
+			}
+			tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
+				border-image: var(--gnome-tabbar-tab-separator-hack1);
+			}
+			tab:hover ~ tab:not([hidden="true"]) {
+				border-image: none !important;
+			}
+			tab:hover ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
+				border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
+			}
+			tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) {
+				border-image: none !important;
+			}
+			tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
+				border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
+			}			
 		}
 	}
 	
@@ -550,19 +555,19 @@ tabs#tabbrowser-tabs {
 	/* Reorder and fix alignment */
 	.tab-icon-stack {
 		order: 1 !important;
-		margin-left: 0 !important;
+		margin-inline-start: 0 !important;
 	}
 	.tab-label-container {
 		order: 2 !important;
-		margin-right: auto !important;
+		margin-inline-end: auto !important;
 	}
 	.tab-close-button {
 		order: 0 !important;
-		margin-left: 0 !important;
+		margin-inline-start: 0 !important;
 	}
 	
 	/* Overlay is nor longer needed */
-	.tabbrowser-tab:not([pinned]) .tab-content::before {
+	:root[dir="ltrl"] .tabbrowser-tab:not([pinned]) .tab-content::before {
 		display: none !important;
 	}
 }
@@ -642,7 +647,7 @@ tabs#tabbrowser-tabs {
 		position: static !important;
 		visibility: visible !important;
 	}
-	
+
 	/* Blend single tab into whole bar */
 	@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
 		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
@@ -665,8 +670,8 @@ tabs#tabbrowser-tabs {
 		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
 			--gnome-tabbar-tab-close-overlay-bg: unset !important;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-labelk-container[textoverflow="true"] {
-			margin-right: -16px;
+		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
+			margin-inline-end: -16px;
 		}
 		/* Override normal width tabs */
 		@media (-moz-bool-pref: "gnomeTheme.normalWidthTabs") {

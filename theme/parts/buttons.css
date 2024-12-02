@@ -237,10 +237,10 @@ menulist,
 .findbar-button:not(:last-of-type),
 .search-panel-one-offs .searchbar-engine-one-off-item:not(:last-child),
 .popup-notification-secondary-button:not([dropmarkerhidden="true"]):not(#hack) {
-	border-top-right-radius: 0 !important;
-	border-bottom-right-radius: 0 !important;
+	border-start-end-radius: 0 !important;
+	border-end-end-radius: 0 !important;
 	border-right-width: 0 !important;
-	margin-right: 0 !important;
+	margin-inline-end: 0 !important;
 }
 
 #nav-bar .toolbaritem-combined-buttons:not(.unified-extensions-item) toolbarbutton:not(:first-of-type):not(#hack),
@@ -251,9 +251,9 @@ menulist,
 .findbar-button:not(:first-of-type),
 .search-panel-one-offs .searchbar-engine-one-off-item:not(:first-child),
 .popup-notification-dropmarker:not(#hack) {
-	border-top-left-radius: 0 !important;
-	border-bottom-left-radius: 0 !important;
-	margin-left: 0 !important;
+	border-end-start-radius: 0 !important;
+	border-start-start-radius: 0 !important;
+	margin-inline-start: 0 !important;
 }
 
 #nav-bar .toolbaritem-combined-buttons:not(.unified-extensions-item) {
