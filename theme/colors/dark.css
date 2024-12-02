@@ -51,30 +51,28 @@
 		--gnome-private-in-content-page-background: #242424;
 		/* Private browsing info box */
 		--gnome-private-text-primary-color: #FBFBFE;
-	}
-
-	/* Backdrop colors */
-	:root:-moz-window-inactive {
-		--gnome-tabbar-tab-hover-background: #2c2c2c; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background: #2e2e2e; /* Hardcoded color */
-	}
-
-	/* Private colors */
-	:root[privatebrowsingmode="temporary"] {
-		--gnome-accent-fg: #78aeed;
-		/* Headerbar */
-		--gnome-headerbar-background: #252F49 !important;
-		/* Tabs */	
-		--gnome-tabbar-tab-hover-background: #343e56; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background: #343e56; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background-contrast: #495675; /* Hardcoded color */
-		--gnome-tabbar-tab-active-hover-background: #414a61; /* Hardcoded color */
-	}
-
-	/* Private and backdrop colors */
-	:root[privatebrowsingmode="temporary"]:-moz-window-inactive {
-		--gnome-headerbar-background: #252F49 !important;
-		--gnome-tabbar-tab-hover-background: #242c3f; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background: #272e41; /* Hardcoded color */
+		
+		/* Backdrop colors */
+		&:-moz-window-inactive {
+			--gnome-tabbar-tab-hover-background: #2c2c2c; /* Hardcoded color */
+			--gnome-tabbar-tab-active-background: #2e2e2e; /* Hardcoded color */
+		}
+		
+		/* Private browsing colors */
+		&[privatebrowsingmode="temporary"] {
+			/* Headerbar */
+			--gnome-headerbar-background: var(--gnome-accent-bg) !important;
+			/* Tabs */	
+			--gnome-tabbar-tab-hover-background: #6C438C; /* Hardcoded color */
+			--gnome-tabbar-tab-active-background: #70498F; /* Hardcoded color */
+			--gnome-tabbar-tab-active-background-contrast: #86689e; /* Hardcoded color */
+			--gnome-tabbar-tab-active-hover-background: #754F93; /* Hardcoded color */
+			
+			/* Private and backdrop colors */
+			&:-moz-window-inactive {
+				--gnome-tabbar-tab-hover-background: #673C87; /* Hardcoded color */
+				--gnome-tabbar-tab-active-background: #683F89; /* Hardcoded color */
+			}
+		}
 	}
 }
