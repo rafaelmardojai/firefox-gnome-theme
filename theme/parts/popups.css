@@ -186,7 +186,6 @@ panelview .unified-extensions-item-action-button,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
-#PlacesToolbar .bookmark-item,
 #downloadsPanel-mainView .download-state {
 	-moz-appearance: none !important;
 	border-radius: 6px !important;	
@@ -194,12 +193,15 @@ panelview .unified-extensions-item-action-button,
 	font: menu !important;
 	padding: 4px 12px !important;
 	min-height: 32px !important;
+	
+	&:hover {
+		background: var(--gnome-selected-color) !important;
+	}
 }
 .subviewbutton,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
-#PlacesToolbar menupopup[placespopup="true"] .bookmark-item,
 .openintabs-menuitem,
 .widget-overflow-list .toolbarbutton-1,
 panelview .unified-extensions-item {
@@ -208,7 +210,7 @@ panelview .unified-extensions-item {
 
 .subviewbutton[shortcut]:after {
  	opacity: 0.5 !important;
-  color: var(--gnome-menu-color) !important;
+	color: var(--gnome-menu-color) !important;
 }
 
 .bookmark-item .menu-right {
@@ -224,20 +226,6 @@ menuitem[disabled="true"], menupopup menu[disabled="true"],
 }
 menuitem[disabled="true"][_moz-menuactive], menupopup menu[disabled="true"][_moz-menuactive] {
 	background: transparent !important;
-}
-
-/* Menu buttons hover */
-menuitem:not([disabled="true"]):is(:hover, [_moz-menuactive]),
-menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
-panelview .toolbarbutton-1:hover,
-.subviewbutton:not([disabled="true"], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
-.protections-popup-footer-button:not([disabled="true"]):hover,
-#protections-popup-show-report-stack:hover .protections-popup-footer-button,
-.protections-popup-category:not([disabled="true"]):hover,
-.identity-popup-content-blocking-category:not([disabled="true"]):hover,
-#PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
-#downloadsPanel-mainView .download-state:hover {
-	background: var(--gnome-selected-color) !important;
 }
 
 /* Menu buttons fix */

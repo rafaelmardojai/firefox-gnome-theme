@@ -135,6 +135,20 @@ findbar:-moz-window-inactive description,
 	}
 }
 
+#import-button,
+#PlacesToolbar .bookmark-item {
+	border-radius: 6px !important;	
+	color: var(--gnome-window-color) !important;
+	padding: 2px 6px !important;
+
+	&:hover {
+		background-color: var(--gnome-selected-color) !important;
+	}
+	&:active, &[open] {
+		background-color: var(--gnome-selected-active-color) !important;
+	}
+}
+
 /* Text link */
 .text-link, a {
 	color: var(--gnome-accent) !important;
