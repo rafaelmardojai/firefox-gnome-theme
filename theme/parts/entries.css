@@ -26,6 +26,11 @@
   padding: 6px !important;
   box-sizing: border-box;
   transition: outline 0.3s, outline-offset 0.3s;
+  
+  /* Error */
+  &[status="notfound"] {
+    color: var(--gnome-error) !important;
+  }
 }
 
 /* Entries focused */
@@ -41,9 +46,14 @@
 #editBMPanel_namePicker:focus-visible,
 #editBMPanel_tagsField:focus-visible,
 .popup-notification-body input:focus {
-  outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+  outline: 2px solid var(--gnome-entry-focused-border-color) !important;
   outline-offset: -2px;
   -moz-outline-radius: 5px;
+
+  /* Error */
+  &[status="notfound"] {
+    outline-color: var(--gnome-entry-error-focused-border-color) !important;
+  }
 }
 
 /* Inactive window entries */

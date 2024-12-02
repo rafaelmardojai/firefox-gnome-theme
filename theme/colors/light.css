@@ -128,7 +128,8 @@
 	/* Entries */
 	--gnome-entry-background: var(--gnome-button-background);
 	--gnome-entry-color: var(--gnome-view-color);
-	--gnome-focused-urlbar-border-color: color-mix(in srgb, var(--gnome-accent) 50%, transparent);
+	--gnome-entry-focused-border-color: color-mix(in srgb, var(--gnome-accent) 50%, transparent);
+	--gnome-entry-error-focused-border-color: color-mix(in srgb, var(--gnome-error) 50%, transparent);
 
 	/* Tabs */
 	--gnome-tabbar-background: var(--gnome-headerbar-background);
