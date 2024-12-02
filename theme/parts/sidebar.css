@@ -32,6 +32,7 @@
     #tabbrowser-tabbox {
 		--chrome-content-separator-color: var(--gnome-toolbar-border-color);
 		box-shadow: none !important;
+		outline: 0 !important;
     }
 	#sidebar-splitter {
 		border-color: var(--gnome-toolbar-border-color) !important;
@@ -41,6 +42,7 @@
 	/* First sidebar */
 	#sidebar-main {
 		background-color: var(--gnome-sidebar-background) !important;
+		border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
 		padding: 6px !important;
 		--button-size-icon: 34px !important;
 	}
@@ -53,7 +55,7 @@
 	/* Second sidebar */
 	#sidebar-box {
 		background-color: var(--gnome-secondary-sidebar-background) !important;
-		outline: 0.01px solid var(--gnome-toolbar-border-color);
+		outline: 0 !important;
 		padding: 0 !important;
 	}
 	#sidebar {
