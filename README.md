@@ -107,10 +107,9 @@ Here are some examples of how to use it:
 	- Set custom profile name, for example `e0j6yb0p.default-nightly`.
 	- Default: All the profiles found in the firefox folder
 
-<details>
-    <summary>Advanced notes</summary>
-  
 ### Advanced notes
+<details>
+    <summary>Expand</summary>
 
 If you want to checkout the theme version tag matching you Firefox version you can run:
 
@@ -126,10 +125,9 @@ git checkout v$(firefox --version | cut -d ' ' -f 3 | cut -d '.' -f 1) # Using F
 1. Install the [AUR package](https://aur.archlinux.org/packages/firefox-gnome-theme) `firefox-gnome-theme` 
 2. Follow the instructions at `cat /usr/share/doc/firefox-gnome-theme/INSTALL.md`
 
-<details>
-    <summary>Manual installation</summary>
-  
 ## Manual installation
+<details>
+    <summary>Expand</summary>
 
 1. Go to `about:support` in Firefox.
 
