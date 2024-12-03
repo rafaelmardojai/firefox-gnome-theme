@@ -107,11 +107,6 @@ Here are some examples of how to use it:
 	- Set custom profile name, for example `e0j6yb0p.default-nightly`.
 	- Default: All the profiles found in the firefox folder
 
-- `-t <theme_name>` *optional*
-	- Set the colors used in the theme.
-	- Default: Adwaita.
-	- Options: `adwaita`, `maia`.
-
 <details>
     <summary>Advanced notes</summary>
   

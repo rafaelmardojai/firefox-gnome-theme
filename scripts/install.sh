@@ -3,7 +3,6 @@
 THEMEDIRECTORY=$(cd "$(dirname $0)" && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
-THEME="DEFAULT"
 
 
 # Get options.
@@ -11,12 +10,10 @@ while getopts 'f:p:t:' flag; do
 	case "${flag}" in
 	f) FIREFOXFOLDER="${OPTARG}" ;;
 	p) PROFILENAME="${OPTARG}" ;;
-	t) THEME="${OPTARG}" ;;
 	*)
 		echo "Gnome Theme Install Script:"
 		echo "  -f <firefox_folder_path>. Set custom Firefox folder path."
 		echo "  -p <profile_name>. Set custom profile name."
-		echo "  -t <theme_name>. Set the colors used in the theme."
 		echo "  -h to show this message."
 		exit 0
 		;;
@@ -66,19 +63,11 @@ function saveProfile(){
 	_sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
 
 	# Check if the import was set correctly
-  if ! cat userChrome.css | grep "firefox-gnome-theme" > /dev/null; then
-    echo "Unable to add the main import in 'userChrome.css', it needs to be set manually." >&2
-  fi
-
-	if [ "$THEME" = "DEFAULT" ]; then
-		echo "No theme set, using default adwaita." >&2
-	else
-		echo "Setting $THEME theme." >&2
-		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userChrome.css
-		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userChrome.css
+	if ! cat userChrome.css | grep "firefox-gnome-theme" > /dev/null; then
+		echo "Unable to add the main import in 'userChrome.css', it needs to be set manually." >&2
 	fi
 
-	# Create single-line user content CSS files if non-existent or empty.
+	# Create single-line user content CSS files if non-existent or empty. (userContent)
 	if [ -s userContent.css ]; then
 		# Remove older theme imports
 		_sed 's/@import "firefox-gnome-theme.*.//g' userContent.css | _sed '/^\s*$/d' > tmpfile1 && mv tmpfile1 userContent.css
@@ -87,35 +76,27 @@ function saveProfile(){
 		echo >> userContent.css
 	fi
 
-	# Import this theme at the beginning of the CSS files.
-  _sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
+	# Import this theme at the beginning of the CSS files. (userContent)
+	_sed -i '1s/^/@import "firefox-gnome-theme\/userContent.css";\n/' userContent.css
 
-	# Check if the import was set correctly
-  if ! cat userContent.css | grep "firefox-gnome-theme" > /dev/null; then
-    echo "Unable to add the main import in 'userContent.css', it needs to be set manually." >&2
-  fi
-
-	if [ "$THEME" = "DEFAULT" ]; then
-		echo "No theme set, using default adwaita." >&2
-	else
-		echo "Setting $THEME theme."
-		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userContent.css
-		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userContent.css
+	# Check if the import was set correctly (userContent)
+	if ! cat userContent.css | grep "firefox-gnome-theme" > /dev/null; then
+		echo "Unable to add the main import in 'userContent.css', it needs to be set manually." >&2
 	fi
 
 	cd ..
 
 	echo "Set configuration to user.js file" >&2
 
-  theme_prefs=()
-  while IFS= read -r line; do
-    theme_prefs+=("$line")
-  done < <(grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js)
+ 	theme_prefs=()
+	while IFS= read -r line; do
+		theme_prefs+=("$line")
+	done < <(grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js)
   
-  theme_prefs_unvalued=()
-  while IFS= read -r line; do
-    theme_prefs_unvalued+=("$line")
-  done < <(grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js | cut -d'"' -f 2)
+	theme_prefs_unvalued=()
+	while IFS= read -r line; do
+		theme_prefs_unvalued+=("$line")
+	done < <(grep "user_pref" chrome/firefox-gnome-theme/configuration/user.js | cut -d'"' -f 2)
 
 	if [ ! -f "user.js" ]; then
 		mv chrome/firefox-gnome-theme/configuration/user.js .
@@ -159,7 +140,6 @@ else
 fi
 
 
-
 if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
 	echo "FAIL, no Firefox profile found in $PROFILES_FILE".;
 
@@ -168,7 +148,7 @@ else
 	do
 		if [[ -n "$i" ]];
 		then
-			echo "Installing ${THEME} theme for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
+			echo "Installing theme for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
 			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
 	done
