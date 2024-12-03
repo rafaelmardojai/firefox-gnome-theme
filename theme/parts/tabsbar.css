@@ -9,9 +9,10 @@
 #TabsToolbar {
 	background-color: var(--gnome-tabbar-background) !important;
 	border-bottom: 0 !important;
-	padding: 0 !important;
+	padding: 0 3px !important;
 	position: relative;
 	z-index: 1;
+
 	--toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
 	/* Remove hover effects on tab bar buttons */
 	--toolbarbutton-active-background: transparent !important;
@@ -127,12 +128,8 @@ tabs#tabbrowser-tabs {
 			color: var(--gnome-window-color) !important;
 			padding: 0px 2px 6px !important;
 			position: relative;
-			
-			&:not([hidden=true], [pinned]):first-of-type {
-				padding-left: 5px !important;
-			}
 			&:not([hidden=true]):last-of-type {
-				padding-right: 5px !important;
+				padding-right: 3px !important;
 			}
 			
 			> stack {
@@ -607,8 +604,6 @@ tabs#tabbrowser-tabs {
 	}
 
 	#TabsToolbar {
-		padding: 6px 3px 0 !important;
-		
 		/* Spacing should be removed on the side touching the URL bar */
 		.toolbarbutton-1:not(#hack),
 		.titlebar-button:not(#hack) {
@@ -617,9 +612,25 @@ tabs#tabbrowser-tabs {
 	}
 
 	tabs#tabbrowser-tabs[orient="horizontal"] {
-		/* Padding should be removed on the side touching the URL bar */
+		/* Invert padding */
 		tab {
 			padding-bottom: 0px !important;
+			padding-top: 6px !important;
+		}
+		/* Tabs separators */
+		:root[dir="ltr"] & {
+			tab:not(:first-of-type, [selected], :hover) {
+				--gnome-tabbar-tab-separator-hack1: linear-gradient(
+					to bottom,
+					var(--gnome-tabbar-tab-separator-hack0) 0,
+					var(--gnome-tabbar-tab-separator-hack0) 9px,
+					var(--gnome-tabbar-tab-separator-color) 9px,
+					var(--gnome-tabbar-tab-separator-color) 37px,
+					var(--gnome-tabbar-tab-separator-hack0) 37px,
+					var(--gnome-tabbar-tab-separator-hack0) 40px
+				) 1;
+				border-image: var(--gnome-tabbar-tab-separator-hack1);
+			}
 		}
 		
 	}
@@ -643,9 +654,9 @@ tabs#tabbrowser-tabs {
 	}
 	
 	/* Force displaying controls in tab-bar */
-	:root[tabsintitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container:not(#hack) {
+	:root[tabsintitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
 		display: flex !important;
-		position: static !important;
+		padding-top: 6px !important;
 		visibility: visible !important;
 	}
 
