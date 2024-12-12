@@ -133,11 +133,7 @@
 
 @media (max-width: 630px) {
     #urlbar-container {
-        min-width: 100% !important;
-    }
-
-    #menubar-items {
-        display: none !important;
+        width: auto !important;
     }
 }
 
