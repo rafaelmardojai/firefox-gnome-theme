@@ -75,46 +75,47 @@ findbar:-moz-window-inactive description,
 
 /* Content notifications */
 .notificationbox-stack notification-message {
+	background-color: color-mix(in srgb, var(--gnome-accent-bg) 30%, var(--gnome-window-background)) !important;
 	border: 0 !important;
-	font-size: 1em !important;
-	padding: 0 !important;
+	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
 	border-radius: 0 !important;
 	margin: 0 !important;
-}
-.notificationbox-stack notification-message[style*="margin-top"] {
-	margin-top: -48px !important;
-}
-.notification-content {
-	padding-block: 0 !important;
-}
+	
+	&[type="warning"] {
+		background-color: #ffe900 !important;	
+	}
+	&[type="critical"] {
+		background-color: #d70022 !important;
+	}
 
-.container.infobar {
-	background: var(--gnome-toolbar-background) !important;
+	&[style*="margin-top"] {
+		margin-top: -48px !important;
+	}
+	
+	&::before {
+		display: none !important;
+	}
+}
+link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
+	background: none !important;
 	box-shadow: none !important;
 	padding: 6px !important;
 	border-radius: 0 !important;
-}
-.container.infobar::before {
-	display: none !important;
-}
 
-.container.infobar .icon {
-	height: 16px !important;
-	width: 16px !important;
-	margin: 8px 0 !important;
-}
-.notificationbox-stack notification-message[type="warning"] {
-	background: #ffe900 !important;	
-}
-.notificationbox-stack notification-message[type="critical"] {
-	background: #d70022 !important;
-}
+	.icon {
+		color: var(--gnome-window-color)
+		height: 16px !important;
+		width: 16px !important;
+		margin: 8px 0 !important;
+	}
+	
+	.text-container {
+		flex: auto;
+	}
 
-.notificationbox-stack[notificationside="top"] notification-message {
-	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
-}
-.notificationbox-stack[notificationside="bottom"] notification-message {
-	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
+	.text-content {
+		font-weight: bold !important;
+	}
 }
 
 /* Bookmarks */
