@@ -105,7 +105,7 @@
 }
 
 #main-window:not([inFullscreen]) #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent {
-    margin-left: var(--positionX1);
+    margin-left: var(--positionX1) !important;
 }
 
 #main-window[inFullscreen][inDOMFullscreen] #appcontent {
