@@ -30,7 +30,6 @@
 }
 
 #tabbrowser-tabbox {
-    margin-left: var(--tab-center-reborn-width) !important;
     z-index: 0 !important;
 }
 
@@ -62,6 +61,10 @@
         visibility: collapse;
         animation: var(--transition-time) fadeOut;
         animation-fill-mode: forwards;
+    }
+
+    &:not([hidden]) ~ #tabbrowser-tabbox {
+        margin-left: var(--tab-center-reborn-width) !important;
     }
 
     #sidebar-header,
