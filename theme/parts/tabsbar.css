@@ -31,7 +31,7 @@
 	}
 
 	/* Tabsbar buttons */
-	.toolbarbutton-1:not(#hack) {
+	.toolbarbutton-1 {
 		border-radius: 6px !important;
 		margin: 0px 3px 6px !important;
 		padding: 0 9px !important;
@@ -605,9 +605,13 @@ tabs#tabbrowser-tabs {
 
 	#TabsToolbar {
 		/* Spacing should be removed on the side touching the URL bar */
-		.toolbarbutton-1:not(#hack),
-		.titlebar-button:not(#hack) {
+		.toolbarbutton-1,
+		.titlebar-button {
 			margin-bottom: 0 !important;
+		}
+		
+		.toolbarbutton-1{
+			margin-top: 6px !important;
 		}
 	}
 
