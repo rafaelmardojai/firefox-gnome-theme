@@ -1,9 +1,24 @@
-
 :root {
     --delay: 0s;
     --transition-time: 0.2s;
-    --positionX1: 48px;
-    --positionX2: absolute;
+    --tab-center-reborn-width: 48px;
+    --tab-center-reborn-hover-width: 200px;
+
+    &[inFullscreen] {
+        --tab-center-reborn-width: 0px;
+    }
+
+    @media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
+        --tab-center-reborn-width: var(--tab-center-reborn-hover-width);
+    }
+
+    @media (width >= 1200px) {
+        --tab-center-reborn-hover-width: 250px;
+    }
+
+    @media (width >= 2000px) {
+        --tab-center-reborn-hover-width: 400px;
+    }
 }
 
 #tabbrowser-tabs {
@@ -18,130 +33,63 @@
     z-index: 0 !important;
 }
 
-#navigator-toolbox {
-    z-index: 10 !important;
-}
-
-#sidebar-box{
-    border-right: 0.01px solid var(--chrome-content-separator-color) !important;
-}
-
-#sidebar-box:not([lwt-sidebar]){
-    appearance: unset !important;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"] {
-    z-index: 1 !important;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
-    visibility: collapse;
-    display: none;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar, #sidebar-box[sidebarcommand*="tabcenter"]  {
-    min-width: 48px !important;
-    max-width: 48px !important;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-    display: block;
-    position: var(--positionX2);
-    box-sizing: content-box;
-    min-width: 48px;
-    max-width: 48px;
+#sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] {
+    border-right: 1px solid var(--chrome-content-separator-color) !important;
+    min-width: var(--tab-center-reborn-width) !important;
+    max-width: var(--tab-center-reborn-width) !important;
     overflow: hidden;
-
-    border-right: 1px solid var(--sidebar-border-color);
-    z-index: 1 !important;
+    position: absolute;
     top: 0;
     bottom: 0;
-}
-
-#main-window[inFullscreen] #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-    min-width: 1px;
-    max-width: 1px;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-#sidebar-box[sidebarcommand*="tabcenter"]:hover {
-    min-width: 10vw !important;
-    width: 30vw !important;
-    max-width: 200px !important;
     z-index: 1 !important;
-    animation-timing-function: linear;
-    transition: all var(--transition-time) ease var(--delay);
-}
 
-#sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) #sidebar,
-#sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) {
-    animation-timing-function: linear;
-    transition: all var(--transition-time) ease 0s;
-}
-
-@media (width >= 1200px) {
-    #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-
-        max-width: 250px !important;
+    &:hover #sidebar,
+    &:hover {
+        min-width: var(--tab-center-reborn-hover-width) !important;
+        max-width: var(--tab-center-reborn-hover-width) !important;
+        animation-timing-function: linear;
+        transition: all var(--transition-time) ease var(--delay);
     }
-}
 
-@media (width >= 2000px) {
-    #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-
-        max-width: 400px !important;
+    &:not(:hover) #sidebar,
+    &:not(:hover) {
+        animation-timing-function: linear;
+        transition: all var(--transition-time) ease 0s;
     }
-}
 
-[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-    display: none;
-}
+    :root[inFullscreen] & {
+        visibility: collapse;
+        animation: var(--transition-time) fadeOut;
+        animation-fill-mode: forwards;
+    }
 
-[sidebarcommand*="tabcenter"] #sidebar {
-    max-height: 100%;
-    height: 100%;
-}
+    &:not([hidden]) ~ #tabbrowser-tabbox {
+        margin-left: var(--tab-center-reborn-width) !important;
+    }
 
-#main-window:not([inFullscreen]) #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent {
-    margin-left: var(--positionX1);
-}
+    #sidebar-header,
+    & ~ #sidebar-splitter {
+        display: none;
+    }
 
-#main-window[inFullscreen][inDOMFullscreen] #appcontent {
-    margin-left: 0;
-}
+    @media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.animationDisabled") {
+        &:hover #sidebar,
+        &:hover {
+            transition: none !important;
+        }
 
-#main-window[inFullscreen] #sidebar {
-    height: 100vh;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar-header {
-    background: #0C0C0D;
-    border-bottom: none !important;
-}
-
-[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-    border-right-color: #0C0C0D !important;
-    border-left-color: #0C0C0D !important;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar-switcher-target,
-[sidebarcommand*="tabcenter"] #sidebar-close {
-    filter: invert(100%);
+        &:not(:hover) #sidebar,
+        &:not(:hover) {
+            animation-timing-function: linear;
+            transition: none !important;
+        }
+    }
 }
 
 @media (max-width: 630px) {
     #urlbar-container {
         width: auto !important;
     }
-}
-
-#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"],
-#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] + splitter {
-    visibility: collapse;
-    animation: var(--transition-time) fadeOut;
-    animation-fill-mode: forwards;
 }
 
 @keyframes fadeOut {
@@ -152,49 +100,5 @@
 
     100% {
         opacity: 0;
-    }
-}
-
-
-@media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
-    #sidebar-box[sidebarcommand*="tabcenter"] #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"] {
-        min-width: 10vw !important;
-        width: 30vw !important;
-        max-width: 250px !important;
-        z-index: 1 !important;
-        transition: all var(--transition-time) ease var(--delay);
-    }
-
-    #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-        position: relative;
-        margin-right: -50px;
-    }
-
-    @media (width >= 1200px) {
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-            max-width: 250px !important;
-        }
-    }
-
-    @media (width >= 2000px) {
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-        #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-            max-width: 400px !important;
-        }
-    }
-}
-
-@media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.animationDisabled") {
-    #sidebar-box[sidebarcommand*="tabcenter"]:hover #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"]:hover {
-        transition: none !important;
-    }
-
-    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) #sidebar,
-    #sidebar-box[sidebarcommand*="tabcenter"]:not(:hover) {
-        animation-timing-function: linear;
-        transition: none !important;
     }
 }
