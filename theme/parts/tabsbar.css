@@ -283,7 +283,7 @@ tabs#tabbrowser-tabs {
 					position: absolute;
 					right: 2px;
 					top: 2px;
-					transition: background 0.4s linear;
+					transition: all 0.2s linear;
 					width: 55px;
 					z-index: 99;
 				}
