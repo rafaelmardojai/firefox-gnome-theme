@@ -9,6 +9,10 @@
 
 #urlbar-container {
 	--urlbar-container-height: 34px !important;
+
+	@media (max-width: 630px) {
+		width: auto !important;
+	}
 }
 
 /* Center the URL bar */

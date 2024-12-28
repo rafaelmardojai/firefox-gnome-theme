@@ -86,12 +86,6 @@
     }
 }
 
-@media (max-width: 630px) {
-    #urlbar-container {
-        width: auto !important;
-    }
-}
-
 @keyframes fadeOut {
     0% {
         visibility: visible;
