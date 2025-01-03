@@ -26,7 +26,8 @@
 /* Extensions support */
 @import "extensions/tab-center-reborn.css" screen and (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn");
 
-/* Colors */
+/* Variables */
+@import "variables.css";
 @import "colors/light.css";
 @import "colors/dark.css";
 @import "colors/black.css" screen and (-moz-bool-pref: "gnomeTheme.oledBlack"); 

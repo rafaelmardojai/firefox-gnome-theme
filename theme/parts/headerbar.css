@@ -33,7 +33,7 @@
 @media (-moz-bool-pref: "browser.fullscreen.autohide") {
 	#navigator-toolbox[inFullscreen] { 	
 		position: fixed !important;
-		transition: margin 300ms ease-in-out 0s !important;
+		transition: margin var(--gnome-animation-time) ease-in-out 0s !important;
 		line-height: 0;
 		z-index: 1;
 		width: 100vw;

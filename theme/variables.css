@@ -1,0 +1,9 @@
+:root {
+	--gnome-animation-time: 300ms;
+	--gnome-tab-animation-time: 200ms;
+
+	@media (prefers-reduced-motion) {
+		--gnome-animation-time: 0ms;
+		--gnome-tab-animation-time: 0ms;
+	}
+}
