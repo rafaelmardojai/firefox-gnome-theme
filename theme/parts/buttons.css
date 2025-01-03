@@ -59,7 +59,7 @@ button.close,
 	min-width: 34px !important;
 	outline: 0 !important;
 	padding: 0 1px !important;
-	transition: background .3s;	
+	transition: background var(--gnome-animation-time);	
 	-moz-box-align: center !important;	
 
 	&:not([disabled="true"]) {
@@ -104,7 +104,7 @@ button.close,
 .permission-popup-permission-remove-button,
 .unified-extensions-item-menu-button {
 	background-color: transparent !important;
-	transition: background .3s;
+	transition: background var(--gnome-animation-time);
 
 	&:not([disabled="true"]) {
 		/* Hover buttons */

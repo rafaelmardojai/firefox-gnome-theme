@@ -54,7 +54,7 @@
 			background: var(--gnome-button-background) !important;
 			border-radius: 100% !important;
 			height: 24px !important;
-			transition: background 0.3s;
+			transition: background var(--gnome-animation-time);
 			width: 24px !important;
 
 			&:not([disabled]):hover {

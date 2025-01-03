@@ -23,7 +23,8 @@ input[type="password"],
 	margin: 0 !important;
 	padding: 6px !important;
 	box-sizing: border-box;
-	transition: outline 0.3s, outline-offset 0.3s;
+	transition-property: outline, outline-offset;
+	transition-duration: var(--gnome-animation-time);
 	
 	/* Error */
 	&[status="notfound"] {
@@ -70,7 +71,8 @@ input[type="password"]:focus,
 .urlbar-page-action,
 .urlbar-icon {
 	fill-opacity: 0.8 !important;
-	transition: fill 0.3s, fill-opacity 0.3, opacity 0.3;
+	transition-property: fil, fill-opacity, opacity;
+	transition-duration: var(--gnome-animation-time);
 }
 
 .identity-box-button:hover:not([open="true"]),
