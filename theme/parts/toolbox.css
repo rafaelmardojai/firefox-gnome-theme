@@ -30,7 +30,7 @@ findbar {
 #TabsToolbar:-moz-window-inactive, 
 findbar:-moz-window-inactive,
 .container.infobar:-moz-window-inactive {
-	transition: background .2s ease-out;
+	transition: background var(--gnome-animation-time) ease-out;
 }
 
 #navigator-toolbox:-moz-window-inactive label,

@@ -36,7 +36,7 @@
 		margin: 0px 3px 6px !important;
 		padding: 0 9px !important;
 		min-height: 34px !important;
-		transition: background 0.3s;
+		transition: background var(--gnome-animation-time);
 		
 		&:not([disabled]):not(:active):not([open]):hover {
 			background-color: var(--gnome-tabbar-tab-hover-background) !important;
@@ -233,7 +233,7 @@ tabs#tabbrowser-tabs {
 					background-image: none !important;
 					background-color: transparent !important;
 					background-size: 24px;
-					transition: all 0.2s ease-out !important;
+					transition: all var(--gnome-animation-time) ease-out !important;
 					
 					&:not(:-moz-window-inactive) {
 						&:hover {
@@ -282,7 +282,7 @@ tabs#tabbrowser-tabs {
 					position: absolute;
 					right: 2px;
 					top: 2px;
-					transition: opacity 0.2s linear;
+					transition: opacity var(--gnome-tab-animation-time) linear;
 					width: 55px;
 					z-index: 99;
 				}
@@ -302,7 +302,7 @@ tabs#tabbrowser-tabs {
 				box-shadow: none !important;
 				margin-block: 0 !important;
 				border: 0 !important;
-				transition: background 0.2s linear !important;
+				transition: background var(--gnome-tab-animation-time) linear !important;
 
 				&[selected] {
 					background: none !important;
@@ -492,7 +492,7 @@ tabs#tabbrowser-tabs {
 	background-position: center bottom !important;
 	transition-property: background-size;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
+	transition-duration: calc(var(--gnome-animation-time) / 2);
 }
 .tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected]),
 .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]) {

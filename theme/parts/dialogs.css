@@ -149,7 +149,7 @@ dialog {
 	min-height: 34px !important;
 	color: rgba(255, 255, 255, .9) !important;
 	font-weight: bold !important;
-	transition: background .3s;
+	transition: background var(--gnome-animation-time);
 
 	&:hover {
 		background-color: rgba(255, 255, 255, .135) !important;
