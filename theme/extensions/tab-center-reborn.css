@@ -1,6 +1,4 @@
 :root {
-    --delay: 0s;
-    --transition-time: 0.2s;
     --tab-center-reborn-width: 48px;
     --tab-center-reborn-hover-width: 200px;
 
@@ -48,18 +46,18 @@
         min-width: var(--tab-center-reborn-hover-width) !important;
         max-width: var(--tab-center-reborn-hover-width) !important;
         animation-timing-function: linear;
-        transition: all var(--transition-time) ease var(--delay);
+        transition: all var(--gnome-animation-time) ease 0s;
     }
 
     &:not(:hover) #sidebar,
     &:not(:hover) {
         animation-timing-function: linear;
-        transition: all var(--transition-time) ease 0s;
+        transition: all var(--gnome-animation-time) ease 0s;
     }
 
     :root[inFullscreen] & {
         visibility: collapse;
-        animation: var(--transition-time) fadeOut;
+        animation: var(--gnome-animation-time) fadeOut;
         animation-fill-mode: forwards;
     }
 
@@ -70,19 +68,6 @@
     #sidebar-header,
     & ~ #sidebar-splitter {
         display: none;
-    }
-
-    @media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.animationDisabled") {
-        &:hover #sidebar,
-        &:hover {
-            transition: none !important;
-        }
-
-        &:not(:hover) #sidebar,
-        &:not(:hover) {
-            animation-timing-function: linear;
-            transition: none !important;
-        }
     }
 }
 
