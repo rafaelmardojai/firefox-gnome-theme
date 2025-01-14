@@ -49,22 +49,14 @@ button.close::before,
 .urlbarView-type-icon,
 radio > .radio-check,
 link[href="chrome://global/skin/dropmarker.css"] + image,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
-:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
+:root[customtitlebar] .titlebar-buttonbox .titlebar-button  .toolbarbutton-icon {
 	fill: var(--gnome-toolbar-icon-fill) !important;
 	-moz-context-properties: fill;
 }
 .urlbar-icon:-moz-window-inactive,
 #urlbar:-moz-window-inactive image,
 .toolbarbutton-icon:-moz-window-inactive,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close:-moz-window-inactive .toolbarbutton-icon,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon:-moz-window-inactive,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon:-moz-window-inactive,
-:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon:-moz-window-inactive,
-:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
+:root[customtitlebar] .titlebar-buttonbox .titlebar-button  .toolbarbutton-icon:-moz-window-inactive {
 	opacity: 0.5 !important;
 }
 
@@ -300,19 +292,19 @@ button.close::before {
 	}
 
 	/* Window buttons */
-	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
+	:root[customtitlebar] .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
 		list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-max .toolbarbutton-icon {
+	:root[customtitlebar] .titlebar-buttonbox .titlebar-max .toolbarbutton-icon {
 		list-style-image: url("../icons/window-maximize-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	:root[customtitlebar] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
 		list-style-image: url("../icons/window-restore-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar][inFullscreen] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+	:root[customtitlebar][inFullscreen] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
 		list-style-image: url("../icons/view-restore-symbolic.svg") !important;
 	}
-	:root[tabsintitlebar] .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
+	:root[customtitlebar] .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
 		list-style-image: url("../icons/window-minimize-symbolic.svg") !important;
 	}
 

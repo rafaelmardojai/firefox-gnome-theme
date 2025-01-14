@@ -638,25 +638,25 @@ tabs#tabbrowser-tabs {
 	}
 
 	/* Remove nav-bar rounding and padding */
-	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar { 
+	:root[customtitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar { 
 		border-radius: 0 !important; 
 	 } 
 	
 	/* Round and pad tab-bar */
-	:root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #TabsToolbar {
+	:root[customtitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) #TabsToolbar {
 		border-radius: env(-moz-gtk-csd-titlebar-radius) env(-moz-gtk-csd-titlebar-radius) 0 0 !important
 	}
-	:root[tabsintitlebar]:not([inFullscreen], [sizemode="maximized"]) #TabsToolbar .toolbar-items {
+	:root[customtitlebar]:not([inFullscreen], [sizemode="maximized"]) #TabsToolbar .toolbar-items {
 		padding: 0 46px;
 	}
 	
 	/* Hide duplicate window controls from navbar */
-	:root[tabsintitlebar] #nav-bar .titlebar-buttonbox-container {
+	:root[customtitlebar] #nav-bar .titlebar-buttonbox-container {
 		display: none !important;
 	}
 	
 	/* Force displaying controls in tab-bar */
-	:root[tabsintitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
+	:root[customtitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
 		display: flex !important;
 		padding-top: 6px !important;
 		visibility: visible !important;
