@@ -1,8 +1,8 @@
-/* GNOME CSD styles for headerbar on Firefox [tabsintitlebar] */
+/* GNOME CSD styles for headerbar on Firefox */
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-:root[tabsintitlebar] {
+:root[customtitlebar] {
 	/* Headerbar top border corners rounded */
 	&[sizemode="normal"]:not([gtktiledwindow="true"]) #nav-bar {
 		border-radius: env(-moz-gtk-csd-titlebar-radius, 8px) env(-moz-gtk-csd-titlebar-radius, 8px) 0 0 !important;
