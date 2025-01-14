@@ -126,16 +126,11 @@
 }
 
 /* Confirmation Hint */
-#confirmation-hint .panel-arrowcontent {
-	background: var(--gnome-button-suggested-action-background) !important;
-	border-color: var(--gnome-button-suggested-action-border-color) !important;
+#confirmation-hint-checkmark-animation-container {
+	margin: 12px 6px 12px 12px !important;
 }
-#confirmation-hint .panel-arrow {
-	fill: var(--gnome-button-suggested-action-border-color) !important;
-	stroke: var(--gnome-button-suggested-action-border-color) !important;
-}
-#confirmation-hint-message {
-	color: white !important;
+#confirmation-hint-message-container {
+	margin: 12px 12px 12px 0 !important;
 }
 
 /* URLbar popups */

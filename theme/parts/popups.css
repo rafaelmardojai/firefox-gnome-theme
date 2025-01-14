@@ -66,6 +66,7 @@ panel[type=arrow] {
 /* Style popovers */
 panel:not([remote]) {
 	--arrowpanel-background: var(--gnome-menu-background) !important;
+	--arrowpanel-color: var(--gnome-menu-color) !important;
 	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
 }
 panel  {
