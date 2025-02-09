@@ -85,11 +85,18 @@ radio > .radio-check[selected] {
 	--toggle-background-color:  var(--gnome-trough-background) !important;
 	--toggle-background-color-pressed: var(--gnome-accent-bg) !important;
 	--toggle-dot-height: 22px !important;
+	--toggle-dot-width: 22px !important;
 	--toggle-dot-background-color: #FFF !important;
 	--toggle-dot-background-color-on-pressed: #FFF !important;
+	--toggle-dot-transform-x: calc(var(--toggle-width) - 4 * var(--toggle-dot-margin) - var(--toggle-dot-width)) !important;
 	
 	border: 0 !important;
 }
 .toggle-button::before {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+link[href="chrome://global/content/elements/moz-toggle.css"] ~ .description {
+	--input-space-offset: calc(48px + 8px) !important;
+	margin-block-start: 0 !important;
 }
