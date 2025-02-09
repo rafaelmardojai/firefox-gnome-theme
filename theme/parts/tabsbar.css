@@ -168,9 +168,12 @@ tabs#tabbrowser-tabs {
 						display: none;
 					}
 				}
-				
+
 				/* Tab icon */
 				.tab-icon-stack {
+					width: 24px !important;
+					min-width: 24px !important;
+
 					&:not([pinned]) {
 						margin-inline-start: auto !important;
 						margin-inline-end: 2px;
@@ -184,16 +187,10 @@ tabs#tabbrowser-tabs {
 						.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay {
 							margin-inline-end: 0 !important;
 						}
-						
-						&:is([soundplaying], [muted], [activemedia-blocked], [crashed]) {
-							/* Hide favicon when mute icon is present */
-							.tab-icon-image:not([sharing]),
-							&[selected] .tab-icon-image {
-								display: none;
-							}
-						}						
 					}
-					&:not([indicator-replaces-favicon]) {
+					
+					&[busy],
+					.tab-icon-image {
 						padding: 4px;
 					}
 				}
@@ -246,30 +243,22 @@ tabs#tabbrowser-tabs {
 				}
 				/* Icon overlay */
 				.tab-icon-overlay {
-					/* Icon overlay smaller */
-					&[pinned],
-					&:not([indicator-replaces-favicon], [selected]) {
-						width: 12px !important;
-						height: 12px !important;
+					height: 12px !important;
+					left: 12px !important;
+					top: -3px !important;
+					width: 12px !important;
+					
+					&:not([crashed]) {
 						padding: 2px !important;
-						top: -6px !important;
-					}
-					/* Icon overlay small style */
-					&:is([pinned], [sharing]):not([crashed]) {
-						stroke: unset !important;
-					}
-					&:is([pinned]):not([crashed]),
-					&:is([sharing]):not([crashed], [selected]) {
 						background: var(--gnome-button-background) !important;
+						&:hover {
+							background: var(--gnome-button-hover-background) !important;
+						}
 					}
-					&:is([pinned], [sharing]):not([crashed]):hover {
-						background: var(--gnome-button-hover-background) !important;
+					
+					&[busy] {
+						display: none !important;
 					}
-					/* Fix icon overlay posisition when sharing */
-					&:not([crashed], [pinned]):is([sharing])[selected] {
-						top: 0 !important;
-						inset-inline-end: 0 !important;
-					}				
 				}
 				
 				/* Close button overlay */
@@ -349,6 +338,26 @@ tabs#tabbrowser-tabs {
 					}
 				}
 			}
+			
+			/* Bigger sound icon on hover and active tab */
+			&:not([pinned], [sharing], [busy]):is([soundplaying], [muted]) {
+				&[selected="true"],
+				&:hover {
+					.tab-icon-stack {
+						padding: 2px;
+					}
+					.tab-icon-overlay {
+						width: 16px !important;
+						height: 16px !important;
+						left: 0 !important;						
+						position: relative  !important;
+						top: 0  !important;
+					}
+					.tab-icon-image  {
+						display: none;
+					}
+				}
+			}		
 			
 			/* OPTIONAL: Add more contrast to the active tab */
 			@media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
