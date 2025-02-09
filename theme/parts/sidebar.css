@@ -79,6 +79,7 @@
 
 	moz-checkbox, moz-radio, .customize-group .extension-item {
 		align-items: center;
+		display: flex !important;
 		padding: 0 12px !important;
 		min-height: 50px !important;
 
