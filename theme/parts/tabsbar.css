@@ -197,6 +197,7 @@ tabs#tabbrowser-tabs {
 		
 				/* Tab close */
 				.tab-close-button {
+					box-sizing: content-box !important;
 					fill: var(--gnome-window-color) !important;
 					fill-opacity: 1 !important;
 					height: 16px !important;
