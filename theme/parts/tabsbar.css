@@ -244,7 +244,7 @@ tabs#tabbrowser-tabs {
 				/* Icon overlay */
 				.tab-icon-overlay {
 					height: 12px !important;
-					left: 12px !important;
+					left: 11px !important;
 					top: -3px !important;
 					width: 12px !important;
 					
