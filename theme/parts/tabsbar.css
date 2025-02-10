@@ -171,6 +171,7 @@ tabs#tabbrowser-tabs {
 
 				/* Tab icon */
 				.tab-icon-stack {
+					align-items: center;
 					width: 24px !important;
 					min-width: 24px !important;
 
@@ -189,9 +190,12 @@ tabs#tabbrowser-tabs {
 						}
 					}
 					
-					&[busy],
+					&[busy], &[sharing], .tab-icon-image:not([sharing]) {
+						padding: 4px;						
+					}
+					
 					.tab-icon-image {
-						padding: 4px;
+						transition: opacity var(--gnome-animation-time) ease-out !important;
 					}
 				}
 		
@@ -327,6 +331,11 @@ tabs#tabbrowser-tabs {
 						--gnome-tabbar-tab-close-overlay-bg: unset;
 					}
 				}
+				
+				/* Avoid firefox hiding elements on indicator-replaces-favicon */				
+				.tab-icon-stack[indicator-replaces-favicon] :not(&) {
+					opacity: 1 !important;
+				}
 
 			}
 			
@@ -343,18 +352,16 @@ tabs#tabbrowser-tabs {
 			&:not([pinned], [sharing], [busy]):is([soundplaying], [muted]) {
 				&[selected="true"],
 				&:hover {
-					.tab-icon-stack {
-						padding: 2px;
-					}
 					.tab-icon-overlay {
 						width: 16px !important;
 						height: 16px !important;
-						left: 0 !important;						
+						left: 0 !important;				
+						padding: 4px !important;
 						position: relative  !important;
 						top: 0  !important;
 					}
 					.tab-icon-image  {
-						display: none;
+						opacity: 0 !important;
 					}
 				}
 			}		
