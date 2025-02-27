@@ -24,7 +24,7 @@ done
 #
 # sed in BSD platforms need this extra argument when using '-i' to specify no backup file.
 function _sed(){
-  if [[ "$OSTYPE" == *"linux"* ]]; then
+  if [[ "$OSTYPE" == *"linux"* ]] || [[ "$OSTYPE" == *msys* ]]; then
     sed "$@"
     return $?
   fi
