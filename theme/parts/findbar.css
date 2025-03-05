@@ -3,40 +3,102 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 findbar {
-	padding: 6px !important;
-	position: relative;
+	order: -1;
+	width: 100%;
+	position: fixed;
+	top: -1px;
+	border-top: none !important;
+	padding: 0 !important;
+	transition: transform 100ms ease-out !important;
+	background: none !important;
+	pointer-events: none;
+	z-index: 1;
+	white-space: nowrap;
+}
+
+findbar[hidden] {
+	transform: translateY(-100%);
+}
+
+findbar > .findbar-container {
+	background-color: #2A2A37 !important;
+	pointer-events: auto;
+	border-radius: 0 0 9px 9px;
+	margin: 0 15px !important;
+	overflow-inline: visible !important;
+	box-shadow: var(--gnome-menu-shadow) !important;
+	padding: 5px 0px 5px 10px !important;
+	border: 1px solid #32323D;
+	border-top: none !important;
 	
-	.findbar-container {
-		align-items: center;
-		display: flex;
-		justify-content: flex-start;
-		position: relative;
-		flex-direction: row;
-		margin: 0 !important;
-		margin-inline-end: 6px !important;
-		height: auto !important;
+	/* Merged from first findbar container */
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	flex-direction: row;
+	height: auto !important;
+}
 
-		.findbar-textbox-wrapper {
-			order: 0;
-		}
-		.findbar-label.found-matches {
-			font-weight: normal !important;
-			order: 1;
-		}
-		.findbar-label.findbar-find-status {
-			font-weight: normal !important;
-			order: 4;
-		}
-		checkbox {
-			order: 2;
-		}
+findbar .findbar-container .findbar-textbox-wrapper {
+	order: 0;
+}
 
-		.findbar-entire-word {
-			margin-inline-end: auto !important;
-		}
-	}
+findbar .findbar-container .findbar-label.found-matches {
+	font-weight: normal !important;
+	order: 1;
+}
 
-	.findbar-closebutton {
-		margin: 0 !important;
-	}
+findbar .findbar-container .findbar-label.findbar-find-status {
+	font-weight: normal !important;
+	order: 4;
+}
+
+findbar .findbar-container checkbox {
+	order: 2;
+}
+
+findbar .findbar-container .findbar-entire-word {
+	margin-inline-end: auto !important;
+}
+
+findbar .findbar-closebutton {
+	margin: 0 !important;
+	display: none;
+}
+
+html|input.findbar-textbox {
+	width: 12em;
+}
+
+hbox.findbar-container checkbox.findbar-match-diacritics,
+hbox.findbar-container checkbox.findbar-highlight {
+	display: none;
+}
+
+.checkbox-label {
+	display: none;
+}
+
+description.findbar-find-status {
+	display: flex;
+	overflow: hidden;
+	margin-inline-start: 0 !important;
+	text-overflow: ellipsis;
+	flex-grow: 1;
+}
+
+description.findbar-find-status[data-l10n-id] {
+	margin-inline-start: 12px !important;
+	padding-right: 6px;
+}
+
+image.toolbarbutton-icon {
+	padding-left: 2px;
+}
+
+findbar::after {
+	content: "";
+	display: flex;
+	flex-grow: 100;
 }
