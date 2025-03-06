@@ -24,17 +24,17 @@
 @import "platforms/windows.css" screen and (-moz-platform: windows);
 
 /* Extensions support */
-@import "extensions/tab-center-reborn.css" screen and (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn");
+@import "extensions/tab-center-reborn.css" screen and -moz-pref("gnomeTheme.extensions.tabCenterReborn");
 
 /* Variables */
 @import "variables.css";
 @import "colors/light.css";
 @import "colors/dark.css";
-@import "colors/black.css" screen and (-moz-bool-pref: "gnomeTheme.oledBlack"); 
+@import "colors/black.css" screen and -moz-pref("gnomeTheme.oledBlack"); 
 
 /* Optional */
-@import "system-icons.css" screen and (-moz-bool-pref: "gnomeTheme.systemIcons");
-@import "symbolic-tab-icons.css" screen and (-moz-bool-pref: "gnomeTheme.symbolicTabIcons");
+@import "system-icons.css" screen and -moz-pref("gnomeTheme.systemIcons");
+@import "symbolic-tab-icons.css" screen and -moz-pref("gnomeTheme.symbolicTabIcons");
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 

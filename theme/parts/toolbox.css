@@ -131,7 +131,7 @@ link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 	border-image-source: none !important;
 	border-color: var(--gnome-tabbar-tab-separator-color) !important;
 }
-@media (-moz-bool-pref: "gnomeTheme.bookmarksOnFullscreen") { /* OPTIONAL: Show bookmarks bar while in fullscreen  */
+@media -moz-pref("gnomeTheme.bookmarksOnFullscreen") { /* OPTIONAL: Show bookmarks bar while in fullscreen  */
 	:root[inFullscreen] #PersonalToolbar{
 		visibility: visible !important;
 	}
@@ -162,14 +162,14 @@ link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 }
 
 /* OPTIONAL: Hide WebRTC indicator */
-@media (-moz-bool-pref: "gnomeTheme.hideWebrtcIndicator") {
+@media -moz-pref("gnomeTheme.hideWebrtcIndicator") {
 	#webrtcIndicator {
 		display: none;
 	}
 }
 
 /* OPTIONAL: Move Bookmarks toolbar under tabs */
-@media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
+@media -moz-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
 	#navigator-toolbox #PersonalToolbar {
 		order: 3;
 	}
