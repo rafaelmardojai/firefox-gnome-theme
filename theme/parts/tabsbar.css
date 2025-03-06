@@ -186,6 +186,7 @@ tabs#tabbrowser-tabs {
 				/* Audio button */
 				.tab-audio-button {
 					--button-border-radius: 99px !important;
+					margin-inline: 0 !important;
 					margin-top: -3px !important; /* Fix position */
 				}
 
