@@ -99,7 +99,7 @@ findbar:-moz-window-inactive description,
 link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 	background: none !important;
 	box-shadow: none !important;
-	padding: 6px !important;
+	padding: var(--gnome-toolbar-padding) !important;
 	border-radius: 0 !important;
 
 	.icon {
@@ -120,7 +120,7 @@ link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 
 /* Bookmarks */
 #PersonalToolbar {
-	padding: 6px !important;
+	padding: var(--gnome-toolbar-padding) !important;
 	padding-top: 0 !important;
 	--bookmarks-toolbar-overlapping-browser-height: auto;
 }

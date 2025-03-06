@@ -15,7 +15,6 @@ menulist,
 .customizationmode-button,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
-link[href="chrome://global/content/elements/moz-button.css"] + button,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsPanel-mainView .download-state .downloadButton,
@@ -48,15 +47,14 @@ button.close,
 	-moz-appearance: none !important;
 	align-items: center !important;
 	background-color: var(--gnome-button-background) !important;
-	border-radius: 6px !important;
+	border-radius: var(--gnome-button-radius) !important;
 	border: 0 !important;
 	color: var(--gnome-window-color) !important;
 	font: menu !important;
 	font-weight: bold !important;
-	height: 34px !important;
-	max-height: 34px !important;
-	min-height: 34px !important;
-	min-width: 34px !important;
+	max-height: var(--gnome-button-size) !important;
+	min-height: var(--gnome-button-size) !important;
+	min-width: var(--gnome-button-size) !important;
 	outline: 0 !important;
 	padding: 0 1px !important;
 	transition: background var(--gnome-animation-time);	
@@ -97,7 +95,6 @@ button.close,
 /* Flat Buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
-link[href="chrome://global/content/elements/moz-button.css"] + button:is([type~="icon"], :has([type~="icon"])),
 .close-icon:not(.tab-close-button),
 button.close,
 .panel-info-button,
@@ -176,10 +173,10 @@ button.popup-notification-primary-button:not(#hack),
 .notification-button,
 .subviewbutton.panel-subview-footer:not(:only-of-type),
 .panel-footer button:not(:only-of-type) {
-	margin: 0 3px !important;
+	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
 }
 .close-icon:not(.tab-close-button) {
-	margin-left: 6px !important;
+	margin-left: var(--gnome-toolbar-spacing) !important;
 }
 
 /* Text buttons */

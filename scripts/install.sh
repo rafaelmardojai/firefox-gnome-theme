@@ -24,7 +24,7 @@ done
 #
 # sed in BSD platforms need this extra argument when using '-i' to specify no backup file.
 function _sed(){
-  if [[ "$OSTYPE" == *"linux"* ]]; then
+  if [[ "$OSTYPE" == *"linux"* ]] || [[ "$OSTYPE" == *msys* ]]; then
     sed "$@"
     return $?
   fi
@@ -48,7 +48,8 @@ function saveProfile(){
 
 	# Copy theme repo inside
 	echo "Copying repo in $PWD" >&2
-	cp -fR "$THEMEDIRECTORY" "$PWD" || { echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome', that is not a dir."; exit 1; }
+	[ -e ./firefox-gnome-theme ] || mkdir firefox-gnome-theme
+	cp -fR "$THEMEDIRECTORY/." "$PWD/firefox-gnome-theme/" || { echo "FAIL, couldn't copy to $PWD/chrome, please check if there's something named 'chrome' or 'chrome/firefox-gnome-theme', that is not a dir."; exit 1; }
 
 	# Create single-line user CSS files if non-existent or empty.
 	if [ -s userChrome.css ]; then

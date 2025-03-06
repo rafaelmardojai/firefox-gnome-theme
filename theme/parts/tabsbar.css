@@ -9,7 +9,7 @@
 #TabsToolbar {
 	background-color: var(--gnome-tabbar-background) !important;
 	border-bottom: 0 !important;
-	padding: 0 3px !important;
+	padding: 0 calc(var(--gnome-toolbar-padding) / 2) !important;
 	position: relative;
 	z-index: 1;
 
@@ -32,10 +32,10 @@
 
 	/* Tabsbar buttons */
 	.toolbarbutton-1 {
-		border-radius: 6px !important;
-		margin: 0px 3px 6px !important;
-		padding: 0 9px !important;
-		min-height: 34px !important;
+		border-radius: var(--gnome-button-radius) !important;
+		margin: 0px calc(var(--gnome-toolbar-spacing) / 2) var(--gnome-toolbar-padding) !important;
+		min-height: var(--gnome-button-size) !important;
+		min-width: var(--gnome-button-size) !important;
 		transition: background var(--gnome-animation-time);
 		
 		&:not([disabled]):not(:active):not([open]):hover {
@@ -52,7 +52,7 @@
 #tabbrowser-tabs arrowscrollbox {
 	height: auto !important;
 	min-height: auto !important;
-	--tab-min-height: 34px !important;
+	--tab-min-height: var(--gnome-button-size) !important;
 }
 
 /* Tabs scroll */
@@ -125,10 +125,10 @@ tabs#tabbrowser-tabs {
 			border-left-width: 1px !important;
 			border-style: solid !important;
 			color: var(--gnome-window-color) !important;
-			padding: 0px 2px 6px !important;
+			padding: 0px calc(var(--gnome-toolbar-spacing) / 2 - 1px) var(--gnome-toolbar-padding) !important;
 			position: relative;
 			&:not([hidden=true]):last-of-type {
-				padding-right: 3px !important;
+				padding-right: calc(var(--gnome-toolbar-spacing) / 2) !important;
 			}
 			
 			> stack {
@@ -150,6 +150,20 @@ tabs#tabbrowser-tabs {
 					padding: 0 5px !important;
 				}
 				
+				/* Re-order content */
+				.tab-audio-button {
+					order: 0;
+				}
+				.tab-icon-stack {
+					order: 1;
+				}
+				.tab-label-container {
+					order: 2;
+				}
+				.tab-close-button {
+					order: 3;
+				}
+				
 				/* Prevent tab icons size breaking */
 				.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback, .tab-close-button {
 					min-width: 16px;
@@ -169,10 +183,16 @@ tabs#tabbrowser-tabs {
 					}
 				}
 
+				/* Audio button */
+				.tab-audio-button {
+					--button-border-radius: 99px !important;
+					margin-inline: 0 !important;
+					margin-top: -3px !important; /* Fix position */
+				}
+
 				/* Tab icon */
 				.tab-icon-stack {
-					width: 24px !important;
-					min-width: 24px !important;
+					align-items: center;
 
 					&:not([pinned]) {
 						margin-inline-start: auto !important;
@@ -189,9 +209,12 @@ tabs#tabbrowser-tabs {
 						}
 					}
 					
-					&[busy],
+					&[busy], &[sharing], .tab-icon-image:not([sharing]) {
+						padding: 4px;						
+					}
+					
 					.tab-icon-image {
-						padding: 4px;
+						transition: opacity var(--gnome-animation-time) ease-out !important;
 					}
 				}
 		
@@ -265,13 +288,14 @@ tabs#tabbrowser-tabs {
 				/* Close button overlay */
 				&:not([pinned])::before {
 					background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
-					border-radius: 0 6px 6px 0;
+					border-radius: 0 4px 4px 0;
+					bottom: 2px;
 					content: "";
-					height: 100%;
+					height: calc(100% - 5px);
 					opacity: 0;
 					position: absolute;
-					right: 0px;
-					transition: opacity var(--gnome-tab-animation-time) linear;
+					right: 2px;
+					transition: all var(--gnome-tab-animation-time) linear;
 					width: 55px;
 					z-index: 99;
 				}
@@ -287,7 +311,7 @@ tabs#tabbrowser-tabs {
 			/* Tab background */
 			.tab-background {
 				background-color: transparent !important;
-				border-radius: 6px !important;
+				border-radius: var(--gnome-button-radius) !important;
 				box-shadow: none !important;
 				margin-block: 0 !important;
 				border: 0 !important;
@@ -328,6 +352,11 @@ tabs#tabbrowser-tabs {
 						--gnome-tabbar-tab-close-overlay-bg: unset;
 					}
 				}
+				
+				/* Avoid firefox hiding elements on indicator-replaces-favicon */				
+				.tab-icon-stack[indicator-replaces-favicon] :not(&) {
+					opacity: 1 !important;
+				}
 
 			}
 			
@@ -339,26 +368,7 @@ tabs#tabbrowser-tabs {
 					}
 				}
 			}
-			
-			/* Bigger sound icon on hover and active tab */
-			&:not([pinned], [sharing], [busy]):is([soundplaying], [muted]) {
-				&[selected="true"],
-				&:hover {
-					.tab-icon-stack {
-						padding: 2px;
-					}
-					.tab-icon-overlay {
-						width: 16px !important;
-						height: 16px !important;
-						left: 0 !important;						
-						position: relative  !important;
-						top: 0  !important;
-					}
-					.tab-icon-image  {
-						display: none;
-					}
-				}
-			}		
+
 			
 			/* OPTIONAL: Add more contrast to the active tab */
 			@media -moz-pref("gnomeTheme.activeTabContrast") {
@@ -619,7 +629,7 @@ tabs#tabbrowser-tabs {
 		}
 		
 		.toolbarbutton-1{
-			margin-top: 6px !important;
+			margin-top: var(--gnome-toolbar-padding) !important;
 		}
 	}
 
@@ -627,7 +637,7 @@ tabs#tabbrowser-tabs {
 		/* Invert padding */
 		tab {
 			padding-bottom: 0px !important;
-			padding-top: 6px !important;
+			padding-top: var(--gnome-toolbar-padding) !important;
 		}
 		/* Tabs separators */
 		:root[dir="ltr"] & {
@@ -668,7 +678,7 @@ tabs#tabbrowser-tabs {
 	/* Force displaying controls in tab-bar */
 	:root[customtitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
 		display: flex !important;
-		padding-top: 6px !important;
+		padding-top: var(--gnome-toolbar-padding) !important;
 		visibility: visible !important;
 	}
 

@@ -6,7 +6,7 @@
 menupopup {
 	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
-	padding: 8px !important;
+	padding: var(--gnome-menu-padding) !important;
 }
 
 menucaption {
@@ -14,7 +14,7 @@ menucaption {
 }
 
 menu menupopup {
-	margin:	-14px -8px 0px 0px !important;
+	margin:	-16px 0 0 0 !important;
 }
 
 menulist {
@@ -25,9 +25,9 @@ menulist {
 	appearance: none !important;
 	background: var(--gnome-menu-background) !important;
 	border: 1px solid var(--gnome-menu-border-color) !important;
-	border-radius: 12px !important;
+	border-radius: var(--gnome-popover-radius) !important;
 	box-shadow: var(--gnome-menu-shadow) !important;
-	padding: 6px !important;
+	padding: var(--gnome-menu-padding) !important;
 	min-height: 45px !important;
 }
 menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
@@ -60,7 +60,7 @@ menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 
 /* Adjust popovers position */
 panel[type=arrow] {
-	margin-top: 8px !important;
+	margin-top: var(--gnome-menu-padding) !important;
 }
 
 /* Style popovers */
@@ -72,8 +72,7 @@ panel:not([remote]) {
 panel  {
 	--arrowpanel-padding: 0 !important;
 	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
-	--arrowpanel-border-radius: 12px !important;
-	--gnome-menu-padding: 6px;
+	--arrowpanel-border-radius: var(--gnome-popover-radius) !important;
 }
 
 /* Padding rules */

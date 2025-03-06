@@ -1,4 +1,19 @@
 :root {
+	--gnome-toolbar-padding: 6px;
+	--gnome-toolbar-spacing: 6px;
+	--gnome-button-radius: 6px;
+	--gnome-button-size: 34px;
+	--gnome-entry-radius: var(--gnome-button-radius);
+	--gnome-entry-height: var(--gnome-button-size);
+	--gnome-card-radius: calc(var(--gnome-button-radius) + 6px);
+	--gnome-menu-radius: 6px;
+	--gnome-menu-padding: 6px;
+	--gnome-menu-item-padding: 12px;
+	--gnome-popover-radius: calc(var(--gnome-button-radius) + 6px);
+	--gnome-dialog-radius: 18px; /* Alert dialog */
+	--gnome-dialog-padding: 24px;
+	
+	/* Animations */
 	--gnome-animation-time: 300ms;
 	--gnome-tab-animation-time: 200ms;
 
@@ -6,4 +21,15 @@
 		--gnome-animation-time: 0ms;
 		--gnome-tab-animation-time: 0ms;
 	}
+}
+
+/* Override Firefox variables */
+:root {
+	/* moz-button */
+	--button-border-radius: var(--gnome-button-radius) !important;	
+	--button-background-color: var(--gnome-button-background) !important;
+    --button-background-color-hover: var(--gnome-button-hover-background) !important;
+	--button-background-color-active: var(--gnome-button-active-background) !important;
+	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
+    --button-background-color-ghost-active: var(--gnome-active-color) !important;
 }

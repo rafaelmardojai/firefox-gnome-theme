@@ -10,7 +10,7 @@ richlistbox#items {
 	--in-content-item-selected-text: #fff !important;
 	background: var(--gnome-card-background) !important;
 	border: 0 !important;
-	border-radius: 12px !important;
+	border-radius: var(--gnome-card-radius) !important;
 	padding: 0 !important;
 	overflow: hidden;
 }
@@ -24,7 +24,7 @@ richlistbox#items {
 /* List item */
 .permission-popup-permission-item,
 richlistbox#items richlistitem {
-	padding: 6px !important;
+	padding: var(--gnome-toolbar-padding) !important;
 	margin: 0 !important;
 }
 .permission-popup-permission-list-anchor {
