@@ -15,7 +15,6 @@ menulist,
 .customizationmode-button,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
-link[href="chrome://global/content/elements/moz-button.css"] + button,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsPanel-mainView .download-state .downloadButton,
@@ -97,7 +96,6 @@ button.close,
 /* Flat Buttons */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
-link[href="chrome://global/content/elements/moz-button.css"] + button:is([type~="icon"], :has([type~="icon"])),
 .close-icon:not(.tab-close-button),
 button.close,
 .panel-info-button,
@@ -132,6 +130,11 @@ button.close,
 	&[disabled="true"] {
 		opacity: 0.3 !important;
 	}
+}
+
+moz-button {	
+    --button-background-color-ghost-hover: var(--gnome-hover-color) !important;
+    --button-background-color-ghost-active: var(--gnome-active-color) !important;
 }
 
 /* Buttons with suggested action */

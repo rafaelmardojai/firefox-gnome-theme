@@ -13,19 +13,6 @@ link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 	margin-inline-start: 6px !important;
 }
 
-/* moz-button */
-link[href="chrome://global/content/elements/moz-button.css"] + button .button-background {
-	background-color: none !important;
-	border: 0 !important;
-	height: 34px !important;
-	min-height: 34px !important;
-	
-	&[type~="icon"]:not(.labelled) {
-		width: 34px !important;
-	}
-}
-
-
 /* Remove the header bar buttons' hover styles */
 #nav-bar {
 	--toolbarbutton-active-background: transparent !important;
