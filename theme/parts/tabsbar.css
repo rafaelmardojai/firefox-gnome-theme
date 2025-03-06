@@ -193,8 +193,6 @@ tabs#tabbrowser-tabs {
 				/* Tab icon */
 				.tab-icon-stack {
 					align-items: center;
-					width: 24px !important;
-					min-width: 24px !important;
 
 					&:not([pinned]) {
 						margin-inline-start: auto !important;
