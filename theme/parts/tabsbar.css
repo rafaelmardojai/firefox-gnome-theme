@@ -269,13 +269,14 @@ tabs#tabbrowser-tabs {
 				/* Close button overlay */
 				&:not([pinned])::before {
 					background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
-					border-radius: 0 6px 6px 0;
+					border-radius: 0 4px 4px 0;
+					bottom: 2px;
 					content: "";
-					height: 100%;
+					height: calc(100% - 5px);
 					opacity: 0;
 					position: absolute;
-					right: 0px;
-					transition: opacity var(--gnome-tab-animation-time) linear;
+					right: 2px;
+					transition: all var(--gnome-tab-animation-time) linear;
 					width: 55px;
 					z-index: 99;
 				}
