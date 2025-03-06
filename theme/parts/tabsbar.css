@@ -178,7 +178,7 @@ tabs#tabbrowser-tabs {
 						margin-inline-start: auto !important;
 						margin-inline-end: 2px;
 
-						@media (-moz-bool-pref: "gnomeTheme.tabAlignLeft") {
+						@media -moz-pref("gnomeTheme.tabAlignLeft") {
 							/* OPTIONAL: Align tab items left */
 							margin-inline-start: 0 !important;
 							padding: 0 5px !important;
@@ -316,13 +316,13 @@ tabs#tabbrowser-tabs {
 				}
 				
 				/* Show close button on tab hover */
-				@media not (-moz-bool-pref: "gnomeTheme.closeOnlySelectedTabs") {
+				@media not -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
 					.tab-content .tab-close-button {
 						visibility: visible !important;
 						opacity: 1 !important;
 					}
 				}
-				@media (-moz-bool-pref: "gnomeTheme.closeOnlySelectedTabs") {
+				@media -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
 					/* Hide the close button overlay on hover */
 					.tab-content::before {
 						--gnome-tabbar-tab-close-overlay-bg: unset;
@@ -361,7 +361,7 @@ tabs#tabbrowser-tabs {
 			}		
 			
 			/* OPTIONAL: Add more contrast to the active tab */
-			@media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
+			@media -moz-pref("gnomeTheme.activeTabContrast") {
 				&[selected="true"], &:hover {
 					.tab-background:not(:-moz-window-inactive) {
 						background: var(--gnome-tabbar-tab-active-background-contrast) !important;
@@ -373,7 +373,7 @@ tabs#tabbrowser-tabs {
 			}
 			
 			/* Full width tabs */
-			@media not (-moz-bool-pref: "gnomeTheme.normalWidthTabs") {
+			@media not -moz-pref("gnomeTheme.normalWidthTabs") {
 				&:not([style^="max-width"]):not([pinned]),
 				&[style^="max-width: 100px !important;"]:not([pinned]) {
 					max-width: 100% !important;
@@ -526,11 +526,11 @@ tabs#tabbrowser-tabs {
 
 /* Tabs manager menu */
 #alltabs-button {
-	@media (not (-moz-bool-pref: "gnomeTheme.allTabsButton")) {
+	@media (not -moz-pref("gnomeTheme.allTabsButton")) {
 		visibility: collapse;
 	}
 	
-	@media (-moz-bool-pref: "browser.tabs.tabmanager.enabled"), (-moz-bool-pref: "gnomeTheme.allTabsButtonOnOverflow") {
+	@media -moz-pref("browser.tabs.tabmanager.enabled"), -moz-pref("gnomeTheme.allTabsButtonOnOverflow") {
 		#tabbrowser-tabs[overflow] ~ & {
 			visibility: visible;
 		}
@@ -556,8 +556,8 @@ tabs#tabbrowser-tabs {
 }
 
 /* Left close buttons */
-@media (-moz-gtk-csd-reversed-placement) and (not (-moz-bool-pref: "gnomeTheme.swapTabClose")),
-	   (-moz-bool-pref: "gnomeTheme.swapTabClose") and (not (-moz-gtk-csd-reversed-placement)) {
+@media (-moz-gtk-csd-reversed-placement) and (not -moz-pref("gnomeTheme.swapTabClose")),
+	   -moz-pref("gnomeTheme.swapTabClose") and (not (-moz-gtk-csd-reversed-placement)) {
 	/* Reorder and fix alignment */
 	.tab-icon-stack {
 		order: 1 !important;
@@ -579,7 +579,7 @@ tabs#tabbrowser-tabs {
 }
 
 /* OPTIONAL: Hide single tab */
-@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
+@media -moz-pref("gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
@@ -591,7 +591,7 @@ tabs#tabbrowser-tabs {
 }
 
 /* OPTIONAL: Use tabs as headerbar */
-@media (-moz-bool-pref: "gnomeTheme.tabsAsHeaderbar") and (not (-moz-bool-pref: "sidebar.verticalTabs")) {
+@media -moz-pref("gnomeTheme.tabsAsHeaderbar") and (not -moz-pref("sidebar.verticalTabs")) {
 	/* Rearrange bars */
 	#navigator-toolbox #TabsToolbar {
 		order: 0;
@@ -605,7 +605,7 @@ tabs#tabbrowser-tabs {
 	#navigator-toolbox #PersonalToolbar {
 		order: 4;
 	}
-	@media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
+	@media -moz-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
 		#navigator-toolbox #PersonalToolbar {
 			order: 2 !important;
 		}
@@ -673,7 +673,7 @@ tabs#tabbrowser-tabs {
 	}
 
 	/* Blend single tab into whole bar */
-	@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
+	@media -moz-pref("gnomeTheme.hideSingleTab") {
 		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
 			tab,
 			tab ~ toolbarbutton,

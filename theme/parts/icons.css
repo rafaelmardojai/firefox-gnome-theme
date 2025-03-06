@@ -116,7 +116,7 @@ button.close::before {
 }
 
 
-@media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
+@media not -moz-pref("gnomeTheme.noThemedIcons") {
 	/* Scroll icons */
 	#scrollbutton-up {
 		list-style-image: var(--scrollbutton-icon-name) !important;

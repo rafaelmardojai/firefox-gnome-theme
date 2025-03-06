@@ -154,7 +154,7 @@ toolbarspring {
 	height: 100%  !important;
 }
 
-@media (-moz-bool-pref: "browser.urlbar.richSuggestions.featureGate") {
+@media -moz-pref("browser.urlbar.richSuggestions.featureGate") {
 	#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] > .identity-box-button {
 		margin-inline-start: 2px;
 	}
@@ -216,7 +216,7 @@ toolbarspring {
 	background-color: hsla(0,0%,70%,.3) !important;
 }
 
-@media (-moz-bool-pref: "browser.urlbar.richSuggestions.featureGate") {
+@media -moz-pref("browser.urlbar.richSuggestions.featureGate") {
 	#identity-box[pageproxystate="invalid"] > .identity-box-button {
 		padding-inline:  var(--urlbar-icon-padding) !important;
 	}
