@@ -9,7 +9,7 @@
 #TabsToolbar {
 	background-color: var(--gnome-tabbar-background) !important;
 	border-bottom: 0 !important;
-	padding: 0 3px !important;
+	padding: 0 calc(var(--gnome-toolbar-padding) / 2) !important;
 	position: relative;
 	z-index: 1;
 
@@ -32,10 +32,10 @@
 
 	/* Tabsbar buttons */
 	.toolbarbutton-1 {
-		border-radius: 6px !important;
-		margin: 0px 3px 6px !important;
-		padding: 0 9px !important;
-		min-height: 34px !important;
+		border-radius: var(--gnome-button-radius) !important;
+		margin: 0px calc(var(--gnome-toolbar-spacing) / 2) var(--gnome-toolbar-padding) !important;
+		min-height: var(--gnome-button-size) !important;
+		min-width: var(--gnome-button-size) !important;
 		transition: background var(--gnome-animation-time);
 		
 		&:not([disabled]):not(:active):not([open]):hover {
@@ -52,7 +52,7 @@
 #tabbrowser-tabs arrowscrollbox {
 	height: auto !important;
 	min-height: auto !important;
-	--tab-min-height: 34px !important;
+	--tab-min-height: var(--gnome-button-size) !important;
 }
 
 /* Tabs scroll */
@@ -125,10 +125,10 @@ tabs#tabbrowser-tabs {
 			border-left-width: 1px !important;
 			border-style: solid !important;
 			color: var(--gnome-window-color) !important;
-			padding: 0px 2px 6px !important;
+			padding: 0px calc(var(--gnome-toolbar-spacing) / 2 - 1px) var(--gnome-toolbar-padding) !important;
 			position: relative;
 			&:not([hidden=true]):last-of-type {
-				padding-right: 3px !important;
+				padding-right: calc(var(--gnome-toolbar-spacing) / 2) !important;
 			}
 			
 			> stack {
@@ -311,7 +311,7 @@ tabs#tabbrowser-tabs {
 			/* Tab background */
 			.tab-background {
 				background-color: transparent !important;
-				border-radius: 6px !important;
+				border-radius: var(--gnome-button-radius) !important;
 				box-shadow: none !important;
 				margin-block: 0 !important;
 				border: 0 !important;
@@ -629,7 +629,7 @@ tabs#tabbrowser-tabs {
 		}
 		
 		.toolbarbutton-1{
-			margin-top: 6px !important;
+			margin-top: var(--gnome-toolbar-padding) !important;
 		}
 	}
 
@@ -637,7 +637,7 @@ tabs#tabbrowser-tabs {
 		/* Invert padding */
 		tab {
 			padding-bottom: 0px !important;
-			padding-top: 6px !important;
+			padding-top: var(--gnome-toolbar-padding) !important;
 		}
 		/* Tabs separators */
 		:root[dir="ltr"] & {
@@ -678,7 +678,7 @@ tabs#tabbrowser-tabs {
 	/* Force displaying controls in tab-bar */
 	:root[customtitlebar]:not([inDOMFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
 		display: flex !important;
-		padding-top: 6px !important;
+		padding-top: var(--gnome-toolbar-padding) !important;
 		visibility: visible !important;
 	}
 

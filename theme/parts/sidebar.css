@@ -2,13 +2,9 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-:root {
-	--toolbarbutton-active-background: var(--gnome-selected-color) !important;
-}
-
 /* Main sidebar */
 #sidebar-main {
-	--button-size-icon: 34px !important;
+	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
 	border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
 }
@@ -16,14 +12,15 @@
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	.actions-list {
 		& > moz-button:not(.tools-overflow) {
-			--button-outer-padding-inline: 6px !important;
-			--button-outer-padding-block: 3px !important;
+			--button-outer-padding-inline: var(--gnome-toolbar-padding) !important;
+			--button-outer-padding-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
+			--toolbarbutton-active-background: var(--gnome-selected-color) !important;
 			
 			&:last-of-type {
-				--button-outer-padding-block-end: 6px !important;
+				--button-outer-padding-block-end: var(--gnome-toolbar-padding) !important;
 			}
 			&:first-of-type {
-				--button-outer-padding-block-start: 6px !important;
+				--button-outer-padding-block-start: var(--gnome-toolbar-padding) !important;
 			}
 		}
 	}
@@ -48,7 +45,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 }
 
 #sidebar-search-container {
-	padding: 6px !important;
+	padding: var(--gnome-toolbar-padding) !important;
 }
 
 /* Separator */
@@ -74,7 +71,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #inputs {
 	background: var(--gnome-card-background) !important;
 	border: 0 !important;
-	border-radius: 12px !important;
+	border-radius: var(--gnome-card-radius) !important;
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px 1px rgba(0, 0, 0, .07), 0 2px 6px 2px rgba(0, 0, 0, .03);
 	margin-top: 12px !important;
 	padding: 0 !important;
@@ -95,6 +92,6 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ .label-wrap
 	& > label {
 		align-items: center;
 		display: flex !important;
-		gap: 6px;
+		gap: var(--gnome-toolbar-spacing);
 	}
 }

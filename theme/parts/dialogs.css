@@ -7,16 +7,16 @@ window {
 }
 
 dialog {	
-	padding: 24px !important;
+	padding: var(--gnome-dialog-padding) !important;
 }
 
 /* Dialog box */
 .dialogBox {
-	border-radius: 18px !important;
+	border-radius: var(--gnome-dialog-radius) !important;
 	margin-top: 0 !important;
 }
 .dialogBox[resizable="true"] {
-	margin-top: 24px !important;
+	margin-top: var(--gnome-dialog-padding) !important;
 }
 
 .dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog), #window-modal-dialog::backdrop {
@@ -105,7 +105,7 @@ dialog {
 
 /* Bookmark dialog */
 #editBookmarkPanelContent {
-	padding-bottom: 24px !important;
+	padding-bottom: var(--gnome-dialog-padding) !important;
 }
 
 /* Hadler dialog */
@@ -142,11 +142,11 @@ dialog {
 #fullscreen-exit-button {
 	appearance: none !important;
 	background-color: rgba(255, 255, 255, .09) !important;
-	border-radius: 6px !important;
+	border-radius: var(--gnome-button-radius) !important;
 	border: 0 !important;
 	padding: 2px 16px !important;
-	height: 34px !important;
-	min-height: 34px !important;
+	height: var(--gnome-button-size) !important;
+	min-height: var(--gnome-button-size) !important;
 	color: rgba(255, 255, 255, .9) !important;
 	font-weight: bold !important;
 	transition: background var(--gnome-animation-time);

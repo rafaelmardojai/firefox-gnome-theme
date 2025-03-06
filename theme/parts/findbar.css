@@ -3,7 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 findbar {
-	padding: 6px !important;
+	padding: var(--gnome-toolbar-padding) !important;
 	position: relative;
 	
 	.findbar-container {
@@ -13,7 +13,7 @@ findbar {
 		position: relative;
 		flex-direction: row;
 		margin: 0 !important;
-		margin-inline-end: 6px !important;
+		margin-inline-end: var(--gnome-toolbar-padding) !important;
 		height: auto !important;
 
 		.findbar-textbox-wrapper {

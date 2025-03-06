@@ -47,15 +47,14 @@ button.close,
 	-moz-appearance: none !important;
 	align-items: center !important;
 	background-color: var(--gnome-button-background) !important;
-	border-radius: 6px !important;
+	border-radius: var(--gnome-button-radius) !important;
 	border: 0 !important;
 	color: var(--gnome-window-color) !important;
 	font: menu !important;
 	font-weight: bold !important;
-	height: 34px !important;
-	max-height: 34px !important;
-	min-height: 34px !important;
-	min-width: 34px !important;
+	max-height: var(--gnome-button-size) !important;
+	min-height: var(--gnome-button-size) !important;
+	min-width: var(--gnome-button-size) !important;
 	outline: 0 !important;
 	padding: 0 1px !important;
 	transition: background var(--gnome-animation-time);	
@@ -132,11 +131,6 @@ button.close,
 	}
 }
 
-moz-button {	
-    --button-background-color-ghost-hover: var(--gnome-hover-color) !important;
-    --button-background-color-ghost-active: var(--gnome-active-color) !important;
-}
-
 /* Buttons with suggested action */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"],
 button.popup-notification-primary-button:not(#hack),
@@ -179,10 +173,10 @@ button.popup-notification-primary-button:not(#hack),
 .notification-button,
 .subviewbutton.panel-subview-footer:not(:only-of-type),
 .panel-footer button:not(:only-of-type) {
-	margin: 0 3px !important;
+	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
 }
 .close-icon:not(.tab-close-button) {
-	margin-left: 6px !important;
+	margin-left: var(--gnome-toolbar-spacing) !important;
 }
 
 /* Text buttons */
