@@ -2,17 +2,36 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-#sidebar-box {
-	background: var(--gnome-sidebar-background) !important;
+:root {
+	--toolbarbutton-active-background: var(--gnome-selected-color) !important;
 }
 
-#sidebar-header {
-	background: var(--gnome-toolbar-background) !important;
-	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
-	padding: 6px !important;
+/* Main sidebar */
+#sidebar-main {
+	--button-size-icon: 34px !important;
+	background-color: var(--gnome-sidebar-background) !important;
+	border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
 }
-#sidebar-search-container {
-	padding: 6px !important;
+
+link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
+	.actions-list {
+		& > moz-button:not(.tools-overflow) {
+			--button-outer-padding-inline: 6px !important;
+			--button-outer-padding-block: 3px !important;
+			
+			&:last-of-type {
+				--button-outer-padding-block-end: 6px !important;
+			}
+			&:first-of-type {
+				--button-outer-padding-block-start: 6px !important;
+			}
+		}
+	}
+}
+
+/* Sidebar content */
+#sidebar-box {	
+	padding: 0 !important;
 }
 
 #sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
@@ -20,75 +39,60 @@
 .sidebar-placesTreechildren:-moz-window-inactive {
 	opacity: 0.7 !important;
 }
+
+#sidebar {
+	background-color: var(--gnome-secondary-sidebar-background) !important;
+	border: 0 !important;
+	border-radius: 0 !important;;
+	box-shadow: none !important;
+}
+
+#sidebar-search-container {
+	padding: 6px !important;
+}
+
+/* Separator */
 #sidebar-splitter {
 	background: var(--gnome-toolbar-background) !important;
 	border: 0 !important;
 	border-right: 1px solid var(--gnome-border-color) !important;
+	border-color: var(--gnome-toolbar-border-color) !important;
+	margin: 0 !important;
 	width: 0 !important;
 }
 
-/* New sidebar */
-@media (-moz-bool-pref: "sidebar.revamp") {
-    #tabbrowser-tabbox {
-		--chrome-content-separator-color: var(--gnome-toolbar-border-color);
-		box-shadow: none !important;
-		outline: 0 !important;
-    }
-	#sidebar-splitter {
-		border-color: var(--gnome-toolbar-border-color) !important;
-		margin: 0 !important;
-	}
-	
-	/* First sidebar */
-	#sidebar-main {
-		background-color: var(--gnome-sidebar-background) !important;
-		border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
-		padding: 6px !important;
-		--button-size-icon: 34px !important;
-	}
-	link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
-		.actions-list {
-			gap: 3px;
-		}		
-	}
-	
-	/* Second sidebar */
-	#sidebar-box {
-		background-color: var(--gnome-secondary-sidebar-background) !important;
-		outline: 0 !important;
-		padding: 0 !important;
-	}
-	#sidebar {
-		background-color: var(--gnome-secondary-sidebar-background) !important;
-		border: 0 !important;
-		border-radius: 0 !important;;
-		box-shadow: none !important;
-	}	
+/* Browser content */
+#tabbrowser-tabbox {
+	--chrome-content-separator-color: var(--gnome-toolbar-border-color);
+	box-shadow: none !important;
+	outline: 0 !important;
+}
 
-	/* Settings lists */
-	/* TODO: Move to lists.css when revamp is released */
-	.customize-group .extensions,
-	link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #inputs {
-		background: var(--gnome-card-background) !important;
-		border: 0 !important;
-		border-radius: 12px !important;
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px 1px rgba(0, 0, 0, .07), 0 2px 6px 2px rgba(0, 0, 0, .03);
-		margin-top: 12px !important;
-		padding: 0 !important;
+/* Settings lists */
+/* TODO: Move to lists.css */
+.customize-group .extensions,
+link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #inputs {
+	background: var(--gnome-card-background) !important;
+	border: 0 !important;
+	border-radius: 12px !important;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px 1px rgba(0, 0, 0, .07), 0 2px 6px 2px rgba(0, 0, 0, .03);
+	margin-top: 12px !important;
+	padding: 0 !important;
+}
+
+moz-checkbox, moz-radio, .customize-group .extension-item {
+	align-items: center;
+	display: flex !important;
+	padding: 0 12px !important;
+	min-height: 50px !important;
+
+	&:not(:last-of-type) {
+		border-bottom: 1px solid var(--gnome-card-shade-color) !important;
 	}
+}
 
-	moz-checkbox, moz-radio, .customize-group .extension-item {
-		align-items: center;
-		display: flex !important;
-		padding: 0 12px !important;
-		min-height: 50px !important;
-
-		&:not(:last-of-type) {
-			border-bottom: 1px solid var(--gnome-card-shade-color) !important;
-		}
-	}
-
-	link[href="chrome://global/content/elements/moz-input-common.css"] ~ label {
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ .label-wrapper {
+	& > label {
 		align-items: center;
 		display: flex !important;
 		gap: 6px;
