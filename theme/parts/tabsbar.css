@@ -13,7 +13,7 @@
 	
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
 
-	@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+	@media not -moz-pref("sidebar.verticalTabs") {
 		/* We need the hardcoded tab colors in horizontal tabs, beacuse of the close button overlay */
 		--tab-hover-background-color: var(--gnome-tabbar-tab-hover-background) !important;
 		--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background) !important;
@@ -174,12 +174,12 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background) !important;
 		}
 	}
-	@media (-moz-bool-pref: "gnomeTheme.closeOnlySelectedTabs") {
+	@media -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
 		--gnome-tabbar-tab-close-overlay-bg: unset;
 	}
 
 	/* OPTIONAL: Add more contrast to the active tab */
-	@media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
+	@media -moz-pref("gnomeTheme.activeTabContrast") {
 		&[selected="true"], &:hover {
 			--tab-hover-background-color: var(--gnome-tabbar-tab-active-background-contrast) !important;
 			--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background-contrast) !important;
@@ -210,7 +210,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			}
 
 			/* Full width tabs */
-			@media not (-moz-bool-pref: "gnomeTheme.normalWidthTabs") {
+			@media not -moz-pref("gnomeTheme.normalWidthTabs") {
 				&:not([style^="max-width"]):not([pinned]),
 				&[style^="max-width: 100px !important;"]:not([pinned]) {
 					max-width: 100% !important;
@@ -233,7 +233,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Selected hover */
 	tab[selected]:hover & {
 		background-color: var(--gnome-selected-hover-color) !important;
-		@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+		@media not -moz-pref("sidebar.verticalTabs") {
 			background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 		}
 	}
@@ -332,8 +332,8 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		}
 		
 		/* Left close button */
-		@media (-moz-gtk-csd-reversed-placement) and (not (-moz-bool-pref: "gnomeTheme.swapTabClose")),
-			(-moz-bool-pref: "gnomeTheme.swapTabClose") and (not (-moz-gtk-csd-reversed-placement)) {
+		@media (-moz-gtk-csd-reversed-placement) and (not -moz-pref("gnomeTheme.swapTabClose")),
+			(-moz-pref("gnomeTheme.swapTabClose")) and (not (-moz-gtk-csd-reversed-placement)) {
 				/* Rearrange and fix alignment */
 				.tab-audio-button {
 					order: 3 !important;
@@ -368,7 +368,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		
 		/* Fix alignment when audio button is prestent */
 		tab:is([muted], [soundplaying]) & {
-			@media (not (-moz-gtk-csd-reversed-placement)) and (not (-moz-bool-pref: "gnomeTheme.swapTabClose")) {
+			@media (not (-moz-gtk-csd-reversed-placement)) and (not -moz-pref("gnomeTheme.swapTabClose")) {
 				margin-inline-end: 0 !important;
 			}
 		}
@@ -437,7 +437,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		}
 		/* Show close button on tab hover */
 		tab:hover & {
-			@media not (-moz-bool-pref: "gnomeTheme.closeOnlySelectedTabs") {
+			@media not -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
 				visibility: visible !important;
 				opacity: 1 !important;
 			}
@@ -479,7 +479,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			margin-inline-start: auto !important;
 			margin-inline-end: 2px;
 
-			@media (-moz-bool-pref: "gnomeTheme.tabAlignLeft") {
+			@media -moz-pref("gnomeTheme.tabAlignLeft") {
 				/* OPTIONAL: Align tab items left */
 				margin-inline-start: 0 !important;
 				padding: 0 5px !important;
@@ -707,11 +707,11 @@ tab-group {
 
 /* Tabs manager menu */
 #alltabs-button {
-	@media (not (-moz-bool-pref: "gnomeTheme.allTabsButton")) {
+	@media not -moz-pref("gnomeTheme.allTabsButton") {
 		visibility: collapse;
 	}
 	
-	@media (-moz-bool-pref: "browser.tabs.tabmanager.enabled"), (-moz-bool-pref: "gnomeTheme.allTabsButtonOnOverflow") {
+	@media -moz-pref("browser.tabs.tabmanager.enabled"), -moz-pref("gnomeTheme.allTabsButtonOnOverflow") {
 		#tabbrowser-tabs[overflow] ~ & {
 			visibility: visible;
 		}
@@ -737,7 +737,7 @@ tab-group {
 }
 
 /* OPTIONAL: Hide single tab */
-@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
+@media -moz-pref("gnomeTheme.hideSingleTab") {
 	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
@@ -749,7 +749,7 @@ tab-group {
 }
 
 /* OPTIONAL: Use tabs as headerbar */
-@media (-moz-bool-pref: "gnomeTheme.tabsAsHeaderbar") and (not (-moz-bool-pref: "sidebar.verticalTabs")) {
+@media -moz-pref("gnomeTheme.tabsAsHeaderbar") and (not -moz-pref("sidebar.verticalTabs")) {
 	/* Rearrange bars */
 	#navigator-toolbox #TabsToolbar {
 		order: 0;
@@ -763,7 +763,7 @@ tab-group {
 	#navigator-toolbox #PersonalToolbar {
 		order: 4;
 	}
-	@media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
+	@media -moz-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
 		#navigator-toolbox #PersonalToolbar {
 			order: 2 !important;
 		}
@@ -847,7 +847,7 @@ tab-group {
 	}
 
 	/* Blend single tab into whole bar */
-	@media (-moz-bool-pref: "gnomeTheme.hideSingleTab") {
+	@media -moz-pref("gnomeTheme.hideSingleTab") {
 		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
 			tab,
 			tab ~ toolbarbutton,
