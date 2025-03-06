@@ -6,7 +6,7 @@
         --tab-center-reborn-width: 0px;
     }
 
-    @media (-moz-bool-pref: "gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
+    @media -moz-pref("gnomeTheme.extensions.tabCenterReborn.alwaysOpen") {
         --tab-center-reborn-width: var(--tab-center-reborn-hover-width);
     }
 

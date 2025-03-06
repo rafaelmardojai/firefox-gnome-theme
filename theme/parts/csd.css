@@ -92,7 +92,7 @@
 					background: none !important;
 				}				
 
-				@media not (-moz-bool-pref: "gnomeTheme.noThemedIcons") {
+				@media not -moz-pref("gnomeTheme.noThemedIcons") {
 					& > .toolbarbutton-icon {
 						appearance: none !important;
 						height: 16px !important;
@@ -103,7 +103,7 @@
 					}
 				}
 
-				@media (-moz-bool-pref: "widget.gtk.non-native-titlebar-buttons.enabled") {
+				@media -moz-pref("widget.gtk.non-native-titlebar-buttons.enabled") {
 					&:-moz-lwtheme { /* Override config */
 						& > .toolbarbutton-icon {
 							appearance: auto !important
@@ -120,7 +120,7 @@
 }
 
 /* OPTIONAL: Allow draging the window from headerbar buttons */
-@media (-moz-bool-pref: "gnomeTheme.dragWindowHeaderbarButtons") {
+@media -moz-pref("gnomeTheme.dragWindowHeaderbarButtons") {
 	:root[tabsintitlebar] #nav-bar *,
 	:root[tabsintitlebar] #titlebar .titlebar-button {
 		-moz-window-dragging: drag;
