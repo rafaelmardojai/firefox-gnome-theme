@@ -4,6 +4,7 @@
 
 window {
 	padding: 0 !important;
+	width: initial !important;
 }
 
 dialog {	
@@ -53,9 +54,15 @@ dialog {
 		justify-content: center !important;
 	}
 
+	#titleCropper:not([nomaskfade]) {
+		display: initial !important;
+	}
+
 	#titleText {
 		font-size: 20px !important;
 		font-weight: 800 !important;
+		white-space: initial !important;
+		text-align: center !important;
 	}
 
 	.titleIcon {
@@ -73,6 +80,10 @@ dialog {
 	#infoContainer {
 		text-align: center;
 	}
+
+	#checkboxContainer {
+		align-items: center !important;
+	}
 }
 
 /* Buttons */
@@ -84,6 +95,8 @@ dialog {
 	padding: 0 !important;
 	
 	button {
+		--gnome-button-size: fit-content;
+
 		min-height: 44px !important;
 		max-height: unset !important;
 		padding: 10px 14px !important;
@@ -91,6 +104,10 @@ dialog {
 		border-radius: 12px !important;
 		flex: 1;
 		border-bottom: 0 !important;
+
+		label[value^="Quit Firefox"]::before {
+			content: "Quit";
+		}
 	}
 	
 	.button-spacer {
