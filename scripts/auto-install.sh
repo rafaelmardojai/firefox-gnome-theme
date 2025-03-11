@@ -15,6 +15,9 @@ firefoxInstallationPaths=(
     # Floorp
     ~/.floorp # Package
     ~/.var/app/one.ablaze.floorp/.floorp # Flatpak
+
+    # Waterfox
+    ~/.var/app/net.waterfox.waterfox/.waterfox # Flatpak
     
 )
 
