@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General Questions and Chat
+    url: https://matrix.to/#/#firefox-gnome-theme:matrix.org
+    about: Ask and chat about the theme in Matrix
