@@ -47,16 +47,16 @@
 	}
 }
 
-/* Tabsbar height */
-#tabbrowser-tabs,
-#tabbrowser-tabs arrowscrollbox {
+/* Horizontal tabsbar height */
+#tabbrowser-tabs[orient="horizontal"],
+#tabbrowser-tabs[orient="horizontal"] arrowscrollbox {
 	height: auto !important;
 	min-height: auto !important;
 	--tab-min-height: var(--gnome-button-size) !important;
 }
 
-/* Tabs scroll */
-#tabbrowser-arrowscrollbox {
+/* Horizontal tabs scroll */
+#tabbrowser-arrowscrollbox[orient="horizontal"] {
 	position: relative !important;
 }
 
