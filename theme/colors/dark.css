@@ -48,6 +48,9 @@
 		--gnome-tabbar-identity-color-red: var(--gnome-palette-red-1);
 		--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-1);
 		
+		/* Miscellaneous */
+		--gnome-shade-color: rgba(0, 0, 0, 0.25);
+		
 		/* Text color for Firefox Logo in new private tab */
 		--gnome-private-wordmark: #FBFBFE;
 		/* New private tab background */

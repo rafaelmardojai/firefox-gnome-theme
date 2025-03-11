@@ -116,8 +116,67 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	margin-inline: 0 !important;
 }
 
+/* Vertical tabs scroll */
+#tabbrowser-arrowscrollbox[orient="vertical"] {
+	--gnome-undershoot-top: inset 0 1px color-mix(in srgb, var(--gnome-shade-color) 75%, transparent);
+	--gnome-undershoot-bottom: inset 0 -1px color-mix(in srgb, var(--gnome-shade-color) 75%, transparent);
+
+	&[overflowing] {
+		&:not([scrolledtostart]) {
+			box-shadow: var(--gnome-undershoot-top);
+		}
+		&:not([scrolledtoend]) {
+			box-shadow: var(--gnome-undershoot-bottom);
+		}
+		&:not([scrolledtostart], [scrolledtoend]) {
+			box-shadow: var(--gnome-undershoot-top),  var(--gnome-undershoot-bottom);
+		}
+	}
+}
+
 /* Tabs */
 tabs#tabbrowser-tabs {
+	/* Common tab */
+	tab {
+		/* Audio button */
+		.tab-audio-button {
+			--button-border-radius: 50% !important;
+			margin-top: -3px !important; /* Fix position */
+		}
+
+		/* Tab close */
+		.tab-close-button {
+			fill: var(--gnome-window-color) !important;
+			fill-opacity: 1 !important;
+			height: 16px !important;
+			list-style-image: url("../icons/window-close-symbolic.svg") !important;
+			width: 16px !important;
+			-moz-context-properties: fill, fill-opacity !important;
+		}
+
+		/* Tab buttons */
+		.tab-icon-overlay,
+		.tab-close-button {
+			border: 0 !important;
+			box-sizing: content-box !important; /* Avoid deformation on flexbox */
+			border-radius: 50% !important;
+			padding: 4px !important;
+			background-image: none !important;
+			background-color: transparent !important;
+			background-size: 24px;
+			transition: all var(--gnome-animation-time) ease-out !important;
+
+			
+			&:hover {
+				background-color: var(--gnome-hover-color) !important;
+			}
+			&:active {
+				background-color: var(--gnome-active-color) !important;
+			}
+		}
+	}
+	
+	/* Horizontal tabs */
 	&[orient="horizontal"] {
 		/* Tab */
 		tab {
@@ -185,9 +244,7 @@ tabs#tabbrowser-tabs {
 
 				/* Audio button */
 				.tab-audio-button {
-					--button-border-radius: 99px !important;
 					margin-inline: 0 !important;
-					margin-top: -3px !important; /* Fix position */
 				}
 
 				/* Tab icon */
@@ -220,17 +277,10 @@ tabs#tabbrowser-tabs {
 		
 				/* Tab close */
 				.tab-close-button {
-					box-sizing: content-box !important;
-					fill: var(--gnome-window-color) !important;
-					fill-opacity: 1 !important;
-					height: 16px !important;
-					list-style-image: url("../icons/window-close-symbolic.svg") !important;
 					margin-inline-start: auto;
 					margin-inline-end: 0 !important;
 					opacity: 1 !important;
-					width: 16px !important;
 					z-index: 100 !important;
-					-moz-context-properties: fill, fill-opacity !important;
 					
 					/* Autohide */
 					&:not([selected]) {
@@ -243,28 +293,7 @@ tabs#tabbrowser-tabs {
 				.tab-throbber, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-sound, .tab-close-button {
 					margin-top: 0 !important;
 				}
-				
-				/* Tab buttons */
-				.tab-icon-overlay,
-				.tab-close-button {
-					border: 0 !important;;
-					box-sizing: content-box; /* Avoid deformation on flexbox */
-					border-radius: 99px !important;
-					padding: 4px !important;
-					background-image: none !important;
-					background-color: transparent !important;
-					background-size: 24px;
-					transition: all var(--gnome-animation-time) ease-out !important;
-					
-					&:not(:-moz-window-inactive) {
-						&:hover {
-							background-color: var(--gnome-hover-color) !important;
-						}
-						&:active {
-							background-color: var(--gnome-active-color) !important;
-						}
-					}
-				}
+
 				/* Icon overlay */
 				.tab-icon-overlay {
 					height: 12px !important;
@@ -323,6 +352,13 @@ tabs#tabbrowser-tabs {
 					border-image: none !important;
 				}
 			}
+			
+			/* Fix alignment when audio button is prestent */
+			&:is([muted], [soundplaying]) {
+				.tab-label-container {
+					margin-inline-end: 0 !important;
+				}
+			}
 
 			/* Tab hover */
 			&:hover {
@@ -368,7 +404,6 @@ tabs#tabbrowser-tabs {
 					}
 				}
 			}
-
 			
 			/* OPTIONAL: Add more contrast to the active tab */
 			@media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
@@ -433,8 +468,98 @@ tabs#tabbrowser-tabs {
 	}
 	
 	/* Vertical tabs */
-	&[orient="horizontal"] {
+	&[orient="vertical"] {
+		--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
+		grid-gap: var(--gnome-toolbar-spacing) !important;
 		
+		&[expanded] {
+			--tab-inner-inline-margin: var(--gnome-toolbar-padding) !important;
+			--tab-pinned-container-margin-inline-expanded:var(--gnome-toolbar-padding) !important;
+			
+			#vertical-pinned-tabs-container {
+				gap:  var(--gnome-toolbar-padding) !important;
+				
+				tab {
+					padding-block-start: var(--gnome-toolbar-padding) !important;
+					
+					.tab-background {
+						margin: 0 !important;
+					}
+				}
+			}
+		}		
+
+		/* Tabs */
+		tab {			
+			/* Move fisrt and last tab closer to toolbars */
+			&:not([hidden="true"], [pinned]):is(:first-of-type, :last-of-type) {
+				padding-block-start: 0 !important;
+			}
+			
+			/* Tab background */
+			.tab-background {
+				border-radius: var(--gnome-button-radius) !important;
+				box-shadow: none !important;
+							
+				&[selected] {
+					background-color: var(--gnome-selected-color) !important;
+				}
+			}
+			
+			&:hover {
+				.tab-background {
+					background-color: var(--gnome-hover-color) !important;
+					&[selected] {
+						background-color: var(--gnome-selected-hover-color) !important;
+					}
+				}
+			}
+			
+			&[pinned] {
+				.tab-background {
+					background-color: transparent !important;
+					&[selected] {
+						background-color: var(--gnome-selected-color) !important;
+					}
+				}
+				&:hover {
+					.tab-background {
+						background-color: var(--gnome-hover-color) !important;
+						&[selected] {
+							background-color: var(--gnome-selected-hover-color) !important;
+						}
+					}
+				}
+			}
+		}
+		
+		&[expanded] {
+			tab {
+				&[pinned] {
+					.tab-background {
+						background-color: var(--gnome-button-background) !important;
+						&[selected] {
+							background-color: var(--gnome-button-checked-background) !important;
+						}
+					}
+					&:hover {
+						.tab-background {
+							background-color: var(--gnome-button-hover-background) !important;
+							&[selected] {
+								background-color: var(--gnome-button-checked-hover-background) !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&:not([expanded]) {
+			/* Set bg to close button when no expanded */
+			.tab-close-button {
+				background-color: var(--gnome-window-background) !important;
+			}
+		}
 	}
 }
 

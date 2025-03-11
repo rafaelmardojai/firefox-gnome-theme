@@ -10,6 +10,14 @@
 }
 
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
+	.tools-and-extensions {
+		align-items: center !important;
+		justify-content: center !important;
+		&[orientation="horizontal"] {
+			padding: var(--gnome-toolbar-padding) !important;
+		}
+	}
+	
 	.actions-list {
 		& > moz-button:not(.tools-overflow) {
 			--button-outer-padding-inline: var(--gnome-toolbar-padding) !important;
