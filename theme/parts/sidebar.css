@@ -86,20 +86,39 @@ link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #input
 }
 
 moz-checkbox, moz-radio, .customize-group .extension-item {
-	align-items: center;
 	display: flex !important;
-	padding: 0 12px !important;
-	min-height: 50px !important;
+	padding: 0 !important;
 
 	&:not(:last-of-type) {
 		border-bottom: 1px solid var(--gnome-card-shade-color) !important;
 	}
+	&[slot="nested"]:first-of-type {
+		border-top: 1px solid var(--gnome-card-shade-color) !important;
+	}
+}
+moz-checkbox, moz-radio {
+	flex-direction: column;
+	justify-content: center;
+	margin-block-start: 0 !important;
+}
+.customize-group .extension-item {
+	align-items: center;
+	min-height: 50px !important;
+	padding: 0 12px !important;
 }
 
-link[href="chrome://global/content/elements/moz-input-common.css"] ~ .label-wrapper {
-	& > label {
-		align-items: center;
-		display: flex !important;
-		gap: var(--gnome-toolbar-spacing);
+link[href="chrome://global/content/elements/moz-input-common.css"] {
+	& ~ .label-wrapper {
+		margin-inline: 12px !important;
+		& > label {
+			align-items: center;
+			display: flex !important;
+			gap: var(--gnome-toolbar-spacing);
+			min-height: 50px !important;
+		}
+	}
+
+	& ~ .nested {
+		margin: 0 !important;
 	}
 }
