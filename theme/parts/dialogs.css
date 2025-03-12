@@ -50,6 +50,12 @@ dialog#handling {
 
 /* Content */
 dialog {
+	&:not(.sizeDetermined) {
+		display: grid !important;
+		justify-content: stretch;
+		min-width: fit-content;
+	}
+
 	#titleContainer {
 		justify-content: center !important;
 	}
@@ -106,6 +112,11 @@ dialog {
 	gap: 12px;
 	margin-top: auto;
 	padding: 0 !important;
+	
+	/* if dialog has at least 3 buttons */
+	&:has(button:not([hidden])[dlgtype="extra1"]) {
+		min-width: 40rem;
+	}
 	
 	button {
 		min-height: 44px !important;
