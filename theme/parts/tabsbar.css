@@ -513,15 +513,14 @@ tabs#tabbrowser-tabs {
 					}
 				}
 			}
-		}		
+		}
+		
+		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
+			margin-block: var(--gnome-toolbar-padding) !important;
+		}
 
 		/* Tabs */
-		tab {			
-			/* Move fisrt and last tab closer to toolbars */
-			&:not([hidden="true"], [pinned]):is(:first-of-type, :last-of-type) {
-				padding-block-start: 0 !important;
-			}
-			
+		tab {
 			/* Tab background */
 			.tab-background {
 				border-radius: var(--gnome-button-radius) !important;
