@@ -23,16 +23,16 @@ toolbarspring {
 /* URL bar */
 #urlbar {
 	box-shadow: none !important;
+	&[breakout] {
+		width: calc(var(--urlbar-width) - var(--gnome-toolbar-spacing)) !important;
+	}
 }
+
 #urlbar-background {
 	box-shadow: var(--gnome-entry-box-shadow) !important;
 	border: 0 !important;
 	border-radius: 8px !important;
 	background: transparent !important;
-}
-
-#urlbar[breakout][breakout-extend] {
-	width: var(--urlbar-width) !important;
 }
 
 #urlbar .urlbar-input-container {
@@ -51,7 +51,7 @@ toolbarspring {
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
     border-radius: 12px !important;
-	width: 100%;
+	width: 100% !important;
 }
 
 /* Search bar result */
