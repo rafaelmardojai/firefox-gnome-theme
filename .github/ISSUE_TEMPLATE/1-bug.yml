@@ -1,7 +1,13 @@
 name: Bug Report
 description: Report a bug in the theme
+title: "[Bug] "
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+		> Note that extension support is maintained by the community, so extension bug reports will be closed. If you want to report something, use [Discussions](https://github.com/rafaelmardojai/firefox-gnome-theme/discussions).
   - type: textarea
     attributes:
       label: Describe the bug
