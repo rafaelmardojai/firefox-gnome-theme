@@ -228,7 +228,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Tab background */
 .tab-background {
 	box-shadow: none !important;
-	position: relative;
 	transition: background var(--gnome-tab-animation-time) linear !important;
 
 	/* Selected hover */
@@ -264,6 +263,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		margin: 0 !important;
 	}
 	
+	/* Add solid bg on tabs dnd */
 	#tabbrowser-tabs[movingtab] tab:is([multiselected], [selected]) & {
 		background-color: var(--gnome-tabbar-background) !important;
 		background-image: linear-gradient(var(--tab-selected-bgcolor), var(--tab-selected-bgcolor)) !important;
@@ -802,17 +802,33 @@ tab-group {
 			margin-bottom: 0 !important;
 		}
 		
-		.toolbarbutton-1{
+		.toolbarbutton-1 {
 			margin-top: var(--gnome-toolbar-padding) !important;
 		}
 	}
+	
 
-	tabs#tabbrowser-tabs[orient="horizontal"] {
+	#tabbrowser-tabs[orient="horizontal"] {
 		/* Invert padding */
-		tab {
+		:not([collapsed]) > .tabbrowser-tab, .tabbrowser-tab {
 			padding-bottom: 0px !important;
 			padding-top: var(--gnome-toolbar-padding) !important;
 		}
+		
+		/* Move tab group line to top */
+		.tab-group-label-container::after {
+			inset: 0 !important;
+		}
+		tab-group {
+			.tab-background {
+				flex-direction: column-reverse !important;
+			}
+			.tab-group-line {
+				margin-block-end: 0 !important;
+				margin-block-start: calc(var(--gnome-toolbar-padding) * -1) !important;
+			}
+		}
+
 		/* Tabs separators */
 		:root[dir="ltr"] & {
 			tab:not(:first-of-type, [selected], :hover) {
