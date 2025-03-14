@@ -644,12 +644,21 @@ tab-group {
 }
 
 /* Tabs containers */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-	display: none;
-}
-.tabbrowser-tab[class*="identity-color-"] .tab-label-container {
-	color: var(--identity-tab-color) !important;
-	font-weight: bold !important;
+.tabbrowser-tab[usercontextid] {
+	& > .tab-stack > .tab-background > .tab-context-line {
+		display: none;
+	}
+
+	 .tab-label-container {
+		color: var(--identity-tab-color) !important;
+		font-weight: bold !important;
+	}
+
+	#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+		.tab-background {
+			outline: 1px solid var(--identity-tab-color) !important;
+		}	
+	}
 }
 .identity-color-blue,
 .identity-color-turquoise,
