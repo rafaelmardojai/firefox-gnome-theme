@@ -228,6 +228,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Tab background */
 .tab-background {
 	box-shadow: none !important;
+	position: relative;
 	transition: background var(--gnome-tab-animation-time) linear !important;
 
 	/* Selected hover */
@@ -261,6 +262,11 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Tweak margins on expanded vertical pinned tabs */
 	#tabbrowser-tabs[orient="vertical"][expanded] #vertical-pinned-tabs-container & {
 		margin: 0 !important;
+	}
+	
+	#tabbrowser-tabs[movingtab] tab:is([multiselected], [selected]) & {
+		background-color: var(--gnome-tabbar-background) !important;
+		background-image: linear-gradient(var(--tab-selected-bgcolor), var(--tab-selected-bgcolor)) !important;
 	}
 }
 
