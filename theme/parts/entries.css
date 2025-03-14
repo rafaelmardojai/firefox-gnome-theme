@@ -3,7 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Entries */
-input[type="text"],
+input[type="text"]:not(.tree-input),
 input[type="password"],
 #urlbar,
 #searchbar,
@@ -38,7 +38,7 @@ input[type="password"],
 }
 
 /* Entries focused */
-input[type="text"]:focus,
+input[type="text"]:not(.tree-input):focus,
 input[type="password"]:focus,
 #urlbar[breakout][breakout-extend],
 #urlbar[focused]:not([suppress-focus-border]),
