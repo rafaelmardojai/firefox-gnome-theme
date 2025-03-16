@@ -22,14 +22,3 @@
 		--gnome-tab-animation-time: 0ms;
 	}
 }
-
-/* Override Firefox variables */
-:root {
-	/* moz-button */
-	--button-border-radius: var(--gnome-button-radius) !important;	
-	--button-background-color: var(--gnome-button-background) !important;
-    --button-background-color-hover: var(--gnome-button-hover-background) !important;
-	--button-background-color-active: var(--gnome-button-active-background) !important;
-	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
-    --button-background-color-ghost-active: var(--gnome-active-color) !important;
-}

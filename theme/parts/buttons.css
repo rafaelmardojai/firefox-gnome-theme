@@ -2,6 +2,17 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Override vars */
+:root {
+	/* moz-button */
+	--button-border-radius: var(--gnome-button-radius) !important;	
+	--button-background-color: var(--gnome-button-background) !important;
+    --button-background-color-hover: var(--gnome-button-hover-background) !important;
+	--button-background-color-active: var(--gnome-button-active-background) !important;
+	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
+    --button-background-color-ghost-active: var(--gnome-active-color) !important;
+}
+
 /* Hide buttons separator */
 #nav-bar .toolbaritem-combined-buttons separator {
 	display: none !important;
