@@ -354,7 +354,7 @@ tabs#tabbrowser-tabs {
 			}
 			
 			/* Fix alignment when audio button is prestent */
-			@media (not (-moz-gtk-csd-reversed-placement)) and (not -moz-pref("gnomeTheme.swapTabClose") {
+			@media (not (-moz-gtk-csd-reversed-placement)) and (not -moz-pref("gnomeTheme.swapTabClose")) {
 				&:is([muted], [soundplaying]) {
 					.tab-label-container {
 						margin-inline-end: 0 !important;
