@@ -62,6 +62,8 @@
 		&:-moz-window-inactive {
 			--gnome-tabbar-tab-hover-background: #2c2c2c; /* Hardcoded color */
 			--gnome-tabbar-tab-active-background: #2e2e2e; /* Hardcoded color */
+			--gnome-sidebar-background: #2a2a2a;
+			--gnome-secondary-sidebar-background: #272727;
 		}
 		
 		/* Private browsing colors */

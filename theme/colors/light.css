@@ -164,6 +164,8 @@
 		--gnome-headerbar-background: var(--gnome-window-background);
 		--gnome-tabbar-tab-hover-background: #f3f3f3; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #f0f0f0; /* Hardcoded color */
+		--gnome-sidebar-background: #f2f2f2;
+		--gnome-secondary-sidebar-background: #f6f6f6;
 	}
 
 	/* Private browsing colors */
