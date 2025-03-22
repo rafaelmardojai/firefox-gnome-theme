@@ -40,7 +40,7 @@
 		--gnome-tabbar-tab-hover-background: #3d3d40; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #434346; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background-contrast: #4F4F4F; /* Hardcoded color */
-		--gnome-tabbar-tab-active-hover-background: #303034; /* Hardcoded color */
+		--gnome-tabbar-tab-active-hover-background: #49494d; /* Hardcoded color */
 		
 		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
 		--gnome-tabbar-identity-color-yellow: var(--gnome-palette-yellow-2);
