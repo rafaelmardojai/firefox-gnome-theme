@@ -41,6 +41,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 
 #sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
 .sidebar-panel:-moz-window-inactive label, .sidebar-panel:-moz-window-inactive image,
+.tools-and-extensions:-moz-window-inactive,
 .sidebar-placesTreechildren:-moz-window-inactive {
 	opacity: 0.7 !important;
 }
