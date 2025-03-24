@@ -559,34 +559,7 @@ tab-group {
 		.tab-group-label-container {
 			margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
 		}
-		
-		.tab-group-label {
-			align-items: center !important;
-			border-radius: 26px !important;
-			display: flex;
-			margin-block: var(--gnome-toolbar-padding) !important;
-			padding: 2px 9px !important;
-			
-			&::before {
-				-moz-context-properties: fill;
-				fill: currentColor !important;
-				content: var(--gnome-icon-pan-end-symbolic) !important;
-				display: block;
-				height: 16px;
-				margin-inline-end: 3px;
-				width: 16px;
-			}
 
-			tab-group:not([collapsed]) &::before {
-				content: var(--gnome-icon-pan-down-symbolic) !important;
-			}
-
-			tab-group[collapsed] & {
-				@media (prefers-color-scheme: dark) {
-					outline: 0 !important;
-				}
-			}
-		}
 	}
 }
 
@@ -609,19 +582,20 @@ tab-group {
 		align-items: center !important;
 		display: flex;
 		margin-block: var(--gnome-toolbar-padding) !important;
-		
 
 		&::before {
 			-moz-context-properties: fill;
 			fill: currentColor !important;
-			content: var(--gnome-icon-pan-end-symbolic) !important;
+			background: var(--gnome-icon-pan-end-symbolic) no-repeat;
+			background-size: contain;
+			content: "";
 			display: block;
 			height: 16px;
 			margin-inline-end: 3px;
 			width: 16px;
 		}
 		tab-group:not([collapsed]) &::before {
-			content: var(--gnome-icon-pan-down-symbolic) !important;
+			background-image: var(--gnome-icon-pan-down-symbolic);
 		}
 	}
 }
