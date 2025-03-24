@@ -174,7 +174,7 @@ dialog {
 	padding: 6px 12px !important;
 	
 	&::before {
-		background-image: url("../icons/padlock-symbolic.svg") !important;
+		background-image: var(--gnome-icon-channel-secure-symbolic) !important;
 		height: 16px !important;
 		width: 16px !important;
 	}

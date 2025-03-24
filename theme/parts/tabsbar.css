@@ -420,7 +420,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	fill: var(--gnome-window-color) !important;
 	fill-opacity: 1 !important;
 	height: 16px !important;
-	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+	list-style-image: var(--gnome-icon-window-close-symbolic) !important;
 	width: 16px !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	
@@ -570,7 +570,7 @@ tab-group {
 			&::before {
 				-moz-context-properties: fill;
 				fill: currentColor !important;
-				content: url("../icons/pan-end-symbolic.svg") !important;
+				content: var(--gnome-icon-pan-end-symbolic) !important;
 				display: block;
 				height: 16px;
 				margin-inline-end: 3px;
@@ -578,7 +578,7 @@ tab-group {
 			}
 
 			tab-group:not([collapsed]) &::before {
-				content: url("../icons/pan-down-symbolic.svg") !important;
+				content: var(--gnome-icon-pan-down-symbolic) !important;
 			}
 
 			tab-group[collapsed] & {
@@ -614,14 +614,14 @@ tab-group {
 		&::before {
 			-moz-context-properties: fill;
 			fill: currentColor !important;
-			content: url("../icons/pan-end-symbolic.svg") !important;
+			content: var(--gnome-icon-pan-end-symbolic) !important;
 			display: block;
 			height: 16px;
 			margin-inline-end: 3px;
 			width: 16px;
 		}
 		tab-group:not([collapsed]) &::before {
-			content: url("../icons/pan-down-symbolic.svg") !important;
+			content: var(--gnome-icon-pan-down-symbolic) !important;
 		}
 	}
 }
