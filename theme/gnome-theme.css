@@ -32,6 +32,7 @@
 
 /* Extensions support */
 @import "extensions/tab-center-reborn.css" screen and -moz-pref("gnomeTheme.extensions.tabCenterReborn");
+@import "extensions/adaptive-tab-bar-colour.css" screen and -moz-pref("gnomeTheme.extensions.adaptiveTabBarColour");
 
 /* Optional */
 @import "system-icons.css" screen and -moz-pref("gnomeTheme.systemIcons");
