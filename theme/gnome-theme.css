@@ -23,14 +23,15 @@
 /* Platforms */
 @import "platforms/windows.css" screen and (-moz-platform: windows);
 
-/* Extensions support */
-@import "extensions/tab-center-reborn.css" screen and -moz-pref("gnomeTheme.extensions.tabCenterReborn");
-
 /* Variables */
 @import "variables.css";
 @import "colors/light.css";
 @import "colors/dark.css";
 @import "colors/black.css" screen and -moz-pref("gnomeTheme.oledBlack"); 
+
+/* Extensions support */
+@import "extensions/tab-center-reborn.css" screen and -moz-pref("gnomeTheme.extensions.tabCenterReborn");
+@import "extensions/adaptive-tab-bar-colour.css" screen and -moz-pref("gnomeTheme.extensions.adaptiveTabBarColour");
 
 /* Optional */
 @import "system-icons.css" screen and -moz-pref("gnomeTheme.systemIcons");
