@@ -1,0 +1,73 @@
+:root,
+:root[privatebrowsingmode="temporary"],
+:is(:root, :root[privatebrowsingmode="temporary"]):-moz-window-inactive {
+	/* Colors */
+	--gnome-accent-bg: AccentColor !important;
+	/* Window */
+	--gnome-window-color: var(--lwt-text-color);
+	--gnome-window-background: var(--lwt-accent-color);
+	--gnome-sidebar-background: var(--lwt-accent-color);
+	--gnome-secondary-sidebar-background: var(--sidebar-background-color);
+	/* Menu */
+	--gnome-menu-background: var(--arrowpanel-background);
+	--gnome-menu-color: var(--lwt-text-color);
+	/* Header bar */
+	--gnome-headerbar-background: var(--toolbar-bgcolor) !important;
+	/* Toolbars */
+	--gnome-toolbar-border-color: transparent;
+	--gnome-toolbar-background: var(--toolbar-bgcolor);
+	--gnome-toolbar-icon-fill: var(--toolbarbutton-icon-fill);
+	/* Entries */
+	--gnome-entry-background: var(--toolbar-field-background-color);
+	--gnome-entry-color: var(--toolbar-field-color);
+	--gnome-inactive-entry-color: hsl(from var(--gnome-entry-color) h s calc(l + 5%));
+	--gnome-entry-focused-border-color: var(--gnome-selection-bg);
+	/* Tabs */
+	--gnome-tabbar-background: var(--gnome-headerbar-background);
+	--gnome-tabbar-tab-hover-background: color-mix(in oklab, var(--gnome-tabbar-background), var(--lwt-text-color) 10%);
+	--gnome-tabbar-tab-active-background: var(--tab-selected-bgcolor);
+	--gnome-tabbar-tab-active-hover-background: color-mix(in oklab, var(--gnome-tabbar-tab-active-background), var(--lwt-text-color) 10%);
+
+	/* 'New Tab' and 'New Private Tab' pages */
+	&:has(
+		tab:where(
+			[image="chrome://branding/content/icon32.png"],
+			[image="chrome://browser/skin/privatebrowsing/favicon.svg"]
+		)[selected]
+	) {
+		--lwt-accent-color: var(--gnome-private-in-content-page-background) !important;
+
+		--lwt-text-color: rgba(0, 0, 0, 0.8) !important;
+		--sidebar-background-color: #f3f3f3 !important;
+
+		@media (prefers-color-scheme: dark) {
+			--lwt-text-color: white !important;
+			--sidebar-background-color: #2a2a2a !important;
+		}
+
+		--toolbar-bgcolor: var(--lwt-accent-color) !important;
+		--toolbar-color: var(--lwt-text-color) !important;
+		--toolbar-field-color: var(--lwt-text-color) !important;
+		--toolbarbutton-icon-fill: var(--lwt-text-color) !important;
+		--toolbar-field-focus-background-color: Field !important;
+		--arrowpanel-background: color-mix(in oklab, var(--toolbar-bgcolor), var(--lwt-text-color) 10%) !important;
+		--toolbar-field-background-color: var(--arrowpanel-background) !important;
+		--tab-selected-bgcolor: color-mix(in oklab, var(--gnome-tabbar-background), var(--lwt-text-color) 20%) !important;
+		--lwt-tab-line-color: var(--tab-selected-bgcolor) !important;
+	}
+}
+
+.menupopup-arrowscrollbox, window[role="dialog"] {
+	--gnome-menu-background: Menu;
+	--gnome-window-color: MenuText;
+	--gnome-toolbar-icon-fill: MenuText;
+}
+
+.urlbarView-url {
+	--gnome-headerbar-mix: color-mix(in oklch, var(--gnome-headerbar-background), var(--lwt-text-color) 60%);
+	--gnome-accent: oklch(from var(--gnome-headerbar-mix) l calc(c + 0.01) h);
+}
+
+#sidebar-launcher-splitter, #sidebar-splitter {
+	background-color: color-mix(in oklab, var(--lwt-accent-color), var(--lwt-text-color) 10%) !important;
+}
