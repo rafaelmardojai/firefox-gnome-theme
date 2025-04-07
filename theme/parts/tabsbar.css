@@ -737,7 +737,7 @@ tab-group {
 }
 
 /* OPTIONAL: Hide single tab */
-@media -moz-pref("gnomeTheme.hideSingleTab") {
+@media -moz-pref("gnomeTheme.hideSingleTab") and (not -moz-pref("sidebar.verticalTabs")) {
 	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
