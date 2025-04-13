@@ -7,6 +7,10 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+:root {
+	--tabpanel-background-color: --gnome-window-background !important;
+}
+
 /* Toolbox colors */
 #navigator-toolbox {
 	background: var(--gnome-toolbar-background) !important;
