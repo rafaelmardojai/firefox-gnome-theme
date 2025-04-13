@@ -7,6 +7,10 @@
 	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
 	border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
+	@media not -moz-pref("sidebar.position_start") {
+		border-inline-end: none !important;
+		border-inline-start: 1px solid var(--gnome-toolbar-border-color) !important;
+	}
 }
 
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
