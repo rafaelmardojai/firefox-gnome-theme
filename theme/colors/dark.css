@@ -20,14 +20,14 @@
 		--gnome-window-color: white;
 		--gnome-view-background: #1e1e1e;
 		--gnome-sidebar-background: #2e2e32;
-		--gnome-secondary-sidebar-background: #222226;
+		--gnome-secondary-sidebar-background: #28282c;
 
 		/* Card */
 		--gnome-card-background: rgba(255, 255, 255, 0.08);
-		--gnome-card-shade-color: color-mix(in srgb, black 36%, transparent);
+		--gnome-card-shade-color: rgba(0, 0, 6, 0.36);
 
 		/* Menu */
-		--gnome-menu-background: #2e2e32;
+		--gnome-menu-background: #36363a;
 
 		/* Header bar */
 		--gnome-headerbar-background: #2e2e32;
@@ -49,7 +49,7 @@
 		--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-1);
 		
 		/* Miscellaneous */
-		--gnome-shade-color: rgba(0, 0, 0, 0.25);
+		--gnome-shade-color: rgba(0, 0, 6, 0.25);
 		
 		/* Text color for Firefox Logo in new private tab */
 		--gnome-private-wordmark: #FBFBFE;
@@ -62,8 +62,8 @@
 		&:-moz-window-inactive {
 			--gnome-tabbar-tab-hover-background: #2a2a2e; /* Hardcoded color */
 			--gnome-tabbar-tab-active-background: #2d2d31; /* Hardcoded color */
-			--gnome-sidebar-background: #222226;
-			--gnome-secondary-sidebar-background: #272727;
+			--gnome-sidebar-background: #28282c;
+			--gnome-secondary-sidebar-background: #252529;
 		}
 		
 		/* Private browsing colors */
