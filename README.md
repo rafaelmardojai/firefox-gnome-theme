@@ -48,7 +48,8 @@ The most friendly way to get this theme is using the **Add Water** app.
 
 To install this theme, you can run this command, which uses *curl* to download a script that will also download the latest released version of the theme (not the master version) and run the **auto-install** script for you.
 
-> **Warning**: Always be careful when running scripts from the Internet.
+> [!WARNING]
+> Always be careful when running scripts from the Internet.
 
 ```sh
 curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
@@ -76,8 +77,7 @@ This theme provides two installation scripts in addition to the curled one.
 
 ### Auto install script
 
-This script will look for Firefox profiles from various known locations (`~/.mozilla/firefox/`, Flatpak, Snap, etc) and install the theme in each one. 
-It will also enable a color variant for your GTK theme if it exists.
+This script will look for Firefox profiles from various known locations (`~/.mozilla/firefox/`, Flatpak, Snap, etc) and install the theme in each one.
 
 You can execute it by running:
 
@@ -177,7 +177,7 @@ git checkout v$(firefox --version | cut -d ' ' -f 3 | cut -d '.' -f 1) # Using F
 </details>
 
 ## Required Firefox preferences
-We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work.
+We provide a **user.js** configuration file in `configuration/user.js` that enables some preferences required by this theme to work.
 
 You should already have this file installed if you followed one of the installation methods, but in any case be sure this preferences are enabled under `about:config`:
 
@@ -296,7 +296,8 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 We also have optional features to enable support for some Firefox extensions.
 
-> **Be aware that extensions support are maintained by the community, so requests to support new extensions are not allowed and the included ones could get broken until someone shows up to fix them.**
+> [!WARNING]
+> Note that extension support is maintained by the community, so requests to support new extensions are not allowed, and the included extensions may be broken until someone shows up to fix them.
 
 - **Tab center reborn support** `gnomeTheme.extensions.tabCenterReborn`
 
