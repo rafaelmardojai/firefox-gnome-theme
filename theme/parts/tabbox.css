@@ -4,5 +4,5 @@
 
 /* Main tab content */
 .tabbrowser-tabbox {
-	border: 1px solid var(--gnome-border-color);
+	border: 1px solid rgba(0,0,0,0.9);
 }
