@@ -2,12 +2,6 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-@media screen and (moz-pref: "sidebar.revamp.round-content-area") {
-	.tabbrowser-tabbox {
-		border-radius: 12px;
-	}
-}
-
 /* Main tab content */
 .tabbrowser-tabbox {
 	border: 1px solid var(--gnome-border-color);
