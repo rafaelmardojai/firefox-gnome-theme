@@ -14,7 +14,6 @@
 /* Toolbox colors */
 #navigator-toolbox {
 	background: var(--gnome-toolbar-background) !important;
-	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 
 #PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {

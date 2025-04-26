@@ -1,0 +1,8 @@
+/*Tabbox*/
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Main tab content */
+.tabbrowser-tabbox {
+	border: 1px solid var(--gnome-border-color);
+}
