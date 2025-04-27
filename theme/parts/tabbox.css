@@ -7,6 +7,8 @@
 	@media -moz-pref("sidebar.revamp.round-content-area") {
 		--border-radius-medium: var(--gnome-card-radius) !important;
 	}
+	@media -moz-pref("sidebar.revamp") {
+		border-left: 1px solid rgba(0,0,0,0.9);
+	}
 	border-top: 1px solid rgba(0,0,0,0.9);
-	border-left: 1px solid rgba(0,0,0,0.9);
 }
