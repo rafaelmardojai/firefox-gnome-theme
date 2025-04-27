@@ -7,11 +7,13 @@
 	@media -moz-pref("sidebar.revamp.round-content-area") {
 		--border-radius-medium: var(--gnome-card-radius) !important;
 	}
-	@media -moz-pref("sidebar.position_start") and -moz-pref("sidebar.revamp") {
-		border-left: 1px solid var(--gnome-toolbar-border-color);
-	}
-	@media not -moz-pref("sidebar.position_start") and -moz-pref("sidebar.revamp") {
-		border-right: 1px solid var(--gnome-toolbar-border-color);
+	@media -moz-pref("sidebar.verticalTabs") {
+		@media -moz-pref("sidebar.position_start") {
+			border-left: 1px solid var(--gnome-toolbar-border-color);
+		}
+		@media not -moz-pref("sidebar.position_start") {
+			border-right: 1px solid var(--gnome-toolbar-border-color);
+		}
 	}
 	border-top: 1px solid var(--gnome-toolbar-border-color);
 	border-bottom: none;
