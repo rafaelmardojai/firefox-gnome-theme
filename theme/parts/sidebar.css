@@ -127,6 +127,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] {
 	}
 
 	& ~ .nested {
+		gap: 0 !important;
 		margin: 0 !important;
 	}
 }
