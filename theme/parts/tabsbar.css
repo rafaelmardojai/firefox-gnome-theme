@@ -211,7 +211,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 				&:not([style^="max-width"]):not([pinned]),
 				&[style^="max-width: 100px !important;"]:not([pinned]) {
 					max-width: 100% !important;
-					--tab-min-width: 131px !important;
+					--tab-min-width-pref: 131px !important;
 				}
 				&:not([style^="max-width"]):not([pinned]):not([fadein]),
 				&[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
