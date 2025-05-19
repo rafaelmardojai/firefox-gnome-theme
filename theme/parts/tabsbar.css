@@ -10,6 +10,7 @@
 	--tab-border-radius: var(--gnome-button-radius) !important;	
 	--tab-hover-background-color: var(--gnome-hover-color) !important;
 	--tab-selected-bgcolor: var(--gnome-selected-color) !important;
+	--tab-pinned-container-margin-inline-expanded: calc(var(--gnome-toolbar-padding) / 2) !important;
 	
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
 
@@ -80,11 +81,6 @@
 
 		&[expanded] {
 			--tab-inner-inline-margin: var(--gnome-toolbar-padding) !important;
-			--tab-pinned-container-margin-inline-expanded:var(--gnome-toolbar-padding) !important;
-
-			#vertical-pinned-tabs-container {
-				gap:  var(--gnome-toolbar-padding) !important;
-			}
 		}
 
 		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
@@ -190,6 +186,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Tweak margins on expanded vertical pinned tabs */
 	#tabbrowser-tabs[orient="vertical"][expanded] &[pinned] {
 		padding-block-start: var(--gnome-toolbar-padding) !important;
+		padding-bottom: 0 !important;
 	}
 
 	/* Horizontal tabs only */
@@ -256,11 +253,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Fix margins on horizontal tabs */
 	#tabbrowser-tabs[orient="horizontal"] & {
 		margin-block: 0 !important;
-	}
-
-	/* Tweak margins on expanded vertical pinned tabs */
-	#tabbrowser-tabs[orient="vertical"][expanded] #vertical-pinned-tabs-container & {
-		margin: 0 !important;
 	}
 	
 	/* Add solid bg on tabs dnd */
