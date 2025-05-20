@@ -165,6 +165,7 @@
 		--gnome-tabbar-tab-active-background: #f0f0f0; /* Hardcoded color */
 		--gnome-sidebar-background: #f2f2f4;
 		--gnome-secondary-sidebar-background: #f6f6fa;
+		--gnome-selection-bg: color-mix(in srgb, var(--gnome-view-color) 10%, transparent);
 	}
 
 	/* Private browsing colors */
