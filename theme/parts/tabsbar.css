@@ -721,6 +721,8 @@ tab-group {
 	height: 16px !important;
 	opacity: 1 !important;
 	width: 16px !important;
+	overflow: visible !important;
+	border-radius: initial !important;
 }
 :root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
 	border-inline-start: 0 !important;
