@@ -30,9 +30,11 @@ menulist {
 	padding: var(--gnome-menu-padding) !important;
 	min-height: 45px !important;
 }
-menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
-menuitem[type="radio"] .menu-iconic-icon {
-	appearance: none !important;
+@media not -moz-pref("gnomeTheme.noThemedIcons") {
+	menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
+	menuitem[type="radio"] .menu-iconic-icon {
+		appearance: none !important;
+	}
 }
 menuitem {
 	padding-inline-end: 18px !important;
