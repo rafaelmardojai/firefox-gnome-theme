@@ -75,7 +75,8 @@ link[href="chrome://global/skin/dropmarker.css"] + image,
 /* Fix icons sizes */
 .permission-popup-permission-remove-button > .button-box > .button-icon,
 .menu-iconic-icon,
-link[href="chrome://global/skin/dropmarker.css"] + image {
+link[href="chrome://global/skin/dropmarker.css"] + image,
+.toolbarbutton-combined-buttons-dropmarker {
 	height: 16px !important;
 	width: 16px !important;
 }
@@ -169,7 +170,8 @@ button.close::before {
 	/* Arrow down buttons */
 	.expander-down > .button-box,
 	#sidebar-switcher-arrow,
-	#viewButton .button-menu-dropmarker {
+	#viewButton .button-menu-dropmarker,
+	.toolbarbutton-combined-buttons-dropmarker {
 		-moz-appearance: none !important;
 		list-style-image: var(--gnome-icon-pan-down-symbolic) !important;
 	}

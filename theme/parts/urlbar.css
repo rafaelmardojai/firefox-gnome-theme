@@ -43,6 +43,13 @@ toolbarspring {
 	opacity: 0.85 !important;
 }
 
+#searchmode-switcher-icon {
+	margin-inline-start: 9px !important;
+}
+#searchmode-switcher-dropmarker {
+	margin-inline-end: 9px !important;
+}
+
 /* URL bar results */
 .urlbarView {
 	background: transparent !important;

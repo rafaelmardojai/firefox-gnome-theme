@@ -111,6 +111,10 @@ input[type="password"]:focus,
 #urlbar, #searchbar {
 	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
 	padding: 0 3px !important;
+	&[unifiedsearchbutton-available=""] {
+		padding-inline-start: 0 !important;
+	}
+	
 }
 .searchbar-textbox {
 	border: 0 !important;
