@@ -248,6 +248,7 @@ button.close::before {
 	}
 	menuitem[type="checkbox"][checked="true"] {
 		list-style-image: var(--gnome-icon-select-symbolic) !important;
+		fill: white !important;
 	}
 	menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
 		opacity: 0.5;
@@ -259,6 +260,7 @@ button.close::before {
 	}
 	menuitem[type="radio"][checked="true"] {
 		list-style-image: var(--gnome-icon-bullet-symbolic) !important;
+		fill: var(--gnome-accent-bg) !important;
 	}
 	menuitem[type="radio"] .menu-iconic-icon {
 		border-radius: 100%;
