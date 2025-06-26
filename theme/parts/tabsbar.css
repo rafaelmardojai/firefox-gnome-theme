@@ -10,6 +10,7 @@
 	--tab-border-radius: var(--gnome-button-radius) !important;	
 	--tab-hover-background-color: var(--gnome-hover-color) !important;
 	--tab-selected-bgcolor: var(--gnome-selected-color) !important;
+	--tab-pinned-container-margin-inline-expanded: calc(var(--gnome-toolbar-padding) / 2) !important;
 	
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
 
@@ -80,11 +81,6 @@
 
 		&[expanded] {
 			--tab-inner-inline-margin: var(--gnome-toolbar-padding) !important;
-			--tab-pinned-container-margin-inline-expanded:var(--gnome-toolbar-padding) !important;
-
-			#vertical-pinned-tabs-container {
-				gap:  var(--gnome-toolbar-padding) !important;
-			}
 		}
 
 		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
@@ -190,6 +186,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Tweak margins on expanded vertical pinned tabs */
 	#tabbrowser-tabs[orient="vertical"][expanded] &[pinned] {
 		padding-block-start: var(--gnome-toolbar-padding) !important;
+		padding-bottom: 0 !important;
 	}
 
 	/* Horizontal tabs only */
@@ -214,7 +211,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 				&:not([style^="max-width"]):not([pinned]),
 				&[style^="max-width: 100px !important;"]:not([pinned]) {
 					max-width: 100% !important;
-					--tab-min-width: 131px !important;
+					--tab-min-width-pref: 131px !important;
 				}
 				&:not([style^="max-width"]):not([pinned]):not([fadein]),
 				&[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
@@ -256,11 +253,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Fix margins on horizontal tabs */
 	#tabbrowser-tabs[orient="horizontal"] & {
 		margin-block: 0 !important;
-	}
-
-	/* Tweak margins on expanded vertical pinned tabs */
-	#tabbrowser-tabs[orient="vertical"][expanded] #vertical-pinned-tabs-container & {
-		margin: 0 !important;
 	}
 	
 	/* Add solid bg on tabs dnd */
@@ -729,6 +721,8 @@ tab-group {
 	height: 16px !important;
 	opacity: 1 !important;
 	width: 16px !important;
+	overflow: visible !important;
+	border-radius: initial !important;
 }
 :root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
 	border-inline-start: 0 !important;

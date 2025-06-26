@@ -306,6 +306,10 @@ We also have optional features to enable support for some Firefox extensions.
 	> **Note:** You also need to copy the contents of the file `configuration/extensions/tab-center-reborn.css` into the settings page of Tabcenter-reborn..\
 	> **Note2:** You can also maintain the vertical tab always open with `gnomeTheme.extensions.tabCenterReborn.alwaysOpen`
  	> **Note2:** You can disable animation by disabling animation into the extension and adding the flags `gnomeTheme.extensions.tabCenterReborn.animationDisabled`
+
+- **Adaptive Tab Bar Colour support** `gnomeTheme.extensions.adaptiveTabBarColour`
+
+	> **Note:** Adaptive Tab Bar Colour presently hard-codes the colours for the home page (both normal as well as private windows). When navigating from the home page to any other page, the colour of the UI might momentarily switch to the original firefox home page colour before switching back to the expected colour (this is especially noticeable in private windows). This only happens when navigating from the homepage to another page, subsequent navigations should be unaffected.
 	
 ## Known bugs
 
@@ -355,4 +359,4 @@ any specific license on your code.
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.
 
 ## Donate
-If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM). Also consider donating upstream, [Firefox](https://donate.mozilla.org/) & [GNOME](https://www.gnome.org/support-gnome/).
+If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM). Also consider donating upstream, [Firefox](https://donate.mozilla.org/) & [GNOME](https://www.gnome.org/donate/).
