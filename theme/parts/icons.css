@@ -139,7 +139,8 @@ button.close::before {
 	.PanelUI-subView .subviewbutton-nav::after,
 	.protections-popup-category::after,
 	.subviewbutton-back .toolbarbutton-icon,
-	.menu-right {
+	.menu-right,
+	menupopup > menu::after {
 		fill-opacity: 1 !important;
 		opacity: .3;
 	}
@@ -151,9 +152,10 @@ button.close::before {
 	}
 	#identity-popup-mainView .subviewbutton-nav::after,
 	.widget-overflow-list .subviewbutton-nav::after,
-	.PanelUI-subView .subviewbutton-nav::after {
+	.PanelUI-subView .subviewbutton-nav::after,
+	menupopup > menu::after {
 		content: "" !important;
-		background: var(--gnome-icon-go-next-symbolic);
+		background: var(--gnome-icon-go-next-symbolic) !important;
 		background-size: contain;
 		height: 16px;
 		width: 16px;
