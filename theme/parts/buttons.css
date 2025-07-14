@@ -24,7 +24,7 @@
 /* Buttons */
 menulist,
 .customizationmode-button,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not(#searchmode-switcher-close, #urlbar-searchmode-switcher),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
@@ -104,7 +104,7 @@ button.close,
 }
 
 /* Flat Buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not(#searchmode-switcher-close, #urlbar-searchmode-switcher),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
 .close-icon:not(.tab-close-button),
 button.close,

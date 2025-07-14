@@ -43,11 +43,44 @@ toolbarspring {
 	opacity: 0.85 !important;
 }
 
-#searchmode-switcher-icon {
-	margin-inline-start: 9px !important;
+#urlbar-searchmode-switcher {
+	background-color: transparent !important;
+	border-radius: var(--gnome-button-radius) !important;
+	&:hover {
+		background-color: var(--gnome-hover-color) !important;
+	}
+	&:active, &[open] {
+		background-color: var(--gnome-active-color) !important;
+	}
+	#urlbar[searchmode] & {
+		background-color: var(--gnome-selected-color) !important;
+		border-start-end-radius: 0 !important;
+		border-end-end-radius: 0 !important;			
+		&:hover {
+			background-color: var(--gnome-selected-hover-color) !important;
+		}
+		&:active, &[open] {
+			background-color: var(--gnome-selected-active-color) !important;
+		}
+	}
 }
-#searchmode-switcher-dropmarker {
-	margin-inline-end: 9px !important;
+#searchmode-switcher-icon {
+	margin-inline-start: 6px !important;
+}
+#searchmode-switcher-chicklet {
+	background-color: var(--gnome-button-background) !important;
+	border-start-end-radius: var(--gnome-button-radius) !important;
+	border-end-end-radius: var(--gnome-button-radius) !important;
+}
+#searchmode-switcher-title {
+	color: var(--gnome-window-color);
+	padding-inline: 4px !important;
+}
+#searchmode-switcher-close {
+	background-size: 16px !important;
+	border-radius: 24px !important;
+	width: 24px !important;
+	height: 24px !important;
 }
 
 /* URL bar results */
