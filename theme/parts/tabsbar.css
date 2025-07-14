@@ -783,12 +783,10 @@ tab-group {
 			inset: 0 !important;
 		}
 		tab-group {
-			.tab-background {
-				flex-direction: column-reverse !important;
-			}
 			.tab-group-line {
 				margin-block-end: 0 !important;
 				margin-block-start: calc(var(--gnome-toolbar-padding) * -1) !important;
+				top: 0 !important;
 			}
 		}
 
