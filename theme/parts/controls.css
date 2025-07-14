@@ -26,7 +26,7 @@ input[type="checkbox"]:checked,
 checkbox:not(.treenode-checkbox) > .checkbox-check[checked] {
 	background-color: var(--gnome-accent-bg) !important;
 	/* NOTE: var(--gnome-icon-select-symbolic) doesn't load in modal dialogs */
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16px' viewBox='0 0 16 16' width='16px'%3E%3Cpath d='m 15 3.484375 l -1 -1 l -7.46875 7.515625 l -3.414062 -3.476562 l -2 2 l 5.414062 5.476562 l 9.46875 -9.515625 z m 0 0' fill='context-fill' fill-opacity='context-fill-opacity' /%3E%3C/svg%3E") !important;
+	background-image: url("../icons/custom/select-fixed-symbolic.svg") !important;
 	background-size: 14px !important;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -62,7 +62,8 @@ radio > .radio-check:not([selected]):hover {
 input[type="radio"][aria-checked="true"],
 radio > .radio-check[selected] {
 	background-color: var(--gnome-accent-bg) !important;
-	background-image: var(--gnome-icon-bullet-symbolic) !important;
+	/* NOTE: var(--gnome-icon-bullet-symbolic) doesn't load in modal dialogs */
+	background-image: url("../icons/custom/bullet-fixed-symbolic.svg") !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	fill: white !important;
