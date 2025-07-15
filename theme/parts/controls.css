@@ -98,7 +98,10 @@ radio > .radio-check[selected] {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
+link[href="chrome://global/content/elements/moz-toggle.css"] ~ .label-wrapper {
+	margin-inline: 0 !important;
+}
 link[href="chrome://global/content/elements/moz-toggle.css"] ~ .description {
-	--input-space-offset: calc(48px + 8px) !important;
+	--input-space-offset: calc(48px + 12px) !important;
 	margin-block-start: 0 !important;
 }
