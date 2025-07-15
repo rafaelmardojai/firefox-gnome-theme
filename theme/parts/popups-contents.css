@@ -63,22 +63,19 @@
 }
 
 /* Add bookmark */
-#editBookmarkPanelInfoArea {
-	padding: 0 !important;
-}
-#editBookmarkPanelRows,
-#editBookmarkPanelBottomContent {
-	padding: 0 !important;
-}
-#editBookmarkPanelBottomButtons {
-	margin: 0 !important;
-}
-#editBookmarkPanelBottomContent {
-	margin-bottom: 12px !important;
-}
-#editBookmarkPanelBottomContent,
-#editBookmarkPanelRows vbox {
-	margin: 6px 0;
+#editBookmarkPanel {
+	#editBookmarkPanelContent {
+		padding: 0 !important;
+		
+		label {
+			margin-top: calc(var(--gnome-toolbar-spacing) * 2) !important;
+			margin-bottom: var(--gnome-toolbar-spacing) !important;
+		}
+	}
+	
+	#editBookmarkPanelBottomContent {
+		margin-block: calc(var(--gnome-toolbar-spacing) * 2) !important;
+	}
 }
 
 /* Downloads popover */
