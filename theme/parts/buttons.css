@@ -148,12 +148,12 @@ button.popup-notification-primary-button:not(#hack),
 #editBookmarkPanelDoneButton,
 #tracking-action-block,
 .button.connect-device {
-	&:not(#hack):not(#hack) {
-		background-color: var(--gnome-button-suggested-background) !important;
-		color: white !important;
-	}
+	--gnome-button-background: var(--gnome-button-suggested-background) !important;
+	--gnome-button-hover-background: var(--gnome-button-suggested-background) !important;
+	--gnome-button-active-background: var(--gnome-button-suggested-background) !important;
+	color: white !important;
 
-	&:not([disabled="true"]):not(#hack):not(#hack) {
+	&:not([disabled="true"]) {
 		&:hover {
 			background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)) !important;
 		}
@@ -166,24 +166,17 @@ button.popup-notification-primary-button:not(#hack),
 /* Buttons with destructive action */
 .panel-footer button#editBookmarkPanelRemoveButton,
 #PanelUI-panic-view-button {
-	background-color: var(--gnome-button-destructive-background) !important;
+	--gnome-button-background: var(--gnome-button-destructive-background) !important;
+	--gnome-button-hover-background: var(--gnome-button-destructive-hover-background) !important;
+	--gnome-button-active-background: var(--gnome-button-destructive-active-background) !important;
 	color: var(--gnome-destructive) !important;
-	
-	&:not([disabled="true"]):not(#hack):not(#hack) {
-		&:hover {
-			background-color: var(--gnome-button-destructive-hover-background) !important;
-		}
-		&:active {
-			background-color: var(--gnome-button-destructive-active-background) !important;
-		}
-	}
 }
 
 /* Buttons with margins */
 #nav-bar toolbarbutton:not(#urlbar-zoom-button, #urlbar-searchmode-switcher):not(.subviewbutton):not(.titlebar-button),
 .notification-button,
 .subviewbutton.panel-subview-footer:not(:only-of-type),
-.panel-footer button:not(:only-of-type) {
+.panel-footer button:not(:only-of-type):not(:last-child) {
 	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
 }
 .close-icon:not(.tab-close-button) {
