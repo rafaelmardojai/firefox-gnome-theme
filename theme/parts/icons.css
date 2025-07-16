@@ -308,6 +308,7 @@ button.close::before {
 		list-style-image: var(--gnome-icon-window-restore-symbolic) !important;
 	}
 	:root[customtitlebar][inFullscreen] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+		background-image: none !important;
 		list-style-image: var(--gnome-icon-view-restore-symbolic) !important;
 	}
 	:root[customtitlebar] .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
