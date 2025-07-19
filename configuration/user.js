@@ -17,3 +17,7 @@ user_pref("browser.theme.dark-private-windows", false);
 // Enable rounded bottom window corners
 user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 
+// Use Adwaita Fonts
+user_pref("font.default.x-western", "sans-serif")
+user_pref("font.name.sans-serif.x-western", "Adwaita Sans")
+user_pref("font.name.monospace.x-western", "Adwaita Mono")
