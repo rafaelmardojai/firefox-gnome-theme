@@ -36,12 +36,7 @@
 		/* Toolbars */
 		--gnome-toolbar-icon-fill: #ffffff;
 
-		/* Tabs */
-		--gnome-tabbar-tab-hover-background: #3d3d40; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background: #434346; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background-contrast: #4F4F4F; /* Hardcoded color */
-		--gnome-tabbar-tab-active-hover-background: #49494d; /* Hardcoded color */
-		
+		/* Tabs */		
 		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
 		--gnome-tabbar-identity-color-yellow: var(--gnome-palette-yellow-2);
 		--gnome-tabbar-identity-color-orange: var(--gnome-palette-orange-3);
@@ -60,27 +55,16 @@
 		
 		/* Backdrop colors */
 		&:-moz-window-inactive {
-			--gnome-tabbar-tab-hover-background: #2a2a2e; /* Hardcoded color */
-			--gnome-tabbar-tab-active-background: #2d2d31; /* Hardcoded color */
 			--gnome-sidebar-background: #28282c;
 			--gnome-secondary-sidebar-background: #252529;
-			--gnome-selection-bg: color-mix(in srgb, var(--gnome-view-color) 10%, transparent);
 		}
 		
 		/* Private browsing colors */
 		&[privatebrowsingmode="temporary"] {
 			/* Headerbar */
-			--gnome-headerbar-background: var(--gnome-accent-bg) !important;
-			/* Tabs */	
-			--gnome-tabbar-tab-hover-background: #6C438C; /* Hardcoded color */
-			--gnome-tabbar-tab-active-background: #70498F; /* Hardcoded color */
-			--gnome-tabbar-tab-active-background-contrast: #86689e; /* Hardcoded color */
-			--gnome-tabbar-tab-active-hover-background: #754F93; /* Hardcoded color */
-			
-			/* Private and backdrop colors */
+			--gnome-headerbar-background: #2e2540 !important;
 			&:-moz-window-inactive {
-				--gnome-tabbar-tab-hover-background: #673C87; /* Hardcoded color */
-				--gnome-tabbar-tab-active-background: #683F89; /* Hardcoded color */
+				--gnome-headerbar-background: #241d34 !important;
 			}
 		}
 	}
