@@ -73,6 +73,10 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	margin: 0 !important;
 	width: 0 !important;
 }
+#sidebar-tools-and-extensions-splitter {
+	background: transparent !important;
+	margin-block: 0 !important;
+}
 
 /* Browser content */
 #tabbrowser-tabbox {

@@ -11,6 +11,7 @@
 	--tab-hover-background-color: var(--gnome-hover-color) !important;
 	--tab-selected-bgcolor: var(--gnome-selected-color) !important;
 	--tab-pinned-container-margin-inline-expanded: calc(var(--gnome-toolbar-padding) / 2) !important;
+	--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
 	
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
 
@@ -76,7 +77,6 @@
 
 	/* Vertical */
 	&[orient="vertical"] {
-		--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
 		grid-gap: 0 !important;
 
 		&[expanded] {
