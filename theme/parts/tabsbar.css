@@ -395,7 +395,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Audio button */
 .tab-audio-button {
 	--button-border-radius: 50% !important;
-	margin-top: -3px !important; /* Fix position */
 	
 	#tabbrowser-tabs[orient="horizontal"] & {
 		margin-inline: 0 !important;
