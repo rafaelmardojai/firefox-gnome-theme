@@ -28,8 +28,7 @@
 
 	&[inFullscreen] {
 		/* Remove close and minimize buttons from fullscreen buttons */
-		.titlebar-buttonbox-container .titlebar-min,
-		.titlebar-buttonbox-container .titlebar-close {
+		.titlebar-buttonbox-container .titlebar-button:not(.titlebar-restore) {
 			display: none !important;
 		}
 

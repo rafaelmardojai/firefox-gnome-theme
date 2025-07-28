@@ -30,7 +30,7 @@ Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnom
 
 ### Firefox versions support
 
-The `master` branch of this repo supports the current Firefox stable release `137`.
+The `master` branch of this repo supports the current Firefox stable release `140`.
 
 Theme versions compatible with older Firefox releases are preserved as git tags.
 
@@ -298,14 +298,6 @@ We also have optional features to enable support for some Firefox extensions.
 
 > [!WARNING]
 > Note that extension support is maintained by the community, so requests to support new extensions are not allowed, and the included extensions may be broken until someone shows up to fix them.
-
-- **Tab center reborn support** `gnomeTheme.extensions.tabCenterReborn`
-
-	Enable the vertical tab trough the extension : [Tab Center Reborn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/).
-
-	> **Note:** You also need to copy the contents of the file `configuration/extensions/tab-center-reborn.css` into the settings page of Tabcenter-reborn..\
-	> **Note2:** You can also maintain the vertical tab always open with `gnomeTheme.extensions.tabCenterReborn.alwaysOpen`
- 	> **Note2:** You can disable animation by disabling animation into the extension and adding the flags `gnomeTheme.extensions.tabCenterReborn.animationDisabled`
 
 - **Adaptive Tab Bar Colour support** `gnomeTheme.extensions.adaptiveTabBarColour`
 

@@ -11,6 +11,7 @@
 	--tab-hover-background-color: var(--gnome-hover-color) !important;
 	--tab-selected-bgcolor: var(--gnome-selected-color) !important;
 	--tab-pinned-container-margin-inline-expanded: calc(var(--gnome-toolbar-padding) / 2) !important;
+	--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
 	
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
 
@@ -76,14 +77,14 @@
 
 	/* Vertical */
 	&[orient="vertical"] {
-		--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
-		grid-gap: var(--gnome-toolbar-spacing) !important;
+		grid-gap: 0 !important;
 
 		&[expanded] {
 			--tab-inner-inline-margin: var(--gnome-toolbar-padding) !important;
 		}
 
-		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
+		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
+		#vertical-tabs-newtab-button {
 			margin-block: var(--gnome-toolbar-padding) !important;
 		}
 	}
@@ -181,13 +182,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background-contrast) !important;
 			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background-contrast) !important;
 		}
-	}
-
-	/* Tweak margins on expanded vertical pinned tabs */
-	#tabbrowser-tabs[orient="vertical"][expanded] &[pinned] {
-		padding-block-start: var(--gnome-toolbar-padding) !important;
-		padding-bottom: 0 !important;
-	}
+	}	
 
 	/* Horizontal tabs only */
 	#tabbrowser-tabs[orient="horizontal"] & {
@@ -400,7 +395,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Audio button */
 .tab-audio-button {
 	--button-border-radius: 50% !important;
-	margin-top: -3px !important; /* Fix position */
 	
 	#tabbrowser-tabs[orient="horizontal"] & {
 		margin-inline: 0 !important;
@@ -788,12 +782,10 @@ tab-group {
 			inset: 0 !important;
 		}
 		tab-group {
-			.tab-background {
-				flex-direction: column-reverse !important;
-			}
 			.tab-group-line {
 				margin-block-end: 0 !important;
 				margin-block-start: calc(var(--gnome-toolbar-padding) * -1) !important;
+				top: 0 !important;
 			}
 		}
 

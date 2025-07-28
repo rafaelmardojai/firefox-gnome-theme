@@ -50,6 +50,7 @@ menuitem:not([acceltext]) .menu-accel-container {
 	visibility: collapse !important;
 }
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {
+	appearance: none !important;
 	visibility: visible !important;
 }
 menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {

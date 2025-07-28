@@ -5,7 +5,7 @@
 /* Icons color */
 .toolbarbutton-icon:not([class*="identity-color-"] .toolbarbutton-icon),
 link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"],
-menuitem:not([class*='identity']) .menu-iconic-left .menu-iconic-icon,
+menuitem:not([class*='identity']) .menu-icon,
 #vertical-tabs-newtab-button .toolbarbutton-icon,
 .urlbar-page-action:not([readeractive]),
 .urlbar-icon,
@@ -139,7 +139,8 @@ button.close::before {
 	.PanelUI-subView .subviewbutton-nav::after,
 	.protections-popup-category::after,
 	.subviewbutton-back .toolbarbutton-icon,
-	.menu-right {
+	.menu-right,
+	menupopup > menu::after {
 		fill-opacity: 1 !important;
 		opacity: .3;
 	}
@@ -151,9 +152,10 @@ button.close::before {
 	}
 	#identity-popup-mainView .subviewbutton-nav::after,
 	.widget-overflow-list .subviewbutton-nav::after,
-	.PanelUI-subView .subviewbutton-nav::after {
+	.PanelUI-subView .subviewbutton-nav::after,
+	menupopup > menu::after {
 		content: "" !important;
-		background: var(--gnome-icon-go-next-symbolic);
+		background: var(--gnome-icon-go-next-symbolic) !important;
 		background-size: contain;
 		height: 16px;
 		width: 16px;
@@ -249,7 +251,7 @@ button.close::before {
 	menuitem[type="checkbox"][checked="true"] {
 		list-style-image: var(--gnome-icon-select-symbolic) !important;
 	}
-	menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
+	menuitem[type="checkbox"][disabled="true"] .menu-icon {
 		opacity: 0.5;
 	}
 
@@ -260,11 +262,11 @@ button.close::before {
 	menuitem[type="radio"][checked="true"] {
 		list-style-image: var(--gnome-icon-bullet-symbolic) !important;
 	}
-	menuitem[type="radio"] .menu-iconic-icon {
+	menuitem[type="radio"] .menu-icon {
 		border-radius: 100%;
 		border: 1px solid var(--gnome-toolbar-icon-fill);
 	}
-	menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
+	menuitem[type="radio"][disabled="true"] .menu-icon {
 		opacity: 0.5;
 	}
 
@@ -280,6 +282,7 @@ button.close::before {
 		list-style-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
 	#urlbar-search-mode-indicator-close,
+	#searchmode-switcher-close,
 	button.close::before {
 		background-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
@@ -305,6 +308,7 @@ button.close::before {
 		list-style-image: var(--gnome-icon-window-restore-symbolic) !important;
 	}
 	:root[customtitlebar][inFullscreen] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+		background-image: none !important;
 		list-style-image: var(--gnome-icon-view-restore-symbolic) !important;
 	}
 	:root[customtitlebar] .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {

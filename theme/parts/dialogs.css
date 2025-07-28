@@ -151,7 +151,7 @@ dialog {
 }
 
 /* Bookmark dialog */
-#editBookmarkPanelContent {
+#bookmarkpropertiesdialog #editBookmarkPanelContent {
 	padding-bottom: var(--gnome-dialog-padding) !important;
 }
 
