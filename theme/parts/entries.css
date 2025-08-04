@@ -21,7 +21,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
 	height: var(--gnome-entry-height) !important;
 	max-height: var(--gnome-entry-height) !important;
 	margin: 0 !important;
-	padding: 6px !important;
+	padding: 6px 9px !important;
 	box-sizing: border-box;
 	transition-property: outline, outline-offset;
 	transition-duration: var(--gnome-animation-time);
