@@ -7,7 +7,7 @@ input[type="text"]:not(.tree-input),
 input[type="password"],
 #urlbar,
 #searchbar,
-#search-box,
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
 .findbar-textbox,
 .tabsFilter,
 .popup-notification-body input {
@@ -21,7 +21,7 @@ input[type="password"],
 	height: var(--gnome-entry-height) !important;
 	max-height: var(--gnome-entry-height) !important;
 	margin: 0 !important;
-	padding: 6px !important;
+	padding: 6px 9px !important;
 	box-sizing: border-box;
 	transition-property: outline, outline-offset;
 	transition-duration: var(--gnome-animation-time);
@@ -43,7 +43,7 @@ input[type="password"]:focus,
 #urlbar[breakout][breakout-extend],
 #urlbar[focused]:not([suppress-focus-border]),
 #searchbar:focus-within,
-#search-box[focused], 
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focus, 
 .findbar-textbox[focused],
 .findbar-textbox:focus,
 .tabsFilter[focused],
@@ -127,4 +127,7 @@ input[type="password"]:focus,
 }
 #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
 	outline: 0 !important;
+}
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input {
+	width: 100% !important;
 }

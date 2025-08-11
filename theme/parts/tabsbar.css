@@ -541,11 +541,19 @@ tab-group {
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-inline-start: calc(var(--gnome-toolbar-padding) * 2) !important;
 		padding-inline-start: var(--tab-group-line-thickness);
-		
-		.tab-group-label-container {
-			margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
-		}
+	}
+}
 
+.tab-group-label-container {
+	#tabbrowser-tabs[orient="vertical"][expanded] & {
+		margin-block: 0 !important;
+		margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
+		
+	}
+	#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+		tab-group[collapsed] & {
+			margin-block: var(--gnome-toolbar-padding) !important;
+		}
 	}
 }
 
