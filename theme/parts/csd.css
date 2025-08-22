@@ -58,10 +58,6 @@
 
 			&:not([disabled]):hover {
 				background: var(--gnome-button-hover-background) !important;
-
-				& > .toolbarbutton-icon {
-					background: none !important;
-				}
 			}
 
 			&:not([disabled]):active {
@@ -84,14 +80,11 @@
 
 			.titlebar-button {
 				padding: 0 !important;
-				margin: 0 !important;
+				margin: 0 !important;			
 				
-				&:hover > .toolbarbutton-icon {
-					background: none !important;
-				}				
-
-				@media not -moz-pref("gnomeTheme.noThemedIcons") {
-					& > .toolbarbutton-icon {
+				& > .toolbarbutton-icon {					
+					@media not -moz-pref("gnomeTheme.noThemedIcons") {
+						background: none !important;
 						appearance: none !important;
 						height: 16px !important;
 						padding: 0 !important;
@@ -99,6 +92,7 @@
 						width: 16px !important;
 						-moz-context-properties: fill, fill-opacity !important;
 					}
+					
 				}
 
 				@media -moz-pref("widget.gtk.non-native-titlebar-buttons.enabled") {
