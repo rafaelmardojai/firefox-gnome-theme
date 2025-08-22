@@ -207,11 +207,6 @@ button.close {
   visibility: visible !important;
 }
 
-/* Stop/Reload button */
-#stop-reload-button .toolbarbutton-icon {
-	margin-top: -2px !important;
-}
-
 /* Toolbar Animations */
 #downloads-button .toolbarbutton-animatable-box {
 	top: 8px !important;
