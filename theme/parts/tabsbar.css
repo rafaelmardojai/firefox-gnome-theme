@@ -85,7 +85,7 @@
 
 		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
 		#vertical-tabs-newtab-button {
-			margin-block: var(--gnome-toolbar-padding) !important;
+			margin-block: calc(var(--gnome-toolbar-padding) / 2) !important;
 		}
 	}
 }
@@ -215,12 +215,18 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			}
 		}
 	}
+	
+	/* Vertical tabs only */
+	#tabbrowser-tabs[orient="vertical"] & {
+		padding-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
+	}
 }
 
 /* Tab background */
 .tab-background {
 	box-shadow: none !important;
 	transition: background var(--gnome-tab-animation-time) linear !important;
+	margin-block: 0 !important;
 
 	/* Selected hover */
 	tab[selected]:hover & {
@@ -243,11 +249,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 				background-color: var(--gnome-button-checked-hover-background) !important;
 			}
 		}
-	}
-
-	/* Fix margins on horizontal tabs */
-	#tabbrowser-tabs[orient="horizontal"] & {
-		margin-block: 0 !important;
 	}
 	
 	/* Add solid bg on tabs dnd */
