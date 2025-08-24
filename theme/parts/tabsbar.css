@@ -218,7 +218,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	
 	/* Vertical tabs only */
 	#tabbrowser-tabs[orient="vertical"] & {
-		padding-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
+		padding-block: var(--gnome-toolbar-spacing) !important;
 	}
 }
 
