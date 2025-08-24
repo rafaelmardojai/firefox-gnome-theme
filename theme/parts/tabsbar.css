@@ -595,6 +595,20 @@ tab-group {
 	}
 }
 
+/* Tabs group line */
+.tab-group-line {
+	#tabbrowser-tabs[orient="vertical"] & {
+		inset-block: -3px !important;;
+	}
+}
+
+/* Tabs group overflow */
+.tab-group-overflow-count-container {
+	#tabbrowser-tabs[orient="vertical"] & {
+		padding-block-start: 0 !important;
+	}
+}
+
 /* Remove spacing between pinned tabs and first tab */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
 	margin-inline-start: 0 !important;
