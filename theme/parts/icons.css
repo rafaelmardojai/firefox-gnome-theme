@@ -296,6 +296,9 @@ button.close::before {
 			fill: rgb(46, 52, 54) !important;
 		}
 	}
+	moz-button.close {
+		--message-bar-icon-close-url: var(--gnome-icon-window-close-symbolic) !important;
+	}
 
 	/* Window buttons */
 	:root[customtitlebar] .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {

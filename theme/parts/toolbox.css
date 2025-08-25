@@ -102,9 +102,14 @@ findbar:-moz-window-inactive description,
 }
 link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 	background: none !important;
-	box-shadow: none !important;
-	padding: var(--gnome-toolbar-padding) !important;
 	border-radius: 0 !important;
+	box-shadow: none !important;
+	gap: var(--gnome-toolbar-spacing) !important;	
+	padding: var(--gnome-toolbar-padding) !important;	
+	
+	.close {
+		margin: 0 !important;
+	}
 
 	.icon {
 		color: var(--gnome-window-color);
@@ -115,6 +120,7 @@ link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 	
 	.text-container {
 		flex: auto;
+		padding-block: 0 !important;
 	}
 
 	.text-content {

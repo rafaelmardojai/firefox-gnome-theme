@@ -1,6 +1,11 @@
 /* Buttons Issues/Glitches fixes */
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* moz.button size */
+moz-button {
+	--button-size-icon-small: var(--gnome-button-size) !important;
+}
+
 /* Menulist */
 link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 	align-items: center !important;
