@@ -6,14 +6,6 @@
 #sidebar-main {
 	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
-
-	&[positionend] {
-		border-inline-start: 1px solid var(--gnome-toolbar-border-color) !important;
-	}
-
-	&:not([positionend]) {
-		border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
-	}
 }
 
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
@@ -65,7 +57,8 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 }
 
 /* Separator */
-#sidebar-splitter {
+#sidebar-splitter,
+#sidebar-launcher-splitter {
 	background: var(--gnome-toolbar-background) !important;
 	border: 0 !important;
 	border-right: 1px solid var(--gnome-border-color) !important;
@@ -73,6 +66,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	margin: 0 !important;
 	width: 0 !important;
 }
+
 #sidebar-tools-and-extensions-splitter {
 	background: transparent !important;
 	margin-block: 0 !important;
