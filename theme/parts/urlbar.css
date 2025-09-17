@@ -26,17 +26,17 @@ toolbarspring {
 	&[breakout] {
 		width: calc(var(--urlbar-width) - var(--gnome-toolbar-spacing)) !important;
 	}
-}
 
-#urlbar-background {
-	box-shadow: var(--gnome-entry-box-shadow) !important;
-	border: 0 !important;
-	border-radius: 8px !important;
-	background: transparent !important;
-}
-
-#urlbar .urlbar-input-container {
-	padding: 0 !important;
+	.urlbar-background {
+		box-shadow: var(--gnome-entry-box-shadow) !important;
+		border: 0 !important;
+		border-radius: var(--gnome-entry-radius) !important;
+		background: transparent !important;
+	}
+	
+	.urlbar-input-container {
+		padding: 0 !important;
+	}
 }
 
 .urlbar-input::placeholder, .searchbar-textbox::placeholder {
