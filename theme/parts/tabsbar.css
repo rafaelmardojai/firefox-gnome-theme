@@ -482,12 +482,16 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		}
 
 		&[busy], &[sharing], .tab-icon-image:not([sharing]) {
-			padding: 4px;						
+			padding: 4px;
 		}
 
 		.tab-icon-image {
 			transition: opacity var(--gnome-animation-time) ease-out !important;
 		}		
+	}
+	
+	&::before {
+		margin: 4px;
 	}
 }
 
