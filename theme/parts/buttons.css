@@ -98,6 +98,11 @@ button.close,
 	&[disabled="true"] {
 		opacity: 0.5 !important;
 	}
+	
+	&[_moz-menuactive] {
+		outline: 2px solid var(--gnome-focus-border-color) !important;
+		outline-offset: -2px !important;
+	}
 }
 .subviewbutton-iconic {
 	-moz-box-pack: center !important;

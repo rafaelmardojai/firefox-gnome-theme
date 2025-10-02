@@ -202,8 +202,9 @@ panelview .unified-extensions-item-action-button,
 	padding: 4px 12px !important;
 	min-height: 32px !important;
 	
-	&:hover {
+	&:hover, &[_moz-menuactive], &:focus, &:focus-within {
 		background: var(--gnome-selected-color) !important;
+		outline: 0 !important;
 	}
 }
 .subviewbutton,
