@@ -24,7 +24,7 @@ menulist {
 .menupopup-arrowscrollbox {
 	appearance: none !important;
 	background: var(--gnome-menu-background) !important;
-	border: 1px solid var(--gnome-border-color) !important;
+	border: 0 !important;
 	border-radius: var(--gnome-popover-radius) !important;
 	box-shadow: var(--gnome-menu-shadow) !important;
 	padding: var(--gnome-menu-padding) !important;
@@ -76,6 +76,7 @@ panel  {
 	--arrowpanel-padding: 0 !important;
 	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
 	--arrowpanel-border-radius: var(--gnome-popover-radius) !important;
+	--panel-separator-color: var(--gnome-menu-color) !important;
 }
 
 /* Padding rules */
@@ -269,8 +270,22 @@ menuitem[disabled="true"][_moz-menuactive], menupopup menu[disabled="true"][_moz
 }
 
 /* Style popover separators */
-toolbarseparator, menuseparator {
+panel toolbarseparator, menuseparator {
 	appearance: none !important;
+	padding: 0 !important;
+	
+	&:not([orient="vertical"]) {
+		border-top: 1px solid var(--gnome-menu-separator-color) !important;
+		margin: 6px 0 !important;
+
+		&::before {
+			display: none !important;
+		}
+	}
+	
+	&[orient="vertical"] {
+		margin: 0 6px !important;
+	}
 }
 
 #PlacesToolbar menupopup[placespopup="true"] menuseparator {
@@ -282,14 +297,6 @@ toolbarseparator, menuseparator {
 	border: 0 !important;
 }
 
-toolbarseparator:not([orient="vertical"]), menupopup menuseparator {
-	border-top: 1px solid var(--gnome-menu-separator-color) !important;
-	margin: 6px 0 !important;
-}
-toolbarseparator[orient="vertical"] {
-	margin: 0 6px !important;
-}
-
 .panel-subview-body + toolbarseparator:not([orient="vertical"]) {
 	margin: 0 0 6px !important;
 }
@@ -299,11 +306,4 @@ panelview > toolbarseparator:not([orient="vertical"]),
 }
 #identity-popup-clear-sitedata-footer toolbarseparator:not([orient="vertical"]) {
 	margin-top: 0 !important;
-}
-
-menuseparator {
-	padding: 0 !important;
-}
-menuseparator::before {
-	display: none !important;
 }
