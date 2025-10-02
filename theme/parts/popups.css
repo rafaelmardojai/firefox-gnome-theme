@@ -196,7 +196,7 @@ panelview .unified-extensions-item-action-button,
 .identity-popup-content-blocking-category,
 #downloadsPanel-mainView .download-state {
 	-moz-appearance: none !important;
-	border-radius: 6px !important;	
+	border-radius: var(--gnome-button-radius) !important;	
 	color: var(--gnome-window-color) !important;
 	font: menu !important;
 	padding: 4px 12px !important;
