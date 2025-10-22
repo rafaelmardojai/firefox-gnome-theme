@@ -9,6 +9,7 @@
 
 import json
 import logging
+import os
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
@@ -19,8 +20,11 @@ from urllib.parse import quote
 ABS_PATH = Path(__file__).resolve().parent
 ICONS_FILE = ABS_PATH / "icons.json"
 CSS_FILE = ABS_PATH / "icons.css"
-ICONS_REPO_URL = "https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git"
-ICONS_REPO_PATH = ABS_PATH / "adwaita-icon-theme"
+ICONS_REPO_URL = os.getenv(
+    "ICONS_REPO_URL",
+    "https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git"
+)
+ICONS_REPO_PATH = ABS_PATH / ICONS_REPO_URL.split("/")[-1].replace(".git", "")
 ICONS_KIT_REPO_URL = (
     "https://gitlab.gnome.org/Teams/Design/icon-development-kit-www.git"
 )
