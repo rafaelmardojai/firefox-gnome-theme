@@ -7,25 +7,24 @@
 #
 # Partially inspired by https://gitlab.gnome.org/World/design/icon-library/-/blob/master/update-icons.py
 
-import glob
 import json
 import logging
-import os
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
+from pathlib import Path
 from typing import TypedDict
 from urllib.parse import quote
 
-ABS_PATH = os.path.dirname(os.path.abspath(__file__))
-ICONS_FILE = os.path.join(ABS_PATH, "icons.json")
-CSS_FILE = os.path.join(ABS_PATH, "icons.css")
+ABS_PATH = Path(__file__).resolve().parent
+ICONS_FILE = ABS_PATH / "icons.json"
+CSS_FILE = ABS_PATH / "icons.css"
 ICONS_REPO_URL = "https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git"
-ICONS_REPO_PATH = os.path.join(ABS_PATH, "adwaita-icon-theme")
+ICONS_REPO_PATH = ABS_PATH / "adwaita-icon-theme"
 ICONS_KIT_REPO_URL = (
     "https://gitlab.gnome.org/Teams/Design/icon-development-kit-www.git"
 )
-ICONS_KIT_REPO_PATH = os.path.join(ABS_PATH, "icon-development-kit-www")
+ICONS_KIT_REPO_PATH = ABS_PATH / "icon-development-kit-www"
 
 ET.register_namespace("", "http://www.w3.org/2000/svg")
 
@@ -35,19 +34,18 @@ class IconsDefinition(TypedDict):
 
 
 def main():
-    # Get icons repositories
-    if not os.path.exists(ICONS_REPO_PATH):
+    if not ICONS_REPO_PATH.exists():
         subprocess.call(["git", "clone", "--depth", "1", ICONS_REPO_URL], cwd=ABS_PATH)
-    if not os.path.exists(ICONS_KIT_REPO_PATH):
+    if not ICONS_KIT_REPO_PATH.exists():
         subprocess.call(
             ["git", "clone", "--depth", "1", ICONS_KIT_REPO_URL], cwd=ABS_PATH
         )
 
     # Get icons name to path mappings
     icon_paths = {
-        **lookup_icons(f"{ICONS_KIT_REPO_PATH}/img/symbolic"),  # Extra GNOME icons kit
-        **lookup_icons(f"{ICONS_REPO_PATH}/Adwaita/symbolic"),  # Core GNOME icons
-        **lookup_icons(f"{ABS_PATH}/custom", False),  # Custom icons
+        **lookup_icons(ICONS_KIT_REPO_PATH / "img" / "symbolic"),  # Extra GNOME icons kit
+        **lookup_icons(ICONS_REPO_PATH / "Adwaita" / "symbolic"),  # Core GNOME icons
+        **lookup_icons(ABS_PATH / "custom", False),  # Custom icons
     }
 
     # Load definition of icons needed by the theme
@@ -70,27 +68,29 @@ def main():
         css.write(":root {\n")
         for name, svg in icons_svg.items():
             css.write(f'\t--gnome-icon-{name}: url("data:image/svg+xml,{svg}");\n')
-        css.write("}")
+        css.write("}\n")
 
     # Remove repos dirs
     shutil.rmtree(ICONS_REPO_PATH)
     shutil.rmtree(ICONS_KIT_REPO_PATH)
 
 
-def lookup_icons(icons_folder: str, has_subdirs=True) -> dict[str, str]:
-    lookup: dict[str, str] = {}
+def lookup_icons(icons_folder: Path, has_subdirs=True) -> dict[str, Path]:
+    """Finds all symbolic icons in a folder and maps their name to their Path."""
+    lookup: dict[str, Path] = {}
 
-    for path in glob.glob(
-        f"{icons_folder}/{'**/' if has_subdirs else ''}*-symbolic.svg"
-    ):
-        filename = os.path.basename(path)
-        name = filename.replace(".svg", "")
+    # Use Path.glob() for finding files
+    glob_pattern = "**/*-symbolic.svg" if has_subdirs else "*-symbolic.svg"
+    
+    for path in icons_folder.glob(glob_pattern):
+        # Use path.stem to get the filename without the .svg extension
+        name = path.stem
         lookup[name] = path
 
     return lookup
 
 
-def process_svg(filename: str) -> str:
+def process_svg(filename: Path) -> str:
     """
     Process SVG's XML to be one liner and add Mozilla's SVG coloring properties
     """
@@ -109,7 +109,7 @@ def process_svg(filename: str) -> str:
                     elem.set("stroke", "context-stroke")
                     elem.set("stroke-opacity", "context-stroke-opacity")
 
-    # Strip line breasks and indentation
+    # Strip line breaks and indentation
     for elem in root.iter("*"):
         if elem.text is not None:
             elem.text = elem.text.strip()
