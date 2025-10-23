@@ -757,7 +757,7 @@ tab-group {
 
 /* OPTIONAL: Hide single tab */
 @media -moz-pref("gnomeTheme.hideSingleTab") and (not -moz-pref("sidebar.verticalTabs")) {
-	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
+	#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
 		}
@@ -865,27 +865,27 @@ tab-group {
 
 	/* Blend single tab into whole bar */
 	@media -moz-pref("gnomeTheme.hideSingleTab") {
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
 			tab,
 			tab ~ toolbarbutton,
 			tab ~ #tabbrowser-arrowscrollbox-periphery
 		) {
 			visibility: visible;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
 			-moz-window-dragging: drag !important;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
 			display: none !important
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
 			visibility: hidden !important;
 			opacity: 0 !important;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
 			--gnome-tabbar-tab-close-overlay-bg: unset !important;
 		}
-		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
+		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
 			margin-inline-end: -16px;
 		}
 	}
