@@ -1,8 +1,6 @@
 :root,
 :root[privatebrowsingmode="temporary"],
 :is(:root, :root[privatebrowsingmode="temporary"]):-moz-window-inactive {
-	/* Colors */
-	--gnome-accent-bg: AccentColor !important;
 	/* Window */
 	--gnome-window-color: var(--lwt-text-color);
 	--gnome-window-background: var(--lwt-accent-color);
@@ -25,7 +23,7 @@
 	/* Tabs */
 	--gnome-tabbar-background: var(--gnome-headerbar-background);
 	--gnome-tabbar-tab-hover-background: color-mix(in oklab, var(--gnome-tabbar-background), var(--lwt-text-color) 10%);
-	--gnome-tabbar-tab-active-background: var(--tab-selected-bgcolor);
+	--gnome-tabbar-tab-active-background: var(--lwt-tab-line-color);
 	--gnome-tabbar-tab-active-hover-background: color-mix(in oklab, var(--gnome-tabbar-tab-active-background), var(--lwt-text-color) 10%);
 
 	/* 'New Tab' and 'New Private Tab' pages */
@@ -37,12 +35,12 @@
 	) {
 		--lwt-accent-color: var(--gnome-private-in-content-page-background) !important;
 
-		--lwt-text-color: rgba(0, 0, 0, 0.8) !important;
-		--sidebar-background-color: #f3f3f3 !important;
+		--lwt-text-color: rgba(0, 0, 6, 0.8) !important;
+		--sidebar-background-color: #f3f3f5 !important;
 
 		@media (prefers-color-scheme: dark) {
 			--lwt-text-color: white !important;
-			--sidebar-background-color: #2a2a2a !important;
+			--sidebar-background-color: #28282c !important;
 		}
 
 		--toolbar-bgcolor: var(--lwt-accent-color) !important;
