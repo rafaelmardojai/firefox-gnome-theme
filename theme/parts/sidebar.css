@@ -6,6 +6,18 @@
 #sidebar-main {
 	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
+
+	&:not([sidebar-launcher-expanded]) {
+		#tabbrowser-tabs[orient="vertical"] {
+			& .tab-background {
+				margin-inline: calc(var(--tab-inner-inline-margin) / 2) !important;
+			}
+
+			& .tab-content {
+				padding: 0 calc(var(--tab-inner-inline-margin) * 1.3) !important;
+			}
+		}
+	}
 }
 
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
