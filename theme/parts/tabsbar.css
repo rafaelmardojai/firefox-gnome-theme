@@ -411,9 +411,9 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 .tab-close-button {
 	fill: var(--gnome-window-color) !important;
 	fill-opacity: 1 !important;
-	height: 16px !important;
+	height: 10px !important;
 	list-style-image: var(--gnome-icon-window-close-symbolic) !important;
-	width: 16px !important;
+	width: 10px !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	
 	#tabbrowser-tabs[orient="horizontal"] & {
@@ -468,7 +468,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 	#tabbrowser-tabs[orient="horizontal"] & {
 		&:not([pinned]) {
-			margin-inline-start: auto !important;
 			margin-inline-end: 2px;
 
 			@media -moz-pref("gnomeTheme.tabAlignLeft") {
@@ -488,11 +487,18 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 		.tab-icon-image {
 			transition: opacity var(--gnome-animation-time) ease-out !important;
-		}		
+		}	
+		&::before {
+			margin: 4px;
+		}
 	}
-	
-	&::before {
-		margin: 4px;
+}
+
+#pinned-tabs-container[orient="vertical"] {
+	:root:not([sidebar-expand-on-hover]) & {
+		& .tab-content {
+			justify-content: unset !important;
+		}
 	}
 }
 
