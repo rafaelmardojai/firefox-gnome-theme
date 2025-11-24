@@ -554,6 +554,8 @@ tab-group {
 }
 
 .tab-group-label-container {
+	padding-bottom: var(--gnome-toolbar-padding);
+	
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-block: 0 !important;
 		margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
