@@ -347,6 +347,14 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 				}
 		}
 	}
+	
+	#tabbrowser-tabs:not([expanded]) & {
+		#pinned-tabs-container[orient="vertical"] & {
+			@media not -moz-pref("sidebar.expandOnHover") {
+				justify-content: unset !important;
+			}
+		}
+	}
 }
 
 /* Tab label */
@@ -490,14 +498,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		}	
 		&::before {
 			margin: 4px;
-		}
-	}
-}
-
-#pinned-tabs-container[orient="vertical"] {
-	:root:not([sidebar-expand-on-hover]) & {
-		& .tab-content {
-			justify-content: unset !important;
 		}
 	}
 }
