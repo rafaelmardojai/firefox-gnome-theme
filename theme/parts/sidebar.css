@@ -129,3 +129,11 @@ link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested
 		margin: 0 !important;
 	}
 }
+
+
+/* Fix vertical tabs padding */
+#vertical-tabs > #tabbrowser-tabs {
+    max-width: 100%;
+    scrollbar-width: none;
+    align-items: center;
+}
