@@ -21,9 +21,12 @@
 }
 
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
-	.tools-and-extensions {
-		align-items: center !important;
+	.buttons-wrapper {
 		justify-content: center !important;
+		min-height: calc(var(--gnome-button-size) + (var(--gnome-toolbar-padding) * 2)) !important;
+	}
+	
+	.tools-and-extensions {		
 		&[orientation="horizontal"] {
 			padding: var(--gnome-toolbar-padding) !important;
 		}
