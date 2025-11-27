@@ -419,9 +419,9 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 .tab-close-button {
 	fill: var(--gnome-window-color) !important;
 	fill-opacity: 1 !important;
-	height: 10px !important;
+	height: 16px !important;
 	list-style-image: var(--gnome-icon-window-close-symbolic) !important;
-	width: 10px !important;
+	width: 16px !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	
 	#tabbrowser-tabs[orient="horizontal"] & {
