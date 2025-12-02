@@ -32,6 +32,7 @@ toolbarspring {
 		border: 0 !important;
 		border-radius: var(--gnome-entry-radius) !important;
 		background: transparent !important;
+		outline: 0 !important;
 	}
 	
 	.urlbar-input-container {
