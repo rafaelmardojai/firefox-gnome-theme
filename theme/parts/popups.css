@@ -21,7 +21,7 @@ menulist {
 	padding: 0px !important;
 }
 
-.menupopup-arrowscrollbox {
+.menupopup-arrowscrollbox:not(#tabgroup-panel-content) {
 	appearance: none !important;
 	background: var(--gnome-menu-background) !important;
 	border: 0 !important;
@@ -29,6 +29,9 @@ menulist {
 	box-shadow: var(--gnome-menu-shadow) !important;
 	padding: var(--gnome-menu-padding) !important;
 	min-height: 45px !important;
+}
+#tabgroup-panel-content {
+	padding-inline: var(--gnome-menu-padding) !important;
 }
 @media not -moz-pref("gnomeTheme.noThemedIcons") {
 	menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
@@ -194,7 +197,8 @@ panelview .unified-extensions-item-action-button,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
-#downloadsPanel-mainView .download-state {
+#downloadsPanel-mainView .download-state,
+.group-preview-button {
 	-moz-appearance: none !important;
 	border-radius: var(--gnome-button-radius) !important;	
 	color: var(--gnome-window-color) !important;
