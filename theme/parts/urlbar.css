@@ -64,19 +64,19 @@ toolbarspring {
 		}
 	}
 }
-#searchmode-switcher-icon {
+.searchmode-switcher-icon {
 	margin-inline-start: 6px !important;
 }
-#searchmode-switcher-chicklet {
+.searchmode-switcher-chicklet {
 	background-color: var(--gnome-button-background) !important;
 	border-start-end-radius: var(--gnome-button-radius) !important;
 	border-end-end-radius: var(--gnome-button-radius) !important;
 }
-#searchmode-switcher-title {
+.searchmode-switcher-title {
 	color: var(--gnome-window-color);
 	padding-inline: 4px !important;
 }
-#searchmode-switcher-close {
+.searchmode-switcher-close {
 	background-size: 16px !important;
 	border-radius: 24px !important;
 	width: 24px !important;
