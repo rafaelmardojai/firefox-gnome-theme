@@ -37,6 +37,7 @@
 		--gnome-toolbar-icon-fill: #ffffff;
 
 		/* Tabs */		
+		--gnome-tabbar-identity-color-blue: #81d0ff;
 		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
 		--gnome-tabbar-identity-color-yellow: var(--gnome-palette-yellow-2);
 		--gnome-tabbar-identity-color-orange: var(--gnome-palette-orange-3);

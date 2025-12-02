@@ -139,7 +139,7 @@
 	--gnome-tabbar-tab-active-hover-background: color-mix(in srgb, currentColor 13%, var(--gnome-tabbar-background));
 	--gnome-tabbar-tab-needs-attetion: var(--gnome-palette-blue-2);
 	
-	--gnome-tabbar-identity-color-blue: var(--gnome-accent);
+	--gnome-tabbar-identity-color-blue: #0461be;
 	--gnome-tabbar-identity-color-turquoise: #00c79a;
 	--gnome-tabbar-identity-color-green: var(--gnome-palette-green-5);
 	--gnome-tabbar-identity-color-yellow: #ae7b03;
