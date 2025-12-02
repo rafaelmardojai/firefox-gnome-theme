@@ -85,9 +85,10 @@
 
 		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
 		#vertical-tabs-newtab-button {
-			margin-block: calc(var(--gnome-toolbar-padding) / 2) !important;
-			margin-inline: calc(var(--tab-inner-inline-margin) / 2) !important;
+			margin-inline: var(--gnome-toolbar-padding) !important;
+			margin-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
 		}
+		
 	}
 }
 
