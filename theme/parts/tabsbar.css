@@ -477,6 +477,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 	#tabbrowser-tabs[orient="horizontal"] & {
 		&:not([pinned]) {
+			margin-inline-start: auto;
 			margin-inline-end: 2px;
 
 			@media -moz-pref("gnomeTheme.tabAlignLeft") {
