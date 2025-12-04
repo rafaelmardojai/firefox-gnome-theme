@@ -241,8 +241,6 @@ menulist,
 .findbar-button:not(:last-of-type),
 .search-panel-one-offs .searchbar-engine-one-off-item:not(:last-child),
 .popup-notification-secondary-button:not([dropmarkerhidden="true"]):not(#hack) {
-	border-start-end-radius: 0 !important;
-	border-end-end-radius: 0 !important;
 	border-right-width: 0 !important;
 	margin-inline-end: 0 !important;
 }
