@@ -3,6 +3,7 @@
 firefoxInstallationPaths=(
     # Firefox
     ~/.mozilla/firefox # Package
+    "${XDG_CONFIG_HOME:-$HOME/.config}/mozilla/firefox" # Package (XDG)
     ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
     ~/snap/firefox/common/.mozilla/firefox # Snap
     "$HOME/Library/Application Support/Firefox" # MacOS Package
@@ -10,6 +11,7 @@ firefoxInstallationPaths=(
 
     # Librewolf
     ~/.librewolf # Package
+    "${XDG_CONFIG_HOME:-$HOME/.config}/librewolf/librewolf" # Package (XDG)
     ~/.var/app/io.gitlab.librewolf-community/.librewolf # Flatpak
 
     # Floorp
