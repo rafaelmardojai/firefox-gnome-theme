@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 THEMEDIRECTORY=$(cd "$(dirname $0)" && cd .. && pwd)
-FIREFOXFOLDER=~/.mozilla/firefox
+FIREFOXFOLDER="${XDG_CONFIG_HOME:-$HOME/.config}/mozilla/firefox"
 PROFILENAME=""
 
 

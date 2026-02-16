@@ -26,7 +26,7 @@ jobs:
         run: curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
 
       - name: Teardown 1
-        run: rm -rf ls ~/.mozilla/firefox/
+        run: rm -rf ls "${XDG_CONFIG_HOME:-$HOME/.config}/mozilla/firefox"
 
       - name: Setup 2 - create a new Firefox profile
         run: firefox --headless --createprofile test
@@ -38,4 +38,4 @@ jobs:
         run: ./scripts/install.sh
 
       - name: Teardown 2
-        run: rm -rf ls ~/.mozilla/firefox/
+        run: rm -rf ls "${XDG_CONFIG_HOME:-$HOME/.config}/mozilla/firefox"
