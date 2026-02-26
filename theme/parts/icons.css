@@ -597,7 +597,7 @@ button.close::before {
 	/* Fix for extensions icons */
 	@media (prefers-color-scheme: dark) {
 		.webextension-browser-action {
-			list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
+			list-style-image: var(--webextension-toolbar-image, inherit) !important;
 		}
 	}
 
