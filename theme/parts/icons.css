@@ -594,13 +594,6 @@ button.close::before {
 		margin: 2px 0 !important;
 	}
 
-	/* Fix for extensions icons */
-	@media (prefers-color-scheme: dark) {
-		.webextension-browser-action {
-			list-style-image: var(--webextension-toolbar-image, inherit) !important;
-		}
-	}
-
 	/* Folder icon */
 	.bookmark-item[container],
 	.downloadIconShow > .button-box > .button-icon {
