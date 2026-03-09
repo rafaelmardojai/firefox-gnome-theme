@@ -580,6 +580,8 @@ tab-group {
 /* Tabs group label */
 .tab-group-label {
 	border-radius: 26px !important;
+	color: var(--gnome-window-color) !important;
+	margin: 0px 1px 6px !important;
 
 	tab-group[collapsed] & {
 		@media (prefers-color-scheme: dark) {
@@ -587,12 +589,12 @@ tab-group {
 		}
 	}
 
-	#tabbrowser-tabs[orient="horizontal"] &,
-	#tabbrowser-tabs[orient="vertical"][expanded] & {
-		padding: 2px 9px !important;
+	#tabbrowser-tabs[orient="horizontal"] & {
+		padding: 2px 9px 3px !important;
 	}
 
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
+		padding: 2px 9px !important;
 		align-items: center !important;
 		display: flex;
 		margin-block: var(--gnome-toolbar-padding) !important;
@@ -608,9 +610,17 @@ tab-group {
 			margin-inline-end: 3px;
 			width: 16px;
 		}
+
 		tab-group:not([collapsed]) &::before {
 			background-image: var(--gnome-icon-pan-down-symbolic);
 		}
+	}
+
+	&[aria-label="Unnamed Group"] {
+		min-height: unset !important;
+		min-width: unset !important;
+		margin-top: 1px !important;
+		height: 18px;
 	}
 }
 
