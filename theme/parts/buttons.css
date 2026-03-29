@@ -54,6 +54,7 @@ button.close,
 .button.connect-device,
 #item-choose button,
 #editBMPanel_newFolderButton,
+#trust-icon-container,
 .unified-extensions-item-menu-button {
 	-moz-appearance: none !important;
 	align-items: center !important;
@@ -63,6 +64,7 @@ button.close,
 	color: var(--gnome-window-color) !important;
 	font: menu !important;
 	font-weight: bold !important;
+	justify-content: center;
 	max-height: var(--gnome-button-size) !important;
 	min-height: var(--gnome-button-size) !important;
 	min-width: var(--gnome-button-size) !important;
@@ -115,6 +117,7 @@ button.close,
 button.close,
 .panel-info-button,
 .permission-popup-permission-remove-button,
+#trust-icon-container,
 .unified-extensions-item-menu-button {
 	background-color: transparent !important;
 	transition: background var(--gnome-animation-time);
@@ -207,7 +210,8 @@ menulist,
 .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > #appMenu-fxa-label2:not(#hack),
 .button.connect-device,
 #item-choose button,
-#editBMPanel_newFolderButton {
+#editBMPanel_newFolderButton,
+#trust-icon-container.insecure {
 	padding: 2px 9px !important;
 }
 .subviewbutton.panel-subview-footer label,
@@ -225,6 +229,14 @@ menulist,
 .button.connect-device,
 #item-choose button {
 	text-align: center !important;
+}
+
+/* Text buttons + icon */
+#trust-icon-container.insecure {
+	gap: 6px !important;
+	label {
+		margin: 0 !important;
+	}
 }
 
 /* Circle buttons */

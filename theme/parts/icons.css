@@ -44,6 +44,7 @@ button.close::before,
 #urlbar-search-mode-indicator-close,
 #tracking-protection-icon,
 #identity-icon,
+#trust-icon,
 #permissions-granted-icon,
 #downloads-indicator-icon,
 .textbox-search-clear,
@@ -555,14 +556,22 @@ button.close::before {
 	#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
 		list-style-image: var(--gnome-icon-edit-find-symbolic) !important;
 	}
+	#trust-icon-container {
+		&.secure {
+			list-style-image: var(--gnome-icon-shield-safe-symbolic) !important;
+		}
+		&.insecure {
+			list-style-image: var(--gnome-icon-shield-danger-symbolic) !important;
+		}
+	}	
 	.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
-		list-style-image: var(--gnome-icon-security-high-symbolic) !important;
+		list-style-image: var(--gnome-icon-shield-full-symbolic) !important;
 	}
 	.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon {
-		list-style-image: var(--gnome-icon-security-low-symbolic) !important;
+		list-style-image: var(--gnome-icon-shield-outline-symbolic) !important;
 	}
 	.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon {
-		list-style-image: var(--gnome-icon-security-high-symbolic) !important;
+		list-style-image: var(--gnome-icon-shield-full-symbolic) !important;
 	}
 	#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 	#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
