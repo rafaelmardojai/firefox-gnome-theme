@@ -129,9 +129,9 @@ moz-checkbox, moz-radio {
 }
 
 link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested) {
-	& ~ .label-wrapper {
+	& ~ .content-wrapper {
 		margin-inline: 12px !important;
-		& > label {
+		#label {
 			align-items: center;
 			display: flex !important;
 			gap: var(--gnome-toolbar-spacing);
