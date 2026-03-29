@@ -563,17 +563,28 @@ tab-group {
 }
 
 .tab-group-label-container {
-	padding-bottom: var(--gnome-toolbar-padding);
+	padding-bottom: 0 !important;
 	
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-block: 0 !important;
 		margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
-		
 	}
+	
 	#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
 		tab-group[collapsed] & {
 			margin-block: var(--gnome-toolbar-padding) !important;
 		}
+	}
+}
+
+.tab-group-label-hover-highlight {
+	tab-group[collapsed]:not([movingtabgroup]) &:hover, tab-group[previewpanelactive] {
+		background: none !important;
+		box-shadow: none !important;
+	}
+	
+	#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+		margin: 0 auto !important;
 	}
 }
 
