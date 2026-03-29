@@ -2,44 +2,53 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Main menu fxa */
-#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-label {
-	padding-left: 22px !important;
-	margin-inline-start: -22px !important;
-}
-#appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-avatar {
-	margin-inline-start: 5px !important;
-}
-#appMenu-fxa-status2[fxastatus] > #appMenu-fxa-label2 > vbox > #appMenu-header-description, #appMenu-fxa-text {
-    font-weight: 400 !important;
-}
-
-/* Style main context menu & buttons */
-#context-navigation {
-	padding: 0;
-}
-#context-navigation > menuitem > .menu-iconic-left {
-	margin: auto !important;
-}
-#context-navigation menuitem {
-	--toolbarbutton-active-background: transparent !important;
-	--toolbarbutton-hover-background: transparent !important;
-}
-
 /* Main menu */
 #appMenu-popup .panel-banner-item:after {
 	-moz-box-ordinal-group: 0;
 	margin: 0 8px 0 0 !important;
 }
-#appMenu-popup .toolbaritem-combined-buttons {
-	margin-inline-end: 0 !important;
+#appMenu-zoom-controls {
+	padding-inline: 12px 0 !important;
 }
-#appMenu-popup .toolbaritem-combined-buttons .before-label {
-	width: 32px !important;
+
+#appMenu-fxa-status {
+	&[fxastatus="signedin"] {
+		& > #appMenu-fxa-label {
+			padding-left: 22px !important;
+			margin-inline-start: -22px !important;
+		}
+		
+		& > #appMenu-fxa-avatar {
+			margin-inline-start: 5px !important;
+		}
+	}
 }
-.subviewbutton#appMenu-zoom-controls2 {
-	padding-right: 0 !important;
-	padding-top: 6px !important;
+
+#appMenu-fxa-status2 {
+	margin: var(--arrowpanel-menuitem-margin) !important;
+	
+	&[fxastatus] > #appMenu-fxa-label2 > vbox > #appMenu-header-description, #appMenu-fxa-text {
+		font-weight: 400 !important;
+	}
+}
+#appMenu-fxa-label2 {
+	margin: 0 !important;
+	padding: var(--arrowpanel-menuitem-padding) !important;
+	
+	&:hover {
+		background: transparent !important;
+	}
+}
+
+.proton-zap {
+	&::before {
+		border-image: none !important;
+	}
+}
+
+.PanelUI-remotetabs-clientcontainer label {
+	margin: var(--arrowpanel-menuitem-margin) !important;
+	padding: var(--arrowpanel-menuitem-padding) !important;
 }
 
 /* User sync account remove avatar */
@@ -65,7 +74,7 @@
 /* Add bookmark */
 #editBookmarkPanel {
 	#editBookmarkPanelContent {
-		padding: 0 !important;
+		padding: var(--gnome-menu-padding) !important;
 		
 		label {
 			margin-top: calc(var(--gnome-toolbar-spacing) * 2) !important;
@@ -79,9 +88,13 @@
 }
 
 /* Downloads popover */
+#downloadsFooterButtons toolbarseparator {
+	padding-inline: 0 !important;
+}
 #downloadsPanel-mainView .download-state {
 	padding: 12px !important;
 	border: 0 !important;
+	border-radius: var(--gnome-button-radius) !important;
 	display: flex;
 	align-items: center;
 	height: 64px !important;
@@ -139,35 +152,12 @@
 	min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
 }
 
-/* Identity popup */
-#identity-popup-security,
-.identity-popup-section,
-#identity-popup-security-expander .button-box,
-.identity-popup-security-content {
-	border: 0 !important;
-}
-
-.identity-popup-security-content {
-	padding-inline-end: 0 !important;
-	padding-inline-start: 0 !important;
-}
-.identity-popup-security-content {
-	background-position: 0em 0.8em !important;
-	background-size: 24px auto;
-}
-.identity-popup-security-content .identity-popup-headline {
-	margin-left: 1.4em !important;
-}
-#identity-popup-security-button {
-	padding: 3px 0 !important;
-}
-.identity-popup-security-connection.identity-button:not(#hack)  {
-	width: calc(var(--popup-width) - 30px) !important;
-}
-
 /* Permission popup */
+.permission-popup-section {
+	padding-bottom: var(--gnome-menu-padding) !important;
+}
 #permission-popup-permissions-content {
-	padding: 0 !important;
+	padding-inline: var(--gnome-menu-padding) !important;
 }
 
 .permission-popup-permission-item:first-child, #permission-popup-storage-access-permission-list-header {
@@ -202,127 +192,6 @@
 	padding: 6px !important;
 }
 
-/* Protections popup */
-.protections-popup-section,
-#protections-popup-not-blocking-section-header {	
-	border: 0 !important;
-}
-#protections-popup-mainView-panel-header-section {
-	background: transparent !important;
-}
-#protections-popup-mainView toolbarseparator {
-	display: none !important;
-}
-
-#protections-popup-mainView-panel-header {
-	color: var(--gnome-window-color) !important;
-}
-#protections-popup[hasException] #protections-popup-mainView-panel-header {
-	background: none !important;
-}
-#protections-popup-main-header-label {
-	height: auto !important;
-	margin-inline-start: 6px !important;
-	text-align: left !important;
-}
-#protections-popup-mainView-panel-header-span {
-	margin: 0 !important;
-	margin-inline-start: 0 !important
-}
-#protections-popup[toast] #protections-popup-mainView-panel-header {
-	border-bottom-width: 1px !important;
-	border-radius: 5px !important;
-	padding: 0px !important;
-}
-#protections-popup-info-button {
-	margin: 0 !important;
-}
-
-#protections-popup-message {
-	background-position: center 12px !important;
-	background-color: var(--gnome-entry-background);
-	border: 0 !important;
-	border-radius: 12px;
-	color: var(--gnome-window-color) !important;
-	height: 100% !important;
-	margin: 0 !important;
-}
-#protections-popup-message .text-link,
-#cfr-protections-panel-link-text {
-	color: var(--gnome-window-color) !important;
-}
-.whatsNew-message-body {
-	padding: 0 6px;
-}
-
-#protections-popup-tp-switch-section {
-	background: var(--gnome-menu-background);
-	border: 1px solid var(--gnome-button-border-color) !important;
-	border-radius: 9px;
-	padding: 0 0 24px 0 !important;
-	margin: 0 !important;
-}
-#protections-popup-tp-switch-section-header {
-	padding: 0 !important;
-}
-
-#protections-popup[hasException] #protections-popup-tp-switch-section {
-	background: var(--gnome-menu-background) !important;
-}
-.protections-popup-tp-switch-label-box label {
-	margin-right: 12px !important;
-	font-weight: normal !important;
-}
-
-#protections-popup-no-trackers-found-description {
-	margin: 12px 8px 0 !important;
-	text-align: left !important;
-}
-
-#protections-popup-blocking-section-header,
-#protections-popup-not-found-section-header,
-#protections-popup-not-blocking-section-header{
-	padding: 0px 5px !important;
-	margin-top: 20px !important;
-	height: auto !important;
-}
-
-#protections-popup-category-list {
-	margin: 0 !important;
-}
-.protections-popup-category.notFound .protections-popup-category-label {
-	width: calc(var(--popup-width) - 70px) !important;
-}
-.protections-popup-category-label {
-	margin-inline-start: 6px !important;
-}
-.protections-popup-category-state-label {
-	opacity: 0.7;
-}
-
-#protections-popup-footer  {
-	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	margin-top: 12px;
-}
-#protections-popup-show-report-stack,
-#protections-popup-settings-button {
-	width: 100% !important;
-}
-#protections-popup-show-report-button {
-	height: 32px !important;
-}
-#protections-popup-footer-protection-type-label  {
-	margin-left: 6px !important;
-}
-.protections-popup-description {
-    border-bottom: 0 !important;
-}
-.protections-popup-description > description {
-    margin: 8px !important;
-}
-
 /* Feature recommendation notification, fix width */
 #contextual-feature-recommendation-notification {
     width: auto !important;
@@ -340,4 +209,9 @@
 
 #translations-panel-lang-selection > label {
 	margin-top: var(--gnome-menu-padding) !important;
+}
+
+/* Tab group manager */
+#tab-group-default-header ~ toolbarseparator {
+	display: none !important;
 }
