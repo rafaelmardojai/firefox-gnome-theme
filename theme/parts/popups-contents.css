@@ -152,6 +152,28 @@
 	min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
 }
 
+/* Trust panel */
+#trustpanel-popup-connection {
+	gap: 6px !important;
+}
+
+#trustpanel-graphic-section {
+	--trustpanel-graphic-bg: var(--gnome-card-background) !important;
+	border-radius: var(--gnome-card-radius) !important;
+	margin: var(--gnome-menu-padding) !important;
+	margin-bottom: calc(var(--gnome-menu-padding) * 2) !important;
+	padding: var(--gnome-menu-item-inline-padding) !important;
+}
+#trustpanel-toggle-section {
+	margin: var(--gnome-menu-padding) calc(var(--gnome-menu-item-inline-margin) + var(--gnome-menu-item-inline-padding)) !important;
+}
+#trustpanel-toggle-checkbox-container {
+	align-items: center;
+	label {
+		margin-bottom: 0 !important;
+	}
+}
+
 /* Permission popup */
 .permission-popup-section {
 	padding-bottom: var(--gnome-menu-padding) !important;

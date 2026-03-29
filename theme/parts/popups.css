@@ -3,8 +3,11 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 menupopup, panel {
-	--gnome-menu-item-padding: 4px 12px;
-	--gnome-menu-item-margin: 0 var(--gnome-menu-padding);
+	--gnome-menu-item-block-padding: 4px;
+	--gnome-menu-item-inline-padding: 12px;
+	--gnome-menu-item-padding: var(--gnome-menu-item-block-padding) var(--gnome-menu-item-inline-padding);
+	--gnome-menu-item-inline-margin: var(--gnome-menu-padding);
+	--gnome-menu-item-margin: 0 var(--gnome-menu-item-inline-margin);
 	--gnome-menu-item-radius: var(--gnome-button-radius);
 	
 	--panel-background: var(--gnome-menu-background) !important;
@@ -154,6 +157,11 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
 	&[disabled="true"][_moz-menuactive] {
 		background: transparent !important;
 	}
+}
+
+.moz-button-subviewbutton-nav {
+	--button-border-radius: var(--gnome-menu-item-radius) !important;
+	margin: var(--gnome-menu-item-margin) !important;
 }
 
 /* Bookmatks */

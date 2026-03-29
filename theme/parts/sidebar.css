@@ -130,7 +130,7 @@ moz-checkbox, moz-radio {
 
 link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested) {
 	& ~ .content-wrapper {
-		margin-inline: 12px !important;
+		margin-inline: 12px;
 		#label {
 			align-items: center;
 			display: flex !important;

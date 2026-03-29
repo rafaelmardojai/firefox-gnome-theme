@@ -602,6 +602,17 @@ button.close::before {
 	.urlbar-icon {
 		margin: 2px 0 !important;
 	}
+	
+	#trustpanel-connection-icon, #trustpanel-siteinfo-icon {
+		list-style-image: var(--gnome-icon-channel-insecure-symbolic) !important;
+		
+		#trustpanel-popup:is([connection^="secure"],
+		[connection="extension"],
+		[connection="chrome"],
+		[connection="file"]):not([connection="secure-cert-user-overridden"]) & {
+			list-style-image: var(--gnome-icon-channel-secure-symbolic) !important;
+		}
+	}
 
 	/* Folder icon */
 	.bookmark-item[container],
