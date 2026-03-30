@@ -136,6 +136,7 @@ panel toolbarseparator {
 menuitem, menupopup menu, panelview .toolbarbutton-1,
 .subviewbutton:not(#appMenu-fxa-label2, .toolbaritem-combined-buttons),
 .widget-overflow-list .toolbarbutton-1 {
+	color: var(--gnome-window-color) !important;
 	min-height: 32px !important;
 
 	&:hover, &[_moz-menuactive], &:focus, &:focus-within {
