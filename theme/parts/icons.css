@@ -5,7 +5,7 @@
 /* Icons color */
 .toolbarbutton-icon:not([class*="identity-color-"] .toolbarbutton-icon),
 link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"],
-menuitem:not([class*='identity']) .menu-icon,
+menuitem[type="checkbox"]::before, menuitem[type="radio"]::before,
 #vertical-tabs-newtab-button .toolbarbutton-icon,
 .urlbar-page-action:not([readeractive]),
 .urlbar-icon,
@@ -245,30 +245,33 @@ button.close::before {
 		list-style-image: var(--gnome-icon-preferences-system-time-symbolic) !important;
 	}
 
-	/* Menu checkbox */
-	menuitem[type="checkbox"] {
-		list-style-image: none !important;
+	/* Menu checkbox/radio */
+	menuitem[type="checkbox"], menuitem[type="radio"] {
+		&::before {
+			align-items: center;
+			content: "";
+			display: flex;
+			height: 16px;
+			justify-content: center;
+			margin-inline-end: 0.5em;
+			width: 16px;
+		}
+		&[disabled="true"]::before {
+			opacity: 0.5;
+		}
+		
+	}	
+	menuitem[type="checkbox"][checked]::before {
+		content: var(--gnome-icon-select-symbolic);
 	}
-	menuitem[type="checkbox"][checked="true"] {
-		list-style-image: var(--gnome-icon-select-symbolic) !important;
-	}
-	menuitem[type="checkbox"][disabled="true"] .menu-icon {
-		opacity: 0.5;
-	}
-
-	/* Menu radio */
 	menuitem[type="radio"] {
-		list-style-image: none !important;
-	}
-	menuitem[type="radio"][checked="true"] {
-		list-style-image: var(--gnome-icon-bullet-symbolic) !important;
-	}
-	menuitem[type="radio"] .menu-icon {
-		border-radius: 100%;
-		border: 1px solid var(--gnome-toolbar-icon-fill);
-	}
-	menuitem[type="radio"][disabled="true"] .menu-icon {
-		opacity: 0.5;
+		&::before {
+			border-radius: 100%;
+			border: 1px solid var(--gnome-toolbar-icon-fill);
+		}
+		&[checked]::before {
+			content: var(--gnome-icon-bullet-symbolic);
+		}
 	}
 
 	/* Dropmarker */

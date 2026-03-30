@@ -42,7 +42,6 @@ panel:not([remote]) {
 menupopup {
 	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
-	/*padding: var(--gnome-menu-padding) !important;*/
 }
 menuseparator {
 	padding: var(--gnome-menu-padding) 0 !important;
@@ -62,9 +61,9 @@ menulist {
 
 /* Menu items */
 @media not -moz-pref("gnomeTheme.noThemedIcons") {
-	menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
-	menuitem[type="radio"] .menu-iconic-icon {
-		appearance: none !important;
+	menuitem:is([type="checkbox"], [checked="true"]) .menu-icon,
+	menuitem[type="radio"] .menu-icon {
+		visibility: collapse !important;
 	}
 }
 menuitem {
@@ -79,10 +78,6 @@ menu, menuitem {
 }
 menuitem:not([acceltext]) .menu-accel-container {
 	visibility: collapse !important;
-}
-menuitem[type="checkbox"] image, menuitem[type="radio"] image {
-	appearance: none !important;
-	visibility: visible !important;
 }
 menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
