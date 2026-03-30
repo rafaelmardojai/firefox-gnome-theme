@@ -2,6 +2,14 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+:root {
+	@media -moz-pref("sidebar.revamp.round-content-area") {
+		&:-moz-window-inactive {
+			--gnome-headerbar-background: var(--gnome-sidebar-background) !important;
+		}
+	}
+}
+
 /* Main sidebar */
 #sidebar-main {
 	--button-size-icon: var(--gnome-button-size) !important;
@@ -41,8 +49,13 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 }
 
 /* Sidebar content */
-#sidebar-box {	
+#sidebar-box {
+	background-color: var(--gnome-sidebar-background) !important;
 	padding: 0 !important;
+	@media -moz-pref("sidebar.revamp.round-content-area") {
+		padding: var(--gnome-toolbar-padding) !important;
+		padding-top: 0 !important;
+	}
 }
 
 #sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
@@ -55,8 +68,15 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 #sidebar {
 	background-color: var(--gnome-secondary-sidebar-background) !important;
 	border: 0 !important;
-	border-radius: 0 !important;;
+	border-radius: 0 !important;
 	box-shadow: none !important;
+	outline: 0 !important;
+	
+	@media -moz-pref("sidebar.revamp.round-content-area") {
+		background-color: var(--gnome-card-background) !important;
+		border-radius: var(--gnome-card-radius) !important;
+		box-shadow: var(--gnome-card-shadow) !important;
+	}
 }
 
 #sidebar-search-container {
@@ -66,24 +86,29 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 /* Separator */
 #sidebar-splitter,
 #sidebar-launcher-splitter {
-	background: var(--gnome-toolbar-background) !important;
+	background-color: var(--gnome-sidebar-background) !important;
 	border: 0 !important;
-	border-right: 1px solid var(--gnome-border-color) !important;
-	border-color: var(--gnome-toolbar-border-color) !important;
 	margin: 0 !important;
+	outline: 0 !important;
+	transition: none !important;
 	width: 0 !important;
+	
+	@media not -moz-pref("sidebar.revamp.round-content-area") {
+		border-right: 1px solid var(--gnome-toolbar-border-color) !important;
+	}
+}
+
+#sidebar-launcher-splitter {
+	@media -moz-pref("sidebar.revamp.round-content-area") {
+		#browser:has(#sidebar-box[sidebar-panel-open]) & {
+			border-right-width: 1px !important;
+		}
+	}
 }
 
 #sidebar-tools-and-extensions-splitter {
 	background: transparent !important;
 	margin-block: 0 !important;
-}
-
-/* Browser content */
-#tabbrowser-tabbox {
-	--chrome-content-separator-color: var(--gnome-toolbar-border-color);
-	box-shadow: none !important;
-	outline: 0 !important;
 }
 
 /* Settings lists */
@@ -93,7 +118,7 @@ link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #input
 	background: var(--gnome-card-background) !important;
 	border: 0 !important;
 	border-radius: var(--gnome-card-radius) !important;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px 1px rgba(0, 0, 0, .07), 0 2px 6px 2px rgba(0, 0, 0, .03);
+	box-shadow: var(--gnome-card-shadow);
 	margin-top: 12px !important;
 	padding: 0 !important;
 }
