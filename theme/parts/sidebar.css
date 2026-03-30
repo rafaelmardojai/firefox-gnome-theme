@@ -2,8 +2,8 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-:root {
-	@media -moz-pref("sidebar.revamp.round-content-area") {
+:root:has(#tabbrowser-tabbox[sidebar-shown]) {
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
 		--gnome-headerbar-background: var(--gnome-sidebar-background);
 		&:-moz-window-inactive {
 			--gnome-headerbar-background: var(--gnome-sidebar-background) !important;
@@ -53,9 +53,11 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 #sidebar-box {
 	background-color: var(--gnome-sidebar-background) !important;
 	padding: 0 !important;
-	@media -moz-pref("sidebar.revamp.round-content-area") {
-		padding: var(--gnome-toolbar-padding) !important;
-		padding-top: 0 !important;
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		#browser:has(#tabbrowser-tabbox[sidebar-shown]) & {
+			padding: var(--gnome-toolbar-padding) !important;
+			padding-top: 0 !important;
+		}		
 	}
 }
 
@@ -73,10 +75,12 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	box-shadow: none !important;
 	outline: 0 !important;
 	
-	@media -moz-pref("sidebar.revamp.round-content-area") {
-		background-color: var(--gnome-card-background) !important;
-		border-radius: var(--gnome-card-radius) !important;
-		box-shadow: var(--gnome-card-shadow) !important;
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		#browser:has(#tabbrowser-tabbox[sidebar-shown]) & {
+			background-color: var(--gnome-card-background) !important;
+			border-radius: var(--gnome-card-radius) !important;
+			box-shadow: var(--gnome-card-shadow) !important;
+		}
 	}
 }
 
@@ -97,10 +101,14 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	@media not -moz-pref("sidebar.revamp.round-content-area") {
 		border-right: 1px solid var(--gnome-toolbar-border-color) !important;
 	}
+	
+	@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
+		display: flex !important;
+    }
 }
 
 #sidebar-launcher-splitter {
-	@media -moz-pref("sidebar.revamp.round-content-area") {
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
 		#browser:has(#sidebar-box[sidebar-panel-open]) & {
 			border-right-width: 1px !important;
 		}

@@ -14,8 +14,12 @@
 /* Toolbox colors */
 #navigator-toolbox {
 	background: var(--gnome-toolbar-background) !important;
-	@media not -moz-pref("sidebar.revamp.round-content-area") {
-		border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+	
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		:root:has(#tabbrowser-tabbox[sidebar-shown]) & {
+			border-bottom: 0 !important;
+		}
 	}
 }
 
