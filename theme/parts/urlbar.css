@@ -55,8 +55,7 @@ toolbarspring {
 	}
 	#urlbar[searchmode] & {
 		background-color: var(--gnome-selected-color) !important;
-		border-start-end-radius: 0 !important;
-		border-end-end-radius: 0 !important;			
+			
 		&:hover {
 			background-color: var(--gnome-selected-hover-color) !important;
 		}
@@ -65,23 +64,16 @@ toolbarspring {
 		}
 	}
 }
-.searchmode-switcher-icon {
-	margin-inline-start: 6px !important;
-}
-.searchmode-switcher-chicklet {
-	background-color: var(--gnome-button-background) !important;
-	border-start-end-radius: var(--gnome-button-radius) !important;
-	border-end-end-radius: var(--gnome-button-radius) !important;
-}
 .searchmode-switcher-title {
 	color: var(--gnome-window-color);
-	padding-inline: 4px !important;
+	font-weight: bold;
 }
 .searchmode-switcher-close {
 	background-size: 16px !important;
-	border-radius: 24px !important;
-	width: 24px !important;
+	border-radius: 50% !important;
 	height: 24px !important;
+	margin: 0 !important;
+	width: 24px !important;
 }
 
 /* URL bar results */

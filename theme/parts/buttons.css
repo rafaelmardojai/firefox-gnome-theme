@@ -24,7 +24,7 @@
 /* Buttons */
 menulist,
 .customizationmode-button,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not(#searchmode-switcher-close, #urlbar-searchmode-switcher),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button, .subviewbutton, .titlebar-button, #urlbar-searchmode-switcher, .searchmode-switcher-close),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
@@ -111,7 +111,7 @@ button.close,
 }
 
 /* Flat Buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not(#searchmode-switcher-close, #urlbar-searchmode-switcher),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button, .subviewbutton, .titlebar-button, #urlbar-searchmode-switcher, .searchmode-switcher-close),
 :root[inFullscreen] .titlebar-button.titlebar-restore,
 .close-icon:not(.tab-close-button),
 button.close,
@@ -181,7 +181,7 @@ button.popup-notification-primary-button:not(#hack),
 }
 
 /* Buttons with margins */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button, #urlbar-searchmode-switcher):not(.subviewbutton):not(.titlebar-button),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button, .subviewbutton, .titlebar-button, #urlbar-searchmode-switcher, .searchmode-switcher-close),
 .subviewbutton.panel-subview-footer:not(:only-of-type),
 .panel-footer button:not(:only-of-type):not(:last-child) {
 	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;

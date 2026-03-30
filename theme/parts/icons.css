@@ -286,8 +286,8 @@ button.close::before {
 		list-style-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
 	#urlbar-search-mode-indicator-close,
-	#searchmode-switcher-close,
-	button.close::before {
+	button.close::before,
+	.searchmode-switcher-close {
 		background-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
 	@media (prefers-color-scheme: light) {
