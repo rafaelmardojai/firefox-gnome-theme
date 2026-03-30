@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Generate PKGBUILD
         env:
@@ -18,7 +18,7 @@ jobs:
         run: ./scripts/generate-pkgbuild.sh
 
       - name: Publish firefox-gnome-theme to the AUR
-        uses: KSXGitHub/github-actions-deploy-aur@v2.7.2
+        uses: KSXGitHub/github-actions-deploy-aur@v4.1.1
         with:
           pkgname: firefox-gnome-theme
           pkgbuild: ./PKGBUILD
