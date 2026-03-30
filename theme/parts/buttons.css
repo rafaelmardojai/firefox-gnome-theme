@@ -122,7 +122,7 @@ button.close,
 	background-color: transparent !important;
 	transition: background var(--gnome-animation-time);
 
-	&:not([disabled="true"]) {
+	&:not([disabled="true"]):not(#hack) {
 		/* Hover buttons */
 		&:hover {
 			background-color: var(--gnome-hover-color) !important;
