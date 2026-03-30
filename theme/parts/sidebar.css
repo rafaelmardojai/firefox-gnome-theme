@@ -4,6 +4,7 @@
 
 :root {
 	@media -moz-pref("sidebar.revamp.round-content-area") {
+		--gnome-headerbar-background: var(--gnome-sidebar-background);
 		&:-moz-window-inactive {
 			--gnome-headerbar-background: var(--gnome-sidebar-background) !important;
 		}
