@@ -56,7 +56,6 @@ menulist {
 .menupopup-arrowscrollbox {
 	appearance: none !important;
 	border: 0 !important;
-	min-height: 45px !important;
 }
 
 /* Menu items */
@@ -169,5 +168,3 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
 #PlacesToolbar menupopup[placespopup="true"] menuseparator::before {
 	border: 0 !important;
 }
-
-
