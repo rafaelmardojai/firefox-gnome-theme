@@ -65,9 +65,30 @@ menulist {
 		visibility: collapse !important;
 	}
 }
+
 menuitem {
 	padding-inline-end: 18px !important;
+	
+	&:not([acceltext]) .menu-accel-container {
+		visibility: collapse !important;
+	}
+	
+	&[badge]::after {
+		align-items: center;
+		background-color: var(--gnome-trough-background) !important;
+		border-radius: 14px !important;
+		border: 0 !important;
+		color: var(--gnome-menu-color);
+		display: flex;
+		height: 28px !important;
+		padding: 0 12px !important;
+	}
+	
+	&.badge-new::after {
+		color: var(--gnome-accent) !important;
+	}
 }
+
 menu, menuitem {
 	margin-inline: 0 !important;
 	&:where([_moz-menuactive]:not([disabled="true"])) {
@@ -75,9 +96,7 @@ menu, menuitem {
 		background-color: transparent !important;
 	}
 }
-menuitem:not([acceltext]) .menu-accel-container {
-	visibility: collapse !important;
-}
+
 menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
 }
