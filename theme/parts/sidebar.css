@@ -5,7 +5,10 @@
 :root:has(#tabbrowser-tabbox[sidebar-shown]) {
 	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
 		--gnome-headerbar-background: var(--gnome-sidebar-background);
-		&:-moz-window-inactive {
+		&[privatebrowsingmode="temporary"] {
+			--gnome-sidebar-background: var(--gnome-headerbar-background) !important;
+		}
+		&:not([privatebrowsingmode="temporary"]):-moz-window-inactive {
 			--gnome-headerbar-background: var(--gnome-sidebar-background) !important;
 		}
 	}
