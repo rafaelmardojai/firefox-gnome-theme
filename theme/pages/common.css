@@ -1,0 +1,5 @@
+/* General content styles */
+
+:root {
+    --background-color-canvas: var(--gnome-window-background) !important;
+}
