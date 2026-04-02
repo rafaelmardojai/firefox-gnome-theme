@@ -55,7 +55,8 @@ button.close,
 #item-choose button,
 #editBMPanel_newFolderButton,
 #trust-icon-container,
-.unified-extensions-item-menu-button {
+.unified-extensions-item-menu-button,
+.remote-tabs-close-button {
 	-moz-appearance: none !important;
 	align-items: center !important;
 	background-color: var(--gnome-button-background) !important;
@@ -64,7 +65,7 @@ button.close,
 	color: var(--gnome-window-color) !important;
 	font: menu !important;
 	font-weight: bold !important;
-	justify-content: center;
+	justify-content: center !important;
 	max-height: var(--gnome-button-size) !important;
 	min-height: var(--gnome-button-size) !important;
 	min-width: var(--gnome-button-size) !important;
@@ -118,7 +119,8 @@ button.close,
 .panel-info-button,
 .permission-popup-permission-remove-button,
 #trust-icon-container,
-.unified-extensions-item-menu-button {
+.unified-extensions-item-menu-button,
+.remote-tabs-close-button {
 	background-color: transparent !important;
 	transition: background var(--gnome-animation-time);
 
@@ -241,7 +243,8 @@ menulist,
 
 /* Circle buttons */
 #downloadsPanel-mainView .download-state .downloadButton,
-.permission-popup-permission-remove-button:not(#hack) {
+.permission-popup-permission-remove-button:not(#hack),
+.remote-tabs-close-button {
 	border-radius: 100% !important;
 }
 

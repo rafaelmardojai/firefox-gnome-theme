@@ -152,7 +152,7 @@ panel toolbarseparator {
 
 /* Menu buttons */
 menuitem, menupopup menu, panelview .toolbarbutton-1,
-.subviewbutton:not(#appMenu-fxa-label2, .toolbaritem-combined-buttons),
+.subviewbutton:not(#appMenu-fxa-label2, .toolbaritem-combined-buttons, .remote-tabs-close-button),
 .widget-overflow-list .toolbarbutton-1 {
 	color: var(--gnome-window-color) !important;
 	min-height: 32px !important;

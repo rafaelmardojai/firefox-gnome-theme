@@ -259,7 +259,6 @@ button.close::before {
 		&[disabled="true"]::before {
 			opacity: 0.5;
 		}
-		
 	}	
 	menuitem[type="checkbox"][checked]::before {
 		content: var(--gnome-icon-select-symbolic);
@@ -282,7 +281,8 @@ button.close::before {
 	/* Close button */
 	.close-icon:not(.tab-close-button),
 	.identity-popup-permission-remove-button .button-icon,
-	.permission-popup-permission-remove-button > .button-box > .button-icon {
+	.permission-popup-permission-remove-button > .button-box > .button-icon,
+	.remote-tabs-close-button {
 		list-style-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
 	#urlbar-search-mode-indicator-close,

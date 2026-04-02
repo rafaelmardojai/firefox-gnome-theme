@@ -88,8 +88,12 @@ button.close {
 	margin: 0 !important;
 }
 
-/* */
+/* App menu buttons */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]::after {
+	display: none !important;
+}
+
+.remote-tabs-close-button .toolbarbutton-text {
 	display: none !important;
 }
 
