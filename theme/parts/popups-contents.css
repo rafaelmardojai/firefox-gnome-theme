@@ -8,7 +8,7 @@
 	margin: 0 8px 0 0 !important;
 }
 #appMenu-zoom-controls {
-	padding-inline: 12px 0 !important;
+	padding-inline: var(--gnome-menu-item-inline-padding) !important;
 }
 
 #appMenu-fxa-status {
