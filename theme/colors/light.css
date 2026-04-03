@@ -84,6 +84,7 @@
 	/* Card */
 	--gnome-card-background: #ffffff;
 	--gnome-card-shade-color: rgba(0, 0, 6, 0.07);
+	--gnome-card-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px 1px rgba(0, 0, 0, .07), 0 2px 6px 2px rgba(0, 0, 0, .03);
 	
 	/* Menu */
 	--gnome-menu-background: #ffffff;
