@@ -214,7 +214,7 @@ menulist,
 #item-choose button,
 #editBMPanel_newFolderButton,
 #trust-icon-container.insecure {
-	padding: 2px 9px !important;
+	padding-inline: 17px !important;
 }
 .subviewbutton.panel-subview-footer label,
 .panel-footer button,
