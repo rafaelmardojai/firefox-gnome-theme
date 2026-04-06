@@ -336,6 +336,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 					margin-inline-end: auto !important;
 				}
 				.tab-close-button {
+					margin-inline-end: auto !important;
 					margin-inline-start: 0 !important;
 					order: 0 !important;
 				}
