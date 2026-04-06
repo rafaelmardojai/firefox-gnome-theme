@@ -100,7 +100,6 @@
 	/* Toolbars */
 	--gnome-toolbar-background: var(--gnome-headerbar-background);
 	--gnome-toolbar-border-color: var(--gnome-headerbar-shade-color);
-	--gnome-toolbar-icon-fill: #2f2f2f;
 	
 	/* Elements */
 	--gnome-border-color: color-mix(in srgb, currentColor 15%, transparent);

@@ -33,9 +33,6 @@
 		--gnome-headerbar-background: #2e2e32;
 		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
 
-		/* Toolbars */
-		--gnome-toolbar-icon-fill: #ffffff;
-
 		/* Tabs */		
 		--gnome-tabbar-identity-color-blue: #81d0ff;
 		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
