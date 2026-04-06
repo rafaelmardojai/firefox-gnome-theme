@@ -2,6 +2,11 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+:root {
+	--urlbarView-item-inline-padding: 6px !important;
+	--urlbarView-item-block-padding: 4px !important;
+}
+
 #urlbar {
 	--urlbar-height: 34.00px;
 	--urlbar-toolbar-height: 34.00px !important;
@@ -80,66 +85,87 @@ toolbarspring {
 .urlbarView {
 	background: transparent !important;
 	color: var(--gnome-window-color) !important;
-	margin: 11px 0 0 -3px !important;
+	margin: 12px 0 0 0 !important;
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
-    border-radius: 12px !important;
+    border-radius: var(--gnome-popover-radius) !important;
 	width: 100% !important;
 }
 
-/* Search bar result */
-#PopupSearchAutoComplete {
-  margin-top: 7px !important;
-}
-
 .urlbarView-body-outer {
-	--item-padding-start: 0 !important;
-	--item-padding-end: 0 !important;
     background: var(--gnome-menu-background) !important;
 	overflow-x: auto;
-	padding: 2px 6px !important;
-    border-radius: 8px 8px 0 0 !important;
+	padding: var(--gnome-menu-padding) calc(var(--gnome-menu-padding) + 2px) !important;
 }
 
 .urlbarView-body-inner {
 	border: 0 !important;
 }
 
-.urlbarView-row-inner, .urlbarView-no-wrap  {
-	align-items: center !important;
-}
-.urlbarView-row-inner {
-	padding-block: 5px !important;
-	border-radius: 5px !important;
+.urlbarView-results {
+	padding: 0 !important;
 }
 
-.urlbarView-row[selected] {
-	background: var(--gnome-selected-color) !important;
-	color: var(--gnome-window-color) !important;
-}
-.urlbarView-row[selected]:hover {
-	background: var(--gnome-selected-hover-color) !important;
-}
-.urlbarView-row:not([selected]):hover {
-	background: var(--gnome-hover-color) !important;
-}
-.urlbarView-row:not([selected]):active {
-	background: var(--gnome-active-color) !important;
-}
+.urlbarView-row {
+	&[selected] {
+		background: var(--gnome-selected-color) !important;
+		color: var(--gnome-window-color) !important;
+		
+		&:hover {
+			background: var(--gnome-selected-hover-color) !important;
+		}
+	}
 
-.urlbarView-url {
-	color: var(--gnome-accent) !important;
+	&:not([selected]) {
+		&:hover {
+			background: var(--gnome-hover-color) !important;
+		}
+			&:active {
+			background: var(--gnome-active-color) !important;
+		}
+	}
+
+	.urlbarView-row-inner {
+		border-radius: var(--gnome-button-radius) !important;
+	}
+
+	.urlbarView-row-inner, .urlbarView-no-wrap  {
+		align-items: center !important;
+	}
+	
+	.urlbarView-url {
+		color: var(--gnome-accent) !important;
+	}
+	
+	&[label]::before {
+		color: var(--gnome-window-color) !important;
+		font: menu !important;
+		font-weight: bold !important;
+	}
 }
 
 .urlbarView-action {
-	background: transparent !important;
-}
+	.urlbarView-row[has-action]:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) & {
+		align-items: center;
+		background-color: var(--gnome-trough-background) !important;
+		border-radius: 14px !important;
+		border: 0 !important;
+		color: var(--gnome-menu-color);
+		display: flex;
+		height: 28px !important;
+		padding: 0 12px !important;
 
-/* Fix items overflow */
-.urlbarView[actionoverride] .urlbarView-row[has-url] > .urlbarView-row-inner > .urlbarView-no-wrap,
-.urlbarView-row[has-url]:not([type$="tab"]) > .urlbarView-row-inner > .urlbarView-no-wrap, .urlbarView-row[has-url]:is([type="remotetab"],
-[sponsored]):is(:hover, [selected]) > .urlbarView-row-inner > .urlbarView-no-wrap {
-	max-width: calc(96% - 2 * (var(--urlbarView-favicon-width) + (6px + 2px))) !important;
+		&.urlbarView-switchToTab {
+			padding-inline-start: calc(12px + 8px + 2px) !important;
+		}
+		
+		/* Copied from original sheet */
+		.urlbarView-row[has-url]:is([type=remotetab], [sponsored]):is([selected], :hover) > .urlbarView-row-inner > .urlbarView-no-wrap > &,
+		.urlbarView-row:is([type=search], [restyled-search]):not([selected], [show-action-text], :hover) &,
+		.urlbarView[action-override] .urlbarView-row[type=switchtab] > .urlbarView-row-inner > .urlbarView-no-wrap > & {
+			padding: 0 !important;
+		}
+	}	
 }
 
 /* Search engines buttons */	
@@ -152,6 +178,11 @@ toolbarspring {
 
 .search-one-offs[is_searchbar="true"] {
 	margin-bottom: -8px !important;
+}
+
+/* Search bar result */
+#PopupSearchAutoComplete {
+  margin-top: 7px !important;
 }
 
 /* URL bar and Search bar */
