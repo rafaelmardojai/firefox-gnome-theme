@@ -191,7 +191,7 @@ button.close {
 
 /* Downloads button */
 #downloads-indicator-progress-inner {
-	background: conic-gradient(var(--gnome-toolbar-icon-fill) var(--download-progress-pcent), transparent var(--download-progress-pcent)) !important;
+	background: conic-gradient(currentColor var(--download-progress-pcent), transparent var(--download-progress-pcent)) !important;
 	background-color: var(--gnome-button-active-background) !important;
 }
 #downloads-indicator-progress-outer,
