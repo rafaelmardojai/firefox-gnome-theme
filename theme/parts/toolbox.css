@@ -87,7 +87,9 @@ findbar:-moz-window-inactive description,
 /* Content notifications */
 .notificationbox-stack {
 	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
-		margin-bottom: var(--gnome-toolbar-padding) !important;
+		&:not(:empty) {
+			margin-bottom: var(--gnome-toolbar-padding) !important;
+		}
 	}
 
 	notification-message {
