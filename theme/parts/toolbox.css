@@ -8,7 +8,8 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
-	--tabpanel-background-color: --gnome-window-background !important;
+	--tabpanel-background-color: var(--gnome-window-background) !important;
+	--toolbarbutton-icon-fill-attention: var(--gnome-accent) !important;;
 }
 
 /* Toolbox colors */
