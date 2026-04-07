@@ -85,32 +85,34 @@ findbar:-moz-window-inactive description,
 }
 
 /* Content notifications */
-.notificationbox-stack notification-message {
-	--banner-color: #7d7d83;
-	background-color: color-mix(in srgb, var(--banner-color) 30%, var(--gnome-window-background)) !important;
-	border: 0 !important;
-	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	margin: 0 !important;
-	
+.notificationbox-stack {
 	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
 		margin-bottom: var(--gnome-toolbar-padding) !important;
 	}
-	
-	&[type="warning"] {
-		--banner-color: var(--gnome-warning-bg);
-	}
-	&[type="critical"] {
-		--banner-color: var(--gnome-error-bg);
-	}
 
-	&[style*="margin-top"] {
-		margin-top: -48px !important;
-	}
-	
-	&::before {
-		display: none !important;
+	notification-message {
+		--banner-color: #7d7d83;
+		background-color: color-mix(in srgb, var(--banner-color) 30%, var(--gnome-window-background)) !important;
+		border: 0 !important;
+		border-top: 1px solid var(--gnome-toolbar-border-color) !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		margin: 0 !important;
+
+		&[type="warning"] {
+			--banner-color: var(--gnome-warning-bg);
+		}
+		&[type="critical"] {
+			--banner-color: var(--gnome-error-bg);
+		}
+
+		&[style*="margin-top"] {
+			margin-top: -48px !important;
+		}
+
+		&::before {
+			display: none !important;
+		}
 	}
 }
 link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
