@@ -447,7 +447,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 .tab-icon-overlay {
 	height: 12px !important;
 	left: 11px !important;
-	top: -3px !important;
+	top: -7px !important;
 	width: 12px !important;
 
 	&:not([crashed]) {
