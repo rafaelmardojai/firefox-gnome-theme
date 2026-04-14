@@ -206,15 +206,17 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 			/* Full width tabs */
 			@media not -moz-pref("gnomeTheme.normalWidthTabs") {
-				&:not([style^="max-width"]):not([pinned]),
-				&[style^="max-width: 100px !important;"]:not([pinned]) {
-					max-width: 100% !important;
-					--tab-min-width-pref: 131px !important;
-				}
-				&:not([style^="max-width"]):not([pinned]):not([fadein]),
-				&[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
-					max-width: .1px !important;
-				}
+				&:not([pinned]) {
+					&:not([style^="max-width"]),
+					&[style^="max-width: 100px !important;"] {
+						max-width: 100% !important;
+						--tab-min-width-pref: 131px !important;
+					}
+					&:not([style^="max-width"]):not([fadein]),
+					&[style^="max-width: 100px !important;"]:not([fadein]) {
+						max-width: .1px !important;
+					}
+				}				
 			}
 		}
 	}
@@ -543,6 +545,33 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		border-image: none !important;
 	}
 }
+
+/* Split tabs */
+tab-split-view-wrapper {
+	padding: 0 !important;
+	margin-block: 0 !important;
+	margin-bottom: var(--gnome-toolbar-padding) !important;
+	
+	/* Horizontal tabs only */
+	#tabbrowser-tabs[orient="horizontal"] & {		
+		/* Not in collapsed tab-group */
+		:not([collapsed]) > & {
+			> .tabbrowser-tab  {
+				padding: 0 !important;
+				border: 0 !important;
+			}
+			
+			/* Full width tabs */
+			@media not -moz-pref("gnomeTheme.normalWidthTabs") {
+				&:not([style^="max-width"]) {
+					max-width: 100% !important;
+					--tab-min-width-pref: 131px !important;
+				}						
+			}
+		}
+	}
+}
+
 
 /* Tabs group */
 tab-group {

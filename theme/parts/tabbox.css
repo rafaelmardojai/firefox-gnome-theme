@@ -32,3 +32,13 @@
 		}
 	}
 }
+
+/* Tab panels */
+#tabbrowser-tabpanels {
+	&[splitview] {
+		& .split-view-panel.split-view-panel-active {
+			margin: var(--gnome-toolbar-padding) !important;
+			margin-top: 0 !important;
+		}
+	}
+}
