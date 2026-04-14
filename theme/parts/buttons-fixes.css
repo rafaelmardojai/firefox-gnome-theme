@@ -1,4 +1,5 @@
 /* Buttons Issues/Glitches fixes */
+
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* moz.button size */
@@ -241,6 +242,7 @@ button.close {
 	> #reload-button > .toolbarbutton-icon,
 	> #reload-button[displaystop] + #stop-button > .toolbarbutton-icon {
 		fill: var(--gnome-window-color) !important;
+	}
 }
 
 /* Panel banner */
