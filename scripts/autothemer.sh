@@ -180,40 +180,44 @@ HEX_TO_RGBA() {
     echo "rgba($r, $g, $b, 0.8)"
 }
 
-apply_colors() {
-    local css_file="$1"
-    local mode="$2"
-    local bg="$3"
-    local text="$4"
-    local accent="$5"
-    local sidebar="$6"
-    local view="$7"
-    local backdrop_bg="$8"
+write_colors_to_custom_css() {
+    local mode="$1"
+    local bg="$2"
+    local text="$3"
+    local accent="$4"
+    local sidebar="$5"
+    local view="$6"
+    local backdrop_bg="$7"
     
-    if [[ ! -f "$css_file" ]]; then
-        echo "Error: CSS file not found: $css_file"
-        return 1
-    fi
+    local css_file="$THEME_DIR/customChrome.css"
+    TEXT_RGBA=$(HEX_TO_RGBA "$text")
+    
+    if [[ "$mode" == "light" ]]; then
+        cat > "$css_file" << EOF
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-    if [[ -n "$bg" ]]; then
-        sed -i "0,/--gnome-window-background:.*;/{s|--gnome-window-background:.*;|--gnome-window-background: $bg;|}" "$css_file"
-    fi
-    if [[ -n "$text" ]]; then
-        TEXT_RGBA=$(HEX_TO_RGBA "$text")
-        sed -i "0,/--gnome-window-color:.*;/{s|--gnome-window-color:.*;|--gnome-window-color: $TEXT_RGBA;|}" "$css_file"
-    fi
-    if [[ -n "$view" ]]; then
-        sed -i "0,/--gnome-view-background:.*;/{s|--gnome-view-background:.*;|--gnome-view-background: $view;|}" "$css_file"
-    fi
-    if [[ -n "$sidebar" ]]; then
-        sed -i "0,/--gnome-sidebar-background:.*;/{s|--gnome-sidebar-background:.*;|--gnome-sidebar-background: $sidebar;|}" "$css_file"
-    fi
-    if [[ -n "$bg" ]]; then
-        sed -i "0,/--gnome-headerbar-background:.*;/{s|--gnome-headerbar-background:.*;|--gnome-headerbar-background: $bg;|}" "$css_file"
-    fi
-    if [[ -n "$backdrop_bg" ]]; then
-        sed -i "0,/--gnome-secondary-sidebar-background:.*;/{s|--gnome-secondary-sidebar-background:.*;|--gnome-secondary-sidebar-background: $backdrop_bg;|}" "$css_file"
-        sed -i "0,/--gnome-sidebar-background:.*#f2f2f4;/{s|--gnome-sidebar-background:.*#f2f2f4;|--gnome-sidebar-background: $backdrop_bg;|}" "$css_file" 2>/dev/null || true
+:root {
+	--gnome-window-background: $bg;
+	--gnome-window-color: $TEXT_RGBA;
+	--gnome-view-background: $view;
+	--gnome-sidebar-background: $sidebar;
+	--gnome-headerbar-background: $bg;
+	--gnome-secondary-sidebar-background: $backdrop_bg;
+}
+EOF
+    else
+        cat >> "$css_file" << EOF
+@media (prefers-color-scheme: dark) {
+	:root {
+		--gnome-window-background: $bg;
+		--gnome-window-color: $TEXT_RGBA;
+		--gnome-view-background: $view;
+		--gnome-sidebar-background: $sidebar;
+		--gnome-headerbar-background: $bg;
+		--gnome-secondary-sidebar-background: $backdrop_bg;
+	}
+}
+EOF
     fi
 
     echo "Applied $mode colors to: $css_file"
@@ -235,7 +239,7 @@ if [[ -n "$LIGHT_THEME" ]]; then
     echo "  Sidebar:   $SIDEBAR_L"
     echo "  Backdrop:  $BACKDROP_BG_L"
     echo ""
-    apply_colors "$THEME_DIR/theme/colors/light.css" "light" "$BG_L" "$TEXT_L" "$ACCENT_L" "$SIDEBAR_L" "$VIEW_L" "$BACKDROP_BG_L"
+    write_colors_to_custom_css "light" "$BG_L" "$TEXT_L" "$ACCENT_L" "$SIDEBAR_L" "$VIEW_L" "$BACKDROP_BG_L"
 fi
 
 if [[ -n "$DARK_THEME" ]]; then
@@ -248,7 +252,7 @@ if [[ -n "$DARK_THEME" ]]; then
     echo "  Sidebar:   $SIDEBAR_D"
     echo "  Backdrop:  $BACKDROP_BG_D"
     echo ""
-    apply_colors "$THEME_DIR/theme/colors/dark.css" "dark" "$BG_D" "$TEXT_D" "$ACCENT_D" "$SIDEBAR_D" "$VIEW_D" "$BACKDROP_BG_D"
+    write_colors_to_custom_css "dark" "$BG_D" "$TEXT_D" "$ACCENT_D" "$SIDEBAR_D" "$VIEW_D" "$BACKDROP_BG_D"
 fi
 
 echo "Done! Restart Firefox to see changes."
