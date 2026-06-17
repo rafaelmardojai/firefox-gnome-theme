@@ -233,6 +233,11 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	transition: background var(--gnome-tab-animation-time) linear !important;
 	margin-block: 0 !important;
 
+	/* Selected */
+	tab[selected] & {
+		background-color: var(--gnome-selected-color) !important;
+	}
+
 	/* Selected hover */
 	tab[selected]:hover & {
 		background-color: var(--gnome-selected-hover-color) !important;
