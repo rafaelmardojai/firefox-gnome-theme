@@ -4,7 +4,7 @@ firefoxInstallationPaths=(
     # Firefox
     ~/.mozilla/firefox # Package
     "${XDG_CONFIG_HOME:-$HOME/.config}/mozilla/firefox" # Package (XDG)
-    ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+    ~/.var/app/org.mozilla.firefox/config/mozilla/firefox/ # Flatpak
     ~/snap/firefox/common/.mozilla/firefox # Snap
     "$HOME/Library/Application Support/Firefox" # MacOS Package
     ~/AppData/Roaming/Mozilla/Firefox # Microsoft Windows
