@@ -43,6 +43,40 @@ menupopup {
 	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
 }
+
+menulist > menupopup {
+	appearance: auto !important;
+	color: revert !important;
+	background: revert !important;
+}
+
+menulist > menupopup menuitem {
+	appearance: auto !important;
+	color: revert !important;
+	background: revert !important;
+	background-color: revert !important;
+	min-height: revert !important;
+	padding-inline-end: revert !important;
+	margin-inline: revert !important;
+	opacity: revert !important;
+	font-weight: normal !important;
+}
+
+menulist > menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
+	color: revert !important;
+	background: revert !important;
+	background-color: revert !important;
+	outline: revert !important;
+}
+
+menulist > menupopup menuseparator {
+	padding: revert !important;
+}
+
+menulist > menupopup menucaption {
+	color: revert !important;
+}
+
 menuseparator {
 	padding: var(--gnome-menu-padding) 0 !important;
 }
