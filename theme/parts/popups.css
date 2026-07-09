@@ -11,6 +11,7 @@ menupopup, panel {
 	--gnome-menu-item-radius: var(--gnome-button-radius);
 	
 	--panel-background: var(--gnome-menu-background) !important;
+	--panel-background-color: var(--gnome-menu-background) !important;
 	--panel-border-radius: var(--gnome-popover-radius) !important;
 	--panel-padding: var(--gnome-menu-padding) !important;	
 	--panel-shadow: var(--gnome-menu-shadow) !important;
@@ -30,11 +31,13 @@ menupopup, panel {
 	--arrowpanel-menuitem-margin: var(--gnome-menu-item-margin) !important;
 	--arrowpanel-menuitem-padding: var(--gnome-menu-item-padding) !important;
 	--arrowpanel-menuitem-border-radius: var(--gnome-menu-item-radius) !important;
+	--panel-menuitem-padding: var(--gnome-menu-item-padding) !important;
 }
 
 panel:not([remote]) {
 	--arrowpanel-background: var(--gnome-menu-background) !important;
 	--arrowpanel-color: var(--gnome-menu-color) !important;
+	--panel-text-color: var(--gnome-menu-color) !important;
 	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
 }
 

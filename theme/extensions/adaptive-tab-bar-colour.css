@@ -7,7 +7,10 @@
 	--gnome-sidebar-background: var(--lwt-accent-color);
 	--gnome-secondary-sidebar-background: var(--sidebar-background-color);
 	/* Menu */
-	--gnome-menu-background: var(--arrowpanel-background);
+	--gnome-menu-background: var(
+		--panel-background-color,
+		var(--arrowpanel-background, color-mix(in oklab, var(--toolbar-bgcolor), var(--lwt-text-color) 10%))
+	);
 	--gnome-menu-color: var(--lwt-text-color);
 	/* Header bar */
 	--gnome-headerbar-background: var(--toolbar-bgcolor) !important;
@@ -49,6 +52,7 @@
 		--toolbarbutton-icon-fill: var(--lwt-text-color) !important;
 		--toolbar-field-focus-background-color: Field !important;
 		--arrowpanel-background: color-mix(in oklab, var(--toolbar-bgcolor), var(--lwt-text-color) 10%) !important;
+		--panel-background-color: var(--arrowpanel-background) !important;
 		--toolbar-field-background-color: var(--arrowpanel-background) !important;
 		--tab-selected-bgcolor: color-mix(in oklab, var(--gnome-tabbar-background), var(--lwt-text-color) 20%) !important;
 		--lwt-tab-line-color: var(--tab-selected-bgcolor) !important;
