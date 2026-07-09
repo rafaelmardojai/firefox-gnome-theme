@@ -2,7 +2,7 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-menupopup, panel {
+menupopup:where(:not(.in-menulist)), panel {
 	--gnome-menu-item-block-padding: 4px;
 	--gnome-menu-item-inline-padding: 12px;
 	--gnome-menu-item-padding: var(--gnome-menu-item-block-padding) var(--gnome-menu-item-inline-padding);
@@ -39,7 +39,7 @@ panel:not([remote]) {
 }
 
 /* Menus */
-menupopup {
+menupopup:where(:not(.in-menulist)) {
 	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
 }
