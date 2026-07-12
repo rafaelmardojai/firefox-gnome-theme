@@ -2,7 +2,7 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-menupopup, panel {
+menupopup, panel:not(.autoscroller) {
 	--gnome-menu-item-block-padding: 4px;
 	--gnome-menu-item-inline-padding: 12px;
 	--gnome-menu-item-padding: var(--gnome-menu-item-block-padding) var(--gnome-menu-item-inline-padding);
