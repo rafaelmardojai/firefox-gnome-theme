@@ -45,6 +45,7 @@ panel:not([remote]) {
 menupopup {
 	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
+	--panel-text-color: var(--gnome-menu-color) !important;
 }
 
 menulist > menupopup {
