@@ -249,6 +249,7 @@
 /* Notification Popup */
 #notification-popup, #appMenu-notification-popup {
 	--arrowpanel-padding: var(--gnome-content-padding) !important;
+	--panel-padding: var(--gnome-content-padding) !important;
 	.panel-footer {
 		--gnome-menu-padding: var(--gnome-content-padding) !important;
 	}
