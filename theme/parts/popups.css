@@ -47,37 +47,17 @@ menupopup {
 	color: var(--gnome-window-color) !important;
 }
 
-menulist > menupopup {
-	appearance: auto !important;
-	color: revert !important;
-	background: revert !important;
-}
+/* <select> dropdown: ignore page colors, always use theme colors */
+#ContentSelectDropdown > menupopup {
+	--panel-text-color: var(--gnome-window-color) !important;
 
-menulist > menupopup menuitem {
-	appearance: auto !important;
-	color: revert !important;
-	background: revert !important;
-	background-color: revert !important;
-	min-height: revert !important;
-	padding-inline-end: revert !important;
-	margin-inline: revert !important;
-	opacity: revert !important;
-	font-weight: normal !important;
-}
-
-menulist > menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
-	color: revert !important;
-	background: revert !important;
-	background-color: revert !important;
-	outline: revert !important;
-}
-
-menulist > menupopup menuseparator {
-	padding: revert !important;
-}
-
-menulist > menupopup menucaption {
-	color: revert !important;
+	&::part(arrowscrollbox) {
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+	menuitem:not([_moz-menuactive]), menucaption {
+		background-color: transparent !important;
+	}
 }
 
 menuseparator {
