@@ -79,6 +79,7 @@
 	--gnome-view-selected-hover-background: color-mix(in srgb, var(--gnome-accent-bg) 32%, transparent);
 	--gnome-view-selected-active-background: color-mix(in srgb, var(--gnome-accent-bg) 39%, transparent);
 	--gnome-sidebar-background: #ebebed;
+	--gnome-sidebar-border-color: color-mix(in srgb, rgb(0, 0, 6) 7%, var(--gnome-sidebar-background));
 	--gnome-secondary-sidebar-background: #f3f3f5;
 	
 	/* Card */
@@ -89,7 +90,9 @@
 	/* Menu */
 	--gnome-menu-background: #ffffff;
 	--gnome-menu-color: var(--gnome-window-color);
-	--gnome-menu-shadow: 0 1px 5px 1px rgba(0, 0, 0, .09), 0 2px 14px 3px rgba(0, 0, 0, .05);
+	/* Matches Adwaita `popover > contents`: hairline + two shadow layers */
+	--gnome-menu-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 1px 5px 1px rgba(0, 0, 0, .09), 0 2px 14px 3px rgba(0, 0, 0, .05);
+	--gnome-menu-border-color: transparent;
 	--gnome-menu-button-hover-background: var(--gnome-button-background);
 	--gnome-menu-separator-color: var(--gnome-border-color);
 	
