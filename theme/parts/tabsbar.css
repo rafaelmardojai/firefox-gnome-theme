@@ -4,13 +4,12 @@
 
 /* Override vars */
 :root {
-	--space-above-tabbar: 0 !important;
 	--tab-inner-inline-margin: var(--gnome-toolbar-padding) !important;
 	--tab-pinned-margin-inline-expanded: calc(var(--gnome-toolbar-padding)  / 2) !important;
 	--tab-min-height: var(--gnome-button-size) !important;
 	--tab-border-radius: var(--gnome-button-radius) !important;	
-	--tab-hover-background-color: var(--gnome-hover-color) !important;
-	--tab-selected-bgcolor: var(--gnome-selected-color) !important;
+	--tab-background-color-hover: var(--gnome-hover-color) !important;
+	--tab-background-color-selected: var(--gnome-selected-color) !important;
 	--tab-pinned-container-margin-inline-expanded: calc(var(--gnome-toolbar-padding) / 2) !important;
 	--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
 	--tab-height-with-margin-padding: calc(var(--tab-min-height) + 5px) !important;
@@ -19,12 +18,12 @@
 
 	@media not -moz-pref("sidebar.verticalTabs") {
 		/* We need the hardcoded tab colors in horizontal tabs, beacuse of the close button overlay */
-		--tab-hover-background-color: var(--gnome-tabbar-tab-hover-background) !important;
-		--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background) !important;
+		--tab-background-color-hover: var(--gnome-tabbar-tab-hover-background) !important;
+		--tab-background-color-selected: var(--gnome-tabbar-tab-active-background) !important;
 	}
 	
 	@media -moz-pref("sidebar.verticalTabs") {
-		--tab-block-margin: calc(var(--gnome-toolbar-padding)  / 2) !important;
+		--tab-margin-block: calc(var(--gnome-toolbar-padding)  / 2) !important;
 	}
 	
 }
@@ -37,10 +36,9 @@
 	position: relative;
 	z-index: 1;
 
-	--toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
 	/* Remove hover effects on tab bar buttons */
-	--toolbarbutton-active-background: transparent !important;
-	--toolbarbutton-hover-background: transparent !important;
+	--toolbarbutton-background-color-active: transparent !important;
+	--toolbarbutton-background-color-hover: transparent !important;
 	/* Tabs scroll fade */
 	--gnome-tabbar-fade-background: var(--gnome-tabbar-background);
 	
@@ -168,7 +166,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tabs */
 .tabbrowser-tab {
-	&[selected="true"] {
+	&[selected] {
 		--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
 		&:hover {
 			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background) !important;
@@ -180,9 +178,9 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 	/* OPTIONAL: Add more contrast to the active tab */
 	@media -moz-pref("gnomeTheme.activeTabContrast") {
-		&[selected="true"], &:hover {
-			--tab-hover-background-color: var(--gnome-tabbar-tab-active-background-contrast) !important;
-			--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background-contrast) !important;
+		&[selected], &:hover {
+			--tab-background-color-hover: var(--gnome-tabbar-tab-active-background-contrast) !important;
+			--tab-background-color-selected: var(--gnome-tabbar-tab-active-background-contrast) !important;
 			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background-contrast) !important;
 		}
 	}	
@@ -200,7 +198,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		/* Not in collapsed tab-group */
 		:not([collapsed]) > & {
 			padding: 0px calc(var(--gnome-toolbar-spacing) / 2 - 1px) var(--gnome-toolbar-padding) !important;
-			&:not([hidden=true]):last-of-type {
+			&:not([hidden]):last-of-type {
 				padding-right: calc(var(--gnome-toolbar-spacing) / 2) !important;
 			}
 
@@ -236,6 +234,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Selected */
 	tab[selected] & {
 		background-color: var(--gnome-selected-color) !important;
+		@media not -moz-pref("sidebar.verticalTabs") {
+			/* Opaque variant, so the close button overlay can match it exactly */
+			background-color: var(--gnome-tabbar-tab-active-background) !important;
+		}
 	}
 
 	/* Selected hover */
@@ -264,7 +266,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Add solid bg on tabs dnd */
 	#tabbrowser-tabs[movingtab] tab:is([multiselected], [selected]) & {
 		background-color: var(--gnome-tabbar-background) !important;
-		background-image: linear-gradient(var(--tab-selected-bgcolor), var(--tab-selected-bgcolor)) !important;
+		background-image: linear-gradient(var(--tab-background-color-selected), var(--tab-background-color-selected)) !important;
 	}
 }
 
@@ -528,22 +530,22 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		) 1;
 		border-image: var(--gnome-tabbar-tab-separator-hack1);
 	}
-	tab[selected] ~ tab:not([hidden="true"]) {
+	tab[selected] ~ tab:not([hidden]) {
 		border-image: none;
 	}
-	tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
+	tab[selected] ~ tab:not([hidden]) ~ tab:not([hidden]) {
 		border-image: var(--gnome-tabbar-tab-separator-hack1);
 	}
-	tab:hover ~ tab:not([hidden="true"]) {
+	tab:hover ~ tab:not([hidden]) {
 		border-image: none !important;
 	}
-	tab:hover ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
+	tab:hover ~ tab:not([hidden]) ~ tab:not([hidden]) {
 		border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
 	}
-	tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) {
+	tab:hover ~ tab[selected] ~ tab:not([hidden]) {
 		border-image: none !important;
 	}
-	tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
+	tab:hover ~ tab[selected] ~ tab:not([hidden]) ~ tab:not([hidden]) {
 		border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
 	}
 	tab-group[collapsed] + tab {
@@ -795,13 +797,13 @@ tab-group {
 }
 :root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
 	border-inline-start: 0 !important;
-	padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
+	padding-inline-start: 0 !important;
 	margin-inline-start: 0 !important;
 }
 
 /* OPTIONAL: Hide single tab */
 @media -moz-pref("gnomeTheme.hideSingleTab") and (not -moz-pref("sidebar.verticalTabs")) {
-	#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
+	#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
 		}
@@ -909,27 +911,27 @@ tab-group {
 
 	/* Blend single tab into whole bar */
 	@media -moz-pref("gnomeTheme.hideSingleTab") {
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) :is(
 			tab,
 			tab ~ toolbarbutton,
 			tab ~ #tabbrowser-arrowscrollbox-periphery
 		) {
 			visibility: visible;
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) tab {
 			-moz-window-dragging: drag !important;
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-background {
 			display: none !important
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-close-button {
 			visibility: hidden !important;
 			opacity: 0 !important;
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-content::before {
 			--gnome-tabbar-tab-close-overlay-bg: unset !important;
 		}
-		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
+		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-label-container[textoverflow] {
 			margin-inline-end: -16px;
 		}
 	}
