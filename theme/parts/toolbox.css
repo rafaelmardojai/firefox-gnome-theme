@@ -9,7 +9,22 @@
 
 :root {
 	--tabpanel-background-color: var(--gnome-window-background) !important;
-	--toolbarbutton-icon-fill-attention: var(--gnome-accent) !important;;
+	--toolbarbutton-icon-fill-attention: var(--gnome-accent) !important;
+
+	/* Firefox paints #browser (the area behind the sidebar and content) with
+	 * these. They default to the ActiveCaption/InactiveCaption system colours,
+	 * which show through as a light grey strip behind the sidebar launcher. */
+	--toolbox-background-color: var(--gnome-toolbar-background) !important;
+	--toolbox-background-color-inactive: var(--gnome-toolbar-background) !important;
+	--toolbox-text-color: var(--gnome-window-color) !important;
+	--toolbox-text-color-inactive: var(--gnome-window-color) !important;
+
+	/* Adwaita colours links with the accent; Firefox falls back to the
+	 * LinkText/VisitedText system colours in some contexts. */
+	--link-color: var(--gnome-accent) !important;
+	--link-color-hover: var(--gnome-accent) !important;
+	--link-color-active: var(--gnome-accent) !important;
+	--link-color-visited: var(--gnome-accent) !important;
 }
 
 /* Toolbox colors */
