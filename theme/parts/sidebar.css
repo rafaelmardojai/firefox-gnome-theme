@@ -14,8 +14,11 @@
 	}
 }
 
-/* Main sidebar */
-#sidebar-main {
+/* Main sidebar (the launcher strip).
+ * Firefox 156 renamed #sidebar-main to #sidebar-container; both are listed so
+ * the strip keeps its background across versions. */
+#sidebar-main,
+#sidebar-container {
 	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
 }
@@ -40,7 +43,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 		& > moz-button:not(.tools-overflow) {
 			--button-outer-padding-inline: var(--gnome-toolbar-padding) !important;
 			--button-outer-padding-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
-			--toolbarbutton-active-background: var(--gnome-selected-color) !important;
+			--toolbarbutton-background-color-active: var(--gnome-selected-color) !important;
 
 			&:last-of-type {
 				--button-outer-padding-block-end: var(--gnome-toolbar-padding) !important;
@@ -91,7 +94,10 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	padding: var(--gnome-toolbar-padding) !important;
 }
 
-/* Separator */
+/* Separator
+ * Painted as an opaque 1px background rather than a translucent border: the
+ * two splitters sit on different surfaces, so a translucent line came out
+ * darker on one side and lighter on the other. */
 #sidebar-splitter,
 #sidebar-launcher-splitter {
 	background-color: var(--gnome-sidebar-background) !important;
@@ -102,7 +108,8 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	width: 0 !important;
 	
 	@media not -moz-pref("sidebar.revamp.round-content-area") {
-		border-right: 1px solid var(--gnome-toolbar-border-color) !important;
+		background-color: var(--gnome-sidebar-border-color) !important;
+		width: 1px !important;
 	}
 	
 	@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
