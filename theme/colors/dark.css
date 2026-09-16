@@ -18,8 +18,9 @@
 		/* Window */
 		--gnome-window-background: #222226;
 		--gnome-window-color: white;
-		--gnome-view-background: #1e1e1e;
+		--gnome-view-background: #1d1d20;
 		--gnome-sidebar-background: #2e2e32;
+		--gnome-sidebar-border-color: color-mix(in srgb, rgb(0, 0, 6) 36%, var(--gnome-sidebar-background));
 		--gnome-secondary-sidebar-background: #28282c;
 
 		/* Card */
@@ -31,7 +32,11 @@
 
 		/* Header bar */
 		--gnome-headerbar-background: #2e2e32;
-		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
+		/* Adwaita's headerbar_shade_color. The 90% black previously used here is
+		 * Adwaita's headerbar_darker_shade_color, which rendered separators as a
+		 * hard black line under the tab bar, next to the sidebar and above the
+		 * find bar. */
+		--gnome-headerbar-shade-color: rgba(0, 0, 6, 0.36);
 
 		/* Tabs */		
 		--gnome-tabbar-identity-color-blue: #81d0ff;
