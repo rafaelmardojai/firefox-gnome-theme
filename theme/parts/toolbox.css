@@ -54,12 +54,12 @@ findbar:-moz-window-inactive description,
 	opacity: 0.5 !important;
 }
 
-#toolbar-menubar:not([inactive=true]) {
+#toolbar-menubar:not([inactive]) {
 	margin-bottom: 0 !important;
 }
 
 /* Overrides: Remove border below the menu bar / above the header bar */
-#TabsToolbar:not([collapsed="true"]) + #nav-bar {
+#TabsToolbar:not([collapsed]) + #nav-bar {
 	border-top-width: 0 !important;
 }
 #navigator-toolbox::after {

@@ -15,7 +15,7 @@
 
 	#toolbar-menubar { 
 		/* Prevent menubar from breaking */
-		&:not([inactive=true]) {
+		&:not([inactive]) {
 			height: 30px !important;
 			margin-bottom: 8px;
 		}

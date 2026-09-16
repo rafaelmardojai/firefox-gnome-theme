@@ -65,7 +65,7 @@ menulist > menupopup menuitem {
 	font-weight: normal !important;
 }
 
-menulist > menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
+menulist > menupopup menuitem[_moz-menuactive]:not([disabled]) {
 	color: revert !important;
 	background: revert !important;
 	background-color: revert !important;
@@ -97,7 +97,7 @@ menulist {
 
 /* Menu items */
 @media not -moz-pref("gnomeTheme.noThemedIcons") {
-	menuitem:is([type="checkbox"], [checked="true"]) .menu-icon,
+	menuitem:is([type="checkbox"], [checked]) .menu-icon,
 	menuitem[type="radio"] .menu-icon {
 		visibility: collapse !important;
 	}
@@ -128,17 +128,17 @@ menuitem {
 
 menu, menuitem {
 	margin-inline: 0 !important;
-	&:where([_moz-menuactive]:not([disabled="true"])) {
+	&:where([_moz-menuactive]:not([disabled])) {
 		color: currentColor;
 		background-color: transparent !important;
 	}
 }
 
-menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
+menuitem[disabled]:hover, menupopup menu[disabled]:hover {
 	background: transparent !important;
 }
 
-.menu-iconic-icon {
+.menu-icon {
 	padding: 0 !important;
 }
 
@@ -195,17 +195,17 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
 	min-height: 32px !important;
 
 	&:hover, &[_moz-menuactive], &:focus, &:focus-within {
-		&:not([disabled="true"]) {
+		&:not([disabled]) {
 			background: var(--gnome-selected-color) !important;
 		}
 		outline: 0 !important;
 	}
 
-	&[disabled="true"] {
+	&[disabled] {
 		opacity: .5 !important;
 	}
 
-	&[disabled="true"][_moz-menuactive] {
+	&[disabled][_moz-menuactive] {
 		background: transparent !important;
 	}
 }

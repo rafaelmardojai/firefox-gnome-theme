@@ -208,7 +208,7 @@ button.close::before {
 			margin-inline-end: 0.5em;
 			width: 16px;
 		}
-		&[disabled="true"]::before {
+		&[disabled]::before {
 			opacity: 0.5;
 		}
 	}	

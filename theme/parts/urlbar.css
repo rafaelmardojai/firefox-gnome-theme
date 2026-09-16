@@ -272,11 +272,11 @@ toolbarspring {
 }
 
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:active,
-#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button[open=true],
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button[open],
 #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:active,
-#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open=true],
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open],
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:active,
-#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open=true] {
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open] {
 	background-color: hsla(0,0%,70%,.3) !important;
 }
 

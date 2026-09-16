@@ -210,10 +210,10 @@ button.close {
 	background: var(--gnome-toolbar-icon-fill) !important;
 }
 
-#downloads-button[progress="true"] #downloads-indicator-progress-outer {
+#downloads-button[progress] #downloads-indicator-progress-outer {
   visibility: visible !important;
 }
-#downloads-button:not([progress="true"]) #downloads-indicator-icon {
+#downloads-button:not([progress]) #downloads-indicator-icon {
   visibility: visible !important;
 }
 
