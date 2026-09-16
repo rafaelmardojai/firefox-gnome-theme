@@ -74,7 +74,7 @@ button.close,
 	transition: background var(--gnome-animation-time);	
 	-moz-box-align: center !important;	
 
-	&:not([disabled="true"]) {
+	&:not([disabled]) {
 		/* Hover buttons */
 		&:hover {
 			outline: 0 !important;
@@ -98,7 +98,7 @@ button.close,
 	}
 
 	/* Disabled buttons */
-	&[disabled="true"] {
+	&[disabled] {
 		opacity: 0.5 !important;
 	}
 	
@@ -124,7 +124,7 @@ button.close,
 	background-color: transparent !important;
 	transition: background var(--gnome-animation-time);
 
-	&:not([disabled="true"]):not(#hack) {
+	&:not([disabled]):not(#hack) {
 		/* Hover buttons */
 		&:hover {
 			background-color: var(--gnome-hover-color) !important;
@@ -147,7 +147,7 @@ button.close,
 	}
 
 	/* Disabled buttons */
-	&[disabled="true"] {
+	&[disabled] {
 		opacity: 0.3 !important;
 	}
 }
@@ -163,7 +163,7 @@ button.popup-notification-primary-button:not(#hack),
 	--gnome-button-active-background: var(--gnome-button-suggested-background) !important;
 	color: white !important;
 
-	&:not([disabled="true"]) {
+	&:not([disabled]) {
 		&:hover {
 			background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)) !important;
 		}

@@ -75,26 +75,26 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focu
 	transition-duration: var(--gnome-animation-time);
 }
 
-.identity-box-button:hover:not([open="true"]),
-#tracking-protection-icon-container:hover:not([open="true"]),
-#notification-popup-box:hover:not([open="true"]),
-.urlbar-page-action:hover:not([open="true"]),
-.urlbar-page-action:hover:not([open="true"]) .urlbar-icon,
+.identity-box-button:hover:not([open]),
+#tracking-protection-icon-container:hover:not([open]),
+#notification-popup-box:hover:not([open]),
+.urlbar-page-action:hover:not([open]),
+.urlbar-page-action:hover:not([open]) .urlbar-icon,
 .urlbar-icon:not([disabled]):hover {
 	background: none !important;
 	fill-opacity: 1 !important;	
 }
 
 .identity-box-button:hover:active,
-.identity-box-button[open=true],
+.identity-box-button[open],
 #tracking-protection-icon-container:hover:active,
-#tracking-protection-icon-container[open=true],
+#tracking-protection-icon-container[open],
 #notification-popup-box:hover:active,
-#notification-popup-box[open=true],
+#notification-popup-box[open],
 .urlbar-page-action:hover:active,
-.urlbar-page-action[open=true],
+.urlbar-page-action[open],
 .urlbar-page-action:hover:active .urlbar-icon,
-.urlbar-page-action[open=true] .urlbar-icon {
+.urlbar-page-action[open] .urlbar-icon {
 	background: none !important;
 	fill-opacity: 1 !important;	
 }
