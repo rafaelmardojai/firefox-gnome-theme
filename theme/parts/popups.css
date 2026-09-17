@@ -10,35 +10,34 @@ menupopup, panel {
 	--gnome-menu-item-margin: 0 var(--gnome-menu-item-inline-margin);
 	--gnome-menu-item-radius: var(--gnome-button-radius);
 	
-	--panel-background: var(--gnome-menu-background) !important;
+	/* Panel/popover surface (Firefox 156 token names) */
 	--panel-background-color: var(--gnome-menu-background) !important;
+	--panel-text-color: var(--gnome-menu-color) !important;
+	--panel-border-color: var(--gnome-menu-border-color) !important;
 	--panel-border-radius: var(--gnome-popover-radius) !important;
-	--panel-padding: var(--gnome-menu-padding) !important;	
-	--panel-shadow: var(--gnome-menu-shadow) !important;
+	--panel-padding: var(--gnome-menu-padding) !important;
+	--panel-padding-block: var(--gnome-menu-padding) !important;
+	--panel-box-shadow: var(--gnome-menu-shadow) !important;
 	--panel-separator-color: var(--gnome-menu-separator-color) !important;
-	--panel-separator-padding-vertical: var(--gnome-menu-padding) !important;
-	--panel-separator-padding-horizontal: var(--gnome-menu-padding) !important;
-	
-	/* Context menu items */
+
+	/* Menu items (shared by context menus and popovers since Firefox 156) */
 	--menuitem-padding: var(--gnome-menu-item-padding) !important;
 	--menuitem-margin: var(--gnome-menu-item-margin) !important;
 	--menuitem-border-radius: var(--gnome-menu-item-radius) !important;
-	
-	/* Popover menu items */
-	--arrowpanel-padding: var(--gnome-menu-padding) !important;
-	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
-	--arrowpanel-border-radius: var(--gnome-popover-radius) !important;
-	--arrowpanel-menuitem-margin: var(--gnome-menu-item-margin) !important;
-	--arrowpanel-menuitem-padding: var(--gnome-menu-item-padding) !important;
-	--arrowpanel-menuitem-border-radius: var(--gnome-menu-item-radius) !important;
-	--panel-menuitem-padding: var(--gnome-menu-item-padding) !important;
+	--menuitem-hover-bg: var(--gnome-selected-color) !important;
+	--menuitem-active-bg: var(--gnome-selected-active-color) !important;
+	--menuitem-focus-bg: var(--gnome-selected-color) !important;
+
+	/* Panel item buttons */
+	--panel-item-padding: var(--gnome-menu-item-padding) !important;
+	--panel-item-button-border-radius: var(--gnome-menu-item-radius) !important;
+	--panel-item-button-margin: var(--gnome-menu-item-margin) !important;
+	--panel-item-button-padding: var(--gnome-menu-item-padding) !important;
 }
 
 panel:not([remote]) {
-	--arrowpanel-background: var(--gnome-menu-background) !important;
-	--arrowpanel-color: var(--gnome-menu-color) !important;
+	--panel-background-color: var(--gnome-menu-background) !important;
 	--panel-text-color: var(--gnome-menu-color) !important;
-	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
 }
 
 /* Menus */
