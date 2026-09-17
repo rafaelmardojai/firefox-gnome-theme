@@ -3,13 +3,24 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
-	--urlbarView-item-inline-padding: 6px !important;
-	--urlbarView-item-block-padding: 4px !important;
+	/* Result list metrics (Firefox 156 token names) */
+	--urlbarView-row-padding-inline: var(--gnome-menu-item-inline-padding, 12px) !important;
+	--urlbarView-row-gutter: 2px !important;
+	--urlbarView-results-padding: 0px !important;
+	--urlbarview-row-padding-block: 4px !important;
+	--urlbarview-row-min-height: var(--gnome-button-size) !important;
+	--urlbarview-border-radius: var(--gnome-button-radius) !important;
+	--urlbarview-separator-color: var(--gnome-menu-separator-color) !important;
+
+	/* Result list colors: GNOME keeps the text color on selection */
+	--urlbarview-background-color-hover: var(--gnome-hover-color) !important;
+	--urlbarview-background-color-selected: var(--gnome-selected-color) !important;
+	--urlbarview-text-color-selected: var(--gnome-window-color) !important;
+	--urlbarview-text-color-secondary: color-mix(in srgb, currentColor 70%, transparent) !important;
 }
 
 #urlbar {
-	--urlbar-height: 34.00px;
-	--urlbar-toolbar-height: 34.00px !important;
+	--urlbar-height: var(--gnome-entry-height);
 }
 
 #urlbar-container {
@@ -33,7 +44,7 @@ toolbarspring {
 	}
 
 	.urlbar-background {
-		box-shadow: var(--gnome-entry-box-shadow) !important;
+		box-shadow: none !important;
 		border: 0 !important;
 		border-radius: var(--gnome-entry-radius) !important;
 		background: transparent !important;
@@ -107,6 +118,9 @@ toolbarspring {
 }
 
 .urlbarView-row {
+	/* GNOME list rows are inset and rounded, like menu items */
+	border-radius: var(--gnome-button-radius) !important;
+
 	&[selected] {
 		background: var(--gnome-selected-color) !important;
 		color: var(--gnome-window-color) !important;
@@ -123,10 +137,6 @@ toolbarspring {
 			&:active {
 			background: var(--gnome-active-color) !important;
 		}
-	}
-
-	.urlbarView-row-inner {
-		border-radius: var(--gnome-button-radius) !important;
 	}
 
 	.urlbarView-row-inner, .urlbarView-no-wrap  {
