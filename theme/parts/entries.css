@@ -2,6 +2,39 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* moz-input-text / moz-input-search
+ * These render inside a shadow root, so they can only be themed through the
+ * inherited design tokens. Without this the sidebar search fields keep
+ * Firefox's 32px/8px white box instead of the GNOME entry. */
+:root {
+	--input-text-min-height: var(--gnome-entry-height) !important;
+	--input-text-border-radius: var(--gnome-entry-radius) !important;
+	--input-search-border-radius: var(--gnome-entry-radius) !important;
+	--input-text-background-color: var(--gnome-entry-background) !important;
+	--input-text-color: var(--gnome-entry-color) !important;
+	--input-text-border: 0 !important;
+	--input-text-icon-size: var(--icon-size) !important;
+}
+
+/* Text selection
+ * Adwaita tints the selection with 30% of the accent and keeps the text
+ * colour, instead of Firefox's opaque highlight with inverted text.
+ * `--lwt-toolbar-field-highlight*` are what the URL bar and search bar use. */
+:root {
+	--lwt-toolbar-field-highlight: var(--gnome-selection-bg) !important;
+	--lwt-toolbar-field-highlight-text: currentColor !important;
+}
+
+::selection,
+input::selection,
+textarea::selection,
+.urlbar-input::selection,
+.searchbar-textbox::selection,
+.findbar-textbox::selection {
+	background-color: var(--gnome-selection-bg) !important;
+	color: inherit !important;
+}
+
 /* Entries */
 input[type="text"]:not(.tree-input),
 input[type="password"],
