@@ -234,6 +234,20 @@ toolbarspring {
 	}
 }
 
+/* Remote control (automation) indicator
+ * Firefox sizes this box with --urlbar-basic-component-size and puts it flush
+ * against the URL bar's rounded edge, which leaves the robot icon cramped in
+ * the corner. Give it the same footprint as the other URL bar indicators. */
+#remote-control-box {
+	block-size: var(--gnome-entry-height) !important;
+	inline-size: var(--gnome-entry-height) !important;
+	margin-inline-start: calc(var(--gnome-toolbar-padding) / 2) !important;
+}
+#remote-control-icon {
+	height: var(--icon-size) !important;
+	width: var(--icon-size) !important;
+}
+
 /* Search mode indicator */
 #urlbar-search-mode-indicator,
 #urlbar-label-box,
