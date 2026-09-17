@@ -11,6 +11,8 @@
 	--button-background-color-active: var(--gnome-button-active-background) !important;
 	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
     --button-background-color-ghost-active: var(--gnome-active-color) !important;
+	--button-size-icon: var(--gnome-button-size) !important;
+	--button-min-height: var(--gnome-button-size) !important;
 }
 
 /* Hide buttons separator */

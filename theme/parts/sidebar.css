@@ -205,3 +205,16 @@ link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested
 		margin: 0 !important;
 	}
 }
+
+/* Sidebar panel header row (history, bookmarks, synced tabs)
+ * The overflow menu button sits flush against the search entry; give it the
+ * usual toolbar spacing and a square hit area like other icon buttons. */
+.sidebar-panel-header,
+moz-input-search + moz-button,
+moz-button.menu-button {
+	margin-inline-start: var(--gnome-toolbar-spacing) !important;
+}
+moz-button.menu-button {
+	--button-size-icon: var(--gnome-button-size) !important;
+	--button-border-radius: var(--gnome-button-radius) !important;
+}
