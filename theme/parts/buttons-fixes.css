@@ -38,9 +38,12 @@ link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 	justify-content: center !important;
 }
 
-/* Fix hover background */
+/* Fix hover background and icon size
+ * Firefox ships this one icon at 14px while every other menu icon is --icon-size. */
 #appMenu-fullscreen-button2 > .toolbarbutton-icon {
 	background: transparent !important;
+	height: var(--icon-size) !important;
+	width: var(--icon-size) !important;
 }
 
 /* Fix unified-extensions-item margin */
@@ -253,13 +256,23 @@ button.close {
 	margin-inline: 0 !important;
 }
 
-/* User menu */
-#fxa-toolbar-menu-button .toolbarbutton-badge-stack {
-	padding: 0 !important;
-}
-#fxa-avatar-image {
-	min-height: 24px !important;
-	width: 24px !important;
+/* User menu
+ * Firefox 156 renders the toolbar avatar in a `.avatar-container` at 24px,
+ * which is larger than every other toolbar icon. Bring it back to --icon-size
+ * so the account button lines up with its neighbours. */
+#fxa-toolbar-menu-button {
+	.toolbarbutton-badge-stack {
+		padding: var(--toolbarbutton-padding-inner) !important;
+	}
+
+	.avatar-container,
+	.avatar-container > image,
+	#fxa-avatar-image {
+		height: var(--icon-size) !important;
+		min-height: var(--icon-size) !important;
+		min-width: var(--icon-size) !important;
+		width: var(--icon-size) !important;
+	}
 }
 
 /* Translation */
