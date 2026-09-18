@@ -27,7 +27,7 @@
 
 /* Fix icons sizes */
 .permission-popup-permission-remove-button > .button-box > .button-icon,
-.menu-iconic-icon,
+.menu-icon,
 link[href="chrome://global/skin/dropmarker.css"] + image,
 .toolbarbutton-combined-buttons-dropmarker {
 	height: 16px !important;
@@ -64,7 +64,7 @@ button.close::before {
 }
 
 /* Fix main menu zoom controls icons */
-#appMenu-zoom-controls2 .toolbarbutton-icon {
+#appMenu-zoom-controls .toolbarbutton-icon {
 	padding: 0 !important;
 	padding-block: 0 !important;
 	padding-inline: 0 !important;
@@ -74,16 +74,16 @@ button.close::before {
 @media not -moz-pref("gnomeTheme.noThemedIcons") {
 	/* Scroll icons */
 	#scrollbutton-up {
-		list-style-image: var(--scrollbutton-icon-name) !important;
+		list-style-image: var(--gnome-scrollbutton-icon-name) !important;
 	}
 	#scrollbutton-down {
-		list-style-image: var(--scrollbutton-icon-name) !important;
+		list-style-image: var(--gnome-scrollbutton-icon-name) !important;
 	}
 	arrowscrollbox {
-		--scrollbutton-icon-name: var(--gnome-icon-pan-down-symbolic);
+		--gnome-scrollbutton-icon-name: var(--gnome-icon-pan-down-symbolic);
 	}
 	arrowscrollbox[orient="horizontal"] {
-		--scrollbutton-icon-name: var(--gnome-icon-pan-start-symbolic);
+		--gnome-scrollbutton-icon-name: var(--gnome-icon-pan-start-symbolic);
 	}
 
 	/* Popovers subview menu arrow */
@@ -232,7 +232,7 @@ button.close::before {
 
 	/* Close button */
 	.close-icon:not(.tab-close-button),
-	.identity-popup-permission-remove-button .button-icon,
+	.permission-popup-permission-remove-button .button-icon,
 	.permission-popup-permission-remove-button > .button-box > .button-icon,
 	.remote-tabs-close-button {
 		list-style-image: var(--gnome-icon-window-close-symbolic) !important;
