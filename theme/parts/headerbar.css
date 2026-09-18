@@ -8,21 +8,27 @@
 	padding: var(--gnome-toolbar-padding) calc(var(--gnome-toolbar-padding) / 2) !important;
 }
 
-/* Add private window headerbar indicator */
-:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
-	background: var(--gnome-icon-eye-not-looking-symbolic) no-repeat;
-	background-size: 64px 64px;
-	content: "";
-	display: block;	
-	position: absolute;
-	width: 64px;
-	height: 64px;
-	top: 0;
-	transform: translate(15px, -9px);
-	fill: var(--gnome-window-color) !important;
-	fill-opacity: 0.15 !important;
-	-moz-context-properties: fill, fill-opacity;
-  }
+/* Add private window headerbar indicator.
+ * The spacer has to be the containing block, otherwise the watermark is
+ * positioned against the window and gets clipped at the top edge. */
+:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type {
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		background: var(--gnome-icon-eye-not-looking-symbolic) no-repeat center / contain;
+		content: "";
+		display: block;
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		aspect-ratio: 1;
+		height: 100%;
+		fill: var(--gnome-window-color) !important;
+		fill-opacity: 0.15 !important;
+		-moz-context-properties: fill, fill-opacity;
+	}
+}
 
 /* Hide tabsbar default private browsing indicator */
 .private-browsing-indicator-with-label {
