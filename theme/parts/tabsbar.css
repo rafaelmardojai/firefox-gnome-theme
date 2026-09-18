@@ -610,6 +610,134 @@ tab-group {
 	}
 }
 
+/* Tab groups
+ * Firefox sets `--tab-group-color: var(--tab-group-<code>)` inline, so remapping
+ * the palette tokens is enough to recolour every group.
+ * Bases are GNOME's accent palette; the tints follow Adwaita's oklab derivation. */
+:root {
+	--gnome-group-blue: #3584e4;
+	--gnome-group-purple: #9141ac;
+	--gnome-group-cyan: #2190a4;
+	--gnome-group-orange: #ed5b00;
+	--gnome-group-yellow: #c88800;
+	--gnome-group-pink: #d56199;
+	--gnome-group-green: #3a944a;
+	--gnome-group-gray: #6f8396;
+	--gnome-group-red: #e62d42;
+
+	--tab-group-blue: var(--gnome-group-blue) !important;
+	--tab-group-blue-hover: oklch(from var(--gnome-group-blue) calc(l - 0.06) c h) !important;
+	--tab-group-blue-invert: oklch(from var(--gnome-group-blue) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-blue-pale: oklch(from var(--gnome-group-blue) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-blue-text: #ffffff !important;
+	--tab-group-blue-text-invert: oklch(from var(--gnome-group-blue) min(l, 0.5) c h) !important;
+	--tab-group-purple: var(--gnome-group-purple) !important;
+	--tab-group-purple-hover: oklch(from var(--gnome-group-purple) calc(l - 0.06) c h) !important;
+	--tab-group-purple-invert: oklch(from var(--gnome-group-purple) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-purple-pale: oklch(from var(--gnome-group-purple) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-purple-text: #ffffff !important;
+	--tab-group-purple-text-invert: oklch(from var(--gnome-group-purple) min(l, 0.5) c h) !important;
+	--tab-group-cyan: var(--gnome-group-cyan) !important;
+	--tab-group-cyan-hover: oklch(from var(--gnome-group-cyan) calc(l - 0.06) c h) !important;
+	--tab-group-cyan-invert: oklch(from var(--gnome-group-cyan) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-cyan-pale: oklch(from var(--gnome-group-cyan) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-cyan-text: #ffffff !important;
+	--tab-group-cyan-text-invert: oklch(from var(--gnome-group-cyan) min(l, 0.5) c h) !important;
+	--tab-group-orange: var(--gnome-group-orange) !important;
+	--tab-group-orange-hover: oklch(from var(--gnome-group-orange) calc(l - 0.06) c h) !important;
+	--tab-group-orange-invert: oklch(from var(--gnome-group-orange) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-orange-pale: oklch(from var(--gnome-group-orange) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-orange-text: #ffffff !important;
+	--tab-group-orange-text-invert: oklch(from var(--gnome-group-orange) min(l, 0.5) c h) !important;
+	--tab-group-yellow: var(--gnome-group-yellow) !important;
+	--tab-group-yellow-hover: oklch(from var(--gnome-group-yellow) calc(l - 0.06) c h) !important;
+	--tab-group-yellow-invert: oklch(from var(--gnome-group-yellow) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-yellow-pale: oklch(from var(--gnome-group-yellow) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-yellow-text: #ffffff !important;
+	--tab-group-yellow-text-invert: oklch(from var(--gnome-group-yellow) min(l, 0.5) c h) !important;
+	--tab-group-pink: var(--gnome-group-pink) !important;
+	--tab-group-pink-hover: oklch(from var(--gnome-group-pink) calc(l - 0.06) c h) !important;
+	--tab-group-pink-invert: oklch(from var(--gnome-group-pink) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-pink-pale: oklch(from var(--gnome-group-pink) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-pink-text: #ffffff !important;
+	--tab-group-pink-text-invert: oklch(from var(--gnome-group-pink) min(l, 0.5) c h) !important;
+	--tab-group-green: var(--gnome-group-green) !important;
+	--tab-group-green-hover: oklch(from var(--gnome-group-green) calc(l - 0.06) c h) !important;
+	--tab-group-green-invert: oklch(from var(--gnome-group-green) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-green-pale: oklch(from var(--gnome-group-green) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-green-text: #ffffff !important;
+	--tab-group-green-text-invert: oklch(from var(--gnome-group-green) min(l, 0.5) c h) !important;
+	--tab-group-gray: var(--gnome-group-gray) !important;
+	--tab-group-gray-hover: oklch(from var(--gnome-group-gray) calc(l - 0.06) c h) !important;
+	--tab-group-gray-invert: oklch(from var(--gnome-group-gray) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-gray-pale: oklch(from var(--gnome-group-gray) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-gray-text: #ffffff !important;
+	--tab-group-gray-text-invert: oklch(from var(--gnome-group-gray) min(l, 0.5) c h) !important;
+	--tab-group-red: var(--gnome-group-red) !important;
+	--tab-group-red-hover: oklch(from var(--gnome-group-red) calc(l - 0.06) c h) !important;
+	--tab-group-red-invert: oklch(from var(--gnome-group-red) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-red-pale: oklch(from var(--gnome-group-red) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-red-text: #ffffff !important;
+	--tab-group-red-text-invert: oklch(from var(--gnome-group-red) min(l, 0.5) c h) !important;
+
+	@media (prefers-color-scheme: dark) {
+		--tab-group-blue: oklch(from var(--gnome-group-blue) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-blue-hover: oklch(from var(--gnome-group-blue) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-blue-invert: oklch(from var(--gnome-group-blue) 0.45 c h) !important;
+		--tab-group-blue-pale: oklch(from var(--gnome-group-blue) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-blue-text: oklch(from var(--gnome-group-blue) 0.32 c h) !important;
+		--tab-group-blue-text-invert: #ffffff !important;
+		--tab-group-purple: oklch(from var(--gnome-group-purple) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-purple-hover: oklch(from var(--gnome-group-purple) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-purple-invert: oklch(from var(--gnome-group-purple) 0.45 c h) !important;
+		--tab-group-purple-pale: oklch(from var(--gnome-group-purple) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-purple-text: oklch(from var(--gnome-group-purple) 0.32 c h) !important;
+		--tab-group-purple-text-invert: #ffffff !important;
+		--tab-group-cyan: oklch(from var(--gnome-group-cyan) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-cyan-hover: oklch(from var(--gnome-group-cyan) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-cyan-invert: oklch(from var(--gnome-group-cyan) 0.45 c h) !important;
+		--tab-group-cyan-pale: oklch(from var(--gnome-group-cyan) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-cyan-text: oklch(from var(--gnome-group-cyan) 0.32 c h) !important;
+		--tab-group-cyan-text-invert: #ffffff !important;
+		--tab-group-orange: oklch(from var(--gnome-group-orange) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-orange-hover: oklch(from var(--gnome-group-orange) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-orange-invert: oklch(from var(--gnome-group-orange) 0.45 c h) !important;
+		--tab-group-orange-pale: oklch(from var(--gnome-group-orange) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-orange-text: oklch(from var(--gnome-group-orange) 0.32 c h) !important;
+		--tab-group-orange-text-invert: #ffffff !important;
+		--tab-group-yellow: oklch(from var(--gnome-group-yellow) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-yellow-hover: oklch(from var(--gnome-group-yellow) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-yellow-invert: oklch(from var(--gnome-group-yellow) 0.45 c h) !important;
+		--tab-group-yellow-pale: oklch(from var(--gnome-group-yellow) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-yellow-text: oklch(from var(--gnome-group-yellow) 0.32 c h) !important;
+		--tab-group-yellow-text-invert: #ffffff !important;
+		--tab-group-pink: oklch(from var(--gnome-group-pink) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-pink-hover: oklch(from var(--gnome-group-pink) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-pink-invert: oklch(from var(--gnome-group-pink) 0.45 c h) !important;
+		--tab-group-pink-pale: oklch(from var(--gnome-group-pink) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-pink-text: oklch(from var(--gnome-group-pink) 0.32 c h) !important;
+		--tab-group-pink-text-invert: #ffffff !important;
+		--tab-group-green: oklch(from var(--gnome-group-green) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-green-hover: oklch(from var(--gnome-group-green) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-green-invert: oklch(from var(--gnome-group-green) 0.45 c h) !important;
+		--tab-group-green-pale: oklch(from var(--gnome-group-green) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-green-text: oklch(from var(--gnome-group-green) 0.32 c h) !important;
+		--tab-group-green-text-invert: #ffffff !important;
+		--tab-group-gray: oklch(from var(--gnome-group-gray) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-gray-hover: oklch(from var(--gnome-group-gray) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-gray-invert: oklch(from var(--gnome-group-gray) 0.45 c h) !important;
+		--tab-group-gray-pale: oklch(from var(--gnome-group-gray) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-gray-text: oklch(from var(--gnome-group-gray) 0.32 c h) !important;
+		--tab-group-gray-text-invert: #ffffff !important;
+		--tab-group-red: oklch(from var(--gnome-group-red) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-red-hover: oklch(from var(--gnome-group-red) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-red-invert: oklch(from var(--gnome-group-red) 0.45 c h) !important;
+		--tab-group-red-pale: oklch(from var(--gnome-group-red) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-red-text: oklch(from var(--gnome-group-red) 0.32 c h) !important;
+		--tab-group-red-text-invert: #ffffff !important;
+	}
+}
+
 /* Tabs group label */
 .tab-group-label {
 	border-radius: 26px !important;
