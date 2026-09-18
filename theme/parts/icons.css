@@ -334,6 +334,32 @@ button.close::before {
 	#home-button {
 		list-style-image: var(--gnome-icon-user-home-symbolic) !important;
 	}
+	/* Icons for buttons hidden by default */
+	#save-page-button {
+		list-style-image: var(--gnome-icon-document-save-symbolic) !important;
+	}
+	#open-file-button {
+		list-style-image: var(--gnome-icon-document-open-symbolic) !important;
+	}
+	#logins-button {
+		list-style-image: var(--gnome-icon-dialog-password-symbolic) !important;
+	}
+	#characterencoding-button {
+		list-style-image: var(--gnome-icon-preferences-desktop-locale-symbolic) !important;
+	}
+	#screenshot-button {
+		list-style-image: var(--gnome-icon-camera-photo-symbolic) !important;
+	}
+	#library-button {
+		list-style-image: var(--gnome-icon-view-list-symbolic) !important;
+	}
+	#import-button {
+		list-style-image: var(--gnome-icon-folder-download-symbolic) !important;
+	}
+	#send-tab-button,
+	#share-tab-button {
+		list-style-image: var(--gnome-icon-send-to-symbolic) !important;
+	}
 	/* Preferences button */
 	#preferences-button,
 	.search-setting-button > .button-box > .button-icon,
