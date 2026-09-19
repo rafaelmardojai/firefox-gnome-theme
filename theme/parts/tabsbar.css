@@ -524,30 +524,18 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		content: "";
 		inset-block: 3px calc(var(--gnome-toolbar-padding) + 3px);
 		inset-inline-start: -1px;
-		opacity: 1;
 		pointer-events: none;
 		position: absolute;
 		transition: opacity 150ms ease-in-out;
 		width: 1px;
 	}
 
-	/* Hidden next to the selected or hovered tab */
-	tab[selected]::after,
-	tab:hover::after,
-	tab[selected] ~ tab::after,
-	tab:hover ~ tab::after,
-	tab:hover ~ tab[selected] ~ tab::after,
+	/* Hidden on both sides of the selected or hovered tab, like Adwaita's
+	 * `separator.hidden`. Adjacent siblings express this directly, so no
+	 * general-sibling chains are needed to undo an over-wide match. */
+	tab:is([selected], :hover)::after,
+	tab:is([selected], :hover) + tab::after,
 	tab-group[collapsed] + tab::after {
-		opacity: 0;
-	}
-	tab[selected] ~ tab ~ tab::after,
-	tab:hover ~ tab ~ tab::after,
-	tab:hover ~ tab[selected] ~ tab ~ tab::after {
-		opacity: 1;
-	}
-	/* ...but the tab right after the selected or hovered one stays hidden */
-	tab[selected] + tab::after,
-	tab:hover + tab::after {
 		opacity: 0;
 	}
 
