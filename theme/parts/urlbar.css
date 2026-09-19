@@ -60,24 +60,30 @@ toolbarspring {
 	opacity: 0.85 !important;
 }
 
-#urlbar-searchmode-switcher {
+/* Search mode switcher.
+ * Firefox 156 dropped the #urlbar-searchmode-switcher id; it is now a
+ * moz-button carrying .searchmode-switcher whose inner button sits in a
+ * shadow root, so it has to be driven through the button tokens. Without a
+ * radius and an inset it squares off the URL bar's rounded corner. */
+#urlbar .searchmode-switcher {
+	--button-border-radius: var(--gnome-button-radius) !important;
+	--button-background-color: transparent !important;
+	--button-background-color-hover: var(--gnome-hover-color) !important;
+	--button-background-color-active: var(--gnome-active-color) !important;
+	--button-background-color-ghost: transparent !important;
+	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
+	--button-background-color-ghost-active: var(--gnome-active-color) !important;
 	background-color: transparent !important;
 	border-radius: var(--gnome-button-radius) !important;
-	&:hover {
-		background-color: var(--gnome-hover-color) !important;
-	}
-	&:active, &[open] {
-		background-color: var(--gnome-active-color) !important;
-	}
+	margin-inline-start: calc(var(--gnome-toolbar-padding) / 2) !important;
+
 	#urlbar[searchmode] & {
-		background-color: var(--gnome-selected-color) !important;
-			
-		&:hover {
-			background-color: var(--gnome-selected-hover-color) !important;
-		}
-		&:active, &[open] {
-			background-color: var(--gnome-selected-active-color) !important;
-		}
+		--button-background-color: var(--gnome-selected-color) !important;
+		--button-background-color-hover: var(--gnome-selected-hover-color) !important;
+		--button-background-color-active: var(--gnome-selected-active-color) !important;
+		--button-background-color-ghost: var(--gnome-selected-color) !important;
+		--button-background-color-ghost-hover: var(--gnome-selected-hover-color) !important;
+		--button-background-color-ghost-active: var(--gnome-selected-active-color) !important;
 	}
 }
 .searchmode-switcher-title {
