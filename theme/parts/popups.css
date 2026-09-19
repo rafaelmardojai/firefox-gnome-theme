@@ -28,6 +28,15 @@ menupopup, panel {
 	--menuitem-active-bg: var(--gnome-selected-active-color) !important;
 	--menuitem-focus-bg: var(--gnome-selected-color) !important;
 
+	/* Firefox 156 renders some panel rows as moz-button, which hover at 7%
+	 * (ghost) or 15% (regular) while menu items hover at 10%, so visually
+	 * identical rows react differently. Adwaita knows one value for menu
+	 * rows: `popover.menu modelbutton` at 10%, active 19%. */
+	--button-background-color-hover: var(--gnome-selected-color) !important;
+	--button-background-color-active: var(--gnome-selected-active-color) !important;
+	--button-background-color-ghost-hover: var(--gnome-selected-color) !important;
+	--button-background-color-ghost-active: var(--gnome-selected-active-color) !important;
+
 	/* Panel item buttons */
 	--panel-item-padding: var(--gnome-menu-item-padding) !important;
 	--panel-item-button-border-radius: var(--gnome-menu-item-radius) !important;
