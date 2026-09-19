@@ -374,11 +374,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			}
 		}
 	}
-
-	/* Hide secondary label, muted, playing, etc */
-	.tab-secondary-label  {
-		display: none;
-	}
 }
 
 /* Tab buttons */
