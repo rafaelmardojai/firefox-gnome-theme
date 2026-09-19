@@ -1,5 +1,21 @@
-/* General content styles */
+/* General content styles (about: pages) */
 
 :root {
-    --background-color-canvas: var(--gnome-window-background) !important;
+	--background-color-canvas: var(--gnome-window-background) !important;
+
+	/* Firefox styles in-content pages with its own brand accent
+	 * (light-dark(oklch(55% .24 260), oklch(76% .14 205))) instead of the
+	 * system accent, which makes about: pages turn blue/teal while the rest
+	 * of the browser follows GNOME. */
+	--color-accent-primary: var(--gnome-accent-bg) !important;
+	--color-accent-primary-hover: color-mix(in srgb, var(--gnome-accent-bg), currentColor 10%) !important;
+	--color-accent-primary-active: color-mix(in srgb, var(--gnome-accent-bg), currentColor 20%) !important;
+
+	/* Links and focus rings follow Adwaita: the contrast-adjusted accent for
+	 * text, the accent at 50% for the focus ring. */
+	--link-color: var(--gnome-accent) !important;
+	--link-color-hover: var(--gnome-accent) !important;
+	--link-color-active: var(--gnome-accent) !important;
+	--link-color-visited: var(--gnome-accent) !important;
+	--focus-outline-color: var(--gnome-focus-border-color) !important;
 }
