@@ -777,12 +777,12 @@ tab-group {
 /* Tabs manager menu */
 #alltabs-button {
 	@media not -moz-pref("gnomeTheme.allTabsButton") {
-		visibility: collapse;
+		display: none;
 	}
 	
 	@media -moz-pref("browser.tabs.tabmanager.enabled"), -moz-pref("gnomeTheme.allTabsButtonOnOverflow") {
 		#tabbrowser-tabs[overflow] ~ & {
-			visibility: visible;
+			display: revert;
 		}
 	}
 	
