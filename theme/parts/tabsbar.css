@@ -505,46 +505,57 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	}
 }
 
-/* Tabs separators */
-:root[dir="ltr"] #tabbrowser-tabs[orient="horizontal"] {
+/* Tabs separators
+ * Adwaita draws these as their own element, inset 3px above and below the tab,
+ * and fades them out next to the selected or hovered tab
+ * (`tabbar tabbox > separator` / `separator.hidden`). */
+#tabbrowser-tabs[orient="horizontal"] {
 	:not([collapsed]) > tab {
 		border-color: transparent !important;
 		border-left-width: 1px !important;
 		border-style: solid !important;
 	}
-	tab:not(:first-of-type, [selected], :hover) {
-		--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
-		--gnome-tabbar-tab-separator-hack1: linear-gradient(
-			to bottom,
-			var(--gnome-tabbar-tab-separator-hack0) 0,
-			var(--gnome-tabbar-tab-separator-hack0) 3px,
-			var(--gnome-tabbar-tab-separator-color) 3px,
-			var(--gnome-tabbar-tab-separator-color) 31px,
-			var(--gnome-tabbar-tab-separator-hack0) 31px,
-			var(--gnome-tabbar-tab-separator-hack0) 40px
-		) 1;
-		border-image: var(--gnome-tabbar-tab-separator-hack1);
+
+	/* Pinned tabs sit in #pinned-tabs-container, so the first regular tab is
+	 * :first-of-type in its own parent and would lose its separator. */
+	tab:not(:first-of-type)::after,
+	&:has(#pinned-tabs-container > tab:not([hidden])) #tabbrowser-arrowscrollbox > tab:first-of-type::after {
+		background-color: var(--gnome-tabbar-tab-separator-color);
+		content: "";
+		inset-block: 3px calc(var(--gnome-toolbar-padding) + 3px);
+		inset-inline-start: -1px;
+		opacity: 1;
+		pointer-events: none;
+		position: absolute;
+		transition: opacity 150ms ease-in-out;
+		width: 1px;
 	}
-	tab[selected] ~ tab:not([hidden]) {
-		border-image: none;
+
+	/* Hidden next to the selected or hovered tab */
+	tab[selected]::after,
+	tab:hover::after,
+	tab[selected] ~ tab::after,
+	tab:hover ~ tab::after,
+	tab:hover ~ tab[selected] ~ tab::after,
+	tab-group[collapsed] + tab::after {
+		opacity: 0;
 	}
-	tab[selected] ~ tab:not([hidden]) ~ tab:not([hidden]) {
-		border-image: var(--gnome-tabbar-tab-separator-hack1);
+	tab[selected] ~ tab ~ tab::after,
+	tab:hover ~ tab ~ tab::after,
+	tab:hover ~ tab[selected] ~ tab ~ tab::after {
+		opacity: 1;
 	}
-	tab:hover ~ tab:not([hidden]) {
-		border-image: none !important;
+	/* ...but the tab right after the selected or hovered one stays hidden */
+	tab[selected] + tab::after,
+	tab:hover + tab::after {
+		opacity: 0;
 	}
-	tab:hover ~ tab:not([hidden]) ~ tab:not([hidden]) {
-		border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
-	}
-	tab:hover ~ tab[selected] ~ tab:not([hidden]) {
-		border-image: none !important;
-	}
-	tab:hover ~ tab[selected] ~ tab:not([hidden]) ~ tab:not([hidden]) {
-		border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
-	}
-	tab-group[collapsed] + tab {
-		border-image: none !important;
+
+	/* Sibling combinators do not cross the pinned container, so the boundary
+	 * separator needs its own rule when the last pinned tab is active. */
+	&:has(#pinned-tabs-container > tab:last-of-type:is([selected], :hover))
+		#tabbrowser-arrowscrollbox > tab:first-of-type::after {
+		opacity: 0;
 	}
 }
 
@@ -861,20 +872,9 @@ tab-group {
 			}
 		}
 
-		/* Tabs separators */
-		:root[dir="ltr"] & {
-			tab:not(:first-of-type, [selected], :hover) {
-				--gnome-tabbar-tab-separator-hack1: linear-gradient(
-					to bottom,
-					var(--gnome-tabbar-tab-separator-hack0) 0,
-					var(--gnome-tabbar-tab-separator-hack0) 9px,
-					var(--gnome-tabbar-tab-separator-color) 9px,
-					var(--gnome-tabbar-tab-separator-color) 37px,
-					var(--gnome-tabbar-tab-separator-hack0) 37px,
-					var(--gnome-tabbar-tab-separator-hack0) 40px
-				) 1;
-				border-image: var(--gnome-tabbar-tab-separator-hack1);
-			}
+		/* Tabs separators: the padding is inverted here, so flip the insets */
+		tab::after {
+			inset-block: calc(var(--gnome-toolbar-padding) + 3px) 3px;
 		}
 		
 	}
