@@ -659,7 +659,7 @@ tab-group {
 }
 
 /* Remove spacing between pinned tabs and first tab */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+#tabbrowser-tabs:has(#pinned-tabs-container > tab:not([hidden])):not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:first-of-type {
 	margin-inline-start: 0 !important;
 }
 
