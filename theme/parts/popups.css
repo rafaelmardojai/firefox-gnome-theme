@@ -218,6 +218,18 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
 	}
 }
 
+/* Firefox gives panel rows a literal border-radius instead of using the menu
+ * item token: --border-radius-small (4px) for most rows and
+ * --border-radius-circle (9999px) for the account row, so rows in the same
+ * list end up with three different shapes. */
+panelview .subviewbutton,
+panelview .toolbarbutton-1,
+.PanelUI-subView .subviewbutton,
+#PanelUI-fxa-menu-manage-account-button,
+#PanelUI-fxa-menu-sync-status-button {
+	border-radius: var(--gnome-menu-item-radius) !important;
+}
+
 .moz-button-subviewbutton-nav {
 	--button-border-radius: var(--gnome-menu-item-radius) !important;
 	margin: var(--gnome-menu-item-margin) !important;
