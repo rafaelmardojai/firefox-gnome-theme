@@ -225,6 +225,15 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	}
 }
 
+/* A collapsed group must not change the tab bar height.
+ * The bottom padding lives on the tab and is scoped to
+ * `:not([collapsed]) > &`, so collapsing a group dropped 6px and the bar
+ * jumped between 40px and 34px. Only the block padding is restored; the
+ * inline padding stays out, since collapsed tabs are width-clamped. */
+#tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] > .tabbrowser-tab {
+	padding-block-end: var(--gnome-toolbar-padding) !important;
+}
+
 /* Tab background */
 .tab-background {
 	box-shadow: none !important;
