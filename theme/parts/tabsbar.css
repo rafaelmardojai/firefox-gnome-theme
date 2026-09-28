@@ -602,6 +602,12 @@ tab-group {
 	 * which drops the pill onto the group line. Align and size it like a tab. */
 	> .tab-group-label-hover-highlight {
 		margin-block: 0 auto !important;
+
+		/* Collapsed, Firefox pads this to make room for the hover shadow. We
+		 * turn that shadow off, so the padding only drops the pill. */
+		tab-group[collapsed] & {
+			padding-block: 0 !important;
+		}
 	}
 
 	> .tab-group-label-hover-highlight > .tab-group-label {
