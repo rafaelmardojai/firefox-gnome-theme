@@ -76,6 +76,11 @@ button.close,
 	outline: 0 !important;
 	padding: 0 1px !important;
 	transition: background var(--gnome-animation-time);	
+
+	/* The ones in here that carry a label need room for it */
+	&:is(#viewButton, #sidebar-switcher-target) {
+		padding-inline: var(--gnome-menu-item-inline-padding, 12px) !important;
+	}
 	-moz-box-align: center !important;	
 
 	&:not([disabled]) {
