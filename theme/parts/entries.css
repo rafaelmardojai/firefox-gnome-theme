@@ -69,7 +69,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input,
 
 	/* Keep the room moz-input-search needs for its icon */
 	&.with-icon {
-		padding-inline-start: calc(2 * var(--space-medium) + var(--input-search-icon-size)) !important;
+		padding-inline-start: calc(2 * var(--space-medium, 12px) + var(--input-search-icon-size, var(--input-text-icon-size, 16px))) !important;
 	}
 
 	&:-moz-window-inactive {
