@@ -22,6 +22,8 @@ menupopup, panel {
 
 	/* Menu items (shared by context menus and popovers since Firefox 156) */
 	--menuitem-padding: var(--gnome-menu-item-padding) !important;
+	--menuitem-padding-block: var(--gnome-menu-item-block-padding) !important;
+	--menuitem-padding-inline: var(--gnome-menu-item-inline-padding) !important;
 	--menuitem-margin: var(--gnome-menu-item-margin) !important;
 	--menuitem-border-radius: var(--gnome-menu-item-radius) !important;
 	--menuitem-hover-bg: var(--gnome-selected-color) !important;
