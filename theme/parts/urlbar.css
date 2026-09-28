@@ -111,6 +111,14 @@ toolbarspring {
 	border-radius: var(--gnome-popover-radius) !important;
 }
 
+/* 157 paints a joint background behind the input and the view, with a violet
+ * shadow. GNOME keeps the popover a surface of its own. */
+.urlbarView-background {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 0 !important;
+}
+
 .urlbarView-body-outer {
     background: var(--gnome-menu-background) !important;
 	overflow-x: auto;
