@@ -595,6 +595,20 @@ tab-group {
 
 .tab-group-label-container {
 	padding-bottom: 0 !important;
+
+	/* The label stretches to the row, which is taller than the tab once we add
+	 * our block margins. Keep the pill the height of a tab. */
+	/* Firefox centres the label in the row while a tab sits at the top of it,
+	 * which drops the pill onto the group line. Align and size it like a tab. */
+	> .tab-group-label-hover-highlight {
+		margin-block: 0 auto !important;
+	}
+
+	> .tab-group-label-hover-highlight > .tab-group-label {
+		max-height: var(--tab-min-height) !important;
+		line-height: calc(var(--tab-min-height) - var(--tab-group-line-thickness)) !important;
+		border-radius: var(--tab-border-radius) !important;
+	}
 	
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-block: 0 !important;
