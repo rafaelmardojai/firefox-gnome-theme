@@ -113,8 +113,10 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	}
 	
 	@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
-		display: flex !important;
-    }
+		&:not([hidden]) {
+			display: flex !important;
+		}
+	}
 }
 
 #sidebar-launcher-splitter {
