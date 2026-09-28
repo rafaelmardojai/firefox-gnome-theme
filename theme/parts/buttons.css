@@ -7,6 +7,8 @@
 	/* moz-button */
 	--button-border-radius: var(--gnome-button-radius) !important;	
 	--button-background-color: var(--gnome-button-background) !important;
+	/* Nova borders secondary buttons with the accent. Adwaita keeps them flat. */
+	--button-border-color: transparent !important;
     --button-background-color-hover: var(--gnome-button-hover-background) !important;
 	--button-background-color-active: var(--gnome-button-active-background) !important;
 	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;

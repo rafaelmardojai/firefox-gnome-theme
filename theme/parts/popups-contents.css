@@ -130,6 +130,10 @@
 }
 
 /* Customization overflow menu position */
+#customization-container {
+	background-color: var(--gnome-window-background) !important;
+}
+
 #customization-panel-container {
 	margin-top: 10px;
 	z-index: 10;
