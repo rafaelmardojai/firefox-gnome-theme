@@ -79,7 +79,7 @@
 	--gnome-view-selected-hover-background: color-mix(in srgb, var(--gnome-accent-bg) 32%, transparent);
 	--gnome-view-selected-active-background: color-mix(in srgb, var(--gnome-accent-bg) 39%, transparent);
 	--gnome-sidebar-background: #ebebed;
-	--gnome-sidebar-border-color: color-mix(in srgb, rgb(0, 0, 6) 7%, var(--gnome-headerbar-background));
+	--gnome-sidebar-border-color: color-mix(in srgb, rgb(0, 0, 0) 12%, var(--gnome-headerbar-background));
 	--gnome-secondary-sidebar-background: #f3f3f5;
 	
 	/* Card */
