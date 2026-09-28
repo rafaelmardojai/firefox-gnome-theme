@@ -41,11 +41,14 @@ input[type="password"],
 #urlbar,
 #searchbar,
 link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input,
 .findbar-textbox,
 .tabsFilter,
 .popup-notification-body input {
 	-moz-appearance: none !important;
-	background: var(--gnome-entry-background) !important;
+	/* background-color, not the shorthand: moz-input-search draws its icon
+	 * with background-image */
+	background-color: var(--gnome-entry-background) !important;
 	outline: 2px solid transparent !important;
 	border: 0 !important;
 	border-radius: var(--gnome-entry-radius) !important;
@@ -64,6 +67,11 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
 		color: var(--gnome-error) !important;
 	}
 
+	/* Keep the room moz-input-search needs for its icon */
+	&.with-icon {
+		padding-inline-start: calc(2 * var(--space-medium) + var(--input-search-icon-size)) !important;
+	}
+
 	&:-moz-window-inactive {
 		color: var(--gnome-inactive-entry-color) !important;
 		outline: 2px solid transparent !important;    
@@ -76,7 +84,8 @@ input[type="password"]:focus,
 #urlbar[breakout][breakout-extend],
 #urlbar[focused]:not([suppress-focus-border]),
 #searchbar:focus-within,
-link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focus, 
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focus,
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input:focus, 
 .findbar-textbox[focused],
 .findbar-textbox:focus,
 .tabsFilter[focused],
@@ -159,6 +168,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focu
 #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
 	outline: 0 !important;
 }
-link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input {
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input {
 	width: 100% !important;
 }
