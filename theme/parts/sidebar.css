@@ -110,6 +110,9 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	@media not -moz-pref("sidebar.revamp.round-content-area") {
 		background-color: var(--gnome-sidebar-border-color) !important;
 		width: 1px !important;
+		/* Its top row is covered by the panel above, so start one pixel
+		 * higher, under the toolbox border it has to meet. */
+		margin-block-start: -1px !important;
 	}
 	
 	@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {

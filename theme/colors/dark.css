@@ -20,7 +20,7 @@
 		--gnome-window-color: white;
 		--gnome-view-background: #1d1d20;
 		--gnome-sidebar-background: #2e2e32;
-		--gnome-sidebar-border-color: color-mix(in srgb, rgb(0, 0, 6) 36%, var(--gnome-sidebar-background));
+		--gnome-sidebar-border-color: color-mix(in srgb, rgb(0, 0, 6) 36%, var(--gnome-headerbar-background));
 		--gnome-secondary-sidebar-background: #28282c;
 
 		/* Card */
