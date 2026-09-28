@@ -49,6 +49,9 @@ toolbarspring {
 	
 	.urlbar-input-container {
 		padding: 0 !important;
+		/* 157 draws its own focus ring here while the view is open, on top of
+		 * the one we put on #urlbar */
+		outline: 0 !important;
 	}
 }
 
@@ -100,15 +103,19 @@ toolbarspring {
 	color: var(--gnome-window-color) !important;
 	margin: 12px 0 0 0 !important;
     position: absolute !important;
-    box-shadow: var(--gnome-menu-shadow) !important;
-    border-radius: var(--gnome-popover-radius) !important;
 	width: 100% !important;
+	/* 157 pads the top for its joint background. With overflow: clip that
+	 * leaves the box taller than the body and clips the body's shadow. */
+	padding-top: 0 !important;
+	box-shadow: var(--gnome-menu-shadow) !important;
+	border-radius: var(--gnome-popover-radius) !important;
 }
 
 .urlbarView-body-outer {
     background: var(--gnome-menu-background) !important;
 	overflow-x: auto;
 	padding: var(--gnome-menu-padding) calc(var(--gnome-menu-padding) + 2px) !important;
+	border-radius: var(--gnome-popover-radius) !important;
 }
 
 .urlbarView-body-inner {
