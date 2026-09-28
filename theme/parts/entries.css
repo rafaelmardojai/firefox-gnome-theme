@@ -40,7 +40,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
 /* Entries focused */
 input[type="text"]:not(.tree-input):focus,
 input[type="password"]:focus,
-#urlbar[breakout][breakout-extend],
+#urlbar[open],
 #urlbar[focused]:not([suppress-focus-border]),
 #searchbar:focus-within,
 link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focus, 

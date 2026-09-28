@@ -39,10 +39,6 @@ toolbarspring {
 /* URL bar */
 #urlbar {
 	box-shadow: none !important;
-	&[breakout] {
-		width: calc(var(--urlbar-width) - var(--gnome-toolbar-spacing)) !important;
-	}
-
 	.urlbar-background {
 		box-shadow: none !important;
 		border: 0 !important;
