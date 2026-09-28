@@ -8,6 +8,18 @@
 	.browserContainer {
 		box-shadow: none !important;
 		outline: 0 !important;
+		/* 157 borders the content area at the top and on the sidebar side. We
+		 * already draw both lines, on the toolbox and on the splitter. */
+		border: 0 !important;
+	}
+}
+
+/* 157 rounds the content area's sidebar-facing corner by itself. The splitter
+ * next to it stays straight, so the curve leaves a notch. GNOME keeps the
+ * split flush. The pref is gone in 157, so this only applies there. */
+@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.revamp.round-content-area")) {
+	.browserContainer {
+		border-radius: 0 !important;
 	}
 }
 
