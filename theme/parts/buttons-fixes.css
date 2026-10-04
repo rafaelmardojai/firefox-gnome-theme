@@ -25,6 +25,14 @@ link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 	--toolbarbutton-hover-background: transparent !important;
 }
 
+/* Fix toolbar menu double bg */
+.subviewbutton,
+toolbar .toolbarbutton-1:not(#hack)  {
+	& > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+		background: none !important;
+	}
+}
+
 /* Fix notification dropmarker */
 .popup-notification-dropmarker dropmarker {
 	margin-inline-start: 0 !important;
