@@ -58,6 +58,8 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 /* Sidebar content */
 #sidebar-box {
 	background-color: var(--gnome-sidebar-background) !important;
+	border: 0 !important;
+	border-radius: 0 !important;
 	padding: 0 !important;
 	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
 		#browser:has(#tabbrowser-tabbox[sidebar-shown]) & {
@@ -147,6 +149,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	padding-inline: var(--gnome-content-padding) !important;
 }
 .sidebar-panel-heading {
+	margin: 0 !important;
 	padding-block: var(--gnome-content-padding) !important;
 
 	> h4 {
