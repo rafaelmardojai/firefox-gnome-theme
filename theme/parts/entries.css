@@ -2,17 +2,53 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* moz-input-text / moz-input-search
+ * These render inside a shadow root, so they can only be themed through the
+ * inherited design tokens. Without this the sidebar search fields keep
+ * Firefox's 32px/8px white box instead of the GNOME entry. */
+:root {
+	--input-text-min-height: var(--gnome-entry-height) !important;
+	--input-text-border-radius: var(--gnome-entry-radius) !important;
+	--input-search-border-radius: var(--gnome-entry-radius) !important;
+	--input-text-background-color: var(--gnome-entry-background) !important;
+	--input-text-color: var(--gnome-entry-color) !important;
+	--input-text-border: 0 !important;
+	--input-text-icon-size: var(--icon-size) !important;
+}
+
+/* Text selection
+ * Adwaita tints the selection with 30% of the accent and keeps the text
+ * colour, instead of Firefox's opaque highlight with inverted text.
+ * `--lwt-toolbar-field-highlight*` are what the URL bar and search bar use. */
+:root {
+	--lwt-toolbar-field-highlight: var(--gnome-selection-bg) !important;
+	--lwt-toolbar-field-highlight-text: currentColor !important;
+}
+
+::selection,
+input::selection,
+textarea::selection,
+.urlbar-input::selection,
+.searchbar-textbox::selection,
+.findbar-textbox::selection {
+	background-color: var(--gnome-selection-bg) !important;
+	color: inherit !important;
+}
+
 /* Entries */
 input[type="text"]:not(.tree-input),
 input[type="password"],
 #urlbar,
 #searchbar,
-link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:not(.toggle-button, [type="checkbox"]),
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input:not(.toggle-button, [type="checkbox"]),
 .findbar-textbox,
 .tabsFilter,
 .popup-notification-body input {
 	-moz-appearance: none !important;
-	background: var(--gnome-entry-background) !important;
+	/* background-color, not the shorthand: moz-input-search draws its icon
+	 * with background-image */
+	background-color: var(--gnome-entry-background) !important;
 	outline: 2px solid transparent !important;
 	border: 0 !important;
 	border-radius: var(--gnome-entry-radius) !important;
@@ -31,6 +67,11 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
 		color: var(--gnome-error) !important;
 	}
 
+	/* Keep the room moz-input-search needs for its icon */
+	&.with-icon {
+		padding-inline-start: calc(2 * var(--space-medium, 12px) + var(--input-search-icon-size, var(--input-text-icon-size, 16px))) !important;
+	}
+
 	&:-moz-window-inactive {
 		color: var(--gnome-inactive-entry-color) !important;
 		outline: 2px solid transparent !important;    
@@ -40,10 +81,11 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input,
 /* Entries focused */
 input[type="text"]:not(.tree-input):focus,
 input[type="password"]:focus,
-#urlbar[breakout][breakout-extend],
+#urlbar[open],
 #urlbar[focused]:not([suppress-focus-border]),
 #searchbar:focus-within,
-link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focus, 
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:not(.toggle-button, [type="checkbox"]):focus,
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input:not(.toggle-button, [type="checkbox"]):focus, 
 .findbar-textbox[focused],
 .findbar-textbox:focus,
 .tabsFilter[focused],
@@ -75,26 +117,26 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focu
 	transition-duration: var(--gnome-animation-time);
 }
 
-.identity-box-button:hover:not([open="true"]),
-#tracking-protection-icon-container:hover:not([open="true"]),
-#notification-popup-box:hover:not([open="true"]),
-.urlbar-page-action:hover:not([open="true"]),
-.urlbar-page-action:hover:not([open="true"]) .urlbar-icon,
+.identity-box-button:hover:not([open]),
+#tracking-protection-icon-container:hover:not([open]),
+#notification-popup-box:hover:not([open]),
+.urlbar-page-action:hover:not([open]),
+.urlbar-page-action:hover:not([open]) .urlbar-icon,
 .urlbar-icon:not([disabled]):hover {
 	background: none !important;
 	fill-opacity: 1 !important;	
 }
 
 .identity-box-button:hover:active,
-.identity-box-button[open=true],
+.identity-box-button[open],
 #tracking-protection-icon-container:hover:active,
-#tracking-protection-icon-container[open=true],
+#tracking-protection-icon-container[open],
 #notification-popup-box:hover:active,
-#notification-popup-box[open=true],
+#notification-popup-box[open],
 .urlbar-page-action:hover:active,
-.urlbar-page-action[open=true],
+.urlbar-page-action[open],
 .urlbar-page-action:hover:active .urlbar-icon,
-.urlbar-page-action[open=true] .urlbar-icon {
+.urlbar-page-action[open] .urlbar-icon {
 	background: none !important;
 	fill-opacity: 1 !important;	
 }
@@ -107,6 +149,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focu
 .urlbar-input-container {
 	background: transparent !important;
 	border: 0 !important;
+	border-radius: 0 !important;
 }
 #urlbar, #searchbar {
 	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
@@ -126,6 +169,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:focu
 #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
 	outline: 0 !important;
 }
-link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input {
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ #input:not(.toggle-button, [type="checkbox"]),
+link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input:not(.toggle-button, [type="checkbox"]) {
 	width: 100% !important;
 }

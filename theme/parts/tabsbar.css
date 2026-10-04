@@ -4,13 +4,12 @@
 
 /* Override vars */
 :root {
-	--space-above-tabbar: 0 !important;
 	--tab-inner-inline-margin: var(--gnome-toolbar-padding) !important;
 	--tab-pinned-margin-inline-expanded: calc(var(--gnome-toolbar-padding)  / 2) !important;
 	--tab-min-height: var(--gnome-button-size) !important;
 	--tab-border-radius: var(--gnome-button-radius) !important;	
-	--tab-hover-background-color: var(--gnome-hover-color) !important;
-	--tab-selected-bgcolor: var(--gnome-selected-color) !important;
+	--tab-background-color-hover: var(--gnome-hover-color) !important;
+	--tab-background-color-selected: var(--gnome-selected-color) !important;
 	--tab-pinned-container-margin-inline-expanded: calc(var(--gnome-toolbar-padding) / 2) !important;
 	--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
 	--tab-height-with-margin-padding: calc(var(--tab-min-height) + 5px) !important;
@@ -19,12 +18,12 @@
 
 	@media not -moz-pref("sidebar.verticalTabs") {
 		/* We need the hardcoded tab colors in horizontal tabs, beacuse of the close button overlay */
-		--tab-hover-background-color: var(--gnome-tabbar-tab-hover-background) !important;
-		--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background) !important;
+		--tab-background-color-hover: var(--gnome-tabbar-tab-hover-background) !important;
+		--tab-background-color-selected: var(--gnome-tabbar-tab-active-background) !important;
 	}
 	
 	@media -moz-pref("sidebar.verticalTabs") {
-		--tab-block-margin: calc(var(--gnome-toolbar-padding)  / 2) !important;
+		--tab-margin-block: calc(var(--gnome-toolbar-padding)  / 2) !important;
 	}
 	
 }
@@ -37,10 +36,9 @@
 	position: relative;
 	z-index: 1;
 
-	--toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
 	/* Remove hover effects on tab bar buttons */
-	--toolbarbutton-active-background: transparent !important;
-	--toolbarbutton-hover-background: transparent !important;
+	--toolbarbutton-background-color-active: transparent !important;
+	--toolbarbutton-background-color-hover: transparent !important;
 	/* Tabs scroll fade */
 	--gnome-tabbar-fade-background: var(--gnome-tabbar-background);
 	
@@ -168,7 +166,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tabs */
 .tabbrowser-tab {
-	&[selected="true"] {
+	&[selected] {
 		--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
 		&:hover {
 			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background) !important;
@@ -180,9 +178,9 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 	/* OPTIONAL: Add more contrast to the active tab */
 	@media -moz-pref("gnomeTheme.activeTabContrast") {
-		&[selected="true"], &:hover {
-			--tab-hover-background-color: var(--gnome-tabbar-tab-active-background-contrast) !important;
-			--tab-selected-bgcolor: var(--gnome-tabbar-tab-active-background-contrast) !important;
+		&[selected], &:hover {
+			--tab-background-color-hover: var(--gnome-tabbar-tab-active-background-contrast) !important;
+			--tab-background-color-selected: var(--gnome-tabbar-tab-active-background-contrast) !important;
 			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background-contrast) !important;
 		}
 	}	
@@ -200,7 +198,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		/* Not in collapsed tab-group */
 		:not([collapsed]) > & {
 			padding: 0px calc(var(--gnome-toolbar-spacing) / 2 - 1px) var(--gnome-toolbar-padding) !important;
-			&:not([hidden=true]):last-of-type {
+			&:not([hidden]):last-of-type {
 				padding-right: calc(var(--gnome-toolbar-spacing) / 2) !important;
 			}
 
@@ -227,6 +225,15 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	}
 }
 
+/* A collapsed group must not change the tab bar height.
+ * The bottom padding lives on the tab and is scoped to
+ * `:not([collapsed]) > &`, so collapsing a group dropped 6px and the bar
+ * jumped between 40px and 34px. Only the block padding is restored; the
+ * inline padding stays out, since collapsed tabs are width-clamped. */
+#tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] > .tabbrowser-tab {
+	padding-block-end: var(--gnome-toolbar-padding) !important;
+}
+
 /* Tab background */
 .tab-background {
 	box-shadow: none !important;
@@ -236,6 +243,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Selected */
 	tab[selected] & {
 		background-color: var(--gnome-selected-color) !important;
+		@media not -moz-pref("sidebar.verticalTabs") {
+			/* Opaque variant, so the close button overlay can match it exactly */
+			background-color: var(--gnome-tabbar-tab-active-background) !important;
+		}
 	}
 
 	/* Selected hover */
@@ -264,7 +275,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	/* Add solid bg on tabs dnd */
 	#tabbrowser-tabs[movingtab] tab:is([multiselected], [selected]) & {
 		background-color: var(--gnome-tabbar-background) !important;
-		background-image: linear-gradient(var(--tab-selected-bgcolor), var(--tab-selected-bgcolor)) !important;
+		background-image: linear-gradient(var(--tab-background-color-selected), var(--tab-background-color-selected)) !important;
 	}
 }
 
@@ -371,11 +382,6 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 				margin-inline-end: 0 !important;
 			}
 		}
-	}
-
-	/* Hide secondary label, muted, playing, etc */
-	.tab-secondary-label  {
-		display: none;
 	}
 }
 
@@ -508,46 +514,45 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	}
 }
 
-/* Tabs separators */
-:root[dir="ltr"] #tabbrowser-tabs[orient="horizontal"] {
+/* Tabs separators
+ * Adwaita draws these as their own element, inset 3px above and below the tab,
+ * and fades them out next to the selected or hovered tab
+ * (`tabbar tabbox > separator` / `separator.hidden`). */
+#tabbrowser-tabs[orient="horizontal"] {
 	:not([collapsed]) > tab {
 		border-color: transparent !important;
 		border-left-width: 1px !important;
 		border-style: solid !important;
 	}
-	tab:not(:first-of-type, [selected], :hover) {
-		--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
-		--gnome-tabbar-tab-separator-hack1: linear-gradient(
-			to bottom,
-			var(--gnome-tabbar-tab-separator-hack0) 0,
-			var(--gnome-tabbar-tab-separator-hack0) 3px,
-			var(--gnome-tabbar-tab-separator-color) 3px,
-			var(--gnome-tabbar-tab-separator-color) 31px,
-			var(--gnome-tabbar-tab-separator-hack0) 31px,
-			var(--gnome-tabbar-tab-separator-hack0) 40px
-		) 1;
-		border-image: var(--gnome-tabbar-tab-separator-hack1);
+
+	/* Pinned tabs sit in #pinned-tabs-container, so the first regular tab is
+	 * :first-of-type in its own parent and would lose its separator. */
+	tab:not(:first-of-type)::after,
+	&:has(#pinned-tabs-container > tab:not([hidden])) #tabbrowser-arrowscrollbox > tab:first-of-type::after {
+		background-color: var(--gnome-tabbar-tab-separator-color);
+		content: "";
+		inset-block: 3px calc(var(--gnome-toolbar-padding) + 3px);
+		inset-inline-start: -1px;
+		pointer-events: none;
+		position: absolute;
+		transition: opacity 150ms ease-in-out;
+		width: 1px;
 	}
-	tab[selected] ~ tab:not([hidden="true"]) {
-		border-image: none;
+
+	/* Hidden on both sides of the selected or hovered tab, like Adwaita's
+	 * `separator.hidden`. Adjacent siblings express this directly, so no
+	 * general-sibling chains are needed to undo an over-wide match. */
+	tab:is([selected], :hover)::after,
+	tab:is([selected], :hover) + tab::after,
+	tab-group[collapsed] + tab::after {
+		opacity: 0;
 	}
-	tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
-		border-image: var(--gnome-tabbar-tab-separator-hack1);
-	}
-	tab:hover ~ tab:not([hidden="true"]) {
-		border-image: none !important;
-	}
-	tab:hover ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
-		border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
-	}
-	tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) {
-		border-image: none !important;
-	}
-	tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) {
-		border-image: var(--gnome-tabbar-tab-separator-hack1) !important;
-	}
-	tab-group[collapsed] + tab {
-		border-image: none !important;
+
+	/* Sibling combinators do not cross the pinned container, so the boundary
+	 * separator needs its own rule when the last pinned tab is active. */
+	&:has(#pinned-tabs-container > tab:last-of-type:is([selected], :hover))
+		#tabbrowser-arrowscrollbox > tab:first-of-type::after {
+		opacity: 0;
 	}
 }
 
@@ -590,6 +595,26 @@ tab-group {
 
 .tab-group-label-container {
 	padding-bottom: 0 !important;
+
+	/* The label stretches to the row, which is taller than the tab once we add
+	 * our block margins. Keep the pill the height of a tab. */
+	/* Firefox centres the label in the row while a tab sits at the top of it,
+	 * which drops the pill onto the group line. Align and size it like a tab. */
+	> .tab-group-label-hover-highlight {
+		margin-block: 0 auto !important;
+
+		/* Collapsed, Firefox pads this to make room for the hover shadow. We
+		 * turn that shadow off, so the padding only drops the pill. */
+		tab-group[collapsed] & {
+			padding-block: 0 !important;
+		}
+	}
+
+	> .tab-group-label-hover-highlight > .tab-group-label {
+		max-height: var(--tab-min-height) !important;
+		line-height: calc(var(--tab-min-height) - var(--tab-group-line-thickness)) !important;
+		border-radius: var(--tab-border-radius) !important;
+	}
 	
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-block: 0 !important;
@@ -607,6 +632,134 @@ tab-group {
 	tab-group[collapsed]:not([movingtabgroup]) &:hover, tab-group[previewpanelactive] {
 		background: none !important;
 		box-shadow: none !important;
+	}
+}
+
+/* Tab groups
+ * Firefox sets `--tab-group-color: var(--tab-group-<code>)` inline, so remapping
+ * the palette tokens is enough to recolour every group.
+ * Bases are GNOME's accent palette; the tints follow Adwaita's oklab derivation. */
+:root {
+	--gnome-group-blue: #3584e4;
+	--gnome-group-purple: #9141ac;
+	--gnome-group-cyan: #2190a4;
+	--gnome-group-orange: #ed5b00;
+	--gnome-group-yellow: #c88800;
+	--gnome-group-pink: #d56199;
+	--gnome-group-green: #3a944a;
+	--gnome-group-gray: #6f8396;
+	--gnome-group-red: #e62d42;
+
+	--tab-group-blue: var(--gnome-group-blue) !important;
+	--tab-group-blue-hover: oklch(from var(--gnome-group-blue) calc(l - 0.06) c h) !important;
+	--tab-group-blue-invert: oklch(from var(--gnome-group-blue) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-blue-pale: oklch(from var(--gnome-group-blue) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-blue-text: #ffffff !important;
+	--tab-group-blue-text-invert: oklch(from var(--gnome-group-blue) min(l, 0.5) c h) !important;
+	--tab-group-purple: var(--gnome-group-purple) !important;
+	--tab-group-purple-hover: oklch(from var(--gnome-group-purple) calc(l - 0.06) c h) !important;
+	--tab-group-purple-invert: oklch(from var(--gnome-group-purple) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-purple-pale: oklch(from var(--gnome-group-purple) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-purple-text: #ffffff !important;
+	--tab-group-purple-text-invert: oklch(from var(--gnome-group-purple) min(l, 0.5) c h) !important;
+	--tab-group-cyan: var(--gnome-group-cyan) !important;
+	--tab-group-cyan-hover: oklch(from var(--gnome-group-cyan) calc(l - 0.06) c h) !important;
+	--tab-group-cyan-invert: oklch(from var(--gnome-group-cyan) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-cyan-pale: oklch(from var(--gnome-group-cyan) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-cyan-text: #ffffff !important;
+	--tab-group-cyan-text-invert: oklch(from var(--gnome-group-cyan) min(l, 0.5) c h) !important;
+	--tab-group-orange: var(--gnome-group-orange) !important;
+	--tab-group-orange-hover: oklch(from var(--gnome-group-orange) calc(l - 0.06) c h) !important;
+	--tab-group-orange-invert: oklch(from var(--gnome-group-orange) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-orange-pale: oklch(from var(--gnome-group-orange) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-orange-text: #ffffff !important;
+	--tab-group-orange-text-invert: oklch(from var(--gnome-group-orange) min(l, 0.5) c h) !important;
+	--tab-group-yellow: var(--gnome-group-yellow) !important;
+	--tab-group-yellow-hover: oklch(from var(--gnome-group-yellow) calc(l - 0.06) c h) !important;
+	--tab-group-yellow-invert: oklch(from var(--gnome-group-yellow) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-yellow-pale: oklch(from var(--gnome-group-yellow) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-yellow-text: #ffffff !important;
+	--tab-group-yellow-text-invert: oklch(from var(--gnome-group-yellow) min(l, 0.5) c h) !important;
+	--tab-group-pink: var(--gnome-group-pink) !important;
+	--tab-group-pink-hover: oklch(from var(--gnome-group-pink) calc(l - 0.06) c h) !important;
+	--tab-group-pink-invert: oklch(from var(--gnome-group-pink) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-pink-pale: oklch(from var(--gnome-group-pink) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-pink-text: #ffffff !important;
+	--tab-group-pink-text-invert: oklch(from var(--gnome-group-pink) min(l, 0.5) c h) !important;
+	--tab-group-green: var(--gnome-group-green) !important;
+	--tab-group-green-hover: oklch(from var(--gnome-group-green) calc(l - 0.06) c h) !important;
+	--tab-group-green-invert: oklch(from var(--gnome-group-green) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-green-pale: oklch(from var(--gnome-group-green) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-green-text: #ffffff !important;
+	--tab-group-green-text-invert: oklch(from var(--gnome-group-green) min(l, 0.5) c h) !important;
+	--tab-group-gray: var(--gnome-group-gray) !important;
+	--tab-group-gray-hover: oklch(from var(--gnome-group-gray) calc(l - 0.06) c h) !important;
+	--tab-group-gray-invert: oklch(from var(--gnome-group-gray) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-gray-pale: oklch(from var(--gnome-group-gray) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-gray-text: #ffffff !important;
+	--tab-group-gray-text-invert: oklch(from var(--gnome-group-gray) min(l, 0.5) c h) !important;
+	--tab-group-red: var(--gnome-group-red) !important;
+	--tab-group-red-hover: oklch(from var(--gnome-group-red) calc(l - 0.06) c h) !important;
+	--tab-group-red-invert: oklch(from var(--gnome-group-red) 0.92 calc(c * 0.35) h) !important;
+	--tab-group-red-pale: oklch(from var(--gnome-group-red) 0.96 calc(c * 0.2) h) !important;
+	--tab-group-red-text: #ffffff !important;
+	--tab-group-red-text-invert: oklch(from var(--gnome-group-red) min(l, 0.5) c h) !important;
+
+	@media (prefers-color-scheme: dark) {
+		--tab-group-blue: oklch(from var(--gnome-group-blue) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-blue-hover: oklch(from var(--gnome-group-blue) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-blue-invert: oklch(from var(--gnome-group-blue) 0.45 c h) !important;
+		--tab-group-blue-pale: oklch(from var(--gnome-group-blue) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-blue-text: oklch(from var(--gnome-group-blue) 0.32 c h) !important;
+		--tab-group-blue-text-invert: #ffffff !important;
+		--tab-group-purple: oklch(from var(--gnome-group-purple) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-purple-hover: oklch(from var(--gnome-group-purple) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-purple-invert: oklch(from var(--gnome-group-purple) 0.45 c h) !important;
+		--tab-group-purple-pale: oklch(from var(--gnome-group-purple) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-purple-text: oklch(from var(--gnome-group-purple) 0.32 c h) !important;
+		--tab-group-purple-text-invert: #ffffff !important;
+		--tab-group-cyan: oklch(from var(--gnome-group-cyan) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-cyan-hover: oklch(from var(--gnome-group-cyan) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-cyan-invert: oklch(from var(--gnome-group-cyan) 0.45 c h) !important;
+		--tab-group-cyan-pale: oklch(from var(--gnome-group-cyan) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-cyan-text: oklch(from var(--gnome-group-cyan) 0.32 c h) !important;
+		--tab-group-cyan-text-invert: #ffffff !important;
+		--tab-group-orange: oklch(from var(--gnome-group-orange) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-orange-hover: oklch(from var(--gnome-group-orange) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-orange-invert: oklch(from var(--gnome-group-orange) 0.45 c h) !important;
+		--tab-group-orange-pale: oklch(from var(--gnome-group-orange) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-orange-text: oklch(from var(--gnome-group-orange) 0.32 c h) !important;
+		--tab-group-orange-text-invert: #ffffff !important;
+		--tab-group-yellow: oklch(from var(--gnome-group-yellow) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-yellow-hover: oklch(from var(--gnome-group-yellow) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-yellow-invert: oklch(from var(--gnome-group-yellow) 0.45 c h) !important;
+		--tab-group-yellow-pale: oklch(from var(--gnome-group-yellow) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-yellow-text: oklch(from var(--gnome-group-yellow) 0.32 c h) !important;
+		--tab-group-yellow-text-invert: #ffffff !important;
+		--tab-group-pink: oklch(from var(--gnome-group-pink) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-pink-hover: oklch(from var(--gnome-group-pink) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-pink-invert: oklch(from var(--gnome-group-pink) 0.45 c h) !important;
+		--tab-group-pink-pale: oklch(from var(--gnome-group-pink) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-pink-text: oklch(from var(--gnome-group-pink) 0.32 c h) !important;
+		--tab-group-pink-text-invert: #ffffff !important;
+		--tab-group-green: oklch(from var(--gnome-group-green) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-green-hover: oklch(from var(--gnome-group-green) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-green-invert: oklch(from var(--gnome-group-green) 0.45 c h) !important;
+		--tab-group-green-pale: oklch(from var(--gnome-group-green) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-green-text: oklch(from var(--gnome-group-green) 0.32 c h) !important;
+		--tab-group-green-text-invert: #ffffff !important;
+		--tab-group-gray: oklch(from var(--gnome-group-gray) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-gray-hover: oklch(from var(--gnome-group-gray) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-gray-invert: oklch(from var(--gnome-group-gray) 0.45 c h) !important;
+		--tab-group-gray-pale: oklch(from var(--gnome-group-gray) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-gray-text: oklch(from var(--gnome-group-gray) 0.32 c h) !important;
+		--tab-group-gray-text-invert: #ffffff !important;
+		--tab-group-red: oklch(from var(--gnome-group-red) 0.85 calc(c * 0.55) h) !important;
+		--tab-group-red-hover: oklch(from var(--gnome-group-red) 0.91 calc(c * 0.55) h) !important;
+		--tab-group-red-invert: oklch(from var(--gnome-group-red) 0.45 c h) !important;
+		--tab-group-red-pale: oklch(from var(--gnome-group-red) 0.96 calc(c * 0.2) h) !important;
+		--tab-group-red-text: oklch(from var(--gnome-group-red) 0.32 c h) !important;
+		--tab-group-red-text-invert: #ffffff !important;
 	}
 }
 
@@ -662,7 +815,7 @@ tab-group {
 }
 
 /* Remove spacing between pinned tabs and first tab */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+#tabbrowser-tabs:has(#pinned-tabs-container > tab:not([hidden])):not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:first-of-type {
 	margin-inline-start: 0 !important;
 }
 
@@ -769,12 +922,12 @@ tab-group {
 /* Tabs manager menu */
 #alltabs-button {
 	@media not -moz-pref("gnomeTheme.allTabsButton") {
-		visibility: collapse;
+		display: none;
 	}
 	
 	@media -moz-pref("browser.tabs.tabmanager.enabled"), -moz-pref("gnomeTheme.allTabsButtonOnOverflow") {
 		#tabbrowser-tabs[overflow] ~ & {
-			visibility: visible;
+			display: revert;
 		}
 	}
 	
@@ -795,13 +948,13 @@ tab-group {
 }
 :root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
 	border-inline-start: 0 !important;
-	padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
+	padding-inline-start: 0 !important;
 	margin-inline-start: 0 !important;
 }
 
 /* OPTIONAL: Hide single tab */
 @media -moz-pref("gnomeTheme.hideSingleTab") and (not -moz-pref("sidebar.verticalTabs")) {
-	#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
+	#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
 		}
@@ -864,20 +1017,9 @@ tab-group {
 			}
 		}
 
-		/* Tabs separators */
-		:root[dir="ltr"] & {
-			tab:not(:first-of-type, [selected], :hover) {
-				--gnome-tabbar-tab-separator-hack1: linear-gradient(
-					to bottom,
-					var(--gnome-tabbar-tab-separator-hack0) 0,
-					var(--gnome-tabbar-tab-separator-hack0) 9px,
-					var(--gnome-tabbar-tab-separator-color) 9px,
-					var(--gnome-tabbar-tab-separator-color) 37px,
-					var(--gnome-tabbar-tab-separator-hack0) 37px,
-					var(--gnome-tabbar-tab-separator-hack0) 40px
-				) 1;
-				border-image: var(--gnome-tabbar-tab-separator-hack1);
-			}
+		/* Tabs separators: the padding is inverted here, so flip the insets */
+		tab::after {
+			inset-block: calc(var(--gnome-toolbar-padding) + 3px) 3px;
 		}
 		
 	}
@@ -909,27 +1051,27 @@ tab-group {
 
 	/* Blend single tab into whole bar */
 	@media -moz-pref("gnomeTheme.hideSingleTab") {
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) :is(
 			tab,
 			tab ~ toolbarbutton,
 			tab ~ #tabbrowser-arrowscrollbox-periphery
 		) {
 			visibility: visible;
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) tab {
 			-moz-window-dragging: drag !important;
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-background {
 			display: none !important
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-close-button {
 			visibility: hidden !important;
 			opacity: 0 !important;
 		}
-		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-content::before {
 			--gnome-tabbar-tab-close-overlay-bg: unset !important;
 		}
-		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
+		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-label-container[textoverflow] {
 			margin-inline-end: -16px;
 		}
 	}

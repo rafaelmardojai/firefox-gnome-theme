@@ -14,8 +14,11 @@
 	}
 }
 
-/* Main sidebar */
-#sidebar-main {
+/* Main sidebar (the launcher strip).
+ * Firefox 156 renamed #sidebar-main to #sidebar-container; both are listed so
+ * the strip keeps its background across versions. */
+#sidebar-main,
+#sidebar-container {
 	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
 }
@@ -40,7 +43,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 		& > moz-button:not(.tools-overflow) {
 			--button-outer-padding-inline: var(--gnome-toolbar-padding) !important;
 			--button-outer-padding-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
-			--toolbarbutton-active-background: var(--gnome-selected-color) !important;
+			--toolbarbutton-background-color-active: var(--gnome-selected-color) !important;
 
 			&:last-of-type {
 				--button-outer-padding-block-end: var(--gnome-toolbar-padding) !important;
@@ -55,6 +58,8 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 /* Sidebar content */
 #sidebar-box {
 	background-color: var(--gnome-sidebar-background) !important;
+	border: 0 !important;
+	border-radius: 0 !important;
 	padding: 0 !important;
 	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
 		#browser:has(#tabbrowser-tabbox[sidebar-shown]) & {
@@ -91,7 +96,10 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	padding: var(--gnome-toolbar-padding) !important;
 }
 
-/* Separator */
+/* Separator
+ * Painted as an opaque 1px background rather than a translucent border: the
+ * two splitters sit on different surfaces, so a translucent line came out
+ * darker on one side and lighter on the other. */
 #sidebar-splitter,
 #sidebar-launcher-splitter {
 	background-color: var(--gnome-sidebar-background) !important;
@@ -102,12 +110,18 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	width: 0 !important;
 	
 	@media not -moz-pref("sidebar.revamp.round-content-area") {
-		border-right: 1px solid var(--gnome-toolbar-border-color) !important;
+		background-color: var(--gnome-sidebar-border-color) !important;
+		width: 1px !important;
+		/* Its top row is covered by the panel above, so start one pixel
+		 * higher, under the toolbox border it has to meet. */
+		margin-block-start: -1px !important;
 	}
 	
 	@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
-		display: flex !important;
-    }
+		&:not([hidden]) {
+			display: flex !important;
+		}
+	}
 }
 
 #sidebar-launcher-splitter {
@@ -135,6 +149,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	padding-inline: var(--gnome-content-padding) !important;
 }
 .sidebar-panel-heading {
+	margin: 0 !important;
 	padding-block: var(--gnome-content-padding) !important;
 
 	> h4 {
@@ -204,4 +219,17 @@ link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested
 		gap: 0 !important;
 		margin: 0 !important;
 	}
+}
+
+/* Sidebar panel header row (history, bookmarks, synced tabs)
+ * The overflow menu button sits flush against the search entry; give it the
+ * usual toolbar spacing and a square hit area like other icon buttons. */
+.sidebar-panel-header,
+moz-input-search + moz-button,
+moz-button.menu-button {
+	margin-inline-start: var(--gnome-toolbar-spacing) !important;
+}
+moz-button.menu-button {
+	--button-size-icon: var(--gnome-button-size) !important;
+	--button-border-radius: var(--gnome-button-radius) !important;
 }

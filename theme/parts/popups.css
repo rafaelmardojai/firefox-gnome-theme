@@ -2,7 +2,7 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-menupopup:where(:not(.in-menulist)), panel {
+menupopup:where(:not(.in-menulist)), panel:not(.autoscroller) {
 	--gnome-menu-item-block-padding: 4px;
 	--gnome-menu-item-inline-padding: 12px;
 	--gnome-menu-item-padding: var(--gnome-menu-item-block-padding) var(--gnome-menu-item-inline-padding);
@@ -10,32 +10,45 @@ menupopup:where(:not(.in-menulist)), panel {
 	--gnome-menu-item-margin: 0 var(--gnome-menu-item-inline-margin);
 	--gnome-menu-item-radius: var(--gnome-button-radius);
 	
-	--panel-background: var(--gnome-menu-background) !important;
+	/* Panel/popover surface (Firefox 156 token names) */
+	--panel-background-color: var(--gnome-menu-background) !important;
+	--panel-text-color: var(--gnome-menu-color) !important;
+	--panel-border-color: var(--gnome-menu-border-color) !important;
 	--panel-border-radius: var(--gnome-popover-radius) !important;
-	--panel-padding: var(--gnome-menu-padding) !important;	
-	--panel-shadow: var(--gnome-menu-shadow) !important;
+	--panel-padding: var(--gnome-menu-padding) !important;
+	--panel-padding-block: var(--gnome-menu-padding) !important;
+	--panel-box-shadow: var(--gnome-menu-shadow) !important;
 	--panel-separator-color: var(--gnome-menu-separator-color) !important;
-	--panel-separator-padding-vertical: var(--gnome-menu-padding) !important;
-	--panel-separator-padding-horizontal: var(--gnome-menu-padding) !important;
-	
-	/* Context menu items */
+
+	/* Menu items (shared by context menus and popovers since Firefox 156) */
 	--menuitem-padding: var(--gnome-menu-item-padding) !important;
+	--menuitem-padding-block: var(--gnome-menu-item-block-padding) !important;
+	--menuitem-padding-inline: var(--gnome-menu-item-inline-padding) !important;
 	--menuitem-margin: var(--gnome-menu-item-margin) !important;
 	--menuitem-border-radius: var(--gnome-menu-item-radius) !important;
-	
-	/* Popover menu items */
-	--arrowpanel-padding: var(--gnome-menu-padding) !important;
-	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
-	--arrowpanel-border-radius: var(--gnome-popover-radius) !important;
-	--arrowpanel-menuitem-margin: var(--gnome-menu-item-margin) !important;
-	--arrowpanel-menuitem-padding: var(--gnome-menu-item-padding) !important;
-	--arrowpanel-menuitem-border-radius: var(--gnome-menu-item-radius) !important;
+	--menuitem-hover-bg: var(--gnome-selected-color) !important;
+	--menuitem-active-bg: var(--gnome-selected-active-color) !important;
+	--menuitem-focus-bg: var(--gnome-selected-color) !important;
+
+	/* Firefox 156 renders some panel rows as moz-button, which hover at 7%
+	 * (ghost) or 15% (regular) while menu items hover at 10%, so visually
+	 * identical rows react differently. Adwaita knows one value for menu
+	 * rows: `popover.menu modelbutton` at 10%, active 19%. */
+	--button-background-color-hover: var(--gnome-selected-color) !important;
+	--button-background-color-active: var(--gnome-selected-active-color) !important;
+	--button-background-color-ghost-hover: var(--gnome-selected-color) !important;
+	--button-background-color-ghost-active: var(--gnome-selected-active-color) !important;
+
+	/* Panel item buttons */
+	--panel-item-padding: var(--gnome-menu-item-padding) !important;
+	--panel-item-button-border-radius: var(--gnome-menu-item-radius) !important;
+	--panel-item-button-margin: var(--gnome-menu-item-margin) !important;
+	--panel-item-button-padding: var(--gnome-menu-item-padding) !important;
 }
 
 panel:not([remote]) {
-	--arrowpanel-background: var(--gnome-menu-background) !important;
-	--arrowpanel-color: var(--gnome-menu-color) !important;
-	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
+	--panel-background-color: var(--gnome-menu-background) !important;
+	--panel-text-color: var(--gnome-menu-color) !important;
 }
 
 /* Menus */
@@ -62,7 +75,7 @@ menulist > menupopup menuitem {
 	font-weight: normal !important;
 }
 
-menulist > menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
+menulist > menupopup menuitem[_moz-menuactive]:not([disabled]) {
 	color: revert !important;
 	background: revert !important;
 	background-color: revert !important;
@@ -94,7 +107,7 @@ menulist {
 
 /* Menu items */
 @media not -moz-pref("gnomeTheme.noThemedIcons") {
-	menuitem:is([type="checkbox"], [checked="true"]) .menu-icon,
+	menuitem:is([type="checkbox"], [checked]) .menu-icon,
 	menuitem[type="radio"] .menu-icon {
 		visibility: collapse !important;
 	}
@@ -125,17 +138,17 @@ menuitem {
 
 menu, menuitem {
 	margin-inline: 0 !important;
-	&:where([_moz-menuactive]:not([disabled="true"])) {
+	&:where([_moz-menuactive]:not([disabled])) {
 		color: currentColor;
 		background-color: transparent !important;
 	}
 }
 
-menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
+menuitem[disabled]:hover, menupopup menu[disabled]:hover {
 	background: transparent !important;
 }
 
-.menu-iconic-icon {
+.menu-icon {
 	padding: 0 !important;
 }
 
@@ -192,19 +205,31 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
 	min-height: 32px !important;
 
 	&:hover, &[_moz-menuactive], &:focus, &:focus-within {
-		&:not([disabled="true"]) {
+		&:not([disabled]) {
 			background: var(--gnome-selected-color) !important;
 		}
 		outline: 0 !important;
 	}
 
-	&[disabled="true"] {
+	&[disabled] {
 		opacity: .5 !important;
 	}
 
-	&[disabled="true"][_moz-menuactive] {
+	&[disabled][_moz-menuactive] {
 		background: transparent !important;
 	}
+}
+
+/* Firefox gives panel rows a literal border-radius instead of using the menu
+ * item token: --border-radius-small (4px) for most rows and
+ * --border-radius-circle (9999px) for the account row, so rows in the same
+ * list end up with three different shapes. */
+panelview .subviewbutton,
+panelview .toolbarbutton-1,
+.PanelUI-subView .subviewbutton,
+#PanelUI-fxa-menu-manage-account-button,
+#PanelUI-fxa-menu-sync-status-button {
+	border-radius: var(--gnome-menu-item-radius) !important;
 }
 
 .moz-button-subviewbutton-nav {

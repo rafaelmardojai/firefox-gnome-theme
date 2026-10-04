@@ -7,10 +7,14 @@
 	/* moz-button */
 	--button-border-radius: var(--gnome-button-radius) !important;	
 	--button-background-color: var(--gnome-button-background) !important;
+	/* Nova borders secondary buttons with the accent. Adwaita keeps them flat. */
+	--button-border-color: transparent !important;
     --button-background-color-hover: var(--gnome-button-hover-background) !important;
 	--button-background-color-active: var(--gnome-button-active-background) !important;
 	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
     --button-background-color-ghost-active: var(--gnome-active-color) !important;
+	--button-size-icon: var(--gnome-button-size) !important;
+	--button-min-height: var(--gnome-button-size) !important;
 }
 
 /* Hide buttons separator */
@@ -30,7 +34,7 @@ menulist,
 .panel-footer button,
 #downloadsPanel-mainView .download-state .downloadButton,
 #appMenu-popup .panel-banner-item,
-#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(#appMenu-fxa-label),
+#appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(#appMenu-fxa-label2),
 #context-navigation menuitem,
 .identity-popup-preferences-button:not(#hack),
 .findbar-container toolbarbutton,
@@ -72,9 +76,14 @@ button.close,
 	outline: 0 !important;
 	padding: 0 1px !important;
 	transition: background var(--gnome-animation-time);	
+
+	/* The ones in here that carry a label need room for it */
+	&:is(#viewButton, #sidebar-switcher-target) {
+		padding-inline: var(--gnome-menu-item-inline-padding, 12px) !important;
+	}
 	-moz-box-align: center !important;	
 
-	&:not([disabled="true"]) {
+	&:not([disabled]) {
 		/* Hover buttons */
 		&:hover {
 			outline: 0 !important;
@@ -98,7 +107,7 @@ button.close,
 	}
 
 	/* Disabled buttons */
-	&[disabled="true"] {
+	&[disabled] {
 		opacity: 0.5 !important;
 	}
 	
@@ -124,7 +133,7 @@ button.close,
 	background-color: transparent !important;
 	transition: background var(--gnome-animation-time);
 
-	&:not([disabled="true"]):not(#hack) {
+	&:not([disabled]):not(#hack) {
 		/* Hover buttons */
 		&:hover {
 			background-color: var(--gnome-hover-color) !important;
@@ -147,7 +156,7 @@ button.close,
 	}
 
 	/* Disabled buttons */
-	&[disabled="true"] {
+	&[disabled] {
 		opacity: 0.3 !important;
 	}
 }
@@ -163,7 +172,7 @@ button.popup-notification-primary-button:not(#hack),
 	--gnome-button-active-background: var(--gnome-button-suggested-background) !important;
 	color: white !important;
 
-	&:not([disabled="true"]) {
+	&:not([disabled]) {
 		&:hover {
 			background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)) !important;
 		}
