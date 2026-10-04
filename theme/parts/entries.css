@@ -149,6 +149,7 @@ link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input:fo
 .urlbar-input-container {
 	background: transparent !important;
 	border: 0 !important;
+	border-radius: 0 !important;
 }
 #urlbar, #searchbar {
 	margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
