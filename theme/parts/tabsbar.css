@@ -591,6 +591,21 @@ tab-group {
 			margin-inline: calc((var(--gnome-toolbar-spacing) / 2) * -1) !important;
 		}
 	}
+
+	/* Vertical and expanded, the tabs of a group are pushed 11px to the side
+	 * to clear the group line. They end up in a narrower band than every
+	 * other tab, with the gap on one side only. Collapsed, Firefox keeps them
+	 * in line and puts the line in the gutter instead; expanded does the
+	 * same here. */
+	#tabbrowser-tabs[orient="vertical"][expanded] & {
+		> .tabbrowser-tab {
+			margin-inline-start: 0 !important;
+		}
+
+		.tab-group-line {
+			inset-inline-start: calc((var(--gnome-toolbar-padding) - var(--tab-group-line-thickness)) / 2) !important;
+		}
+	}
 }
 
 .tab-group-label-container {
