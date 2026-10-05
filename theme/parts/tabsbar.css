@@ -562,6 +562,15 @@ tab-split-view-wrapper {
 	margin-block: 0 !important;
 	margin-bottom: var(--gnome-toolbar-padding) !important;
 
+	/* As soon as one of the two tabs is current, Firefox tints the whole pair
+	 * with the hover colour and fills that tab on top of it. Two greys over
+	 * each other read as a smudge, and the other half ends up looking half
+	 * selected. Everywhere else the strip shows one filled tab among plain
+	 * ones, and the pair does the same. */
+	&[hasactivetab] {
+		background-color: transparent !important;
+	}
+
 	/* With neither of the two tabs current, Firefox divides the halves with a
 	 * line in the icon colour, which comes out as hard as the text. The
 	 * separators between tabs in the theme are a faint tint. */
