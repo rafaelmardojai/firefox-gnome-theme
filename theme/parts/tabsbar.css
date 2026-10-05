@@ -561,14 +561,42 @@ tab-split-view-wrapper {
 	padding: 0 !important;
 	margin-block: 0 !important;
 	margin-bottom: var(--gnome-toolbar-padding) !important;
+
+	/* Vertical tabs: Firefox lets the two halves run to both edges of the
+	 * strip, so the pair ends up wider than the tabs above and below it and
+	 * sits off centre. Inset it like any other tab and let the halves fill
+	 * what is left. */
+	#tabbrowser-tabs[orient="vertical"] & {
+		margin-inline: var(--gnome-toolbar-padding) !important;
+
+		> .tabbrowser-tab .tab-background {
+			margin-inline: 0 !important;
+		}
+	}
 	
 	/* Horizontal tabs only */
 	#tabbrowser-tabs[orient="horizontal"] & {		
+		/* The pair reads as one tab: the outer edges line up with the tabs
+		 * next to it, and the two halves share the width with a small gap. */
+		margin-inline: calc(var(--gnome-toolbar-spacing) / 2) !important;
+		column-gap: calc(var(--split-view-tab-padding-inline) * 2) !important;
+
 		/* Not in collapsed tab-group */
 		:not([collapsed]) > & {
 			> .tabbrowser-tab  {
 				padding: 0 !important;
 				border: 0 !important;
+
+				.tab-background {
+					margin-inline: 0 !important;
+				}
+
+				/* The second half is :last-of-type inside the wrapper, but it
+				 * is not the last tab of the strip and takes none of its
+				 * trailing padding. */
+				&:not([hidden]):last-of-type {
+					padding-right: 0 !important;
+				}
 			}
 			
 			/* Full width tabs */
