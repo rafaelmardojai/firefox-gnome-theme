@@ -241,6 +241,15 @@ toolbarspring {
 	margin: 0 !important;
 	height: 100%  !important;
 }
+
+/* 157 turned some of these into HTML images, where height: 100% scales the
+ * picture instead of the box. Keep the glyph at icon size and the hit area. */
+#urlbar img.urlbar-icon {
+	box-sizing: content-box !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding: 13px !important;
+}
 #notification-popup-box {
 	height: 100%  !important;
 }
