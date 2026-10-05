@@ -242,6 +242,8 @@ moz-button.menu-button {
 	--fxview-background-color-secondary: var(--gnome-card-background) !important;
 	--fxview-text-primary-color: var(--gnome-window-color) !important;
 	--fxview-primary-action-background: var(--gnome-accent) !important;
+	--card-header-background-color-hover: var(--gnome-hover-color) !important;
+	--card-header-background-color-active: var(--gnome-active-color) !important;
 
 	/* The card radius comes from --border-radius-large, wider than anything
 	 * else here, and the header draws a filled bar. Adwaita keeps list
@@ -260,4 +262,16 @@ moz-button.menu-button {
 .fxview-tab-row-main:hover,
 .fxview-tab-row-main:hover:active {
 	color: inherit !important;
+}
+
+/* The rows are drawn as pills. Lists elsewhere in the theme are rounded like
+ * tabs and buttons. */
+sidebar-tab-row {
+	border-radius: var(--gnome-button-radius) !important;
+}
+
+/* The header of an open card keeps a square bottom edge, so its hover
+ * highlight comes out as a half rounded bar. */
+summary[part~="summary"] {
+	border-radius: var(--gnome-button-radius) !important;
 }
