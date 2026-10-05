@@ -252,3 +252,12 @@ moz-button.menu-button {
 	--card-box-shadow: none !important;
 	--card-header-background-color: transparent !important;
 }
+
+/* Every row in those panels is an anchor, and global.css paints anchors in the
+ * accent colour. A list entry is not a link in running text, so it takes the
+ * text colour of the panel. */
+.fxview-tab-row-main,
+.fxview-tab-row-main:hover,
+.fxview-tab-row-main:hover:active {
+	color: inherit !important;
+}
