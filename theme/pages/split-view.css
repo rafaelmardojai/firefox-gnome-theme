@@ -1,0 +1,16 @@
+/* Split view */
+
+@-moz-document url("chrome://browser/content/tabbrowser/opentabs.html") {
+	/* The page that asks which tab to add to a split view paints a fixed
+	 * violet to pink gradient, which follows neither the window background
+	 * nor the dark variant. */
+	:root {
+		background: var(--gnome-window-background) !important;
+	}
+
+	/* The heading rides on a sticky bar that repeats the gradient. It sits in
+	 * a shadow tree, so it needs a rule of its own. */
+	.sticky-header {
+		background: var(--gnome-window-background) !important;
+	}
+}
