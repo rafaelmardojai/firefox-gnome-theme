@@ -562,6 +562,35 @@ tab-split-view-wrapper {
 	margin-block: 0 !important;
 	margin-bottom: var(--gnome-toolbar-padding) !important;
 
+	/* With neither of the two tabs current, Firefox divides the halves with a
+	 * line in the icon colour, which comes out as hard as the text. The
+	 * separators between tabs in the theme are a faint tint. */
+	&:not([hasactivetab]) > .tabbrowser-tab {
+		/* The line sits on the tab and runs the full height of the row.
+		 * Drawn separately instead, like the separators between tabs: same
+		 * colour, 1px, stopping where the tab does. */
+		border-inline-start-color: transparent !important;
+
+		&:last-child {
+			position: relative;
+
+			&::after {
+				background-color: var(--gnome-tabbar-tab-separator-color);
+				content: "";
+				inset-block: var(--tab-margin-block);
+				inset-inline-start: calc(var(--split-view-tab-padding-inline) * -1);
+				pointer-events: none;
+				position: absolute;
+				width: 1px;
+			}
+		}
+
+		/* Stacked, in a narrow strip, the halves are divided the other way. */
+		&:first-child {
+			border-block-end-color: var(--gnome-tabbar-tab-separator-color) !important;
+		}
+	}
+
 	/* Vertical tabs: Firefox lets the two halves run to both edges of the
 	 * strip, so the pair ends up wider than the tabs above and below it and
 	 * sits off centre. Inset it like any other tab and let the halves fill
