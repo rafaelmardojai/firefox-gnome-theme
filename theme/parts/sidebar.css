@@ -233,3 +233,22 @@ moz-button.menu-button {
 	--button-size-icon: var(--gnome-button-size) !important;
 	--button-border-radius: var(--gnome-button-radius) !important;
 }
+
+/* Panels built from the Firefox View components: synced tabs, history and
+ * bookmarks. The empty state and the row buttons read their colours from
+ * --fxview-*, the sections are moz-card and read --card-*. Both inherit into
+ * the panel document. */
+:root {
+	--fxview-background-color-secondary: var(--gnome-card-background) !important;
+	--fxview-text-primary-color: var(--gnome-window-color) !important;
+	--fxview-primary-action-background: var(--gnome-accent) !important;
+
+	/* The card radius comes from --border-radius-large, wider than anything
+	 * else here, and the header draws a filled bar. Adwaita keeps list
+	 * headers plain and lets the rows carry the surface. */
+	--card-background-color: transparent !important;
+	--card-border-radius: var(--gnome-card-radius) !important;
+	--card-border: none !important;
+	--card-box-shadow: none !important;
+	--card-header-background-color: transparent !important;
+}
