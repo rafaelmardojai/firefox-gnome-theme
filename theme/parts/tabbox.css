@@ -47,10 +47,26 @@
 
 /* Tab panels */
 #tabbrowser-tabpanels {
+	/* A split view sets every panel 6px off its neighbours and off the window,
+	 * which leaves a 20px channel between the two pages and frames each one.
+	 * GNOME keeps the split flush, the same way the single content area is
+	 * flush against the toolbox and the sidebar. */
 	&[splitview] {
 		& .split-view-panel.split-view-panel-active {
-			margin: var(--gnome-toolbar-padding) !important;
-			margin-top: 0 !important;
+			margin: 0 !important;
+		}
+
+		/* What separates the two pages is the one line the splitter draws.
+		 * Opaque rather than translucent, like the sidebar splitter: the
+		 * pages behind it carry their own colours. */
+		& .split-view-splitter {
+			background-color: var(--gnome-toolbar-border-color) !important;
+			border: 0 !important;
+			border-radius: 0 !important;
+			margin: 0 !important;
+			outline: 0 !important;
+			transition: none !important;
+			width: 1px !important;
 		}
 	}
 }
