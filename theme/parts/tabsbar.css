@@ -674,6 +674,12 @@ tab-group {
 	}
 }
 
+/* Vertical, the first tab only gets its own 3px of block padding at the top
+ * while the sides inset by 6, so the strip starts closer than it ends. */
+#tabbrowser-tabs[orient="vertical"] {
+	padding-block-start: 3px !important;
+}
+
 .tab-group-label-container {
 	padding-bottom: 0 !important;
 
@@ -699,7 +705,27 @@ tab-group {
 	
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-block: 0 !important;
-		margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
+		margin-inline: 0 !important;
+
+		/* Vertical, a group label is a row of its own, so give it the box a
+		 * tab gets instead of a small pill floating in the row. */
+		/* The container is a column flex, so the label needs to stretch on the
+		 * cross axis to fill the row like a tab does. */
+		padding-block: 3px !important;
+
+		> .tab-group-label-hover-highlight {
+			width: 100% !important;
+			margin-inline: 0 !important;
+			padding-inline: 0 !important;
+
+			> .tab-group-label {
+				align-self: stretch !important;
+				min-height: var(--tab-min-height) !important;
+				line-height: var(--tab-min-height) !important;
+				margin-inline: var(--gnome-toolbar-padding) !important;
+				text-align: start !important;
+			}
+		}
 	}
 	
 	#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
