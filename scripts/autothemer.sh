@@ -180,6 +180,15 @@ HEX_TO_RGBA() {
     echo "rgba($r, $g, $b, 0.8)"
 }
 
+# The generated colors go between these markers. customChrome.css belongs to
+# the user -- userChrome.css documents it as the file for your own styles,
+# "preserved between updates" -- so everything outside the markers is kept as
+# it was, and re-running only ever replaces this script's own block.
+CUSTOM_CSS_BEGIN="/* >>> firefox-gnome-theme autothemer: generated colors. Do not edit inside this block. */"
+CUSTOM_CSS_END="/* <<< firefox-gnome-theme autothemer: end of generated colors. */"
+
+AUTOTHEMER_CSS=""
+
 write_colors_to_custom_css() {
     local mode="$1"
     local bg="$2"
@@ -188,14 +197,12 @@ write_colors_to_custom_css() {
     local sidebar="$5"
     local view="$6"
     local backdrop_bg="$7"
-    
-    local css_file="$THEME_DIR/customChrome.css"
-    TEXT_RGBA=$(HEX_TO_RGBA "$text")
-    
-    if [[ "$mode" == "light" ]]; then
-        cat > "$css_file" << EOF
-@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+    local block
+    TEXT_RGBA=$(HEX_TO_RGBA "$text")
+
+    if [[ "$mode" == "light" ]]; then
+        block=$(cat << EOF
 :root {
 	--gnome-window-background: $bg;
 	--gnome-window-color: $TEXT_RGBA;
@@ -205,8 +212,9 @@ write_colors_to_custom_css() {
 	--gnome-secondary-sidebar-background: $backdrop_bg;
 }
 EOF
+)
     else
-        cat >> "$css_file" << EOF
+        block=$(cat << EOF
 @media (prefers-color-scheme: dark) {
 	:root {
 		--gnome-window-background: $bg;
@@ -218,9 +226,38 @@ EOF
 	}
 }
 EOF
+)
     fi
 
-    echo "Applied $mode colors to: $css_file"
+    AUTOTHEMER_CSS+="$block"$'\n'
+    echo "Prepared $mode colors"
+}
+
+commit_custom_css() {
+    local css_file="$THEME_DIR/customChrome.css"
+    local kept=""
+
+    if [[ -z "$AUTOTHEMER_CSS" ]]; then
+        echo "No colors to write."
+        return
+    fi
+
+    if [[ -f "$css_file" ]]; then
+        kept=$(awk -v begin="$CUSTOM_CSS_BEGIN" -v end="$CUSTOM_CSS_END" '
+            $0 == begin { skipping = 1; next }
+            $0 == end   { skipping = 0; next }
+            !skipping
+        ' "$css_file")
+    fi
+
+    {
+        if [[ -n "${kept//[[:space:]]/}" ]]; then
+            printf '%s\n\n' "$kept"
+        fi
+        printf '%s\n%s%s\n' "$CUSTOM_CSS_BEGIN" "$AUTOTHEMER_CSS" "$CUSTOM_CSS_END"
+    } > "$css_file.tmp" && mv "$css_file.tmp" "$css_file"
+
+    echo "Applied colors to: $css_file"
 }
 
 echo "Theme: $GTK_THEME"
@@ -254,5 +291,7 @@ if [[ -n "$DARK_THEME" ]]; then
     echo ""
     write_colors_to_custom_css "dark" "$BG_D" "$TEXT_D" "$ACCENT_D" "$SIDEBAR_D" "$VIEW_D" "$BACKDROP_BG_D"
 fi
+
+commit_custom_css
 
 echo "Done! Restart Firefox to see changes."
