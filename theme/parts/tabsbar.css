@@ -1004,16 +1004,24 @@ tab-group {
 			padding-bottom: 0px !important;
 			padding-top: var(--gnome-toolbar-padding) !important;
 		}
+		/* The collapsed-group rule restores the bottom padding; it is on top here */
+		tab-group[collapsed] > .tabbrowser-tab {
+			padding-block-end: 0 !important;
+		}
 		
-		/* Move tab group line to top */
+		/* Move tab group line to top, keeping Firefox's distance to the edge */
 		.tab-group-label-container::after {
-			inset: 0 !important;
+			inset: var(--tab-group-line-toolbar-border-distance) 0 auto !important;
+		}
+		/* Tabs sit at the bottom here, so the label follows */
+		.tab-group-label-container > .tab-group-label-hover-highlight {
+			margin-block: auto 0 !important;
 		}
 		tab-group {
 			.tab-group-line {
 				margin-block-end: 0 !important;
 				margin-block-start: calc(var(--gnome-toolbar-padding) * -1) !important;
-				top: 0 !important;
+				top: var(--tab-group-line-toolbar-border-distance) !important;
 			}
 		}
 
