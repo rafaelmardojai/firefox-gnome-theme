@@ -1106,8 +1106,10 @@ tab-group {
 			}
 		}
 
-		/* Tabs separators: the padding is inverted here, so flip the insets */
-		tab::after {
+		/* Tabs separators: the padding is inverted here, so flip the insets.
+		 * Same selectors as the rule that draws them, or that one wins. */
+		tab:not(:first-of-type)::after,
+		&:has(#pinned-tabs-container > tab:not([hidden])) #tabbrowser-arrowscrollbox > tab:first-of-type::after {
 			inset-block: calc(var(--gnome-toolbar-padding) + 3px) 3px;
 		}
 		
