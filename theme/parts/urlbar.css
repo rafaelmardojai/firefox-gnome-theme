@@ -66,28 +66,22 @@ toolbarspring {
  * radius and an inset it squares off the URL bar's rounded corner. */
 #urlbar .searchmode-switcher {
 	--button-border-radius: var(--gnome-button-radius) !important;
-	--button-background-color: transparent !important;
-	--button-background-color-hover: var(--gnome-hover-color) !important;
-	--button-background-color-active: var(--gnome-active-color) !important;
-	--button-background-color-ghost: transparent !important;
-	--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
-	--button-background-color-ghost-active: var(--gnome-active-color) !important;
+	--button-background-color-muted: transparent !important;
+	--button-background-color-muted-hover: var(--gnome-hover-color) !important;
+	--button-background-color-muted-active: var(--gnome-active-color) !important;	
+	--button-background-color-muted-selected: var(--gnome-active-color) !important;	
 	background-color: transparent !important;
-	border-radius: var(--gnome-button-radius) !important;
-	margin-inline-start: calc(var(--gnome-toolbar-padding) / 2) !important;
+	height: var(--gnome-button-size) !important; 
 
 	#urlbar[searchmode] & {
-		--button-background-color: var(--gnome-selected-color) !important;
-		--button-background-color-hover: var(--gnome-selected-hover-color) !important;
-		--button-background-color-active: var(--gnome-selected-active-color) !important;
-		--button-background-color-ghost: var(--gnome-selected-color) !important;
-		--button-background-color-ghost-hover: var(--gnome-selected-hover-color) !important;
-		--button-background-color-ghost-active: var(--gnome-selected-active-color) !important;
+		--button-background-color-muted: var(--gnome-button-background)  !important;
+		--button-background-color-muted-hover: var(--gnome-button-hover-background) !important;
+		--button-background-color-muted-active: var(--gnome-button-active-background) !important;	
+		--button-background-color-muted-selected: var(--gnome-button-active-background)  !important;	
 	}
 }
 .searchmode-switcher-title {
 	color: var(--gnome-window-color);
-	font-weight: bold;
 }
 .searchmode-switcher-close {
 	background-size: 16px !important;
