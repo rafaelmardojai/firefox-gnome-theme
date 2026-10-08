@@ -1,0 +1,61 @@
+/* Split view */
+
+@-moz-document url("chrome://browser/content/tabbrowser/opentabs.html") {
+	/* The page that asks which tab to add to a split view paints a fixed
+	 * violet to pink gradient, which follows neither the window background
+	 * nor the dark variant. */
+	:root {
+		background: var(--gnome-window-background) !important;
+
+		/* The page carries its own violet palette: lavender for the row
+		 * under the pointer, a violet tinted text colour. */
+		--text-color: var(--gnome-window-color) !important;
+		--button-background-color-ghost-hover: var(--gnome-hover-color) !important;
+		--button-background-color-ghost-active: var(--gnome-active-color) !important;
+		--card-background-color: var(--gnome-card-background) !important;
+	}
+
+	/* The card around the tab list is wider in the corners than any other
+	 * card in the theme. */
+	moz-card {
+		--card-border-radius: var(--gnome-card-radius) !important;
+	}
+
+	/* The heading rides on a sticky bar that repeats the gradient. It sits in
+	 * a shadow tree, so it needs a rule of its own. */
+	.sticky-header {
+		background: var(--gnome-window-background) !important;
+	}
+
+	/* The rows are drawn as pills. Lists elsewhere in the theme are rounded
+	 * like tabs and buttons. */
+	sidebar-tab-row {
+		border-radius: var(--gnome-button-radius) !important;
+	}
+
+	/* The row of the tab you are in is ringed with the violet to orange
+	 * gradient of the active tab. The theme marks a selection by filling it. */
+	sidebar-tab-row[current] {
+		background: var(--gnome-selected-color) !important;
+		border: 0 !important;
+		outline: 0 !important;
+		color: inherit !important;
+	}
+
+	/* The search field is a pill with a drawn border, while entries in the
+	 * theme are filled and rounded like a button. */
+	link[href="chrome://global/content/elements/moz-input-common.css"] ~ * #input {
+		background-color: var(--gnome-entry-background) !important;
+		border: 0 !important;
+		border-radius: var(--gnome-entry-radius) !important;
+		box-shadow: none !important;
+		color: var(--gnome-entry-color) !important;
+		height: var(--gnome-entry-height) !important;
+		outline: 2px solid transparent !important;
+
+		&:focus {
+			outline: 2px solid var(--gnome-entry-focused-border-color) !important;
+			outline-offset: -2px;
+		}
+	}
+}
