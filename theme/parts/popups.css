@@ -51,6 +51,12 @@ panel:not([remote]) {
 	--panel-text-color: var(--gnome-menu-color) !important;
 }
 
+/* The popup takes the page's colour scheme, so the list keeps FieldText
+ * while the panel is painted with the menu surface. */
+#PopupAutoComplete .autocomplete-richlistbox {
+	color: inherit !important;
+}
+
 /* Menus */
 menupopup:where(:not(.in-menulist)) {
 	appearance: none !important;	
