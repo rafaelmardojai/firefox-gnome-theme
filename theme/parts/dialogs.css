@@ -9,6 +9,7 @@ window {
 
 dialog {	
 	padding: var(--gnome-dialog-padding) !important;
+	color: var(--gnome-window-color);
 }
 
 /* Dialog box */
