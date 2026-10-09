@@ -28,6 +28,13 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 		justify-content: center !important;
 		min-height: calc(var(--gnome-button-size) + (var(--gnome-toolbar-padding) * 2)) !important;
 
+		/* The tools stack while the settings button sits next to them, so the
+		 * launcher is twice as wide as it needs to be. Put them in one column. */
+		&:has(> .tools-and-extensions[orientation="vertical"]) {
+			flex-direction: column !important;
+			justify-content: flex-end !important;
+		}
+
 		@media -moz-pref("sidebar.visibility", "expand-on-hover") {
 			padding-block-end: 0 !important;
 		}
