@@ -113,6 +113,20 @@ toolbarspring {
 	border: 0 !important;
 }
 
+/* 158 drops .urlbarView-body-outer, which is where the surface was painted,
+ * so the view came out with nothing behind it. The joint background is the
+ * only one left, square it up with the view. */
+.urlbarView:not(:has(> .urlbarView-body-outer)) > .urlbarView-background {
+	background: var(--gnome-menu-background) !important;
+	border-radius: var(--gnome-popover-radius) !important;
+	clip-path: none !important;
+	inset: 0 !important;
+}
+/* The padding lived on the body too. */
+.urlbarView:not(:has(> .urlbarView-body-outer)) > .urlbarView-results {
+	padding: var(--gnome-menu-padding) calc(var(--gnome-menu-padding) + 2px) !important;
+}
+
 .urlbarView-body-outer {
     background: var(--gnome-menu-background) !important;
 	overflow-x: auto;
