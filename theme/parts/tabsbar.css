@@ -714,12 +714,10 @@ tab-group {
 		padding-block: 3px !important;
 
 		> .tab-group-label-hover-highlight {
-			width: 100% !important;
 			margin-inline: 0 !important;
 			padding-inline: 0 !important;
 
 			> .tab-group-label {
-				align-self: stretch !important;
 				min-height: var(--tab-min-height) !important;
 				line-height: var(--tab-min-height) !important;
 				margin-inline: var(--gnome-toolbar-padding) !important;
