@@ -2,12 +2,9 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* TODO: create list color vars */
 /* List container */
 #permission-popup-permission-list,
 richlistbox#items {
-	--in-content-item-selected: var(--gnome-accent-bg) !important;
-	--in-content-item-selected-text: #fff !important;
 	background: var(--gnome-card-background) !important;
 	border: 0 !important;
 	border-radius: var(--gnome-card-radius) !important;
@@ -41,9 +38,13 @@ richlistbox#items richlistitem:not(:last-child) {
 	border: 0 !important;
 }
 
-/* Fix list buttons on selected state */
-@media (prefers-color-scheme: light) {
-	richlistbox#items richlistitem[selected=true] button {
-		filter: invert() brightness(200%) !important;
-	}
+/* Selected item: GNOME tints the row with the accent and keeps the text color,
+ * so no inverted foreground is needed. */
+richlistbox#items richlistitem[selected],
+richlistbox#items:focus richlistitem[selected] {
+	background-color: var(--gnome-view-selected-background) !important;
+	color: inherit !important;
+}
+richlistbox#items richlistitem[selected]:hover {
+	background-color: var(--gnome-view-selected-hover-background) !important;
 }

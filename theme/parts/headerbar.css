@@ -8,7 +8,9 @@
 	padding: var(--gnome-toolbar-padding) calc(var(--gnome-toolbar-padding) / 2) !important;
 }
 
-/* Add private window headerbar indicator */
+/* Add private window headerbar indicator.
+ * Clipping at the top and bottom edge is
+ * intentional, mimicking GNOME Web  */
 :root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
 	background: var(--gnome-icon-eye-not-looking-symbolic) no-repeat;
 	background-size: 64px 64px;

@@ -101,7 +101,3 @@ radio > .radio-check[selected] {
 link[href="chrome://global/content/elements/moz-toggle.css"] ~ .content-wrapper {
 	margin-inline: 0 !important;
 }
-link[href="chrome://global/content/elements/moz-toggle.css"] ~ .description {
-	--input-space-offset: calc(48px + 12px) !important;
-	margin-block-start: 0 !important;
-}

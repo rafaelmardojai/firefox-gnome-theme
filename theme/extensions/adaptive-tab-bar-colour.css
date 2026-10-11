@@ -9,18 +9,18 @@
 	/* Menu */
 	--gnome-menu-background: var(
 		--panel-background-color,
-		var(--arrowpanel-background, color-mix(in oklab, var(--toolbar-bgcolor), var(--lwt-text-color) 10%))
+		color-mix(in oklab, var(--toolbar-background-color), var(--lwt-text-color) 10%)
 	);
 	--gnome-menu-color: var(--lwt-text-color);
 	/* Header bar */
-	--gnome-headerbar-background: var(--toolbar-bgcolor) !important;
+	--gnome-headerbar-background: var(--toolbar-background-color) !important;
 	/* Toolbars */
 	--gnome-toolbar-border-color: transparent;
-	--gnome-toolbar-background: var(--toolbar-bgcolor);
+	--gnome-toolbar-background: var(--toolbar-background-color);
 	--gnome-toolbar-icon-fill: var(--toolbarbutton-icon-fill);
 	/* Entries */
 	--gnome-entry-background: var(--toolbar-field-background-color);
-	--gnome-entry-color: var(--toolbar-field-color);
+	--gnome-entry-color: var(--toolbar-field-text-color);
 	--gnome-inactive-entry-color: hsl(from var(--gnome-entry-color) h s calc(l + 5%));
 	--gnome-entry-focused-border-color: var(--gnome-selection-bg);
 	/* Tabs */
@@ -46,16 +46,15 @@
 			--sidebar-background-color: #28282c !important;
 		}
 
-		--toolbar-bgcolor: var(--lwt-accent-color) !important;
+		--toolbar-background-color: var(--lwt-accent-color) !important;
 		--toolbar-color: var(--lwt-text-color) !important;
-		--toolbar-field-color: var(--lwt-text-color) !important;
+		--toolbar-field-text-color: var(--lwt-text-color) !important;
 		--toolbarbutton-icon-fill: var(--lwt-text-color) !important;
-		--toolbar-field-focus-background-color: Field !important;
-		--arrowpanel-background: color-mix(in oklab, var(--toolbar-bgcolor), var(--lwt-text-color) 10%) !important;
-		--panel-background-color: var(--arrowpanel-background) !important;
-		--toolbar-field-background-color: var(--arrowpanel-background) !important;
-		--tab-selected-bgcolor: color-mix(in oklab, var(--gnome-tabbar-background), var(--lwt-text-color) 20%) !important;
-		--lwt-tab-line-color: var(--tab-selected-bgcolor) !important;
+		--toolbar-field-background-color-focus: Field !important;
+		--panel-background-color: color-mix(in oklab, var(--toolbar-background-color), var(--lwt-text-color) 10%) !important;
+		--toolbar-field-background-color: var(--panel-background-color) !important;
+		--tab-background-color-selected: color-mix(in oklab, var(--gnome-tabbar-background), var(--lwt-text-color) 20%) !important;
+		--lwt-tab-line-color: var(--tab-background-color-selected) !important;
 	}
 }
 

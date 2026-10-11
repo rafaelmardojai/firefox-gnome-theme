@@ -11,21 +11,9 @@
 	padding-inline: var(--gnome-menu-item-inline-padding) !important;
 }
 
-#appMenu-fxa-status {
-	&[fxastatus="signedin"] {
-		& > #appMenu-fxa-label {
-			padding-left: 22px !important;
-			margin-inline-start: -22px !important;
-		}
-		
-		& > #appMenu-fxa-avatar {
-			margin-inline-start: 5px !important;
-		}
-	}
-}
 
 #appMenu-fxa-status2 {
-	margin: var(--arrowpanel-menuitem-margin) !important;
+	margin: var(--menuitem-margin) !important;
 	
 	&[fxastatus] > #appMenu-fxa-label2 > vbox > #appMenu-header-description, #appMenu-fxa-text {
 		font-weight: 400 !important;
@@ -33,7 +21,7 @@
 }
 #appMenu-fxa-label2 {
 	margin: 0 !important;
-	padding: var(--arrowpanel-menuitem-padding) !important;
+	padding: var(--menuitem-padding) !important;
 	
 	&:hover {
 		background: transparent !important;
@@ -47,13 +35,8 @@
 }
 
 .PanelUI-remotetabs-clientcontainer label {
-	margin: var(--arrowpanel-menuitem-margin) !important;
-	padding: var(--arrowpanel-menuitem-padding) !important;
-}
-
-/* User sync account remove avatar */
-#fxa-menu-avatar {
-	display: none;
+	margin: var(--menuitem-margin) !important;
+	padding: var(--menuitem-padding) !important;
 }
 
 /* Add search engine button remove icon */
@@ -63,7 +46,7 @@
 
 /* All tabs popover */
 .all-tabs-item[selected] {
-	border-left: 3px solid var(--gnome-tabbar-tab-active-border-bottom-color);
+	border-left: 3px solid var(--gnome-accent-bg);
 	box-shadow: none !important;
 }
 
@@ -129,7 +112,21 @@
 	display: none;
 }
 
+/* Firefox paints the account promo in its own purple */
+#appMenu-fxa-sign-in-promo {
+	background-color: var(--gnome-card-background) !important;
+	color: inherit !important;
+
+	& * {
+		color: inherit !important;
+	}
+}
+
 /* Customization overflow menu position */
+#customization-container {
+	background-color: var(--gnome-window-background) !important;
+}
+
 #customization-panel-container {
 	margin-top: 10px;
 	z-index: 10;
@@ -148,8 +145,8 @@
 #permission-popup-mainView,
 #protections-popup-mainView,
 #identity-popup-mainView-panel-header {
-	max-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
-	min-width: calc(var(--popup-width) + (var(--gnome-menu-padding) * 2)) !important;
+	max-width: calc(var(--controlcenter-popup-content-width) + (var(--gnome-menu-padding) * 2)) !important;
+	min-width: calc(var(--controlcenter-popup-content-width) + (var(--gnome-menu-padding) * 2)) !important;
 }
 
 /* Trust panel */
@@ -248,7 +245,7 @@
 
 /* Notification Popup */
 #notification-popup, #appMenu-notification-popup {
-	--arrowpanel-padding: var(--gnome-content-padding) !important;
+	--panel-padding: var(--gnome-content-padding) !important;
 	.panel-footer {
 		--gnome-menu-padding: var(--gnome-content-padding) !important;
 	}

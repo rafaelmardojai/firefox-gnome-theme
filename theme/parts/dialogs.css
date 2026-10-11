@@ -98,6 +98,11 @@ dialog {
 	
 	#infoContainer {
 		text-align: center;
+
+		#infoBody {
+			/* Centering forces a small overflow */
+			overflow-x: hidden !important;		
+		}
 	}
 
 	#checkboxContainer {
