@@ -417,10 +417,12 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		}
 	}
 	
+	/* The tab clips its own overflow, so a button hanging over its edge is cut.
+	 * Firefox keeps it inside, these are its insets. */
 	#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
 		padding: 2px !important;
-		top: -5px !important;
-		inset-inline-start: 0px !important;
+		top: -3px !important;
+		inset-inline-start: 2px !important;
 	}
 }
 
