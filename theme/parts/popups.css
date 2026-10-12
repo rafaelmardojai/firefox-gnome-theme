@@ -158,6 +158,12 @@ menuitem[disabled]:hover, menupopup menu[disabled]:hover {
 	padding: 0 !important;
 }
 
+.menuitem-iconic[data-usercontextid] > .menu-icon {
+	background-color: transparent !important;
+	border-radius: 0 !important;
+	overflow-clip-margin: unset !important;
+}
+
 /* Popovers */
 panel[type=arrow] {
 	margin-top: var(--gnome-menu-padding) !important; /* Adjust position */
