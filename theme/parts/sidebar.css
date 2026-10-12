@@ -152,6 +152,11 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	.sidebar-panel-heading  {
 		margin-block-end: 12px !important;
 	}
+	
+	#manage-settings {
+		margin-block: var(--gnome-content-padding) !important;
+		padding: 0 !important;
+	}
 }
 #sidebar-panel-header {
 	padding-block: 0 !important;
