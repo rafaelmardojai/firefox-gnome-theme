@@ -14,6 +14,8 @@
 	--tabstrip-inner-border: 1px solid var(--gnome-border-color) !important;
 	--tab-height-with-margin-padding: calc(var(--tab-min-height) + 5px) !important;
 	
+	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-hover-background);
+
 	@media not -moz-pref("sidebar.verticalTabs") {
 		/* We need the hardcoded tab colors in horizontal tabs, beacuse of the close button overlay */
 		--tab-background-color-hover: var(--gnome-tabbar-tab-hover-background) !important;
@@ -164,11 +166,22 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tabs */
 .tabbrowser-tab {
+	&[selected] {
+		--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
+		&:hover {
+			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background) !important;
+		}
+	}
+	@media -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
+		--gnome-tabbar-tab-close-overlay-bg: unset;
+	}
+
 	/* OPTIONAL: Add more contrast to the active tab */
 	@media -moz-pref("gnomeTheme.activeTabContrast") {
 		&[selected], &:hover {
 			--tab-background-color-hover: var(--gnome-tabbar-tab-active-background-contrast) !important;
 			--tab-background-color-selected: var(--gnome-tabbar-tab-active-background-contrast) !important;
+			--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background-contrast) !important;
 		}
 	}	
 
@@ -305,6 +318,28 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 			margin-top: 0 !important;
 		}
 
+		/* Close button overlay */
+		&:not([pinned])::before {
+			background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
+			border-radius: 0 4px 4px 0;
+			bottom: 2px;
+			content: "";
+			height: calc(100% - 5px);
+			opacity: 0;
+			position: absolute;
+			right: 2px;
+			transition: all var(--gnome-tab-animation-time) linear;
+			width: 55px;
+			z-index: 99;
+		}
+		&:not([pinned])[selected]::before,
+		tab:hover &::before {
+			opacity: 1;
+		}
+		:root[dir="rtl"] &:not([pinned])::before {
+			display: none;
+		}
+		
 		/* Left close button */
 		@media (-moz-gtk-csd-reversed-placement) and (not -moz-pref("gnomeTheme.swapTabClose")),
 			(-moz-pref("gnomeTheme.swapTabClose")) and (not (-moz-gtk-csd-reversed-placement)) {
@@ -323,6 +358,11 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 					margin-inline-start: 0 !important;
 					order: 0 !important;
 				}
+
+				/* Overlay is not longer needed */
+				:root[dir="ltr"] &:not([pinned])::before {
+					display: none !important;
+				}
 		}
 	}
 }
@@ -332,16 +372,8 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	#tabbrowser-tabs[orient="horizontal"] & {
 		min-width: 0 !important;
 		max-width: min-content !important;
-		@media (not (-moz-gtk-csd-reversed-placement)) and (not -moz-pref("gnomeTheme.swapTabClose")),
-			(-moz-gtk-csd-reversed-placement) and (-moz-pref("gnomeTheme.swapTabClose")) {
-			:root[dir="ltr"] tab[selected] &[textoverflow]:not([pinned]) {
-				mask-image: linear-gradient(to left, transparent 2px, black 24px) !important;
-			}
-			@media not -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
-				:root[dir="ltr"] tab:hover &[textoverflow]:not([pinned]) {
-					mask-image: linear-gradient(to left, transparent 2px, black 24px) !important;
-				}
-			}
+		:root[dir="ltr"] &:not([pinned]) {
+			margin-inline-end: -16px;
 		}
 		
 		/* Fix alignment when audio button is prestent */
@@ -1152,6 +1184,12 @@ tab-group {
 		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-close-button {
 			visibility: hidden !important;
 			opacity: 0 !important;
+		}
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-content::before {
+			--gnome-tabbar-tab-close-overlay-bg: unset !important;
+		}
+		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden]))):not(:has(tab-group)):not(:has(tab:not([hidden]) ~ tab:not([hidden]))) .tab-label-container[textoverflow] {
+			margin-inline-end: -16px;
 		}
 	}
 }
