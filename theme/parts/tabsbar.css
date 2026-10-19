@@ -334,18 +334,12 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 		max-width: min-content !important;
 		@media (not (-moz-gtk-csd-reversed-placement)) and (not -moz-pref("gnomeTheme.swapTabClose")),
 			(-moz-gtk-csd-reversed-placement) and (-moz-pref("gnomeTheme.swapTabClose")) {
-			/* The hidden close button keeps its place, so a long title stops
-			 * short of it and leaves a gap. Let it run under, the fade takes
-			 * care of it. */
-			:root[dir="ltr"] &[textoverflow]:not([pinned]) {
-				margin-inline-end: -16px;
-			}
 			:root[dir="ltr"] tab[selected] &[textoverflow]:not([pinned]) {
-				mask-image: linear-gradient(to left, transparent 18px, black 40px) !important;
+				mask-image: linear-gradient(to left, transparent 2px, black 24px) !important;
 			}
 			@media not -moz-pref("gnomeTheme.closeOnlySelectedTabs") {
 				:root[dir="ltr"] tab:hover &[textoverflow]:not([pinned]) {
-					mask-image: linear-gradient(to left, transparent 18px, black 40px) !important;
+					mask-image: linear-gradient(to left, transparent 2px, black 24px) !important;
 				}
 			}
 		}
